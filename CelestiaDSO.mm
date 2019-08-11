@@ -30,8 +30,4 @@
     return [NSString stringWithUTF8String:[self DSO]->getType()];
 }
 
-- (NSString *)name
-{
-    return @"";
-}
 @end

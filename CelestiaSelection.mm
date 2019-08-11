@@ -96,10 +96,6 @@
     return [NSString stringWithUTF8String:s.getName().c_str()];
 }
 
-- (NSString *)briefName {
-    return @"";
-}
-
 - (CelestiaUniversalCoord *)position:(double)t {
     return [[CelestiaUniversalCoord alloc] initWithUniversalCoord:s.getPosition(t)];
 }

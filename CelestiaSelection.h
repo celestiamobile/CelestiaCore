@@ -26,8 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, readonly) CelestiaBody *body;
 @property (nullable, readonly) CelestiaLocation *location;
 
-@property (nullable, readonly) NSString *name;
-@property (nullable, readonly) NSString *briefName;
+@property (readonly) NSString *name;
 
 - (BOOL)isEqualToSelection:(CelestiaSelection *)csel;
 - (CelestiaUniversalCoord *)position:(double)t;

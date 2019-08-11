@@ -13,7 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CelestiaGalaxy : CelestiaCatEntry
 
 @property (readonly) NSString *type;
-@property (readonly) NSString *name;
 
 @property float radius;
 @property float detail;

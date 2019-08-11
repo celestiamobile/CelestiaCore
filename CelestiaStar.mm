@@ -41,10 +41,6 @@
     return [self star]->getRadius();
 }
 
-- (NSString *)name {
-    return @"";
-}
-
 - (float)apparentMagnitude:(float)m {
     return [self star]->getApparentMagnitude(m);
 }

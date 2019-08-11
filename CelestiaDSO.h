@@ -12,7 +12,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CelestiaDSO : CelestiaCatEntry
 
-@property (readonly) NSString *name;
 @property (readonly) NSString *type;
 
 @end
