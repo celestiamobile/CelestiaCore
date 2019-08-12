@@ -65,7 +65,12 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)back;
 
 // MARK: Other
+@property (readonly) NSString *currentURL;
+
 - (void)runScript:(NSString *)path NS_SWIFT_NAME(runScript(at:));
+- (void)goToURL:(NSString *)url NS_SWIFT_NAME(go(to:));
+
+- (BOOL)captureMovie:(NSString *)filePath withVideoSize:(CGSize)size fps:(float)fps NS_SWIFT_NAME(captureMovie(to:size:fps:));
 
 // MARK: Simulation
 @property (readonly) CelestiaSimulation *simulation;

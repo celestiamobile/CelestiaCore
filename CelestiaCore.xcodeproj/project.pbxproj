@@ -359,6 +359,10 @@
 		971A674023019DDB009E4EA1 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 971A673E23019DBD009E4EA1 /* libiconv.tbd */; };
 		971A674D2301A5AF009E4EA1 /* CelestiaScript.h in Headers */ = {isa = PBXBuildFile; fileRef = 971A674B2301A5AE009E4EA1 /* CelestiaScript.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		971A674E2301A5AF009E4EA1 /* CelestiaScript.mm in Sources */ = {isa = PBXBuildFile; fileRef = 971A674C2301A5AE009E4EA1 /* CelestiaScript.mm */; };
+		971A67532301B556009E4EA1 /* oggtheoracapture.h in Headers */ = {isa = PBXBuildFile; fileRef = 971A67512301B556009E4EA1 /* oggtheoracapture.h */; };
+		971A67542301B556009E4EA1 /* oggtheoracapture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 971A67522301B556009E4EA1 /* oggtheoracapture.cpp */; };
+		971A67572301B661009E4EA1 /* libtheora.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 971A67552301B661009E4EA1 /* libtheora.a */; };
+		971A67582301B661009E4EA1 /* libogg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 971A67562301B661009E4EA1 /* libogg.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -402,6 +406,10 @@
 		971A674323019E38009E4EA1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		971A674B2301A5AE009E4EA1 /* CelestiaScript.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CelestiaScript.h; sourceTree = "<group>"; };
 		971A674C2301A5AE009E4EA1 /* CelestiaScript.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CelestiaScript.mm; sourceTree = "<group>"; };
+		971A67512301B556009E4EA1 /* oggtheoracapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = oggtheoracapture.h; sourceTree = "<group>"; };
+		971A67522301B556009E4EA1 /* oggtheoracapture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = oggtheoracapture.cpp; sourceTree = "<group>"; };
+		971A67552301B661009E4EA1 /* libtheora.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libtheora.a; path = ../../../Downloads/celestialibs/libtheora.a; sourceTree = "<group>"; };
+		971A67562301B661009E4EA1 /* libogg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libogg.a; path = ../../../Downloads/celestialibs/libogg.a; sourceTree = "<group>"; };
 		972F39E422FEB27A00CEDDAC /* CelestiaDSO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CelestiaDSO.h; sourceTree = "<group>"; };
 		972F39E522FEB27A00CEDDAC /* CelestiaDSO.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CelestiaDSO.mm; sourceTree = "<group>"; };
 		972F39EA22FEB2B200CEDDAC /* CelestiaDSO+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CelestiaDSO+Private.h"; sourceTree = "<group>"; };
@@ -736,6 +744,8 @@
 				971A673523019D1C009E4EA1 /* liblua53.a in Frameworks */,
 				971A673623019D1C009E4EA1 /* cspice.a in Frameworks */,
 				971A673723019D1C009E4EA1 /* libintl.a in Frameworks */,
+				971A67572301B661009E4EA1 /* libtheora.a in Frameworks */,
+				971A67582301B661009E4EA1 /* libogg.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -830,6 +840,8 @@
 		971A672923019D1B009E4EA1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				971A67562301B661009E4EA1 /* libogg.a */,
+				971A67552301B661009E4EA1 /* libtheora.a */,
 				971A674123019DE4009E4EA1 /* libiconv.2.tbd */,
 				971A673E23019DBD009E4EA1 /* libiconv.tbd */,
 				971A673C23019DB5009E4EA1 /* libc++.tbd */,
@@ -1202,6 +1214,8 @@
 				977D838A22FDB2E8002FF1C2 /* imagecapture.cpp */,
 				977D839322FDB2E9002FF1C2 /* imagecapture.h */,
 				977D839422FDB2E9002FF1C2 /* moviecapture.h */,
+				971A67522301B556009E4EA1 /* oggtheoracapture.cpp */,
+				971A67512301B556009E4EA1 /* oggtheoracapture.h */,
 				977D837422FDB2E7002FF1C2 /* scriptmenu.cpp */,
 				977D838B22FDB2E8002FF1C2 /* scriptmenu.h */,
 				977D837022FDB2E6002FF1C2 /* url.cpp */,
@@ -1390,6 +1404,7 @@
 				971A666723019C15009E4EA1 /* precession.h in Headers */,
 				971A66DD23019C20009E4EA1 /* rotationmanager.h in Headers */,
 				971A66C023019C20009E4EA1 /* modelgeometry.h in Headers */,
+				971A67532301B556009E4EA1 /* oggtheoracapture.h in Headers */,
 				971A668123019C20009E4EA1 /* atmosphere.h in Headers */,
 				971A66F523019C21009E4EA1 /* staroctree.h in Headers */,
 				971A66F123019C21009E4EA1 /* stardb.h in Headers */,
@@ -1556,6 +1571,7 @@
 				971A65EF23019BF0009E4EA1 /* CelestiaVector.mm in Sources */,
 				971A660823019BF0009E4EA1 /* CelestiaGalaxy.mm in Sources */,
 				971A662F23019C03009E4EA1 /* configfile.cpp in Sources */,
+				971A67542301B556009E4EA1 /* oggtheoracapture.cpp in Sources */,
 				971A65EA23019BF0009E4EA1 /* CelestiaStarBrowser.mm in Sources */,
 				971A66A823019C20009E4EA1 /* frametree.cpp in Sources */,
 				971A664823019C0F009E4EA1 /* debug.cpp in Sources */,
@@ -1684,6 +1700,8 @@
 					/usr/local/Cellar/glew/2.1.0/include,
 					/usr/local/Cellar/fmt/5.3.0/include,
 					/usr/local/Cellar/cspice/66/include,
+					/usr/local/Cellar/theora/1.1.1/include,
+					/usr/local/Cellar/libogg/1.3.3/include,
 				);
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1730,6 +1748,8 @@
 					/usr/local/Cellar/glew/2.1.0/include,
 					/usr/local/Cellar/fmt/5.3.0/include,
 					/usr/local/Cellar/cspice/66/include,
+					/usr/local/Cellar/theora/1.1.1/include,
+					/usr/local/Cellar/libogg/1.3.3/include,
 				);
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";

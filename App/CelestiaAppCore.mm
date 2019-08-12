@@ -14,6 +14,9 @@
 
 #import "AstroUtil.h"
 
+#include "celestia/url.h"
+#include "celestia/oggtheoracapture.h"
+
 #import <AppKit/AppKit.h>
 
 class AppCoreProgressWatcher: public ProgressNotifier
@@ -162,8 +165,34 @@ private:
 }
 
 // MARK: Other
+- (NSString *)currentURL {
+    CelestiaState appState;
+    appState.captureState(core);
+
+    Url currentURL(appState, Url::CurrentVersion);
+    return [NSString stringWithUTF8String:currentURL.getAsString().c_str()];
+}
+
 - (void)runScript:(NSString *)path {
     core->runScript([path UTF8String]);
+}
+
+- (void)goToURL:(NSString *)url {
+    core->goToUrl([url UTF8String]);
+}
+
+- (BOOL)captureMovie:(NSString *)filePath withVideoSize:(CGSize)size fps:(float)fps {
+    MovieCapture *movieCapture = new OggTheoraCapture(core->getRenderer());
+    movieCapture->setAspectRatio(1, 1);
+    bool ok = movieCapture->start([filePath UTF8String],
+                                  size.width, size.height,
+                                  fps);
+    if (ok) {
+        core->initMovieCapture(movieCapture);
+    } else {
+        delete movieCapture;
+    }
+    return ok ? YES : NO;
 }
 
 // MARK: Private
