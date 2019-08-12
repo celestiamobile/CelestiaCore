@@ -1,6 +1,6 @@
 //
-//  AppCore.h
-//  AppCore
+//  CelestiaAppCore.h
+//  CelestiaAppCore
 //
 //  Created by 李林峰 on 2019/8/9.
 //  Copyright © 2019 李林峰. All rights reserved.
@@ -18,7 +18,7 @@ typedef NS_OPTIONS(NSUInteger, MouseButton) {
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AppCore : NSObject
+@interface CelestiaAppCore : NSObject
 
 // MARK: Initilalization
 

@@ -1,17 +1,17 @@
 //
-//  AppCore+Setting.mm
-//  AppCore
+//  CelestiaAppCore+Setting.mm
+//  CelestiaAppCore
 //
 //  Created by 李林峰 on 2019/8/9.
 //  Copyright © 2019 李林峰. All rights reserved.
 //
 
-#import "AppCore+Private.h"
-#import "AppCore+Setting.h"
+#import "CelestiaAppCore+Private.h"
+#import "CelestiaAppCore+Setting.h"
 #import "CelestiaSelection.h"
 #import "CelestiaBody.h"
 
-@implementation AppCore (Setting)
+@implementation CelestiaAppCore (Setting)
 
 static NSMutableDictionary* tagDict;
 static NSArray* keyArray;

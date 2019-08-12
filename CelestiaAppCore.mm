@@ -1,14 +1,14 @@
 //
-//  AppCore.m
-//  AppCore
+//  CelestiaAppCore.mm
+//  CelestiaAppCore
 //
 //  Created by 李林峰 on 2019/8/9.
 //  Copyright © 2019 李林峰. All rights reserved.
 //
 
 #include <GL/glew.h>
-#import "AppCore+Private.h"
-#import "AppCore+Setting.h"
+#import "CelestiaAppCore+Private.h"
+#import "CelestiaAppCore+Setting.h"
 
 #import "CelestiaSimulation+Private.h"
 #import "EclipseSearcher+Private.h"
@@ -31,7 +31,7 @@ private:
     void (^block)(NSString *);
 };
 
-@implementation AppCore
+@implementation CelestiaAppCore
 
 // MARK: Initilalization
 

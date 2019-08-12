@@ -1,16 +1,16 @@
 //
-//  AppCore+Setting.h
-//  AppCore
+//  CelestiaAppCore+Setting.h
+//  CelestiaAppCore
 //
 //  Created by 李林峰 on 2019/8/9.
 //  Copyright © 2019 李林峰. All rights reserved.
 //
 
-#import "AppCore.h"
+#import "CelestiaAppCore.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AppCore (Setting)
+@interface CelestiaAppCore (Setting)
 
 // Time Settings
 

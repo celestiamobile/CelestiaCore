@@ -6,7 +6,7 @@
 //  Copyright (C) 2007, Celestia Development Team
 //
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 
 @class CelestiaDSO;
 @class CelestiaStar;
