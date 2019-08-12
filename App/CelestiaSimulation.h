@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CelestiaSelection.h"
-#import "CelestiaUniverse.h"
-#import "CelestiaUniversalCoord.h"
+
+@class CelestiaSelection;
+@class CelestiaUniverse;
+@class CelestiaUniversalCoord;
 
 typedef NS_ENUM(NSUInteger, SimulationCoordinateSystem) {
     SimulationCoordinateSystemUniversal = 0,

@@ -6,9 +6,9 @@
 //  Copyright © 2019 李林峰. All rights reserved.
 //
 
-#import "EclipseSearcher+Private.h"
+#import "AstroUtil.h"
+#import "EclipseSearcher.h"
 #import "CelestiaBody+Private.h"
-#import "Astro.h"
 #include "celestia/eclipsefinder.h"
 
 class EclipseSeacherWatcher;
@@ -51,10 +51,6 @@ private:
     }
     return self;
 }
-
-@end
-
-@implementation EclipseSearcher (Private)
 
 @end
 

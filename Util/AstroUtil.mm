@@ -1,15 +1,17 @@
 //
-//  Astro.mm
+//  AstroUtil.mm
 //  celestia
 //
 //  Created by Bob Ippolito on Fri Jun 07 2002.
 //  Copyright (C) 2001-9, the Celestia Development Team
 //
 
-#import "Astro.h"
 #import "CelestiaUniversalCoord+Private.h"
+
 #include <celengine/astro.h>
 #include <celengine/observer.h>
+
+#import "AstroUtil.h"
 
 NSDictionary* coordinateDict;
 

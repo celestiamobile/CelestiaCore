@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CelestiaSelection.h"
-#import "CelestiaDSOCatalog.h"
-#import "CelestiaStarCatalog.h"
+
+@class CelestiaSelection;
+@class CelestiaDSOCatalog;
+@class CelestiaStarCatalog;
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CelestiaDSO.h"
+
+@class CelestiaDSO;
 
 NS_ASSUME_NONNULL_BEGIN
 

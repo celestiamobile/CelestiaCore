@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CelestiaStar.h"
 
+@class CelestiaStar;
 @class CelestiaSimulation;
 
 typedef NS_ENUM(NSUInteger, CelestiaStarBrowserKind) {

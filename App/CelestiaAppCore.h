@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CelestiaSimulation.h"
-#import "EclipseSearcher.h"
+
+@class CelestiaSimulation;
+@class CelestiaSelection;
 
 typedef NS_OPTIONS(NSUInteger, MouseButton) {
     MouseButtonLeft = 1 << 0,

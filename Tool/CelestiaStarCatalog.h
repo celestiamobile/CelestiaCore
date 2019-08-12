@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CelestiaStar.h"
+
+@class CelestiaStar;
 
 NS_ASSUME_NONNULL_BEGIN
 

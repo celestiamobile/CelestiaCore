@@ -7,13 +7,12 @@
 //
 
 #include <GL/glew.h>
+
 #import "CelestiaAppCore+Private.h"
 #import "CelestiaAppCore+Setting.h"
-
 #import "CelestiaSimulation+Private.h"
-#import "EclipseSearcher+Private.h"
 
-#import "Astro.h"
+#import "AstroUtil.h"
 
 #import <AppKit/AppKit.h>
 
