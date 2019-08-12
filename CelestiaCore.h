@@ -16,14 +16,15 @@
 
 #import <CelestiaCore/AstroUtil.h>
 #import <CelestiaCore/BrowserItem.h>
+#import <CelestiaCore/CelestiaScript.h>
 
 #import <CelestiaCore/CelestiaSelection.h>
 #import <CelestiaCore/CelestiaPlanetarySystem.h>
 #import <CelestiaCore/CelestiaBody.h>
 #import <CelestiaCore/CelestiaLocation.h>
-#import <CelestiaCore//CelestiaStar.h>
-#import <CelestiaCore//CelestiaGalaxy.h>
-#import <CelestiaCore//CelestiaDSO.h>
+#import <CelestiaCore/CelestiaStar.h>
+#import <CelestiaCore/CelestiaGalaxy.h>
+#import <CelestiaCore/CelestiaDSO.h>
 
 #import <CelestiaCore/EclipseSearcher.h>
 #import <CelestiaCore/CelestiaStarBrowser.h>

@@ -357,6 +357,8 @@
 		971A673B23019DAF009E4EA1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 971A673A23019DAF009E4EA1 /* libz.tbd */; };
 		971A673D23019DB5009E4EA1 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 971A673C23019DB5009E4EA1 /* libc++.tbd */; };
 		971A674023019DDB009E4EA1 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 971A673E23019DBD009E4EA1 /* libiconv.tbd */; };
+		971A674D2301A5AF009E4EA1 /* CelestiaScript.h in Headers */ = {isa = PBXBuildFile; fileRef = 971A674B2301A5AE009E4EA1 /* CelestiaScript.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		971A674E2301A5AF009E4EA1 /* CelestiaScript.mm in Sources */ = {isa = PBXBuildFile; fileRef = 971A674C2301A5AE009E4EA1 /* CelestiaScript.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -398,6 +400,8 @@
 		971A673E23019DBD009E4EA1 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		971A674123019DE4009E4EA1 /* libiconv.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.2.tbd; path = usr/lib/libiconv.2.tbd; sourceTree = SDKROOT; };
 		971A674323019E38009E4EA1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		971A674B2301A5AE009E4EA1 /* CelestiaScript.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CelestiaScript.h; sourceTree = "<group>"; };
+		971A674C2301A5AE009E4EA1 /* CelestiaScript.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CelestiaScript.mm; sourceTree = "<group>"; };
 		972F39E422FEB27A00CEDDAC /* CelestiaDSO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CelestiaDSO.h; sourceTree = "<group>"; };
 		972F39E522FEB27A00CEDDAC /* CelestiaDSO.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CelestiaDSO.mm; sourceTree = "<group>"; };
 		972F39EA22FEB2B200CEDDAC /* CelestiaDSO+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CelestiaDSO+Private.h"; sourceTree = "<group>"; };
@@ -750,6 +754,8 @@
 				972F39FC22FEB72900CEDDAC /* BrowserItem.mm */,
 				970DCE3E22FE8E240044F590 /* AstroUtil.h */,
 				970DCE3F22FE8E240044F590 /* AstroUtil.mm */,
+				971A674B2301A5AE009E4EA1 /* CelestiaScript.h */,
+				971A674C2301A5AE009E4EA1 /* CelestiaScript.mm */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -1226,6 +1232,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				971A674D2301A5AF009E4EA1 /* CelestiaScript.h in Headers */,
 				971A65E723019BF0009E4EA1 /* EclipseSearcher.h in Headers */,
 				971A65F223019BF0009E4EA1 /* AstroUtil.h in Headers */,
 				971A65F023019BF0009E4EA1 /* BrowserItem.h in Headers */,
@@ -1557,6 +1564,7 @@
 				971A66C523019C20009E4EA1 /* nebula.cpp in Sources */,
 				971A669423019C20009E4EA1 /* constellation.cpp in Sources */,
 				971A66FF23019C21009E4EA1 /* timelinephase.cpp in Sources */,
+				971A674E2301A5AF009E4EA1 /* CelestiaScript.mm in Sources */,
 				971A665923019C0F009E4EA1 /* util.cpp in Sources */,
 				971A66D023019C20009E4EA1 /* parser.cpp in Sources */,
 				971A663723019C03009E4EA1 /* helper.cpp in Sources */,
