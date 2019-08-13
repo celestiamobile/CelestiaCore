@@ -133,7 +133,7 @@
 }
 
 - (NSDictionary *)childrenForBody:(CelestiaBody *)aBody {
-    PlanetarySystem* sys = [(CelestiaBody *)[aBody body] body]->getSatellites();
+    PlanetarySystem* sys = [aBody body]->getSatellites();
 
     NSMutableDictionary *resultDictionary = [NSMutableDictionary dictionary];
 
@@ -204,7 +204,7 @@
         }
     }
 
-    std::vector<Location*>* locations = [(CelestiaBody *)[aBody body] body]->getLocations();
+    std::vector<Location*>* locations = [aBody body]->getLocations();
     if (locations != NULL)
     {
         NSMutableDictionary *locationDictionary = [NSMutableDictionary dictionary];
@@ -220,7 +220,7 @@
         }
     }
 
-    return nil;
+    return resultDictionary;
 }
 
 @end
