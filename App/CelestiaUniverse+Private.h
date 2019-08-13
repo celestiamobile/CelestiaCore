@@ -10,7 +10,7 @@
 #import "CelestiaUniverse.h"
 #include <celengine/universe.h>
 
-@interface CelestiaUniverse(PrivateAPI)
+@interface CelestiaUniverse (Private)
 
 - (instancetype)initWithUniverse:(Universe *)uni;
 - (Universe *)universe;

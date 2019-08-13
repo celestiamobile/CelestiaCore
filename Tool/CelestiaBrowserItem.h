@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @class CelestiaBrowserItem;
 
 @protocol CelestiaBrowserItemChildrenProvider <NSObject>
-- (NSDictionary<NSString *, CelestiaBrowserItem *> *)childrenForBrowserItem:(CelestiaBrowserItem *)item;
+- (nullable NSDictionary<NSString *, CelestiaBrowserItem *> *)childrenForBrowserItem:(CelestiaBrowserItem *)item;
 @end
 
 @interface CelestiaBrowserItem : NSObject
