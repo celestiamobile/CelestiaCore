@@ -6,31 +6,26 @@
 //  Copyright 2006 Chris Lauerl. All rights reserved.
 //
 
-#import "CelestiaLocation.h"
 #import "CelestiaLocation+Private.h"
+#import "CelestiaCatEntry+Private.h"
 
-@interface CelestiaLocation () {
-    Location *l;
+@implementation CelestiaLocation (Private)
+
+-(instancetype)initWithLocation:(Location *)aLocation {
+    self = [super initWithCatEntry:reinterpret_cast<CatEntry *>(aLocation)];
+    return self;
+}
+
+- (Location *)location {
+    return reinterpret_cast<Location *>([self entry]);;
 }
 
 @end
 
 @implementation CelestiaLocation
 
--(instancetype)initWithLocation:(Location *)aLocation {
-    self = [super init];
-    if (self) {
-        l = aLocation;
-    }
-    return self;
-}
-
-- (Location *)location {
-    return l;
-}
-
 - (NSString *)name {
-    return [NSString stringWithUTF8String:l->getName(true).c_str()];
+    return [NSString stringWithUTF8String:[self location]->getName(true).c_str()];
 }
 
 @end
