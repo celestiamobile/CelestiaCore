@@ -28,6 +28,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (readonly) NSString *name;
 
+@property (nullable, readonly) NSString *webInfoURL;
+
 - (BOOL)isEqualToSelection:(CelestiaSelection *)csel;
 - (CelestiaUniversalCoord *)position:(double)t;
 

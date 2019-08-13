@@ -105,4 +105,8 @@
     return [[CelestiaPlanetarySystem alloc] initWithSystem:s];
 }
 
+- (NSString *)webInfoURL {
+    return [NSString stringWithUTF8String:[self body]->getInfoURL().c_str()];
+}
+
 @end

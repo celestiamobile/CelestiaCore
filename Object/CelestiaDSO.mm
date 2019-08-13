@@ -11,8 +11,7 @@
 
 @implementation CelestiaDSO (Private)
 
-- (instancetype)initWithDSO:(DeepSkyObject *)aDSO
-{
+- (instancetype)initWithDSO:(DeepSkyObject *)aDSO {
     self = [super initWithCatEntry:reinterpret_cast<CatEntry *>(aDSO)];
     return self;
 }
@@ -25,9 +24,12 @@
 
 @implementation CelestiaDSO
 
-- (NSString *)type
-{
+- (NSString *)type {
     return [NSString stringWithUTF8String:[self DSO]->getType()];
+}
+
+- (NSString *)webInfoURL {
+    return [NSString stringWithUTF8String:[self DSO]->getInfoURL().c_str()];
 }
 
 @end

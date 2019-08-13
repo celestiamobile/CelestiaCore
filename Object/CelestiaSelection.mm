@@ -96,6 +96,21 @@
     return [NSString stringWithUTF8String:s.getName().c_str()];
 }
 
+- (NSString *)webInfoURL {
+    switch (s.getType())
+    {
+        case Selection::Type_Body:
+            return [[self body] webInfoURL];
+        case Selection::Type_Star:
+            return [[self star] webInfoURL];
+        case Selection::Type_DeepSky:
+            return [[self dso] webInfoURL];
+        default:
+            break;
+    }
+    return nil;
+}
+
 - (CelestiaUniversalCoord *)position:(double)t {
     return [[CelestiaUniversalCoord alloc] initWithUniversalCoord:s.getPosition(t)];
 }

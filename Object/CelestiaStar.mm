@@ -61,4 +61,8 @@
     [self star]->setLuminosity(luminosity);
 }
 
+- (NSString *)webInfoURL {
+    return [NSString stringWithUTF8String:[self star]->getInfoURL().c_str()];
+}
+
 @end

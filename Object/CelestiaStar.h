@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (readonly) float radius;
 @property (readonly) float temperature;
 
+@property (readonly) NSString *webInfoURL;
+
 - (void)setAbsoluteMagnitude:(float)m;
 - (float)apparentMagnitude:(float)m;
 

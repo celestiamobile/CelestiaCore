@@ -23,6 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nullable, readonly) CelestiaPlanetarySystem *system;
 
+@property (readonly) NSString *webInfoURL;
+
 @end
 
 NS_ASSUME_NONNULL_END
