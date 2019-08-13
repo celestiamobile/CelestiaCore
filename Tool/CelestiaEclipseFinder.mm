@@ -1,19 +1,19 @@
 //
-//  EclipseSearcher.m
+//  CelestiaEclipseFinder.m
 //  CelestiaCore
 //
 //  Created by 李林峰 on 2019/8/10.
 //  Copyright © 2019 李林峰. All rights reserved.
 //
 
-#import "AstroUtil.h"
-#import "EclipseSearcher.h"
+#import "CelestiaUtil.h"
+#import "CelestiaEclipseFinder.h"
 #import "CelestiaBody+Private.h"
 #include "celestia/eclipsefinder.h"
 
 class EclipseSeacherWatcher;
 
-@interface EclipseSearcher () {
+@interface CelestiaEclipseFinder () {
     EclipseFinder *s;
     EclipseSeacherWatcher *d;
 @public
@@ -29,7 +29,7 @@ public:
 
     virtual Status eclipseFinderProgressUpdate(double t)
     {
-        EclipseSearcher *searcher = (__bridge EclipseSearcher *)delegate;
+        CelestiaEclipseFinder *searcher = (__bridge CelestiaEclipseFinder *)delegate;
         if (searcher->aborted) {
             return AbortOperation;
         }
@@ -54,7 +54,7 @@ private:
 
 @end
 
-@implementation EclipseSearcher
+@implementation CelestiaEclipseFinder
 
 - (instancetype)initWithBody:(CelestiaBody *)body {
     self = [super init];

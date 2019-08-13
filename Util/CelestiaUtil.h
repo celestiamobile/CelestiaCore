@@ -6,7 +6,7 @@
 //  Copyright (c) 2002 Chris Laurel. All rights reserved.
 //
 
-#import "CelestiaUniversalCoord.h"
+#import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -26,8 +26,8 @@
 		971A65E423019BF0009E4EA1 /* CelestiaStarCatalog.h in Headers */ = {isa = PBXBuildFile; fileRef = 972F3A0B22FEC94F00CEDDAC /* CelestiaStarCatalog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		971A65E523019BF0009E4EA1 /* CelestiaStarCatalog.mm in Sources */ = {isa = PBXBuildFile; fileRef = 972F3A0C22FEC94F00CEDDAC /* CelestiaStarCatalog.mm */; };
 		971A65E623019BF0009E4EA1 /* CelestiaStarCatalog+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 972F3A0D22FEC94F00CEDDAC /* CelestiaStarCatalog+Private.h */; };
-		971A65E723019BF0009E4EA1 /* EclipseSearcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 972F3A1922FF029100CEDDAC /* EclipseSearcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		971A65E823019BF0009E4EA1 /* EclipseSearcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = 972F3A1A22FF029100CEDDAC /* EclipseSearcher.mm */; };
+		971A65E723019BF0009E4EA1 /* CelestiaEclipseFinder.h in Headers */ = {isa = PBXBuildFile; fileRef = 972F3A1922FF029100CEDDAC /* CelestiaEclipseFinder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		971A65E823019BF0009E4EA1 /* CelestiaEclipseFinder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 972F3A1A22FF029100CEDDAC /* CelestiaEclipseFinder.mm */; };
 		971A65E923019BF0009E4EA1 /* CelestiaStarBrowser.h in Headers */ = {isa = PBXBuildFile; fileRef = 972F3A0622FEC84500CEDDAC /* CelestiaStarBrowser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		971A65EA23019BF0009E4EA1 /* CelestiaStarBrowser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 972F3A0522FEC84500CEDDAC /* CelestiaStarBrowser.mm */; };
 		971A65EB23019BF0009E4EA1 /* CelestiaUniversalCoord+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 970DCE3422FE695D0044F590 /* CelestiaUniversalCoord+Private.h */; };
@@ -35,8 +35,8 @@
 		971A65ED23019BF0009E4EA1 /* CelestiaVector+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 972F3A4222FFD43C00CEDDAC /* CelestiaVector+Private.h */; };
 		971A65EE23019BF0009E4EA1 /* CelestiaVector.h in Headers */ = {isa = PBXBuildFile; fileRef = 972F3A4022FFD43C00CEDDAC /* CelestiaVector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		971A65EF23019BF0009E4EA1 /* CelestiaVector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 972F3A4122FFD43C00CEDDAC /* CelestiaVector.mm */; };
-		971A65F223019BF0009E4EA1 /* AstroUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 970DCE3E22FE8E240044F590 /* AstroUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		971A65F323019BF0009E4EA1 /* AstroUtil.mm in Sources */ = {isa = PBXBuildFile; fileRef = 970DCE3F22FE8E240044F590 /* AstroUtil.mm */; };
+		971A65F223019BF0009E4EA1 /* CelestiaUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 970DCE3E22FE8E240044F590 /* CelestiaUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		971A65F323019BF0009E4EA1 /* CelestiaUtil.mm in Sources */ = {isa = PBXBuildFile; fileRef = 970DCE3F22FE8E240044F590 /* CelestiaUtil.mm */; };
 		971A65F423019BF0009E4EA1 /* CelestiaSelection+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 970DCE1422FE5C3F0044F590 /* CelestiaSelection+Private.h */; };
 		971A65F523019BF0009E4EA1 /* CelestiaSelection.h in Headers */ = {isa = PBXBuildFile; fileRef = 970DCE1022FE5C220044F590 /* CelestiaSelection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		971A65F623019BF0009E4EA1 /* CelestiaSelection.mm in Sources */ = {isa = PBXBuildFile; fileRef = 970DCE1122FE5C220044F590 /* CelestiaSelection.mm */; };
@@ -390,8 +390,8 @@
 		970DCE3222FE695D0044F590 /* CelestiaUniversalCoord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CelestiaUniversalCoord.h; sourceTree = "<group>"; };
 		970DCE3322FE695D0044F590 /* CelestiaUniversalCoord.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CelestiaUniversalCoord.mm; sourceTree = "<group>"; };
 		970DCE3422FE695D0044F590 /* CelestiaUniversalCoord+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CelestiaUniversalCoord+Private.h"; sourceTree = "<group>"; };
-		970DCE3E22FE8E240044F590 /* AstroUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AstroUtil.h; sourceTree = "<group>"; };
-		970DCE3F22FE8E240044F590 /* AstroUtil.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AstroUtil.mm; sourceTree = "<group>"; };
+		970DCE3E22FE8E240044F590 /* CelestiaUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CelestiaUtil.h; sourceTree = "<group>"; };
+		970DCE3F22FE8E240044F590 /* CelestiaUtil.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CelestiaUtil.mm; sourceTree = "<group>"; };
 		971A646B230198B2009E4EA1 /* CelestiaCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CelestiaCore.h; sourceTree = "<group>"; };
 		971A65CC23019BC5009E4EA1 /* CelestiaCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CelestiaCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		971A672A23019D1C009E4EA1 /* libGLEW.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLEW.a; path = ../../../Downloads/celestialibs/libGLEW.a; sourceTree = "<group>"; };
@@ -433,8 +433,8 @@
 		972F3A1322FEFF4B00CEDDAC /* CelestiaPlanetarySystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CelestiaPlanetarySystem.h; sourceTree = "<group>"; };
 		972F3A1422FEFF4B00CEDDAC /* CelestiaPlanetarySystem.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CelestiaPlanetarySystem.mm; sourceTree = "<group>"; };
 		972F3A1722FEFF5D00CEDDAC /* CelestiaPlanetarySystem+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CelestiaPlanetarySystem+Private.h"; sourceTree = "<group>"; };
-		972F3A1922FF029100CEDDAC /* EclipseSearcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EclipseSearcher.h; sourceTree = "<group>"; };
-		972F3A1A22FF029100CEDDAC /* EclipseSearcher.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = EclipseSearcher.mm; sourceTree = "<group>"; };
+		972F3A1922FF029100CEDDAC /* CelestiaEclipseFinder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CelestiaEclipseFinder.h; sourceTree = "<group>"; };
+		972F3A1A22FF029100CEDDAC /* CelestiaEclipseFinder.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CelestiaEclipseFinder.mm; sourceTree = "<group>"; };
 		972F3A2322FF9A8C00CEDDAC /* CelestiaAppCore+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CelestiaAppCore+Private.h"; sourceTree = "<group>"; };
 		972F3A2522FF9B2800CEDDAC /* CelestiaAppCore+Setting.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "CelestiaAppCore+Setting.mm"; sourceTree = "<group>"; };
 		972F3A2622FF9B2800CEDDAC /* CelestiaAppCore+Setting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CelestiaAppCore+Setting.h"; sourceTree = "<group>"; };
@@ -766,8 +766,8 @@
 				972F3A4222FFD43C00CEDDAC /* CelestiaVector+Private.h */,
 				972F3A4022FFD43C00CEDDAC /* CelestiaVector.h */,
 				972F3A4122FFD43C00CEDDAC /* CelestiaVector.mm */,
-				970DCE3E22FE8E240044F590 /* AstroUtil.h */,
-				970DCE3F22FE8E240044F590 /* AstroUtil.mm */,
+				970DCE3E22FE8E240044F590 /* CelestiaUtil.h */,
+				970DCE3F22FE8E240044F590 /* CelestiaUtil.mm */,
 				971A674B2301A5AE009E4EA1 /* CelestiaScript.h */,
 				971A674C2301A5AE009E4EA1 /* CelestiaScript.mm */,
 			);
@@ -814,8 +814,8 @@
 				972F3A0B22FEC94F00CEDDAC /* CelestiaStarCatalog.h */,
 				972F3A0C22FEC94F00CEDDAC /* CelestiaStarCatalog.mm */,
 				972F3A0D22FEC94F00CEDDAC /* CelestiaStarCatalog+Private.h */,
-				972F3A1922FF029100CEDDAC /* EclipseSearcher.h */,
-				972F3A1A22FF029100CEDDAC /* EclipseSearcher.mm */,
+				972F3A1922FF029100CEDDAC /* CelestiaEclipseFinder.h */,
+				972F3A1A22FF029100CEDDAC /* CelestiaEclipseFinder.mm */,
 				972F3A0622FEC84500CEDDAC /* CelestiaStarBrowser.h */,
 				972F3A0522FEC84500CEDDAC /* CelestiaStarBrowser.mm */,
 				974D26E6230279AC00FDFBC0 /* CelestiaBrowserItem.h */,
@@ -1258,8 +1258,8 @@
 				971A674D2301A5AF009E4EA1 /* CelestiaScript.h in Headers */,
 				974D26F0230286CA00FDFBC0 /* CelestiaUniverse+BrowserItem.h in Headers */,
 				974D26E8230279AC00FDFBC0 /* CelestiaBrowserItem.h in Headers */,
-				971A65E723019BF0009E4EA1 /* EclipseSearcher.h in Headers */,
-				971A65F223019BF0009E4EA1 /* AstroUtil.h in Headers */,
+				971A65E723019BF0009E4EA1 /* CelestiaEclipseFinder.h in Headers */,
+				971A65F223019BF0009E4EA1 /* CelestiaUtil.h in Headers */,
 				971A65F723019BF0009E4EA1 /* CelestiaDSO.h in Headers */,
 				971A660123019BF0009E4EA1 /* CelestiaCatEntry.h in Headers */,
 				971A660A23019BF0009E4EA1 /* CelestiaStar.h in Headers */,
@@ -1524,7 +1524,7 @@
 				971A665723019C0F009E4EA1 /* utf8.cpp in Sources */,
 				971A66F223019C21009E4EA1 /* starname.cpp in Sources */,
 				971A65DB23019BF0009E4EA1 /* CelestiaUniversalCoord.mm in Sources */,
-				971A65F323019BF0009E4EA1 /* AstroUtil.mm in Sources */,
+				971A65F323019BF0009E4EA1 /* CelestiaUtil.mm in Sources */,
 				971A65DA23019BF0009E4EA1 /* CelestiaSimulation.mm in Sources */,
 				971A662123019C03009E4EA1 /* celx_object.cpp in Sources */,
 				971A668C23019C20009E4EA1 /* catentry.cpp in Sources */,
@@ -1570,7 +1570,7 @@
 				971A664323019C0F009E4EA1 /* bigfix.cpp in Sources */,
 				971A670523019C21009E4EA1 /* univcoord.cpp in Sources */,
 				971A669D23019C20009E4EA1 /* dsodb.cpp in Sources */,
-				971A65E823019BF0009E4EA1 /* EclipseSearcher.mm in Sources */,
+				971A65E823019BF0009E4EA1 /* CelestiaEclipseFinder.mm in Sources */,
 				974D26F1230286CA00FDFBC0 /* CelestiaUniverse+BrowserItem.mm in Sources */,
 				971A661C23019C03009E4EA1 /* celx_gl.cpp in Sources */,
 				971A66D723019C20009E4EA1 /* render.cpp in Sources */,

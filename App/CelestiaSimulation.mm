@@ -12,7 +12,7 @@
 #import "CelestiaUniverse+Private.h"
 #import "CelestiaUniversalCoord+Private.h"
 #import "CelestiaVector+Private.h"
-#import "AstroUtil.h"
+#import "CelestiaUtil.h"
 
 #include "celmath/geomutil.h"
 

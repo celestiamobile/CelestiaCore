@@ -1,5 +1,5 @@
 //
-//  EclipseSearcher.h
+//  CelestiaEclipseFinder.h
 //  CelestiaCore
 //
 //  Created by 李林峰 on 2019/8/10.
@@ -27,7 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface EclipseSearcher : NSObject
+@interface CelestiaEclipseFinder : NSObject
 
 - (instancetype)initWithBody:(CelestiaBody *)body;
 

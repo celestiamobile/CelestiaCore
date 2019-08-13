@@ -12,7 +12,7 @@
 #import "CelestiaAppCore+Setting.h"
 #import "CelestiaSimulation+Private.h"
 
-#import "AstroUtil.h"
+#import "CelestiaUtil.h"
 
 #include "celestia/url.h"
 #include "celestia/oggtheoracapture.h"
