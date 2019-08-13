@@ -54,7 +54,7 @@
         _catEntry = nil;
         _stringValue = aName;
         _childrenDictionary = children;
-        _childrenKeys = [children keysSortedByValueUsingSelector:@selector(caseInsensitiveCompare:)];
+        _childrenKeys = [[children allKeys] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
     }
     return self;
 }
@@ -69,7 +69,7 @@
 
 - (void)setChildren:(NSDictionary<NSString *, CelestiaBrowserItem *> *)children {
     _childrenDictionary = children;
-    _childrenKeys = [children keysSortedByValueUsingSelector:@selector(caseInsensitiveCompare:)];
+    _childrenKeys = [[children allKeys] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
     _childrenProvider = nil;
 }
 
