@@ -6,8 +6,15 @@
 //  Copyright © 2019 李林峰. All rights reserved.
 //
 
-#ifndef CELESTIA_CORE_H
-#define CELESTIA_CORE_H
+#import <Foundation/Foundation.h>
+
+//! Project version number for CelestiaCore.
+FOUNDATION_EXPORT double CelestiaCoreVersionNumber;
+
+//! Project version string for CelestiaCore.
+FOUNDATION_EXPORT const unsigned char CelestiaCoreVersionString[];
+
+// In this header, you should import all the public headers of your framework using statements like #import <CelestiaCore/PublicHeader.h>
 
 #import <CelestiaCore/CelestiaAppCore.h>
 #import <CelestiaCore/CelestiaAppCore+Setting.h>
@@ -17,6 +24,7 @@
 #import <CelestiaCore/AstroUtil.h>
 #import <CelestiaCore/BrowserItem.h>
 #import <CelestiaCore/CelestiaScript.h>
+#import <CelestiaCore/CelestiaVector.h>
 
 #import <CelestiaCore/CelestiaSelection.h>
 #import <CelestiaCore/CelestiaPlanetarySystem.h>
@@ -31,4 +39,3 @@
 #import <CelestiaCore/CelestiaDSOCatalog.h>
 #import <CelestiaCore/CelestiaStarCatalog.h>
 
-#endif /* CELESTIA_CORE_H */
