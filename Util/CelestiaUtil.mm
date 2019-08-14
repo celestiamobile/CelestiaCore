@@ -10,6 +10,7 @@
 #include <celengine/observer.h>
 
 #import "CelestiaUtil.h"
+#import "CelestiaVector+Private.h"
 
 NSDictionary* coordinateDict;
 
@@ -214,6 +215,22 @@ NSDictionary* coordinateDict;
 
 + (double)meanEclipticObliquity:(double)jd {
     return astro::meanEclipticObliquity(jd);
+}
+
++ (CelestiaVector *)celToJ2000Ecliptic:(CelestiaVector *)cel {
+    Eigen::Vector3d p = [cel vector3d];
+    return [CelestiaVector vectorWithVector3d:Eigen::Vector3d(p.x(), -p.z(), p.y())];
+}
+
++ (CelestiaVector *)rectToSpherical:(CelestiaVector *)rect {
+    Eigen::Vector3d v = [rect vector3d];
+    double r = v.norm();
+    double theta = atan2(v.y(), v.x());
+    if (theta < 0)
+        theta = theta + 2 * PI;
+    double phi = asin(v.z() / r);
+
+    return [CelestiaVector vectorWithVector3d:Eigen::Vector3d(theta, phi, r)];
 }
 
 @end

@@ -8,12 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+@class CelestiaVector;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CelestiaUniversalCoord : NSObject
 
--(double)distanceTo:(CelestiaUniversalCoord *)t;
--(CelestiaUniversalCoord *)difference:(CelestiaUniversalCoord *)t;
+- (double)distanceFrom:(CelestiaUniversalCoord *)t;
+- (CelestiaUniversalCoord *)difference:(CelestiaUniversalCoord *)t;
+- (CelestiaVector *)offetFrom:(CelestiaUniversalCoord *)t;
 
 @end
 

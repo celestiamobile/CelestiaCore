@@ -6,8 +6,8 @@
 //  Copyright (c) 2002 Chris Laurel. All rights reserved.
 //
 
-#import "CelestiaUniversalCoord.h"
 #import "CelestiaUniversalCoord+Private.h"
+#import "CelestiaVector+Private.h"
 
 @interface CelestiaUniversalCoord () {
     UniversalCoord u;
@@ -32,12 +32,17 @@
 
 @implementation CelestiaUniversalCoord
 
-- (double)distanceTo:(CelestiaUniversalCoord*) t {
-    return [self universalCoord].distanceFromKm([t universalCoord]);
+- (double)distanceFrom:(CelestiaUniversalCoord *) t {
+    return u.distanceFromKm([t universalCoord]);
 }
 
 - (CelestiaUniversalCoord *)difference:(CelestiaUniversalCoord *)t {
-    return [[CelestiaUniversalCoord alloc] initWithUniversalCoord:[self universalCoord].difference([self universalCoord])];
+    return [[CelestiaUniversalCoord alloc] initWithUniversalCoord:u.difference([self universalCoord])];
+}
+
+- (CelestiaVector *)offetFrom:(CelestiaUniversalCoord *)t {
+    Eigen::Vector3d offset = u.offsetFromKm([t universalCoord]);
+    return [CelestiaVector vectorWithVector3d:offset];
 }
 
 @end

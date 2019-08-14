@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class CelestiaVector;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NSDate (Astro)
@@ -50,6 +52,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (double)degMinSecToDecimal:(NSArray*)dms;
 + (NSArray<NSNumber *> *)anomaly:(double)meanAnamaly eccentricity:(double)eccentricity;
 + (double)meanEclipticObliquity:(double)jd;
++ (CelestiaVector *)celToJ2000Ecliptic:(CelestiaVector *)cel;
++ (CelestiaVector *)rectToSpherical:(CelestiaVector *)rect;
 
 @end
 

@@ -763,6 +763,7 @@
 			children = (
 				970DCE3422FE695D0044F590 /* CelestiaUniversalCoord+Private.h */,
 				970DCE3222FE695D0044F590 /* CelestiaUniversalCoord.h */,
+				970DCE3322FE695D0044F590 /* CelestiaUniversalCoord.mm */,
 				972F3A4222FFD43C00CEDDAC /* CelestiaVector+Private.h */,
 				972F3A4022FFD43C00CEDDAC /* CelestiaVector.h */,
 				972F3A4122FFD43C00CEDDAC /* CelestiaVector.mm */,
@@ -836,7 +837,6 @@
 				970DCE0822FE58A30044F590 /* CelestiaSimulation.h */,
 				970DCE0E22FE5A4D0044F590 /* CelestiaSimulation+Private.h */,
 				970DCE0922FE58A30044F590 /* CelestiaSimulation.mm */,
-				970DCE3322FE695D0044F590 /* CelestiaUniversalCoord.mm */,
 				972F3A2622FF9B2800CEDDAC /* CelestiaAppCore+Setting.h */,
 				972F3A2522FF9B2800CEDDAC /* CelestiaAppCore+Setting.mm */,
 				977D83D822FDB324002FF1C2 /* CelestiaAppCore.h */,
