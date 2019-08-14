@@ -366,6 +366,9 @@
 		974D26EC230279D700FDFBC0 /* CelestiaBrowserItem+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 974D26EA230279D700FDFBC0 /* CelestiaBrowserItem+Private.h */; };
 		974D26F0230286CA00FDFBC0 /* CelestiaUniverse+BrowserItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 974D26EE230286CA00FDFBC0 /* CelestiaUniverse+BrowserItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		974D26F1230286CA00FDFBC0 /* CelestiaUniverse+BrowserItem.mm in Sources */ = {isa = PBXBuildFile; fileRef = 974D26EF230286CA00FDFBC0 /* CelestiaUniverse+BrowserItem.mm */; };
+		974D27412303C3A300FDFBC0 /* CelestiaOrbit.h in Headers */ = {isa = PBXBuildFile; fileRef = 974D273F2303C3A300FDFBC0 /* CelestiaOrbit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		974D27422303C3A300FDFBC0 /* CelestiaOrbit.mm in Sources */ = {isa = PBXBuildFile; fileRef = 974D27402303C3A300FDFBC0 /* CelestiaOrbit.mm */; };
+		974D27452303C3BE00FDFBC0 /* CelestiaOrbit+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 974D27432303C3BE00FDFBC0 /* CelestiaOrbit+Private.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -446,6 +449,9 @@
 		974D26EA230279D700FDFBC0 /* CelestiaBrowserItem+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CelestiaBrowserItem+Private.h"; sourceTree = "<group>"; };
 		974D26EE230286CA00FDFBC0 /* CelestiaUniverse+BrowserItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CelestiaUniverse+BrowserItem.h"; sourceTree = "<group>"; };
 		974D26EF230286CA00FDFBC0 /* CelestiaUniverse+BrowserItem.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "CelestiaUniverse+BrowserItem.mm"; sourceTree = "<group>"; };
+		974D273F2303C3A300FDFBC0 /* CelestiaOrbit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CelestiaOrbit.h; sourceTree = "<group>"; };
+		974D27402303C3A300FDFBC0 /* CelestiaOrbit.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CelestiaOrbit.mm; sourceTree = "<group>"; };
+		974D27432303C3BE00FDFBC0 /* CelestiaOrbit+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CelestiaOrbit+Private.h"; sourceTree = "<group>"; };
 		977D819522FDB1BE002FF1C2 /* aabox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aabox.h; sourceTree = "<group>"; };
 		977D819622FDB1BE002FF1C2 /* ellipsoid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ellipsoid.h; sourceTree = "<group>"; };
 		977D819722FDB1BE002FF1C2 /* frustum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = frustum.h; sourceTree = "<group>"; };
@@ -802,6 +808,9 @@
 				970DCE2222FE61570044F590 /* CelestiaStar+Private.h */,
 				970DCE2122FE61560044F590 /* CelestiaStar.h */,
 				970DCE2322FE61570044F590 /* CelestiaStar.mm */,
+				974D273F2303C3A300FDFBC0 /* CelestiaOrbit.h */,
+				974D27402303C3A300FDFBC0 /* CelestiaOrbit.mm */,
+				974D27432303C3BE00FDFBC0 /* CelestiaOrbit+Private.h */,
 			);
 			path = Object;
 			sourceTree = "<group>";
@@ -1255,6 +1264,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				974D27412303C3A300FDFBC0 /* CelestiaOrbit.h in Headers */,
 				971A674D2301A5AF009E4EA1 /* CelestiaScript.h in Headers */,
 				974D26F0230286CA00FDFBC0 /* CelestiaUniverse+BrowserItem.h in Headers */,
 				974D26E8230279AC00FDFBC0 /* CelestiaBrowserItem.h in Headers */,
@@ -1316,6 +1326,7 @@
 				971A66F823019C21009E4EA1 /* surface.h in Headers */,
 				971A66B823019C20009E4EA1 /* location.h in Headers */,
 				971A663F23019C03009E4EA1 /* url.h in Headers */,
+				974D27452303C3BE00FDFBC0 /* CelestiaOrbit+Private.h in Headers */,
 				971A66EB23019C21009E4EA1 /* star.h in Headers */,
 				971A66F323019C21009E4EA1 /* starname.h in Headers */,
 				971A664723019C0F009E4EA1 /* color.h in Headers */,
@@ -1539,6 +1550,7 @@
 				971A667623019C15009E4EA1 /* spiceorbit.cpp in Sources */,
 				971A671F23019C2B009E4EA1 /* perlin.cpp in Sources */,
 				971A66C723019C20009E4EA1 /* observer.cpp in Sources */,
+				974D27422303C3A300FDFBC0 /* CelestiaOrbit.mm in Sources */,
 				971A663E23019C03009E4EA1 /* url.cpp in Sources */,
 				971A660223019BF0009E4EA1 /* CelestiaCatEntry.mm in Sources */,
 				971A669923019C20009E4EA1 /* deepskyobj.cpp in Sources */,

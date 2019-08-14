@@ -9,7 +9,9 @@
 #import "CelestiaBody.h"
 #import "CelestiaBody+Private.h"
 #import "CelestiaCatEntry+Private.h"
+#import "CelestiaOrbit+Private.h"
 #import "CelestiaPlanetarySystem+Private.h"
+#import "CelestiaUtil.h"
 
 #include <string>
 #include <vector>
@@ -107,6 +109,10 @@
 
 - (NSString *)webInfoURL {
     return [NSString stringWithUTF8String:[self body]->getInfoURL().c_str()];
+}
+
+- (CelestiaOrbit *)orbitAtTime:(NSDate *)time {
+    return [[CelestiaOrbit alloc] initWithOrbit:[self body]->getOrbit([time julianDay])];
 }
 
 @end

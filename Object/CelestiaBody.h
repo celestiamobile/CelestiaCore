@@ -9,6 +9,7 @@
 #import "CelestiaCatEntry.h"
 
 @class CelestiaPlanetarySystem;
+@class CelestiaOrbit;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -24,6 +25,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, readonly) CelestiaPlanetarySystem *system;
 
 @property (readonly) NSString *webInfoURL;
+
+- (CelestiaOrbit *)orbitAtTime:(NSDate *)time NS_SWIFT_NAME(orbit(at:));
 
 @end
 
