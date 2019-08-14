@@ -8,6 +8,8 @@
 
 #import <CelestiaCore/CelestiaCatEntry.h>
 
+@class CelestiaVector;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CelestiaDSO : CelestiaCatEntry
@@ -15,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (readonly) NSString *type;
 
 @property (readonly) NSString *webInfoURL;
+
+@property (readonly) CelestiaVector *position;
 
 @end
 

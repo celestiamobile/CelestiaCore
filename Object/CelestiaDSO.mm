@@ -8,6 +8,8 @@
 
 #import "CelestiaDSO+Private.h"
 #import "CelestiaCatEntry+Private.h"
+#import "CelestiaVector+Private.h"
+#import "CelestiaUtil.h"
 
 @implementation CelestiaDSO (Private)
 
@@ -30,6 +32,10 @@
 
 - (NSString *)webInfoURL {
     return [NSString stringWithUTF8String:[self DSO]->getInfoURL().c_str()];
+}
+
+- (CelestiaVector *)position {
+    return [CelestiaVector vectorWithVector3d:[self DSO]->getPosition()];
 }
 
 @end

@@ -10,6 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class CelestiaUniversalCoord;
+
 @interface CelestiaStar : CelestiaCatEntry
 
 @property unsigned int catalogNumber;
@@ -22,6 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)setAbsoluteMagnitude:(float)m;
 - (float)apparentMagnitude:(float)m;
+
+- (CelestiaUniversalCoord *)positionAtTime:(NSDate *)time NS_SWIFT_NAME(position(at:));
 
 @end
 

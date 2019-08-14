@@ -9,6 +9,8 @@
 #import "CelestiaStar.h"
 #import "CelestiaStar+Private.h"
 #import "CelestiaCatEntry+Private.h"
+#import "CelestiaUniversalCoord+Private.h"
+#import "CelestiaUtil.h"
 
 @implementation CelestiaStar(Private)
 
@@ -63,6 +65,10 @@
 
 - (NSString *)webInfoURL {
     return [NSString stringWithUTF8String:[self star]->getInfoURL().c_str()];
+}
+
+- (CelestiaUniversalCoord *)positionAtTime:(NSDate *)time {
+    return [[CelestiaUniversalCoord alloc] initWithUniversalCoord:[self star]->getPosition([time julianDay])];
 }
 
 @end
