@@ -16,7 +16,6 @@
 
 @end
 
-
 @implementation CelestiaOrbit (Private)
 
 - (instancetype)initWithOrbit:(const Orbit *)orbit {
@@ -45,6 +44,20 @@
 
 - (NSTimeInterval)period {
     return o->getPeriod();
+}
+
+- (double)validBeginTime {
+    double beginTime = 0.0;
+    double endTime = 0.0;
+    o->getValidRange(beginTime, endTime);
+    return beginTime;
+}
+
+- (double)validEndTime {
+    double beginTime = 0.0;
+    double endTime = 0.0;
+    o->getValidRange(beginTime, endTime);
+    return endTime;
 }
 
 - (CelestiaVector *)positionAtTime:(NSDate *)time {

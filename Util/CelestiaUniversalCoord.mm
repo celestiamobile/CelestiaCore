@@ -32,6 +32,10 @@
 
 @implementation CelestiaUniversalCoord
 
++ (CelestiaUniversalCoord *)zero {
+    return [[CelestiaUniversalCoord alloc] initWithUniversalCoord:UniversalCoord::Zero()];
+}
+
 - (double)distanceFrom:(CelestiaUniversalCoord *) t {
     return u.distanceFromKm([t universalCoord]);
 }

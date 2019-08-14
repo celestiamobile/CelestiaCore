@@ -10,6 +10,7 @@
 #import "CelestiaBody+Private.h"
 #import "CelestiaCatEntry+Private.h"
 #import "CelestiaOrbit+Private.h"
+#import "CelestiaRotationModel+Private.h"
 #import "CelestiaPlanetarySystem+Private.h"
 #import "CelestiaUtil.h"
 
@@ -113,6 +114,10 @@
 
 - (CelestiaOrbit *)orbitAtTime:(NSDate *)time {
     return [[CelestiaOrbit alloc] initWithOrbit:[self body]->getOrbit([time julianDay])];
+}
+
+- (CelestiaRotationModel *)rotationAtTime:(NSDate *)time {
+    return [[CelestiaRotationModel alloc] initWithRotation:[self body]->getRotationModel([time julianDay])];
 }
 
 @end

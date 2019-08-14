@@ -369,6 +369,9 @@
 		974D27412303C3A300FDFBC0 /* CelestiaOrbit.h in Headers */ = {isa = PBXBuildFile; fileRef = 974D273F2303C3A300FDFBC0 /* CelestiaOrbit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		974D27422303C3A300FDFBC0 /* CelestiaOrbit.mm in Sources */ = {isa = PBXBuildFile; fileRef = 974D27402303C3A300FDFBC0 /* CelestiaOrbit.mm */; };
 		974D27452303C3BE00FDFBC0 /* CelestiaOrbit+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 974D27432303C3BE00FDFBC0 /* CelestiaOrbit+Private.h */; };
+		974D27492303C85900FDFBC0 /* CelestiaRotationModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 974D27472303C85900FDFBC0 /* CelestiaRotationModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		974D274A2303C85900FDFBC0 /* CelestiaRotationModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 974D27482303C85900FDFBC0 /* CelestiaRotationModel.mm */; };
+		974D274D2303C86B00FDFBC0 /* CelestiaRotationModel+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 974D274B2303C86B00FDFBC0 /* CelestiaRotationModel+Private.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -452,6 +455,9 @@
 		974D273F2303C3A300FDFBC0 /* CelestiaOrbit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CelestiaOrbit.h; sourceTree = "<group>"; };
 		974D27402303C3A300FDFBC0 /* CelestiaOrbit.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CelestiaOrbit.mm; sourceTree = "<group>"; };
 		974D27432303C3BE00FDFBC0 /* CelestiaOrbit+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CelestiaOrbit+Private.h"; sourceTree = "<group>"; };
+		974D27472303C85900FDFBC0 /* CelestiaRotationModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CelestiaRotationModel.h; sourceTree = "<group>"; };
+		974D27482303C85900FDFBC0 /* CelestiaRotationModel.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CelestiaRotationModel.mm; sourceTree = "<group>"; };
+		974D274B2303C86B00FDFBC0 /* CelestiaRotationModel+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CelestiaRotationModel+Private.h"; sourceTree = "<group>"; };
 		977D819522FDB1BE002FF1C2 /* aabox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aabox.h; sourceTree = "<group>"; };
 		977D819622FDB1BE002FF1C2 /* ellipsoid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ellipsoid.h; sourceTree = "<group>"; };
 		977D819722FDB1BE002FF1C2 /* frustum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = frustum.h; sourceTree = "<group>"; };
@@ -811,6 +817,9 @@
 				974D273F2303C3A300FDFBC0 /* CelestiaOrbit.h */,
 				974D27402303C3A300FDFBC0 /* CelestiaOrbit.mm */,
 				974D27432303C3BE00FDFBC0 /* CelestiaOrbit+Private.h */,
+				974D27472303C85900FDFBC0 /* CelestiaRotationModel.h */,
+				974D27482303C85900FDFBC0 /* CelestiaRotationModel.mm */,
+				974D274B2303C86B00FDFBC0 /* CelestiaRotationModel+Private.h */,
 			);
 			path = Object;
 			sourceTree = "<group>";
@@ -1264,6 +1273,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				974D27492303C85900FDFBC0 /* CelestiaRotationModel.h in Headers */,
 				974D27412303C3A300FDFBC0 /* CelestiaOrbit.h in Headers */,
 				971A674D2301A5AF009E4EA1 /* CelestiaScript.h in Headers */,
 				974D26F0230286CA00FDFBC0 /* CelestiaUniverse+BrowserItem.h in Headers */,
@@ -1453,6 +1463,7 @@
 				971A661123019BFC009E4EA1 /* model.h in Headers */,
 				971A668323019C20009E4EA1 /* axisarrow.h in Headers */,
 				971A661723019C03009E4EA1 /* celx_category.h in Headers */,
+				974D274D2303C86B00FDFBC0 /* CelestiaRotationModel+Private.h in Headers */,
 				971A666B23019C15009E4EA1 /* samporbit.h in Headers */,
 				971A668023019C20009E4EA1 /* astro.h in Headers */,
 				971A661523019C03009E4EA1 /* celestiacore.h in Headers */,
@@ -1588,6 +1599,7 @@
 				971A66D723019C20009E4EA1 /* render.cpp in Sources */,
 				971A667823019C15009E4EA1 /* spicerotation.cpp in Sources */,
 				971A671A23019C2B009E4EA1 /* frustum.cpp in Sources */,
+				974D274A2303C85900FDFBC0 /* CelestiaRotationModel.mm in Sources */,
 				971A66E223019C20009E4EA1 /* simulation.cpp in Sources */,
 				971A667D23019C20009E4EA1 /* asterism.cpp in Sources */,
 				971A660C23019BFC009E4EA1 /* material.cpp in Sources */,
