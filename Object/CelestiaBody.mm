@@ -32,8 +32,11 @@
 
 @implementation CelestiaBody
 
-- (NSString *)classification
-{
+- (CelestiaBodyType)type {
+    return (CelestiaBodyType)[self body]->getClassification();
+}
+
+- (NSString *)classification {
     switch ([self body]->getClassification())
     {
         case (Body::Planet):
@@ -63,6 +66,10 @@
 
 - (float)radius {
     return [self body]->getRadius();
+}
+
+- (BOOL)isEllipsoid {
+    return (BOOL)[self body]->isEllipsoid();
 }
 
 - (float)mass {

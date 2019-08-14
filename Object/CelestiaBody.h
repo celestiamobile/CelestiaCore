@@ -12,13 +12,33 @@
 @class CelestiaOrbit;
 @class CelestiaRotationModel;
 
+typedef NS_ENUM(NSUInteger, CelestiaBodyType) {
+    CelestiaBodyTypePlanet         =    0x01,
+    CelestiaBodyTypeMoon           =    0x02,
+    CelestiaBodyTypeAsteroid       =    0x04,
+    CelestiaBodyTypeComet          =    0x08,
+    CelestiaBodyTypeSpacecraft     =    0x10,
+    CelestiaBodyTypeInvisible      =    0x20,
+    CelestiaBodyTypeBarycenter     =    0x40, // Not used (invisible is used instead)
+    CelestiaBodyTypeSmallBody      =    0x80, // Not used
+    CelestiaBodyTypeDwarfPlanet    =   0x100,
+    CelestiaBodyTypeStellar        =   0x200, // only used for orbit mask
+    CelestiaBodyTypeSurfaceFeature =   0x400,
+    CelestiaBodyTypeComponent      =   0x800,
+    CelestiaBodyTypeMinorMoon      =  0x1000,
+    CelestiaBodyTypeDiffuse        =  0x2000,
+    CelestiaBodyTypeUnknown        = 0x10000,
+};
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CelestiaBody : CelestiaCatEntry
 
+@property (readonly) CelestiaBodyType type;
 @property (readonly) NSString *classification;
 @property (readonly) NSString *name;
 @property (readonly) float radius;
+@property (readonly, getter=isEllipsoid) BOOL ellipsoid;
 @property float mass;
 @property float albedo;
 @property (readonly) NSArray<NSString *> *alternateSurfaceNames;
