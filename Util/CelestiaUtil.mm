@@ -222,6 +222,14 @@ NSDictionary* coordinateDict;
     return [CelestiaVector vectorWithVector3d:Eigen::Vector3d(p.x(), -p.z(), p.y())];
 }
 
++ (CelestiaVector *)eclipticToEquatorial:(CelestiaVector *)ecliptic {
+    return [CelestiaVector vectorWithVector3d:astro::eclipticToEquatorial([ecliptic vector3d])];
+}
+
++ (CelestiaVector *)equatorialToGalactic:(CelestiaVector *)equatorial {
+    return [CelestiaVector vectorWithVector3d:astro::equatorialToGalactic([equatorial vector3d])];
+}
+
 + (CelestiaVector *)rectToSpherical:(CelestiaVector *)rect {
     Eigen::Vector3d v = [rect vector3d];
     double r = v.norm();

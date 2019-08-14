@@ -53,6 +53,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSArray<NSNumber *> *)anomaly:(double)meanAnamaly eccentricity:(double)eccentricity;
 + (double)meanEclipticObliquity:(double)jd;
 + (CelestiaVector *)celToJ2000Ecliptic:(CelestiaVector *)cel;
++ (CelestiaVector *)eclipticToEquatorial:(CelestiaVector *)ecliptic;
++ (CelestiaVector *)equatorialToGalactic:(CelestiaVector *)equatorial;
 + (CelestiaVector *)rectToSpherical:(CelestiaVector *)rect;
 
 @end
