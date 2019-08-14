@@ -6,7 +6,7 @@
 //  Copyright (C) 2007, Celestia Development Team
 //
 
-#import "CelestiaCatEntry.h"
+#import <CelestiaCore/CelestiaCatEntry.h>
 
 @class CelestiaPlanetarySystem;
 @class CelestiaOrbit;

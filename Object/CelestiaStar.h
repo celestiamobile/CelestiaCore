@@ -6,7 +6,7 @@
 //  Copyright (c) 2002 Chris Laurel. All rights reserved.
 //
 
-#import "CelestiaCatEntry.h"
+#import <CelestiaCore/CelestiaCatEntry.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
