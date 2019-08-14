@@ -48,4 +48,16 @@
     return [[CelestiaStarCatalog alloc] initWithDatabase:u->getStarCatalog()];
 }
 
+- (BOOL)isSelectionMarked:(CelestiaSelection *)selection {
+    return (BOOL)u->isMarked([selection selection], 1);
+}
+
+- (void)markSelection:(CelestiaSelection *)selection withMarker:(CelestiaMarkerRepresentation)marker {
+    u->markObject([selection selection], MarkerRepresentation(MarkerRepresentation::Symbol(marker), 10.0f, Color(0.0f, 1.0f, 0.0f, 0.9f)), 1);
+}
+
+- (void)unmarkSelection:(CelestiaSelection *)selection {
+    u->unmarkObject([selection selection], 1);
+}
+
 @end

@@ -12,6 +12,23 @@
 @class CelestiaDSOCatalog;
 @class CelestiaStarCatalog;
 
+
+typedef NS_ENUM(NSUInteger, CelestiaMarkerRepresentation) {
+    CelestiaMarkerRepresentationDiamond    = 0,
+    CelestiaMarkerRepresentationTriangle   = 1,
+    CelestiaMarkerRepresentationSquare     = 2,
+    CelestiaMarkerRepresentationFilledSquare = 3,
+    CelestiaMarkerRepresentationPlus       = 4,
+    CelestiaMarkerRepresentationX          = 5,
+    CelestiaMarkerRepresentationLeftArrow  = 6,
+    CelestiaMarkerRepresentationRightArrow = 7,
+    CelestiaMarkerRepresentationUpArrow    = 8,
+    CelestiaMarkerRepresentationDownArrow  = 9,
+    CelestiaMarkerRepresentationCircle     = 10,
+    CelestiaMarkerRepresentationDisk       = 11,
+    CelestiaMarkerRepresentationCrosshair  = 12,
+};
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CelestiaUniverse : NSObject
@@ -20,6 +37,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (readonly) CelestiaStarCatalog *starCatalog;
 
 - (CelestiaSelection *)find:(NSString *)name;
+
+- (BOOL)isSelectionMarked:(CelestiaSelection *)selection NS_SWIFT_NAME(isMarked(_:));
+- (void)markSelection:(CelestiaSelection *)selection withMarker:(CelestiaMarkerRepresentation)marker NS_SWIFT_NAME(mark(_:with:));
+- (void)unmarkSelection:(CelestiaSelection *)selection NS_SWIFT_NAME(unmark(_:));
 
 @end
 
