@@ -195,6 +195,17 @@ private:
     return ok ? YES : NO;
 }
 
++ (void)setLocaleDirectory:(NSString *)localeDirectory {
+    // Gettext integration
+    setlocale(LC_ALL, "");
+    setlocale(LC_NUMERIC, "C");
+    bindtextdomain("celestia", [localeDirectory UTF8String]);
+    bind_textdomain_codeset("celestia", "UTF-8");
+    bindtextdomain("celestia_constellations", [localeDirectory UTF8String]);
+    bind_textdomain_codeset("celestia_constellations", "UTF-8");
+    textdomain("celestia");
+}
+
 // MARK: Private
 - (int)toCelestiaModifiers:(NSUInteger)modifiers buttons:(MouseButton)buttons {
     int cModifiers = 0;

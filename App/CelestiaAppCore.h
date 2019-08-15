@@ -72,6 +72,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (BOOL)captureMovie:(NSString *)filePath withVideoSize:(CGSize)size fps:(float)fps NS_SWIFT_NAME(captureMovie(to:size:fps:));
 
++ (void)setLocaleDirectory:(NSString *)localeDirectory;
+
 // MARK: Simulation
 @property (readonly) CelestiaSimulation *simulation;
 
