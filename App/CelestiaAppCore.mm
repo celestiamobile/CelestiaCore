@@ -66,7 +66,32 @@ private:
 - (BOOL)startRenderer {
     BOOL success = core->initRenderer() ? YES : NO;
 
+    // start with default values
+    const int DEFAULT_ORBIT_MASK = Body::Planet | Body::Moon | Body::Stellar;
+    const int DEFAULT_LABEL_MODE = 2176;
+    const float DEFAULT_AMBIENT_LIGHT_LEVEL = 0.1f;
+    const float DEFAULT_VISUAL_MAGNITUDE = 8.0f;
+    const Renderer::StarStyle DEFAULT_STAR_STYLE = Renderer::FuzzyPointStars;
+    const ColorTableType DEFAULT_STARS_COLOR = ColorTable_Blackbody_D65;
+    const unsigned int DEFAULT_TEXTURE_RESOLUTION = medres;
+
+    core->getRenderer()->setRenderFlags(Renderer::DefaultRenderFlags);
+    core->getRenderer()->setOrbitMask(DEFAULT_ORBIT_MASK);
+    core->getRenderer()->setLabelMode(DEFAULT_LABEL_MODE);
+    core->getRenderer()->setAmbientLightLevel(DEFAULT_AMBIENT_LIGHT_LEVEL);
+    core->getRenderer()->setStarStyle(DEFAULT_STAR_STYLE);
+    core->getRenderer()->setResolution(DEFAULT_TEXTURE_RESOLUTION);
+    core->getRenderer()->setStarColorTable(GetStarColorTable(DEFAULT_STARS_COLOR));
+
+    core->getSimulation()->setFaintestVisible(DEFAULT_VISUAL_MAGNITUDE);
+
+    core->getRenderer()->setSolarSystemMaxDistance((core->getConfig()->SolarSystemMaxDistance));
+
     return success;
+}
+
+- (void)setDPI:(NSInteger)dpi {
+    core->setScreenDpi((int)dpi);
 }
 
 - (void)start:(NSDate *)date {
