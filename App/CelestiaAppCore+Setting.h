@@ -39,6 +39,20 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property BOOL showPlanets ;
 
+@property BOOL showDwarfPlanets ;
+
+@property BOOL showMoons ;
+
+@property BOOL showMinorMoons ;
+
+@property BOOL showAsteroids ;
+
+@property BOOL showComets ;
+
+@property BOOL showSpacecrafts ;
+
+@property BOOL showOpenClusters ;
+
 @property BOOL showGalaxies ;
 
 @property BOOL showDiagrams ;
