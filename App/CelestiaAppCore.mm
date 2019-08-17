@@ -55,7 +55,7 @@ private:
     AppCoreProgressWatcher watcher(reporter);
 
     std::string configFile = configFileName == nil ? "" : [configFileName UTF8String];
-    __block std::vector<std::string> extras;
+    __block std::vector<fs::path> extras;
     [extraDirectories enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         extras.push_back([obj UTF8String]);
     }];
