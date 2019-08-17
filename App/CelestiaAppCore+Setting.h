@@ -81,6 +81,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property BOOL showCometTails ;
 
+@property BOOL showPlanetRings ;
+
 @property BOOL showMarkers ;
 
 @property BOOL showPartialTrajectories ;
