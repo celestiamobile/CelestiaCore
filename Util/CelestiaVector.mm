@@ -247,4 +247,22 @@
 {
     return [_array count];
 }
+
+
+- (double)dx {
+    return [[self x] doubleValue];
+}
+
+- (double)dy {
+    return [[self y] doubleValue];
+}
+
+- (double)dz {
+    return [[self z] doubleValue];
+}
+
+- (double)dw {
+    return [[self w] doubleValue];
+}
+
 @end
