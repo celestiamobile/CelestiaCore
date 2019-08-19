@@ -12,6 +12,20 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@interface DMS : NSObject
+
+@property NSInteger hours;
+@property NSInteger degrees;
+@property NSInteger minutes;
+@property double seconds;
+
+@property (readonly) double decimal;
+
+- (instancetype)initWithDecimal:(double)decimal;
+- (instancetype)initWithDegrees:(NSInteger)degrees minutes:(NSInteger)minutes seconds:(double)seconds;
+
+@end
+
 @interface NSDate (Astro)
 
 @property (readonly) double julianDay;
@@ -48,8 +62,6 @@ NS_ASSUME_NONNULL_BEGIN
 + (double)AUtoMicroLightYears:(double)au;
 + (double)secondsToJulianDate:(double)sec;
 + (double)julianDateToSeconds:(double)jd;
-+ (NSArray<NSNumber *> *)decimalToDegMinSec:(double)angle;
-+ (double)degMinSecToDecimal:(NSArray*)dms;
 + (NSArray<NSNumber *> *)anomaly:(double)meanAnamaly eccentricity:(double)eccentricity;
 + (double)meanEclipticObliquity:(double)jd;
 + (CelestiaVector *)celToJ2000Ecliptic:(CelestiaVector *)cel;

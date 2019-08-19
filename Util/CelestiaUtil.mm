@@ -12,7 +12,38 @@
 #import "CelestiaUtil.h"
 #import "CelestiaVector+Private.h"
 
-NSDictionary* coordinateDict;
+@implementation DMS
+
+- (instancetype)initWithDecimal:(double)decimal {
+    int degrees, minutes;
+    double seconds;
+    astro::decimalToDegMinSec(decimal, degrees, minutes, seconds);
+    return [self initWithDegrees:degrees minutes:minutes seconds:seconds];
+}
+
+- (instancetype)initWithDegrees:(NSInteger)degrees minutes:(NSInteger)minutes seconds:(double)seconds {
+    self = [super init];
+    if (self) {
+        _degrees = degrees;
+        _minutes = minutes;
+        _seconds = seconds;
+    }
+    return self;
+}
+
+- (double)decimal {
+    return astro::degMinSecToDecimal((int)_degrees, (int)_minutes, _seconds);
+}
+
+- (NSInteger)hours {
+    return _degrees;
+}
+
+- (void)setHours:(NSInteger)hours {
+    _degrees = hours;
+}
+
+@end
 
 @implementation NSDate (Astro)
 
@@ -71,6 +102,7 @@ NSDictionary* coordinateDict;
 
 @end
 
+NSDictionary* coordinateDict;
 
 @implementation Astro
 
@@ -194,17 +226,6 @@ NSDictionary* coordinateDict;
 
 + (double)julianDateToSeconds:(double)jd {
     return astro::julianDateToSeconds(jd);
-}
-
-+ (NSArray<NSNumber *> *)decimalToDegMinSec:(double)angle {
-    int hours, minutes;
-    double seconds;
-    astro::decimalToDegMinSec(angle, hours, minutes, seconds);
-    return [NSArray arrayWithObjects:[NSNumber numberWithInt:hours], [NSNumber numberWithInt:minutes], [NSNumber numberWithDouble:seconds], nil];
-}
-
-+ (double)degMinSecToDecimal:(NSArray<NSNumber *> *)dms {
-    return astro::degMinSecToDecimal([[dms objectAtIndex:0] intValue], [[dms objectAtIndex:1] intValue], [[dms objectAtIndex:2] intValue]);
 }
 
 + (NSArray<NSNumber *> *)anomaly:(double)meanAnamaly eccentricity:(double)eccentricity {
