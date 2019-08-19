@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSString *)dsoName:(CelestiaDSO *)dso;
 
+- (NSArray<NSString *> *)completionForName:(NSString *)name NS_SWIFT_NAME(completion(for:));
+
 @end
 
 NS_ASSUME_NONNULL_END

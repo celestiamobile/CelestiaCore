@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSString *)starName:(CelestiaStar *)star;
 
+- (NSArray<NSString *> *)completionForName:(NSString *)name NS_SWIFT_NAME(completion(for:));
+
 @end
 
 NS_ASSUME_NONNULL_END
