@@ -40,6 +40,22 @@
     return [[CelestiaSelection alloc] initWithSelection:u->find([name UTF8String])];
 }
 
+- (NSString *)nameForSelection:(CelestiaSelection *)selection {
+    const Selection sel = [selection selection];
+    switch (sel.getType()) {
+        case Selection::Type_Star:
+            return [NSString stringWithUTF8String:u->getStarCatalog()->getStarName(*sel.star()).c_str()];
+        case Selection::Type_Body:
+            return [NSString stringWithUTF8String:sel.body()->getName().c_str()];
+        case Selection::Type_DeepSky:
+            return [NSString stringWithUTF8String:u->getDSOCatalog()->getDSOName(sel.deepsky()).c_str()];
+        case Selection::Type_Location:
+            return [NSString stringWithUTF8String:sel.location()->getName().c_str()];
+        default:
+            return @"";
+    }
+}
+
 - (CelestiaDSOCatalog *)dsoCatalog {
     return [[CelestiaDSOCatalog alloc] initWithDatabase:u->getDSOCatalog()];
 }

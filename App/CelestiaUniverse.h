@@ -38,6 +38,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (CelestiaSelection *)find:(NSString *)name;
 
+- (NSString *)nameForSelection:(CelestiaSelection *)selection;
+
 - (BOOL)isSelectionMarked:(CelestiaSelection *)selection NS_SWIFT_NAME(isMarked(_:));
 - (void)markSelection:(CelestiaSelection *)selection withMarker:(CelestiaMarkerRepresentation)marker NS_SWIFT_NAME(mark(_:with:));
 - (void)unmarkSelection:(CelestiaSelection *)selection NS_SWIFT_NAME(unmark(_:));
