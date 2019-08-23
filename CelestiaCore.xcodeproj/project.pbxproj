@@ -182,8 +182,6 @@
 		971A668523019C20009E4EA1 /* body.h in Headers */ = {isa = PBXBuildFile; fileRef = 977D81EF22FDB238002FF1C2 /* body.h */; };
 		971A668623019C20009E4EA1 /* boundaries.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 977D81DE22FDB237002FF1C2 /* boundaries.cpp */; };
 		971A668723019C20009E4EA1 /* boundaries.h in Headers */ = {isa = PBXBuildFile; fileRef = 977D81D022FDB237002FF1C2 /* boundaries.h */; };
-		971A668823019C20009E4EA1 /* catalogxref.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 977D822E22FDB23D002FF1C2 /* catalogxref.cpp */; };
-		971A668923019C20009E4EA1 /* catalogxref.h in Headers */ = {isa = PBXBuildFile; fileRef = 977D81FA22FDB239002FF1C2 /* catalogxref.h */; };
 		971A668A23019C20009E4EA1 /* category.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 977D825322FDB23F002FF1C2 /* category.cpp */; };
 		971A668B23019C20009E4EA1 /* category.h in Headers */ = {isa = PBXBuildFile; fileRef = 977D81D722FDB237002FF1C2 /* category.h */; };
 		971A668C23019C20009E4EA1 /* catentry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 977D824722FDB23E002FF1C2 /* catentry.cpp */; };
@@ -213,8 +211,6 @@
 		971A66AA23019C20009E4EA1 /* galaxy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 977D821922FDB23B002FF1C2 /* galaxy.cpp */; };
 		971A66AB23019C20009E4EA1 /* galaxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 977D821222FDB23B002FF1C2 /* galaxy.h */; };
 		971A66AC23019C20009E4EA1 /* geometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 977D822A22FDB23C002FF1C2 /* geometry.h */; };
-		971A66AD23019C20009E4EA1 /* glcontext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 977D821D22FDB23B002FF1C2 /* glcontext.cpp */; };
-		971A66AE23019C20009E4EA1 /* glcontext.h in Headers */ = {isa = PBXBuildFile; fileRef = 977D820922FDB23A002FF1C2 /* glcontext.h */; };
 		971A66AF23019C20009E4EA1 /* glmarker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 977D822122FDB23C002FF1C2 /* glmarker.cpp */; };
 		971A66B023019C20009E4EA1 /* globular.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 977D825122FDB23F002FF1C2 /* globular.cpp */; };
 		971A66B123019C20009E4EA1 /* globular.h in Headers */ = {isa = PBXBuildFile; fileRef = 977D825722FDB23F002FF1C2 /* globular.h */; };
@@ -539,7 +535,6 @@
 		977D81F722FDB239002FF1C2 /* nebula.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = nebula.cpp; sourceTree = "<group>"; };
 		977D81F822FDB239002FF1C2 /* visibleregion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = visibleregion.h; sourceTree = "<group>"; };
 		977D81F922FDB239002FF1C2 /* parseobject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = parseobject.cpp; sourceTree = "<group>"; };
-		977D81FA22FDB239002FF1C2 /* catalogxref.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = catalogxref.h; sourceTree = "<group>"; };
 		977D81FC22FDB239002FF1C2 /* simulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = simulation.h; sourceTree = "<group>"; };
 		977D81FD22FDB239002FF1C2 /* meshmanager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = meshmanager.h; sourceTree = "<group>"; };
 		977D81FE22FDB239002FF1C2 /* tokenizer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tokenizer.cpp; sourceTree = "<group>"; };
@@ -553,7 +548,6 @@
 		977D820622FDB23A002FF1C2 /* rotationmanager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rotationmanager.h; sourceTree = "<group>"; };
 		977D820722FDB23A002FF1C2 /* renderglsl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = renderglsl.h; sourceTree = "<group>"; };
 		977D820822FDB23A002FF1C2 /* dsooctree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dsooctree.cpp; sourceTree = "<group>"; };
-		977D820922FDB23A002FF1C2 /* glcontext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glcontext.h; sourceTree = "<group>"; };
 		977D820A22FDB23A002FF1C2 /* dsoname.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dsoname.h; sourceTree = "<group>"; };
 		977D820C22FDB23A002FF1C2 /* renderinfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = renderinfo.h; sourceTree = "<group>"; };
 		977D820D22FDB23A002FF1C2 /* axisarrow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = axisarrow.cpp; sourceTree = "<group>"; };
@@ -572,7 +566,6 @@
 		977D821A22FDB23B002FF1C2 /* frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = frame.h; sourceTree = "<group>"; };
 		977D821B22FDB23B002FF1C2 /* timelinephase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = timelinephase.cpp; sourceTree = "<group>"; };
 		977D821C22FDB23B002FF1C2 /* tokenizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tokenizer.h; sourceTree = "<group>"; };
-		977D821D22FDB23B002FF1C2 /* glcontext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glcontext.cpp; sourceTree = "<group>"; };
 		977D821E22FDB23B002FF1C2 /* overlay.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = overlay.cpp; sourceTree = "<group>"; };
 		977D821F22FDB23C002FF1C2 /* stardb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stardb.h; sourceTree = "<group>"; };
 		977D822022FDB23C002FF1C2 /* execenv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = execenv.h; sourceTree = "<group>"; };
@@ -588,7 +581,6 @@
 		977D822B22FDB23C002FF1C2 /* dds.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dds.cpp; sourceTree = "<group>"; };
 		977D822C22FDB23C002FF1C2 /* star.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = star.cpp; sourceTree = "<group>"; };
 		977D822D22FDB23C002FF1C2 /* console.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = console.h; sourceTree = "<group>"; };
-		977D822E22FDB23D002FF1C2 /* catalogxref.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = catalogxref.cpp; sourceTree = "<group>"; };
 		977D823022FDB23D002FF1C2 /* trajmanager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = trajmanager.cpp; sourceTree = "<group>"; };
 		977D823122FDB23D002FF1C2 /* name.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = name.cpp; sourceTree = "<group>"; };
 		977D823222FDB23D002FF1C2 /* texmanager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = texmanager.cpp; sourceTree = "<group>"; };
@@ -986,8 +978,6 @@
 				977D81EF22FDB238002FF1C2 /* body.h */,
 				977D81DE22FDB237002FF1C2 /* boundaries.cpp */,
 				977D81D022FDB237002FF1C2 /* boundaries.h */,
-				977D822E22FDB23D002FF1C2 /* catalogxref.cpp */,
-				977D81FA22FDB239002FF1C2 /* catalogxref.h */,
 				977D825322FDB23F002FF1C2 /* category.cpp */,
 				977D81D722FDB237002FF1C2 /* category.h */,
 				977D824722FDB23E002FF1C2 /* catentry.cpp */,
@@ -1017,8 +1007,6 @@
 				977D821922FDB23B002FF1C2 /* galaxy.cpp */,
 				977D821222FDB23B002FF1C2 /* galaxy.h */,
 				977D822A22FDB23C002FF1C2 /* geometry.h */,
-				977D821D22FDB23B002FF1C2 /* glcontext.cpp */,
-				977D820922FDB23A002FF1C2 /* glcontext.h */,
 				977D822122FDB23C002FF1C2 /* glmarker.cpp */,
 				977D825122FDB23F002FF1C2 /* globular.cpp */,
 				977D825722FDB23F002FF1C2 /* globular.h */,
@@ -1404,7 +1392,6 @@
 				971A669523019C20009E4EA1 /* constellation.h in Headers */,
 				971A662423019C03009E4EA1 /* celx_observer.h in Headers */,
 				971A660923019BF0009E4EA1 /* CelestiaStar+Private.h in Headers */,
-				971A66AE23019C20009E4EA1 /* glcontext.h in Headers */,
 				971A669C23019C20009E4EA1 /* dispmap.h in Headers */,
 				971A66FC23019C21009E4EA1 /* texture.h in Headers */,
 				971A667323019C15009E4EA1 /* scriptrotation.h in Headers */,
@@ -1478,7 +1465,6 @@
 				971A661523019C03009E4EA1 /* celestiacore.h in Headers */,
 				971A65D523019BF0009E4EA1 /* CelestiaUniverse+Private.h in Headers */,
 				971A669E23019C20009E4EA1 /* dsodb.h in Headers */,
-				971A668923019C20009E4EA1 /* catalogxref.h in Headers */,
 				971A65D923019BF0009E4EA1 /* CelestiaSimulation+Private.h in Headers */,
 				971A66C823019C20009E4EA1 /* observer.h in Headers */,
 				971A66D423019C20009E4EA1 /* referencemark.h in Headers */,
@@ -1592,7 +1578,6 @@
 				971A667F23019C20009E4EA1 /* astro.cpp in Sources */,
 				971A671223019C26009E4EA1 /* 3dsmodel.cpp in Sources */,
 				971A662D23019C03009E4EA1 /* celx.cpp in Sources */,
-				971A66AD23019C20009E4EA1 /* glcontext.cpp in Sources */,
 				971A66F623019C21009E4EA1 /* stellarclass.cpp in Sources */,
 				971A664023019C09009E4EA1 /* texturefont.cpp in Sources */,
 				971A661423019C03009E4EA1 /* celestiacore.cpp in Sources */,
@@ -1692,7 +1677,6 @@
 				971A662923019C03009E4EA1 /* celx_rotation.cpp in Sources */,
 				971A66FD23019C21009E4EA1 /* timeline.cpp in Sources */,
 				971A66EA23019C21009E4EA1 /* star.cpp in Sources */,
-				971A668823019C20009E4EA1 /* catalogxref.cpp in Sources */,
 				971A66B923019C20009E4EA1 /* lodspheremesh.cpp in Sources */,
 				971A661F23019C03009E4EA1 /* celx_misc.cpp in Sources */,
 				971A66BB23019C20009E4EA1 /* marker.cpp in Sources */,
@@ -1752,6 +1736,7 @@
 				);
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+				WARNING_CFLAGS = "";
 			};
 			name = Debug;
 		};
@@ -1803,6 +1788,7 @@
 				);
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+				WARNING_CFLAGS = "";
 			};
 			name = Release;
 		};
