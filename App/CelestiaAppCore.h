@@ -17,11 +17,32 @@ typedef NS_OPTIONS(NSUInteger, MouseButton) {
     MouseButtonRight = 1 << 2,
 };
 
+typedef NS_ENUM(NSUInteger, CursorShape) {
+    CursorShapeArrow            = 0,
+    CursorShapeUpArrow          = 1,
+    CursorShapeCross            = 2,
+    CursorShapeInvertedCross    = 3,
+    CursorShapeWait             = 4,
+    CursorShapeBusy             = 5,
+    CursorShapeIbeam            = 6,
+    CursorShapeSizeVer          = 7,
+    CursorShapeSizeHor          = 8,
+    CursorShapeSizeBDiag        = 9,
+    CursorShapeSizeFDiag        = 10,
+    CursorShapeSizeAll          = 11,
+    CursorShapeSplitV           = 12,
+    CursorShapeSplitH           = 13,
+    CursorShapePointingHand     = 14,
+    CursorShapeForbidden        = 15,
+    CursorShapeWhatsThis        = 16,
+};
+
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol CelestiaAppCoreDelegate <NSObject>
 
 - (void)celestiaAppCoreFatalErrorHappened:(NSString *)error;
+- (void)celestiaAppCoreCursorShapeChanged:(CursorShape)shape;
 
 @end
 

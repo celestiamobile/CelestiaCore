@@ -48,8 +48,35 @@ private:
     void (^block)(NSString *);
 };
 
+class AppCoreCursorHandler: public CelestiaCore::CursorHandler
+{
+public:
+    AppCoreCursorHandler(void (^block)(CursorShape)) : CelestiaCore::CursorHandler(), block(block), shape(CelestiaCore::ArrowCursor) {};
+
+    void setCursorShape(CelestiaCore::CursorShape shape)
+    {
+        CelestiaCore::CursorShape oldShape = this->shape;
+        if (oldShape != shape)
+        {
+            this->shape = shape;
+            @autoreleasepool {
+                block((CursorShape)shape);
+            }
+        }
+    }
+
+    CelestiaCore::CursorShape getCursorShape() const
+    {
+        return shape;
+    }
+private:
+    void (^block)(CursorShape);
+    CelestiaCore::CursorShape shape;
+};
+
 @interface CelestiaAppCore () {
     AppCoreAlerter *alerter;
+    AppCoreCursorHandler *cursorHandler;
 }
 
 @end
@@ -65,6 +92,11 @@ private:
         alerter = new AppCoreAlerter(^(NSString *error) {
             [[weakSelf delegate] celestiaAppCoreFatalErrorHappened:error];
         });
+        cursorHandler = new AppCoreCursorHandler(^(CursorShape shape) {
+            [[weakSelf delegate] celestiaAppCoreCursorShapeChanged:shape];
+        });
+        core->setAlerter(alerter);
+        core->setCursorHandler(cursorHandler);
         [self initializeSetting];
     }
     return self;
@@ -407,7 +439,9 @@ private:
 
 - (void)dealloc {
     core->setAlerter(nullptr);
+    core->setCursorHandler(nullptr);
     delete alerter;
+    delete cursorHandler;
     delete core;
 }
 
