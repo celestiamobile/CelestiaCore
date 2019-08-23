@@ -33,14 +33,38 @@ private:
     void (^block)(NSString *);
 };
 
+class AppCoreAlerter: public CelestiaCore::Alerter
+{
+public:
+    AppCoreAlerter(void (^block)(NSString *)) : CelestiaCore::Alerter(), block(block) {};
+
+    void fatalError(const std::string &error)
+    {
+        @autoreleasepool {
+            block([NSString stringWithUTF8String:error.c_str()]);
+        }
+    }
+private:
+    void (^block)(NSString *);
+};
+
+@interface CelestiaAppCore () {
+    AppCoreAlerter *alerter;
+}
+
+@end
+
 @implementation CelestiaAppCore
 
 // MARK: Initilalization
-
 - (instancetype)init {
     self = [super init];
     if (self != nil) {
         core = new CelestiaCore;
+        __weak CelestiaAppCore *weakSelf = self;
+        alerter = new AppCoreAlerter(^(NSString *error) {
+            [[weakSelf delegate] celestiaAppCoreFatalErrorHappened:error];
+        });
         [self initializeSetting];
     }
     return self;
@@ -382,6 +406,8 @@ private:
 }
 
 - (void)dealloc {
+    core->setAlerter(nullptr);
+    delete alerter;
     delete core;
 }
 

@@ -19,7 +19,15 @@ typedef NS_OPTIONS(NSUInteger, MouseButton) {
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol CelestiaAppCoreDelegate <NSObject>
+
+- (void)celestiaAppCoreFatalErrorHappened:(NSString *)error;
+
+@end
+
 @interface CelestiaAppCore : NSObject
+
+@property (nonatomic, weak, nullable) id<CelestiaAppCoreDelegate> delegate;
 
 // MARK: Initilalization
 
