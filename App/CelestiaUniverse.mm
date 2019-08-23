@@ -44,13 +44,13 @@
     const Selection sel = [selection selection];
     switch (sel.getType()) {
         case Selection::Type_Star:
-            return [NSString stringWithUTF8String:u->getStarCatalog()->getStarName(*sel.star()).c_str()];
+            return [NSString stringWithUTF8String:u->getStarCatalog()->getStarName(*sel.star(), true).c_str()];
         case Selection::Type_Body:
-            return [NSString stringWithUTF8String:sel.body()->getName().c_str()];
+            return [NSString stringWithUTF8String:sel.body()->getName(true).c_str()];
         case Selection::Type_DeepSky:
-            return [NSString stringWithUTF8String:u->getDSOCatalog()->getDSOName(sel.deepsky()).c_str()];
+            return [NSString stringWithUTF8String:u->getDSOCatalog()->getDSOName(sel.deepsky(), true).c_str()];
         case Selection::Type_Location:
-            return [NSString stringWithUTF8String:sel.location()->getName().c_str()];
+            return [NSString stringWithUTF8String:sel.location()->getName(true).c_str()];
         default:
             return @"";
     }

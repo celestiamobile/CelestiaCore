@@ -93,7 +93,7 @@
 }
 
 - (NSString *)name {
-    return [NSString stringWithUTF8String:s.getName().c_str()];
+    return [NSString stringWithUTF8String:s.getName(true).c_str()];
 }
 
 - (NSString *)webInfoURL {
