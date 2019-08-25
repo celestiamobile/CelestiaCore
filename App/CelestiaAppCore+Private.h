@@ -14,3 +14,19 @@
 };
 
 @end
+
+@interface CelestiaAppCore (Private)
+
+// MARK: Mouse events
+- (void)appCoreMouseButtonUp:(NSPoint)location modifiers:(int)modifiers;
+- (void)appCoreMouseButtonDown:(NSPoint)location modifiers:(int)modifiers;
+- (void)appCoreMouseDragged:(NSPoint)location;
+- (void)appCoreMouseMove:(NSPoint)offset modifiers:(int)modifiers;
+- (void)appCoreMouseWheel:(CGFloat)motion modifiers:(int)modifiers;
+
+// MARK: Key events
+- (void)appCoreKeyUp:(int)input modifiers:(int)modifiers;
+- (void)appCoreKeyDown:(int)input modifiers:(int)modifiers;
+- (void)appCoreCharEnter:(char)input modifiers:(int)modifiers;
+
+@end

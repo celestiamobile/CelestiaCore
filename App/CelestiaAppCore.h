@@ -69,27 +69,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (readonly) NSUInteger aaSamples;
 
 - (void)draw;
-
 - (void)tick;
-
 - (void)resize:(CGSize)size NS_SWIFT_NAME(resize(to:));
-
-// MARK: Mouse events
-
-- (void)mouseButtonUp:(NSPoint)location modifiers:(NSUInteger)modifiers buttons:(MouseButton)buttons NS_SWIFT_NAME(mouseButtonUp(at:modifiers:with:));
-- (void)mouseButtonDown:(NSPoint)location modifiers:(NSUInteger)modifiers buttons:(MouseButton)buttons NS_SWIFT_NAME(mouseButtonDown(at:modifiers:with:));
-- (void)mouseDragged:(NSPoint)location NS_SWIFT_NAME(mouseDragged(to:));
-- (void)mouseMove:(NSPoint)offset modifiers:(NSUInteger)modifiers buttons:(MouseButton)buttons NS_SWIFT_NAME(mouseMove(by:modifiers:with:));
-- (void)mouseWheel:(CGFloat)motion modifiers:(NSUInteger)modifiers NS_SWIFT_NAME(mouseWheel(by:modifiers:));
-
-- (CelestiaSelection *)requestSelection:(NSPoint)location NS_SWIFT_NAME(requestSelection(at:));
-
-// MARK: Key events
-- (void)keyUp:(nullable NSString *)input modifiers:(NSUInteger)modifiers NS_SWIFT_NAME(keyUp(with:modifiers:));
-- (void)keyDown:(nullable NSString *)input modifiers:(NSUInteger)modifiers NS_SWIFT_NAME(keyDown(with:modifiers:));
-- (void)keyUp:(NSInteger)input;
-- (void)keyDown:(NSInteger)input;
-- (void)charEnter:(unichar)input;
 
 // MARK: History
 - (void)forward;

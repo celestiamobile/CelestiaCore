@@ -18,6 +18,7 @@ FOUNDATION_EXPORT const unsigned char CelestiaCoreVersionString[];
 
 #import <CelestiaCore/CelestiaAppCore.h>
 #import <CelestiaCore/CelestiaAppCore+Setting.h>
+#import <CelestiaCore/CelestiaAppCore+AppKit.h>
 #import <CelestiaCore/CelestiaSimulation.h>
 #import <CelestiaCore/CelestiaUniverse.h>
 

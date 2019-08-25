@@ -368,6 +368,9 @@
 		974D27492303C85900FDFBC0 /* CelestiaRotationModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 974D27472303C85900FDFBC0 /* CelestiaRotationModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		974D274A2303C85900FDFBC0 /* CelestiaRotationModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 974D27482303C85900FDFBC0 /* CelestiaRotationModel.mm */; };
 		974D274D2303C86B00FDFBC0 /* CelestiaRotationModel+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 974D274B2303C86B00FDFBC0 /* CelestiaRotationModel+Private.h */; };
+		97E0B770231273C10016C154 /* CelestiaAppCore+AppKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 97E0B76E231273C10016C154 /* CelestiaAppCore+AppKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		97E0B771231273C10016C154 /* CelestiaAppCore+AppKit.mm in Sources */ = {isa = PBXBuildFile; fileRef = 97E0B76F231273C10016C154 /* CelestiaAppCore+AppKit.mm */; };
+		97E0B7732312763C0016C154 /* CelestiaAppCore+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 97E0B7722312763C0016C154 /* CelestiaAppCore+Private.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -736,6 +739,9 @@
 		977D83D622FDB324002FF1C2 /* CelestiaAppCore.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CelestiaAppCore.mm; sourceTree = "<group>"; };
 		977D83D722FDB324002FF1C2 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		977D83D822FDB324002FF1C2 /* CelestiaAppCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CelestiaAppCore.h; sourceTree = "<group>"; };
+		97E0B76E231273C10016C154 /* CelestiaAppCore+AppKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CelestiaAppCore+AppKit.h"; sourceTree = "<group>"; };
+		97E0B76F231273C10016C154 /* CelestiaAppCore+AppKit.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "CelestiaAppCore+AppKit.mm"; sourceTree = "<group>"; };
+		97E0B7722312763C0016C154 /* CelestiaAppCore+Private.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "CelestiaAppCore+Private.mm"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -851,7 +857,10 @@
 				972F3A2522FF9B2800CEDDAC /* CelestiaAppCore+Setting.mm */,
 				977D83D822FDB324002FF1C2 /* CelestiaAppCore.h */,
 				972F3A2322FF9A8C00CEDDAC /* CelestiaAppCore+Private.h */,
+				97E0B7722312763C0016C154 /* CelestiaAppCore+Private.mm */,
 				977D83D622FDB324002FF1C2 /* CelestiaAppCore.mm */,
+				97E0B76E231273C10016C154 /* CelestiaAppCore+AppKit.h */,
+				97E0B76F231273C10016C154 /* CelestiaAppCore+AppKit.mm */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -1269,6 +1278,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97E0B770231273C10016C154 /* CelestiaAppCore+AppKit.h in Headers */,
 				974D27492303C85900FDFBC0 /* CelestiaRotationModel.h in Headers */,
 				974D27412303C3A300FDFBC0 /* CelestiaOrbit.h in Headers */,
 				971A674D2301A5AF009E4EA1 /* CelestiaScript.h in Headers */,
@@ -1562,6 +1572,7 @@
 				971A669923019C20009E4EA1 /* deepskyobj.cpp in Sources */,
 				971A668423019C20009E4EA1 /* body.cpp in Sources */,
 				971A661A23019C03009E4EA1 /* celx_frame.cpp in Sources */,
+				97E0B771231273C10016C154 /* CelestiaAppCore+AppKit.mm in Sources */,
 				971A671423019C26009E4EA1 /* 3dsread.cpp in Sources */,
 				971A664C23019C0F009E4EA1 /* filetype.cpp in Sources */,
 				974D26E9230279AC00FDFBC0 /* CelestiaBrowserItem.mm in Sources */,
@@ -1579,6 +1590,7 @@
 				971A671223019C26009E4EA1 /* 3dsmodel.cpp in Sources */,
 				971A662D23019C03009E4EA1 /* celx.cpp in Sources */,
 				971A66F623019C21009E4EA1 /* stellarclass.cpp in Sources */,
+				97E0B7732312763C0016C154 /* CelestiaAppCore+Private.mm in Sources */,
 				971A664023019C09009E4EA1 /* texturefont.cpp in Sources */,
 				971A661423019C03009E4EA1 /* celestiacore.cpp in Sources */,
 				971A660E23019BFC009E4EA1 /* mesh.cpp in Sources */,
