@@ -12,6 +12,8 @@
 #import "CelestiaAppCore+Setting.h"
 #import "CelestiaSimulation+Private.h"
 
+#import "CelestiaSelection+Private.h"
+
 #import "CelestiaUtil.h"
 
 #include "celestia/url.h"
@@ -74,9 +76,26 @@ private:
     CelestiaCore::CursorShape shape;
 };
 
+class AppCoreContextMenuHandler: public CelestiaCore::ContextMenuHandler
+{
+public:
+    AppCoreContextMenuHandler(void (^block)(NSPoint, CelestiaSelection *)) : CelestiaCore::ContextMenuHandler(), block(block) {};
+
+    void requestContextMenu(float x, float y, Selection sel)
+    {
+        @autoreleasepool {
+            CelestiaSelection *selection = [[CelestiaSelection alloc] initWithSelection:sel];
+            block(NSMakePoint(x, y), selection);
+        }
+    }
+private:
+    void (^block)(NSPoint, CelestiaSelection *);
+};
+
 @interface CelestiaAppCore () {
     AppCoreAlerter *alerter;
     AppCoreCursorHandler *cursorHandler;
+    AppCoreContextMenuHandler *contextMenuHandler;
 }
 
 @end
@@ -95,8 +114,12 @@ private:
         cursorHandler = new AppCoreCursorHandler(^(CursorShape shape) {
             [[weakSelf delegate] celestiaAppCoreCursorShapeChanged:shape];
         });
+        contextMenuHandler = new AppCoreContextMenuHandler(^(CGPoint location, CelestiaSelection *selection) {
+            [[weakSelf delegate] celestiaAppCoreCursorDidRequestContextMenuAtPoint:location withSelection:selection];
+        });
         core->setAlerter(alerter);
         core->setCursorHandler(cursorHandler);
+        core->setContextMenuHandler(contextMenuHandler);
         [self initializeSetting];
     }
     return self;
@@ -440,8 +463,10 @@ private:
 - (void)dealloc {
     core->setAlerter(nullptr);
     core->setCursorHandler(nullptr);
+    core->setContextMenuHandler(nullptr);
     delete alerter;
     delete cursorHandler;
+    delete contextMenuHandler;
     delete core;
 }
 

@@ -43,6 +43,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)celestiaAppCoreFatalErrorHappened:(NSString *)error;
 - (void)celestiaAppCoreCursorShapeChanged:(CursorShape)shape;
+- (void)celestiaAppCoreCursorDidRequestContextMenuAtPoint:(NSPoint)location withSelection:(CelestiaSelection *)selection;
 
 @end
 
