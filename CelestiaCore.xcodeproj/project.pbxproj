@@ -359,15 +359,15 @@
 		974D27492303C85900FDFBC0 /* CelestiaRotationModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 974D27472303C85900FDFBC0 /* CelestiaRotationModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		974D274A2303C85900FDFBC0 /* CelestiaRotationModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 974D27482303C85900FDFBC0 /* CelestiaRotationModel.mm */; };
 		974D274D2303C86B00FDFBC0 /* CelestiaRotationModel+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 974D274B2303C86B00FDFBC0 /* CelestiaRotationModel+Private.h */; };
-		97CF27692313D8F000EC1EE8 /* libtheora.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CF27602313D8F000EC1EE8 /* libtheora.a */; };
-		97CF276A2313D8F000EC1EE8 /* cspice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CF27612313D8F000EC1EE8 /* cspice.a */; };
-		97CF276B2313D8F000EC1EE8 /* libintl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CF27622313D8F000EC1EE8 /* libintl.a */; };
-		97CF276C2313D8F000EC1EE8 /* libpng16.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CF27632313D8F000EC1EE8 /* libpng16.a */; };
-		97CF276D2313D8F000EC1EE8 /* liblua53.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CF27642313D8F000EC1EE8 /* liblua53.a */; };
-		97CF276E2313D8F000EC1EE8 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CF27652313D8F000EC1EE8 /* libjpeg.a */; };
-		97CF276F2313D8F000EC1EE8 /* libogg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CF27662313D8F000EC1EE8 /* libogg.a */; };
-		97CF27702313D8F000EC1EE8 /* libGLEW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CF27672313D8F000EC1EE8 /* libGLEW.a */; };
-		97CF27712313D8F000EC1EE8 /* libfmt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CF27682313D8F000EC1EE8 /* libfmt.a */; };
+		97916F85231405BD00925AF3 /* libfmt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97916F7C231405BC00925AF3 /* libfmt.a */; };
+		97916F86231405BD00925AF3 /* libtheora.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97916F7D231405BC00925AF3 /* libtheora.a */; };
+		97916F87231405BD00925AF3 /* libogg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97916F7E231405BC00925AF3 /* libogg.a */; };
+		97916F88231405BD00925AF3 /* libGLEW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97916F7F231405BC00925AF3 /* libGLEW.a */; };
+		97916F89231405BD00925AF3 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97916F80231405BC00925AF3 /* libjpeg.a */; };
+		97916F8A231405BD00925AF3 /* liblua53.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97916F81231405BC00925AF3 /* liblua53.a */; };
+		97916F8B231405BD00925AF3 /* libintl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97916F82231405BC00925AF3 /* libintl.a */; };
+		97916F8C231405BD00925AF3 /* cspice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97916F83231405BD00925AF3 /* cspice.a */; };
+		97916F8D231405BD00925AF3 /* libpng16.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97916F84231405BD00925AF3 /* libpng16.a */; };
 		97E0B770231273C10016C154 /* CelestiaAppCore+AppKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 97E0B76E231273C10016C154 /* CelestiaAppCore+AppKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		97E0B771231273C10016C154 /* CelestiaAppCore+AppKit.mm in Sources */ = {isa = PBXBuildFile; fileRef = 97E0B76F231273C10016C154 /* CelestiaAppCore+AppKit.mm */; };
 		97E0B7732312763C0016C154 /* CelestiaAppCore+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 97E0B7722312763C0016C154 /* CelestiaAppCore+Private.mm */; };
@@ -730,15 +730,15 @@
 		977D83D622FDB324002FF1C2 /* CelestiaAppCore.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CelestiaAppCore.mm; sourceTree = "<group>"; };
 		977D83D722FDB324002FF1C2 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		977D83D822FDB324002FF1C2 /* CelestiaAppCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CelestiaAppCore.h; sourceTree = "<group>"; };
-		97CF27602313D8F000EC1EE8 /* libtheora.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libtheora.a; path = /Users/lilinfeng/Downloads/celestialibs/libtheora.a; sourceTree = "<absolute>"; };
-		97CF27612313D8F000EC1EE8 /* cspice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = cspice.a; path = /Users/lilinfeng/Downloads/celestialibs/cspice.a; sourceTree = "<absolute>"; };
-		97CF27622313D8F000EC1EE8 /* libintl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libintl.a; path = /Users/lilinfeng/Downloads/celestialibs/libintl.a; sourceTree = "<absolute>"; };
-		97CF27632313D8F000EC1EE8 /* libpng16.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpng16.a; path = /Users/lilinfeng/Downloads/celestialibs/libpng16.a; sourceTree = "<absolute>"; };
-		97CF27642313D8F000EC1EE8 /* liblua53.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblua53.a; path = /Users/lilinfeng/Downloads/celestialibs/liblua53.a; sourceTree = "<absolute>"; };
-		97CF27652313D8F000EC1EE8 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjpeg.a; path = /Users/lilinfeng/Downloads/celestialibs/libjpeg.a; sourceTree = "<absolute>"; };
-		97CF27662313D8F000EC1EE8 /* libogg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libogg.a; path = /Users/lilinfeng/Downloads/celestialibs/libogg.a; sourceTree = "<absolute>"; };
-		97CF27672313D8F000EC1EE8 /* libGLEW.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLEW.a; path = /Users/lilinfeng/Downloads/celestialibs/libGLEW.a; sourceTree = "<absolute>"; };
-		97CF27682313D8F000EC1EE8 /* libfmt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfmt.a; path = /Users/lilinfeng/Downloads/celestialibs/libfmt.a; sourceTree = "<absolute>"; };
+		97916F7C231405BC00925AF3 /* libfmt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfmt.a; path = libs/libfmt.a; sourceTree = "<group>"; };
+		97916F7D231405BC00925AF3 /* libtheora.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libtheora.a; path = libs/libtheora.a; sourceTree = "<group>"; };
+		97916F7E231405BC00925AF3 /* libogg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libogg.a; path = libs/libogg.a; sourceTree = "<group>"; };
+		97916F7F231405BC00925AF3 /* libGLEW.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLEW.a; path = libs/libGLEW.a; sourceTree = "<group>"; };
+		97916F80231405BC00925AF3 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjpeg.a; path = libs/libjpeg.a; sourceTree = "<group>"; };
+		97916F81231405BC00925AF3 /* liblua53.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblua53.a; path = libs/liblua53.a; sourceTree = "<group>"; };
+		97916F82231405BC00925AF3 /* libintl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libintl.a; path = libs/libintl.a; sourceTree = "<group>"; };
+		97916F83231405BD00925AF3 /* cspice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = cspice.a; path = libs/cspice.a; sourceTree = "<group>"; };
+		97916F84231405BD00925AF3 /* libpng16.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpng16.a; path = libs/libpng16.a; sourceTree = "<group>"; };
 		97E0B76E231273C10016C154 /* CelestiaAppCore+AppKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CelestiaAppCore+AppKit.h"; sourceTree = "<group>"; };
 		97E0B76F231273C10016C154 /* CelestiaAppCore+AppKit.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "CelestiaAppCore+AppKit.mm"; sourceTree = "<group>"; };
 		97E0B7722312763C0016C154 /* CelestiaAppCore+Private.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "CelestiaAppCore+Private.mm"; sourceTree = "<group>"; };
@@ -753,15 +753,15 @@
 				971A673D23019DB5009E4EA1 /* libc++.tbd in Frameworks */,
 				971A673B23019DAF009E4EA1 /* libz.tbd in Frameworks */,
 				971A673923019DA7009E4EA1 /* OpenGL.framework in Frameworks */,
-				97CF27692313D8F000EC1EE8 /* libtheora.a in Frameworks */,
-				97CF276A2313D8F000EC1EE8 /* cspice.a in Frameworks */,
-				97CF276B2313D8F000EC1EE8 /* libintl.a in Frameworks */,
-				97CF276C2313D8F000EC1EE8 /* libpng16.a in Frameworks */,
-				97CF276D2313D8F000EC1EE8 /* liblua53.a in Frameworks */,
-				97CF276E2313D8F000EC1EE8 /* libjpeg.a in Frameworks */,
-				97CF276F2313D8F000EC1EE8 /* libogg.a in Frameworks */,
-				97CF27702313D8F000EC1EE8 /* libGLEW.a in Frameworks */,
-				97CF27712313D8F000EC1EE8 /* libfmt.a in Frameworks */,
+				97916F85231405BD00925AF3 /* libfmt.a in Frameworks */,
+				97916F86231405BD00925AF3 /* libtheora.a in Frameworks */,
+				97916F87231405BD00925AF3 /* libogg.a in Frameworks */,
+				97916F88231405BD00925AF3 /* libGLEW.a in Frameworks */,
+				97916F89231405BD00925AF3 /* libjpeg.a in Frameworks */,
+				97916F8A231405BD00925AF3 /* liblua53.a in Frameworks */,
+				97916F8B231405BD00925AF3 /* libintl.a in Frameworks */,
+				97916F8C231405BD00925AF3 /* cspice.a in Frameworks */,
+				97916F8D231405BD00925AF3 /* libpng16.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -868,15 +868,15 @@
 		971A672923019D1B009E4EA1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				97CF27612313D8F000EC1EE8 /* cspice.a */,
-				97CF27682313D8F000EC1EE8 /* libfmt.a */,
-				97CF27672313D8F000EC1EE8 /* libGLEW.a */,
-				97CF27622313D8F000EC1EE8 /* libintl.a */,
-				97CF27652313D8F000EC1EE8 /* libjpeg.a */,
-				97CF27642313D8F000EC1EE8 /* liblua53.a */,
-				97CF27662313D8F000EC1EE8 /* libogg.a */,
-				97CF27632313D8F000EC1EE8 /* libpng16.a */,
-				97CF27602313D8F000EC1EE8 /* libtheora.a */,
+				97916F83231405BD00925AF3 /* cspice.a */,
+				97916F7C231405BC00925AF3 /* libfmt.a */,
+				97916F7F231405BC00925AF3 /* libGLEW.a */,
+				97916F82231405BC00925AF3 /* libintl.a */,
+				97916F80231405BC00925AF3 /* libjpeg.a */,
+				97916F81231405BC00925AF3 /* liblua53.a */,
+				97916F7E231405BC00925AF3 /* libogg.a */,
+				97916F84231405BD00925AF3 /* libpng16.a */,
+				97916F7D231405BC00925AF3 /* libtheora.a */,
 				971A674123019DE4009E4EA1 /* libiconv.2.tbd */,
 				971A673E23019DBD009E4EA1 /* libiconv.tbd */,
 				971A673C23019DB5009E4EA1 /* libc++.tbd */,
@@ -1723,7 +1723,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = /Users/lilinfeng/Downloads/celestialibs;
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/libs";
 				MACH_O_TYPE = staticlib;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = cc.meowssage.Celestia;
@@ -1775,7 +1775,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = /Users/lilinfeng/Downloads/celestialibs;
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/libs";
 				MACH_O_TYPE = staticlib;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = cc.meowssage.Celestia;
