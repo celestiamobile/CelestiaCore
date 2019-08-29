@@ -89,6 +89,30 @@
     [self body]->setAlbedo(a);
 }
 
+- (BOOL)hasRings {
+    return [self body]->getRings() ? YES : NO;
+}
+
+- (BOOL)hasAtmosphere {
+    return [self body]->getAtmosphere() ? YES : NO;
+}
+
+- (NSDate *)startTime {
+    double start, end;
+    [self body]->getLifespan(start, end);
+    if (start > -1.0e9)
+        return [NSDate dateWithJulian:start];
+    return nil;
+}
+
+- (NSDate *)endTime {
+    double start, end;
+     [self body]->getLifespan(start, end);
+     if (end < 1.0e9)
+         return [NSDate dateWithJulian:end];
+     return nil;
+}
+
 - (NSArray<NSString *> *)alternateSurfaceNames {
     NSMutableArray *result = nil;
     std::vector<std::string> *altSurfaces = [self body]->getAlternateSurfaceNames();

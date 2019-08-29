@@ -39,6 +39,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (readonly) NSString *name;
 @property (readonly) float radius;
 @property (readonly, getter=isEllipsoid) BOOL ellipsoid;
+@property (readonly) BOOL hasRings;
+@property (readonly) BOOL hasAtmosphere;
+@property (nullable, readonly) NSDate *startTime;
+@property (nullable, readonly) NSDate *endTime;
 @property float mass;
 @property float albedo;
 @property (readonly) NSArray<NSString *> *alternateSurfaceNames;
