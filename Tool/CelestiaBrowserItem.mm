@@ -88,7 +88,7 @@
     {
         if (index >= 0 && index < [_childrenKeys count])
         {
-            return _childrenKeys[index];
+            return [_childrenKeys objectAtIndex:index];
         }
         return nil;
     }
@@ -100,7 +100,7 @@
     {
         if (index >= 0 && index < [_childrenKeys count])
         {
-            return _childrenKeys[index];
+            return [_childrenKeys objectAtIndex:index];
         }
         return nil;
     }
@@ -109,12 +109,12 @@
 
 - (CelestiaBrowserItem *)childNamed: (NSString *)aName {
     if (_childrenDictionary != nil)
-        return _childrenDictionary[aName];
+        return [_childrenDictionary objectForKey:aName];
 
     if (_childrenProvider != nil)
         [self setChildren:[_childrenProvider childrenForBrowserItem:self]];
 
-    return _childrenDictionary[aName];
+    return [_childrenDictionary objectForKey:aName];
 }
 
 @end

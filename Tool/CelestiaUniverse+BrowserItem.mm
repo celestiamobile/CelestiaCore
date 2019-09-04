@@ -101,32 +101,32 @@
                     subItem = resultDictionary;
                     break;
             }
-            subItem[name] = item;
+            [subItem setObject:item forKey:name];
         }
 
         if (planets) {
             NSString *name = NSLocalizedStringFromTable(@"Planets",@"po",@"");
-            resultDictionary[name] = [[CelestiaBrowserItem alloc] initWithName:name children:planets];
+            [resultDictionary setObject:[[CelestiaBrowserItem alloc] initWithName:name children:planets] forKey:name];
         }
         if (dwarfPlanets) {
             NSString *name = NSLocalizedStringFromTable(@"Dwarf Planets",@"po",@"");
-            resultDictionary[name] = [[CelestiaBrowserItem alloc] initWithName:name children:dwarfPlanets];
+            [resultDictionary setObject:[[CelestiaBrowserItem alloc] initWithName:name children:dwarfPlanets] forKey:name];
         }
         if (minorMoons) {
             NSString *name = NSLocalizedStringFromTable(@"Minor Moons",@"po",@"");
-            resultDictionary[name] = [[CelestiaBrowserItem alloc] initWithName:name children:minorMoons];
+            [resultDictionary setObject:[[CelestiaBrowserItem alloc] initWithName:name children:minorMoons] forKey:name];
         }
         if (asteroids) {
             NSString *name = NSLocalizedStringFromTable(@"Asteroids",@"po",@"");
-            resultDictionary[name] = [[CelestiaBrowserItem alloc] initWithName:name children:asteroids];
+            [resultDictionary setObject:[[CelestiaBrowserItem alloc] initWithName:name children:asteroids] forKey:name];
         }
         if (comets) {
             NSString *name = NSLocalizedStringFromTable(@"Comets",@"po",@"");
-            resultDictionary[name] = [[CelestiaBrowserItem alloc] initWithName:name children:comets];
+            [resultDictionary setObject:[[CelestiaBrowserItem alloc] initWithName:name children:comets] forKey:name];
         }
         if (spacecrafts) {
             NSString *name = NSLocalizedStringFromTable(@"Spacecrafts",@"po",@"");
-            resultDictionary[name] = [[CelestiaBrowserItem alloc] initWithName:name children:spacecrafts];
+            [resultDictionary setObject:[[CelestiaBrowserItem alloc] initWithName:name children:spacecrafts] forKey:name];
         }
     }
     return resultDictionary;
@@ -187,20 +187,20 @@
                     subItem = resultDictionary;
                     break;
             }
-            subItem[name] = item;
+            [subItem setObject:item forKey:name];
         }
 
         if (minorMoons) {
             NSString *name = NSLocalizedStringFromTable(@"Minor Moons",@"po",@"");
-            resultDictionary[name] = [[CelestiaBrowserItem alloc] initWithName:name children:minorMoons];
+            [resultDictionary setObject:[[CelestiaBrowserItem alloc] initWithName:name children:minorMoons] forKey:name];
         }
         if (comets) {
             NSString *name = NSLocalizedStringFromTable(@"Comets",@"po",@"");
-            resultDictionary[name] = [[CelestiaBrowserItem alloc] initWithName:name children:comets];
+            [resultDictionary setObject:[[CelestiaBrowserItem alloc] initWithName:name children:comets] forKey:name];
         }
         if (spacecrafts) {
             NSString *name = NSLocalizedStringFromTable(@"Spacecrafts",@"po",@"");
-            resultDictionary[name] = [[CelestiaBrowserItem alloc] initWithName:name children:spacecrafts];
+            [resultDictionary setObject:[[CelestiaBrowserItem alloc] initWithName:name children:spacecrafts] forKey:name];
         }
     }
 
@@ -212,11 +212,11 @@
              iter != locations->end(); iter++)
         {
             CelestiaLocation *location = [[CelestiaLocation alloc] initWithLocation:*iter];
-            locationDictionary[[location name]] = [[CelestiaBrowserItem alloc] initWithCatEntry:location provider:nil];
+            [locationDictionary setObject:[[CelestiaBrowserItem alloc] initWithCatEntry:location provider:nil] forKey:[location name]];
         }
         if ([locationDictionary count] > 0) {
             NSString *name = NSLocalizedStringFromTable(@"Locations",@"po",@"");
-            resultDictionary[name] = [[CelestiaBrowserItem alloc] initWithName:name children:locationDictionary];
+            [resultDictionary setObject:[[CelestiaBrowserItem alloc] initWithName:name children:locationDictionary] forKey:name];
         }
     }
 
