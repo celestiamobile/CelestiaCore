@@ -1507,7 +1507,7 @@
 		9753847B22FDA37000050A53 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1030;
+				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "李林峰";
 				TargetAttributes = {
 					971A65CB23019BC5009E4EA1 = {
@@ -1522,11 +1522,11 @@
 			knownRegions = (
 				en,
 				ja,
-				English,
 				zh_CN,
 				"zh-Hans",
 				es,
 				fr,
+				Base,
 			);
 			mainGroup = 9753847A22FDA37000050A53;
 			productRefGroup = 9753848422FDA37000050A53 /* Products */;
@@ -1794,6 +1794,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1855,6 +1856,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
