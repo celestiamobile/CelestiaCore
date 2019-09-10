@@ -104,6 +104,7 @@ private:
 - (instancetype)init {
     self = [super init];
     if (self != nil) {
+        _initialized = NO;
         core = new CelestiaCore;
         __weak CelestiaAppCore *weakSelf = self;
         alerter = new AppCoreAlerter(^(NSString *error) {
@@ -137,7 +138,11 @@ private:
         extras.push_back([obj UTF8String]);
     }];
 
-    return core->initSimulation(configFile, extras, &watcher) ? YES : NO;
+    bool success = core->initSimulation(configFile, extras, &watcher);
+    if (success) {
+        _initialized = YES;
+    }
+    return _initialized;
 }
 
 - (BOOL)startRenderer {

@@ -49,6 +49,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CelestiaAppCore : NSObject
 
+@property (nonatomic, readonly, getter=isInitialized) BOOL initialized;
+
 @property (nonatomic, weak, nullable) id<CelestiaAppCoreDelegate> delegate;
 
 // MARK: Initilalization
