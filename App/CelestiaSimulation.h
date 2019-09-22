@@ -11,6 +11,7 @@
 @class CelestiaSelection;
 @class CelestiaUniverse;
 @class CelestiaUniversalCoord;
+@class CelestiaObserver;
 
 typedef NS_ENUM(NSUInteger, SimulationCoordinateSystem) {
     SimulationCoordinateSystemUniversal = 0,
@@ -51,6 +52,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property CelestiaSelection *selection;
 @property NSDate *time;
+
+@property (readonly) CelestiaObserver *activeObserver;
 
 @property (nullable, readonly) CelestiaGoToLocation *currentLocation;
 

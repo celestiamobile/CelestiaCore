@@ -10,6 +10,7 @@
 #import "CelestiaSimulation+Private.h"
 #import "CelestiaSelection+Private.h"
 #import "CelestiaUniverse+Private.h"
+#import "CelestiaObserver+Private.h"
 #import "CelestiaUniversalCoord+Private.h"
 #import "CelestiaVector+Private.h"
 #import "CelestiaUtil.h"
@@ -109,6 +110,10 @@ typedef NS_OPTIONS(NSUInteger, CelestiaGoToLocationFieldMask) {
 
 - (void)setTime:(NSDate *)time {
     s->setTime([time julianDay]);
+}
+
+- (CelestiaObserver *)activeObserver {
+    return [[CelestiaObserver alloc] initWithObserver:s->getActiveObserver()];
 }
 
 - (CelestiaGoToLocation *)currentLocation {
