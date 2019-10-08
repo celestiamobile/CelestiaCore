@@ -339,6 +339,8 @@
 		971A674E2301A5AF009E4EA1 /* CelestiaScript.mm in Sources */ = {isa = PBXBuildFile; fileRef = 971A674C2301A5AE009E4EA1 /* CelestiaScript.mm */; };
 		971A67532301B556009E4EA1 /* oggtheoracapture.h in Headers */ = {isa = PBXBuildFile; fileRef = 971A67512301B556009E4EA1 /* oggtheoracapture.h */; };
 		971A67542301B556009E4EA1 /* oggtheoracapture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 971A67522301B556009E4EA1 /* oggtheoracapture.cpp */; };
+		971B8ADF234C218E00567A38 /* CelestiaFavorite.h in Headers */ = {isa = PBXBuildFile; fileRef = 971B8ADD234C218E00567A38 /* CelestiaFavorite.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		971B8AE0234C218E00567A38 /* CelestiaFavorite.m in Sources */ = {isa = PBXBuildFile; fileRef = 971B8ADE234C218E00567A38 /* CelestiaFavorite.m */; };
 		9729F1EF23084D080069FD72 /* fs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9729F1EC23084D080069FD72 /* fs.cpp */; };
 		9729F1F023084D080069FD72 /* filesystem.h in Headers */ = {isa = PBXBuildFile; fileRef = 9729F1ED23084D080069FD72 /* filesystem.h */; };
 		9729F1F123084D080069FD72 /* fs.h in Headers */ = {isa = PBXBuildFile; fileRef = 9729F1EE23084D080069FD72 /* fs.h */; };
@@ -412,6 +414,8 @@
 		971A674C2301A5AE009E4EA1 /* CelestiaScript.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CelestiaScript.mm; sourceTree = "<group>"; };
 		971A67512301B556009E4EA1 /* oggtheoracapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = oggtheoracapture.h; sourceTree = "<group>"; };
 		971A67522301B556009E4EA1 /* oggtheoracapture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = oggtheoracapture.cpp; sourceTree = "<group>"; };
+		971B8ADD234C218E00567A38 /* CelestiaFavorite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CelestiaFavorite.h; sourceTree = "<group>"; };
+		971B8ADE234C218E00567A38 /* CelestiaFavorite.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CelestiaFavorite.m; sourceTree = "<group>"; };
 		9729F1EC23084D080069FD72 /* fs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fs.cpp; sourceTree = "<group>"; };
 		9729F1ED23084D080069FD72 /* filesystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = filesystem.h; sourceTree = "<group>"; };
 		9729F1EE23084D080069FD72 /* fs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fs.h; sourceTree = "<group>"; };
@@ -787,6 +791,8 @@
 				970DCE3F22FE8E240044F590 /* CelestiaUtil.mm */,
 				971A674B2301A5AE009E4EA1 /* CelestiaScript.h */,
 				971A674C2301A5AE009E4EA1 /* CelestiaScript.mm */,
+				971B8ADD234C218E00567A38 /* CelestiaFavorite.h */,
+				971B8ADE234C218E00567A38 /* CelestiaFavorite.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -1287,6 +1293,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				971B8ADF234C218E00567A38 /* CelestiaFavorite.h in Headers */,
 				97C62C2423374F4E00953522 /* CelestiaObserver.h in Headers */,
 				97E0B770231273C10016C154 /* CelestiaAppCore+AppKit.h in Headers */,
 				974D27492303C85900FDFBC0 /* CelestiaRotationModel.h in Headers */,
@@ -1678,6 +1685,7 @@
 				971A66B223019C20009E4EA1 /* glshader.cpp in Sources */,
 				971A663923019C03009E4EA1 /* imagecapture.cpp in Sources */,
 				971A66F023019C21009E4EA1 /* stardb.cpp in Sources */,
+				971B8AE0234C218E00567A38 /* CelestiaFavorite.m in Sources */,
 				971A66A623019C20009E4EA1 /* frame.cpp in Sources */,
 				971A663123019C03009E4EA1 /* destination.cpp in Sources */,
 				971A662723019C03009E4EA1 /* celx_position.cpp in Sources */,
@@ -1750,6 +1758,7 @@
 					/usr/local/include,
 					/usr/local/include/eigen3,
 					/usr/local/include/lua,
+					/usr/local/opt/gettext/include,
 				);
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1795,6 +1804,7 @@
 					/usr/local/include,
 					/usr/local/include/eigen3,
 					/usr/local/include/lua,
+					/usr/local/opt/gettext/include,
 				);
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
