@@ -147,20 +147,15 @@ static NSArray* keyArray;
     return (NSNumber *)[self valueForKey: [tagDict objectForKey: [NSNumber numberWithInteger: tag] ] ];
 }
 
--(void) takeValue: (id) value forTag: (NSInteger) tag
+-(void) setValue: (id) value forTag: (NSInteger) tag
 {
     id key = [tagDict objectForKey: [NSNumber numberWithInteger: tag] ];
     if (key!= nil)
     {
-#if MAC_OS_X_VERSION_MAX_ALLOWED >= MAC_OS_X_VERSION_10_3
         [self setValue: value forKey: key ];
-#else
-        [self takeValue: value forKey: key ];
-#endif
     }
 }
 
-#if MAC_OS_X_VERSION_MAX_ALLOWED >= MAC_OS_X_VERSION_10_3
 - (id)valueForUndefinedKey: (NSString *) key
 {
 #ifdef DEBUG
@@ -182,31 +177,6 @@ static NSArray* keyArray;
     NSLog(@"nil value for %@", key);
 #endif
 }
-
-#else
-
--(id)handleQueryWithUnboundKey: (NSString*) key
-{
-#ifdef DEBUG
-    if ( key ) NSLog(@"unbound key query for %@", key);
-#endif
-    return nil;
-}
-
--(void)handleTakeValue: (id) value forUnboundKey: (NSString*) key
-{
-#ifdef DEBUG
-    NSLog(@"unbound key set for %@", key);
-#endif
-}
-
--(void)unableToSetNilForKey: (NSString*) key
-{
-#ifdef DEBUG
-    NSLog(@"nil key for %@", key);
-#endif
-}
-#endif
 
 // Time Settings
 
@@ -574,7 +544,7 @@ FEATUREMETHODS(Other)
     {
         case 6: // 600
             // 600s (popups)
-            [self takeValue:[NSNumber numberWithInteger:value] forTag:tag];
+            [self setValue:[NSNumber numberWithInteger:value] forTag:tag];
             break;
     }
 }
@@ -586,7 +556,7 @@ FEATUREMETHODS(Other)
     switch ( tag/100)
     {
         case 9:
-            return [self takeValue:[NSNumber numberWithFloat:value] forTag:tag];
+            return [self setValue:[NSNumber numberWithFloat:value] forTag:tag];
     }
 }
 
@@ -600,7 +570,7 @@ FEATUREMETHODS(Other)
         {
             case 4: case 5: case 7: case 8: case 10:
                 // 400s, 500s, 700s, 800s, 1000s (checkboxes)
-                return [self takeValue:[NSNumber numberWithBool:value] forTag:tag];
+                return [self setValue:[NSNumber numberWithBool:value] forTag:tag];
         }
     }
 }
@@ -613,11 +583,7 @@ FEATUREMETHODS(Other)
     NSEnumerator* keys = [ defaultsDictionary keyEnumerator];
     while ( nil != (key = [keys nextObject]) )
     {
-#if MAC_OS_X_VERSION_MAX_ALLOWED >= MAC_OS_X_VERSION_10_3
         [self setValue: [defaultsDictionary objectForKey: key] forKey: key];
-#else
-        [self takeValue: [defaultsDictionary objectForKey: key] forKey: key];
-#endif
     }
 }
 
