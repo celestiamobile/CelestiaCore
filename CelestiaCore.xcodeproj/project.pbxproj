@@ -367,9 +367,6 @@
 		9751DC2D23594A8600299997 /* command.h in Headers */ = {isa = PBXBuildFile; fileRef = 9751DBCC23594A5300299997 /* command.h */; };
 		9751DC2E23594A8600299997 /* execenv.h in Headers */ = {isa = PBXBuildFile; fileRef = 9751DBCD23594A5300299997 /* execenv.h */; };
 		9751DC2F23594A8600299997 /* cmdparser.h in Headers */ = {isa = PBXBuildFile; fileRef = 9751DBCE23594A5300299997 /* cmdparser.h */; };
-		9751DCFE2359564F00299997 /* Util.h in Headers */ = {isa = PBXBuildFile; fileRef = 9751DCFD2359564F00299997 /* Util.h */; };
-		9751DD012359568D00299997 /* POSupport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9751DCFF2359568B00299997 /* POSupport.cpp */; };
-		9751DD022359568D00299997 /* POSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 9751DD002359568D00299997 /* POSupport.h */; };
 		97916F85231405BD00925AF3 /* libfmt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97916F7C231405BC00925AF3 /* libfmt.a */; };
 		97916F86231405BD00925AF3 /* libtheora.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97916F7D231405BC00925AF3 /* libtheora.a */; };
 		97916F87231405BD00925AF3 /* libogg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97916F7E231405BC00925AF3 /* libogg.a */; };
@@ -504,9 +501,6 @@
 		9751DBE723594A5300299997 /* celx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = celx.h; sourceTree = "<group>"; };
 		9751DBE823594A5300299997 /* celx_vector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = celx_vector.h; sourceTree = "<group>"; };
 		9751DBE923594A5300299997 /* celx_phase.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = celx_phase.cpp; sourceTree = "<group>"; };
-		9751DCFD2359564F00299997 /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
-		9751DCFF2359568B00299997 /* POSupport.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = POSupport.cpp; sourceTree = "<group>"; };
-		9751DD002359568D00299997 /* POSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSupport.h; sourceTree = "<group>"; };
 		977D819522FDB1BE002FF1C2 /* aabox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aabox.h; sourceTree = "<group>"; };
 		977D819622FDB1BE002FF1C2 /* ellipsoid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ellipsoid.h; sourceTree = "<group>"; };
 		977D819722FDB1BE002FF1C2 /* frustum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = frustum.h; sourceTree = "<group>"; };
@@ -799,9 +793,6 @@
 		971A64652301976A009E4EA1 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				9751DCFF2359568B00299997 /* POSupport.cpp */,
-				9751DD002359568D00299997 /* POSupport.h */,
-				9751DCFD2359564F00299997 /* Util.h */,
 				970DCE3422FE695D0044F590 /* CelestiaUniversalCoord+Private.h */,
 				970DCE3222FE695D0044F590 /* CelestiaUniversalCoord.h */,
 				970DCE3322FE695D0044F590 /* CelestiaUniversalCoord.mm */,
@@ -1414,7 +1405,6 @@
 				971A66BA23019C20009E4EA1 /* lodspheremesh.h in Headers */,
 				971A66EF23019C21009E4EA1 /* starcolors.h in Headers */,
 				971A66F823019C21009E4EA1 /* surface.h in Headers */,
-				9751DCFE2359564F00299997 /* Util.h in Headers */,
 				971A66B823019C20009E4EA1 /* location.h in Headers */,
 				971A663F23019C03009E4EA1 /* url.h in Headers */,
 				9751DC1A23594A8000299997 /* celx_gl.h in Headers */,
@@ -1517,7 +1507,6 @@
 				971A666723019C15009E4EA1 /* precession.h in Headers */,
 				971A66DD23019C20009E4EA1 /* rotationmanager.h in Headers */,
 				971A66C023019C20009E4EA1 /* modelgeometry.h in Headers */,
-				9751DD022359568D00299997 /* POSupport.h in Headers */,
 				971A67532301B556009E4EA1 /* oggtheoracapture.h in Headers */,
 				971A668123019C20009E4EA1 /* atmosphere.h in Headers */,
 				971A66F523019C21009E4EA1 /* staroctree.h in Headers */,
@@ -1730,7 +1719,6 @@
 				971A66B023019C20009E4EA1 /* globular.cpp in Sources */,
 				971A66D223019C20009E4EA1 /* planetgrid.cpp in Sources */,
 				971A66AF23019C20009E4EA1 /* glmarker.cpp in Sources */,
-				9751DD012359568D00299997 /* POSupport.cpp in Sources */,
 				9751DC1123594A8000299997 /* celx_object.cpp in Sources */,
 				971A66E623019C20009E4EA1 /* solarsys.cpp in Sources */,
 				971A66CC23019C20009E4EA1 /* overlay.cpp in Sources */,
@@ -1795,7 +1783,6 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = Util/Util.h;
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
 				GCC_WARN_UNUSED_FUNCTION = NO;
@@ -1845,7 +1832,6 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = Util/Util.h;
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
 				GCC_WARN_UNUSED_FUNCTION = NO;
