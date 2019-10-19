@@ -376,6 +376,8 @@
 		97916F8B231405BD00925AF3 /* libintl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97916F82231405BC00925AF3 /* libintl.a */; };
 		97916F8C231405BD00925AF3 /* cspice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97916F83231405BD00925AF3 /* cspice.a */; };
 		97916F8D231405BD00925AF3 /* libpng16.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97916F84231405BD00925AF3 /* libpng16.a */; };
+		97AD599A235B016C0056CA80 /* scriptmaps.h in Headers */ = {isa = PBXBuildFile; fileRef = 97AD5997235B016B0056CA80 /* scriptmaps.h */; };
+		97AD599B235B016C0056CA80 /* scriptmaps.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97AD5999235B016B0056CA80 /* scriptmaps.cpp */; };
 		97C62C2423374F4E00953522 /* CelestiaObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 97C62C2223374F4E00953522 /* CelestiaObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		97C62C2523374F4E00953522 /* CelestiaObserver.mm in Sources */ = {isa = PBXBuildFile; fileRef = 97C62C2323374F4E00953522 /* CelestiaObserver.mm */; };
 		97C62C2923374F6700953522 /* CelestiaObserver+Private.h in Sources */ = {isa = PBXBuildFile; fileRef = 97C62C2723374F6700953522 /* CelestiaObserver+Private.h */; };
@@ -758,6 +760,8 @@
 		97916F82231405BC00925AF3 /* libintl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libintl.a; path = libs/libintl.a; sourceTree = "<group>"; };
 		97916F83231405BD00925AF3 /* cspice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = cspice.a; path = libs/cspice.a; sourceTree = "<group>"; };
 		97916F84231405BD00925AF3 /* libpng16.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpng16.a; path = libs/libpng16.a; sourceTree = "<group>"; };
+		97AD5997235B016B0056CA80 /* scriptmaps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scriptmaps.h; sourceTree = "<group>"; };
+		97AD5999235B016B0056CA80 /* scriptmaps.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scriptmaps.cpp; sourceTree = "<group>"; };
 		97C62C2223374F4E00953522 /* CelestiaObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CelestiaObserver.h; sourceTree = "<group>"; };
 		97C62C2323374F4E00953522 /* CelestiaObserver.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CelestiaObserver.mm; sourceTree = "<group>"; };
 		97C62C2723374F6700953522 /* CelestiaObserver+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CelestiaObserver+Private.h"; sourceTree = "<group>"; };
@@ -926,6 +930,7 @@
 		9751DBC423594A5300299997 /* celscript */ = {
 			isa = PBXGroup;
 			children = (
+				97AD5996235B016B0056CA80 /* common */,
 				9751DBC623594A5300299997 /* legacy */,
 				9751DBCF23594A5300299997 /* lua */,
 			);
@@ -1328,6 +1333,15 @@
 			path = celmodel;
 			sourceTree = "<group>";
 		};
+		97AD5996235B016B0056CA80 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				97AD5997235B016B0056CA80 /* scriptmaps.h */,
+				97AD5999235B016B0056CA80 /* scriptmaps.cpp */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1369,6 +1383,7 @@
 				971A65FA23019BF0009E4EA1 /* CelestiaPlanetarySystem.h in Headers */,
 				971A66C223019C20009E4EA1 /* multitexture.h in Headers */,
 				971A670C23019C21009E4EA1 /* vertexobject.h in Headers */,
+				97AD599A235B016C0056CA80 /* scriptmaps.h in Headers */,
 				971A665A23019C0F009E4EA1 /* util.h in Headers */,
 				974A6B2023532EC4007BCABD /* rectangle.h in Headers */,
 				971A65ED23019BF0009E4EA1 /* CelestiaVector+Private.h in Headers */,
@@ -1634,6 +1649,7 @@
 				9751DC2A23594A8600299997 /* command.cpp in Sources */,
 				971A660223019BF0009E4EA1 /* CelestiaCatEntry.mm in Sources */,
 				971A669923019C20009E4EA1 /* deepskyobj.cpp in Sources */,
+				97AD599B235B016C0056CA80 /* scriptmaps.cpp in Sources */,
 				971A668423019C20009E4EA1 /* body.cpp in Sources */,
 				97E0B771231273C10016C154 /* CelestiaAppCore+AppKit.mm in Sources */,
 				971A671423019C26009E4EA1 /* 3dsread.cpp in Sources */,
