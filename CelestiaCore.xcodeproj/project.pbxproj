@@ -378,6 +378,12 @@
 		97916F8D231405BD00925AF3 /* libpng16.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97916F84231405BD00925AF3 /* libpng16.a */; };
 		97AD599A235B016C0056CA80 /* scriptmaps.h in Headers */ = {isa = PBXBuildFile; fileRef = 97AD5997235B016B0056CA80 /* scriptmaps.h */; };
 		97AD599B235B016C0056CA80 /* scriptmaps.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97AD5999235B016B0056CA80 /* scriptmaps.cpp */; };
+		97AD59C0235B1B760056CA80 /* script.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97AD59BE235B1B760056CA80 /* script.cpp */; };
+		97AD59C1235B1B760056CA80 /* script.h in Headers */ = {isa = PBXBuildFile; fileRef = 97AD59BF235B1B760056CA80 /* script.h */; };
+		97AD59C4235B1B840056CA80 /* legacyscript.h in Headers */ = {isa = PBXBuildFile; fileRef = 97AD59C2235B1B840056CA80 /* legacyscript.h */; };
+		97AD59C5235B1B840056CA80 /* legacyscript.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97AD59C3235B1B840056CA80 /* legacyscript.cpp */; };
+		97AD59C8235B1B8E0056CA80 /* luascript.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97AD59C6235B1B8E0056CA80 /* luascript.cpp */; };
+		97AD59C9235B1B8E0056CA80 /* luascript.h in Headers */ = {isa = PBXBuildFile; fileRef = 97AD59C7235B1B8E0056CA80 /* luascript.h */; };
 		97C62C2423374F4E00953522 /* CelestiaObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 97C62C2223374F4E00953522 /* CelestiaObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		97C62C2523374F4E00953522 /* CelestiaObserver.mm in Sources */ = {isa = PBXBuildFile; fileRef = 97C62C2323374F4E00953522 /* CelestiaObserver.mm */; };
 		97C62C2923374F6700953522 /* CelestiaObserver+Private.h in Sources */ = {isa = PBXBuildFile; fileRef = 97C62C2723374F6700953522 /* CelestiaObserver+Private.h */; };
@@ -762,6 +768,12 @@
 		97916F84231405BD00925AF3 /* libpng16.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpng16.a; path = libs/libpng16.a; sourceTree = "<group>"; };
 		97AD5997235B016B0056CA80 /* scriptmaps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scriptmaps.h; sourceTree = "<group>"; };
 		97AD5999235B016B0056CA80 /* scriptmaps.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scriptmaps.cpp; sourceTree = "<group>"; };
+		97AD59BE235B1B760056CA80 /* script.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = script.cpp; sourceTree = "<group>"; };
+		97AD59BF235B1B760056CA80 /* script.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = script.h; sourceTree = "<group>"; };
+		97AD59C2235B1B840056CA80 /* legacyscript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = legacyscript.h; sourceTree = "<group>"; };
+		97AD59C3235B1B840056CA80 /* legacyscript.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = legacyscript.cpp; sourceTree = "<group>"; };
+		97AD59C6235B1B8E0056CA80 /* luascript.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = luascript.cpp; sourceTree = "<group>"; };
+		97AD59C7235B1B8E0056CA80 /* luascript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = luascript.h; sourceTree = "<group>"; };
 		97C62C2223374F4E00953522 /* CelestiaObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CelestiaObserver.h; sourceTree = "<group>"; };
 		97C62C2323374F4E00953522 /* CelestiaObserver.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CelestiaObserver.mm; sourceTree = "<group>"; };
 		97C62C2723374F6700953522 /* CelestiaObserver+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CelestiaObserver+Private.h"; sourceTree = "<group>"; };
@@ -947,6 +959,8 @@
 				9751DBCC23594A5300299997 /* command.h */,
 				9751DBCD23594A5300299997 /* execenv.h */,
 				9751DBCE23594A5300299997 /* cmdparser.h */,
+				97AD59C3235B1B840056CA80 /* legacyscript.cpp */,
+				97AD59C2235B1B840056CA80 /* legacyscript.h */,
 			);
 			path = legacy;
 			sourceTree = "<group>";
@@ -979,6 +993,8 @@
 				9751DBE723594A5300299997 /* celx.h */,
 				9751DBE823594A5300299997 /* celx_vector.h */,
 				9751DBE923594A5300299997 /* celx_phase.cpp */,
+				97AD59C6235B1B8E0056CA80 /* luascript.cpp */,
+				97AD59C7235B1B8E0056CA80 /* luascript.h */,
 			);
 			path = lua;
 			sourceTree = "<group>";
@@ -1338,6 +1354,8 @@
 			children = (
 				97AD5997235B016B0056CA80 /* scriptmaps.h */,
 				97AD5999235B016B0056CA80 /* scriptmaps.cpp */,
+				97AD59BE235B1B760056CA80 /* script.cpp */,
+				97AD59BF235B1B760056CA80 /* script.h */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -1416,6 +1434,7 @@
 				971A668723019C20009E4EA1 /* boundaries.h in Headers */,
 				9729F1F023084D080069FD72 /* filesystem.h in Headers */,
 				971A668523019C20009E4EA1 /* body.h in Headers */,
+				97AD59C1235B1B760056CA80 /* script.h in Headers */,
 				971A665823019C0F009E4EA1 /* utf8.h in Headers */,
 				971A66BA23019C20009E4EA1 /* lodspheremesh.h in Headers */,
 				971A66EF23019C21009E4EA1 /* starcolors.h in Headers */,
@@ -1443,6 +1462,7 @@
 				971A66BC23019C20009E4EA1 /* marker.h in Headers */,
 				971A663D23019C03009E4EA1 /* scriptmenu.h in Headers */,
 				971A670923019C21009E4EA1 /* vecgl.h in Headers */,
+				97AD59C4235B1B840056CA80 /* legacyscript.h in Headers */,
 				971A65E623019BF0009E4EA1 /* CelestiaStarCatalog+Private.h in Headers */,
 				971A65FF23019BF0009E4EA1 /* CelestiaLocation+Private.h in Headers */,
 				971A672023019C2B009E4EA1 /* perlin.h in Headers */,
@@ -1483,6 +1503,7 @@
 				971A660923019BF0009E4EA1 /* CelestiaStar+Private.h in Headers */,
 				971A669C23019C20009E4EA1 /* dispmap.h in Headers */,
 				971A66FC23019C21009E4EA1 /* texture.h in Headers */,
+				97AD59C9235B1B8E0056CA80 /* luascript.h in Headers */,
 				971A667323019C15009E4EA1 /* scriptrotation.h in Headers */,
 				971A66A723019C20009E4EA1 /* frame.h in Headers */,
 				974D26EC230279D700FDFBC0 /* CelestiaBrowserItem+Private.h in Headers */,
@@ -1647,6 +1668,7 @@
 				974D27422303C3A300FDFBC0 /* CelestiaOrbit.mm in Sources */,
 				971A663E23019C03009E4EA1 /* url.cpp in Sources */,
 				9751DC2A23594A8600299997 /* command.cpp in Sources */,
+				97AD59C5235B1B840056CA80 /* legacyscript.cpp in Sources */,
 				971A660223019BF0009E4EA1 /* CelestiaCatEntry.mm in Sources */,
 				971A669923019C20009E4EA1 /* deepskyobj.cpp in Sources */,
 				97AD599B235B016C0056CA80 /* scriptmaps.cpp in Sources */,
@@ -1667,11 +1689,13 @@
 				971A667F23019C20009E4EA1 /* astro.cpp in Sources */,
 				971A671223019C26009E4EA1 /* 3dsmodel.cpp in Sources */,
 				971A66F623019C21009E4EA1 /* stellarclass.cpp in Sources */,
+				97AD59C0235B1B760056CA80 /* script.cpp in Sources */,
 				97E0B7732312763C0016C154 /* CelestiaAppCore+Private.mm in Sources */,
 				971A664023019C09009E4EA1 /* texturefont.cpp in Sources */,
 				971A661423019C03009E4EA1 /* celestiacore.cpp in Sources */,
 				9751DC1923594A8000299997 /* celx_celestia.cpp in Sources */,
 				971A660E23019BFC009E4EA1 /* mesh.cpp in Sources */,
+				97AD59C8235B1B8E0056CA80 /* luascript.cpp in Sources */,
 				971A664323019C0F009E4EA1 /* bigfix.cpp in Sources */,
 				971A670523019C21009E4EA1 /* univcoord.cpp in Sources */,
 				971A669D23019C20009E4EA1 /* dsodb.cpp in Sources */,
