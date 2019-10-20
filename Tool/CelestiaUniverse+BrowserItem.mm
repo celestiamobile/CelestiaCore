@@ -12,6 +12,8 @@
 #import "CelestiaBody+Private.h"
 #import "CelestiaLocation+Private.h"
 
+#include <celutil/util.h>
+
 @implementation CelestiaUniverse (BrowserItem)
 
 - (NSDictionary *)childrenForBrowserItem:(CelestiaBrowserItem *)item {
@@ -105,27 +107,27 @@
         }
 
         if (planets) {
-            NSString *name = NSLocalizedStringFromTable(@"Planets",@"po",@"");
+            NSString *name = [NSString stringWithUTF8String:_("Planets")];
             [resultDictionary setObject:[[CelestiaBrowserItem alloc] initWithName:name children:planets] forKey:name];
         }
         if (dwarfPlanets) {
-            NSString *name = NSLocalizedStringFromTable(@"Dwarf Planets",@"po",@"");
+            NSString *name = [NSString stringWithUTF8String:_("Dwarf Planets")];
             [resultDictionary setObject:[[CelestiaBrowserItem alloc] initWithName:name children:dwarfPlanets] forKey:name];
         }
         if (minorMoons) {
-            NSString *name = NSLocalizedStringFromTable(@"Minor Moons",@"po",@"");
+            NSString *name = [NSString stringWithUTF8String:_("Minor Moons")];
             [resultDictionary setObject:[[CelestiaBrowserItem alloc] initWithName:name children:minorMoons] forKey:name];
         }
         if (asteroids) {
-            NSString *name = NSLocalizedStringFromTable(@"Asteroids",@"po",@"");
+            NSString *name = [NSString stringWithUTF8String:_("Asteroids")];
             [resultDictionary setObject:[[CelestiaBrowserItem alloc] initWithName:name children:asteroids] forKey:name];
         }
         if (comets) {
-            NSString *name = NSLocalizedStringFromTable(@"Comets",@"po",@"");
+            NSString *name = [NSString stringWithUTF8String:_("Comets")];
             [resultDictionary setObject:[[CelestiaBrowserItem alloc] initWithName:name children:comets] forKey:name];
         }
         if (spacecrafts) {
-            NSString *name = NSLocalizedStringFromTable(@"Spacecrafts",@"po",@"");
+            NSString *name = [NSString stringWithUTF8String:_("Spacecrafts")];
             [resultDictionary setObject:[[CelestiaBrowserItem alloc] initWithName:name children:spacecrafts] forKey:name];
         }
     }
@@ -191,15 +193,15 @@
         }
 
         if (minorMoons) {
-            NSString *name = NSLocalizedStringFromTable(@"Minor Moons",@"po",@"");
+            NSString *name = [NSString stringWithUTF8String:_("Minor Moons")];
             [resultDictionary setObject:[[CelestiaBrowserItem alloc] initWithName:name children:minorMoons] forKey:name];
         }
         if (comets) {
-            NSString *name = NSLocalizedStringFromTable(@"Comets",@"po",@"");
+            NSString *name = [NSString stringWithUTF8String:_("Comets")];
             [resultDictionary setObject:[[CelestiaBrowserItem alloc] initWithName:name children:comets] forKey:name];
         }
         if (spacecrafts) {
-            NSString *name = NSLocalizedStringFromTable(@"Spacecrafts",@"po",@"");
+            NSString *name = [NSString stringWithUTF8String:_("Spacecrafts")];
             [resultDictionary setObject:[[CelestiaBrowserItem alloc] initWithName:name children:spacecrafts] forKey:name];
         }
     }
@@ -215,7 +217,7 @@
             [locationDictionary setObject:[[CelestiaBrowserItem alloc] initWithCatEntry:location provider:nil] forKey:[location name]];
         }
         if ([locationDictionary count] > 0) {
-            NSString *name = NSLocalizedStringFromTable(@"Locations",@"po",@"");
+            NSString *name = [NSString stringWithUTF8String:_("Locations")];
             [resultDictionary setObject:[[CelestiaBrowserItem alloc] initWithName:name children:locationDictionary] forKey:name];
         }
     }
