@@ -37,6 +37,11 @@ typedef NS_ENUM(NSUInteger, CursorShape) {
     CursorShapeWhatsThis        = 16,
 };
 
+typedef NS_ENUM(NSUInteger, ScreenshotFileType) {
+    ScreenshotFileTypeJPEG      = 1,
+    ScreenshotFileTypePNG       = 4,
+};
+
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol CelestiaAppCoreDelegate <NSObject>
@@ -85,6 +90,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)goToURL:(NSString *)url NS_SWIFT_NAME(go(to:));
 
 - (BOOL)captureMovie:(NSString *)filePath withVideoSize:(CGSize)size fps:(float)fps NS_SWIFT_NAME(captureMovie(to:size:fps:));
+- (BOOL)screenshot:(NSString *)filePath withFileSize:(ScreenshotFileType)type NS_SWIFT_NAME(screenshot(to:type:));
 
 + (void)setLocaleDirectory:(NSString *)localeDirectory;
 

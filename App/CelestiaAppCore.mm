@@ -226,7 +226,11 @@ private:
     } else {
         delete movieCapture;
     }
-    return ok ? YES : NO;
+    return (BOOL)ok;
+}
+
+- (BOOL)screenshot:(NSString *)filePath withFileSize:(ScreenshotFileType)type {
+    return (BOOL)core->saveScreenShot([filePath UTF8String], (ContentType)type);
 }
 
 + (void)setLocaleDirectory:(NSString *)localeDirectory {
