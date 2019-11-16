@@ -18,10 +18,10 @@
 @interface CelestiaAppCore (Private)
 
 // MARK: Mouse events
-- (void)appCoreMouseButtonUp:(NSPoint)location modifiers:(int)modifiers;
-- (void)appCoreMouseButtonDown:(NSPoint)location modifiers:(int)modifiers;
-- (void)appCoreMouseDragged:(NSPoint)location;
-- (void)appCoreMouseMove:(NSPoint)offset modifiers:(int)modifiers;
+- (void)appCoreMouseButtonUp:(CGPoint)location modifiers:(int)modifiers;
+- (void)appCoreMouseButtonDown:(CGPoint)location modifiers:(int)modifiers;
+- (void)appCoreMouseDragged:(CGPoint)location;
+- (void)appCoreMouseMove:(CGPoint)offset modifiers:(int)modifiers;
 - (void)appCoreMouseWheel:(CGFloat)motion modifiers:(int)modifiers;
 
 // MARK: Key events

@@ -77,17 +77,17 @@ private:
 class AppCoreContextMenuHandler: public CelestiaCore::ContextMenuHandler
 {
 public:
-    AppCoreContextMenuHandler(void (^block)(NSPoint, CelestiaSelection *)) : CelestiaCore::ContextMenuHandler(), block(block) {};
+    AppCoreContextMenuHandler(void (^block)(CGPoint, CelestiaSelection *)) : CelestiaCore::ContextMenuHandler(), block(block) {};
 
     void requestContextMenu(float x, float y, Selection sel)
     {
         @autoreleasepool {
             CelestiaSelection *selection = [[CelestiaSelection alloc] initWithSelection:sel];
-            block(NSMakePoint(x, y), selection);
+            block(CGPointMake(x, y), selection);
         }
     }
 private:
-    void (^block)(NSPoint, CelestiaSelection *);
+    void (^block)(CGPoint, CelestiaSelection *);
 };
 
 @interface CelestiaAppCore () {

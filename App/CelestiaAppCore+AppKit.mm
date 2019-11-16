@@ -14,19 +14,19 @@
 @implementation CelestiaAppCore (AppKit)
 
 // MARK: Mouse events
-- (void)mouseButtonUp:(NSPoint)location modifiers:(NSUInteger)modifiers buttons:(MouseButton)buttons {
+- (void)mouseButtonUp:(CGPoint)location modifiers:(NSUInteger)modifiers buttons:(MouseButton)buttons {
     [self appCoreMouseButtonUp:location modifiers:[self toCelestiaModifiers:modifiers buttons:buttons]];
 }
 
-- (void)mouseButtonDown:(NSPoint)location modifiers:(NSUInteger)modifiers buttons:(MouseButton)buttons {
+- (void)mouseButtonDown:(CGPoint)location modifiers:(NSUInteger)modifiers buttons:(MouseButton)buttons {
     [self appCoreMouseButtonDown:location modifiers:[self toCelestiaModifiers:modifiers buttons:buttons]];
 }
 
-- (void)mouseDragged:(NSPoint)location {
+- (void)mouseDragged:(CGPoint)location {
     [self appCoreMouseDragged:location];
 }
 
-- (void)mouseMove:(NSPoint)offset modifiers:(NSUInteger)modifiers buttons:(MouseButton)buttons {
+- (void)mouseMove:(CGPoint)offset modifiers:(NSUInteger)modifiers buttons:(MouseButton)buttons {
     [self appCoreMouseMove:offset modifiers:[self toCelestiaModifiers:modifiers buttons:buttons]];
 }
 

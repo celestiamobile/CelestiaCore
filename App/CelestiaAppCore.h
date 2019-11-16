@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreGraphics/CGGeometry.h>
 
 @class CelestiaSimulation;
 @class CelestiaSelection;
@@ -48,7 +49,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)celestiaAppCoreFatalErrorHappened:(NSString *)error;
 - (void)celestiaAppCoreCursorShapeChanged:(CursorShape)shape;
-- (void)celestiaAppCoreCursorDidRequestContextMenuAtPoint:(NSPoint)location withSelection:(CelestiaSelection *)selection;
+- (void)celestiaAppCoreCursorDidRequestContextMenuAtPoint:(CGPoint)location withSelection:(CelestiaSelection *)selection;
 
 @end
 
