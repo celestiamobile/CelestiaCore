@@ -48,16 +48,15 @@
 @implementation NSDate (Astro)
 
 - (double)julianDay {
-    NSTimeZone *prevTimeZone = [NSTimeZone defaultTimeZone];
-    // UTCtoTDB() expects GMT
-    [NSTimeZone setDefaultTimeZone: [NSTimeZone timeZoneWithAbbreviation: @"GMT"]];
     NSDate *roundedDate = nil;
 
-    NSCalendar *currentCalendar = [[NSCalendar alloc] initWithCalendarIdentifier: NSGregorianCalendar];
+    NSCalendar *currentCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    // UTCtoTDB() expects GMT
+    [currentCalendar setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
     NSDateComponents *comps = [currentCalendar components:
-                               NSEraCalendarUnit  |
-                               NSYearCalendarUnit | NSMonthCalendarUnit  | NSDayCalendarUnit |
-                               NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit
+                               NSCalendarUnitEra  |
+                               NSCalendarUnitYear | NSCalendarUnitMonth  | NSCalendarUnitDay |
+                               NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond
                                                  fromDate: self];
     int era  = (int)[comps era];
     int year = (int)[comps year];
@@ -73,7 +72,6 @@
     NSTimeInterval extraSeconds = [self timeIntervalSinceDate: roundedDate];
     astroDate.seconds += extraSeconds;
 
-    [NSTimeZone setDefaultTimeZone: prevTimeZone];
     double jd = astro::UTCtoTDB(astroDate);
     return jd;
 }
@@ -81,8 +79,9 @@
 + (instancetype)dateWithJulian:(double)jd {
     astro::Date astroDate(jd);
     int year = astroDate.year;
-    NSCalendar *currentCalendar = [NSCalendar currentCalendar];
-    [currentCalendar setTimeZone: [NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
+    NSCalendar *currentCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    [currentCalendar setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
+
     NSDateComponents *comps = [[NSDateComponents alloc] init];
     int era = 1;
     if (year < 1)
