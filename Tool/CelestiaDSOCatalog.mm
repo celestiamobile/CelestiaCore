@@ -36,8 +36,7 @@
 @implementation CelestiaDSOCatalog
 
 - (NSInteger)count {
-    uint32_t count = d->size();
-    return count < MAX_DSO_NAMES ? count : MAX_DSO_NAMES;
+    return d->size();
 }
 
 - (CelestiaDSO *)objectAtIndex:(NSInteger)index {
