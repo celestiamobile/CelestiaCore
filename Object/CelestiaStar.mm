@@ -43,6 +43,14 @@
     return [self star]->getRadius();
 }
 
+- (float)absoluteMagnitude {
+    return [self star]->getAbsoluteMagnitude();
+}
+
+- (NSString *)spectralType {
+    return [NSString stringWithUTF8String:[self star]->getSpectralType()];
+}
+
 - (float)apparentMagnitude:(float)m {
     return [self star]->getApparentMagnitude(m);
 }

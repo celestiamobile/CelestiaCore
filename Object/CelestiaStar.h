@@ -21,6 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (readonly) float temperature;
 
 @property (readonly) NSString *webInfoURL;
+@property (readonly) NSString *spectralType;
+@property (readonly) float absoluteMagnitude;
 
 - (void)setAbsoluteMagnitude:(float)m;
 - (float)apparentMagnitude:(float)m;
