@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nullable, readonly) NSString *name;
 @property (nullable, readonly) CelestiaCatEntry *entry;
-@property (readonly) NSUInteger childCount;
+@property (readonly) NSArray<CelestiaBrowserItem *> *children;
 
 - (instancetype)initWithCatEntry:(CelestiaCatEntry *)entry provider:(nullable id<CelestiaBrowserItemChildrenProvider>)provider;
 - (instancetype)initWithName:(NSString *)aName provider:(nullable id<CelestiaBrowserItemChildrenProvider>)provider;

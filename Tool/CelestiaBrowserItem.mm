@@ -21,7 +21,7 @@
 @property (weak) id<CelestiaBrowserItemChildrenProvider> childrenProvider;
 
 @property NSArray<NSString *> *childrenKeys;
-@property NSDictionary<NSString *, CelestiaBrowserItem *> *childrenDictionary;
+@property NSArray<CelestiaBrowserItem *> *childrenValues;
 
 @end
 
@@ -53,8 +53,13 @@
     if (self) {
         _catEntry = nil;
         _stringValue = aName;
-        _childrenDictionary = children;
+        _childrenProvider = nil;
         _childrenKeys = [[children allKeys] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
+        NSMutableArray *values = [NSMutableArray array];
+        for (NSString *key : _childrenKeys) {
+            [values addObject:[children objectForKey:key]];
+        }
+        _childrenValues = values;
     }
     return self;
 }
@@ -68,53 +73,45 @@
 }
 
 - (void)setChildren:(NSDictionary<NSString *, CelestiaBrowserItem *> *)children {
-    _childrenDictionary = children;
     _childrenKeys = [[children allKeys] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
+    NSMutableArray *values = [NSMutableArray array];
+    for (NSString *key : _childrenKeys) {
+        [values addObject:[children objectForKey:key]];
+    }
+    _childrenValues = values;
     _childrenProvider = nil;
 }
 
 - (NSUInteger)childCount {
-    if (_childrenDictionary != nil)
-        return [_childrenDictionary count];
-
-    if (_childrenProvider != nil)
+    if (_childrenValues == nil && _childrenProvider != nil)
         [self setChildren:[_childrenProvider childrenForBrowserItem:self]];
 
-    return [_childrenDictionary count];
+    return [_childrenValues count];
 }
 
 - (NSString *)childNameAt:(NSInteger)index {
-    if (_childrenDictionary != nil)
-    {
-        if (index >= 0 && index < [_childrenKeys count])
-        {
-            return [_childrenKeys objectAtIndex:index];
-        }
-        return nil;
-    }
-
-    if (_childrenProvider != nil)
+    if (_childrenValues == nil && _childrenProvider != nil)
         [self setChildren:[_childrenProvider childrenForBrowserItem:self]];
 
-    if (_childrenDictionary != nil)
-    {
-        if (index >= 0 && index < [_childrenKeys count])
-        {
-            return [_childrenKeys objectAtIndex:index];
-        }
-        return nil;
-    }
-    return nil;
+    return [_childrenKeys objectAtIndex:index];
 }
 
-- (CelestiaBrowserItem *)childNamed: (NSString *)aName {
-    if (_childrenDictionary != nil)
-        return [_childrenDictionary objectForKey:aName];
-
-    if (_childrenProvider != nil)
+- (CelestiaBrowserItem *)childNamed:(NSString *)aName {
+    if (_childrenValues == nil && _childrenProvider != nil)
         [self setChildren:[_childrenProvider childrenForBrowserItem:self]];
 
-    return [_childrenDictionary objectForKey:aName];
+    NSUInteger index = [_childrenKeys indexOfObject:aName];
+    if (index == NSNotFound)
+        return nil;
+
+    return [_childrenValues objectAtIndex:index];
+}
+
+- (NSArray<CelestiaBrowserItem *> *)children {
+    if (_childrenValues == nil && _childrenProvider != nil)
+        [self setChildren:[_childrenProvider childrenForBrowserItem:self]];
+
+    return [_childrenValues copy];
 }
 
 @end
