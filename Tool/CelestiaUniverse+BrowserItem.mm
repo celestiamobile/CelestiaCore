@@ -54,9 +54,9 @@
             Body* body = sys->getBody(i);
             if (body->getName().empty())
                 continue;
-            CelestiaBrowserItem *item = [[CelestiaBrowserItem alloc] initWithCatEntry:[[CelestiaBody alloc] initWithBody:body] provider:self];
-            int bodyClass  = body->getClassification();
             NSString *name = [NSString stringWithUTF8String:body->getName(true).c_str()];
+            CelestiaBrowserItem *item = [[CelestiaBrowserItem alloc] initWithName:name catEntry:[[CelestiaBody alloc] initWithBody:body] provider:self];
+            int bodyClass  = body->getClassification();
             switch (bodyClass)
             {
                 case Body::Invisible:
@@ -152,9 +152,9 @@
             Body* body = sys->getBody(i);
             if (body->getName().empty())
                 continue;
-            CelestiaBrowserItem *item = [[CelestiaBrowserItem alloc] initWithCatEntry:[[CelestiaBody alloc] initWithBody:body] provider:self];
-            int bodyClass  = body->getClassification();
             NSString *name = [NSString stringWithUTF8String:body->getName(true).c_str()];
+            CelestiaBrowserItem *item = [[CelestiaBrowserItem alloc] initWithName:name catEntry:[[CelestiaBody alloc] initWithBody:body] provider:self];
+            int bodyClass  = body->getClassification();
 
             if (bodyClass==Body::Asteroid) bodyClass = Body::Moon;
 
@@ -213,8 +213,9 @@
         for (vector<Location*>::const_iterator iter = locations->begin();
              iter != locations->end(); iter++)
         {
+            NSString *name = [NSString stringWithUTF8String:(*iter)->getName(true).c_str()];
             CelestiaLocation *location = [[CelestiaLocation alloc] initWithLocation:*iter];
-            [locationDictionary setObject:[[CelestiaBrowserItem alloc] initWithCatEntry:location provider:nil] forKey:[location name]];
+            [locationDictionary setObject:[[CelestiaBrowserItem alloc] initWithName:name catEntry:location provider:nil] forKey:[location name]];
         }
         if ([locationDictionary count] > 0) {
             NSString *name = [NSString stringWithUTF8String:_("Locations")];

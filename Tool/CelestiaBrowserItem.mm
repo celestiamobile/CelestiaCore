@@ -27,11 +27,11 @@
 
 @implementation CelestiaBrowserItem
 
-- (instancetype)initWithCatEntry:(CelestiaCatEntry *)entry provider:(id<CelestiaBrowserItemChildrenProvider>)provider {
+- (instancetype)initWithName:(nullable NSString *)aName catEntry:(CelestiaCatEntry *)entry provider:(id<CelestiaBrowserItemChildrenProvider>)provider {
     self = [super init];
     if (self) {
+        _stringValue = aName;
         _catEntry = entry;
-        _stringValue = nil;
         _childrenProvider = provider;
     }
     return self;

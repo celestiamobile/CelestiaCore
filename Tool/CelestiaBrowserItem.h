@@ -24,10 +24,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, readonly) CelestiaCatEntry *entry;
 @property (readonly) NSArray<CelestiaBrowserItem *> *children;
 
-- (instancetype)initWithCatEntry:(CelestiaCatEntry *)entry provider:(nullable id<CelestiaBrowserItemChildrenProvider>)provider;
-- (instancetype)initWithName:(NSString *)aName provider:(nullable id<CelestiaBrowserItemChildrenProvider>)provider;
+- (instancetype)initWithName:(nullable NSString *)aName catEntry:(CelestiaCatEntry *)entry provider:(nullable id<CelestiaBrowserItemChildrenProvider>)provider;
+- (instancetype)initWithName:(nullable NSString *)aName provider:(nullable id<CelestiaBrowserItemChildrenProvider>)provider;
 
-- (instancetype)initWithName:(NSString *)aName
+- (instancetype)initWithName:(nullable NSString *)aName
                     children:(NSDictionary<NSString *, CelestiaBrowserItem *> *)children;
 
 - (void)setChildren:(NSDictionary<NSString *, CelestiaBrowserItem *> *)children;
