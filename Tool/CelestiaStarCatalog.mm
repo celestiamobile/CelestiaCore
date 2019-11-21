@@ -43,7 +43,7 @@
 
 - (NSString *)starName:(CelestiaStar *)star {
     Star *s = [star star];
-    return [NSString stringWithUTF8String:d->getStarName(*s).c_str()];
+    return [NSString stringWithUTF8String:d->getStarName(*s, true).c_str()];
 }
 
 - (NSArray<NSString *> *)completionForName:(NSString *)name NS_SWIFT_NAME(completion(for:)) {

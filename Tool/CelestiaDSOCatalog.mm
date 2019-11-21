@@ -44,7 +44,7 @@
 }
 
 - (NSString *)dsoName:(CelestiaDSO *)dso {
-    return [NSString stringWithUTF8String:d->getDSOName([dso DSO]).c_str()];
+    return [NSString stringWithUTF8String:d->getDSOName([dso DSO], true).c_str()];
 }
 
 - (NSArray<NSString *> *)completionForName:(NSString *)name {
