@@ -382,6 +382,14 @@
 		97AD59C5235B1B840056CA80 /* legacyscript.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97AD59C3235B1B840056CA80 /* legacyscript.cpp */; };
 		97AD59C8235B1B8E0056CA80 /* luascript.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97AD59C6235B1B8E0056CA80 /* luascript.cpp */; };
 		97AD59C9235B1B8E0056CA80 /* luascript.h in Headers */ = {isa = PBXBuildFile; fileRef = 97AD59C7235B1B8E0056CA80 /* luascript.h */; };
+		97B5E2C423968892006F35B4 /* asterismrenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 97B5E2C223968892006F35B4 /* asterismrenderer.h */; };
+		97B5E2C523968892006F35B4 /* asterismrenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97B5E2C323968892006F35B4 /* asterismrenderer.cpp */; };
+		97B5E2CD2396898D006F35B4 /* boundariesrenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 97B5E2CB2396898C006F35B4 /* boundariesrenderer.h */; };
+		97B5E2CE2396898D006F35B4 /* boundariesrenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97B5E2CC2396898C006F35B4 /* boundariesrenderer.cpp */; };
+		97B5E2D3239689B9006F35B4 /* pointstarrenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 97B5E2CF239689B9006F35B4 /* pointstarrenderer.h */; };
+		97B5E2D4239689B9006F35B4 /* pointstarvertexbuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 97B5E2D0239689B9006F35B4 /* pointstarvertexbuffer.h */; };
+		97B5E2D5239689B9006F35B4 /* pointstarvertexbuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97B5E2D1239689B9006F35B4 /* pointstarvertexbuffer.cpp */; };
+		97B5E2D6239689B9006F35B4 /* pointstarrenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97B5E2D2239689B9006F35B4 /* pointstarrenderer.cpp */; };
 		97C62C2423374F4E00953522 /* CelestiaObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 97C62C2223374F4E00953522 /* CelestiaObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		97C62C2523374F4E00953522 /* CelestiaObserver.mm in Sources */ = {isa = PBXBuildFile; fileRef = 97C62C2323374F4E00953522 /* CelestiaObserver.mm */; };
 		97C62C2923374F6700953522 /* CelestiaObserver+Private.h in Sources */ = {isa = PBXBuildFile; fileRef = 97C62C2723374F6700953522 /* CelestiaObserver+Private.h */; };
@@ -773,6 +781,14 @@
 		97AD59C3235B1B840056CA80 /* legacyscript.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = legacyscript.cpp; sourceTree = "<group>"; };
 		97AD59C6235B1B8E0056CA80 /* luascript.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = luascript.cpp; sourceTree = "<group>"; };
 		97AD59C7235B1B8E0056CA80 /* luascript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = luascript.h; sourceTree = "<group>"; };
+		97B5E2C223968892006F35B4 /* asterismrenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asterismrenderer.h; sourceTree = "<group>"; };
+		97B5E2C323968892006F35B4 /* asterismrenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = asterismrenderer.cpp; sourceTree = "<group>"; };
+		97B5E2CB2396898C006F35B4 /* boundariesrenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = boundariesrenderer.h; sourceTree = "<group>"; };
+		97B5E2CC2396898C006F35B4 /* boundariesrenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = boundariesrenderer.cpp; sourceTree = "<group>"; };
+		97B5E2CF239689B9006F35B4 /* pointstarrenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pointstarrenderer.h; sourceTree = "<group>"; };
+		97B5E2D0239689B9006F35B4 /* pointstarvertexbuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pointstarvertexbuffer.h; sourceTree = "<group>"; };
+		97B5E2D1239689B9006F35B4 /* pointstarvertexbuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pointstarvertexbuffer.cpp; sourceTree = "<group>"; };
+		97B5E2D2239689B9006F35B4 /* pointstarrenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pointstarrenderer.cpp; sourceTree = "<group>"; };
 		97C62C2223374F4E00953522 /* CelestiaObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CelestiaObserver.h; sourceTree = "<group>"; };
 		97C62C2323374F4E00953522 /* CelestiaObserver.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CelestiaObserver.mm; sourceTree = "<group>"; };
 		97C62C2723374F6700953522 /* CelestiaObserver+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CelestiaObserver+Private.h"; sourceTree = "<group>"; };
@@ -1086,6 +1102,8 @@
 			children = (
 				977D823A22FDB23D002FF1C2 /* asterism.cpp */,
 				977D824822FDB23E002FF1C2 /* asterism.h */,
+				97B5E2C323968892006F35B4 /* asterismrenderer.cpp */,
+				97B5E2C223968892006F35B4 /* asterismrenderer.h */,
 				977D822822FDB23C002FF1C2 /* astro.cpp */,
 				977D81E622FDB238002FF1C2 /* astro.h */,
 				977D821122FDB23B002FF1C2 /* atmosphere.h */,
@@ -1095,6 +1113,8 @@
 				977D81EF22FDB238002FF1C2 /* body.h */,
 				977D81DE22FDB237002FF1C2 /* boundaries.cpp */,
 				977D81D022FDB237002FF1C2 /* boundaries.h */,
+				97B5E2CC2396898C006F35B4 /* boundariesrenderer.cpp */,
+				97B5E2CB2396898C006F35B4 /* boundariesrenderer.h */,
 				977D825322FDB23F002FF1C2 /* category.cpp */,
 				977D81D722FDB237002FF1C2 /* category.h */,
 				977D824722FDB23E002FF1C2 /* catentry.cpp */,
@@ -1163,6 +1183,10 @@
 				977D81DB22FDB237002FF1C2 /* parser.h */,
 				977D81D822FDB237002FF1C2 /* planetgrid.cpp */,
 				977D81E522FDB238002FF1C2 /* planetgrid.h */,
+				97B5E2D2239689B9006F35B4 /* pointstarrenderer.cpp */,
+				97B5E2CF239689B9006F35B4 /* pointstarrenderer.h */,
+				97B5E2D1239689B9006F35B4 /* pointstarvertexbuffer.cpp */,
+				97B5E2D0239689B9006F35B4 /* pointstarvertexbuffer.h */,
 				974A6B1F23532EC4007BCABD /* rectangle.h */,
 				977D825522FDB23F002FF1C2 /* referencemark.h */,
 				977D823922FDB23D002FF1C2 /* rendcontext.cpp */,
@@ -1472,12 +1496,14 @@
 				971A65FF23019BF0009E4EA1 /* CelestiaLocation+Private.h in Headers */,
 				971A672023019C2B009E4EA1 /* perlin.h in Headers */,
 				971A670823019C21009E4EA1 /* universe.h in Headers */,
+				97B5E2D4239689B9006F35B4 /* pointstarvertexbuffer.h in Headers */,
 				971A664523019C0F009E4EA1 /* bytes.h in Headers */,
 				971A671523019C26009E4EA1 /* 3dsread.h in Headers */,
 				971A672423019C2B009E4EA1 /* solve.h in Headers */,
 				971A66DF23019C20009E4EA1 /* selection.h in Headers */,
 				971A663623019C03009E4EA1 /* favorites.h in Headers */,
 				971A667C23019C15009E4EA1 /* xyzvbinary.h in Headers */,
+				97B5E2D3239689B9006F35B4 /* pointstarrenderer.h in Headers */,
 				971A665F23019C15009E4EA1 /* customrotation.h in Headers */,
 				971A672223019C2B009E4EA1 /* quaternion.h in Headers */,
 				971A66C423019C20009E4EA1 /* name.h in Headers */,
@@ -1518,6 +1544,7 @@
 				971A666923019C15009E4EA1 /* rotation.h in Headers */,
 				971A660F23019BFC009E4EA1 /* mesh.h in Headers */,
 				971A665323019C0F009E4EA1 /* resmanager.h in Headers */,
+				97B5E2C423968892006F35B4 /* asterismrenderer.h in Headers */,
 				971A664D23019C0F009E4EA1 /* filetype.h in Headers */,
 				971A672123019C2B009E4EA1 /* plane.h in Headers */,
 				971A671123019C26009E4EA1 /* 3dschunk.h in Headers */,
@@ -1579,6 +1606,7 @@
 				971A65D523019BF0009E4EA1 /* CelestiaUniverse+Private.h in Headers */,
 				971A669E23019C20009E4EA1 /* dsodb.h in Headers */,
 				971A65D923019BF0009E4EA1 /* CelestiaSimulation+Private.h in Headers */,
+				97B5E2CD2396898D006F35B4 /* boundariesrenderer.h in Headers */,
 				971A66C823019C20009E4EA1 /* observer.h in Headers */,
 				971A66D423019C20009E4EA1 /* referencemark.h in Headers */,
 			);
@@ -1652,6 +1680,7 @@
 				9751DC1223594A8000299997 /* celx_misc.cpp in Sources */,
 				971A66D523019C20009E4EA1 /* rendcontext.cpp in Sources */,
 				971A66C323019C20009E4EA1 /* name.cpp in Sources */,
+				97B5E2C523968892006F35B4 /* asterismrenderer.cpp in Sources */,
 				971A665723019C0F009E4EA1 /* utf8.cpp in Sources */,
 				971A66F223019C21009E4EA1 /* starname.cpp in Sources */,
 				971A65DB23019BF0009E4EA1 /* CelestiaUniversalCoord.mm in Sources */,
@@ -1702,6 +1731,7 @@
 				971A664323019C0F009E4EA1 /* bigfix.cpp in Sources */,
 				971A670523019C21009E4EA1 /* univcoord.cpp in Sources */,
 				971A669D23019C20009E4EA1 /* dsodb.cpp in Sources */,
+				97B5E2D6239689B9006F35B4 /* pointstarrenderer.cpp in Sources */,
 				971A65E823019BF0009E4EA1 /* CelestiaEclipseFinder.mm in Sources */,
 				974D26F1230286CA00FDFBC0 /* CelestiaUniverse+BrowserItem.mm in Sources */,
 				97E64A562382EA7400C4E10D /* truetypefont.cpp in Sources */,
@@ -1718,6 +1748,7 @@
 				971A65E023019BF0009E4EA1 /* CelestiaAppCore.mm in Sources */,
 				9751DC2323594A8000299997 /* celx_gl.cpp in Sources */,
 				971A670723019C21009E4EA1 /* universe.cpp in Sources */,
+				97B5E2D5239689B9006F35B4 /* pointstarvertexbuffer.cpp in Sources */,
 				971A65EF23019BF0009E4EA1 /* CelestiaVector.mm in Sources */,
 				971A660823019BF0009E4EA1 /* CelestiaGalaxy.mm in Sources */,
 				971A662F23019C03009E4EA1 /* configfile.cpp in Sources */,
@@ -1765,6 +1796,7 @@
 				971A66AF23019C20009E4EA1 /* glmarker.cpp in Sources */,
 				9751DC1123594A8000299997 /* celx_object.cpp in Sources */,
 				971A66E623019C20009E4EA1 /* solarsys.cpp in Sources */,
+				97B5E2CE2396898D006F35B4 /* boundariesrenderer.cpp in Sources */,
 				971A66CC23019C20009E4EA1 /* overlay.cpp in Sources */,
 				97C62C2523374F4E00953522 /* CelestiaObserver.mm in Sources */,
 				971A667423019C15009E4EA1 /* spiceinterface.cpp in Sources */,
