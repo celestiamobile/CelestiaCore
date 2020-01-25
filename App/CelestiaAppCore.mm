@@ -176,6 +176,10 @@ private:
     core->setScreenDpi((int)dpi);
 }
 
+- (void)start {
+    core->start();
+}
+
 - (void)start:(NSDate *)date {
     core->start([date julianDay]);
 }
