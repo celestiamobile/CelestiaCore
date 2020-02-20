@@ -1,5 +1,5 @@
 //
-//  CelestiaAppCore+AppKit.h
+//  CelestiaAppCore+Event.h
 //  CelestiaCore
 //
 //  Created by 李林峰 on 2019/8/25.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CelestiaAppCore (AppKit)
+@interface CelestiaAppCore (Event)
 
 // MARK: Mouse events
 - (void)mouseButtonUp:(CGPoint)location modifiers:(NSUInteger)modifiers buttons:(MouseButton)buttons NS_SWIFT_NAME(mouseButtonUp(at:modifiers:with:));

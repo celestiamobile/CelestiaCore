@@ -63,7 +63,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)init;
 
-+ (BOOL)glewInit;
++ (BOOL)initGL;
 
 - (BOOL)startSimulationWithConfigFileName:(nullable NSString *)configFileName extraDirectories:(nullable NSArray<NSString *> *)extraDirectories progressReporter:(void (^)(NSString *))reporter NS_SWIFT_NAME(startSimulation(configFileName:extraDirectories:progress:));
 

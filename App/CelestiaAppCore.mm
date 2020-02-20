@@ -6,7 +6,7 @@
 //  Copyright © 2019 李林峰. All rights reserved.
 //
 
-#include <GL/glew.h>
+#include <celutil/gl.h>
 
 #import "CelestiaAppCore+Private.h"
 #import "CelestiaAppCore+Setting.h"
@@ -124,8 +124,8 @@ private:
     return self;
 }
 
-+ (BOOL)glewInit {
-    return glewInit() == GLEW_OK;
++ (BOOL)initGL {
+    return glInit() == 0;
 }
 
 - (BOOL)startSimulationWithConfigFileName:(NSString *)configFileName extraDirectories:(NSArray<NSString *> *)extraDirectories progressReporter:(void (^)(NSString *))reporter {
