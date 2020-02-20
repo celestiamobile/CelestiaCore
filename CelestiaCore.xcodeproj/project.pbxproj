@@ -304,7 +304,6 @@
 		971A672423019C2B009E4EA1 /* solve.h in Headers */ = {isa = PBXBuildFile; fileRef = 977D81A122FDB1BE002FF1C2 /* solve.h */; };
 		971A672523019C2B009E4EA1 /* sphere.h in Headers */ = {isa = PBXBuildFile; fileRef = 977D81A222FDB1BE002FF1C2 /* sphere.h */; };
 		971A672623019C2B009E4EA1 /* vecmath.h in Headers */ = {isa = PBXBuildFile; fileRef = 977D81A522FDB1BE002FF1C2 /* vecmath.h */; };
-		971A673923019DA7009E4EA1 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 971A673823019DA7009E4EA1 /* OpenGL.framework */; };
 		971A673B23019DAF009E4EA1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 971A673A23019DAF009E4EA1 /* libz.tbd */; };
 		971A673D23019DB5009E4EA1 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 971A673C23019DB5009E4EA1 /* libc++.tbd */; };
 		971A674023019DDB009E4EA1 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 971A673E23019DBD009E4EA1 /* libiconv.tbd */; };
@@ -369,15 +368,6 @@
 		9752D7A223ED181E00FFE781 /* hash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9752D7A023ED181E00FFE781 /* hash.cpp */; };
 		9752D7A523ED182D00FFE781 /* value.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9752D7A323ED182D00FFE781 /* value.cpp */; };
 		9752D7A623ED182D00FFE781 /* value.h in Headers */ = {isa = PBXBuildFile; fileRef = 9752D7A423ED182D00FFE781 /* value.h */; };
-		97916F85231405BD00925AF3 /* libfmt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97916F7C231405BC00925AF3 /* libfmt.a */; };
-		97916F86231405BD00925AF3 /* libtheora.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97916F7D231405BC00925AF3 /* libtheora.a */; };
-		97916F87231405BD00925AF3 /* libogg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97916F7E231405BC00925AF3 /* libogg.a */; };
-		97916F88231405BD00925AF3 /* libGLEW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97916F7F231405BC00925AF3 /* libGLEW.a */; };
-		97916F89231405BD00925AF3 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97916F80231405BC00925AF3 /* libjpeg.a */; };
-		97916F8A231405BD00925AF3 /* liblua53.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97916F81231405BC00925AF3 /* liblua53.a */; };
-		97916F8B231405BD00925AF3 /* libintl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97916F82231405BC00925AF3 /* libintl.a */; };
-		97916F8C231405BD00925AF3 /* cspice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97916F83231405BD00925AF3 /* cspice.a */; };
-		97916F8D231405BD00925AF3 /* libpng16.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97916F84231405BD00925AF3 /* libpng16.a */; };
 		97AD599A235B016C0056CA80 /* scriptmaps.h in Headers */ = {isa = PBXBuildFile; fileRef = 97AD5997235B016B0056CA80 /* scriptmaps.h */; };
 		97AD599B235B016C0056CA80 /* scriptmaps.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97AD5999235B016B0056CA80 /* scriptmaps.cpp */; };
 		97AD59C0235B1B760056CA80 /* script.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97AD59BE235B1B760056CA80 /* script.cpp */; };
@@ -400,10 +390,10 @@
 		97E0B7732312763C0016C154 /* CelestiaAppCore+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 97E0B7722312763C0016C154 /* CelestiaAppCore+Private.mm */; };
 		97E64A562382EA7400C4E10D /* truetypefont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97E64A542382EA7400C4E10D /* truetypefont.cpp */; };
 		97E64A572382EA7400C4E10D /* truetypefont.h in Headers */ = {isa = PBXBuildFile; fileRef = 97E64A552382EA7400C4E10D /* truetypefont.h */; };
-		97E64A592382EBDC00C4E10D /* libfreetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E64A582382EBDA00C4E10D /* libfreetype.a */; };
 		97FA983723FE439A00825BD3 /* gl.h in Headers */ = {isa = PBXBuildFile; fileRef = 97FA983523FE439A00825BD3 /* gl.h */; };
 		97FA983A23FE443100825BD3 /* gl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97FA983923FE443100825BD3 /* gl.cpp */; };
 		97FA985823FE460300825BD3 /* CelestiaAppCore+Event.mm in Sources */ = {isa = PBXBuildFile; fileRef = 97E0B76F231273C10016C154 /* CelestiaAppCore+Event.mm */; };
+		97FA986523FE5ABB00825BD3 /* CelestiaAppCore+Event.h in Headers */ = {isa = PBXBuildFile; fileRef = 97E0B76E231273C10016C154 /* CelestiaAppCore+Event.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -819,17 +809,6 @@
 				971A674023019DDB009E4EA1 /* libiconv.tbd in Frameworks */,
 				971A673D23019DB5009E4EA1 /* libc++.tbd in Frameworks */,
 				971A673B23019DAF009E4EA1 /* libz.tbd in Frameworks */,
-				971A673923019DA7009E4EA1 /* OpenGL.framework in Frameworks */,
-				97916F85231405BD00925AF3 /* libfmt.a in Frameworks */,
-				97916F86231405BD00925AF3 /* libtheora.a in Frameworks */,
-				97916F87231405BD00925AF3 /* libogg.a in Frameworks */,
-				97916F88231405BD00925AF3 /* libGLEW.a in Frameworks */,
-				97916F89231405BD00925AF3 /* libjpeg.a in Frameworks */,
-				97916F8A231405BD00925AF3 /* liblua53.a in Frameworks */,
-				97916F8B231405BD00925AF3 /* libintl.a in Frameworks */,
-				97E64A592382EBDC00C4E10D /* libfreetype.a in Frameworks */,
-				97916F8C231405BD00925AF3 /* cspice.a in Frameworks */,
-				97916F8D231405BD00925AF3 /* libpng16.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1419,6 +1398,7 @@
 				971A674D2301A5AF009E4EA1 /* CelestiaScript.h in Headers */,
 				974D26F0230286CA00FDFBC0 /* CelestiaUniverse+BrowserItem.h in Headers */,
 				974D26E8230279AC00FDFBC0 /* CelestiaBrowserItem.h in Headers */,
+				97FA986523FE5ABB00825BD3 /* CelestiaAppCore+Event.h in Headers */,
 				9751DC1023594A8000299997 /* celx_rotation.h in Headers */,
 				971A65E723019BF0009E4EA1 /* CelestiaEclipseFinder.h in Headers */,
 				971A65F223019BF0009E4EA1 /* CelestiaUtil.h in Headers */,
@@ -1897,8 +1877,27 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/libs";
+				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*]" = "$(PROJECT_DIR)/libs/iOS";
+				"LIBRARY_SEARCH_PATHS[sdk=macosx*]" = "$(PROJECT_DIR)/libs/macOS";
 				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = (
+					"-lcspice",
+					"-lfmt",
+					"-ljpeg",
+					"-ltheora",
+					"-logg",
+					"-lintl",
+					"-lpng16",
+					"-llua53",
+				);
+				"OTHER_LDFLAGS[sdk=iphoneos*]" = (
+					"${inherited}",
+					"-lGL",
+				);
+				"OTHER_LDFLAGS[sdk=macosx*]" = (
+					"${inherited}",
+					"-lGLEW",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cc.meowssage.Celestia;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
@@ -1958,8 +1957,27 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/libs";
+				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*]" = "$(PROJECT_DIR)/libs/iOS";
+				"LIBRARY_SEARCH_PATHS[sdk=macosx*]" = "$(PROJECT_DIR)/libs/macOS";
 				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = (
+					"-lcspice",
+					"-lfmt",
+					"-ljpeg",
+					"-ltheora",
+					"-logg",
+					"-lintl",
+					"-lpng16",
+					"-llua53",
+				);
+				"OTHER_LDFLAGS[sdk=iphoneos*]" = (
+					"${inherited}",
+					"-lGL",
+				);
+				"OTHER_LDFLAGS[sdk=macosx*]" = (
+					"${inherited}",
+					"-lGLEW",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cc.meowssage.Celestia;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;

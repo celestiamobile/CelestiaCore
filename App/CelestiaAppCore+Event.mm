@@ -11,7 +11,7 @@
 
 #import <TargetConditionals.h>
 
-#ifdef TARGET_OS_IPHONE
+#if !TARGET_OS_OSX
 #import <UIKit/UIKit.h>
 
 #define NSCommandKeyMask        UIKeyModifierCommand
