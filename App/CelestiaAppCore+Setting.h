@@ -153,20 +153,20 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)initializeSetting;
 
--(NSNumber *) valueForTag: (NSInteger) tag;
+- (NSNumber *)valueForTag:(NSInteger)tag;
 
-- (NSInteger) tagForKey: (NSInteger) key;
+- (NSInteger)tagForKey:(NSInteger)key;
 
--(NSInteger) integerValueForTag: (NSInteger) tag;
--(BOOL) boolValueForTag: (NSInteger) tag;
--(float) floatValueForTag: (NSInteger) tag;
+- (NSInteger)integerValueForTag:(NSInteger)tag;
+- (BOOL)boolValueForTag:(NSInteger)tag;
+- (float)floatValueForTag:(NSInteger)tag;
 
--(void) setIntegerValue:(NSInteger)value forTag: (NSInteger) tag;
--(void) setFloatValue:(float)value forTag: (NSInteger) tag;
--(void) setBoolValue:(BOOL)value forTag: (NSInteger) tag;
+- (void)setIntegerValue:(NSInteger)value forTag:(NSInteger) tag;
+- (void)setFloatValue:(float)value forTag:(NSInteger) tag;
+- (void)setBoolValue:(BOOL)value forTag:(NSInteger) tag;
 
--(void) loadUserDefaults ;
--(void) storeUserDefaults ;
+- (void)loadUserDefaultsWithAppDefaultsAtPath:(nullable NSString *)path;
+- (void)storeUserDefaults;
 
 @end
 

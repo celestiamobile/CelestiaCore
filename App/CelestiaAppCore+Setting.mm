@@ -17,8 +17,13 @@ static NSMutableDictionary* tagDict;
 static NSArray* keyArray;
 
 #define CS_DefaultsName @"Celestia-1.4.0"
+#define CS_NUM_PREV_VERSIONS 1
 
-#define TAGDEF(tag,key) key, [NSNumber numberWithInteger: tag],
+#define TAGDEF(tag,key) key, [NSNumber numberWithInteger:tag],
+
+static NSString *CS_PREV_VERSIONS[CS_NUM_PREV_VERSIONS] = {
+    @"Celestia-1.3.2"
+};
 
 - (void)initializeSetting {
     tagDict = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
@@ -143,36 +148,31 @@ static NSArray* keyArray;
     [tagDict addEntriesFromDictionary: volatileTagDict];
 }
 
--(NSNumber *) valueForTag: (NSInteger) tag {
+- (NSNumber *)valueForTag:(NSInteger)tag {
     return (NSNumber *)[self valueForKey: [tagDict objectForKey: [NSNumber numberWithInteger: tag] ] ];
 }
 
--(void) setValue: (id) value forTag: (NSInteger) tag
-{
-    id key = [tagDict objectForKey: [NSNumber numberWithInteger: tag] ];
-    if (key!= nil)
-    {
-        [self setValue: value forKey: key ];
+- (void)setValue:(id)value forTag:(NSInteger)tag {
+    id key = [tagDict objectForKey:[NSNumber numberWithInteger:tag]];
+    if (key!= nil) {
+        [self setValue:value forKey:key];
     }
 }
 
-- (id)valueForUndefinedKey: (NSString *) key
-{
+- (id)valueForUndefinedKey:(NSString *)key {
 #ifdef DEBUG
     if ( key ) NSLog(@"unbound value for %@", key);
 #endif
     return nil;
 }
 
-- (void)setValue: (id) value forUndefinedKey: (NSString *) key
-{
+- (void)setValue:(id)value forUndefinedKey:(NSString *)key {
 #ifdef DEBUG
     NSLog(@"unbound key set for %@", key);
 #endif
 }
 
-- (void)setNilValueForKey: (NSString *) key
-{
+- (void)setNilValueForKey:(NSString *)key {
 #ifdef DEBUG
     NSLog(@"nil value for %@", key);
 #endif
@@ -180,19 +180,19 @@ static NSArray* keyArray;
 
 // Time Settings
 
--(double) time { return core->getSimulation()->getTime(); }
--(void) setTime: (double) value { core->getSimulation()->setTime(value); }
+- (double)time { return core->getSimulation()->getTime(); }
+- (void)setTime:(double)value { core->getSimulation()->setTime(value); }
 
--(double) timeScale { return core->getSimulation()->getTimeScale(); }
--(void) setTimeScale: (double) value { core->getSimulation()->setTimeScale(value); }
+- (double)timeScale { return core->getSimulation()->getTimeScale(); }
+- (void)setTimeScale:(double)value { core->getSimulation()->setTimeScale(value); }
 
--(BOOL) synchTime { return core->getSimulation()->getSyncTime(); }
--(void) setSynchTime: (BOOL) value { core->getSimulation()->setSyncTime(value); }
+- (BOOL)synchTime { return core->getSimulation()->getSyncTime(); }
+- (void)setSynchTime:(BOOL)value { core->getSimulation()->setSyncTime(value); }
 
 // Gaze Settings
 
--(float) fieldOfView { return core->getSimulation()->getObserver().getFOV(); }
--(void)  setFieldOfView: (float) value { core->getSimulation()->getObserver().setFOV(value); }
+- (float)fieldOfView { return core->getSimulation()->getObserver().getFOV(); }
+- (void)setFieldOfView: (float)value { core->getSimulation()->getObserver().setFOV(value); }
 
 // Observer Settings
 
@@ -201,8 +201,7 @@ static NSArray* keyArray;
 // Velocity
 // AngularVelocity
 
--(NSInteger) setValue: (BOOL) value forBit: (NSInteger) bit inSet: (NSInteger) set
-{
+- (NSInteger)setValue:(BOOL)value forBit:(NSInteger)bit inSet:(NSInteger)set {
     NSInteger result = value
     ? ((bit&set) ? set : (set|bit) )
     : ((bit&set) ?  (set^bit) : set);
@@ -266,10 +265,10 @@ LABELMETHODS(Comet)
 LABELMETHODS(DwarfPlanet)
 LABELMETHODS(MinorMoon)
 
--(BOOL) showLatinConstellationLabels {
+- (BOOL)showLatinConstellationLabels {
     return (core->getRenderer()->getLabelMode() & Renderer::I18nConstellationLabels) == 0;
 }
--(void) setShowLatinConstellationLabels : (BOOL) value {
+- (void)setShowLatinConstellationLabels:(BOOL)value {
     core->getRenderer()->setLabelMode( (int)[self setValue: (!value) forBit:  Renderer::I18nConstellationLabels inSet: core->getRenderer()->getLabelMode()] );
 }
 
@@ -287,8 +286,8 @@ ORBITMETHODS(DwarfPlanet)
 ORBITMETHODS(MinorMoon)
 
 
--(float) minimumOrbitSize { return core->getRenderer()->getMinimumOrbitSize(); }
--(void)  setMinimumOrbitSize: (float) value { core->getRenderer()->setMinimumOrbitSize(value); }
+- (float)minimumOrbitSize { return core->getRenderer()->getMinimumOrbitSize(); }
+- (void)setMinimumOrbitSize:(float)value { core->getRenderer()->setMinimumOrbitSize(value); }
 
 // Feature Settings
 
@@ -325,87 +324,74 @@ FEATUREMETHODS(Farrum)
 FEATUREMETHODS(EruptiveCenter)
 FEATUREMETHODS(Other)
 
--(float) minimumFeatureSize { return core->getRenderer()->getMinimumFeatureSize(); }
--(void)  setMinimumFeatureSize: (float) value { core->getRenderer()->setMinimumFeatureSize(value); }
+- (float)minimumFeatureSize { return core->getRenderer()->getMinimumFeatureSize(); }
+- (void)setMinimumFeatureSize:(float)value { core->getRenderer()->setMinimumFeatureSize(value); }
 
 // Refmark Settings
 
--(BOOL) showBodyAxes
-{
+- (BOOL)showBodyAxes {
     return core->referenceMarkEnabled("body axes");
 }
 
--(void) setShowBodyAxes: (BOOL) value
-{
+- (void)setShowBodyAxes:(BOOL)value {
     core->toggleReferenceMark("body axes");
 }
 
--(BOOL) showFrameAxes
-{
+- (BOOL)showFrameAxes {
     return core->referenceMarkEnabled("frame axes");
 }
 
--(void) setShowFrameAxes: (BOOL) value
-{
+- (void)setShowFrameAxes:(BOOL)value {
     core->toggleReferenceMark("frame axes");
 }
 
--(BOOL) showSunDirection
-{
+- (BOOL)showSunDirection {
     return core->referenceMarkEnabled("sun direction");
 }
 
--(void) setShowSunDirection: (BOOL) value
-{
+- (void)setShowSunDirection:(BOOL)value {
     core->toggleReferenceMark("sun direction");
 }
 
--(BOOL) showVelocityVector
-{
+- (BOOL)showVelocityVector {
     return core->referenceMarkEnabled("velocity vector");
 }
 
--(void) setShowVelocityVector: (BOOL) value
-{
+- (void)setShowVelocityVector:(BOOL)value {
     core->toggleReferenceMark("velocity vector");
 }
 
--(BOOL) showPlanetographicGrid
-{
+- (BOOL)showPlanetographicGrid {
     return core->referenceMarkEnabled("planetographic grid");
 }
 
--(void) setShowPlanetographicGrid: (BOOL) value
-{
+- (void)setShowPlanetographicGrid:(BOOL)value {
     core->toggleReferenceMark("planetographic grid");
 }
 
--(BOOL) showTerminator
-{
+- (BOOL)showTerminator {
     return core->referenceMarkEnabled("terminator");
 }
 
--(void) setShowTerminator: (BOOL) value
-{
+- (void)setShowTerminator:(BOOL)value {
     core->toggleReferenceMark("terminator");
 }
 
 
 // Lighting Settings
 
--(float) ambientLightLevel { return core->getRenderer()->getAmbientLightLevel(); }
--(void)  setAmbientLightLevel: (float) value { core->getRenderer()->setAmbientLightLevel(value); }
+- (float)ambientLightLevel { return core->getRenderer()->getAmbientLightLevel(); }
+- (void)setAmbientLightLevel:(float)value { core->getRenderer()->setAmbientLightLevel(value); }
 
--(float) galaxyBrightness { return Galaxy::getLightGain(); }
--(void)  setGalaxyBrightness: (float) value { Galaxy::setLightGain(value); }
+- (float)galaxyBrightness { return Galaxy::getLightGain(); }
+- (void)setGalaxyBrightness:(float)value { Galaxy::setLightGain(value); }
 
 // Star Settings
 
--(float) distanceLimit { return core->getRenderer()->getDistanceLimit(); }
--(void)  setDistanceLimit: (float) value { core->getRenderer()->setDistanceLimit(value); }
+- (float)distanceLimit { return core->getRenderer()->getDistanceLimit(); }
+- (void)setDistanceLimit:(float)value { core->getRenderer()->setDistanceLimit(value); }
 
--(float) faintestVisible
-{
+- (float)faintestVisible {
     //    return core->getSimulation()->getFaintestVisible();
     if ((core->getRenderer()->getRenderFlags() & Renderer::ShowAutoMag) == 0)
     {
@@ -417,8 +403,7 @@ FEATUREMETHODS(Other)
     }
 }
 
--(void)  setFaintestVisible: (float) value
-{
+- (void)setFaintestVisible:(float)value {
     if ((core->getRenderer()->getRenderFlags() & Renderer::ShowAutoMag) == 0)
     {
         core->setFaintest(value);
@@ -430,33 +415,32 @@ FEATUREMETHODS(Other)
     }
 }
 
--(NSInteger)  starStyle { return core->getRenderer()->getStarStyle(); }
--(void) setStarStyle: (NSInteger) value { core->getRenderer()->setStarStyle((Renderer::StarStyle)value); }
+- (NSInteger)starStyle { return core->getRenderer()->getStarStyle(); }
+- (void)setStarStyle:(NSInteger)value { core->getRenderer()->setStarStyle((Renderer::StarStyle)value); }
 
 // Texture Settings
 
--(NSInteger)  resolution { return core->getRenderer()->getResolution(); }
--(void) setResolution: (NSInteger) value { core->getRenderer()->setResolution((int)value); }
+- (NSInteger)resolution { return core->getRenderer()->getResolution(); }
+- (void)setResolution:(NSInteger)value { core->getRenderer()->setResolution((int)value); }
 
 // Overlay Settings
 
--(NSInteger)  hudDetail { return core->getHudDetail(); }
--(void) setHudDetail: (NSInteger) value { core->setHudDetail((int)value); }
+- (NSInteger)hudDetail { return core->getHudDetail(); }
+- (void)setHudDetail:(NSInteger)value { core->setHudDetail((int)value); }
 
 // Time settings
 
 // Timezone values are inverted to maintain backward compatibility
--(NSInteger)  timeZone { return core->getTimeZoneBias()==0 ? 1 : 0; }
--(void) setTimeZone: (NSInteger) value
-{
-    core->setTimeZoneBias(0==value ? 1 : 0);
+- (NSInteger)timeZone { return core->getTimeZoneBias() == 0 ? 1 : 0; }
+
+- (void)setTimeZone:(NSInteger)value {
+    core->setTimeZoneBias(0 == value ? 1 : 0);
 }
 
--(NSInteger)  dateFormat { return core->getDateFormat(); }
--(void) setDateFormat: (NSInteger) value { core->setDateFormat((astro::Date::Format)value); }
+- (NSInteger)dateFormat { return core->getDateFormat(); }
+- (void)setDateFormat:(NSInteger)value { core->setDateFormat((astro::Date::Format)value); }
 
-- (NSInteger) tagForKey: (NSInteger) key
-{
+- (NSInteger)tagForKey:(NSInteger)key {
     if ( key > 128 ) return key;
     NSInteger tag;
     switch (key)
@@ -488,7 +472,7 @@ FEATUREMETHODS(Other)
     return tag;
 }
 
--(NSInteger) integerValueForTag: (NSInteger) tag {
+- (NSInteger)integerValueForTag:(NSInteger)tag {
     tag = [self tagForKey:tag];
 
     if ( tag > 128 )
@@ -504,7 +488,7 @@ FEATUREMETHODS(Other)
     return 0;
 }
 
--(BOOL) boolValueForTag: (NSInteger) tag {
+- (BOOL)boolValueForTag:(NSInteger)tag {
     tag = [self tagForKey:tag];
 
     if ( tag > 128 )
@@ -513,14 +497,14 @@ FEATUREMETHODS(Other)
         {
             case 4: case 5: case 7: case 8: case 10:
                 // 400s, 500s, 700s, 800s, 1000s (checkboxes)
-                return [[self valueForTag: tag] boolValue];
+                return [[self valueForTag:tag] boolValue];
         }
     }
 
     return NO;
 }
 
--(float) floatValueForTag: (NSInteger) tag {
+- (float)floatValueForTag:(NSInteger)tag {
     tag = [self tagForKey:tag];
 
     if ( tag > 128 )
@@ -536,7 +520,7 @@ FEATUREMETHODS(Other)
 }
 
 
--(void) setIntegerValue:(NSInteger)value forTag: (NSInteger) tag {
+- (void)setIntegerValue:(NSInteger)value forTag:(NSInteger)tag {
     tag = [self tagForKey:tag];
     if ( tag <= 128 ) { core->charEntered(tag); return; }
 
@@ -549,7 +533,7 @@ FEATUREMETHODS(Other)
     }
 }
 
--(void) setFloatValue:(float)value forTag: (NSInteger) tag {
+- (void)setFloatValue:(float)value forTag:(NSInteger)tag {
     tag = [self tagForKey:tag];
     if ( tag <= 128 ) { core->charEntered(tag); return; }
 
@@ -560,7 +544,7 @@ FEATUREMETHODS(Other)
     }
 }
 
--(void) setBoolValue:(BOOL)value forTag: (NSInteger) tag {
+- (void)setBoolValue:(BOOL)value forTag:(NSInteger)tag {
     tag = [self tagForKey:tag];
     if ( tag <= 128 ) { core->charEntered(tag); return; }
 
@@ -575,38 +559,63 @@ FEATUREMETHODS(Other)
     }
 }
 
--(void) loadUserDefaults
-{
-    id key;
-    NSDictionary* defaultsDictionary = [[NSUserDefaults standardUserDefaults] dictionaryForKey:CS_DefaultsName];
-    if ( defaultsDictionary == nil ) return;
-    NSEnumerator* keys = [ defaultsDictionary keyEnumerator];
-    while ( nil != (key = [keys nextObject]) )
-    {
-        [self setValue: [defaultsDictionary objectForKey: key] forKey: key];
-    }
+- (void)loadUserDefaultsWithAppDefaultsAtPath:(NSString *)path {
+    NSDictionary* defaultsDictionary = [self findUserDefaultsWithAppDefaultsAtPath:path];
+    [defaultsDictionary enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+        [self setValue:obj forKey:key];
+    }];
 }
 
-- (NSDictionary *) defaultsDictionary
-{
-    NSMutableDictionary* theDictionary = [NSMutableDictionary dictionaryWithCapacity: [keyArray count]];
-    NSEnumerator* keys = [ keyArray objectEnumerator];
+- (NSDictionary *)findUserDefaultsWithAppDefaultsAtPath:(NSString *)path {
+    NSDictionary *appDefs = nil;
+    if (path) { appDefs = [[[NSDictionary alloc] initWithContentsOfFile:path] objectForKey:CS_DefaultsName]; }
+    NSDictionary *userDefs = [[NSUserDefaults standardUserDefaults] objectForKey:CS_DefaultsName];
+    if (userDefs == nil)
+    {
+        // Scan for older versions
+        int i = 0;
+        for (; i < CS_NUM_PREV_VERSIONS; ++i)
+        {
+            if ((userDefs = [[NSUserDefaults standardUserDefaults] objectForKey:CS_PREV_VERSIONS[i]]))
+                break;
+        }
+
+        if (userDefs)
+            [self upgradeUserDefaults:userDefs fromVersion:CS_PREV_VERSIONS[i]];
+        else
+            userDefs = appDefs;
+    }
+
+    if (appDefs)
+        [[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObject:appDefs forKey:CS_DefaultsName]];
+    return userDefs;
+}
+
+- (NSDictionary *)defaultsDictionary {
+    NSMutableDictionary* theDictionary = [NSMutableDictionary dictionaryWithCapacity:[keyArray count]];
+    NSEnumerator* keys = [keyArray objectEnumerator];
     id key;
     while ( nil != (key = [keys nextObject]) )
     {
         //                NSLog([NSString stringWithFormat: @"default dict entry %@ %@", key, [self valueForKey: key]]);
-        [ theDictionary setObject: [self valueForKey: key] forKey: key];
+        [theDictionary setObject:[self valueForKey:key] forKey:key];
     }
     return theDictionary;
 }
 
--(void) storeUserDefaults
-{
+- (void)storeUserDefaults {
     //        NSLog(@"storing user defaults");
     NSUserDefaults* defs = [NSUserDefaults standardUserDefaults];
-    [defs setObject: [self defaultsDictionary] forKey: CS_DefaultsName];
+    [defs setObject:[self defaultsDictionary] forKey:CS_DefaultsName];
     [defs synchronize];
     //        NSLog(@"stored user defaults");
+}
+
+-(void)upgradeUserDefaults:(NSDictionary *)dict fromVersion:(NSString *)old {
+    NSUserDefaults* defs = [NSUserDefaults standardUserDefaults];
+    [defs setObject:dict forKey:CS_DefaultsName];
+    [defs removeObjectForKey:old];
+    [defs synchronize];
 }
 
 @end
