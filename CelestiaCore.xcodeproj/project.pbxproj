@@ -394,6 +394,17 @@
 		97FA983A23FE443100825BD3 /* gl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97FA983923FE443100825BD3 /* gl.cpp */; };
 		97FA985823FE460300825BD3 /* CelestiaAppCore+Event.mm in Sources */ = {isa = PBXBuildFile; fileRef = 97E0B76F231273C10016C154 /* CelestiaAppCore+Event.mm */; };
 		97FA986523FE5ABB00825BD3 /* CelestiaAppCore+Event.h in Headers */ = {isa = PBXBuildFile; fileRef = 97E0B76E231273C10016C154 /* CelestiaAppCore+Event.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		97FA987723FE5D7800825BD3 /* libcspice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FA987023FE5D7300825BD3 /* libcspice.a */; };
+		97FA987823FE5D7800825BD3 /* libfmt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FA987423FE5D7300825BD3 /* libfmt.a */; };
+		97FA987923FE5D7800825BD3 /* libfreetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FA987223FE5D7300825BD3 /* libfreetype.a */; };
+		97FA987A23FE5D7800825BD3 /* libGL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FA986F23FE5D7300825BD3 /* libGL.a */; };
+		97FA987B23FE5D7800825BD3 /* libintl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FA987123FE5D7300825BD3 /* libintl.a */; };
+		97FA987C23FE5D7800825BD3 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FA987523FE5D7300825BD3 /* libjpeg.a */; };
+		97FA987D23FE5D7800825BD3 /* liblua53.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FA986D23FE5D7300825BD3 /* liblua53.a */; };
+		97FA987E23FE5D7800825BD3 /* libogg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FA987323FE5D7300825BD3 /* libogg.a */; };
+		97FA987F23FE5D7800825BD3 /* libpng16.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FA986E23FE5D7300825BD3 /* libpng16.a */; };
+		97FA988023FE5D7800825BD3 /* libtheora.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FA987623FE5D7300825BD3 /* libtheora.a */; };
+		97FA988223FE5DCA00825BD3 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FA988123FE5DC500825BD3 /* libbz2.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -799,6 +810,17 @@
 		97E64A582382EBDA00C4E10D /* libfreetype.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfreetype.a; path = libs/libfreetype.a; sourceTree = "<group>"; };
 		97FA983523FE439A00825BD3 /* gl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gl.h; sourceTree = "<group>"; };
 		97FA983923FE443100825BD3 /* gl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = gl.cpp; sourceTree = "<group>"; };
+		97FA986D23FE5D7300825BD3 /* liblua53.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblua53.a; path = libs/iOS/liblua53.a; sourceTree = "<group>"; };
+		97FA986E23FE5D7300825BD3 /* libpng16.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpng16.a; path = libs/iOS/libpng16.a; sourceTree = "<group>"; };
+		97FA986F23FE5D7300825BD3 /* libGL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGL.a; path = libs/iOS/libGL.a; sourceTree = "<group>"; };
+		97FA987023FE5D7300825BD3 /* libcspice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcspice.a; path = libs/iOS/libcspice.a; sourceTree = "<group>"; };
+		97FA987123FE5D7300825BD3 /* libintl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libintl.a; path = libs/iOS/libintl.a; sourceTree = "<group>"; };
+		97FA987223FE5D7300825BD3 /* libfreetype.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfreetype.a; path = libs/iOS/libfreetype.a; sourceTree = "<group>"; };
+		97FA987323FE5D7300825BD3 /* libogg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libogg.a; path = libs/iOS/libogg.a; sourceTree = "<group>"; };
+		97FA987423FE5D7300825BD3 /* libfmt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfmt.a; path = libs/iOS/libfmt.a; sourceTree = "<group>"; };
+		97FA987523FE5D7300825BD3 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjpeg.a; path = libs/iOS/libjpeg.a; sourceTree = "<group>"; };
+		97FA987623FE5D7300825BD3 /* libtheora.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libtheora.a; path = libs/iOS/libtheora.a; sourceTree = "<group>"; };
+		97FA988123FE5DC500825BD3 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -806,9 +828,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97FA987723FE5D7800825BD3 /* libcspice.a in Frameworks */,
+				97FA988223FE5DCA00825BD3 /* libbz2.tbd in Frameworks */,
 				971A674023019DDB009E4EA1 /* libiconv.tbd in Frameworks */,
+				97FA987C23FE5D7800825BD3 /* libjpeg.a in Frameworks */,
+				97FA987E23FE5D7800825BD3 /* libogg.a in Frameworks */,
+				97FA987A23FE5D7800825BD3 /* libGL.a in Frameworks */,
 				971A673D23019DB5009E4EA1 /* libc++.tbd in Frameworks */,
+				97FA987823FE5D7800825BD3 /* libfmt.a in Frameworks */,
+				97FA987D23FE5D7800825BD3 /* liblua53.a in Frameworks */,
+				97FA987F23FE5D7800825BD3 /* libpng16.a in Frameworks */,
 				971A673B23019DAF009E4EA1 /* libz.tbd in Frameworks */,
+				97FA988023FE5D7800825BD3 /* libtheora.a in Frameworks */,
+				97FA987B23FE5D7800825BD3 /* libintl.a in Frameworks */,
+				97FA987923FE5D7800825BD3 /* libfreetype.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -920,7 +953,18 @@
 		971A672923019D1B009E4EA1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				97FA988123FE5DC500825BD3 /* libbz2.tbd */,
+				97FA987423FE5D7300825BD3 /* libfmt.a */,
 				97E64A582382EBDA00C4E10D /* libfreetype.a */,
+				97FA987023FE5D7300825BD3 /* libcspice.a */,
+				97FA987223FE5D7300825BD3 /* libfreetype.a */,
+				97FA986F23FE5D7300825BD3 /* libGL.a */,
+				97FA987123FE5D7300825BD3 /* libintl.a */,
+				97FA987523FE5D7300825BD3 /* libjpeg.a */,
+				97FA986D23FE5D7300825BD3 /* liblua53.a */,
+				97FA987323FE5D7300825BD3 /* libogg.a */,
+				97FA986E23FE5D7300825BD3 /* libpng16.a */,
+				97FA987623FE5D7300825BD3 /* libtheora.a */,
 				97916F83231405BD00925AF3 /* cspice.a */,
 				97916F7C231405BC00925AF3 /* libfmt.a */,
 				97916F7F231405BC00925AF3 /* libGLEW.a */,
@@ -1877,27 +1921,13 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs/iOS",
+				);
 				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*]" = "$(PROJECT_DIR)/libs/iOS";
 				"LIBRARY_SEARCH_PATHS[sdk=macosx*]" = "$(PROJECT_DIR)/libs/macOS";
 				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = (
-					"-lcspice",
-					"-lfmt",
-					"-ljpeg",
-					"-ltheora",
-					"-logg",
-					"-lintl",
-					"-lpng16",
-					"-llua53",
-				);
-				"OTHER_LDFLAGS[sdk=iphoneos*]" = (
-					"${inherited}",
-					"-lGL",
-				);
-				"OTHER_LDFLAGS[sdk=macosx*]" = (
-					"${inherited}",
-					"-lGLEW",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = cc.meowssage.Celestia;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
@@ -1957,27 +1987,13 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs/iOS",
+				);
 				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*]" = "$(PROJECT_DIR)/libs/iOS";
 				"LIBRARY_SEARCH_PATHS[sdk=macosx*]" = "$(PROJECT_DIR)/libs/macOS";
 				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = (
-					"-lcspice",
-					"-lfmt",
-					"-ljpeg",
-					"-ltheora",
-					"-logg",
-					"-lintl",
-					"-lpng16",
-					"-llua53",
-				);
-				"OTHER_LDFLAGS[sdk=iphoneos*]" = (
-					"${inherited}",
-					"-lGL",
-				);
-				"OTHER_LDFLAGS[sdk=macosx*]" = (
-					"${inherited}",
-					"-lGLEW",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = cc.meowssage.Celestia;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
