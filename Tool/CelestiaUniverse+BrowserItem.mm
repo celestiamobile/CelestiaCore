@@ -12,7 +12,7 @@
 #import "CelestiaBody+Private.h"
 #import "CelestiaLocation+Private.h"
 
-#include <celutil/util.h>
+#include <celutil/gettext.h>
 
 @implementation CelestiaUniverse (BrowserItem)
 

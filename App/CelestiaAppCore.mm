@@ -16,8 +16,9 @@
 
 #import "CelestiaUtil.h"
 
-#include "celestia/url.h"
-#include "celestia/oggtheoracapture.h"
+#include <celutil/gettext.h>
+#include <celestia/url.h>
+#include <celestia/oggtheoracapture.h>
 
 class AppCoreProgressWatcher: public ProgressNotifier
 {
