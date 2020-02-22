@@ -1939,15 +1939,22 @@
 				SYSTEM_HEADER_SEARCH_PATHS = (
 					"${PROJECT_DIR}",
 					"${PROJECT_DIR}/../Celestia/src",
-					/usr/local/include,
-					/usr/local/include/eigen3,
-					/usr/local/include/lua,
-					/usr/local/opt/gettext/include,
-					/usr/local/include/freetype2,
+					"${PROJECT_DIR}/include",
+					"${PROJECT_DIR}/include/eigen3",
+					"${PROJECT_DIR}/include/lua",
+					"${PROJECT_DIR}/include/gettext",
+					"${PROJECT_DIR}/include/freetype2",
+					"${PROJECT_DIR}/include/jpeg",
+					"${PROJECT_DIR}/include/libpng",
+					"${PROJECT_DIR}/include/cspice",
 				);
 				"SYSTEM_HEADER_SEARCH_PATHS[sdk=iphoneos*]" = (
 					"${inherited}",
-					"${PROJECT_DIR}/include",
+					"${PROJECT_DIR}/include/gl4es",
+				);
+				"SYSTEM_HEADER_SEARCH_PATHS[sdk=macosx*]" = (
+					"${inherited}",
+					"${PROJECT_DIR}/include/glew",
 				);
 				VALID_ARCHS = "i386 x86_64 arm64 arm64e armv7";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -2005,15 +2012,22 @@
 				SYSTEM_HEADER_SEARCH_PATHS = (
 					"${PROJECT_DIR}",
 					"${PROJECT_DIR}/../Celestia/src",
-					/usr/local/include,
-					/usr/local/include/eigen3,
-					/usr/local/include/lua,
-					/usr/local/opt/gettext/include,
-					/usr/local/include/freetype2,
+					"${PROJECT_DIR}/include",
+					"${PROJECT_DIR}/include/eigen3",
+					"${PROJECT_DIR}/include/lua",
+					"${PROJECT_DIR}/include/gettext",
+					"${PROJECT_DIR}/include/freetype2",
+					"${PROJECT_DIR}/include/jpeg",
+					"${PROJECT_DIR}/include/libpng",
+					"${PROJECT_DIR}/include/cspice",
 				);
 				"SYSTEM_HEADER_SEARCH_PATHS[sdk=iphoneos*]" = (
 					"${inherited}",
-					"${PROJECT_DIR}/include",
+					"${PROJECT_DIR}/include/gl4es",
+				);
+				"SYSTEM_HEADER_SEARCH_PATHS[sdk=macosx*]" = (
+					"${inherited}",
+					"${PROJECT_DIR}/include/glew",
 				);
 				VALID_ARCHS = "i386 x86_64 arm64 arm64e armv7";
 				VERSIONING_SYSTEM = "apple-generic";
