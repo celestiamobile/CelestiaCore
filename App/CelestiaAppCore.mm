@@ -6,7 +6,7 @@
 //  Copyright © 2019 李林峰. All rights reserved.
 //
 
-#include <celutil/gl.h>
+#include <celengine/gl.h>
 
 #import "CelestiaAppCore+Private.h"
 #import "CelestiaAppCore+Setting.h"
