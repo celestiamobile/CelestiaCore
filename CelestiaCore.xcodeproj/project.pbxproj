@@ -316,6 +316,8 @@
 		9729F1EF23084D080069FD72 /* fs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9729F1EC23084D080069FD72 /* fs.cpp */; };
 		9729F1F023084D080069FD72 /* filesystem.h in Headers */ = {isa = PBXBuildFile; fileRef = 9729F1ED23084D080069FD72 /* filesystem.h */; };
 		9729F1F123084D080069FD72 /* fs.h in Headers */ = {isa = PBXBuildFile; fileRef = 9729F1EE23084D080069FD72 /* fs.h */; };
+		973BBA4B240523C800E3B061 /* CelestiaAppCore+Locale.h in Headers */ = {isa = PBXBuildFile; fileRef = 973BBA49240523C800E3B061 /* CelestiaAppCore+Locale.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		973BBA4C240523C800E3B061 /* CelestiaAppCore+Locale.mm in Sources */ = {isa = PBXBuildFile; fileRef = 973BBA4A240523C800E3B061 /* CelestiaAppCore+Locale.mm */; };
 		974A6B1D23532EA1007BCABD /* overlayimage.h in Headers */ = {isa = PBXBuildFile; fileRef = 974A6B1B23532EA1007BCABD /* overlayimage.h */; };
 		974A6B1E23532EA1007BCABD /* overlayimage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 974A6B1C23532EA1007BCABD /* overlayimage.cpp */; };
 		974A6B2023532EC4007BCABD /* rectangle.h in Headers */ = {isa = PBXBuildFile; fileRef = 974A6B1F23532EC4007BCABD /* rectangle.h */; };
@@ -476,6 +478,8 @@
 		972F3A4022FFD43C00CEDDAC /* CelestiaVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CelestiaVector.h; sourceTree = "<group>"; };
 		972F3A4122FFD43C00CEDDAC /* CelestiaVector.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CelestiaVector.mm; sourceTree = "<group>"; };
 		972F3A4222FFD43C00CEDDAC /* CelestiaVector+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CelestiaVector+Private.h"; sourceTree = "<group>"; };
+		973BBA49240523C800E3B061 /* CelestiaAppCore+Locale.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CelestiaAppCore+Locale.h"; sourceTree = "<group>"; };
+		973BBA4A240523C800E3B061 /* CelestiaAppCore+Locale.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "CelestiaAppCore+Locale.mm"; sourceTree = "<group>"; };
 		974A6B1B23532EA1007BCABD /* overlayimage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = overlayimage.h; sourceTree = "<group>"; };
 		974A6B1C23532EA1007BCABD /* overlayimage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = overlayimage.cpp; sourceTree = "<group>"; };
 		974A6B1F23532EC4007BCABD /* rectangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rectangle.h; sourceTree = "<group>"; };
@@ -946,6 +950,8 @@
 				97C62C2723374F6700953522 /* CelestiaObserver+Private.h */,
 				97E0B76E231273C10016C154 /* CelestiaAppCore+Event.h */,
 				97E0B76F231273C10016C154 /* CelestiaAppCore+Event.mm */,
+				973BBA49240523C800E3B061 /* CelestiaAppCore+Locale.h */,
+				973BBA4A240523C800E3B061 /* CelestiaAppCore+Locale.mm */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -1435,6 +1441,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				973BBA4B240523C800E3B061 /* CelestiaAppCore+Locale.h in Headers */,
 				971B8ADF234C218E00567A38 /* CelestiaFavorite.h in Headers */,
 				97C62C2423374F4E00953522 /* CelestiaObserver.h in Headers */,
 				974D27492303C85900FDFBC0 /* CelestiaRotationModel.h in Headers */,
@@ -1759,6 +1766,7 @@
 				971A66B723019C20009E4EA1 /* location.cpp in Sources */,
 				9751DC2523594A8000299997 /* celx_frame.cpp in Sources */,
 				971A66EC23019C21009E4EA1 /* starbrowser.cpp in Sources */,
+				973BBA4C240523C800E3B061 /* CelestiaAppCore+Locale.mm in Sources */,
 				971A660B23019BF0009E4EA1 /* CelestiaStar.mm in Sources */,
 				971A66DE23019C20009E4EA1 /* selection.cpp in Sources */,
 				971A667F23019C20009E4EA1 /* astro.cpp in Sources */,
