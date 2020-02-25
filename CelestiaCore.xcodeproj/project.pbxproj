@@ -304,9 +304,6 @@
 		971A672423019C2B009E4EA1 /* solve.h in Headers */ = {isa = PBXBuildFile; fileRef = 977D81A122FDB1BE002FF1C2 /* solve.h */; };
 		971A672523019C2B009E4EA1 /* sphere.h in Headers */ = {isa = PBXBuildFile; fileRef = 977D81A222FDB1BE002FF1C2 /* sphere.h */; };
 		971A672623019C2B009E4EA1 /* vecmath.h in Headers */ = {isa = PBXBuildFile; fileRef = 977D81A522FDB1BE002FF1C2 /* vecmath.h */; };
-		971A673B23019DAF009E4EA1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 971A673A23019DAF009E4EA1 /* libz.tbd */; };
-		971A673D23019DB5009E4EA1 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 971A673C23019DB5009E4EA1 /* libc++.tbd */; };
-		971A674023019DDB009E4EA1 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 971A673E23019DBD009E4EA1 /* libiconv.tbd */; };
 		971A674D2301A5AF009E4EA1 /* CelestiaScript.h in Headers */ = {isa = PBXBuildFile; fileRef = 971A674B2301A5AE009E4EA1 /* CelestiaScript.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		971A674E2301A5AF009E4EA1 /* CelestiaScript.mm in Sources */ = {isa = PBXBuildFile; fileRef = 971A674C2301A5AE009E4EA1 /* CelestiaScript.mm */; };
 		971A67532301B556009E4EA1 /* oggtheoracapture.h in Headers */ = {isa = PBXBuildFile; fileRef = 971A67512301B556009E4EA1 /* oggtheoracapture.h */; };
@@ -408,7 +405,6 @@
 		97FA987E23FE5D7800825BD3 /* libogg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FA987323FE5D7300825BD3 /* libogg.a */; };
 		97FA987F23FE5D7800825BD3 /* libpng16.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FA986E23FE5D7300825BD3 /* libpng16.a */; };
 		97FA988023FE5D7800825BD3 /* libtheora.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FA987623FE5D7300825BD3 /* libtheora.a */; };
-		97FA988223FE5DCA00825BD3 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FA988123FE5DC500825BD3 /* libbz2.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -438,10 +434,6 @@
 		971A646B230198B2009E4EA1 /* CelestiaCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CelestiaCore.h; sourceTree = "<group>"; };
 		971A65CC23019BC5009E4EA1 /* CelestiaCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CelestiaCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		971A673823019DA7009E4EA1 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
-		971A673A23019DAF009E4EA1 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		971A673C23019DB5009E4EA1 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		971A673E23019DBD009E4EA1 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
-		971A674123019DE4009E4EA1 /* libiconv.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.2.tbd; path = usr/lib/libiconv.2.tbd; sourceTree = SDKROOT; };
 		971A674323019E38009E4EA1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		971A674B2301A5AE009E4EA1 /* CelestiaScript.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CelestiaScript.h; sourceTree = "<group>"; };
 		971A674C2301A5AE009E4EA1 /* CelestiaScript.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CelestiaScript.mm; sourceTree = "<group>"; };
@@ -828,7 +820,6 @@
 		97FA987423FE5D7300825BD3 /* libfmt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfmt.a; path = libs/iOS/libfmt.a; sourceTree = "<group>"; };
 		97FA987523FE5D7300825BD3 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjpeg.a; path = libs/iOS/libjpeg.a; sourceTree = "<group>"; };
 		97FA987623FE5D7300825BD3 /* libtheora.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libtheora.a; path = libs/iOS/libtheora.a; sourceTree = "<group>"; };
-		97FA988123FE5DC500825BD3 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -837,16 +828,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				97FA987723FE5D7800825BD3 /* libcspice.a in Frameworks */,
-				97FA988223FE5DCA00825BD3 /* libbz2.tbd in Frameworks */,
-				971A674023019DDB009E4EA1 /* libiconv.tbd in Frameworks */,
 				97FA987C23FE5D7800825BD3 /* libjpeg.a in Frameworks */,
 				97FA987E23FE5D7800825BD3 /* libogg.a in Frameworks */,
 				97FA987A23FE5D7800825BD3 /* libGL.a in Frameworks */,
-				971A673D23019DB5009E4EA1 /* libc++.tbd in Frameworks */,
 				97FA987823FE5D7800825BD3 /* libfmt.a in Frameworks */,
 				97FA987D23FE5D7800825BD3 /* liblua53.a in Frameworks */,
 				97FA987F23FE5D7800825BD3 /* libpng16.a in Frameworks */,
-				971A673B23019DAF009E4EA1 /* libz.tbd in Frameworks */,
 				97FA988023FE5D7800825BD3 /* libtheora.a in Frameworks */,
 				97FA987B23FE5D7800825BD3 /* libintl.a in Frameworks */,
 				97FA987923FE5D7800825BD3 /* libfreetype.a in Frameworks */,
@@ -965,7 +952,6 @@
 		971A672923019D1B009E4EA1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				97FA988123FE5DC500825BD3 /* libbz2.tbd */,
 				97FA987423FE5D7300825BD3 /* libfmt.a */,
 				97E64A582382EBDA00C4E10D /* libfreetype.a */,
 				97FA987023FE5D7300825BD3 /* libcspice.a */,
@@ -986,10 +972,6 @@
 				97916F7E231405BC00925AF3 /* libogg.a */,
 				97916F84231405BD00925AF3 /* libpng16.a */,
 				97916F7D231405BC00925AF3 /* libtheora.a */,
-				971A674123019DE4009E4EA1 /* libiconv.2.tbd */,
-				971A673E23019DBD009E4EA1 /* libiconv.tbd */,
-				971A673C23019DB5009E4EA1 /* libc++.tbd */,
-				971A673A23019DAF009E4EA1 /* libz.tbd */,
 				971A673823019DA7009E4EA1 /* OpenGL.framework */,
 			);
 			name = Frameworks;
