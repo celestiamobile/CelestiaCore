@@ -74,6 +74,8 @@ typedef NS_OPTIONS(NSUInteger, CelestiaGoToLocationFieldMask) {
 
 @interface CelestiaSimulation () {
     Simulation *s;
+
+    CelestiaUniverse *_universe;
 }
 
 @end
@@ -84,6 +86,8 @@ typedef NS_OPTIONS(NSUInteger, CelestiaGoToLocationFieldMask) {
     self = [super init];
     if (self) {
         s = sim;
+
+        _universe = nil;
     }
     return self;
 }
@@ -127,7 +131,10 @@ typedef NS_OPTIONS(NSUInteger, CelestiaGoToLocationFieldMask) {
 }
 
 - (CelestiaUniverse *)universe {
-    return [[CelestiaUniverse alloc] initWithUniverse:s->getUniverse()];
+    if (!_universe) {
+        _universe = [[CelestiaUniverse alloc] initWithUniverse:s->getUniverse()];
+    }
+    return _universe;
 }
 
 - (CelestiaSelection *)findObjectFromPath:(NSString *)path {

@@ -95,6 +95,8 @@ private:
     AppCoreAlerter *alerter;
     AppCoreCursorHandler *cursorHandler;
     AppCoreContextMenuHandler *contextMenuHandler;
+
+    CelestiaSimulation *_simulation;
 }
 
 @end
@@ -106,6 +108,7 @@ private:
     self = [super init];
     if (self != nil) {
         _initialized = NO;
+        _simulation = nil;
         core = new CelestiaCore;
         __weak CelestiaAppCore *weakSelf = self;
         alerter = new AppCoreAlerter(^(NSString *error) {
@@ -251,7 +254,10 @@ private:
 
 // MARK: Simulation
 - (CelestiaSimulation *)simulation {
-    return [[CelestiaSimulation alloc] initWithSimulation:core->getSimulation()];
+    if (!_simulation) {
+        _simulation = [[CelestiaSimulation alloc] initWithSimulation:core->getSimulation()];
+    }
+    return _simulation;
 }
 
 // MARK: History

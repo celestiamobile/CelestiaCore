@@ -14,6 +14,9 @@
 
 @interface CelestiaUniverse () {
     Universe *u;
+
+    CelestiaDSOCatalog *_dsoCatalog;
+    CelestiaStarCatalog *_starCatalog;
 }
 
 @end
@@ -24,6 +27,9 @@
     self = [super init];
     if (self) {
         u = uni;
+
+        _dsoCatalog = nil;
+        _starCatalog = nil;
     }
     return self;
 }
@@ -57,11 +63,17 @@
 }
 
 - (CelestiaDSOCatalog *)dsoCatalog {
-    return [[CelestiaDSOCatalog alloc] initWithDatabase:u->getDSOCatalog()];
+    if (!_dsoCatalog) {
+        _dsoCatalog = [[CelestiaDSOCatalog alloc] initWithDatabase:u->getDSOCatalog()];
+    }
+    return _dsoCatalog;
 }
 
 - (CelestiaStarCatalog *)starCatalog {
-    return [[CelestiaStarCatalog alloc] initWithDatabase:u->getStarCatalog()];
+    if (!_starCatalog) {
+        _starCatalog = [[CelestiaStarCatalog alloc] initWithDatabase:u->getStarCatalog()];
+    }
+    return _starCatalog;
 }
 
 - (BOOL)isSelectionMarked:(CelestiaSelection *)selection {
