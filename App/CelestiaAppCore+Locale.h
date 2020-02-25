@@ -10,7 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 NSString *LocalizedFilename(NSString *originalName);
 NSString *LocalizedString(NSString *originalString);
+#ifdef __cplusplus
+}
+#endif
 
 NS_ASSUME_NONNULL_END
