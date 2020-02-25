@@ -391,8 +391,8 @@
 		97C62C2523374F4E00953522 /* CelestiaObserver.mm in Sources */ = {isa = PBXBuildFile; fileRef = 97C62C2323374F4E00953522 /* CelestiaObserver.mm */; };
 		97C62C2923374F6700953522 /* CelestiaObserver+Private.h in Sources */ = {isa = PBXBuildFile; fileRef = 97C62C2723374F6700953522 /* CelestiaObserver+Private.h */; };
 		97E0B7732312763C0016C154 /* CelestiaAppCore+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 97E0B7722312763C0016C154 /* CelestiaAppCore+Private.mm */; };
-		97E64A562382EA7400C4E10D /* truetypefont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97E64A542382EA7400C4E10D /* truetypefont.cpp */; };
-		97E64A572382EA7400C4E10D /* truetypefont.h in Headers */ = {isa = PBXBuildFile; fileRef = 97E64A552382EA7400C4E10D /* truetypefont.h */; };
+		97E64A562382EA7400C4E10D /* texturefont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97E64A542382EA7400C4E10D /* texturefont.cpp */; };
+		97E64A572382EA7400C4E10D /* texturefont.h in Headers */ = {isa = PBXBuildFile; fileRef = 97E64A552382EA7400C4E10D /* texturefont.h */; };
 		97FA983723FE439A00825BD3 /* gl.h in Headers */ = {isa = PBXBuildFile; fileRef = 97FA983523FE439A00825BD3 /* gl.h */; };
 		97FA983A23FE443100825BD3 /* gl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97FA983923FE443100825BD3 /* gl.cpp */; };
 		97FA985823FE460300825BD3 /* CelestiaAppCore+Event.mm in Sources */ = {isa = PBXBuildFile; fileRef = 97E0B76F231273C10016C154 /* CelestiaAppCore+Event.mm */; };
@@ -809,8 +809,8 @@
 		97E0B76E231273C10016C154 /* CelestiaAppCore+Event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CelestiaAppCore+Event.h"; sourceTree = "<group>"; };
 		97E0B76F231273C10016C154 /* CelestiaAppCore+Event.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "CelestiaAppCore+Event.mm"; sourceTree = "<group>"; };
 		97E0B7722312763C0016C154 /* CelestiaAppCore+Private.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "CelestiaAppCore+Private.mm"; sourceTree = "<group>"; };
-		97E64A542382EA7400C4E10D /* truetypefont.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = truetypefont.cpp; sourceTree = "<group>"; };
-		97E64A552382EA7400C4E10D /* truetypefont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = truetypefont.h; sourceTree = "<group>"; };
+		97E64A542382EA7400C4E10D /* texturefont.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = texturefont.cpp; sourceTree = "<group>"; };
+		97E64A552382EA7400C4E10D /* texturefont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = texturefont.h; sourceTree = "<group>"; };
 		97E64A582382EBDA00C4E10D /* libfreetype.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfreetype.a; path = libs/libfreetype.a; sourceTree = "<group>"; };
 		97FA983523FE439A00825BD3 /* gl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gl.h; sourceTree = "<group>"; };
 		97FA983923FE443100825BD3 /* gl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = gl.cpp; sourceTree = "<group>"; };
@@ -1078,7 +1078,7 @@
 		977D817122FDB174002FF1C2 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				97E64A522382EA7300C4E10D /* celttf */,
+				97E64A522382EA7300C4E10D /* celtxf */,
 				9751DBC423594A5300299997 /* celscript */,
 				9729F1EB23084CF00069FD72 /* celcompat */,
 				977D83C522FDB2F4002FF1C2 /* celmodel */,
@@ -1419,13 +1419,13 @@
 			path = common;
 			sourceTree = "<group>";
 		};
-		97E64A522382EA7300C4E10D /* celttf */ = {
+		97E64A522382EA7300C4E10D /* celtxf */ = {
 			isa = PBXGroup;
 			children = (
-				97E64A542382EA7400C4E10D /* truetypefont.cpp */,
-				97E64A552382EA7400C4E10D /* truetypefont.h */,
+				97E64A542382EA7400C4E10D /* texturefont.cpp */,
+				97E64A552382EA7400C4E10D /* texturefont.h */,
 			);
-			path = celttf;
+			path = celtxf;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1470,7 +1470,7 @@
 				9751DC2623594A8000299997 /* celx.h in Headers */,
 				971A65FA23019BF0009E4EA1 /* CelestiaPlanetarySystem.h in Headers */,
 				971A66C223019C20009E4EA1 /* multitexture.h in Headers */,
-				97E64A572382EA7400C4E10D /* truetypefont.h in Headers */,
+				97E64A572382EA7400C4E10D /* texturefont.h in Headers */,
 				971A670C23019C21009E4EA1 /* vertexobject.h in Headers */,
 				97AD599A235B016C0056CA80 /* scriptmaps.h in Headers */,
 				971A665A23019C0F009E4EA1 /* util.h in Headers */,
@@ -1782,7 +1782,7 @@
 				97B5E2D6239689B9006F35B4 /* pointstarrenderer.cpp in Sources */,
 				971A65E823019BF0009E4EA1 /* CelestiaEclipseFinder.mm in Sources */,
 				974D26F1230286CA00FDFBC0 /* CelestiaUniverse+BrowserItem.mm in Sources */,
-				97E64A562382EA7400C4E10D /* truetypefont.cpp in Sources */,
+				97E64A562382EA7400C4E10D /* texturefont.cpp in Sources */,
 				97C62C2923374F6700953522 /* CelestiaObserver+Private.h in Sources */,
 				974A6B2323532EDB007BCABD /* view.cpp in Sources */,
 				971A66D723019C20009E4EA1 /* render.cpp in Sources */,
@@ -1914,6 +1914,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					ENABLE_NLS,
+					NO_TTF,
 				);
 				"GCC_PREPROCESSOR_DEFINITIONS[sdk=macosx*]" = (
 					"$(inherited)",
@@ -1995,6 +1996,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					ENABLE_NLS,
+					NO_TTF,
 				);
 				"GCC_PREPROCESSOR_DEFINITIONS[sdk=macosx*]" = (
 					"$(inherited)",
