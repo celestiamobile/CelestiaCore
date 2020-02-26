@@ -201,7 +201,7 @@ static NSString *CS_PREV_VERSIONS[CS_NUM_PREV_VERSIONS] = {
 // Velocity
 // AngularVelocity
 
-- (NSInteger)setValue:(BOOL)value forBit:(NSInteger)bit inSet:(NSInteger)set {
+- (uint64_t)setValue:(BOOL)value forBit:(uint64_t)bit inSet:(uint64_t)set {
     NSInteger result = value
     ? ((bit&set) ? set : (set|bit) )
     : ((bit&set) ?  (set^bit) : set);
