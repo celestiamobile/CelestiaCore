@@ -14,6 +14,8 @@
 #import "CelestiaPlanetarySystem+Private.h"
 #import "CelestiaUtil.h"
 
+#import "CelestiaAppCore+Locale.h"
+
 #include <string>
 #include <vector>
 
@@ -40,24 +42,24 @@
     switch ([self body]->getClassification())
     {
         case (Body::Planet):
-            return NSLocalizedString(@"Planet",@"");
+            return LocalizedString(@"Planet");
             break;
         case (Body::Moon):
-            return NSLocalizedString(@"Moon",@"");
+            return LocalizedString(@"Moon");
             break;
         case (Body::Asteroid):
-            return NSLocalizedString(@"Asteroid",@"");
+            return LocalizedString(@"Asteroid");
             break;
         case (Body::Comet):
-            return NSLocalizedString(@"Comet",@"");
+            return LocalizedString(@"Comet");
             break;
         case (Body::Spacecraft):
-            return NSLocalizedString(@"Spacecraft",@"");
+            return LocalizedString(@"Spacecraft");
             break;
         default:
             break;
     }
-    return NSLocalizedString(@"Unknown",@"");
+    return LocalizedString(@"Unknown");
 }
 
 -(NSString *)name {
