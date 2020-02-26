@@ -70,6 +70,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)startRenderer;
 - (void)setDPI:(NSInteger)dpi;
 
+- (void)setStartURL:(nullable NSString *)startURL;
 - (void)start;
 - (void)start:(NSDate *)date NS_SWIFT_NAME(start(at:));
 

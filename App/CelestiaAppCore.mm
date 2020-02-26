@@ -180,6 +180,13 @@ private:
     core->setScreenDpi((int)dpi);
 }
 
+- (void)setStartURL:(NSString *)startURL {
+    if (!startURL)
+        core->setStartURL("");
+    else
+        core->setStartURL([startURL UTF8String]);
+}
+
 - (void)start {
     core->start();
 }
