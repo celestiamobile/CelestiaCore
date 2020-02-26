@@ -67,6 +67,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)goToEclipse:(CelestiaSelection *)occulter receiver:(CelestiaSelection *)receiver NS_SWIFT_NAME(goToEclipse(occulter:receiver:));
 
+- (NSArray<NSString *> *)completionForName:(NSString *)name NS_SWIFT_NAME(completion(for:));
+
 @end
 
 NS_ASSUME_NONNULL_END

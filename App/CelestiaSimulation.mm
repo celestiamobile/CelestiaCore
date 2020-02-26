@@ -179,4 +179,13 @@ typedef NS_OPTIONS(NSUInteger, CelestiaGoToLocationFieldMask) {
                     5.0);
 }
 
+- (NSArray<NSString *> *)completionForName:(NSString *)name {
+    std::vector<std::string> names = s->getObjectCompletion([name UTF8String]);
+    NSMutableArray *array = [NSMutableArray arrayWithCapacity:names.size()];
+    for (int i = 0; i < names.size(); i++) {
+        [array addObject:[NSString stringWithUTF8String:names[i].c_str()]];
+    }
+    return array;
+}
+
 @end
