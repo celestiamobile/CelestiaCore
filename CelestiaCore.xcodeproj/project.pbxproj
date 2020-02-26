@@ -1927,6 +1927,7 @@
 					"$(PROJECT_DIR)/libs/iOS",
 				);
 				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*]" = "$(PROJECT_DIR)/libs/iOS";
+				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*]" = "$(PROJECT_DIR)/libs/iOS";
 				"LIBRARY_SEARCH_PATHS[sdk=macosx*]" = "$(PROJECT_DIR)/libs/macOS";
 				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = cc.meowssage.Celestia;
@@ -1950,6 +1951,10 @@
 					"${PROJECT_DIR}/include/cspice",
 				);
 				"SYSTEM_HEADER_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"${inherited}",
+					"${PROJECT_DIR}/include/gl4es",
+				);
+				"SYSTEM_HEADER_SEARCH_PATHS[sdk=iphonesimulator*]" = (
 					"${inherited}",
 					"${PROJECT_DIR}/include/gl4es",
 				);
@@ -2003,6 +2008,7 @@
 					"$(PROJECT_DIR)/libs/iOS",
 				);
 				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*]" = "$(PROJECT_DIR)/libs/iOS";
+				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*]" = "$(PROJECT_DIR)/libs/iOS";
 				"LIBRARY_SEARCH_PATHS[sdk=macosx*]" = "$(PROJECT_DIR)/libs/macOS";
 				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = cc.meowssage.Celestia;
@@ -2026,6 +2032,10 @@
 					"${PROJECT_DIR}/include/cspice",
 				);
 				"SYSTEM_HEADER_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"${inherited}",
+					"${PROJECT_DIR}/include/gl4es",
+				);
+				"SYSTEM_HEADER_SEARCH_PATHS[sdk=iphonesimulator*]" = (
 					"${inherited}",
 					"${PROJECT_DIR}/include/gl4es",
 				);
