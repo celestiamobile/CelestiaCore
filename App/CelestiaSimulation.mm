@@ -147,6 +147,10 @@ typedef NS_OPTIONS(NSUInteger, CelestiaGoToLocationFieldMask) {
     s->setFrame((ObserverFrame::CoordinateSystem)coordinate, ref, tar);
 }
 
+- (void)reverseObserverOrientation {
+    s->reverseObserverOrientation();
+}
+
 - (void)update:(NSTimeInterval)seconds {
     s->update(seconds);
 }

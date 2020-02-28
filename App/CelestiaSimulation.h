@@ -63,6 +63,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)setFrame:(SimulationCoordinateSystem)coordinate target:(CelestiaSelection *)target reference:(CelestiaSelection *)reference NS_SWIFT_NAME(setFrame(coordinate:target:reference:));
 
+- (void)reverseObserverOrientation;
+
 - (void)goToLocation:(CelestiaGoToLocation *)location NS_SWIFT_NAME(go(to:));
 
 - (void)goToEclipse:(CelestiaSelection *)occulter receiver:(CelestiaSelection *)receiver NS_SWIFT_NAME(goToEclipse(occulter:receiver:));
