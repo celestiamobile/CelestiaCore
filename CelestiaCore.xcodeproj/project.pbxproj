@@ -369,6 +369,8 @@
 		9752D7A223ED181E00FFE781 /* hash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9752D7A023ED181E00FFE781 /* hash.cpp */; };
 		9752D7A523ED182D00FFE781 /* value.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9752D7A323ED182D00FFE781 /* value.cpp */; };
 		9752D7A623ED182D00FFE781 /* value.h in Headers */ = {isa = PBXBuildFile; fileRef = 9752D7A423ED182D00FFE781 /* value.h */; };
+		9768C446240FCC850097C4F2 /* framebuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 9768C444240FCC840097C4F2 /* framebuffer.h */; };
+		9768C447240FCC850097C4F2 /* framebuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9768C445240FCC850097C4F2 /* framebuffer.cpp */; };
 		97AD599A235B016C0056CA80 /* scriptmaps.h in Headers */ = {isa = PBXBuildFile; fileRef = 97AD5997235B016B0056CA80 /* scriptmaps.h */; };
 		97AD599B235B016C0056CA80 /* scriptmaps.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97AD5999235B016B0056CA80 /* scriptmaps.cpp */; };
 		97AD59C0235B1B760056CA80 /* script.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97AD59BE235B1B760056CA80 /* script.cpp */; };
@@ -528,6 +530,8 @@
 		9752D7A023ED181E00FFE781 /* hash.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hash.cpp; sourceTree = "<group>"; };
 		9752D7A323ED182D00FFE781 /* value.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = value.cpp; sourceTree = "<group>"; };
 		9752D7A423ED182D00FFE781 /* value.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = value.h; sourceTree = "<group>"; };
+		9768C444240FCC840097C4F2 /* framebuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = framebuffer.h; sourceTree = "<group>"; };
+		9768C445240FCC850097C4F2 /* framebuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = framebuffer.cpp; sourceTree = "<group>"; };
 		977D819522FDB1BE002FF1C2 /* aabox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aabox.h; sourceTree = "<group>"; };
 		977D819622FDB1BE002FF1C2 /* ellipsoid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ellipsoid.h; sourceTree = "<group>"; };
 		977D819722FDB1BE002FF1C2 /* frustum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = frustum.h; sourceTree = "<group>"; };
@@ -1167,6 +1171,8 @@
 				977D822022FDB23C002FF1C2 /* execenv.h */,
 				977D823B22FDB23D002FF1C2 /* frame.cpp */,
 				977D821A22FDB23B002FF1C2 /* frame.h */,
+				9768C445240FCC850097C4F2 /* framebuffer.cpp */,
+				9768C444240FCC840097C4F2 /* framebuffer.h */,
 				977D822422FDB23C002FF1C2 /* frametree.cpp */,
 				977D81CD22FDB237002FF1C2 /* frametree.h */,
 				977D821922FDB23B002FF1C2 /* galaxy.cpp */,
@@ -1633,6 +1639,7 @@
 				971A65EB23019BF0009E4EA1 /* CelestiaUniversalCoord+Private.h in Headers */,
 				971A671D23019C2B009E4EA1 /* intersect.h in Headers */,
 				971A66FE23019C21009E4EA1 /* timeline.h in Headers */,
+				9768C446240FCC850097C4F2 /* framebuffer.h in Headers */,
 				971A661123019BFC009E4EA1 /* model.h in Headers */,
 				971A668323019C20009E4EA1 /* axisarrow.h in Headers */,
 				974D274D2303C86B00FDFBC0 /* CelestiaRotationModel+Private.h in Headers */,
@@ -1858,6 +1865,7 @@
 				971B8AE0234C218E00567A38 /* CelestiaFavorite.m in Sources */,
 				971A66A623019C20009E4EA1 /* frame.cpp in Sources */,
 				971A663123019C03009E4EA1 /* destination.cpp in Sources */,
+				9768C447240FCC850097C4F2 /* framebuffer.cpp in Sources */,
 				971A667A23019C15009E4EA1 /* vsop87.cpp in Sources */,
 				971A670323019C21009E4EA1 /* trajmanager.cpp in Sources */,
 				971A670F23019C21009E4EA1 /* visibleregion.cpp in Sources */,
