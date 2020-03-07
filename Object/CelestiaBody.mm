@@ -116,7 +116,7 @@
 }
 
 - (NSArray<NSString *> *)alternateSurfaceNames {
-    NSMutableArray *result = nil;
+    NSMutableArray *result = [NSMutableArray array];
     std::vector<std::string> *altSurfaces = [self body]->getAlternateSurfaceNames();
     if (altSurfaces)
     {

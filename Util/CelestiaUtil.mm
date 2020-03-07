@@ -105,11 +105,10 @@ NSDictionary* coordinateDict;
 
 @implementation Astro
 
-+ (NSString *)stringWithCoordinateSystem:(int)n;
-{
++ (NSString *)stringWithCoordinateSystem:(int)n {
     NSArray* keys = [coordinateDict allKeys];
     unsigned int i;
-    for (i=0;i<[keys count];i++) {
+    for (i = 0; i < [keys count]; i++) {
         if ([[coordinateDict objectForKey:[keys objectAtIndex:i]] integerValue] == n)
             return [keys objectAtIndex:i];
     }

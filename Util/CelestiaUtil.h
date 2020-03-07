@@ -36,7 +36,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Astro : NSObject
 
-+ (NSString *)stringWithCoordinateSystem:(int)n;
++ (nullable NSString *)stringWithCoordinateSystem:(int)n;
 + (int)coordinateSystem:(NSString *)coord;
 + (double)speedOfLight;
 + (double)J2000;
