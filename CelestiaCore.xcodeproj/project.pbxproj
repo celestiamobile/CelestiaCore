@@ -397,7 +397,7 @@
 		97FA983A23FE443100825BD3 /* gl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97FA983923FE443100825BD3 /* gl.cpp */; };
 		97FA985823FE460300825BD3 /* CelestiaAppCore+Event.mm in Sources */ = {isa = PBXBuildFile; fileRef = 97E0B76F231273C10016C154 /* CelestiaAppCore+Event.mm */; };
 		97FA986523FE5ABB00825BD3 /* CelestiaAppCore+Event.h in Headers */ = {isa = PBXBuildFile; fileRef = 97E0B76E231273C10016C154 /* CelestiaAppCore+Event.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		97FA987723FE5D7800825BD3 /* libcspice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FA987023FE5D7300825BD3 /* libcspice.a */; };
+		97FA987723FE5D7800825BD3 /* cspice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FA987023FE5D7300825BD3 /* cspice.a */; };
 		97FA987823FE5D7800825BD3 /* libfmt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FA987423FE5D7300825BD3 /* libfmt.a */; };
 		97FA987923FE5D7800825BD3 /* libfreetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FA987223FE5D7300825BD3 /* libfreetype.a */; };
 		97FA987A23FE5D7800825BD3 /* libGL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FA986F23FE5D7300825BD3 /* libGL.a */; };
@@ -817,7 +817,7 @@
 		97FA986D23FE5D7300825BD3 /* liblua53.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblua53.a; path = libs/iOS/liblua53.a; sourceTree = "<group>"; };
 		97FA986E23FE5D7300825BD3 /* libpng16.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpng16.a; path = libs/iOS/libpng16.a; sourceTree = "<group>"; };
 		97FA986F23FE5D7300825BD3 /* libGL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGL.a; path = libs/iOS/libGL.a; sourceTree = "<group>"; };
-		97FA987023FE5D7300825BD3 /* libcspice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcspice.a; path = libs/iOS/libcspice.a; sourceTree = "<group>"; };
+		97FA987023FE5D7300825BD3 /* cspice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = cspice.a; path = libs/iOS/cspice.a; sourceTree = "<group>"; };
 		97FA987123FE5D7300825BD3 /* libintl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libintl.a; path = libs/iOS/libintl.a; sourceTree = "<group>"; };
 		97FA987223FE5D7300825BD3 /* libfreetype.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfreetype.a; path = libs/iOS/libfreetype.a; sourceTree = "<group>"; };
 		97FA987323FE5D7300825BD3 /* libogg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libogg.a; path = libs/iOS/libogg.a; sourceTree = "<group>"; };
@@ -831,7 +831,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97FA987723FE5D7800825BD3 /* libcspice.a in Frameworks */,
+				97FA987723FE5D7800825BD3 /* cspice.a in Frameworks */,
 				97FA987C23FE5D7800825BD3 /* libjpeg.a in Frameworks */,
 				97FA987E23FE5D7800825BD3 /* libogg.a in Frameworks */,
 				97FA987A23FE5D7800825BD3 /* libGL.a in Frameworks */,
@@ -958,7 +958,7 @@
 			children = (
 				97FA987423FE5D7300825BD3 /* libfmt.a */,
 				97E64A582382EBDA00C4E10D /* libfreetype.a */,
-				97FA987023FE5D7300825BD3 /* libcspice.a */,
+				97FA987023FE5D7300825BD3 /* cspice.a */,
 				97FA987223FE5D7300825BD3 /* libfreetype.a */,
 				97FA986F23FE5D7300825BD3 /* libGL.a */,
 				97FA987123FE5D7300825BD3 /* libintl.a */,
