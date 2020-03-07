@@ -6,7 +6,7 @@
 //  Copyright (C) 2007, Celestia Development Team
 //
 
-#import <CelestiaCore/CelestiaCatEntry.h>
+#import <CelestiaCore/CelestiaAstroObject.h>
 
 @class CelestiaPlanetarySystem;
 @class CelestiaOrbit;
@@ -32,7 +32,7 @@ typedef NS_ENUM(NSUInteger, CelestiaBodyType) {
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CelestiaBody : CelestiaCatEntry
+@interface CelestiaBody : CelestiaAstroObject
 
 @property (readonly) CelestiaBodyType type;
 @property (readonly) NSString *classification;

@@ -17,7 +17,7 @@
 @implementation CelestiaUniverse (BrowserItem)
 
 - (NSDictionary *)childrenForBrowserItem:(CelestiaBrowserItem *)item {
-    CelestiaCatEntry *entry = [item entry];
+    CelestiaAstroObject *entry = [item entry];
     if (entry == nil)
         return nil;
 

@@ -7,19 +7,19 @@
 //
 
 #import "CelestiaGalaxy.h"
-#import "CelestiaCatEntry+Private.h"
+#import "CelestiaAstroObject+Private.h"
 #import "CelestiaGalaxy+Private.h"
 
 @implementation CelestiaGalaxy (Private)
 
 - (instancetype)initWithGalaxy:(Galaxy *)galaxy
 {
-    self = [super initWithCatEntry:reinterpret_cast<CatEntry *>(galaxy)];
+    self = [super initWithObject:reinterpret_cast<AstroObject *>(galaxy)];
     return self;
 }
 
 -(Galaxy *)galaxy {
-    return reinterpret_cast<Galaxy *>([self entry]);
+    return reinterpret_cast<Galaxy *>([self object]);
 }
 
 @end

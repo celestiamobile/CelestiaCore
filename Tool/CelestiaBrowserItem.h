@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class CelestiaCatEntry;
+@class CelestiaAstroObject;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -21,10 +21,10 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CelestiaBrowserItem : NSObject
 
 @property (nullable, readonly) NSString *name;
-@property (nullable, readonly) CelestiaCatEntry *entry;
+@property (nullable, readonly) CelestiaAstroObject *entry;
 @property (readonly) NSArray<CelestiaBrowserItem *> *children;
 
-- (instancetype)initWithName:(nullable NSString *)aName catEntry:(CelestiaCatEntry *)entry provider:(nullable id<CelestiaBrowserItemChildrenProvider>)provider;
+- (instancetype)initWithName:(nullable NSString *)aName catEntry:(CelestiaAstroObject *)entry provider:(nullable id<CelestiaBrowserItemChildrenProvider>)provider;
 - (instancetype)initWithName:(nullable NSString *)aName provider:(nullable id<CelestiaBrowserItemChildrenProvider>)provider;
 
 - (instancetype)initWithName:(nullable NSString *)aName

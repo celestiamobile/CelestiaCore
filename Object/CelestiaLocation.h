@@ -6,11 +6,11 @@
 //  Copyright 2006 Chris Laurel. All rights reserved.
 //
 
-#import <CelestiaCore/CelestiaCatEntry.h>
+#import <CelestiaCore/CelestiaAstroObject.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CelestiaLocation : CelestiaCatEntry
+@interface CelestiaLocation : CelestiaAstroObject
 
 @property (readonly) NSString *name;
 

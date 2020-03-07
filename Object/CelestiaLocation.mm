@@ -7,17 +7,17 @@
 //
 
 #import "CelestiaLocation+Private.h"
-#import "CelestiaCatEntry+Private.h"
+#import "CelestiaAstroObject+Private.h"
 
 @implementation CelestiaLocation (Private)
 
 -(instancetype)initWithLocation:(Location *)aLocation {
-    self = [super initWithCatEntry:reinterpret_cast<CatEntry *>(aLocation)];
+    self = [super initWithObject:reinterpret_cast<AstroObject *>(aLocation)];
     return self;
 }
 
 - (Location *)location {
-    return reinterpret_cast<Location *>([self entry]);;
+    return reinterpret_cast<Location *>([self object]);;
 }
 
 @end

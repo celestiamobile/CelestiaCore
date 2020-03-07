@@ -6,15 +6,14 @@
 //  Copyright (c) 2002 Chris Laurel. All rights reserved.
 //
 
-#import <CelestiaCore/CelestiaCatEntry.h>
+#import <CelestiaCore/CelestiaAstroObject.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @class CelestiaUniversalCoord;
 
-@interface CelestiaStar : CelestiaCatEntry
+@interface CelestiaStar : CelestiaAstroObject
 
-@property unsigned int catalogNumber;
 @property float luminosity;
 
 @property (readonly) float radius;

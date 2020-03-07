@@ -15,7 +15,7 @@
 
 @interface CelestiaBrowserItem ()
 
-@property CelestiaCatEntry *catEntry;
+@property CelestiaAstroObject *catEntry;
 @property NSString *stringValue;
 
 @property (weak) id<CelestiaBrowserItemChildrenProvider> childrenProvider;
@@ -27,7 +27,7 @@
 
 @implementation CelestiaBrowserItem
 
-- (instancetype)initWithName:(nullable NSString *)aName catEntry:(CelestiaCatEntry *)entry provider:(id<CelestiaBrowserItemChildrenProvider>)provider {
+- (instancetype)initWithName:(nullable NSString *)aName catEntry:(CelestiaAstroObject *)entry provider:(id<CelestiaBrowserItemChildrenProvider>)provider {
     self = [super init];
     if (self) {
         _stringValue = aName;
@@ -68,7 +68,7 @@
     return _stringValue;
 }
 
-- (CelestiaCatEntry *)entry {
+- (CelestiaAstroObject *)entry {
     return _catEntry;
 }
 
