@@ -1915,6 +1915,7 @@
 					"$(inherited)",
 					ENABLE_NLS,
 					NO_TTF,
+					USE_SPICE,
 				);
 				"GCC_PREPROCESSOR_DEFINITIONS[sdk=macosx*]" = (
 					"$(inherited)",
@@ -1997,6 +1998,7 @@
 					"$(inherited)",
 					ENABLE_NLS,
 					NO_TTF,
+					USE_SPICE,
 				);
 				"GCC_PREPROCESSOR_DEFINITIONS[sdk=macosx*]" = (
 					"$(inherited)",
