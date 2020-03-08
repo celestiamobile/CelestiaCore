@@ -23,8 +23,8 @@ class UniformedURL {
         self.securityScoped = securityScoped
     }
 
-    convenience init(url: URL) {
-        self.init(url: url, securityScoped: false, stale: false)!
+    convenience init(url: URL, securityScoped: Bool = false) {
+        self.init(url: url, securityScoped: securityScoped, stale: false)!
     }
 
     convenience init?(bookmark: Data) throws {

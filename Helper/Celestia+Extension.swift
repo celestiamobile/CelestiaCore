@@ -41,6 +41,11 @@ extension CelestiaSelection {
     }
 }
 
+var renderInfo: String {
+    return CelestiaAppCore.shared.renderInfo
+}
+
+// MARK: Browser
 var solBrowserRoot: CelestiaBrowserItem = {
     let universe = CelestiaAppCore.shared.simulation.universe
     let sol = universe.find("Sol")
@@ -108,10 +113,6 @@ var dsoBrowserRoot: CelestiaBrowserItem = {
     return CelestiaBrowserItem(name: CelestiaString("Deep Sky Objects", comment: ""), children: results)
 }()
 
-var renderInfo: String {
-    return CelestiaAppCore.shared.renderInfo
-}
-
 extension CelestiaDSOCatalog {
     subscript(index: Int) -> CelestiaDSO {
         get {
@@ -147,10 +148,98 @@ extension CelestiaDSOCatalog: Sequence {
     }
 }
 
+// MARK: Localization
 func CelestiaString(_ key: String, comment: String) -> String {
     return LocalizedString(key)
 }
 
 func CelestiaFilename(_ key: String) -> String {
     return LocalizedFilename(key)
+}
+
+// MARK: Scripting
+func readScripts() -> [CelestiaScript] {
+    var scripts = CelestiaScript.scripts(inDirectory: "scripts", deepScan: true)
+    if let extraScriptsPath = extraScriptDirectory?.path {
+        scripts += CelestiaScript.scripts(inDirectory: extraScriptsPath, deepScan: true)
+    }
+    return scripts
+}
+
+// MARK: Bookmark
+final class BookmarkNode: NSObject {
+    let isFolder: Bool
+
+    @objc var name: String
+    @objc var url: String
+    @objc var children: [BookmarkNode]
+
+    init(name: String, url: String, isFolder: Bool, children: [BookmarkNode] = []) {
+        self.name = name
+        self.url = url
+        self.isFolder = isFolder
+        self.children = children
+        super.init()
+    }
+
+    @objc var isLeaf: Bool {
+        return !isFolder
+    }
+}
+
+extension BookmarkNode: Codable {
+    enum CodingKeys: String, CodingKey {
+        case name
+        case url
+        case isFolder
+        case children
+    }
+}
+
+extension CelestiaAppCore {
+    var currentBookmark: BookmarkNode? {
+        let selection = simulation.selection
+        if selection.isEmpty {
+            return nil
+        }
+        let name: String
+        if let star = selection.star {
+            name = simulation.universe.starCatalog.starName(star)
+        } else if let body = selection.body {
+            name = body.name
+        } else if let dso = selection.dso {
+            name = simulation.universe.dsoCatalog.dsoName(dso)
+        } else if let location = selection.location {
+            name = location.name
+        } else {
+            name = CelestiaString("Unknown", comment: "")
+        }
+        return BookmarkNode(name: name, url: currentURL, isFolder: false)
+    }
+}
+
+func readBookmarks() -> [BookmarkNode] {
+    guard let path = NSSearchPathForDirectoriesInDomains(.applicationSupportDirectory, .userDomainMask, true).first else {
+        return []
+    }
+    let bookmarkFilePath = "\(path)/bookmark.json"
+    do {
+        let data = try Data(contentsOf: URL(fileURLWithPath: bookmarkFilePath))
+        return try JSONDecoder().decode([BookmarkNode].self, from: data)
+    } catch let error {
+        print("Bookmark reading error: \(error.localizedDescription)")
+        return []
+    }
+}
+
+func storeBookmarks(_ bookmarks: [BookmarkNode]) {
+    guard let path = NSSearchPathForDirectoriesInDomains(.applicationSupportDirectory, .userDomainMask, true).first else {
+        return
+    }
+    let bookmarkFilePath = "\(path)/bookmark.json"
+    do {
+        try JSONEncoder().encode(bookmarks).write(to: URL(fileURLWithPath: bookmarkFilePath))
+    } catch let error {
+        print("Bookmark writing error: \(error.localizedDescription)")
+    }
 }
