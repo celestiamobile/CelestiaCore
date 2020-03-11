@@ -403,7 +403,7 @@
 		97FA987A23FE5D7800825BD3 /* libGL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FA986F23FE5D7300825BD3 /* libGL.a */; };
 		97FA987B23FE5D7800825BD3 /* libintl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FA987123FE5D7300825BD3 /* libintl.a */; };
 		97FA987C23FE5D7800825BD3 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FA987523FE5D7300825BD3 /* libjpeg.a */; };
-		97FA987D23FE5D7800825BD3 /* liblua53.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FA986D23FE5D7300825BD3 /* liblua53.a */; };
+		97FA987D23FE5D7800825BD3 /* liblua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FA986D23FE5D7300825BD3 /* liblua.a */; };
 		97FA987E23FE5D7800825BD3 /* libogg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FA987323FE5D7300825BD3 /* libogg.a */; };
 		97FA987F23FE5D7800825BD3 /* libpng16.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FA986E23FE5D7300825BD3 /* libpng16.a */; };
 		97FA988023FE5D7800825BD3 /* libtheora.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FA987623FE5D7300825BD3 /* libtheora.a */; };
@@ -781,7 +781,7 @@
 		97916F7E231405BC00925AF3 /* libogg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libogg.a; path = libs/libogg.a; sourceTree = "<group>"; };
 		97916F7F231405BC00925AF3 /* libGLEW.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLEW.a; path = libs/libGLEW.a; sourceTree = "<group>"; };
 		97916F80231405BC00925AF3 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjpeg.a; path = libs/libjpeg.a; sourceTree = "<group>"; };
-		97916F81231405BC00925AF3 /* liblua53.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblua53.a; path = libs/liblua53.a; sourceTree = "<group>"; };
+		97916F81231405BC00925AF3 /* liblua.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblua.a; path = libs/liblua.a; sourceTree = "<group>"; };
 		97916F82231405BC00925AF3 /* libintl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libintl.a; path = libs/libintl.a; sourceTree = "<group>"; };
 		97916F83231405BD00925AF3 /* cspice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = cspice.a; path = libs/cspice.a; sourceTree = "<group>"; };
 		97916F84231405BD00925AF3 /* libpng16.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpng16.a; path = libs/libpng16.a; sourceTree = "<group>"; };
@@ -814,7 +814,7 @@
 		97E64A582382EBDA00C4E10D /* libfreetype.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfreetype.a; path = libs/libfreetype.a; sourceTree = "<group>"; };
 		97FA983523FE439A00825BD3 /* gl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gl.h; sourceTree = "<group>"; };
 		97FA983923FE443100825BD3 /* gl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = gl.cpp; sourceTree = "<group>"; };
-		97FA986D23FE5D7300825BD3 /* liblua53.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblua53.a; path = libs/iOS/liblua53.a; sourceTree = "<group>"; };
+		97FA986D23FE5D7300825BD3 /* liblua.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblua.a; path = libs/iOS/liblua.a; sourceTree = "<group>"; };
 		97FA986E23FE5D7300825BD3 /* libpng16.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpng16.a; path = libs/iOS/libpng16.a; sourceTree = "<group>"; };
 		97FA986F23FE5D7300825BD3 /* libGL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGL.a; path = libs/iOS/libGL.a; sourceTree = "<group>"; };
 		97FA987023FE5D7300825BD3 /* cspice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = cspice.a; path = libs/iOS/cspice.a; sourceTree = "<group>"; };
@@ -836,7 +836,7 @@
 				97FA987E23FE5D7800825BD3 /* libogg.a in Frameworks */,
 				97FA987A23FE5D7800825BD3 /* libGL.a in Frameworks */,
 				97FA987823FE5D7800825BD3 /* libfmt.a in Frameworks */,
-				97FA987D23FE5D7800825BD3 /* liblua53.a in Frameworks */,
+				97FA987D23FE5D7800825BD3 /* liblua.a in Frameworks */,
 				97FA987F23FE5D7800825BD3 /* libpng16.a in Frameworks */,
 				97FA988023FE5D7800825BD3 /* libtheora.a in Frameworks */,
 				97FA987B23FE5D7800825BD3 /* libintl.a in Frameworks */,
@@ -963,7 +963,7 @@
 				97FA986F23FE5D7300825BD3 /* libGL.a */,
 				97FA987123FE5D7300825BD3 /* libintl.a */,
 				97FA987523FE5D7300825BD3 /* libjpeg.a */,
-				97FA986D23FE5D7300825BD3 /* liblua53.a */,
+				97FA986D23FE5D7300825BD3 /* liblua.a */,
 				97FA987323FE5D7300825BD3 /* libogg.a */,
 				97FA986E23FE5D7300825BD3 /* libpng16.a */,
 				97FA987623FE5D7300825BD3 /* libtheora.a */,
@@ -972,7 +972,7 @@
 				97916F7F231405BC00925AF3 /* libGLEW.a */,
 				97916F82231405BC00925AF3 /* libintl.a */,
 				97916F80231405BC00925AF3 /* libjpeg.a */,
-				97916F81231405BC00925AF3 /* liblua53.a */,
+				97916F81231405BC00925AF3 /* liblua.a */,
 				97916F7E231405BC00925AF3 /* libogg.a */,
 				97916F84231405BD00925AF3 /* libpng16.a */,
 				97916F7D231405BC00925AF3 /* libtheora.a */,
