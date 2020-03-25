@@ -29,7 +29,11 @@ class UniformedURL {
 
     convenience init?(bookmark: Data) throws {
         var stale: Bool = false
+        #if os(macOS)
+        let resolved = try URL(resolvingBookmarkData: bookmark, options: .withSecurityScope, relativeTo: nil, bookmarkDataIsStale: &stale)
+        #else
         let resolved = try URL(resolvingBookmarkData: bookmark, options: .withoutUI, relativeTo: nil, bookmarkDataIsStale: &stale)
+        #endif
         self.init(url: resolved, securityScoped: true, stale: stale)
     }
 
