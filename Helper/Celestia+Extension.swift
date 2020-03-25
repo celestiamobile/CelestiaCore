@@ -26,15 +26,8 @@ func isCoreInitialized() -> Bool {
 
 extension CelestiaSelection {
     convenience init?(item: CelestiaBrowserItem) {
-        let object = item.entry
-        if let star = object as? CelestiaStar {
-            self.init(star: star)
-        } else if let dso = object as? CelestiaDSO {
-            self.init(dso: dso)
-        } else if let b = object as? CelestiaBody {
-            self.init(body: b)
-        } else if let l = object as? CelestiaLocation {
-            self.init(location: l)
+        if let object = item.entry {
+            self.init(object: object)
         } else {
             return nil
         }

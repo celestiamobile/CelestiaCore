@@ -6,11 +6,11 @@
 //  Copyright (c) 2002 Chris Laurel. All rights reserved.
 //
 
-#import <CelestiaCore/CelestiaAstroObject.h>
+#import <CelestiaCore/CelestiaDSO.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CelestiaGalaxy : CelestiaAstroObject
+@interface CelestiaGalaxy : CelestiaDSO
 
 @property (readonly) NSString *type;
 

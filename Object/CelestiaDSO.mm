@@ -31,7 +31,11 @@
 }
 
 - (NSString *)webInfoURL {
-    return [NSString stringWithUTF8String:[self DSO]->getInfoURL().c_str()];
+    NSString *url = [NSString stringWithUTF8String:[self DSO]->getInfoURL().c_str()];
+    if ([url length] == 0)
+        return nil;
+
+    return url;
 }
 
 - (CelestiaVector *)position {

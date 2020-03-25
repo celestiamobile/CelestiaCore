@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+@class CelestiaAstroObject;
 @class CelestiaStar;
 @class CelestiaDSO;
 @class CelestiaBody;
@@ -21,22 +22,18 @@ NS_ASSUME_NONNULL_BEGIN
 @property (readonly, getter=isEmpty) BOOL empty;
 @property (readonly) double radius;
 
+@property (nullable, readonly) CelestiaAstroObject *object;
 @property (nullable, readonly) CelestiaStar *star;
 @property (nullable, readonly) CelestiaDSO *dso;
 @property (nullable, readonly) CelestiaBody *body;
 @property (nullable, readonly) CelestiaLocation *location;
-
-@property (readonly) NSString *name;
 
 @property (nullable, readonly) NSString *webInfoURL;
 
 - (BOOL)isEqualToSelection:(CelestiaSelection *)csel;
 - (CelestiaUniversalCoord *)position:(double)t;
 
-- (instancetype)initWithStar:(CelestiaStar *)star;
-- (instancetype)initWithDSO:(CelestiaDSO *)dso;
-- (instancetype)initWithBody:(CelestiaBody *)body;
-- (instancetype)initWithLocation:(CelestiaLocation *)location;
+- (nullable instancetype)initWithObject:(CelestiaAstroObject *)object;
 
 @end
 

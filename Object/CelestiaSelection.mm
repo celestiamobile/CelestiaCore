@@ -36,6 +36,19 @@
 
 @implementation CelestiaSelection
 
+- (instancetype)initWithObject:(CelestiaAstroObject *)object {
+    if ([object isKindOfClass:[CelestiaStar class]]) {
+        return [self initWithStar:(CelestiaStar *)object];
+    } else if ([object isKindOfClass:[CelestiaBody class]]) {
+        return [self initWithBody:(CelestiaBody *)object];
+    } else if ([object isKindOfClass:[CelestiaDSO class]]) {
+        return [self initWithDSO:(CelestiaDSO *)object];
+    } else if ([object isKindOfClass:[CelestiaLocation class]]) {
+        return [self initWithLocation:(CelestiaLocation *)object];
+    }
+    return nil;
+}
+
 - (instancetype)initWithStar:(CelestiaStar *)star {
     return [self initWithSelection:Selection([star star])];
 }
@@ -64,30 +77,49 @@
     return s == [csel selection];
 }
 
-- (CelestiaStar *)star {
-    if (s.getType() == Selection::Type_Star) {
+- (CelestiaAstroObject *)object {
+    switch (s.getType()) {
+    case Selection::Type_Star:
         return [[CelestiaStar alloc] initWithStar:s.star()];
+    case Selection::Type_DeepSky:
+        return [[CelestiaDSO alloc] initWithDSO:s.deepsky()];
+    case Selection::Type_Body:
+        return [[CelestiaBody alloc] initWithBody:s.body()];
+    case Selection::Type_Location:
+        return [[CelestiaLocation alloc] initWithLocation:s.location()];
+    default:
+        return nil;
+    }
+}
+
+- (CelestiaStar *)star {
+    CelestiaAstroObject *object = [self object];
+    if ([object isKindOfClass:[CelestiaStar class]]) {
+        return (CelestiaStar *)object;
     }
     return nil;
 }
 
 - (CelestiaDSO *)dso {
-    if (s.getType() == Selection::Type_DeepSky) {
-        return [[CelestiaDSO alloc] initWithDSO:s.deepsky()];
+    CelestiaAstroObject *object = [self object];
+    if ([object isKindOfClass:[CelestiaDSO class]]) {
+        return (CelestiaDSO *)object;
     }
     return nil;
 }
 
 - (CelestiaBody *)body {
-    if (s.getType() == Selection::Type_Body) {
-        return [[CelestiaBody alloc] initWithBody:s.body()];
+    CelestiaAstroObject *object = [self object];
+    if ([object isKindOfClass:[CelestiaBody class]]) {
+        return (CelestiaBody *)object;
     }
     return nil;
 }
 
 - (CelestiaLocation *)location {
-    if (s.getType() == Selection::Type_Location) {
-        return [[CelestiaLocation alloc] initWithLocation:s.location()];
+    CelestiaAstroObject *object = [self object];
+    if ([object isKindOfClass:[CelestiaLocation class]]) {
+        return (CelestiaLocation *)object;
     }
     return nil;
 }
@@ -97,16 +129,13 @@
 }
 
 - (NSString *)webInfoURL {
-    switch (s.getType())
-    {
-        case Selection::Type_Body:
-            return [[self body] webInfoURL];
-        case Selection::Type_Star:
-            return [[self star] webInfoURL];
-        case Selection::Type_DeepSky:
-            return [[self dso] webInfoURL];
-        default:
-            break;
+    CelestiaAstroObject *object = [self object];
+    if ([object isKindOfClass:[CelestiaStar class]]) {
+        return [(CelestiaStar *)object webInfoURL];
+    } else if ([object isKindOfClass:[CelestiaBody class]]) {
+        return [(CelestiaBody *)object webInfoURL];
+    } else if ([object isKindOfClass:[CelestiaDSO class]]) {
+        return [(CelestiaDSO *)object webInfoURL];
     }
     return nil;
 }

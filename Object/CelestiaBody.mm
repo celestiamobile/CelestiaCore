@@ -142,7 +142,11 @@
 }
 
 - (NSString *)webInfoURL {
-    return [NSString stringWithUTF8String:[self body]->getInfoURL().c_str()];
+    NSString *url = [NSString stringWithUTF8String:[self body]->getInfoURL().c_str()];
+    if ([url length] == 0)
+        return nil;
+
+    return url;
 }
 
 - (CelestiaOrbit *)orbitAtTime:(NSDate *)time {

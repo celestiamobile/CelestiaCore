@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (readonly) float radius;
 @property (readonly) float temperature;
 
-@property (readonly) NSString *webInfoURL;
+@property (nullable, readonly) NSString *webInfoURL;
 @property (readonly) NSString *spectralType;
 @property (readonly) float absoluteMagnitude;
 

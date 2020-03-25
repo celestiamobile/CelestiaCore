@@ -49,7 +49,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nullable, readonly) CelestiaPlanetarySystem *system;
 
-@property (readonly) NSString *webInfoURL;
+@property (nullable, readonly) NSString *webInfoURL;
 
 - (CelestiaOrbit *)orbitAtTime:(NSDate *)time NS_SWIFT_NAME(orbit(at:));
 - (CelestiaRotationModel *)rotationAtTime:(NSDate *)time NS_SWIFT_NAME(rotation(at:));
