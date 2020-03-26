@@ -393,19 +393,19 @@
 		97E0B7732312763C0016C154 /* CelestiaAppCore+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 97E0B7722312763C0016C154 /* CelestiaAppCore+Private.mm */; };
 		97E64A562382EA7400C4E10D /* texturefont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97E64A542382EA7400C4E10D /* texturefont.cpp */; };
 		97E64A572382EA7400C4E10D /* texturefont.h in Headers */ = {isa = PBXBuildFile; fileRef = 97E64A552382EA7400C4E10D /* texturefont.h */; };
+		97EB7FFC242C6EC800A1BEC8 /* cspice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97EB7FF8242C6EB800A1BEC8 /* cspice.a */; };
+		97EB7FFD242C6EC800A1BEC8 /* libfmt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97EB7FF6242C6EB800A1BEC8 /* libfmt.a */; };
+		97EB7FFE242C6EC800A1BEC8 /* libGL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97EB7FF4242C6EB700A1BEC8 /* libGL.a */; };
+		97EB7FFF242C6EC800A1BEC8 /* libintl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97EB7FF9242C6EB800A1BEC8 /* libintl.a */; };
+		97EB8000242C6EC800A1BEC8 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97EB7FFA242C6EB800A1BEC8 /* libjpeg.a */; };
+		97EB8001242C6EC800A1BEC8 /* liblua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97EB7FF5242C6EB700A1BEC8 /* liblua.a */; };
+		97EB8002242C6EC800A1BEC8 /* libogg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97EB7FFB242C6EB800A1BEC8 /* libogg.a */; };
+		97EB8003242C6EC800A1BEC8 /* libpng16.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97EB7FF3242C6EB700A1BEC8 /* libpng16.a */; };
+		97EB8004242C6EC800A1BEC8 /* libtheora.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97EB7FF7242C6EB800A1BEC8 /* libtheora.a */; };
 		97FA983723FE439A00825BD3 /* gl.h in Headers */ = {isa = PBXBuildFile; fileRef = 97FA983523FE439A00825BD3 /* gl.h */; };
 		97FA983A23FE443100825BD3 /* gl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97FA983923FE443100825BD3 /* gl.cpp */; };
 		97FA985823FE460300825BD3 /* CelestiaAppCore+Event.mm in Sources */ = {isa = PBXBuildFile; fileRef = 97E0B76F231273C10016C154 /* CelestiaAppCore+Event.mm */; };
 		97FA986523FE5ABB00825BD3 /* CelestiaAppCore+Event.h in Headers */ = {isa = PBXBuildFile; fileRef = 97E0B76E231273C10016C154 /* CelestiaAppCore+Event.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		97FA987723FE5D7800825BD3 /* cspice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FA987023FE5D7300825BD3 /* cspice.a */; };
-		97FA987823FE5D7800825BD3 /* libfmt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FA987423FE5D7300825BD3 /* libfmt.a */; };
-		97FA987A23FE5D7800825BD3 /* libGL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FA986F23FE5D7300825BD3 /* libGL.a */; };
-		97FA987B23FE5D7800825BD3 /* libintl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FA987123FE5D7300825BD3 /* libintl.a */; };
-		97FA987C23FE5D7800825BD3 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FA987523FE5D7300825BD3 /* libjpeg.a */; };
-		97FA987D23FE5D7800825BD3 /* liblua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FA986D23FE5D7300825BD3 /* liblua.a */; };
-		97FA987E23FE5D7800825BD3 /* libogg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FA987323FE5D7300825BD3 /* libogg.a */; };
-		97FA987F23FE5D7800825BD3 /* libpng16.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FA986E23FE5D7300825BD3 /* libpng16.a */; };
-		97FA988023FE5D7800825BD3 /* libtheora.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FA987623FE5D7300825BD3 /* libtheora.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -434,7 +434,6 @@
 		970DCE3F22FE8E240044F590 /* CelestiaUtil.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CelestiaUtil.mm; sourceTree = "<group>"; };
 		971A646B230198B2009E4EA1 /* CelestiaCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CelestiaCore.h; sourceTree = "<group>"; };
 		971A65CC23019BC5009E4EA1 /* CelestiaCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CelestiaCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		971A673823019DA7009E4EA1 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		971A674323019E38009E4EA1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		971A674B2301A5AE009E4EA1 /* CelestiaScript.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CelestiaScript.h; sourceTree = "<group>"; };
 		971A674C2301A5AE009E4EA1 /* CelestiaScript.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CelestiaScript.mm; sourceTree = "<group>"; };
@@ -775,15 +774,6 @@
 		977D83D622FDB324002FF1C2 /* CelestiaAppCore.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CelestiaAppCore.mm; sourceTree = "<group>"; };
 		977D83D722FDB324002FF1C2 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		977D83D822FDB324002FF1C2 /* CelestiaAppCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CelestiaAppCore.h; sourceTree = "<group>"; };
-		97916F7C231405BC00925AF3 /* libfmt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfmt.a; path = libs/libfmt.a; sourceTree = "<group>"; };
-		97916F7D231405BC00925AF3 /* libtheora.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libtheora.a; path = libs/libtheora.a; sourceTree = "<group>"; };
-		97916F7E231405BC00925AF3 /* libogg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libogg.a; path = libs/libogg.a; sourceTree = "<group>"; };
-		97916F7F231405BC00925AF3 /* libGLEW.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLEW.a; path = libs/libGLEW.a; sourceTree = "<group>"; };
-		97916F80231405BC00925AF3 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjpeg.a; path = libs/libjpeg.a; sourceTree = "<group>"; };
-		97916F81231405BC00925AF3 /* liblua.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblua.a; path = libs/liblua.a; sourceTree = "<group>"; };
-		97916F82231405BC00925AF3 /* libintl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libintl.a; path = libs/libintl.a; sourceTree = "<group>"; };
-		97916F83231405BD00925AF3 /* cspice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = cspice.a; path = libs/cspice.a; sourceTree = "<group>"; };
-		97916F84231405BD00925AF3 /* libpng16.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpng16.a; path = libs/libpng16.a; sourceTree = "<group>"; };
 		97AD5997235B016B0056CA80 /* scriptmaps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scriptmaps.h; sourceTree = "<group>"; };
 		97AD5999235B016B0056CA80 /* scriptmaps.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scriptmaps.cpp; sourceTree = "<group>"; };
 		97AD59BE235B1B760056CA80 /* script.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = script.cpp; sourceTree = "<group>"; };
@@ -810,19 +800,17 @@
 		97E0B7722312763C0016C154 /* CelestiaAppCore+Private.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "CelestiaAppCore+Private.mm"; sourceTree = "<group>"; };
 		97E64A542382EA7400C4E10D /* texturefont.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = texturefont.cpp; sourceTree = "<group>"; };
 		97E64A552382EA7400C4E10D /* texturefont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = texturefont.h; sourceTree = "<group>"; };
-		97E64A582382EBDA00C4E10D /* libfreetype.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfreetype.a; path = libs/libfreetype.a; sourceTree = "<group>"; };
+		97EB7FF3242C6EB700A1BEC8 /* libpng16.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpng16.a; path = thirdparty/libs/libpng16.a; sourceTree = "<group>"; };
+		97EB7FF4242C6EB700A1BEC8 /* libGL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGL.a; path = thirdparty/libs/libGL.a; sourceTree = "<group>"; };
+		97EB7FF5242C6EB700A1BEC8 /* liblua.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblua.a; path = thirdparty/libs/liblua.a; sourceTree = "<group>"; };
+		97EB7FF6242C6EB800A1BEC8 /* libfmt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfmt.a; path = thirdparty/libs/libfmt.a; sourceTree = "<group>"; };
+		97EB7FF7242C6EB800A1BEC8 /* libtheora.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libtheora.a; path = thirdparty/libs/libtheora.a; sourceTree = "<group>"; };
+		97EB7FF8242C6EB800A1BEC8 /* cspice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = cspice.a; path = thirdparty/libs/cspice.a; sourceTree = "<group>"; };
+		97EB7FF9242C6EB800A1BEC8 /* libintl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libintl.a; path = thirdparty/libs/libintl.a; sourceTree = "<group>"; };
+		97EB7FFA242C6EB800A1BEC8 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjpeg.a; path = thirdparty/libs/libjpeg.a; sourceTree = "<group>"; };
+		97EB7FFB242C6EB800A1BEC8 /* libogg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libogg.a; path = thirdparty/libs/libogg.a; sourceTree = "<group>"; };
 		97FA983523FE439A00825BD3 /* gl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gl.h; sourceTree = "<group>"; };
 		97FA983923FE443100825BD3 /* gl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = gl.cpp; sourceTree = "<group>"; };
-		97FA986D23FE5D7300825BD3 /* liblua.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblua.a; path = libs/iOS/liblua.a; sourceTree = "<group>"; };
-		97FA986E23FE5D7300825BD3 /* libpng16.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpng16.a; path = libs/iOS/libpng16.a; sourceTree = "<group>"; };
-		97FA986F23FE5D7300825BD3 /* libGL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGL.a; path = libs/iOS/libGL.a; sourceTree = "<group>"; };
-		97FA987023FE5D7300825BD3 /* cspice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = cspice.a; path = libs/iOS/cspice.a; sourceTree = "<group>"; };
-		97FA987123FE5D7300825BD3 /* libintl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libintl.a; path = libs/iOS/libintl.a; sourceTree = "<group>"; };
-		97FA987223FE5D7300825BD3 /* libfreetype.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfreetype.a; path = libs/iOS/libfreetype.a; sourceTree = "<group>"; };
-		97FA987323FE5D7300825BD3 /* libogg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libogg.a; path = libs/iOS/libogg.a; sourceTree = "<group>"; };
-		97FA987423FE5D7300825BD3 /* libfmt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfmt.a; path = libs/iOS/libfmt.a; sourceTree = "<group>"; };
-		97FA987523FE5D7300825BD3 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjpeg.a; path = libs/iOS/libjpeg.a; sourceTree = "<group>"; };
-		97FA987623FE5D7300825BD3 /* libtheora.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libtheora.a; path = libs/iOS/libtheora.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -830,15 +818,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97FA987723FE5D7800825BD3 /* cspice.a in Frameworks */,
-				97FA987C23FE5D7800825BD3 /* libjpeg.a in Frameworks */,
-				97FA987E23FE5D7800825BD3 /* libogg.a in Frameworks */,
-				97FA987A23FE5D7800825BD3 /* libGL.a in Frameworks */,
-				97FA987823FE5D7800825BD3 /* libfmt.a in Frameworks */,
-				97FA987D23FE5D7800825BD3 /* liblua.a in Frameworks */,
-				97FA987F23FE5D7800825BD3 /* libpng16.a in Frameworks */,
-				97FA988023FE5D7800825BD3 /* libtheora.a in Frameworks */,
-				97FA987B23FE5D7800825BD3 /* libintl.a in Frameworks */,
+				97EB8001242C6EC800A1BEC8 /* liblua.a in Frameworks */,
+				97EB8004242C6EC800A1BEC8 /* libtheora.a in Frameworks */,
+				97EB7FFE242C6EC800A1BEC8 /* libGL.a in Frameworks */,
+				97EB8002242C6EC800A1BEC8 /* libogg.a in Frameworks */,
+				97EB7FFC242C6EC800A1BEC8 /* cspice.a in Frameworks */,
+				97EB8003242C6EC800A1BEC8 /* libpng16.a in Frameworks */,
+				97EB7FFF242C6EC800A1BEC8 /* libintl.a in Frameworks */,
+				97EB8000242C6EC800A1BEC8 /* libjpeg.a in Frameworks */,
+				97EB7FFD242C6EC800A1BEC8 /* libfmt.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -954,27 +942,15 @@
 		971A672923019D1B009E4EA1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				97FA987423FE5D7300825BD3 /* libfmt.a */,
-				97E64A582382EBDA00C4E10D /* libfreetype.a */,
-				97FA987023FE5D7300825BD3 /* cspice.a */,
-				97FA987223FE5D7300825BD3 /* libfreetype.a */,
-				97FA986F23FE5D7300825BD3 /* libGL.a */,
-				97FA987123FE5D7300825BD3 /* libintl.a */,
-				97FA987523FE5D7300825BD3 /* libjpeg.a */,
-				97FA986D23FE5D7300825BD3 /* liblua.a */,
-				97FA987323FE5D7300825BD3 /* libogg.a */,
-				97FA986E23FE5D7300825BD3 /* libpng16.a */,
-				97FA987623FE5D7300825BD3 /* libtheora.a */,
-				97916F83231405BD00925AF3 /* cspice.a */,
-				97916F7C231405BC00925AF3 /* libfmt.a */,
-				97916F7F231405BC00925AF3 /* libGLEW.a */,
-				97916F82231405BC00925AF3 /* libintl.a */,
-				97916F80231405BC00925AF3 /* libjpeg.a */,
-				97916F81231405BC00925AF3 /* liblua.a */,
-				97916F7E231405BC00925AF3 /* libogg.a */,
-				97916F84231405BD00925AF3 /* libpng16.a */,
-				97916F7D231405BC00925AF3 /* libtheora.a */,
-				971A673823019DA7009E4EA1 /* OpenGL.framework */,
+				97EB7FF8242C6EB800A1BEC8 /* cspice.a */,
+				97EB7FF6242C6EB800A1BEC8 /* libfmt.a */,
+				97EB7FF4242C6EB700A1BEC8 /* libGL.a */,
+				97EB7FF9242C6EB800A1BEC8 /* libintl.a */,
+				97EB7FFA242C6EB800A1BEC8 /* libjpeg.a */,
+				97EB7FF5242C6EB700A1BEC8 /* liblua.a */,
+				97EB7FFB242C6EB800A1BEC8 /* libogg.a */,
+				97EB7FF3242C6EB700A1BEC8 /* libpng16.a */,
+				97EB7FF7242C6EB800A1BEC8 /* libtheora.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1924,19 +1900,13 @@
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/libs/iOS",
-				);
-				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*]" = "$(PROJECT_DIR)/libs/iOS";
-				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*]" = "$(PROJECT_DIR)/libs/iOS";
-				"LIBRARY_SEARCH_PATHS[sdk=macosx*]" = "$(PROJECT_DIR)/libs/macOS";
+				LIBRARY_SEARCH_PATHS = "${LIB_PATH}/libs";
+				LIB_PATH = "${PROJECT_DIR}/thirdparty";
 				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = space.celestia.CelestiaCore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -1949,26 +1919,30 @@
 				SYSTEM_HEADER_SEARCH_PATHS = (
 					"${PROJECT_DIR}",
 					"${PROJECT_DIR}/../Celestia/src",
-					"${PROJECT_DIR}/include",
-					"${PROJECT_DIR}/include/eigen3",
-					"${PROJECT_DIR}/include/lua",
-					"${PROJECT_DIR}/include/gettext",
-					"${PROJECT_DIR}/include/jpeg",
-					"${PROJECT_DIR}/include/libpng",
-					"${PROJECT_DIR}/include/cspice",
+					"${LIB_PATH}/include",
+					"${LIB_PATH}/include/eigen3",
+					"${LIB_PATH}/include/lua",
+					"${LIB_PATH}/include/gettext",
+					"${LIB_PATH}/include/jpeg",
+					"${LIB_PATH}/include/libpng",
+					"${LIB_PATH}/include/cspice",
 				);
 				"SYSTEM_HEADER_SEARCH_PATHS[sdk=iphoneos*]" = (
 					"${inherited}",
-					"${PROJECT_DIR}/include/gl4es",
+					"${LIB_PATH}/include/gl4es",
 				);
 				"SYSTEM_HEADER_SEARCH_PATHS[sdk=iphonesimulator*]" = (
 					"${inherited}",
-					"${PROJECT_DIR}/include/gl4es",
+					"${LIB_PATH}/include/gl4es",
 				);
 				"SYSTEM_HEADER_SEARCH_PATHS[sdk=macosx*]" = (
 					"${inherited}",
-					"${PROJECT_DIR}/include/glew",
+					"${LIB_PATH}/include/glew",
 				);
+				THIRD_PARTY_LIB_PATH = "";
+				"THIRD_PARTY_LIB_PATH[sdk=iphoneos*]" = "${PROJECT_DIR}/libs/iOS";
+				"THIRD_PARTY_LIB_PATH[sdk=iphonesimulator*]" = "${PROJECT_DIR}/libs/iOS";
+				"THIRD_PARTY_LIB_PATH[sdk=macosx*]" = "${PROJECT_DIR}/libs/macOS";
 				VALID_ARCHS = "i386 x86_64 arm64 arm64e armv7";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -2006,19 +1980,13 @@
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/libs/iOS",
-				);
-				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*]" = "$(PROJECT_DIR)/libs/iOS";
-				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*]" = "$(PROJECT_DIR)/libs/iOS";
-				"LIBRARY_SEARCH_PATHS[sdk=macosx*]" = "$(PROJECT_DIR)/libs/macOS";
+				LIBRARY_SEARCH_PATHS = "${LIB_PATH}/libs";
+				LIB_PATH = "${PROJECT_DIR}/thirdparty";
 				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = space.celestia.CelestiaCore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -2031,26 +1999,30 @@
 				SYSTEM_HEADER_SEARCH_PATHS = (
 					"${PROJECT_DIR}",
 					"${PROJECT_DIR}/../Celestia/src",
-					"${PROJECT_DIR}/include",
-					"${PROJECT_DIR}/include/eigen3",
-					"${PROJECT_DIR}/include/lua",
-					"${PROJECT_DIR}/include/gettext",
-					"${PROJECT_DIR}/include/jpeg",
-					"${PROJECT_DIR}/include/libpng",
-					"${PROJECT_DIR}/include/cspice",
+					"${LIB_PATH}/include",
+					"${LIB_PATH}/include/eigen3",
+					"${LIB_PATH}/include/lua",
+					"${LIB_PATH}/include/gettext",
+					"${LIB_PATH}/include/jpeg",
+					"${LIB_PATH}/include/libpng",
+					"${LIB_PATH}/include/cspice",
 				);
 				"SYSTEM_HEADER_SEARCH_PATHS[sdk=iphoneos*]" = (
 					"${inherited}",
-					"${PROJECT_DIR}/include/gl4es",
+					"${LIB_PATH}/include/gl4es",
 				);
 				"SYSTEM_HEADER_SEARCH_PATHS[sdk=iphonesimulator*]" = (
 					"${inherited}",
-					"${PROJECT_DIR}/include/gl4es",
+					"${LIB_PATH}/include/gl4es",
 				);
 				"SYSTEM_HEADER_SEARCH_PATHS[sdk=macosx*]" = (
 					"${inherited}",
-					"${PROJECT_DIR}/include/glew",
+					"${LIB_PATH}/include/glew",
 				);
+				THIRD_PARTY_LIB_PATH = "";
+				"THIRD_PARTY_LIB_PATH[sdk=iphoneos*]" = "${PROJECT_DIR}/libs/iOS";
+				"THIRD_PARTY_LIB_PATH[sdk=iphonesimulator*]" = "${PROJECT_DIR}/libs/iOS";
+				"THIRD_PARTY_LIB_PATH[sdk=macosx*]" = "${PROJECT_DIR}/libs/macOS";
 				VALID_ARCHS = "i386 x86_64 arm64 arm64e armv7";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
