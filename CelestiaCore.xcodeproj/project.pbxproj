@@ -399,7 +399,6 @@
 		97FA986523FE5ABB00825BD3 /* CelestiaAppCore+Event.h in Headers */ = {isa = PBXBuildFile; fileRef = 97E0B76E231273C10016C154 /* CelestiaAppCore+Event.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		97FA987723FE5D7800825BD3 /* cspice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FA987023FE5D7300825BD3 /* cspice.a */; };
 		97FA987823FE5D7800825BD3 /* libfmt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FA987423FE5D7300825BD3 /* libfmt.a */; };
-		97FA987923FE5D7800825BD3 /* libfreetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FA987223FE5D7300825BD3 /* libfreetype.a */; };
 		97FA987A23FE5D7800825BD3 /* libGL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FA986F23FE5D7300825BD3 /* libGL.a */; };
 		97FA987B23FE5D7800825BD3 /* libintl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FA987123FE5D7300825BD3 /* libintl.a */; };
 		97FA987C23FE5D7800825BD3 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FA987523FE5D7300825BD3 /* libjpeg.a */; };
@@ -840,7 +839,6 @@
 				97FA987F23FE5D7800825BD3 /* libpng16.a in Frameworks */,
 				97FA988023FE5D7800825BD3 /* libtheora.a in Frameworks */,
 				97FA987B23FE5D7800825BD3 /* libintl.a in Frameworks */,
-				97FA987923FE5D7800825BD3 /* libfreetype.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1955,7 +1953,6 @@
 					"${PROJECT_DIR}/include/eigen3",
 					"${PROJECT_DIR}/include/lua",
 					"${PROJECT_DIR}/include/gettext",
-					"${PROJECT_DIR}/include/freetype2",
 					"${PROJECT_DIR}/include/jpeg",
 					"${PROJECT_DIR}/include/libpng",
 					"${PROJECT_DIR}/include/cspice",
@@ -2038,7 +2035,6 @@
 					"${PROJECT_DIR}/include/eigen3",
 					"${PROJECT_DIR}/include/lua",
 					"${PROJECT_DIR}/include/gettext",
-					"${PROJECT_DIR}/include/freetype2",
 					"${PROJECT_DIR}/include/jpeg",
 					"${PROJECT_DIR}/include/libpng",
 					"${PROJECT_DIR}/include/cspice",
