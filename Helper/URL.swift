@@ -1,5 +1,5 @@
 //
-//  Path.swift
+//  URL.swift
 //  MobileCelestia
 //
 //  Created by 李林峰 on 2020/2/22.
@@ -60,7 +60,7 @@ let defaultConfigFile: URL = {
 }()
 
 let extraDirectory: URL? = {
-    let supportDirectory = URL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.applicationSupportDirectory, .userDomainMask, true)[0])
+    let supportDirectory = URL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])
     let parentDirectory = supportDirectory.appendingPathComponent("CelestiaResources")
     do {
         try FileManager.default.createDirectory(at: parentDirectory, withIntermediateDirectories: true, attributes: nil)
