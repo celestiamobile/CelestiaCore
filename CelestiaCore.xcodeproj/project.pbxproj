@@ -1937,7 +1937,7 @@
 				);
 				"SYSTEM_HEADER_SEARCH_PATHS[sdk=macosx*]" = (
 					"${inherited}",
-					"${LIB_PATH}/include/glew",
+					"${LIB_PATH}/include/libepoxy",
 				);
 				THIRD_PARTY_LIB_PATH = "";
 				"THIRD_PARTY_LIB_PATH[sdk=iphoneos*]" = "${PROJECT_DIR}/libs/iOS";
@@ -2017,7 +2017,7 @@
 				);
 				"SYSTEM_HEADER_SEARCH_PATHS[sdk=macosx*]" = (
 					"${inherited}",
-					"${LIB_PATH}/include/glew",
+					"${LIB_PATH}/include/libepoxy",
 				);
 				THIRD_PARTY_LIB_PATH = "";
 				"THIRD_PARTY_LIB_PATH[sdk=iphoneos*]" = "${PROJECT_DIR}/libs/iOS";
