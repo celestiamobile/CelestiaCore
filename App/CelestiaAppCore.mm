@@ -6,7 +6,7 @@
 //  Copyright © 2019 李林峰. All rights reserved.
 //
 
-#include <celengine/gl.h>
+#include <celengine/glsupport.h>
 
 #import "CelestiaAppCore+Private.h"
 #import "CelestiaAppCore+Setting.h"
@@ -129,7 +129,7 @@ private:
 }
 
 + (BOOL)initGL {
-    return glInit() == 0;
+    return (BOOL)celestia::gl::init();
 }
 
 - (BOOL)startSimulationWithConfigFileName:(NSString *)configFileName extraDirectories:(NSArray<NSString *> *)extraDirectories progressReporter:(void (^)(NSString *))reporter {
