@@ -1,5 +1,7 @@
 #!/bin/sh
 
+export PATH="/usr/local/opt/gettext/bin:$PATH"
+
 DIDBUILD=0
 
 CELESTIA_ROOT=$BUILT_PRODUCTS_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/CelestiaResources
