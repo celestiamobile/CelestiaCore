@@ -255,9 +255,9 @@ extension CelestiaAppCore {
         var str = ""
 
         if body.isEllipsoid {
-            str += String(format: CelestiaString("Equatorial radius: %@", comment: ""), body.radius.radiusString)
+            str += body.radius.radiusString.withCString { String(format: CelestiaString("Equatorial radius: %s", comment: ""), $0) }
         } else {
-            str += String(format: CelestiaString("Size: %@", comment: ""), body.radius.radiusString)
+            str += body.radius.radiusString.withCString { String(format: CelestiaString("Size: %s", comment: ""), $0) }
         }
 
         let orbit = body.orbit(at: simulation.time)
@@ -290,10 +290,10 @@ extension CelestiaAppCore {
                 unitTemplate = CelestiaString("%.2f days", comment: "")
             }
             str += "\n"
-            str += String(format: CelestiaString("Sidereal rotation period: %@", comment: ""), String(format: CelestiaString(unitTemplate, comment: ""), rotPeriod))
+            str += String(format: CelestiaString(unitTemplate, comment: ""), rotPeriod).withCString { String(format: CelestiaString("Sidereal rotation period: %s", comment: ""), $0) }
             if dayLength != 0 {
                 str += "\n"
-                str += String(format: CelestiaString("Length of day: %@", comment: ""), String(format: CelestiaString(unitTemplate, comment: ""), dayLength))
+                str += String(format: CelestiaString(unitTemplate, comment: ""), dayLength).withCString { String(format: CelestiaString("Length of day: %s", comment: ""), $0) }
             }
         }
 
