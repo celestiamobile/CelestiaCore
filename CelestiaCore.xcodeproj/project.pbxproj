@@ -311,6 +311,8 @@
 		9729F1EF23084D080069FD72 /* fs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9729F1EC23084D080069FD72 /* fs.cpp */; };
 		9729F1F023084D080069FD72 /* filesystem.h in Headers */ = {isa = PBXBuildFile; fileRef = 9729F1ED23084D080069FD72 /* filesystem.h */; };
 		9729F1F123084D080069FD72 /* fs.h in Headers */ = {isa = PBXBuildFile; fileRef = 9729F1EE23084D080069FD72 /* fs.h */; };
+		973B9C8A2459908600BDBEDB /* dsorenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 973B9C882459908500BDBEDB /* dsorenderer.cpp */; };
+		973B9C8B2459908600BDBEDB /* dsorenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 973B9C892459908600BDBEDB /* dsorenderer.h */; };
 		973BBA4B240523C800E3B061 /* CelestiaAppCore+Locale.h in Headers */ = {isa = PBXBuildFile; fileRef = 973BBA49240523C800E3B061 /* CelestiaAppCore+Locale.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		973BBA4C240523C800E3B061 /* CelestiaAppCore+Locale.mm in Sources */ = {isa = PBXBuildFile; fileRef = 973BBA4A240523C800E3B061 /* CelestiaAppCore+Locale.mm */; };
 		973BBA6924054FEC00E3B061 /* CelestiaAppCore+Render.h in Headers */ = {isa = PBXBuildFile; fileRef = 973BBA6724054FEC00E3B061 /* CelestiaAppCore+Render.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -472,6 +474,8 @@
 		972F3A4022FFD43C00CEDDAC /* CelestiaVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CelestiaVector.h; sourceTree = "<group>"; };
 		972F3A4122FFD43C00CEDDAC /* CelestiaVector.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CelestiaVector.mm; sourceTree = "<group>"; };
 		972F3A4222FFD43C00CEDDAC /* CelestiaVector+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CelestiaVector+Private.h"; sourceTree = "<group>"; };
+		973B9C882459908500BDBEDB /* dsorenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dsorenderer.cpp; sourceTree = "<group>"; };
+		973B9C892459908600BDBEDB /* dsorenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dsorenderer.h; sourceTree = "<group>"; };
 		973BBA49240523C800E3B061 /* CelestiaAppCore+Locale.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CelestiaAppCore+Locale.h"; sourceTree = "<group>"; };
 		973BBA4A240523C800E3B061 /* CelestiaAppCore+Locale.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "CelestiaAppCore+Locale.mm"; sourceTree = "<group>"; };
 		973BBA6724054FEC00E3B061 /* CelestiaAppCore+Render.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CelestiaAppCore+Render.h"; sourceTree = "<group>"; };
@@ -1142,6 +1146,8 @@
 				977D820A22FDB23A002FF1C2 /* dsoname.h */,
 				977D820822FDB23A002FF1C2 /* dsooctree.cpp */,
 				977D821622FDB23B002FF1C2 /* dsooctree.h */,
+				973B9C882459908500BDBEDB /* dsorenderer.cpp */,
+				973B9C892459908600BDBEDB /* dsorenderer.h */,
 				977D822022FDB23C002FF1C2 /* execenv.h */,
 				977D823B22FDB23D002FF1C2 /* frame.cpp */,
 				977D821A22FDB23B002FF1C2 /* frame.h */,
@@ -1500,6 +1506,7 @@
 				971A671E23019C2B009E4EA1 /* mathlib.h in Headers */,
 				971A663B23019C03009E4EA1 /* moviecapture.h in Headers */,
 				971A65F823019BF0009E4EA1 /* CelestiaDSO+Private.h in Headers */,
+				973B9C8B2459908600BDBEDB /* dsorenderer.h in Headers */,
 				971A666F23019C15009E4EA1 /* scriptobject.h in Headers */,
 				971A667123019C15009E4EA1 /* scriptorbit.h in Headers */,
 				9752D7A623ED182D00FFE781 /* value.h in Headers */,
@@ -1726,6 +1733,7 @@
 				971A669923019C20009E4EA1 /* deepskyobj.cpp in Sources */,
 				97AD599B235B016C0056CA80 /* scriptmaps.cpp in Sources */,
 				971A668423019C20009E4EA1 /* body.cpp in Sources */,
+				973B9C8A2459908600BDBEDB /* dsorenderer.cpp in Sources */,
 				971A671423019C26009E4EA1 /* 3dsread.cpp in Sources */,
 				971A664C23019C0F009E4EA1 /* filetype.cpp in Sources */,
 				974D26E9230279AC00FDFBC0 /* CelestiaBrowserItem.mm in Sources */,
