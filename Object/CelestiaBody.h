@@ -35,7 +35,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CelestiaBody : CelestiaAstroObject
 
 @property (readonly) CelestiaBodyType type;
-@property (readonly) NSString *classification;
 @property (readonly) NSString *name;
 @property (readonly) float radius;
 @property (readonly, getter=isEllipsoid) BOOL ellipsoid;

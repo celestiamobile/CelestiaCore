@@ -142,9 +142,9 @@ extension CelestiaDSOCatalog: Sequence {
 }
 
 // MARK: Localization
-func CelestiaString(_ key: String, comment: String) -> String {
+func CelestiaString(_ key: String, comment: String, domain: String = "celestia_ui") -> String {
     if key.isEmpty { return key }
-    return LocalizedString(key)
+    return LocalizedString(key, domain)
 }
 
 func CelestiaFilename(_ key: String) -> String {
@@ -238,6 +238,13 @@ func storeBookmarks(_ bookmarks: [BookmarkNode]) {
     }
 }
 
+extension String {
+    var toLocalizationTemplate: String {
+        // FIXME: this does not fix multiple %s with different indices
+        return replacingOccurrences(of: "%s", with: "%@")
+    }
+}
+
 // MARK: Overview
 extension CelestiaAppCore {
     func overviewForSelection(_ selection: CelestiaSelection) -> String {
@@ -256,9 +263,9 @@ extension CelestiaAppCore {
         var str = ""
 
         if body.isEllipsoid {
-            str += body.radius.radiusString.withCString { String(format: CelestiaString("Equatorial radius: %s", comment: ""), $0) }
+            str += String(format: CelestiaString("Equatorial radius: %s", comment: "").toLocalizationTemplate, body.radius.radiusString)
         } else {
-            str += body.radius.radiusString.withCString { String(format: CelestiaString("Size: %s", comment: ""), $0) }
+            str += String(format: CelestiaString("Size: %s", comment: "").toLocalizationTemplate, body.radius.radiusString)
         }
 
         let orbit = body.orbit(at: simulation.time)
@@ -291,10 +298,10 @@ extension CelestiaAppCore {
                 unitTemplate = CelestiaString("%.2f days", comment: "")
             }
             str += "\n"
-            str += String(format: CelestiaString(unitTemplate, comment: ""), rotPeriod).withCString { String(format: CelestiaString("Sidereal rotation period: %s", comment: ""), $0) }
+            str += String(format: CelestiaString("Sidereal rotation period: %s", comment: "").toLocalizationTemplate, String(format: CelestiaString(unitTemplate, comment: ""), rotPeriod))
             if dayLength != 0 {
                 str += "\n"
-                str += String(format: CelestiaString(unitTemplate, comment: ""), dayLength).withCString { String(format: CelestiaString("Length of day: %s", comment: ""), $0) }
+                str += String(format: CelestiaString("Length of day: %s", comment: "").toLocalizationTemplate, String(format: CelestiaString(unitTemplate, comment: ""), dayLength))
             }
         }
 

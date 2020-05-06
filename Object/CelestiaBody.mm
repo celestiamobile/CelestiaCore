@@ -38,30 +38,6 @@
     return (CelestiaBodyType)[self body]->getClassification();
 }
 
-- (NSString *)classification {
-    switch ([self body]->getClassification())
-    {
-        case (Body::Planet):
-            return LocalizedString(@"Planet");
-            break;
-        case (Body::Moon):
-            return LocalizedString(@"Moon");
-            break;
-        case (Body::Asteroid):
-            return LocalizedString(@"Asteroid");
-            break;
-        case (Body::Comet):
-            return LocalizedString(@"Comet");
-            break;
-        case (Body::Spacecraft):
-            return LocalizedString(@"Spacecraft");
-            break;
-        default:
-            break;
-    }
-    return LocalizedString(@"Unknown");
-}
-
 -(NSString *)name {
     return [NSString stringWithUTF8String:[self body]->getName(true).c_str()];
 }

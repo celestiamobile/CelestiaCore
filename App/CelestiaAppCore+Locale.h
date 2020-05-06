@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 extern "C" {
 #endif
 NSString *LocalizedFilename(NSString *originalName);
-NSString *LocalizedString(NSString *originalString);
+NSString *LocalizedString(NSString *originalString, NSString *domain);
 #ifdef __cplusplus
 }
 #endif

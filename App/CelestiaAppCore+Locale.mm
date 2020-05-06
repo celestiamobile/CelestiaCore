@@ -16,7 +16,7 @@ NSString *LocalizedFilename(NSString *originalName)
     return [NSString stringWithUTF8String:LocaleFilename([originalName UTF8String]).string().c_str()];
 }
 
-NSString *LocalizedString(NSString *originalString)
+NSString *LocalizedString(NSString *originalString, NSString *domain)
 {
-    return [NSString stringWithUTF8String:_([originalString UTF8String])];
+    return [NSString stringWithUTF8String:dgettext([domain UTF8String], [originalString UTF8String])];
 }
