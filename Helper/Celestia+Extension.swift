@@ -143,6 +143,7 @@ extension CelestiaDSOCatalog: Sequence {
 
 // MARK: Localization
 func CelestiaString(_ key: String, comment: String) -> String {
+    if key.isEmpty { return key }
     return LocalizedString(key)
 }
 
