@@ -60,7 +60,7 @@ var starBrowserRoot: CelestiaBrowserItem = {
 
     let nearestName = CelestiaString("Nearest Stars", comment: "")
     let brightestName = CelestiaString("Brightest Stars", comment: "")
-    let hasPlanetsName = CelestiaString("Stars With Planets", comment: "")
+    let hasPlanetsName = CelestiaString("Stars with Planets", comment: "")
     let stars = CelestiaBrowserItem(name: CelestiaString("Stars", comment: ""), children: [
         nearestName : CelestiaBrowserItem(name: nearestName, children: nearest),
         brightestName : CelestiaBrowserItem(name: brightestName, children: brightest),
