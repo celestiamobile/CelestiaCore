@@ -4,7 +4,8 @@ export PATH="/usr/local/opt/gettext/bin:$PATH"
 
 DIDBUILD=0
 
-CELESTIA_ROOT=$BUILT_PRODUCTS_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/CelestiaResources
+APP_RESOURCES=$BUILT_PRODUCTS_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH
+CELESTIA_ROOT=$APP_RESOURCES/CelestiaResources
 CELESTIA_REPO_ROOT=`pwd`/../Celestia
 
 LOCALE_ROOT=$CELESTIA_ROOT/locale
@@ -30,6 +31,17 @@ convert_po()
 convert_po "po" "celestia"
 convert_po "po2" "celestia_constellations"
 convert_po "po3" "celestia_ui"
+
+create_lproj()
+{
+    POT=$CELESTIA_REPO_ROOT/$1/$2.pot
+    for po in $CELESTIA_REPO_ROOT/$1/*.po; do
+        f=${po##*/};f=${f%.*}
+        mkdir -p $APP_RESOURCES/$f.lproj
+    done
+}
+
+create_lproj "po3"
 
 if [ $DIDBUILD -eq 1 ];then
     echo "Touch $BUILT_PRODUCTS_DIR/$PRODUCT_NAME.app"
