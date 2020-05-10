@@ -127,7 +127,7 @@
             [resultDictionary setObject:[[CelestiaBrowserItem alloc] initWithName:name children:comets] forKey:name];
         }
         if (spacecrafts) {
-            NSString *name = [NSString stringWithUTF8String:_("Spacecrafts")];
+            NSString *name = [NSString stringWithUTF8String:_("Spacecraft")];
             [resultDictionary setObject:[[CelestiaBrowserItem alloc] initWithName:name children:spacecrafts] forKey:name];
         }
     }
@@ -201,7 +201,7 @@
             [resultDictionary setObject:[[CelestiaBrowserItem alloc] initWithName:name children:comets] forKey:name];
         }
         if (spacecrafts) {
-            NSString *name = [NSString stringWithUTF8String:_("Spacecrafts")];
+            NSString *name = [NSString stringWithUTF8String:_("Spacecraft")];
             [resultDictionary setObject:[[CelestiaBrowserItem alloc] initWithName:name children:spacecrafts] forKey:name];
         }
     }
