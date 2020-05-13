@@ -42,7 +42,10 @@ var renderInfo: String {
 var solBrowserRoot: CelestiaBrowserItem = {
     let universe = CelestiaAppCore.shared.simulation.universe
     let sol = universe.find("Sol")
-    return CelestiaBrowserItem(name: universe.starCatalog.starName(sol.star!), catEntry: sol.star!, provider: universe)
+    return CelestiaBrowserItem(name: universe.starCatalog.starName(sol.star!),
+                               alternativeName: CelestiaString("Solar System", comment: ""),
+                               catEntry: sol.star!,
+                               provider: universe)
 }()
 
 var starBrowserRoot: CelestiaBrowserItem = {
@@ -103,7 +106,7 @@ var dsoBrowserRoot: CelestiaBrowserItem = {
     })
 
     let results = tempDict.reduce(into: [String : CelestiaBrowserItem](), updateAccumulation)
-    return CelestiaBrowserItem(name: CelestiaString("Deep Sky Objects", comment: ""), children: results)
+    return CelestiaBrowserItem(name: CelestiaString("Deep Sky Objects", comment: ""), alternativeName: CelestiaString("DSOs", comment: ""), children: results)
 }()
 
 extension CelestiaDSOCatalog {

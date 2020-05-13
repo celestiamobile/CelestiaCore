@@ -20,14 +20,22 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CelestiaBrowserItem : NSObject
 
-@property (nullable, readonly) NSString *name;
+@property (nullable, readonly) NSString *alternativeName;
+@property (readonly) NSString *name;
 @property (nullable, readonly) CelestiaAstroObject *entry;
 @property (readonly) NSArray<CelestiaBrowserItem *> *children;
 
-- (instancetype)initWithName:(nullable NSString *)aName catEntry:(CelestiaAstroObject *)entry provider:(nullable id<CelestiaBrowserItemChildrenProvider>)provider;
-- (instancetype)initWithName:(nullable NSString *)aName provider:(nullable id<CelestiaBrowserItemChildrenProvider>)provider;
-
-- (instancetype)initWithName:(nullable NSString *)aName
+- (instancetype)initWithName:(NSString *)name
+             alternativeName:(nullable NSString *)alternativeName
+                    catEntry:(CelestiaAstroObject *)entry
+                    provider:(nullable id<CelestiaBrowserItemChildrenProvider>)provider;
+- (instancetype)initWithName:(NSString *)name
+                    catEntry:(CelestiaAstroObject *)entry
+                    provider:(nullable id<CelestiaBrowserItemChildrenProvider>)provider;
+- (instancetype)initWithName:(NSString *)name
+             alternativeName:(nullable NSString *)alternativeName
+                    children:(NSDictionary<NSString *, CelestiaBrowserItem *> *)children;
+- (instancetype)initWithName:(NSString *)name
                     children:(NSDictionary<NSString *, CelestiaBrowserItem *> *)children;
 
 - (void)setChildren:(NSDictionary<NSString *, CelestiaBrowserItem *> *)children;

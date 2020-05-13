@@ -27,32 +27,28 @@
 
 @implementation CelestiaBrowserItem
 
-- (instancetype)initWithName:(nullable NSString *)aName catEntry:(CelestiaAstroObject *)entry provider:(id<CelestiaBrowserItemChildrenProvider>)provider {
+- (instancetype)initWithName:(NSString *)name
+             alternativeName:(NSString *)alternativeName
+                    catEntry:(CelestiaAstroObject *)entry
+                    provider:(id<CelestiaBrowserItemChildrenProvider>)provider {
     self = [super init];
     if (self) {
-        _stringValue = aName;
+        _stringValue = name;
+        _alternativeName = alternativeName;
         _catEntry = entry;
         _childrenProvider = provider;
     }
     return self;
 }
 
-- (instancetype)initWithName:(NSString *)aName provider:(id<CelestiaBrowserItemChildrenProvider>)provider {
-    self = [super init];
-    if (self) {
-        _catEntry = nil;
-        _stringValue = aName;
-        _childrenProvider = provider;
-    }
-    return self;
-}
-
-- (instancetype)initWithName:(NSString *)aName
+- (instancetype)initWithName:(NSString *)name
+             alternativeName:(NSString *)alternativeName
                     children:(NSDictionary<NSString *, CelestiaBrowserItem *> *)children {
     self = [super init];
     if (self) {
         _catEntry = nil;
-        _stringValue = aName;
+        _stringValue = name;
+        _alternativeName = alternativeName;
         _childrenProvider = nil;
         _childrenKeys = [[children allKeys] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
         NSMutableArray *values = [NSMutableArray array];
@@ -62,6 +58,17 @@
         _childrenValues = values;
     }
     return self;
+}
+
+- (instancetype)initWithName:(NSString *)name
+                    catEntry:(CelestiaAstroObject *)entry
+                    provider:(id<CelestiaBrowserItemChildrenProvider>)provider {
+    return [self initWithName:name alternativeName:nil catEntry:entry provider:provider];
+}
+
+- (instancetype)initWithName:(NSString *)name
+                    children:(NSDictionary<NSString *, CelestiaBrowserItem *> *)children {
+    return [self initWithName:name alternativeName:nil children:children];
 }
 
 - (NSString *)name {
