@@ -1962,7 +1962,7 @@
 				"THIRD_PARTY_LIB_PATH[sdk=iphoneos*]" = "${PROJECT_DIR}/libs/iOS";
 				"THIRD_PARTY_LIB_PATH[sdk=iphonesimulator*]" = "${PROJECT_DIR}/libs/iOS";
 				"THIRD_PARTY_LIB_PATH[sdk=macosx*]" = "${PROJECT_DIR}/libs/macOS";
-				VALID_ARCHS = "i386 x86_64 arm64 arm64e armv7";
+				VALID_ARCHS = "x86_64 arm64 arm64e";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 				WARNING_CFLAGS = "";
@@ -2053,7 +2053,7 @@
 				"THIRD_PARTY_LIB_PATH[sdk=iphoneos*]" = "${PROJECT_DIR}/libs/iOS";
 				"THIRD_PARTY_LIB_PATH[sdk=iphonesimulator*]" = "${PROJECT_DIR}/libs/iOS";
 				"THIRD_PARTY_LIB_PATH[sdk=macosx*]" = "${PROJECT_DIR}/libs/macOS";
-				VALID_ARCHS = "i386 x86_64 arm64 arm64e armv7";
+				VALID_ARCHS = "x86_64 arm64 arm64e";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 				WARNING_CFLAGS = "";
