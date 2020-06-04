@@ -81,6 +81,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)draw;
 - (void)tick;
 - (void)resize:(CGSize)size NS_SWIFT_NAME(resize(to:));
+- (void)setSafeAreaInsetsWithLeft:(CGFloat)left top:(CGFloat)top right:(CGFloat)right bottom:(CGFloat)bottom NS_SWIFT_NAME(setSafeAreaInsets(left:top:right:bottom:));
 
 // MARK: History
 - (void)forward;

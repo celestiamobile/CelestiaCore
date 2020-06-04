@@ -213,6 +213,10 @@ private:
     core->resize(size.width, size.height);
 }
 
+- (void)setSafeAreaInsetsWithLeft:(CGFloat)left top:(CGFloat)top right:(CGFloat)right bottom:(CGFloat)bottom {
+    core->setSafeAreaInsets(left, top, right, bottom);
+}
+
 // MARK: Other
 - (NSString *)currentURL {
     CelestiaState appState;
