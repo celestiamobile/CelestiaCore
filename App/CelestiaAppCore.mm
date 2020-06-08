@@ -217,6 +217,18 @@ private:
     core->setSafeAreaInsets(left, top, right, bottom);
 }
 
+- (void)setFont:(NSString *)fontPath collectionIndex:(NSInteger)collectionIndex fontSize:(NSInteger)fontSize {
+    core->setFont([fontPath UTF8String], collectionIndex, fontSize);
+}
+
+- (void)setTitleFont:(NSString *)fontPath collectionIndex:(NSInteger)collectionIndex fontSize:(NSInteger)fontSize {
+    core->setTitleFont([fontPath UTF8String], collectionIndex, fontSize);
+}
+
+- (void)setRendererFont:(NSString *)fontPath collectionIndex:(NSInteger)collectionIndex fontSize:(NSInteger)fontSize fontStyle:(RendererFontStyle)fontStyle {
+    core->setRendererFont([fontPath UTF8String], collectionIndex, fontSize, (Renderer::FontStyle)fontStyle);
+}
+
 // MARK: Other
 - (NSString *)currentURL {
     CelestiaState appState;

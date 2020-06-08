@@ -43,6 +43,11 @@ typedef NS_ENUM(NSUInteger, ScreenshotFileType) {
     ScreenshotFileTypePNG       = 4,
 };
 
+typedef NS_ENUM(NSUInteger, RendererFontStyle) {
+    RendererFontNormal          = 0,
+    RendererFontLarge           = 1,
+};
+
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol CelestiaAppCoreDelegate <NSObject>
@@ -82,6 +87,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)tick;
 - (void)resize:(CGSize)size NS_SWIFT_NAME(resize(to:));
 - (void)setSafeAreaInsetsWithLeft:(CGFloat)left top:(CGFloat)top right:(CGFloat)right bottom:(CGFloat)bottom NS_SWIFT_NAME(setSafeAreaInsets(left:top:right:bottom:));
+- (void)setFont:(NSString *)fontPath collectionIndex:(NSInteger)collectionIndex fontSize:(NSInteger)fontSize;
+- (void)setTitleFont:(NSString *)fontPath collectionIndex:(NSInteger)collectionIndex fontSize:(NSInteger)fontSize;
+- (void)setRendererFont:(NSString *)fontPath collectionIndex:(NSInteger)collectionIndex fontSize:(NSInteger)fontSize fontStyle:(RendererFontStyle)fontStyle;
 
 // MARK: History
 - (void)forward;
