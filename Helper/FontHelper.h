@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreText/CoreText.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -17,6 +18,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-FallbackFont * _Nullable GetFontForLocale(NSString *locale);
+FallbackFont * _Nullable GetFontForLocale(NSString *locale, CTFontUIFontType fontType);
 
 NS_ASSUME_NONNULL_END

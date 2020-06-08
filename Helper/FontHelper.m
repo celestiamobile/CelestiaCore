@@ -7,10 +7,6 @@
 //
 
 #import "FontHelper.h"
-#include <CoreText/CoreText.h>
-
-extern CTFontRef CTFontCreateForCharactersWithLanguage(CTFontRef currentFont, const UTF16Char *characters, CFIndex length, CFStringRef language, CFIndex *coveredLength);
-extern CTFontDescriptorRef CTFontDescriptorCreateForUIType(CTFontUIFontType, CGFloat size, CFStringRef language);
 
 @implementation FallbackFont
 
@@ -25,23 +21,21 @@ extern CTFontDescriptorRef CTFontDescriptorCreateForUIType(CTFontUIFontType, CGF
 
 @end
 
-FallbackFont *GetFontForLocale(NSString *locale)
+FallbackFont *GetFontForLocale(NSString *locale, CTFontUIFontType fontType)
 {
     // Probe to find font
-    UniChar c = 0x0061; // a
+    NSString *c = @"a";
     if ([locale isEqualToString:@"zh_CN"] || [locale isEqualToString:@"zh_TW"] || [locale isEqualToString:@"ja"])
-        c = 0x4E00; // 一 A common character in Japanese and Chinese.
+        c = @"一";
     else if ([locale isEqualToString:@"ko"])
-        c = 0xAC00; // 가
+        c = @"가";
 
     NSString *fontPath = nil;
     NSInteger collectionIndex = 0;
-
-    CTFontDescriptorRef defaultFontDes = CTFontDescriptorCreateForUIType(kCTFontUIFontSystem, 0, NULL);
-    if (defaultFontDes)
+    CTFontRef defaultFont = CTFontCreateUIFontForLanguage(fontType, 0, nil);
+    if (defaultFont)
     {
-        CTFontRef defaultFont = CTFontCreateWithFontDescriptor(defaultFontDes, 0, NULL);
-        CTFontRef fb = CTFontCreateForCharactersWithLanguage(defaultFont, &c, 1, NULL, NULL);
+        CTFontRef fb = CTFontCreateForStringWithLanguage(defaultFont, (CFStringRef)c, CFRangeMake(0, 1), NULL);
         if (fb)
         {
             CFURLRef url = (CFURLRef)CTFontCopyAttribute(fb, kCTFontURLAttribute); // Font path
@@ -50,7 +44,6 @@ FallbackFont *GetFontForLocale(NSString *locale)
             {
                 CFStringRef urlString = CFURLCreateStringByReplacingPercentEscapes(CFAllocatorGetDefault(), CFURLCopyPath(url), CFSTR(""));
                 fontPath = (__bridge NSString *)urlString;
-
                 // Find index in the font file
                 CFArrayRef fontDescs = CTFontManagerCreateFontDescriptorsFromURL(url);
                 CFIndex count = CFArrayGetCount(fontDescs);
@@ -64,13 +57,14 @@ FallbackFont *GetFontForLocale(NSString *locale)
                         break;
                     }
                 }
+                if ([fontPath hasSuffix:@"ttf"])
+                    collectionIndex = collectionIndex << 16;  // This is a variation
                 CFRelease(fontDescs);
                 CFRelease(urlString);
             }
             CFRelease(fb);
         }
         CFRelease(defaultFont);
-        CFRelease(defaultFontDes);
     }
     if (fontPath != nil)
         return [[FallbackFont alloc] initWithFilePath:fontPath collectionIndex:collectionIndex];
