@@ -14,8 +14,10 @@ enum UserDefaultsKey: String {
     case databaseVersion
     case dataDirPath
     case configFile
+    case fullDPI
     #if os(iOS)
     case onboardMessageDisplayed
+    case msaa
     #endif
 }
 
