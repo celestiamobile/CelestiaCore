@@ -1912,11 +1912,6 @@
 					"$(inherited)",
 					GL_ES,
 				);
-				"GCC_PREPROCESSOR_DEFINITIONS[sdk=macosx*]" = (
-					"$(inherited)",
-					USE_EPOXY,
-					CELX_GL,
-				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
 				GCC_WARN_UNUSED_FUNCTION = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
@@ -1949,17 +1944,6 @@
 					"${LIB_PATH}/include/libpng",
 					"${LIB_PATH}/include/cspice",
 					"${LIB_PATH}/include/freetype/freetype2",
-				);
-				"SYSTEM_HEADER_SEARCH_PATHS[sdk=iphoneos*]" = (
-					"${inherited}",
-					"${LIB_PATH}/include/gl4es",
-				);
-				"SYSTEM_HEADER_SEARCH_PATHS[sdk=iphonesimulator*]" = (
-					"${inherited}",
-					"${LIB_PATH}/include/gl4es",
-				);
-				"SYSTEM_HEADER_SEARCH_PATHS[sdk=macosx*]" = (
-					"${inherited}",
 					"${LIB_PATH}/include/libepoxy",
 				);
 				THIRD_PARTY_LIB_PATH = "";
@@ -2003,11 +1987,6 @@
 					"$(inherited)",
 					GL_ES,
 				);
-				"GCC_PREPROCESSOR_DEFINITIONS[sdk=macosx*]" = (
-					"$(inherited)",
-					USE_EPOXY,
-					CELX_GL,
-				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
 				GCC_WARN_UNUSED_FUNCTION = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
@@ -2040,17 +2019,6 @@
 					"${LIB_PATH}/include/libpng",
 					"${LIB_PATH}/include/cspice",
 					"${LIB_PATH}/include/freetype/freetype2",
-				);
-				"SYSTEM_HEADER_SEARCH_PATHS[sdk=iphoneos*]" = (
-					"${inherited}",
-					"${LIB_PATH}/include/gl4es",
-				);
-				"SYSTEM_HEADER_SEARCH_PATHS[sdk=iphonesimulator*]" = (
-					"${inherited}",
-					"${LIB_PATH}/include/gl4es",
-				);
-				"SYSTEM_HEADER_SEARCH_PATHS[sdk=macosx*]" = (
-					"${inherited}",
 					"${LIB_PATH}/include/libepoxy",
 				);
 				THIRD_PARTY_LIB_PATH = "";
