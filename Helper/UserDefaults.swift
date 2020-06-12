@@ -15,9 +15,9 @@ enum UserDefaultsKey: String {
     case dataDirPath
     case configFile
     case fullDPI
+    case msaa
     #if os(iOS)
     case onboardMessageDisplayed
-    case msaa
     #endif
 }
 
