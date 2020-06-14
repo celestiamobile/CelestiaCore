@@ -48,6 +48,24 @@ typedef NS_ENUM(NSUInteger, RendererFontStyle) {
     RendererFontLarge           = 1,
 };
 
+typedef NS_OPTIONS(NSUInteger, CelestiaWatcherFlag) {
+    CelestiaWatcherFlagLabelFlagsChanged       = 1,
+    CelestiaWatcherFlagRenderFlagsChanged      = 2,
+    CelestiaWatcherFlagVerbosityLevelChanged   = 4,
+    CelestiaWatcherFlagTimeZoneChanged         = 8,
+    CelestiaWatcherFlagAmbientLightChanged     = 16,
+    CelestiaWatcherFlagFaintestChanged         = 32,
+    CelestiaWatcherFlagHistoryChanged          = 64,
+    CelestiaWatcherFlagTextEnterModeChanged    = 128,
+    CelestiaWatcherFlagGalaxyLightGainChanged  = 256,
+};
+
+typedef NS_ENUM(NSUInteger, CelestiaTextEnterMode) {
+    CelestiaTextEnterModeNormal         = 0,
+    CelestiaTextEnterModeAutoComplete   = 1,
+    CelestiaTextEnterModePassToScript   = 2,
+};
+
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol CelestiaAppCoreDelegate <NSObject>
@@ -55,6 +73,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)celestiaAppCoreFatalErrorHappened:(NSString *)error;
 - (void)celestiaAppCoreCursorShapeChanged:(CursorShape)shape;
 - (void)celestiaAppCoreCursorDidRequestContextMenuAtPoint:(CGPoint)location withSelection:(CelestiaSelection *)selection;
+- (void)celestiaAppCoreWatchedFlagDidChange:(CelestiaWatcherFlag)changedFlag;
 
 @end
 
@@ -97,6 +116,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 // MARK: Other
 @property (readonly) NSString *currentURL;
+@property CelestiaTextEnterMode textEnterMode;
 
 - (void)runScript:(NSString *)path NS_SWIFT_NAME(runScript(at:));
 - (void)goToURL:(NSString *)url NS_SWIFT_NAME(go(to:));

@@ -91,10 +91,26 @@ private:
     void (^block)(CGPoint, CelestiaSelection *);
 };
 
+class AppCoreWatcher: public CelestiaWatcher
+{
+public:
+    AppCoreWatcher(CelestiaCore& watched, void (^block)(CelestiaWatcherFlag)) : CelestiaWatcher(watched), block(block) {}
+
+    void notifyChange(CelestiaCore *, int change)
+    {
+        @autoreleasepool {
+            block((CelestiaWatcherFlag)change);
+        }
+    }
+private:
+    void (^block)(CelestiaWatcherFlag);
+};
+
 @interface CelestiaAppCore () {
     AppCoreAlerter *alerter;
     AppCoreCursorHandler *cursorHandler;
     AppCoreContextMenuHandler *contextMenuHandler;
+    AppCoreWatcher *watcher;
 
     CelestiaSimulation *_simulation;
 }
@@ -123,6 +139,9 @@ private:
         core->setAlerter(alerter);
         core->setCursorHandler(cursorHandler);
         core->setContextMenuHandler(contextMenuHandler);
+        watcher = new AppCoreWatcher(*core, ^(CelestiaWatcherFlag changedFlag) {
+            [[weakSelf delegate] celestiaAppCoreWatchedFlagDidChange:changedFlag];
+        });
         [self initializeSetting];
     }
     return self;
@@ -238,6 +257,14 @@ private:
     return [NSString stringWithUTF8String:currentURL.getAsString().c_str()];
 }
 
+- (CelestiaTextEnterMode)textEnterMode {
+    return (CelestiaTextEnterMode)core->getTextEnterMode();
+}
+
+- (void)setTextEnterMode:(CelestiaTextEnterMode)textEnterMode {
+    core->setTextEnterMode((int)textEnterMode);
+}
+
 - (void)runScript:(NSString *)path {
     core->runScript([path UTF8String]);
 }
@@ -301,6 +328,7 @@ private:
     core->setAlerter(nullptr);
     core->setCursorHandler(nullptr);
     core->setContextMenuHandler(nullptr);
+    delete watcher;
     delete alerter;
     delete cursorHandler;
     delete contextMenuHandler;
