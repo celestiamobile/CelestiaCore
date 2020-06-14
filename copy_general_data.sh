@@ -9,7 +9,7 @@ mkdir -p $CELESTIA_ROOT
 CELESTIA_REPO_ROOT=$SRCROOT/../Celestia
 CELESTIA_CONTENT_REPO_ROOT=$CELESTIA_REPO_ROOT/content
 
-for directory in 'fonts' 'images' 'locale' 'scripts' 'shaders';do
+for directory in 'images' 'locale' 'scripts' 'shaders';do
     f=$CELESTIA_REPO_ROOT/$directory
     if [ $f -nt $CELESTIA_ROOT/$directory ];then
         echo "rsync -rv --quiet --exclude=CMakeLists.txt $f $CELESTIA_ROOT"
