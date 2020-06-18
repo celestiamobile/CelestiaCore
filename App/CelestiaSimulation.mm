@@ -138,7 +138,7 @@ typedef NS_OPTIONS(NSUInteger, CelestiaGoToLocationFieldMask) {
 }
 
 - (CelestiaSelection *)findObjectFromPath:(NSString *)path {
-    return [[CelestiaSelection alloc] initWithSelection:[self simulation]->findObject([path UTF8String])];
+    return [[CelestiaSelection alloc] initWithSelection:[self simulation]->findObject([path UTF8String], true)];
 }
 
 - (void)setFrame:(SimulationCoordinateSystem)coordinate target:(CelestiaSelection *)target reference:(CelestiaSelection *)reference {
