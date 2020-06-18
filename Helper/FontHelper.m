@@ -29,6 +29,8 @@ FallbackFont *GetFontForLocale(NSString *locale, CTFontUIFontType fontType)
         c = @"一";
     else if ([locale isEqualToString:@"ko"])
         c = @"가";
+    else if ([locale isEqualToString:@"ar"])
+        c = @"ئ";
 
     NSString *fontPath = nil;
     NSInteger collectionIndex = 0;
@@ -42,8 +44,13 @@ FallbackFont *GetFontForLocale(NSString *locale, CTFontUIFontType fontType)
             CFStringRef name = (CFStringRef)CTFontCopyAttribute(fb, kCTFontNameAttribute); // Font name
             if (url && name)
             {
+                CFStringRef anotherName = NULL;
+                if (CFStringHasPrefix(name, CFSTR(".PingFang"))) {
+                    // Avoid use dot prefixed PingFang
+                    anotherName = CFStringCreateWithSubstring(kCFAllocatorDefault, name, CFRangeMake(1, CFStringGetLength(name) - 1));
+                }
+
                 CFStringRef urlString = CFURLCreateStringByReplacingPercentEscapes(CFAllocatorGetDefault(), CFURLCopyPath(url), CFSTR(""));
-                fontPath = (__bridge NSString *)urlString;
                 // Find index in the font file
                 CFArrayRef fontDescs = CTFontManagerCreateFontDescriptorsFromURL(url);
                 CFIndex count = CFArrayGetCount(fontDescs);
@@ -51,16 +58,33 @@ FallbackFont *GetFontForLocale(NSString *locale, CTFontUIFontType fontType)
                 {
                     CTFontDescriptorRef des = (CTFontDescriptorRef)CFArrayGetValueAtIndex(fontDescs, i);
                     CFStringRef currentName = (CFStringRef)CTFontDescriptorCopyAttribute(des, kCTFontNameAttribute);
-                    if (CFStringCompare(name, currentName, 0) == kCFCompareEqualTo)
-                    {
-                        collectionIndex = i;
-                        break;
+                    if (currentName) {
+                        if (anotherName && CFStringCompare(anotherName, currentName, 0) == kCFCompareEqualTo) {
+                            // another name is preferred, jump out of the loop immediately
+                            CFRelease(currentName);
+                            fontPath = (__bridge NSString *)urlString;
+                            collectionIndex = i;
+                            break;
+                        } else if (CFStringCompare(name, currentName, 0) == kCFCompareEqualTo) {
+                            // a font is found but might not be the preferred one
+                            CFRelease(currentName);
+                            fontPath = (__bridge NSString *)urlString;
+                            collectionIndex = i;
+                            if (!anotherName)
+                                break; // Only one choice, jump out the loop immediately
+                        } else {
+                            CFRelease(currentName);
+                        }
                     }
                 }
                 if ([fontPath hasSuffix:@"ttf"])
                     collectionIndex = collectionIndex << 16;  // This is a variation
+                CFRelease(url);
+                CFRelease(name);
                 CFRelease(fontDescs);
                 CFRelease(urlString);
+                if (anotherName)
+                    CFRelease(anotherName);
             }
             CFRelease(fb);
         }
