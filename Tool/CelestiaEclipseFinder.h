@@ -10,14 +10,14 @@
 
 @class CelestiaBody;
 
-typedef NS_OPTIONS(NSUInteger, EclipseKind) {
-    EclipseKindSolar = 1 << 0,
-    EclipseKindLunar = 1 << 1,
+typedef NS_OPTIONS(NSUInteger, CelestiaEclipseKind) {
+    CelestiaEclipseKindSolar = 1 << 0,
+    CelestiaEclipseKindLunar = 1 << 1,
 };
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface EclipseResult : NSObject
+@interface CelestiaEclipse : NSObject
 
 @property (readonly) CelestiaBody *occulter;
 @property (readonly) CelestiaBody *receiver;
@@ -31,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithBody:(CelestiaBody *)body;
 
-- (NSArray<EclipseResult *> *)search:(EclipseKind)kind fromStart:(NSDate *)startTime toEnd:(NSDate *)endTime NS_SWIFT_NAME(search(kind:from:to:));
+- (NSArray<CelestiaEclipse *> *)search:(CelestiaEclipseKind)kind fromStart:(NSDate *)startTime toEnd:(NSDate *)endTime NS_SWIFT_NAME(search(kind:from:to:));
 
 - (void)abort;
 

@@ -39,7 +39,7 @@ private:
     void *delegate;
 };
 
-@implementation EclipseResult
+@implementation CelestiaEclipse
 
 - (instancetype)initWithEclipse:(Eclipse *)eclipse {
     self = [super init];
@@ -66,14 +66,14 @@ private:
     return self;
 }
 
-- (NSArray<EclipseResult *> *)search:(EclipseKind)kind fromStart:(NSDate *)startTime toEnd:(NSDate *)endTime {
+- (NSArray<CelestiaEclipse *> *)search:(CelestiaEclipseKind)kind fromStart:(NSDate *)startTime toEnd:(NSDate *)endTime {
     aborted = NO;
     std::vector<Eclipse> results;
     s->findEclipses([startTime julianDay], [endTime julianDay], (int)kind, results);
 
     NSMutableArray *array = [NSMutableArray arrayWithCapacity:results.size()];
     for (Eclipse &result: results) {
-        [array addObject:[[EclipseResult alloc] initWithEclipse:&result]];
+        [array addObject:[[CelestiaEclipse alloc] initWithEclipse:&result]];
     }
     aborted = YES;
     return array;

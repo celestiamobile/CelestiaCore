@@ -14,6 +14,10 @@
 #import "CelestiaUniversalCoord+Private.h"
 #import "CelestiaVector+Private.h"
 #import "CelestiaUtil.h"
+#import "CelestiaPlanetarySystem.h"
+#import "CelestiaEclipseFinder.h"
+#import "CelestiaBody.h"
+#import "CelestiaStar.h"
 
 #include "celmath/geomutil.h"
 
@@ -171,16 +175,24 @@ typedef NS_OPTIONS(NSUInteger, CelestiaGoToLocationFieldMask) {
     }
 }
 
-- (void)goToEclipse:(CelestiaSelection *)occulter receiver:(CelestiaSelection *)receiver {
-    s->setFrame(ObserverFrame::PhaseLock, [receiver selection], [occulter selection]);
-    s->update(0);
-    Selection sel = [receiver selection];
-    double distance = sel.radius() * 4.0;
-    s->setSelection(sel);
+- (void)goToEclipse:(CelestiaEclipse *)eclipse {
+    CelestiaStar *star = [[[eclipse receiver] system] star];
+    if (!star)
+        return;
 
-    s->gotoLocation(UniversalCoord::Zero().offsetKm(Eigen::Vector3d(distance, 0, 0)),
-                    YRotation(-0.5 * PI) * XRotation(-0.5 * PI),
-                    5.0);
+    CelestiaSelection *target = [[CelestiaSelection alloc] initWithObject:[eclipse receiver]];
+    CelestiaSelection *ref = [[CelestiaSelection alloc] initWithObject:star];
+
+    if (!target || !ref)
+        return;
+
+    s->setTime(eclipse.startTime.julianDay);
+    s->setFrame(ObserverFrame::PhaseLock, [target selection], [ref selection]);
+    s->update(0);
+    double distance = [target radius] * 4.0;
+    s->gotoLocation(UniversalCoord::Zero().offsetKm(Eigen::Vector3d::UnitX() * distance),
+                      YRotation(-0.5 * PI) * XRotation(-0.5 * PI),
+                      2.5);
 }
 
 - (NSArray<NSString *> *)completionForName:(NSString *)name {

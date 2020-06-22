@@ -12,6 +12,7 @@
 @class CelestiaUniverse;
 @class CelestiaUniversalCoord;
 @class CelestiaObserver;
+@class CelestiaEclipse;
 
 typedef NS_ENUM(NSUInteger, SimulationCoordinateSystem) {
     SimulationCoordinateSystemUniversal = 0,
@@ -67,7 +68,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)goToLocation:(CelestiaGoToLocation *)location NS_SWIFT_NAME(go(to:));
 
-- (void)goToEclipse:(CelestiaSelection *)occulter receiver:(CelestiaSelection *)receiver NS_SWIFT_NAME(goToEclipse(occulter:receiver:));
+- (void)goToEclipse:(CelestiaEclipse *)eclipse NS_SWIFT_NAME(goToEclipse(_:));
 
 - (NSArray<NSString *> *)completionForName:(NSString *)name NS_SWIFT_NAME(completion(for:));
 
