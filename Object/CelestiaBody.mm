@@ -96,7 +96,6 @@
     std::vector<std::string> *altSurfaces = [self body]->getAlternateSurfaceNames();
     if (altSurfaces)
     {
-        result = [NSMutableArray array];
         if (altSurfaces->size() > 0)
         {
             for (unsigned int i = 0; i < altSurfaces->size(); ++i)
