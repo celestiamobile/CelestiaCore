@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (readonly) NSString *filePath;
 @property (readonly) NSInteger collectionIndex;
 
+- (instancetype)initWithFilePath:(NSString *)filePath collectionIndex:(NSInteger)collectionIndex;
+
 @end
 
 FallbackFont * _Nullable GetFontForLocale(NSString *locale, CTFontUIFontType fontType);
