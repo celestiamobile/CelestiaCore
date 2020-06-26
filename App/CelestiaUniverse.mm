@@ -88,4 +88,8 @@
     u->unmarkObject([selection selection], 1);
 }
 
+- (void)unmarkAll {
+    u->unmarkAll();
+}
+
 @end
