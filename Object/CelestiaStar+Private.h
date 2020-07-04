@@ -1,11 +1,13 @@
-/*
- *  CelestiaStar+Private.h
- *  celestia
- *
- *  Created by Bob Ippolito on Sat Jun 08 2002.
- *  Copyright (c) 2002 Chris Laurel. All rights reserved.
- *
- */
+//
+// CelestiaStar+Private.h
+//
+// Copyright © 2020 Celestia Development Team. All rights reserved.
+//
+// This program is free software; you can redistribute it and/or
+// modify it under the terms of the GNU General Public License
+// as published by the Free Software Foundation; either version 2
+// of the License, or (at your option) any later version.
+//
 
 #import "CelestiaStar.h"
 #include <celengine/star.h>

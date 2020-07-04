@@ -1,9 +1,12 @@
 //
-//  CelestiaDSO.h
-//  celestia
+// CelestiaDSO.h
 //
-//  Created by Da Woon Jung on 12/30/06.
-//  Copyright 2006 Chris Laurel. All rights reserved.
+// Copyright © 2020 Celestia Development Team. All rights reserved.
+//
+// This program is free software; you can redistribute it and/or
+// modify it under the terms of the GNU General Public License
+// as published by the Free Software Foundation; either version 2
+// of the License, or (at your option) any later version.
 //
 
 #import <CelestiaCore/CelestiaAstroObject.h>

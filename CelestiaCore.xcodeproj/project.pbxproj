@@ -1670,7 +1670,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1100;
-				ORGANIZATIONNAME = "李林峰";
+				ORGANIZATIONNAME = "Celestia Development Team";
 				TargetAttributes = {
 					971A65CB23019BC5009E4EA1 = {
 						CreatedOnToolsVersion = 10.3;
