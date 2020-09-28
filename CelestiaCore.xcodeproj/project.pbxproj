@@ -174,7 +174,6 @@
 		971A66A023019C20009E4EA1 /* dsoname.h in Headers */ = {isa = PBXBuildFile; fileRef = 977D820A22FDB23A002FF1C2 /* dsoname.h */; };
 		971A66A123019C20009E4EA1 /* dsooctree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 977D820822FDB23A002FF1C2 /* dsooctree.cpp */; };
 		971A66A223019C20009E4EA1 /* dsooctree.h in Headers */ = {isa = PBXBuildFile; fileRef = 977D821622FDB23B002FF1C2 /* dsooctree.h */; };
-		971A66A323019C20009E4EA1 /* execenv.h in Headers */ = {isa = PBXBuildFile; fileRef = 977D822022FDB23C002FF1C2 /* execenv.h */; };
 		971A66A623019C20009E4EA1 /* frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 977D823B22FDB23D002FF1C2 /* frame.cpp */; };
 		971A66A723019C20009E4EA1 /* frame.h in Headers */ = {isa = PBXBuildFile; fileRef = 977D821A22FDB23B002FF1C2 /* frame.h */; };
 		971A66A823019C20009E4EA1 /* frametree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 977D822422FDB23C002FF1C2 /* frametree.cpp */; };
@@ -406,6 +405,9 @@
 		97EB8004242C6EC800A1BEC8 /* libtheora.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97EB7FF7242C6EB800A1BEC8 /* libtheora.a */; };
 		97FA985823FE460300825BD3 /* CelestiaAppCore+Event.mm in Sources */ = {isa = PBXBuildFile; fileRef = 97E0B76F231273C10016C154 /* CelestiaAppCore+Event.mm */; };
 		97FA986523FE5ABB00825BD3 /* CelestiaAppCore+Event.h in Headers */ = {isa = PBXBuildFile; fileRef = 97E0B76E231273C10016C154 /* CelestiaAppCore+Event.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA15589C251F3A7A001B25F3 /* dds_decompress.c in Sources */ = {isa = PBXBuildFile; fileRef = EA15589A251F3A7A001B25F3 /* dds_decompress.c */; };
+		EA15589D251F3A7A001B25F3 /* dds_decompress.h in Headers */ = {isa = PBXBuildFile; fileRef = EA15589B251F3A7A001B25F3 /* dds_decompress.h */; };
+		EA1558A1251F3B20001B25F3 /* stb_dxt_104.h in Headers */ = {isa = PBXBuildFile; fileRef = EA1558A0251F3B20001B25F3 /* stb_dxt_104.h */; };
 		EA73169F248E1D9B009AE037 /* truetypefont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA73169D248E1D9A009AE037 /* truetypefont.cpp */; };
 		EA7316A0248E1D9B009AE037 /* truetypefont.h in Headers */ = {isa = PBXBuildFile; fileRef = EA73169E248E1D9A009AE037 /* truetypefont.h */; };
 		EA7316A2248E1DE2009AE037 /* libfreetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7316A1248E1DDF009AE037 /* libfreetype.a */; };
@@ -641,7 +643,6 @@
 		977D821C22FDB23B002FF1C2 /* tokenizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tokenizer.h; sourceTree = "<group>"; };
 		977D821E22FDB23B002FF1C2 /* overlay.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = overlay.cpp; sourceTree = "<group>"; };
 		977D821F22FDB23C002FF1C2 /* stardb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stardb.h; sourceTree = "<group>"; };
-		977D822022FDB23C002FF1C2 /* execenv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = execenv.h; sourceTree = "<group>"; };
 		977D822122FDB23C002FF1C2 /* glmarker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glmarker.cpp; sourceTree = "<group>"; };
 		977D822222FDB23C002FF1C2 /* constellation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = constellation.cpp; sourceTree = "<group>"; };
 		977D822322FDB23C002FF1C2 /* spheremesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = spheremesh.h; sourceTree = "<group>"; };
@@ -816,6 +817,9 @@
 		97EB7FF9242C6EB800A1BEC8 /* libintl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libintl.a; path = thirdparty/libs/libintl.a; sourceTree = "<group>"; };
 		97EB7FFA242C6EB800A1BEC8 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjpeg.a; path = thirdparty/libs/libjpeg.a; sourceTree = "<group>"; };
 		97EB7FFB242C6EB800A1BEC8 /* libogg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libogg.a; path = thirdparty/libs/libogg.a; sourceTree = "<group>"; };
+		EA15589A251F3A7A001B25F3 /* dds_decompress.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dds_decompress.c; sourceTree = "<group>"; };
+		EA15589B251F3A7A001B25F3 /* dds_decompress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dds_decompress.h; sourceTree = "<group>"; };
+		EA1558A0251F3B20001B25F3 /* stb_dxt_104.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_dxt_104.h; sourceTree = "<group>"; };
 		EA73169D248E1D9A009AE037 /* truetypefont.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = truetypefont.cpp; sourceTree = "<group>"; };
 		EA73169E248E1D9A009AE037 /* truetypefont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = truetypefont.h; sourceTree = "<group>"; };
 		EA7316A1248E1DDF009AE037 /* libfreetype.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfreetype.a; path = thirdparty/libs/libfreetype.a; sourceTree = "<group>"; };
@@ -1144,6 +1148,8 @@
 				977D81F022FDB239002FF1C2 /* curveplot.cpp */,
 				977D824B22FDB23E002FF1C2 /* curveplot.h */,
 				977D822B22FDB23C002FF1C2 /* dds.cpp */,
+				EA15589A251F3A7A001B25F3 /* dds_decompress.c */,
+				EA15589B251F3A7A001B25F3 /* dds_decompress.h */,
 				977D81C622FDB236002FF1C2 /* deepskyobj.cpp */,
 				977D823D22FDB23D002FF1C2 /* deepskyobj.h */,
 				977D821822FDB23B002FF1C2 /* dispmap.cpp */,
@@ -1156,7 +1162,6 @@
 				977D821622FDB23B002FF1C2 /* dsooctree.h */,
 				973B9C882459908500BDBEDB /* dsorenderer.cpp */,
 				973B9C892459908600BDBEDB /* dsorenderer.h */,
-				977D822022FDB23C002FF1C2 /* execenv.h */,
 				977D823B22FDB23D002FF1C2 /* frame.cpp */,
 				977D821A22FDB23B002FF1C2 /* frame.h */,
 				9768C445240FCC850097C4F2 /* framebuffer.cpp */,
@@ -1248,6 +1253,7 @@
 				977D81E422FDB238002FF1C2 /* starname.h */,
 				977D822722FDB23C002FF1C2 /* staroctree.cpp */,
 				977D821722FDB23B002FF1C2 /* staroctree.h */,
+				EA1558A0251F3B20001B25F3 /* stb_dxt_104.h */,
 				977D824122FDB23E002FF1C2 /* stellarclass.cpp */,
 				977D81F622FDB239002FF1C2 /* stellarclass.h */,
 				977D81D422FDB237002FF1C2 /* surface.h */,
@@ -1547,7 +1553,6 @@
 				9751DC1F23594A8000299997 /* celx_position.h in Headers */,
 				971A66E723019C20009E4EA1 /* solarsys.h in Headers */,
 				971A666123019C15009E4EA1 /* jpleph.h in Headers */,
-				971A66A323019C20009E4EA1 /* execenv.h in Headers */,
 				9751DC1623594A8000299997 /* celx_internal.h in Headers */,
 				971A660D23019BFC009E4EA1 /* material.h in Headers */,
 				97DBD67324134AD30045AE0C /* astroobj.h in Headers */,
@@ -1597,6 +1602,7 @@
 				971A660323019BF0009E4EA1 /* CelestiaBody+Private.h in Headers */,
 				971A665B23019C0F009E4EA1 /* watcher.h in Headers */,
 				971A665223019C0F009E4EA1 /* reshandle.h in Headers */,
+				EA1558A1251F3B20001B25F3 /* stb_dxt_104.h in Headers */,
 				971A660623019BF0009E4EA1 /* CelestiaGalaxy+Private.h in Headers */,
 				971A663423019C03009E4EA1 /* eclipsefinder.h in Headers */,
 				971A66CD23019C20009E4EA1 /* overlay.h in Headers */,
@@ -1630,6 +1636,7 @@
 				971A670A23019C21009E4EA1 /* vertexbuf.h in Headers */,
 				971A65EB23019BF0009E4EA1 /* CelestiaUniversalCoord+Private.h in Headers */,
 				971A671D23019C2B009E4EA1 /* intersect.h in Headers */,
+				EA15589D251F3A7A001B25F3 /* dds_decompress.h in Headers */,
 				971A66FE23019C21009E4EA1 /* timeline.h in Headers */,
 				9768C446240FCC850097C4F2 /* framebuffer.h in Headers */,
 				971A661123019BFC009E4EA1 /* model.h in Headers */,
@@ -1814,6 +1821,7 @@
 				971A663523019C03009E4EA1 /* favorites.cpp in Sources */,
 				9751DC1323594A8000299997 /* celx_observer.cpp in Sources */,
 				971A667023019C15009E4EA1 /* scriptorbit.cpp in Sources */,
+				EA15589C251F3A7A001B25F3 /* dds_decompress.c in Sources */,
 				971A66CE23019C20009E4EA1 /* parseobject.cpp in Sources */,
 				9751DC2C23594A8600299997 /* cmdparser.cpp in Sources */,
 				9752D7A523ED182D00FFE781 /* value.cpp in Sources */,
