@@ -167,9 +167,8 @@ enum {
 }
 
 - (void)keyDown:(NSString *)input modifiers:(NSUInteger)modifiers {
-    if (input == nil || input.length == 0) {
+    if (input == nil || input.length == 0)
         return;
-    }
 
     unichar key = [input characterAtIndex:0];
     int cModifiers = [self toCelestiaModifiers:modifiers buttons:0];
@@ -180,9 +179,8 @@ enum {
     else if ( key == NSBackTabCharacter )
         key = 127;
 
-    if ( (key<128) && ((key < '0') || (key>'9') || !(modifiers & NSNumericPadKeyMask)) ) {
+    if ((key < CelestiaCore::KeyCount) && ((key < '0') || (key >'9') || !(modifiers & NSNumericPadKeyMask)))
         [self appCoreCharEnter:(char)key modifiers:cModifiers];
-    }
 
     [self appCoreKeyDown:[self toCelestiaKey:key modifiers:modifiers] modifiers:cModifiers];
 }
