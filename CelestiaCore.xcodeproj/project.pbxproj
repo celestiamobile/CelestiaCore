@@ -405,7 +405,7 @@
 		97EB8004242C6EC800A1BEC8 /* libtheora.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97EB7FF7242C6EB800A1BEC8 /* libtheora.a */; };
 		97FA985823FE460300825BD3 /* CelestiaAppCore+Event.mm in Sources */ = {isa = PBXBuildFile; fileRef = 97E0B76F231273C10016C154 /* CelestiaAppCore+Event.mm */; };
 		97FA986523FE5ABB00825BD3 /* CelestiaAppCore+Event.h in Headers */ = {isa = PBXBuildFile; fileRef = 97E0B76E231273C10016C154 /* CelestiaAppCore+Event.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA15589C251F3A7A001B25F3 /* dds_decompress.c in Sources */ = {isa = PBXBuildFile; fileRef = EA15589A251F3A7A001B25F3 /* dds_decompress.c */; };
+		EA15589C251F3A7A001B25F3 /* dds_decompress.c in Sources */ = {isa = PBXBuildFile; fileRef = EA15589A251F3A7A001B25F3 /* dds_decompress.c */; settings = {COMPILER_FLAGS = "-Wno-everything"; }; };
 		EA15589D251F3A7A001B25F3 /* dds_decompress.h in Headers */ = {isa = PBXBuildFile; fileRef = EA15589B251F3A7A001B25F3 /* dds_decompress.h */; };
 		EA1558A1251F3B20001B25F3 /* stb_dxt_104.h in Headers */ = {isa = PBXBuildFile; fileRef = EA1558A0251F3B20001B25F3 /* stb_dxt_104.h */; };
 		EA73169F248E1D9B009AE037 /* truetypefont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA73169D248E1D9A009AE037 /* truetypefont.cpp */; };
