@@ -413,6 +413,10 @@
 		EA7316A2248E1DE2009AE037 /* libfreetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7316A1248E1DDF009AE037 /* libfreetype.a */; };
 		EA8D1EB624D6D0BD0071C7B5 /* strnatcmp.h in Headers */ = {isa = PBXBuildFile; fileRef = EA8D1EB424D6D0BD0071C7B5 /* strnatcmp.h */; };
 		EA8D1EB724D6D0BD0071C7B5 /* strnatcmp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA8D1EB524D6D0BD0071C7B5 /* strnatcmp.cpp */; };
+		EAC5623F2529FAA8008D10F0 /* mapmanager.h in Headers */ = {isa = PBXBuildFile; fileRef = EAC5623D2529FAA8008D10F0 /* mapmanager.h */; };
+		EAC562402529FAA8008D10F0 /* mapmanager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAC5623E2529FAA8008D10F0 /* mapmanager.cpp */; };
+		EAC562442529FAB4008D10F0 /* viewporteffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAC562422529FAB4008D10F0 /* viewporteffect.cpp */; };
+		EAC562452529FAB4008D10F0 /* viewporteffect.h in Headers */ = {isa = PBXBuildFile; fileRef = EAC562432529FAB4008D10F0 /* viewporteffect.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -825,6 +829,10 @@
 		EA7316A1248E1DDF009AE037 /* libfreetype.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfreetype.a; path = thirdparty/libs/libfreetype.a; sourceTree = "<group>"; };
 		EA8D1EB424D6D0BD0071C7B5 /* strnatcmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strnatcmp.h; sourceTree = "<group>"; };
 		EA8D1EB524D6D0BD0071C7B5 /* strnatcmp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = strnatcmp.cpp; sourceTree = "<group>"; };
+		EAC5623D2529FAA8008D10F0 /* mapmanager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mapmanager.h; sourceTree = "<group>"; };
+		EAC5623E2529FAA8008D10F0 /* mapmanager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mapmanager.cpp; sourceTree = "<group>"; };
+		EAC562422529FAB4008D10F0 /* viewporteffect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = viewporteffect.cpp; sourceTree = "<group>"; };
+		EAC562432529FAB4008D10F0 /* viewporteffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = viewporteffect.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1187,6 +1195,8 @@
 				977D823722FDB23D002FF1C2 /* location.h */,
 				977D81D622FDB237002FF1C2 /* lodspheremesh.cpp */,
 				977D81F222FDB239002FF1C2 /* lodspheremesh.h */,
+				EAC5623E2529FAA8008D10F0 /* mapmanager.cpp */,
+				EAC5623D2529FAA8008D10F0 /* mapmanager.h */,
 				977D820522FDB23A002FF1C2 /* marker.cpp */,
 				977D81C522FDB236002FF1C2 /* marker.h */,
 				977D81EA22FDB238002FF1C2 /* meshmanager.cpp */,
@@ -1279,6 +1289,8 @@
 				977D81C822FDB237002FF1C2 /* vertexbuf.h */,
 				977D824322FDB23E002FF1C2 /* vertexobject.cpp */,
 				977D824022FDB23E002FF1C2 /* vertexobject.h */,
+				EAC562422529FAB4008D10F0 /* viewporteffect.cpp */,
+				EAC562432529FAB4008D10F0 /* viewporteffect.h */,
 				977D824222FDB23E002FF1C2 /* virtualtex.cpp */,
 				977D825022FDB23F002FF1C2 /* virtualtex.h */,
 				977D823422FDB23D002FF1C2 /* visibleregion.cpp */,
@@ -1566,6 +1578,7 @@
 				974A6B1D23532EA1007BCABD /* overlayimage.h in Headers */,
 				971A671623019C2B009E4EA1 /* aabox.h in Headers */,
 				9751DC2E23594A8600299997 /* execenv.h in Headers */,
+				EAC5623F2529FAA8008D10F0 /* mapmanager.h in Headers */,
 				971A66DA23019C20009E4EA1 /* renderglsl.h in Headers */,
 				971A66C923019C20009E4EA1 /* octree.h in Headers */,
 				971A666323019C15009E4EA1 /* nutation.h in Headers */,
@@ -1578,6 +1591,7 @@
 				97AD59C9235B1B8E0056CA80 /* luascript.h in Headers */,
 				971A667323019C15009E4EA1 /* scriptrotation.h in Headers */,
 				971A66A723019C20009E4EA1 /* frame.h in Headers */,
+				EAC562452529FAB4008D10F0 /* viewporteffect.h in Headers */,
 				974D26EC230279D700FDFBC0 /* CelestiaBrowserItem+Private.h in Headers */,
 				971A66AB23019C20009E4EA1 /* galaxy.h in Headers */,
 				971A66A023019C20009E4EA1 /* dsoname.h in Headers */,
@@ -1729,6 +1743,7 @@
 				971A665723019C0F009E4EA1 /* utf8.cpp in Sources */,
 				971A66F223019C21009E4EA1 /* starname.cpp in Sources */,
 				971A65DB23019BF0009E4EA1 /* CelestiaUniversalCoord.mm in Sources */,
+				EAC562442529FAB4008D10F0 /* viewporteffect.cpp in Sources */,
 				971A65F323019BF0009E4EA1 /* CelestiaUtil.mm in Sources */,
 				971A65DA23019BF0009E4EA1 /* CelestiaSimulation.mm in Sources */,
 				971A65E323019BF0009E4EA1 /* CelestiaDSOCatalog.mm in Sources */,
@@ -1805,6 +1820,7 @@
 				9751DC2823594A8000299997 /* celx_phase.cpp in Sources */,
 				971A664823019C0F009E4EA1 /* debug.cpp in Sources */,
 				971A670D23019C21009E4EA1 /* virtualtex.cpp in Sources */,
+				EAC562402529FAA8008D10F0 /* mapmanager.cpp in Sources */,
 				971A667223019C15009E4EA1 /* scriptrotation.cpp in Sources */,
 				971A66C523019C20009E4EA1 /* nebula.cpp in Sources */,
 				971A669423019C20009E4EA1 /* constellation.cpp in Sources */,
