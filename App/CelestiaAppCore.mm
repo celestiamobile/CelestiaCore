@@ -251,6 +251,10 @@ private:
     core->setRendererFont([fontPath UTF8String], collectionIndex, fontSize, (Renderer::FontStyle)fontStyle);
 }
 
+- (void)setPickTolerance:(CGFloat)pickTolerance {
+    core->setPickTolerance(pickTolerance);
+}
+
 // MARK: Other
 - (NSString *)currentURL {
     CelestiaState appState;
