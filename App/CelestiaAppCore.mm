@@ -21,7 +21,6 @@
 
 #include <celutil/gettext.h>
 #include <celestia/url.h>
-#include <celestia/oggtheoracapture.h>
 
 class AppCoreProgressWatcher: public ProgressNotifier
 {
@@ -278,20 +277,6 @@ private:
 
 - (void)goToURL:(NSString *)url {
     core->goToUrl([url UTF8String]);
-}
-
-- (BOOL)captureMovie:(NSString *)filePath withVideoSize:(CGSize)size fps:(float)fps {
-    MovieCapture *movieCapture = new OggTheoraCapture(core->getRenderer());
-    movieCapture->setAspectRatio(1, 1);
-    bool ok = movieCapture->start([filePath UTF8String],
-                                  size.width, size.height,
-                                  fps);
-    if (ok) {
-        core->initMovieCapture(movieCapture);
-    } else {
-        delete movieCapture;
-    }
-    return (BOOL)ok;
 }
 
 - (BOOL)screenshot:(NSString *)filePath withFileSize:(ScreenshotFileType)type {

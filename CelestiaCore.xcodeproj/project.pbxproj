@@ -303,8 +303,6 @@
 		971A672623019C2B009E4EA1 /* vecmath.h in Headers */ = {isa = PBXBuildFile; fileRef = 977D81A522FDB1BE002FF1C2 /* vecmath.h */; };
 		971A674D2301A5AF009E4EA1 /* CelestiaScript.h in Headers */ = {isa = PBXBuildFile; fileRef = 971A674B2301A5AE009E4EA1 /* CelestiaScript.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		971A674E2301A5AF009E4EA1 /* CelestiaScript.mm in Sources */ = {isa = PBXBuildFile; fileRef = 971A674C2301A5AE009E4EA1 /* CelestiaScript.mm */; };
-		971A67532301B556009E4EA1 /* oggtheoracapture.h in Headers */ = {isa = PBXBuildFile; fileRef = 971A67512301B556009E4EA1 /* oggtheoracapture.h */; };
-		971A67542301B556009E4EA1 /* oggtheoracapture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 971A67522301B556009E4EA1 /* oggtheoracapture.cpp */; };
 		971B8ADF234C218E00567A38 /* CelestiaFavorite.h in Headers */ = {isa = PBXBuildFile; fileRef = 971B8ADD234C218E00567A38 /* CelestiaFavorite.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		971B8AE0234C218E00567A38 /* CelestiaFavorite.m in Sources */ = {isa = PBXBuildFile; fileRef = 971B8ADE234C218E00567A38 /* CelestiaFavorite.m */; };
 		9729F1EF23084D080069FD72 /* fs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9729F1EC23084D080069FD72 /* fs.cpp */; };
@@ -400,9 +398,7 @@
 		97EB7FFF242C6EC800A1BEC8 /* libintl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97EB7FF9242C6EB800A1BEC8 /* libintl.a */; };
 		97EB8000242C6EC800A1BEC8 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97EB7FFA242C6EB800A1BEC8 /* libjpeg.a */; };
 		97EB8001242C6EC800A1BEC8 /* liblua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97EB7FF5242C6EB700A1BEC8 /* liblua.a */; };
-		97EB8002242C6EC800A1BEC8 /* libogg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97EB7FFB242C6EB800A1BEC8 /* libogg.a */; };
 		97EB8003242C6EC800A1BEC8 /* libpng16.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97EB7FF3242C6EB700A1BEC8 /* libpng16.a */; };
-		97EB8004242C6EC800A1BEC8 /* libtheora.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97EB7FF7242C6EB800A1BEC8 /* libtheora.a */; };
 		97FA985823FE460300825BD3 /* CelestiaAppCore+Event.mm in Sources */ = {isa = PBXBuildFile; fileRef = 97E0B76F231273C10016C154 /* CelestiaAppCore+Event.mm */; };
 		97FA986523FE5ABB00825BD3 /* CelestiaAppCore+Event.h in Headers */ = {isa = PBXBuildFile; fileRef = 97E0B76E231273C10016C154 /* CelestiaAppCore+Event.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA15589C251F3A7A001B25F3 /* dds_decompress.c in Sources */ = {isa = PBXBuildFile; fileRef = EA15589A251F3A7A001B25F3 /* dds_decompress.c */; settings = {COMPILER_FLAGS = "-Wno-everything"; }; };
@@ -448,8 +444,6 @@
 		971A674323019E38009E4EA1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		971A674B2301A5AE009E4EA1 /* CelestiaScript.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CelestiaScript.h; sourceTree = "<group>"; };
 		971A674C2301A5AE009E4EA1 /* CelestiaScript.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CelestiaScript.mm; sourceTree = "<group>"; };
-		971A67512301B556009E4EA1 /* oggtheoracapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = oggtheoracapture.h; sourceTree = "<group>"; };
-		971A67522301B556009E4EA1 /* oggtheoracapture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = oggtheoracapture.cpp; sourceTree = "<group>"; };
 		971B8ADD234C218E00567A38 /* CelestiaFavorite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CelestiaFavorite.h; sourceTree = "<group>"; };
 		971B8ADE234C218E00567A38 /* CelestiaFavorite.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CelestiaFavorite.m; sourceTree = "<group>"; };
 		9729F1EC23084D080069FD72 /* fs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fs.cpp; sourceTree = "<group>"; };
@@ -816,11 +810,9 @@
 		97EB7FF4242C6EB700A1BEC8 /* libGL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGL.a; path = thirdparty/libs/libGL.a; sourceTree = "<group>"; };
 		97EB7FF5242C6EB700A1BEC8 /* liblua.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblua.a; path = thirdparty/libs/liblua.a; sourceTree = "<group>"; };
 		97EB7FF6242C6EB800A1BEC8 /* libfmt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfmt.a; path = thirdparty/libs/libfmt.a; sourceTree = "<group>"; };
-		97EB7FF7242C6EB800A1BEC8 /* libtheora.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libtheora.a; path = thirdparty/libs/libtheora.a; sourceTree = "<group>"; };
 		97EB7FF8242C6EB800A1BEC8 /* cspice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = cspice.a; path = thirdparty/libs/cspice.a; sourceTree = "<group>"; };
 		97EB7FF9242C6EB800A1BEC8 /* libintl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libintl.a; path = thirdparty/libs/libintl.a; sourceTree = "<group>"; };
 		97EB7FFA242C6EB800A1BEC8 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjpeg.a; path = thirdparty/libs/libjpeg.a; sourceTree = "<group>"; };
-		97EB7FFB242C6EB800A1BEC8 /* libogg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libogg.a; path = thirdparty/libs/libogg.a; sourceTree = "<group>"; };
 		EA15589A251F3A7A001B25F3 /* dds_decompress.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dds_decompress.c; sourceTree = "<group>"; };
 		EA15589B251F3A7A001B25F3 /* dds_decompress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dds_decompress.h; sourceTree = "<group>"; };
 		EA1558A0251F3B20001B25F3 /* stb_dxt_104.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_dxt_104.h; sourceTree = "<group>"; };
@@ -841,9 +833,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97EB8001242C6EC800A1BEC8 /* liblua.a in Frameworks */,
-				97EB8004242C6EC800A1BEC8 /* libtheora.a in Frameworks */,
 				97EB7FFE242C6EC800A1BEC8 /* libGL.a in Frameworks */,
-				97EB8002242C6EC800A1BEC8 /* libogg.a in Frameworks */,
 				97EB7FFC242C6EC800A1BEC8 /* cspice.a in Frameworks */,
 				97EB8003242C6EC800A1BEC8 /* libpng16.a in Frameworks */,
 				97EB7FFF242C6EC800A1BEC8 /* libintl.a in Frameworks */,
@@ -972,9 +962,7 @@
 				97EB7FF9242C6EB800A1BEC8 /* libintl.a */,
 				97EB7FFA242C6EB800A1BEC8 /* libjpeg.a */,
 				97EB7FF5242C6EB700A1BEC8 /* liblua.a */,
-				97EB7FFB242C6EB800A1BEC8 /* libogg.a */,
 				97EB7FF3242C6EB700A1BEC8 /* libpng16.a */,
-				97EB7FF7242C6EB800A1BEC8 /* libtheora.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1389,8 +1377,6 @@
 				977D838A22FDB2E8002FF1C2 /* imagecapture.cpp */,
 				977D839322FDB2E9002FF1C2 /* imagecapture.h */,
 				977D839422FDB2E9002FF1C2 /* moviecapture.h */,
-				971A67522301B556009E4EA1 /* oggtheoracapture.cpp */,
-				971A67512301B556009E4EA1 /* oggtheoracapture.h */,
 				977D837422FDB2E7002FF1C2 /* scriptmenu.cpp */,
 				977D838B22FDB2E8002FF1C2 /* scriptmenu.h */,
 				974A6B2123532EDB007BCABD /* view.cpp */,
@@ -1630,7 +1616,6 @@
 				971A666723019C15009E4EA1 /* precession.h in Headers */,
 				971A66DD23019C20009E4EA1 /* rotationmanager.h in Headers */,
 				971A66C023019C20009E4EA1 /* modelgeometry.h in Headers */,
-				971A67532301B556009E4EA1 /* oggtheoracapture.h in Headers */,
 				971A668123019C20009E4EA1 /* atmosphere.h in Headers */,
 				971A66F523019C21009E4EA1 /* staroctree.h in Headers */,
 				971A66F123019C21009E4EA1 /* stardb.h in Headers */,
@@ -1813,7 +1798,6 @@
 				971A65EF23019BF0009E4EA1 /* CelestiaVector.mm in Sources */,
 				971A660823019BF0009E4EA1 /* CelestiaGalaxy.mm in Sources */,
 				971A662F23019C03009E4EA1 /* configfile.cpp in Sources */,
-				971A67542301B556009E4EA1 /* oggtheoracapture.cpp in Sources */,
 				971A65EA23019BF0009E4EA1 /* CelestiaStarBrowser.mm in Sources */,
 				971A66A823019C20009E4EA1 /* frametree.cpp in Sources */,
 				9751DC2023594A8000299997 /* celx_rotation.cpp in Sources */,

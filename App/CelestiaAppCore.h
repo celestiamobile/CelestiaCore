@@ -125,7 +125,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)runScript:(NSString *)path NS_SWIFT_NAME(runScript(at:));
 - (void)goToURL:(NSString *)url NS_SWIFT_NAME(go(to:));
 
-- (BOOL)captureMovie:(NSString *)filePath withVideoSize:(CGSize)size fps:(float)fps NS_SWIFT_NAME(captureMovie(to:size:fps:));
 - (BOOL)screenshot:(NSString *)filePath withFileSize:(ScreenshotFileType)type NS_SWIFT_NAME(screenshot(to:type:));
 
 + (void)setLocaleDirectory:(NSString *)localeDirectory;
