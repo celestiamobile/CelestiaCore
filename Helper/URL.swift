@@ -58,7 +58,11 @@ extension Bundle {
     static var app: Bundle {
         let current = Bundle.main
         if current.bundleURL.pathExtension == "appex" {
+            #if os(macOS) || targetEnvironment(macCatalyst)
+            return Bundle(url: current.bundleURL.deletingLastPathComponent().deletingLastPathComponent().deletingLastPathComponent())!
+            #else
             return Bundle(url: current.bundleURL.deletingLastPathComponent().deletingLastPathComponent())!
+            #endif
         }
         return current
     }
