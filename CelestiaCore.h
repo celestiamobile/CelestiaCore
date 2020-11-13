@@ -32,6 +32,7 @@ FOUNDATION_EXPORT const unsigned char CelestiaCoreVersionString[];
 #import <CelestiaCore/CelestiaBrowserItem.h>
 #import <CelestiaCore/CelestiaScript.h>
 #import <CelestiaCore/CelestiaVector.h>
+#import <CelestiaCore/CelestiaFrameBuffer.h>
 #import <CelestiaCore/CelestiaUniversalCoord.h>
 #import <CelestiaCore/CelestiaUniverse+BrowserItem.h>
 

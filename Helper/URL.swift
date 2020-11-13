@@ -54,8 +54,18 @@ class UniformedURL {
     }
 }
 
+extension Bundle {
+    static var app: Bundle {
+        let current = Bundle.main
+        if current.bundleURL.pathExtension == "appex" {
+            return Bundle(url: current.bundleURL.deletingLastPathComponent().deletingLastPathComponent())!
+        }
+        return current
+    }
+}
+
 let defaultDataDirectory: URL = {
-    return Bundle.main.url(forResource: "CelestiaResources", withExtension: nil)!
+    return Bundle.app.url(forResource: "CelestiaResources", withExtension: nil)!
 }()
 
 let defaultConfigFile: URL = {

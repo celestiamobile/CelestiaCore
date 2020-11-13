@@ -404,6 +404,8 @@
 		EA15589C251F3A7A001B25F3 /* dds_decompress.c in Sources */ = {isa = PBXBuildFile; fileRef = EA15589A251F3A7A001B25F3 /* dds_decompress.c */; settings = {COMPILER_FLAGS = "-Wno-everything"; }; };
 		EA15589D251F3A7A001B25F3 /* dds_decompress.h in Headers */ = {isa = PBXBuildFile; fileRef = EA15589B251F3A7A001B25F3 /* dds_decompress.h */; };
 		EA1558A1251F3B20001B25F3 /* stb_dxt_104.h in Headers */ = {isa = PBXBuildFile; fileRef = EA1558A0251F3B20001B25F3 /* stb_dxt_104.h */; };
+		EA26DB49255CF94800D26D7B /* CelestiaFrameBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = EA26DB47255CF94800D26D7B /* CelestiaFrameBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA26DB4A255CF94800D26D7B /* CelestiaFrameBuffer.mm in Sources */ = {isa = PBXBuildFile; fileRef = EA26DB48255CF94800D26D7B /* CelestiaFrameBuffer.mm */; };
 		EA73169F248E1D9B009AE037 /* truetypefont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA73169D248E1D9A009AE037 /* truetypefont.cpp */; };
 		EA7316A0248E1D9B009AE037 /* truetypefont.h in Headers */ = {isa = PBXBuildFile; fileRef = EA73169E248E1D9A009AE037 /* truetypefont.h */; };
 		EA7316A2248E1DE2009AE037 /* libfreetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7316A1248E1DDF009AE037 /* libfreetype.a */; };
@@ -816,6 +818,8 @@
 		EA15589A251F3A7A001B25F3 /* dds_decompress.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dds_decompress.c; sourceTree = "<group>"; };
 		EA15589B251F3A7A001B25F3 /* dds_decompress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dds_decompress.h; sourceTree = "<group>"; };
 		EA1558A0251F3B20001B25F3 /* stb_dxt_104.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_dxt_104.h; sourceTree = "<group>"; };
+		EA26DB47255CF94800D26D7B /* CelestiaFrameBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CelestiaFrameBuffer.h; sourceTree = "<group>"; };
+		EA26DB48255CF94800D26D7B /* CelestiaFrameBuffer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CelestiaFrameBuffer.mm; sourceTree = "<group>"; };
 		EA73169D248E1D9A009AE037 /* truetypefont.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = truetypefont.cpp; sourceTree = "<group>"; };
 		EA73169E248E1D9A009AE037 /* truetypefont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = truetypefont.h; sourceTree = "<group>"; };
 		EA7316A1248E1DDF009AE037 /* libfreetype.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfreetype.a; path = thirdparty/libs/libfreetype.a; sourceTree = "<group>"; };
@@ -861,6 +865,8 @@
 				971A674C2301A5AE009E4EA1 /* CelestiaScript.mm */,
 				971B8ADD234C218E00567A38 /* CelestiaFavorite.h */,
 				971B8ADE234C218E00567A38 /* CelestiaFavorite.m */,
+				EA26DB47255CF94800D26D7B /* CelestiaFrameBuffer.h */,
+				EA26DB48255CF94800D26D7B /* CelestiaFrameBuffer.mm */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -1429,6 +1435,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA26DB49255CF94800D26D7B /* CelestiaFrameBuffer.h in Headers */,
 				973BBA6924054FEC00E3B061 /* CelestiaAppCore+Render.h in Headers */,
 				973BBA4B240523C800E3B061 /* CelestiaAppCore+Locale.h in Headers */,
 				971B8ADF234C218E00567A38 /* CelestiaFavorite.h in Headers */,
@@ -1872,6 +1879,7 @@
 				971A670323019C21009E4EA1 /* trajmanager.cpp in Sources */,
 				971A670F23019C21009E4EA1 /* visibleregion.cpp in Sources */,
 				971A66E823019C21009E4EA1 /* spheremesh.cpp in Sources */,
+				EA26DB4A255CF94800D26D7B /* CelestiaFrameBuffer.mm in Sources */,
 				971A65FC23019BF0009E4EA1 /* CelestiaPlanetarySystem.mm in Sources */,
 				971A65FE23019BF0009E4EA1 /* CelestiaLocation.mm in Sources */,
 				971A669223019C20009E4EA1 /* console.cpp in Sources */,
