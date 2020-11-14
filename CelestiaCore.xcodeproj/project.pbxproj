@@ -406,6 +406,11 @@
 		EA1558A1251F3B20001B25F3 /* stb_dxt_104.h in Headers */ = {isa = PBXBuildFile; fileRef = EA1558A0251F3B20001B25F3 /* stb_dxt_104.h */; };
 		EA26DB49255CF94800D26D7B /* CelestiaFrameBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = EA26DB47255CF94800D26D7B /* CelestiaFrameBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA26DB4A255CF94800D26D7B /* CelestiaFrameBuffer.mm in Sources */ = {isa = PBXBuildFile; fileRef = EA26DB48255CF94800D26D7B /* CelestiaFrameBuffer.mm */; };
+		EA38CEA8255FD1AB009EE79B /* CelestiaAtmosphere.h in Headers */ = {isa = PBXBuildFile; fileRef = EA38CEA6255FD1AB009EE79B /* CelestiaAtmosphere.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA38CEA9255FD1AB009EE79B /* CelestiaAtmosphere.mm in Sources */ = {isa = PBXBuildFile; fileRef = EA38CEA7255FD1AB009EE79B /* CelestiaAtmosphere.mm */; };
+		EA38CEB1255FD379009EE79B /* CelestiaTexture.h in Headers */ = {isa = PBXBuildFile; fileRef = EA38CEAF255FD379009EE79B /* CelestiaTexture.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA38CEB2255FD379009EE79B /* CelestiaTexture.mm in Sources */ = {isa = PBXBuildFile; fileRef = EA38CEB0255FD379009EE79B /* CelestiaTexture.mm */; };
+		EA38CEB8255FD3EF009EE79B /* CelestiaTexture+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = EA38CEB6255FD3EF009EE79B /* CelestiaTexture+Private.h */; };
 		EA73169F248E1D9B009AE037 /* truetypefont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA73169D248E1D9A009AE037 /* truetypefont.cpp */; };
 		EA7316A0248E1D9B009AE037 /* truetypefont.h in Headers */ = {isa = PBXBuildFile; fileRef = EA73169E248E1D9A009AE037 /* truetypefont.h */; };
 		EA7316A2248E1DE2009AE037 /* libfreetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7316A1248E1DDF009AE037 /* libfreetype.a */; };
@@ -820,6 +825,12 @@
 		EA1558A0251F3B20001B25F3 /* stb_dxt_104.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_dxt_104.h; sourceTree = "<group>"; };
 		EA26DB47255CF94800D26D7B /* CelestiaFrameBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CelestiaFrameBuffer.h; sourceTree = "<group>"; };
 		EA26DB48255CF94800D26D7B /* CelestiaFrameBuffer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CelestiaFrameBuffer.mm; sourceTree = "<group>"; };
+		EA38CEA6255FD1AB009EE79B /* CelestiaAtmosphere.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CelestiaAtmosphere.h; sourceTree = "<group>"; };
+		EA38CEA7255FD1AB009EE79B /* CelestiaAtmosphere.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CelestiaAtmosphere.mm; sourceTree = "<group>"; };
+		EA38CEAD255FD1D4009EE79B /* CelestiaAtmosphere+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CelestiaAtmosphere+Private.h"; sourceTree = "<group>"; };
+		EA38CEAF255FD379009EE79B /* CelestiaTexture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CelestiaTexture.h; sourceTree = "<group>"; };
+		EA38CEB0255FD379009EE79B /* CelestiaTexture.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CelestiaTexture.mm; sourceTree = "<group>"; };
+		EA38CEB6255FD3EF009EE79B /* CelestiaTexture+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CelestiaTexture+Private.h"; sourceTree = "<group>"; };
 		EA73169D248E1D9A009AE037 /* truetypefont.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = truetypefont.cpp; sourceTree = "<group>"; };
 		EA73169E248E1D9A009AE037 /* truetypefont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = truetypefont.h; sourceTree = "<group>"; };
 		EA7316A1248E1DDF009AE037 /* libfreetype.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfreetype.a; path = thirdparty/libs/libfreetype.a; sourceTree = "<group>"; };
@@ -867,6 +878,9 @@
 				971B8ADE234C218E00567A38 /* CelestiaFavorite.m */,
 				EA26DB47255CF94800D26D7B /* CelestiaFrameBuffer.h */,
 				EA26DB48255CF94800D26D7B /* CelestiaFrameBuffer.mm */,
+				EA38CEAF255FD379009EE79B /* CelestiaTexture.h */,
+				EA38CEB0255FD379009EE79B /* CelestiaTexture.mm */,
+				EA38CEB6255FD3EF009EE79B /* CelestiaTexture+Private.h */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -904,6 +918,9 @@
 				974D27472303C85900FDFBC0 /* CelestiaRotationModel.h */,
 				974D27482303C85900FDFBC0 /* CelestiaRotationModel.mm */,
 				974D274B2303C86B00FDFBC0 /* CelestiaRotationModel+Private.h */,
+				EA38CEA6255FD1AB009EE79B /* CelestiaAtmosphere.h */,
+				EA38CEA7255FD1AB009EE79B /* CelestiaAtmosphere.mm */,
+				EA38CEAD255FD1D4009EE79B /* CelestiaAtmosphere+Private.h */,
 			);
 			path = Object;
 			sourceTree = "<group>";
@@ -1439,6 +1456,7 @@
 				973BBA6924054FEC00E3B061 /* CelestiaAppCore+Render.h in Headers */,
 				973BBA4B240523C800E3B061 /* CelestiaAppCore+Locale.h in Headers */,
 				971B8ADF234C218E00567A38 /* CelestiaFavorite.h in Headers */,
+				EA38CEB8255FD3EF009EE79B /* CelestiaTexture+Private.h in Headers */,
 				97C62C2423374F4E00953522 /* CelestiaObserver.h in Headers */,
 				974D27492303C85900FDFBC0 /* CelestiaRotationModel.h in Headers */,
 				974D27412303C3A300FDFBC0 /* CelestiaOrbit.h in Headers */,
@@ -1569,6 +1587,7 @@
 				971A664423019C0F009E4EA1 /* bigfix.h in Headers */,
 				971A66A223019C20009E4EA1 /* dsooctree.h in Headers */,
 				974A6B1D23532EA1007BCABD /* overlayimage.h in Headers */,
+				EA38CEA8255FD1AB009EE79B /* CelestiaAtmosphere.h in Headers */,
 				971A671623019C2B009E4EA1 /* aabox.h in Headers */,
 				9751DC2E23594A8600299997 /* execenv.h in Headers */,
 				EAC5623F2529FAA8008D10F0 /* mapmanager.h in Headers */,
@@ -1612,6 +1631,7 @@
 				EA1558A1251F3B20001B25F3 /* stb_dxt_104.h in Headers */,
 				971A660623019BF0009E4EA1 /* CelestiaGalaxy+Private.h in Headers */,
 				971A663423019C03009E4EA1 /* eclipsefinder.h in Headers */,
+				EA38CEB1255FD379009EE79B /* CelestiaTexture.h in Headers */,
 				971A66CD23019C20009E4EA1 /* overlay.h in Headers */,
 				971A667523019C15009E4EA1 /* spiceinterface.h in Headers */,
 				971A672323019C2B009E4EA1 /* ray.h in Headers */,
@@ -1774,6 +1794,7 @@
 				971A66DE23019C20009E4EA1 /* selection.cpp in Sources */,
 				971A667F23019C20009E4EA1 /* astro.cpp in Sources */,
 				971A671223019C26009E4EA1 /* 3dsmodel.cpp in Sources */,
+				EA38CEA9255FD1AB009EE79B /* CelestiaAtmosphere.mm in Sources */,
 				971A66F623019C21009E4EA1 /* stellarclass.cpp in Sources */,
 				97AD59C0235B1B760056CA80 /* script.cpp in Sources */,
 				97E0B7732312763C0016C154 /* CelestiaAppCore+Private.mm in Sources */,
@@ -1842,6 +1863,7 @@
 				971A665423019C0F009E4EA1 /* timer.cpp in Sources */,
 				971A66E423019C20009E4EA1 /* skygrid.cpp in Sources */,
 				971A665C23019C15009E4EA1 /* customorbit.cpp in Sources */,
+				EA38CEB2255FD379009EE79B /* CelestiaTexture.mm in Sources */,
 				971A666823019C15009E4EA1 /* rotation.cpp in Sources */,
 				971A666E23019C15009E4EA1 /* scriptobject.cpp in Sources */,
 				971A65E523019BF0009E4EA1 /* CelestiaStarCatalog.mm in Sources */,

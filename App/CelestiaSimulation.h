@@ -44,6 +44,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (readonly) double longitude;
 @property (readonly) double latitude;
 @property (readonly) double distance;
+@property (readwrite) double duration;
 
 - (instancetype)initWithSelection:(CelestiaSelection *)selection longitude:(double)longitude latitude:(double)latitude distance:(double)distance unit:(SimulationDistanceUnit)unit;
 - (instancetype)initWithSelection:(CelestiaSelection *)selection longitude:(double)longitude latitude:(double)latitude;

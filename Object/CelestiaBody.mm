@@ -16,6 +16,7 @@
 #import "CelestiaRotationModel+Private.h"
 #import "CelestiaPlanetarySystem+Private.h"
 #import "CelestiaUtil.h"
+#import "CelestiaAtmosphere+Private.h"
 
 #import "CelestiaAppCore+Locale.h"
 
@@ -92,6 +93,13 @@
      if (end < 1.0e9)
          return [NSDate dateWithJulian:end];
      return nil;
+}
+
+- (CelestiaAtmosphere *)atomosphere {
+    Atmosphere *atmosphere = [self body]->getAtmosphere();
+    if (atmosphere)
+        return [[CelestiaAtmosphere alloc] initWithAtmosphere:atmosphere];
+    return nil;
 }
 
 - (NSArray<NSString *> *)alternateSurfaceNames {

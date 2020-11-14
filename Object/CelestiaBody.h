@@ -14,6 +14,7 @@
 @class CelestiaPlanetarySystem;
 @class CelestiaOrbit;
 @class CelestiaRotationModel;
+@class CelestiaAtmosphere;
 
 typedef NS_ENUM(NSUInteger, CelestiaBodyType) {
     CelestiaBodyTypePlanet         =    0x01,
@@ -45,6 +46,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (readonly) BOOL hasAtmosphere;
 @property (nullable, readonly) NSDate *startTime;
 @property (nullable, readonly) NSDate *endTime;
+@property (nullable, readonly) CelestiaAtmosphere *atomosphere;
 @property float mass;
 @property float albedo;
 @property (readonly) NSArray<NSString *> *alternateSurfaceNames;

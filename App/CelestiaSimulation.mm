@@ -35,6 +35,7 @@ typedef NS_OPTIONS(NSUInteger, CelestiaGoToLocationFieldMask) {
 @implementation CelestiaGoToLocation {
 @public
     CelestiaGoToLocationFieldMask fieldMask;
+    double _duration;
 }
 
 - (instancetype)initWithSelection:(CelestiaSelection *)selection longitude:(double)longitude latitude:(double)latitude distance:(double)distance unit:(SimulationDistanceUnit)unit validMask:(CelestiaGoToLocationFieldMask)mask {
@@ -44,6 +45,8 @@ typedef NS_OPTIONS(NSUInteger, CelestiaGoToLocationFieldMask) {
         _selection = selection;
         _longitude = longitude;
         _latitude = latitude;
+        // 5 seconds as a default of travel duration
+        _duration = 5;
 
         switch (unit) {
             case SimulationDistanceUnitKM:
@@ -75,6 +78,14 @@ typedef NS_OPTIONS(NSUInteger, CelestiaGoToLocationFieldMask) {
 
 - (instancetype)initWithSelection:(CelestiaSelection *)selection {
     return [self initWithSelection:selection longitude:0 latitude:0 distance:0 unit:SimulationDistanceUnitKM validMask:0];
+}
+
+- (void)setDuration:(double)duration {
+    _duration = MAX(0, duration);
+}
+
+- (double)duration {
+    return _duration;
 }
 
 @end
@@ -172,9 +183,9 @@ typedef NS_OPTIONS(NSUInteger, CelestiaGoToLocationFieldMask) {
 
     CelestiaVector *up = [CelestiaVector vectorWithx:[NSNumber numberWithFloat:0.0] y:[NSNumber numberWithFloat:1.0] z:[NSNumber numberWithFloat:0.0]];
     if (location->fieldMask & CelestiaGoToLocationFieldMaskLongitude && location->fieldMask & CelestiaGoToLocationFieldMaskLatitude) {
-        s->gotoSelectionLongLat(5, distance, (float)location.longitude * M_PI / 180.0, (float)location.latitude * M_PI / 180.0, [up vector3f]);
+        s->gotoSelectionLongLat(location.duration, distance, (float)location.longitude * M_PI / 180.0, (float)location.latitude * M_PI / 180.0, [up vector3f]);
     } else {
-        s->gotoSelection(5, distance, [up vector3f], (ObserverFrame::CoordinateSystem)[Astro coordinateSystem:@"ObserverLocal"]);
+        s->gotoSelection(location.duration, distance, [up vector3f], (ObserverFrame::CoordinateSystem)[Astro coordinateSystem:@"ObserverLocal"]);
     }
 }
 
