@@ -121,7 +121,9 @@
     if (_childrenValues == nil && _childrenProvider != nil)
         [self setChildren:[_childrenProvider childrenForBrowserItem:self]];
 
-    return [_childrenValues copy];
+    if (_childrenValues)
+        return [_childrenValues copy];
+    return [NSArray array];
 }
 
 @end

@@ -10,7 +10,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CoreText/CoreText.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -22,7 +21,5 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithFilePath:(NSString *)filePath collectionIndex:(NSInteger)collectionIndex;
 
 @end
-
-FallbackFont * _Nullable GetFontForLocale(NSString *locale, CTFontUIFontType fontType);
 
 NS_ASSUME_NONNULL_END
