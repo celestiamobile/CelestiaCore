@@ -16,6 +16,7 @@
 #import "CelestiaSimulation+Private.h"
 
 #import "CelestiaSelection+Private.h"
+#import "CelestiaDestination+Private.h"
 
 #import "CelestiaUtil.h"
 
@@ -261,6 +262,15 @@ private:
 
     Url currentURL(appState, Url::CurrentVersion);
     return [NSString stringWithUTF8String:currentURL.getAsString().c_str()];
+}
+
+- (NSArray<CelestiaDestination *> *)destinations {
+    NSMutableArray *array = [NSMutableArray array];
+    auto destinations = core->getDestinations();
+    int count = destinations ? destinations->size() : 0;
+    for (int i = 0; i < count; ++i)
+        [array addObject:[[CelestiaDestination alloc] initWithDestination:destinations->at(i)]];
+    return [array copy];
 }
 
 - (CelestiaTextEnterMode)textEnterMode {

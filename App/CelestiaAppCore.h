@@ -14,6 +14,7 @@
 
 @class CelestiaSimulation;
 @class CelestiaSelection;
+@class CelestiaDestination;
 
 typedef NS_OPTIONS(NSUInteger, MouseButton) {
     MouseButtonLeft = 1 << 0,
@@ -121,6 +122,8 @@ NS_ASSUME_NONNULL_BEGIN
 // MARK: Other
 @property (readonly) NSString *currentURL;
 @property CelestiaTextEnterMode textEnterMode;
+
+@property (readonly) NSArray<CelestiaDestination *> *destinations;
 
 - (void)runScript:(NSString *)path NS_SWIFT_NAME(runScript(at:));
 - (void)goToURL:(NSString *)url NS_SWIFT_NAME(go(to:));

@@ -21,6 +21,7 @@
 #import "CelestiaEclipseFinder.h"
 #import "CelestiaBody.h"
 #import "CelestiaStar.h"
+#import "CelestiaDestination.h"
 
 #include "celmath/geomutil.h"
 
@@ -207,6 +208,29 @@ typedef NS_OPTIONS(NSUInteger, CelestiaGoToLocationFieldMask) {
     s->gotoLocation(UniversalCoord::Zero().offsetKm(Eigen::Vector3d::UnitX() * distance),
                       YRotation(-0.5 * PI) * XRotation(-0.5 * PI),
                       2.5);
+}
+
+- (void)goToDestination:(CelestiaDestination *)destination {
+    Selection sel = s->findObjectFromPath([[destination target] UTF8String]);
+    if (!sel.empty())
+    {
+        s->follow();
+        s->setSelection(sel);
+        if ([destination distance] <= 0)
+        {
+            // Use the default distance
+            s->gotoSelection(5.0,
+                             Eigen::Vector3f::UnitY(),
+                             ObserverFrame::ObserverLocal);
+        }
+        else
+        {
+            s->gotoSelection(5.0,
+                             [destination distance],
+                             Eigen::Vector3f::UnitY(),
+                             ObserverFrame::ObserverLocal);
+        }
+    }
 }
 
 - (NSArray<NSString *> *)completionForName:(NSString *)name {

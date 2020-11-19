@@ -54,3 +54,4 @@ FOUNDATION_EXPORT const unsigned char CelestiaCoreVersionString[];
 #import <CelestiaCore/CelestiaStarCatalog.h>
 
 #import <CelestiaCore/CelestiaFavorite.h>
+#import <CelestiaCore/CelestiaDestination.h>
