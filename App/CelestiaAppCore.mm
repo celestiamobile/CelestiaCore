@@ -231,6 +231,10 @@ private:
     core->tick();
 }
 
++ (void)finish {
+    glFinish();
+}
+
 - (void)resize:(CGSize)size {
     core->resize(size.width, size.height);
 }
