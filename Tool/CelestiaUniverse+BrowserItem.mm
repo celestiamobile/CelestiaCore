@@ -52,12 +52,14 @@
         NSMutableDictionary *comets = nil;
         NSMutableDictionary *spacecrafts = nil;
         int i;
-        for ( i=0; i<sysSize; i++)
+        for (i = 0; i < sysSize; i++)
         {
             Body* body = sys->getBody(i);
             if (body->getName().empty())
                 continue;
             NSString *name = [NSString stringWithUTF8String:body->getName(true).c_str()];
+            if (!name)
+                continue;
             CelestiaBrowserItem *item = [[CelestiaBrowserItem alloc] initWithName:name catEntry:[[CelestiaBody alloc] initWithBody:body] provider:self];
             int bodyClass  = body->getClassification();
             switch (bodyClass)
@@ -150,12 +152,14 @@
         NSMutableDictionary *comets = nil;
         NSMutableDictionary *spacecrafts = nil;
         int i;
-        for ( i=0; i<sysSize; i++)
+        for (i = 0; i < sysSize; i++)
         {
             Body* body = sys->getBody(i);
             if (body->getName().empty())
                 continue;
             NSString *name = [NSString stringWithUTF8String:body->getName(true).c_str()];
+            if (!name)
+                continue;
             CelestiaBrowserItem *item = [[CelestiaBrowserItem alloc] initWithName:name catEntry:[[CelestiaBody alloc] initWithBody:body] provider:self];
             int bodyClass  = body->getClassification();
 
@@ -217,6 +221,8 @@
              iter != locations->end(); iter++)
         {
             NSString *name = [NSString stringWithUTF8String:(*iter)->getName(true).c_str()];
+            if (!name)
+                continue;
             CelestiaLocation *location = [[CelestiaLocation alloc] initWithLocation:*iter];
             [locationDictionary setObject:[[CelestiaBrowserItem alloc] initWithName:name catEntry:location provider:nil] forKey:[location name]];
         }
