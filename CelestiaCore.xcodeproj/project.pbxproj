@@ -399,7 +399,7 @@
 		97EB8003242C6EC800A1BEC8 /* libpng16.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97EB7FF3242C6EB700A1BEC8 /* libpng16.a */; };
 		97FA985823FE460300825BD3 /* CelestiaAppCore+Event.mm in Sources */ = {isa = PBXBuildFile; fileRef = 97E0B76F231273C10016C154 /* CelestiaAppCore+Event.mm */; };
 		97FA986523FE5ABB00825BD3 /* CelestiaAppCore+Event.h in Headers */ = {isa = PBXBuildFile; fileRef = 97E0B76E231273C10016C154 /* CelestiaAppCore+Event.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA15589C251F3A7A001B25F3 /* dds_decompress.c in Sources */ = {isa = PBXBuildFile; fileRef = EA15589A251F3A7A001B25F3 /* dds_decompress.c */; settings = {COMPILER_FLAGS = "-Wno-everything"; }; };
+		EA15589C251F3A7A001B25F3 /* dds_decompress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA15589A251F3A7A001B25F3 /* dds_decompress.cpp */; settings = {COMPILER_FLAGS = "-Wno-everything"; }; };
 		EA15589D251F3A7A001B25F3 /* dds_decompress.h in Headers */ = {isa = PBXBuildFile; fileRef = EA15589B251F3A7A001B25F3 /* dds_decompress.h */; };
 		EA1558A1251F3B20001B25F3 /* stb_dxt_104.h in Headers */ = {isa = PBXBuildFile; fileRef = EA1558A0251F3B20001B25F3 /* stb_dxt_104.h */; };
 		EA26DB49255CF94800D26D7B /* CelestiaFrameBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = EA26DB47255CF94800D26D7B /* CelestiaFrameBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -409,6 +409,17 @@
 		EA38CEB1255FD379009EE79B /* CelestiaTexture.h in Headers */ = {isa = PBXBuildFile; fileRef = EA38CEAF255FD379009EE79B /* CelestiaTexture.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA38CEB2255FD379009EE79B /* CelestiaTexture.mm in Sources */ = {isa = PBXBuildFile; fileRef = EA38CEB0255FD379009EE79B /* CelestiaTexture.mm */; };
 		EA38CEB8255FD3EF009EE79B /* CelestiaTexture+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = EA38CEB6255FD3EF009EE79B /* CelestiaTexture+Private.h */; };
+		EA3FC0A625F63A690019C3BD /* celestiastate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA3FC0A425F63A680019C3BD /* celestiastate.cpp */; };
+		EA3FC0A725F63A690019C3BD /* celestiastate.h in Headers */ = {isa = PBXBuildFile; fileRef = EA3FC0A525F63A680019C3BD /* celestiastate.h */; };
+		EA3FC0AC25F63A840019C3BD /* charconv.h in Headers */ = {isa = PBXBuildFile; fileRef = EA3FC0A925F63A840019C3BD /* charconv.h */; };
+		EA3FC0AD25F63A840019C3BD /* cc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA3FC0AA25F63A840019C3BD /* cc.cpp */; };
+		EA3FC0AE25F63A840019C3BD /* cc.h in Headers */ = {isa = PBXBuildFile; fileRef = EA3FC0AB25F63A840019C3BD /* cc.h */; };
+		EA3FC0B225F63A8C0019C3BD /* sv.h in Headers */ = {isa = PBXBuildFile; fileRef = EA3FC0B025F63A8C0019C3BD /* sv.h */; };
+		EA3FC0B325F63A8C0019C3BD /* string_view.h in Headers */ = {isa = PBXBuildFile; fileRef = EA3FC0B125F63A8C0019C3BD /* string_view.h */; };
+		EA3FC0B725F63AB30019C3BD /* stringutils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA3FC0B525F63AB30019C3BD /* stringutils.cpp */; };
+		EA3FC0B825F63AB30019C3BD /* stringutils.h in Headers */ = {isa = PBXBuildFile; fileRef = EA3FC0B625F63AB30019C3BD /* stringutils.h */; };
+		EA3FC88825F7AFBA0019C3BD /* fsutils.h in Headers */ = {isa = PBXBuildFile; fileRef = EA3FC88625F7AFBA0019C3BD /* fsutils.h */; };
+		EA3FC88925F7AFBA0019C3BD /* fsutils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA3FC88725F7AFBA0019C3BD /* fsutils.cpp */; };
 		EA544E522566B369003F351D /* CelestiaDestination.h in Headers */ = {isa = PBXBuildFile; fileRef = EA544E502566B369003F351D /* CelestiaDestination.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA544E532566B369003F351D /* CelestiaDestination.mm in Sources */ = {isa = PBXBuildFile; fileRef = EA544E512566B369003F351D /* CelestiaDestination.mm */; };
 		EA544E592566B3E4003F351D /* CelestiaDestination+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = EA544E572566B3E4003F351D /* CelestiaDestination+Private.h */; };
@@ -419,6 +430,8 @@
 		EA8926562567BD0300A868F3 /* CelestiaFavorite.h in Headers */ = {isa = PBXBuildFile; fileRef = EA8926542567BD0300A868F3 /* CelestiaFavorite.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA8D1EB624D6D0BD0071C7B5 /* strnatcmp.h in Headers */ = {isa = PBXBuildFile; fileRef = EA8D1EB424D6D0BD0071C7B5 /* strnatcmp.h */; };
 		EA8D1EB724D6D0BD0071C7B5 /* strnatcmp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA8D1EB524D6D0BD0071C7B5 /* strnatcmp.cpp */; };
+		EA9E5A9E25FE483900348AEE /* appleutils.mm in Sources */ = {isa = PBXBuildFile; fileRef = EA9E5A9C25FE483800348AEE /* appleutils.mm */; };
+		EA9E5A9F25FE483900348AEE /* appleutils.h in Headers */ = {isa = PBXBuildFile; fileRef = EA9E5A9D25FE483900348AEE /* appleutils.h */; };
 		EAC5623F2529FAA8008D10F0 /* mapmanager.h in Headers */ = {isa = PBXBuildFile; fileRef = EAC5623D2529FAA8008D10F0 /* mapmanager.h */; };
 		EAC562402529FAA8008D10F0 /* mapmanager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAC5623E2529FAA8008D10F0 /* mapmanager.cpp */; };
 		EAC562442529FAB4008D10F0 /* viewporteffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAC562422529FAB4008D10F0 /* viewporteffect.cpp */; };
@@ -821,7 +834,7 @@
 		97EB7FF8242C6EB800A1BEC8 /* cspice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = cspice.a; path = thirdparty/libs/cspice.a; sourceTree = "<group>"; };
 		97EB7FF9242C6EB800A1BEC8 /* libintl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libintl.a; path = thirdparty/libs/libintl.a; sourceTree = "<group>"; };
 		97EB7FFA242C6EB800A1BEC8 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjpeg.a; path = thirdparty/libs/libjpeg.a; sourceTree = "<group>"; };
-		EA15589A251F3A7A001B25F3 /* dds_decompress.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dds_decompress.c; sourceTree = "<group>"; };
+		EA15589A251F3A7A001B25F3 /* dds_decompress.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dds_decompress.cpp; sourceTree = "<group>"; };
 		EA15589B251F3A7A001B25F3 /* dds_decompress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dds_decompress.h; sourceTree = "<group>"; };
 		EA1558A0251F3B20001B25F3 /* stb_dxt_104.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_dxt_104.h; sourceTree = "<group>"; };
 		EA26DB47255CF94800D26D7B /* CelestiaFrameBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CelestiaFrameBuffer.h; sourceTree = "<group>"; };
@@ -832,6 +845,17 @@
 		EA38CEAF255FD379009EE79B /* CelestiaTexture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CelestiaTexture.h; sourceTree = "<group>"; };
 		EA38CEB0255FD379009EE79B /* CelestiaTexture.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CelestiaTexture.mm; sourceTree = "<group>"; };
 		EA38CEB6255FD3EF009EE79B /* CelestiaTexture+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CelestiaTexture+Private.h"; sourceTree = "<group>"; };
+		EA3FC0A425F63A680019C3BD /* celestiastate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = celestiastate.cpp; sourceTree = "<group>"; };
+		EA3FC0A525F63A680019C3BD /* celestiastate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = celestiastate.h; sourceTree = "<group>"; };
+		EA3FC0A925F63A840019C3BD /* charconv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = charconv.h; sourceTree = "<group>"; };
+		EA3FC0AA25F63A840019C3BD /* cc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cc.cpp; sourceTree = "<group>"; };
+		EA3FC0AB25F63A840019C3BD /* cc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cc.h; sourceTree = "<group>"; };
+		EA3FC0B025F63A8C0019C3BD /* sv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sv.h; sourceTree = "<group>"; };
+		EA3FC0B125F63A8C0019C3BD /* string_view.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = string_view.h; sourceTree = "<group>"; };
+		EA3FC0B525F63AB30019C3BD /* stringutils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stringutils.cpp; sourceTree = "<group>"; };
+		EA3FC0B625F63AB30019C3BD /* stringutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stringutils.h; sourceTree = "<group>"; };
+		EA3FC88625F7AFBA0019C3BD /* fsutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fsutils.h; sourceTree = "<group>"; };
+		EA3FC88725F7AFBA0019C3BD /* fsutils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fsutils.cpp; sourceTree = "<group>"; };
 		EA544E502566B369003F351D /* CelestiaDestination.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CelestiaDestination.h; sourceTree = "<group>"; };
 		EA544E512566B369003F351D /* CelestiaDestination.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CelestiaDestination.mm; sourceTree = "<group>"; };
 		EA544E572566B3E4003F351D /* CelestiaDestination+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CelestiaDestination+Private.h"; sourceTree = "<group>"; };
@@ -842,6 +866,8 @@
 		EA8926542567BD0300A868F3 /* CelestiaFavorite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CelestiaFavorite.h; sourceTree = "<group>"; };
 		EA8D1EB424D6D0BD0071C7B5 /* strnatcmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strnatcmp.h; sourceTree = "<group>"; };
 		EA8D1EB524D6D0BD0071C7B5 /* strnatcmp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = strnatcmp.cpp; sourceTree = "<group>"; };
+		EA9E5A9C25FE483800348AEE /* appleutils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = appleutils.mm; sourceTree = "<group>"; };
+		EA9E5A9D25FE483900348AEE /* appleutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = appleutils.h; sourceTree = "<group>"; };
 		EAC5623D2529FAA8008D10F0 /* mapmanager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mapmanager.h; sourceTree = "<group>"; };
 		EAC5623E2529FAA8008D10F0 /* mapmanager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mapmanager.cpp; sourceTree = "<group>"; };
 		EAC562422529FAB4008D10F0 /* viewporteffect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = viewporteffect.cpp; sourceTree = "<group>"; };
@@ -1002,9 +1028,14 @@
 		9729F1EB23084CF00069FD72 /* celcompat */ = {
 			isa = PBXGroup;
 			children = (
+				EA3FC0AA25F63A840019C3BD /* cc.cpp */,
+				EA3FC0AB25F63A840019C3BD /* cc.h */,
+				EA3FC0A925F63A840019C3BD /* charconv.h */,
 				9729F1ED23084D080069FD72 /* filesystem.h */,
 				9729F1EC23084D080069FD72 /* fs.cpp */,
 				9729F1EE23084D080069FD72 /* fs.h */,
+				EA3FC0B125F63A8C0019C3BD /* string_view.h */,
+				EA3FC0B025F63A8C0019C3BD /* sv.h */,
 			);
 			path = celcompat;
 			sourceTree = "<group>";
@@ -1176,7 +1207,7 @@
 				977D81F022FDB239002FF1C2 /* curveplot.cpp */,
 				977D824B22FDB23E002FF1C2 /* curveplot.h */,
 				977D822B22FDB23C002FF1C2 /* dds.cpp */,
-				EA15589A251F3A7A001B25F3 /* dds_decompress.c */,
+				EA15589A251F3A7A001B25F3 /* dds_decompress.cpp */,
 				EA15589B251F3A7A001B25F3 /* dds_decompress.h */,
 				977D81C622FDB236002FF1C2 /* deepskyobj.cpp */,
 				977D823D22FDB23D002FF1C2 /* deepskyobj.h */,
@@ -1363,6 +1394,8 @@
 			isa = PBXGroup;
 			children = (
 				977D833722FDB2AA002FF1C2 /* align.h */,
+				EA9E5A9D25FE483900348AEE /* appleutils.h */,
+				EA9E5A9C25FE483800348AEE /* appleutils.mm */,
 				977D834522FDB2AB002FF1C2 /* bigfix.cpp */,
 				977D833622FDB2AA002FF1C2 /* bigfix.h */,
 				977D833F22FDB2AA002FF1C2 /* bytes.h */,
@@ -1374,10 +1407,14 @@
 				977D833B22FDB2AA002FF1C2 /* filetype.h */,
 				977D833C22FDB2AA002FF1C2 /* formatnum.cpp */,
 				977D834D22FDB2AB002FF1C2 /* formatnum.h */,
+				EA3FC88725F7AFBA0019C3BD /* fsutils.cpp */,
+				EA3FC88625F7AFBA0019C3BD /* fsutils.h */,
 				977D834722FDB2AB002FF1C2 /* memorypool.cpp */,
 				977D834C22FDB2AB002FF1C2 /* memorypool.h */,
 				977D834222FDB2AA002FF1C2 /* reshandle.h */,
 				977D833522FDB2AA002FF1C2 /* resmanager.h */,
+				EA3FC0B525F63AB30019C3BD /* stringutils.cpp */,
+				EA3FC0B625F63AB30019C3BD /* stringutils.h */,
 				EA8D1EB524D6D0BD0071C7B5 /* strnatcmp.cpp */,
 				EA8D1EB424D6D0BD0071C7B5 /* strnatcmp.h */,
 				977D834422FDB2AB002FF1C2 /* timer.cpp */,
@@ -1396,6 +1433,8 @@
 			children = (
 				977D838922FDB2E8002FF1C2 /* celestiacore.cpp */,
 				977D838522FDB2E7002FF1C2 /* celestiacore.h */,
+				EA3FC0A425F63A680019C3BD /* celestiastate.cpp */,
+				EA3FC0A525F63A680019C3BD /* celestiastate.h */,
 				977D837E22FDB2E7002FF1C2 /* configfile.cpp */,
 				977D839522FDB2E9002FF1C2 /* configfile.h */,
 				977D837F22FDB2E7002FF1C2 /* destination.cpp */,
@@ -1480,6 +1519,7 @@
 				971A65F723019BF0009E4EA1 /* CelestiaDSO.h in Headers */,
 				9751DC1723594A8000299997 /* celx_observer.h in Headers */,
 				9751DC1D23594A8000299997 /* celx_phase.h in Headers */,
+				EA3FC0B825F63AB30019C3BD /* stringutils.h in Headers */,
 				97E34AEE2431ED09009E67C3 /* glsupport.h in Headers */,
 				971A660123019BF0009E4EA1 /* CelestiaAstroObject.h in Headers */,
 				971A660A23019BF0009E4EA1 /* CelestiaStar.h in Headers */,
@@ -1489,6 +1529,7 @@
 				971A65EE23019BF0009E4EA1 /* CelestiaVector.h in Headers */,
 				971A65D823019BF0009E4EA1 /* CelestiaSimulation.h in Headers */,
 				971A65F523019BF0009E4EA1 /* CelestiaSelection.h in Headers */,
+				EA3FC0AC25F63A840019C3BD /* charconv.h in Headers */,
 				971A65E423019BF0009E4EA1 /* CelestiaStarCatalog.h in Headers */,
 				971A65FD23019BF0009E4EA1 /* CelestiaLocation.h in Headers */,
 				971A65DE23019BF0009E4EA1 /* CelestiaAppCore.h in Headers */,
@@ -1566,6 +1607,7 @@
 				971A670923019C21009E4EA1 /* vecgl.h in Headers */,
 				97AD59C4235B1B840056CA80 /* legacyscript.h in Headers */,
 				EA8D1EB624D6D0BD0071C7B5 /* strnatcmp.h in Headers */,
+				EA3FC88825F7AFBA0019C3BD /* fsutils.h in Headers */,
 				971A65E623019BF0009E4EA1 /* CelestiaStarCatalog+Private.h in Headers */,
 				971A65FF23019BF0009E4EA1 /* CelestiaLocation+Private.h in Headers */,
 				971A672023019C2B009E4EA1 /* perlin.h in Headers */,
@@ -1575,6 +1617,7 @@
 				971A671523019C26009E4EA1 /* 3dsread.h in Headers */,
 				971A672423019C2B009E4EA1 /* solve.h in Headers */,
 				971A66DF23019C20009E4EA1 /* selection.h in Headers */,
+				EA9E5A9F25FE483900348AEE /* appleutils.h in Headers */,
 				971A663623019C03009E4EA1 /* favorites.h in Headers */,
 				971A667C23019C15009E4EA1 /* xyzvbinary.h in Headers */,
 				97B5E2D3239689B9006F35B4 /* pointstarrenderer.h in Headers */,
@@ -1596,6 +1639,7 @@
 				971A66B323019C20009E4EA1 /* glshader.h in Headers */,
 				971A664423019C0F009E4EA1 /* bigfix.h in Headers */,
 				971A66A223019C20009E4EA1 /* dsooctree.h in Headers */,
+				EA3FC0A725F63A690019C3BD /* celestiastate.h in Headers */,
 				974A6B1D23532EA1007BCABD /* overlayimage.h in Headers */,
 				EA38CEA8255FD1AB009EE79B /* CelestiaAtmosphere.h in Headers */,
 				971A671623019C2B009E4EA1 /* aabox.h in Headers */,
@@ -1661,6 +1705,7 @@
 				971A66B123019C20009E4EA1 /* globular.h in Headers */,
 				971A669723019C20009E4EA1 /* curveplot.h in Headers */,
 				971A667723019C15009E4EA1 /* spiceorbit.h in Headers */,
+				EA3FC0AE25F63A840019C3BD /* cc.h in Headers */,
 				971A663223019C03009E4EA1 /* destination.h in Headers */,
 				971A66A923019C20009E4EA1 /* frametree.h in Headers */,
 				EA7316A0248E1D9B009AE037 /* truetypefont.h in Headers */,
@@ -1673,6 +1718,7 @@
 				971A670A23019C21009E4EA1 /* vertexbuf.h in Headers */,
 				971A65EB23019BF0009E4EA1 /* CelestiaUniversalCoord+Private.h in Headers */,
 				971A671D23019C2B009E4EA1 /* intersect.h in Headers */,
+				EA3FC0B225F63A8C0019C3BD /* sv.h in Headers */,
 				EA15589D251F3A7A001B25F3 /* dds_decompress.h in Headers */,
 				971A66FE23019C21009E4EA1 /* timeline.h in Headers */,
 				9768C446240FCC850097C4F2 /* framebuffer.h in Headers */,
@@ -1684,6 +1730,7 @@
 				9751DC1523594A8000299997 /* celx_frame.h in Headers */,
 				971A668023019C20009E4EA1 /* astro.h in Headers */,
 				971A661523019C03009E4EA1 /* celestiacore.h in Headers */,
+				EA3FC0B325F63A8C0019C3BD /* string_view.h in Headers */,
 				9751DC2D23594A8600299997 /* command.h in Headers */,
 				971A65D523019BF0009E4EA1 /* CelestiaUniverse+Private.h in Headers */,
 				971A669E23019C20009E4EA1 /* dsodb.h in Headers */,
@@ -1758,6 +1805,7 @@
 			files = (
 				971A66DC23019C20009E4EA1 /* rotationmanager.cpp in Sources */,
 				971A666423019C15009E4EA1 /* orbit.cpp in Sources */,
+				EA3FC88925F7AFBA0019C3BD /* fsutils.cpp in Sources */,
 				971A66AA23019C20009E4EA1 /* galaxy.cpp in Sources */,
 				9751DC1223594A8000299997 /* celx_misc.cpp in Sources */,
 				971A66D523019C20009E4EA1 /* rendcontext.cpp in Sources */,
@@ -1772,11 +1820,13 @@
 				971A65E323019BF0009E4EA1 /* CelestiaDSOCatalog.mm in Sources */,
 				971A66D923019C20009E4EA1 /* renderglsl.cpp in Sources */,
 				971A666623019C15009E4EA1 /* precession.cpp in Sources */,
+				EA9E5A9E25FE483900348AEE /* appleutils.mm in Sources */,
 				971A666023019C15009E4EA1 /* jpleph.cpp in Sources */,
 				971A66BF23019C20009E4EA1 /* modelgeometry.cpp in Sources */,
 				971A669623019C20009E4EA1 /* curveplot.cpp in Sources */,
 				9751DC1E23594A8000299997 /* celx_position.cpp in Sources */,
 				971A669F23019C20009E4EA1 /* dsoname.cpp in Sources */,
+				EA3FC0A625F63A690019C3BD /* celestiastate.cpp in Sources */,
 				97E34AEF2431ED09009E67C3 /* glsupport.cpp in Sources */,
 				971A667623019C15009E4EA1 /* spiceorbit.cpp in Sources */,
 				971A671F23019C2B009E4EA1 /* perlin.cpp in Sources */,
@@ -1861,8 +1911,9 @@
 				971A663523019C03009E4EA1 /* favorites.cpp in Sources */,
 				9751DC1323594A8000299997 /* celx_observer.cpp in Sources */,
 				971A667023019C15009E4EA1 /* scriptorbit.cpp in Sources */,
-				EA15589C251F3A7A001B25F3 /* dds_decompress.c in Sources */,
+				EA15589C251F3A7A001B25F3 /* dds_decompress.cpp in Sources */,
 				971A66CE23019C20009E4EA1 /* parseobject.cpp in Sources */,
+				EA3FC0B725F63AB30019C3BD /* stringutils.cpp in Sources */,
 				9751DC2C23594A8600299997 /* cmdparser.cpp in Sources */,
 				9752D7A523ED182D00FFE781 /* value.cpp in Sources */,
 				971A66EE23019C21009E4EA1 /* starcolors.cpp in Sources */,
@@ -1900,6 +1951,7 @@
 				9751DC2223594A8000299997 /* celx_vector.cpp in Sources */,
 				973BBA6A24054FEC00E3B061 /* CelestiaAppCore+Render.mm in Sources */,
 				971A66FB23019C21009E4EA1 /* texture.cpp in Sources */,
+				EA3FC0AD25F63A840019C3BD /* cc.cpp in Sources */,
 				971A66F423019C21009E4EA1 /* staroctree.cpp in Sources */,
 				971A666A23019C15009E4EA1 /* samporbit.cpp in Sources */,
 				971A66B223019C20009E4EA1 /* glshader.cpp in Sources */,

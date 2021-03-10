@@ -11,11 +11,12 @@
 
 #import "CelestiaAppCore+Locale.h"
 
-#include <celutil/util.h>
+#include <celutil/fsutils.h>
 #include <celutil/gettext.h>
 
 NSString *LocalizedFilename(NSString *originalName)
 {
+    using namespace celestia::util;
     return [NSString stringWithUTF8String:LocaleFilename([originalName UTF8String]).string().c_str()];
 }
 

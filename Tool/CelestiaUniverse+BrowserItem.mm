@@ -217,7 +217,7 @@
     if (locations != NULL)
     {
         NSMutableDictionary *locationDictionary = [NSMutableDictionary dictionary];
-        for (vector<Location*>::const_iterator iter = locations->begin();
+        for (std::vector<Location*>::const_iterator iter = locations->begin();
              iter != locations->end(); iter++)
         {
             NSString *name = [NSString stringWithUTF8String:(*iter)->getName(true).c_str()];

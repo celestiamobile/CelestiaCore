@@ -261,8 +261,8 @@ private:
 
 // MARK: Other
 - (NSString *)currentURL {
-    CelestiaState appState;
-    appState.captureState(core);
+    CelestiaState appState(core);
+    appState.captureState();
 
     Url currentURL(appState, Url::CurrentVersion);
     return [NSString stringWithUTF8String:currentURL.getAsString().c_str()];
