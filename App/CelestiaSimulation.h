@@ -42,13 +42,13 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CelestiaGoToLocation : NSObject
 
 @property (readonly) CelestiaSelection *selection;
-@property (readonly) double longitude;
-@property (readonly) double latitude;
+@property (readonly) float longitude;
+@property (readonly) float latitude;
 @property (readonly) double distance;
 @property (readwrite) double duration;
 
-- (instancetype)initWithSelection:(CelestiaSelection *)selection longitude:(double)longitude latitude:(double)latitude distance:(double)distance unit:(SimulationDistanceUnit)unit;
-- (instancetype)initWithSelection:(CelestiaSelection *)selection longitude:(double)longitude latitude:(double)latitude;
+- (instancetype)initWithSelection:(CelestiaSelection *)selection longitude:(float)longitude latitude:(float)latitude distance:(double)distance unit:(SimulationDistanceUnit)unit;
+- (instancetype)initWithSelection:(CelestiaSelection *)selection longitude:(float)longitude latitude:(float)latitude;
 - (instancetype)initWithSelection:(CelestiaSelection *)selection distance:(double)distance unit:(SimulationDistanceUnit)unit;
 - (instancetype)initWithSelection:(CelestiaSelection *)selection;
 
