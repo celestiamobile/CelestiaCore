@@ -64,6 +64,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property BOOL showOrbits ;
 
+@property BOOL showFadingOrbits ;
+
 @property BOOL showCelestialSphere ;
 
 @property BOOL showNightMaps ;
@@ -89,6 +91,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property BOOL showMarkers ;
 
 @property BOOL showPartialTrajectories ;
+
+@property BOOL showEcliptic ;
+
+@property BOOL showTintedIllumination ;
 
 // Label Settings
 

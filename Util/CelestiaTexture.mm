@@ -1,5 +1,5 @@
 //
-// CelestiaTexture.m
+// CelestiaTexture.mm
 //
 // Copyright © 2020 Celestia Development Team. All rights reserved.
 //

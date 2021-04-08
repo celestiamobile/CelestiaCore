@@ -54,17 +54,19 @@ static NSString *CS_PREV_VERSIONS[CS_NUM_PREV_VERSIONS] = {
                TAGDEF(437,@"showPlanetRings")
                TAGDEF(416,@"showMarkers")
                TAGDEF(405,@"showOrbits")
-               //    TAGDEF(999,@"showPartialTrajectories")
                TAGDEF(409,@"showSmoothLines")
                TAGDEF(410,@"showEclipseShadows")
                TAGDEF(412,@"showRingShadows")
                TAGDEF(419,@"showCloudShadows")
-               //        TAGDEF(411,@"showStarsAsPoints")
+               TAGDEF(411,@"showFadingOrbits")
                TAGDEF(414,@"showAutoMag")
                TAGDEF(406,@"showCelestialSphere")
                TAGDEF(420,@"showEclipticGrid")
                TAGDEF(421,@"showHorizonGrid")
                TAGDEF(422,@"showGalacticGrid")
+               TAGDEF(423,@"showPartialTrajectories")
+               TAGDEF(424,@"showTintedIllumination")
+               TAGDEF(425,@"showEcliptic")
                // object labels
                TAGDEF(500,@"showStarLabels")
                TAGDEF(501,@"showPlanetLabels")
@@ -238,7 +240,10 @@ RENDERMETHODS(CometTails)
 RENDERMETHODS(PlanetRings)
 RENDERMETHODS(Markers)
 RENDERMETHODS(Orbits)
+RENDERMETHODS(FadingOrbits)
 RENDERMETHODS(PartialTrajectories)
+RENDERMETHODS(Ecliptic)
+RENDERMETHODS(TintedIllumination)
 RENDERMETHODS(SmoothLines)
 RENDERMETHODS(EclipseShadows)
 RENDERMETHODS(RingShadows)
@@ -468,7 +473,6 @@ FEATUREMETHODS(Other)
         case  25: tag = 414; break;  // AutoMag
         case  20: tag = 415; break;  // CometTails
         case  11: tag = 416; break;  // Markers
-            //            case  19: tag = 411; break;  // StarsAsPoints
         case  24: tag = 409; break;  // SmoothLines
         default : tag = key; break; // Special or not a setting
     }

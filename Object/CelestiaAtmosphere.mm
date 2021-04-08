@@ -1,5 +1,5 @@
 //
-// CelestiaAtmosphere.m
+// CelestiaAtmosphere.mm
 //
 // Copyright © 2020 Celestia Development Team. All rights reserved.
 //
