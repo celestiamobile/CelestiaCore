@@ -53,7 +53,7 @@
         _stringValue = name;
         _alternativeName = alternativeName;
         _childrenProvider = nil;
-        _childrenKeys = [[children allKeys] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
+        _childrenKeys = [[children allKeys] sortedArrayUsingSelector:@selector(localizedStandardCompare:)];
         NSMutableArray *values = [NSMutableArray array];
         for (NSString *key : _childrenKeys) {
             [values addObject:[children objectForKey:key]];
@@ -83,7 +83,7 @@
 }
 
 - (void)setChildren:(NSDictionary<NSString *, CelestiaBrowserItem *> *)children {
-    _childrenKeys = [[children allKeys] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
+    _childrenKeys = [[children allKeys] sortedArrayUsingSelector:@selector(localizedStandardCompare:)];
     NSMutableArray *values = [NSMutableArray array];
     for (NSString *key : _childrenKeys) {
         [values addObject:[children objectForKey:key]];
