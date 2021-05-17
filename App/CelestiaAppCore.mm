@@ -286,7 +286,7 @@ private:
 }
 
 - (void)runScript:(NSString *)path {
-    core->runScript([path UTF8String]);
+    core->runScript([path UTF8String], false);
 }
 
 - (void)goToURL:(NSString *)url {
