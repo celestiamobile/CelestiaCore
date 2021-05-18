@@ -154,7 +154,7 @@ private:
     return (BOOL)celestia::gl::init();
 }
 
-- (BOOL)startSimulationWithConfigFileName:(NSString *)configFileName extraDirectories:(NSArray<NSString *> *)extraDirectories progressReporter:(void (^)(NSString *))reporter {
+- (BOOL)startSimulationWithConfigFileName:(NSString *)configFileName extraDirectories:(NSArray<NSString *> *)extraDirectories progressReporter:(void (NS_NOESCAPE ^)(NSString *))reporter {
 
     AppCoreProgressWatcher watcher(reporter);
 
