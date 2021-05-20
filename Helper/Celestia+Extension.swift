@@ -37,10 +37,6 @@ extension CelestiaSelection {
     }
 }
 
-var renderInfo: String {
-    return CelestiaAppCore.shared.renderInfo
-}
-
 // MARK: Browser
 var solBrowserRoot: CelestiaBrowserItem = {
     let universe = CelestiaAppCore.shared.simulation.universe
