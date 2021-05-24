@@ -58,8 +58,8 @@
     return [self body]->getMass();
 }
 
-- (float)albedo {
-    return [self body]->getAlbedo();
+- (float)geomAlbedo {
+    return [self body]->getGeomAlbedo();
 }
 
 - (void)setMass:(float)m
@@ -67,8 +67,8 @@
     [self body]->setMass(m);
 }
 
-- (void)setAlbedo:(float)a {
-    [self body]->setAlbedo(a);
+- (void)setGeomAlbedo:(float)a {
+    [self body]->setGeomAlbedo(a);
 }
 
 - (BOOL)hasRings {

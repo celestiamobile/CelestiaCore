@@ -114,6 +114,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)setFont:(NSString *)fontPath collectionIndex:(NSInteger)collectionIndex fontSize:(NSInteger)fontSize;
 - (void)setTitleFont:(NSString *)fontPath collectionIndex:(NSInteger)collectionIndex fontSize:(NSInteger)fontSize;
 - (void)setRendererFont:(NSString *)fontPath collectionIndex:(NSInteger)collectionIndex fontSize:(NSInteger)fontSize fontStyle:(RendererFontStyle)fontStyle;
+- (void)clearFonts;
 - (void)setPickTolerance:(CGFloat)pickTolerance;
 
 // MARK: History

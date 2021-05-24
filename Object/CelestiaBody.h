@@ -48,7 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, readonly) NSDate *endTime;
 @property (nullable, readonly) CelestiaAtmosphere *atomosphere;
 @property float mass;
-@property float albedo;
+@property float geomAlbedo;
 @property (readonly) NSArray<NSString *> *alternateSurfaceNames;
 
 @property (nullable, readonly) CelestiaPlanetarySystem *system;

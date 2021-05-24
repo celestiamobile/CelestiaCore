@@ -255,6 +255,10 @@ private:
     core->setRendererFont([fontPath UTF8String], collectionIndex, fontSize, (Renderer::FontStyle)fontStyle);
 }
 
+- (void)clearFonts {
+    core->clearFonts();
+}
+
 - (void)setPickTolerance:(CGFloat)pickTolerance {
     core->setPickTolerance(pickTolerance);
 }
