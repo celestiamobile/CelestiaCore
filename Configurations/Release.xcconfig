@@ -1,0 +1,23 @@
+//
+// Release.xcconfig
+//
+// Copyright © 2021 Celestia Development Team. All rights reserved.
+//
+// This program is free software; you can redistribute it and/or
+// modify it under the terms of the GNU General Public License
+// as published by the Free Software Foundation; either version 2
+// of the License, or (at your option) any later version.
+//
+
+#include "Common.xcconfig"
+
+PREPROCESSOR_BASE = NO_DEBUG EIGEN_NO_DEBUG ENABLE_NLS USE_SPICE
+PREPROCESSOR_MACCATALYST_YES = $(PREPROCESSOR_BASE) GL_ES
+PREPROCESSOR_MACCATALYST_NO = $(PREPROCESSOR_BASE)
+
+GCC_PREPROCESSOR_DEFINITIONS = $(PREPROCESSOR_BASE)
+GCC_PREPROCESSOR_DEFINITIONS[sdk=macosx*] = $(PREPROCESSOR_MACCATALYST_$(IS_MACCATALYST))
+GCC_PREPROCESSOR_DEFINITIONS[sdk=appletvos*] = $(PREPROCESSOR_BASE) GL_ES
+GCC_PREPROCESSOR_DEFINITIONS[sdk=appletvsimulator*] = $(PREPROCESSOR_BASE) GL_ES
+GCC_PREPROCESSOR_DEFINITIONS[sdk=iphoneos*] = $(PREPROCESSOR_BASE) GL_ES
+GCC_PREPROCESSOR_DEFINITIONS[sdk=iphonesimulator*] = $(PREPROCESSOR_BASE) GL_ES
