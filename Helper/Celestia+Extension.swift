@@ -38,12 +38,12 @@ extension CelestiaSelection {
 }
 
 // MARK: Browser
-var solBrowserRoot: CelestiaBrowserItem = {
+var solBrowserRoot: CelestiaBrowserItem? = {
     let universe = CelestiaAppCore.shared.simulation.universe
-    let sol = universe.find("Sol")
-    return CelestiaBrowserItem(name: universe.starCatalog.starName(sol.star!),
+    guard let sol = universe.find("Sol").star else { return nil }
+    return CelestiaBrowserItem(name: universe.starCatalog.starName(sol),
                                alternativeName: CelestiaString("Solar System", comment: ""),
-                               catEntry: sol.star!,
+                               catEntry: sol,
                                provider: universe)
 }()
 
