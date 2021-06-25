@@ -81,8 +81,6 @@
 		971A663623019C03009E4EA1 /* favorites.h in Headers */ = {isa = PBXBuildFile; fileRef = 977D838222FDB2E7002FF1C2 /* favorites.h */; };
 		971A663723019C03009E4EA1 /* helper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 977D838322FDB2E7002FF1C2 /* helper.cpp */; };
 		971A663823019C03009E4EA1 /* helper.h in Headers */ = {isa = PBXBuildFile; fileRef = 977D838822FDB2E8002FF1C2 /* helper.h */; };
-		971A663923019C03009E4EA1 /* imagecapture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 977D838A22FDB2E8002FF1C2 /* imagecapture.cpp */; };
-		971A663A23019C03009E4EA1 /* imagecapture.h in Headers */ = {isa = PBXBuildFile; fileRef = 977D839322FDB2E9002FF1C2 /* imagecapture.h */; };
 		971A663B23019C03009E4EA1 /* moviecapture.h in Headers */ = {isa = PBXBuildFile; fileRef = 977D839422FDB2E9002FF1C2 /* moviecapture.h */; };
 		971A663C23019C03009E4EA1 /* scriptmenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 977D837422FDB2E7002FF1C2 /* scriptmenu.cpp */; };
 		971A663D23019C03009E4EA1 /* scriptmenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 977D838B22FDB2E8002FF1C2 /* scriptmenu.h */; };
@@ -778,11 +776,9 @@
 		977D838722FDB2E8002FF1C2 /* destination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = destination.h; sourceTree = "<group>"; };
 		977D838822FDB2E8002FF1C2 /* helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = helper.h; sourceTree = "<group>"; };
 		977D838922FDB2E8002FF1C2 /* celestiacore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = celestiacore.cpp; sourceTree = "<group>"; };
-		977D838A22FDB2E8002FF1C2 /* imagecapture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imagecapture.cpp; sourceTree = "<group>"; };
 		977D838B22FDB2E8002FF1C2 /* scriptmenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scriptmenu.h; sourceTree = "<group>"; };
 		977D839022FDB2E8002FF1C2 /* url.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = url.h; sourceTree = "<group>"; };
 		977D839222FDB2E8002FF1C2 /* eclipsefinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eclipsefinder.h; sourceTree = "<group>"; };
-		977D839322FDB2E9002FF1C2 /* imagecapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imagecapture.h; sourceTree = "<group>"; };
 		977D839422FDB2E9002FF1C2 /* moviecapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = moviecapture.h; sourceTree = "<group>"; };
 		977D839522FDB2E9002FF1C2 /* configfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = configfile.h; sourceTree = "<group>"; };
 		977D83C622FDB309002FF1C2 /* material.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = material.cpp; sourceTree = "<group>"; };
@@ -1439,8 +1435,6 @@
 				977D838222FDB2E7002FF1C2 /* favorites.h */,
 				977D838322FDB2E7002FF1C2 /* helper.cpp */,
 				977D838822FDB2E8002FF1C2 /* helper.h */,
-				977D838A22FDB2E8002FF1C2 /* imagecapture.cpp */,
-				977D839322FDB2E9002FF1C2 /* imagecapture.h */,
 				977D839422FDB2E9002FF1C2 /* moviecapture.h */,
 				977D837422FDB2E7002FF1C2 /* scriptmenu.cpp */,
 				977D838B22FDB2E8002FF1C2 /* scriptmenu.h */,
@@ -1573,7 +1567,6 @@
 				971A65F423019BF0009E4EA1 /* CelestiaSelection+Private.h in Headers */,
 				971A670423019C21009E4EA1 /* trajmanager.h in Headers */,
 				971A663823019C03009E4EA1 /* helper.h in Headers */,
-				971A663A23019C03009E4EA1 /* imagecapture.h in Headers */,
 				971A66E123019C20009E4EA1 /* shadermanager.h in Headers */,
 				971A66FA23019C21009E4EA1 /* texmanager.h in Headers */,
 				971A671723019C2B009E4EA1 /* capsule.h in Headers */,
@@ -1978,7 +1971,6 @@
 				971A66F423019C21009E4EA1 /* staroctree.cpp in Sources */,
 				971A666A23019C15009E4EA1 /* samporbit.cpp in Sources */,
 				971A66B223019C20009E4EA1 /* glshader.cpp in Sources */,
-				971A663923019C03009E4EA1 /* imagecapture.cpp in Sources */,
 				971A66F023019C21009E4EA1 /* stardb.cpp in Sources */,
 				971A66A623019C20009E4EA1 /* frame.cpp in Sources */,
 				971A663123019C03009E4EA1 /* destination.cpp in Sources */,
