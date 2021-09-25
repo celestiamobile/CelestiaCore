@@ -20,6 +20,7 @@ enum UserDefaultsKey: String {
     case fullDPI
     case msaa
     #if os(iOS) || os(tvOS)
+    case frameRate
     case onboardMessageDisplayed
     #endif
 }
