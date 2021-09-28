@@ -89,6 +89,7 @@ static NSString *CS_PREV_VERSIONS[CS_NUM_PREV_VERSIONS] = {
                TAGDEF(640,@"resolution")
                TAGDEF(650,@"timeZone")
                TAGDEF(660,@"dateFormat")
+               TAGDEF(670,@"measurementSystem")
                // orbits
                //        TAGDEF(999,@"minimumOrbitSize")
                TAGDEF(700,@"showPlanetOrbits")
@@ -435,6 +436,11 @@ FEATUREMETHODS(Other)
 
 - (NSInteger)hudDetail { return core->getHudDetail(); }
 - (void)setHudDetail:(NSInteger)value { core->setHudDetail((int)value); }
+
+// Measurement Settings
+
+- (CelestiaMeasurementSystem)measurementSystem { return (CelestiaMeasurementSystem)core->getMeasurementSystem(); }
+- (void)setMeasurementSystem:(CelestiaMeasurementSystem)measurementSystem { return core->setMeasurementSystem((CelestiaCore::MeasurementSystem)measurementSystem); }
 
 // Time settings
 

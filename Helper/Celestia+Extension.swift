@@ -10,6 +10,7 @@
 //
 
 import CelestiaCore
+import Foundation
 
 // MARK: singleton
 private var core: CelestiaAppCore?
@@ -264,10 +265,28 @@ extension CelestiaAppCore {
     private func overviewForBody(_ body: CelestiaBody) -> String {
         var str = ""
 
-        if body.isEllipsoid {
-            str += String(format: CelestiaString("Equatorial radius: %s", comment: "").toLocalizationTemplate, body.radius.radiusString)
+        let radius = body.radius
+        let radiusString: String
+        let oneMiInKm: Float = 1.609344
+        let oneFtInKm: Float = 0.0003048
+        if (measurementSystem == .imperial) {
+            if (radius >= oneMiInKm) {
+                radiusString = String(format: CelestiaString("%d mi", comment: ""), Int(radius / oneMiInKm))
+            } else {
+                radiusString = String(format: CelestiaString("%d ft", comment: ""), Int(radius / oneFtInKm))
+            }
         } else {
-            str += String(format: CelestiaString("Size: %s", comment: "").toLocalizationTemplate, body.radius.radiusString)
+            if (radius >= 1) {
+                radiusString = String(format: CelestiaString("%d km", comment: ""), Int(radius))
+            } else {
+                radiusString = String(format: CelestiaString("%d m", comment: ""), Int(radius * 1000))
+            }
+        }
+
+        if body.isEllipsoid {
+            str += String(format: CelestiaString("Equatorial radius: %s", comment: "").toLocalizationTemplate, radiusString)
+        } else {
+            str += String(format: CelestiaString("Size: %s", comment: "").toLocalizationTemplate, radiusString)
         }
 
         let orbit = body.orbit(at: simulation.time)
@@ -364,14 +383,5 @@ extension CelestiaAppCore {
         str += String(format: CelestiaString("B: %d° %d′ %.2f″", comment: ""), dms.degrees, abs(dms.minutes), abs(dms.seconds))
 
         return str
-    }
-}
-
-private extension Float {
-    var radiusString: String {
-        if self < 1 {
-            return String(format: CelestiaString("%d m", comment: ""), Int(self * 1000))
-        }
-        return String(format: CelestiaString("%d km", comment: ""), Int(self))
     }
 }

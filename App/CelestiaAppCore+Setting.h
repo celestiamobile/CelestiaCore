@@ -13,6 +13,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_ENUM(NSInteger, CelestiaMeasurementSystem) {
+    CelestiaMeasurementSystemMetric      = 0,
+    CelestiaMeasurementSystemImperial    = 1,
+};
+
 @interface CelestiaAppCore (Setting)
 
 // Time Settings
@@ -159,6 +164,8 @@ NS_ASSUME_NONNULL_BEGIN
 // Texture Settings
 
 @property NSInteger resolution;
+
+@property CelestiaMeasurementSystem measurementSystem;
 
 - (void)initializeSetting;
 
