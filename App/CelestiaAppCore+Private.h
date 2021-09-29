@@ -32,4 +32,9 @@
 - (void)appCoreKeyDown:(int)input modifiers:(int)modifiers;
 - (void)appCoreCharEnter:(char)input modifiers:(int)modifiers;
 
+// MARK: Joystick events
+- (void)appCoreJoystickButtonUp:(int)button;
+- (void)appCoreJoystickButtonDown:(int)button;
+- (void)appCoreJoystickAxis:(int)axis amount:(float)amount;
+
 @end

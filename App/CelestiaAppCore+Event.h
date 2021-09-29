@@ -29,6 +29,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)keyDown:(NSInteger)input;
 - (void)charEnter:(char)input;
 
+// MARK: Joystick events
+- (void)joystickButtonUp:(CelestiaJoystickButton)button;
+- (void)joystickButtonDown:(CelestiaJoystickButton)button;
+- (void)joystickAxis:(CelestiaJoystickAxis)axis amount:(float)amount;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -42,6 +42,23 @@ typedef NS_ENUM(NSUInteger, CursorShape) {
     CursorShapeWhatsThis        = 16,
 };
 
+typedef NS_ENUM(NSUInteger, CelestiaJoystickAxis) {
+    CelestiaJoystickAxisX           = 0,
+    CelestiaJoystickAxisY           = 1,
+    CelestiaJoystickAxisZ           = 2,
+};
+
+typedef NS_ENUM(NSUInteger, CelestiaJoystickButton) {
+    CelestiaJoystickButton1           = 0,
+    CelestiaJoystickButton2           = 1,
+    CelestiaJoystickButton3           = 2,
+    CelestiaJoystickButton4           = 3,
+    CelestiaJoystickButton5           = 4,
+    CelestiaJoystickButton6           = 5,
+    CelestiaJoystickButton7           = 6,
+    CelestiaJoystickButton8           = 7,
+};
+
 typedef NS_ENUM(NSUInteger, ScreenshotFileType) {
     ScreenshotFileTypeJPEG      = 1,
     ScreenshotFileTypePNG       = 4,

@@ -197,6 +197,19 @@ enum {
     [self appCoreCharEnter:input modifiers:0];
 }
 
+// MARK: Joystick events
+- (void)joystickButtonUp:(CelestiaJoystickButton)button {
+    [self appCoreJoystickButtonUp:(int)button];
+}
+
+- (void)joystickButtonDown:(CelestiaJoystickButton)button {
+    [self appCoreJoystickButtonDown:(int)button];
+}
+
+- (void)joystickAxis:(CelestiaJoystickAxis)axis amount:(float)amount {
+    [self appCoreJoystickAxis:(int)axis amount:amount];
+}
+
 // MARK: Private
 - (int)toCelestiaKey:(unichar)key modifiers:(NSUInteger)modifiers {
 

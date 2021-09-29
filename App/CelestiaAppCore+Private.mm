@@ -47,4 +47,16 @@
     core->charEntered(input, modifiers);
 }
 
+// MARK: Joystick events
+- (void)appCoreJoystickButtonUp:(int)button {
+    core->joystickButton(button, false);
+}
+
+- (void)appCoreJoystickButtonDown:(int)button {
+    core->joystickButton(button, true);
+}
+
+- (void)appCoreJoystickAxis:(int)axis amount:(float)amount {
+    core->joystickAxis(axis, amount);
+}
 @end
