@@ -18,23 +18,23 @@
 @class CelestiaEclipse;
 @class CelestiaDestination;
 
-typedef NS_ENUM(NSUInteger, SimulationCoordinateSystem) {
-    SimulationCoordinateSystemUniversal = 0,
-    SimulationCoordinateSystemEcliptical = 1,
-    SimulationCoordinateSystemEquatorial = 2,
-    SimulationCoordinateSystemBodyFixed = 3,
-    SimulationCoordinateSystemPhaseLock = 5,
-    SimulationCoordinateSystemChase = 6,
-    SimulationCoordinateSystemPhaseLock_Old = 100,
-    SimulationCoordinateSystemChase_Old = 101,
-    SimulationCoordinateSystemObserverLocal = 200,
-    SimulationCoordinateSystemUnknown = 1000,
+typedef NS_ENUM(NSUInteger, CelestiaSimulationCoordinateSystem) {
+    CelestiaSimulationCoordinateSystemUniversal = 0,
+    CelestiaSimulationCoordinateSystemEcliptical = 1,
+    CelestiaSimulationCoordinateSystemEquatorial = 2,
+    CelestiaSimulationCoordinateSystemBodyFixed = 3,
+    CelestiaSimulationCoordinateSystemPhaseLock = 5,
+    CelestiaSimulationCoordinateSystemChase = 6,
+    CelestiaSimulationCoordinateSystemPhaseLock_Old = 100,
+    CelestiaSimulationCoordinateSystemChase_Old = 101,
+    CelestiaSimulationCoordinateSystemObserverLocal = 200,
+    CelestiaSimulationCoordinateSystemUnknown = 1000,
 };
 
-typedef NS_ENUM(NSUInteger, SimulationDistanceUnit) {
-    SimulationDistanceUnitKM = 0,
-    SimulationDistanceUnitRadii = 1,
-    SimulationDistanceUnitAU = 2,
+typedef NS_ENUM(NSUInteger, CelestiaSimulationDistanceUnit) {
+    CelestiaSimulationDistanceUnitKM = 0,
+    CelestiaSimulationDistanceUnitRadii = 1,
+    CelestiaSimulationDistanceUnitAU = 2,
 };
 
 NS_ASSUME_NONNULL_BEGIN
@@ -47,9 +47,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (readonly) double distance;
 @property (readwrite) double duration;
 
-- (instancetype)initWithSelection:(CelestiaSelection *)selection longitude:(float)longitude latitude:(float)latitude distance:(double)distance unit:(SimulationDistanceUnit)unit;
+- (instancetype)initWithSelection:(CelestiaSelection *)selection longitude:(float)longitude latitude:(float)latitude distance:(double)distance unit:(CelestiaSimulationDistanceUnit)unit;
 - (instancetype)initWithSelection:(CelestiaSelection *)selection longitude:(float)longitude latitude:(float)latitude;
-- (instancetype)initWithSelection:(CelestiaSelection *)selection distance:(double)distance unit:(SimulationDistanceUnit)unit;
+- (instancetype)initWithSelection:(CelestiaSelection *)selection distance:(double)distance unit:(CelestiaSimulationDistanceUnit)unit;
 - (instancetype)initWithSelection:(CelestiaSelection *)selection;
 
 @end
@@ -67,7 +67,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (CelestiaSelection *)findObjectFromPath:(NSString *)path NS_SWIFT_NAME(findObject(from:));
 
-- (void)setFrame:(SimulationCoordinateSystem)coordinate target:(CelestiaSelection *)target reference:(CelestiaSelection *)reference NS_SWIFT_NAME(setFrame(coordinate:target:reference:));
+- (void)setFrame:(CelestiaSimulationCoordinateSystem)coordinate target:(CelestiaSelection *)target reference:(CelestiaSelection *)reference NS_SWIFT_NAME(setFrame(coordinate:target:reference:));
 
 - (void)reverseObserverOrientation;
 

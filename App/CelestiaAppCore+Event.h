@@ -16,10 +16,10 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CelestiaAppCore (Event)
 
 // MARK: Mouse events
-- (void)mouseButtonUp:(CGPoint)location modifiers:(NSUInteger)modifiers buttons:(MouseButton)buttons NS_SWIFT_NAME(mouseButtonUp(at:modifiers:with:));
-- (void)mouseButtonDown:(CGPoint)location modifiers:(NSUInteger)modifiers buttons:(MouseButton)buttons NS_SWIFT_NAME(mouseButtonDown(at:modifiers:with:));
+- (void)mouseButtonUp:(CGPoint)location modifiers:(NSUInteger)modifiers buttons:(CelestiaMouseButton)buttons NS_SWIFT_NAME(mouseButtonUp(at:modifiers:with:));
+- (void)mouseButtonDown:(CGPoint)location modifiers:(NSUInteger)modifiers buttons:(CelestiaMouseButton)buttons NS_SWIFT_NAME(mouseButtonDown(at:modifiers:with:));
 - (void)mouseDragged:(CGPoint)location NS_SWIFT_NAME(mouseDragged(to:));
-- (void)mouseMove:(CGPoint)offset modifiers:(NSUInteger)modifiers buttons:(MouseButton)buttons NS_SWIFT_NAME(mouseMove(by:modifiers:with:));
+- (void)mouseMove:(CGPoint)offset modifiers:(NSUInteger)modifiers buttons:(CelestiaMouseButton)buttons NS_SWIFT_NAME(mouseMove(by:modifiers:with:));
 - (void)mouseWheel:(CGFloat)motion modifiers:(NSUInteger)modifiers NS_SWIFT_NAME(mouseWheel(by:modifiers:));
 
 // MARK: Key events

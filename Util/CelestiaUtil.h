@@ -15,7 +15,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DMS : NSObject
+@interface CelestiaDMS : NSObject
 
 @property NSInteger hours;
 @property NSInteger degrees;
@@ -37,7 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface Astro : NSObject
+@interface CelestiaAstroUtils : NSObject
 
 + (nullable NSString *)stringWithCoordinateSystem:(int)n;
 + (int)coordinateSystem:(NSString *)coord;

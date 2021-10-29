@@ -344,14 +344,14 @@ extension CelestiaAppCore {
         let time = simulation.time
 
         let celPos = star.position(at: time).offet(from: .zero)
-        let eqPos = Astro.ecliptic(toEquatorial: Astro.cel(toJ2000Ecliptic: celPos))
-        let sph = Astro.rect(toSpherical: eqPos)
+        let eqPos = CelestiaAstroUtils.ecliptic(toEquatorial: CelestiaAstroUtils.cel(toJ2000Ecliptic: celPos))
+        let sph = CelestiaAstroUtils.rect(toSpherical: eqPos)
 
-        let hms = DMS(decimal: sph.dx)
+        let hms = CelestiaDMS(decimal: sph.dx)
         str += String(format: CelestiaString("RA: %dh %dm %.2fs", comment: ""), hms.hours, abs(hms.minutes), abs(hms.seconds))
 
         str += "\n"
-        let dms = DMS(decimal: sph.dy)
+        let dms = CelestiaDMS(decimal: sph.dy)
         str += String(format: CelestiaString("DEC: %d° %d′ %.2f″", comment: ""), dms.degrees, abs(dms.minutes), abs(dms.seconds))
 
         return str
@@ -361,25 +361,25 @@ extension CelestiaAppCore {
         var str = ""
 
         let celPos = dso.position
-        let eqPos = Astro.ecliptic(toEquatorial: Astro.cel(toJ2000Ecliptic: celPos))
-        var sph = Astro.rect(toSpherical: eqPos)
+        let eqPos = CelestiaAstroUtils.ecliptic(toEquatorial: CelestiaAstroUtils.cel(toJ2000Ecliptic: celPos))
+        var sph = CelestiaAstroUtils.rect(toSpherical: eqPos)
 
-        let hms = DMS(decimal: sph.dx)
+        let hms = CelestiaDMS(decimal: sph.dx)
         str += String(format: CelestiaString("RA: %dh %dm %.2fs", comment: ""), hms.hours, abs(hms.minutes), abs(hms.seconds))
 
         str += "\n"
-        var dms = DMS(decimal: sph.dy)
+        var dms = CelestiaDMS(decimal: sph.dy)
         str += String(format: CelestiaString("Dec: %d° %d′ %.2f″", comment: ""), dms.degrees, abs(dms.minutes), abs(dms.seconds))
 
-        let galPos = Astro.equatorial(toGalactic: eqPos)
-        sph = Astro.rect(toSpherical: galPos)
+        let galPos = CelestiaAstroUtils.equatorial(toGalactic: eqPos)
+        sph = CelestiaAstroUtils.rect(toSpherical: galPos)
 
         str += "\n"
-        dms = DMS(decimal: sph.dx)
+        dms = CelestiaDMS(decimal: sph.dx)
         str += String(format: CelestiaString("L: %d° %d′ %.2f″", comment: ""), dms.degrees, abs(dms.minutes), abs(dms.seconds))
 
         str += "\n"
-        dms = DMS(decimal: sph.dy)
+        dms = CelestiaDMS(decimal: sph.dy)
         str += String(format: CelestiaString("B: %d° %d′ %.2f″", comment: ""), dms.degrees, abs(dms.minutes), abs(dms.seconds))
 
         return str

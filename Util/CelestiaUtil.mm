@@ -15,7 +15,7 @@
 #import "CelestiaUtil.h"
 #import "CelestiaVector+Private.h"
 
-@implementation DMS
+@implementation CelestiaDMS
 
 - (instancetype)initWithDecimal:(double)decimal {
     int degrees, minutes;
@@ -106,7 +106,7 @@
 
 NSDictionary* coordinateDict;
 
-@implementation Astro
+@implementation CelestiaAstroUtils
 
 + (NSString *)stringWithCoordinateSystem:(int)n {
     NSArray* keys = [coordinateDict allKeys];

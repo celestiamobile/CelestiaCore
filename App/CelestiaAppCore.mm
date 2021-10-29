@@ -55,7 +55,7 @@ private:
 class AppCoreCursorHandler: public CelestiaCore::CursorHandler
 {
 public:
-    AppCoreCursorHandler(void (^block)(CursorShape)) : CelestiaCore::CursorHandler(), block(block), shape(CelestiaCore::ArrowCursor) {};
+    AppCoreCursorHandler(void (^block)(CelestiaCursorShape)) : CelestiaCore::CursorHandler(), block(block), shape(CelestiaCore::ArrowCursor) {};
 
     void setCursorShape(CelestiaCore::CursorShape shape)
     {
@@ -64,7 +64,7 @@ public:
         {
             this->shape = shape;
             @autoreleasepool {
-                block((CursorShape)shape);
+                block((CelestiaCursorShape)shape);
             }
         }
     }
@@ -74,7 +74,7 @@ public:
         return shape;
     }
 private:
-    void (^block)(CursorShape);
+    void (^block)(CelestiaCursorShape);
     CelestiaCore::CursorShape shape;
 };
 
@@ -133,7 +133,7 @@ private:
         alerter = new AppCoreAlerter(^(NSString *error) {
             [[weakSelf delegate] celestiaAppCoreFatalErrorHappened:error];
         });
-        cursorHandler = new AppCoreCursorHandler(^(CursorShape shape) {
+        cursorHandler = new AppCoreCursorHandler(^(CelestiaCursorShape shape) {
             [[weakSelf delegate] celestiaAppCoreCursorShapeChanged:shape];
         });
         contextMenuHandler = new AppCoreContextMenuHandler(^(CGPoint location, CelestiaSelection *selection) {
@@ -251,7 +251,7 @@ private:
     core->setTitleFont([fontPath UTF8String], collectionIndex, fontSize);
 }
 
-- (void)setRendererFont:(NSString *)fontPath collectionIndex:(NSInteger)collectionIndex fontSize:(NSInteger)fontSize fontStyle:(RendererFontStyle)fontStyle {
+- (void)setRendererFont:(NSString *)fontPath collectionIndex:(NSInteger)collectionIndex fontSize:(NSInteger)fontSize fontStyle:(CelestiaRendererFontStyle)fontStyle {
     core->setRendererFont([fontPath UTF8String], collectionIndex, fontSize, (Renderer::FontStyle)fontStyle);
 }
 
@@ -297,7 +297,7 @@ private:
     core->goToUrl([url UTF8String]);
 }
 
-- (BOOL)screenshot:(NSString *)filePath withFileSize:(ScreenshotFileType)type {
+- (BOOL)screenshot:(NSString *)filePath withFileSize:(CelestiaScreenshotFileType)type {
     return (BOOL)core->saveScreenShot([filePath UTF8String], (ContentType)type);
 }
 

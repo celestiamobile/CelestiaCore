@@ -39,7 +39,7 @@ typedef NS_OPTIONS(NSUInteger, CelestiaGoToLocationFieldMask) {
     double _duration;
 }
 
-- (instancetype)initWithSelection:(CelestiaSelection *)selection longitude:(float)longitude latitude:(float)latitude distance:(double)distance unit:(SimulationDistanceUnit)unit validMask:(CelestiaGoToLocationFieldMask)mask {
+- (instancetype)initWithSelection:(CelestiaSelection *)selection longitude:(float)longitude latitude:(float)latitude distance:(double)distance unit:(CelestiaSimulationDistanceUnit)unit validMask:(CelestiaGoToLocationFieldMask)mask {
     self = [super init];
     if (self) {
         fieldMask = mask;
@@ -50,13 +50,13 @@ typedef NS_OPTIONS(NSUInteger, CelestiaGoToLocationFieldMask) {
         _duration = 5;
 
         switch (unit) {
-            case SimulationDistanceUnitKM:
+            case CelestiaSimulationDistanceUnitKM:
                 _distance = distance;
                 break;
-            case SimulationDistanceUnitAU:
-                _distance = [Astro AUtoKilometers:distance];
+            case CelestiaSimulationDistanceUnitAU:
+                _distance = [CelestiaAstroUtils AUtoKilometers:distance];
                 break;
-            case SimulationDistanceUnitRadii:
+            case CelestiaSimulationDistanceUnitRadii:
             default:
                 _distance = [selection radius] * distance;
                 break;
@@ -65,20 +65,20 @@ typedef NS_OPTIONS(NSUInteger, CelestiaGoToLocationFieldMask) {
     return self;
 }
 
-- (instancetype)initWithSelection:(CelestiaSelection *)selection longitude:(float)longitude latitude:(float)latitude distance:(double)distance unit:(SimulationDistanceUnit)unit {
+- (instancetype)initWithSelection:(CelestiaSelection *)selection longitude:(float)longitude latitude:(float)latitude distance:(double)distance unit:(CelestiaSimulationDistanceUnit)unit {
     return [self initWithSelection:selection longitude:longitude latitude:latitude distance:distance unit:unit validMask:CelestiaGoToLocationFieldMaskLongitude | CelestiaGoToLocationFieldMaskLatitude | CelestiaGoToLocationFieldMaskDistance];
 }
 
 - (instancetype)initWithSelection:(CelestiaSelection *)selection longitude:(float)longitude latitude:(float)latitude {
-    return [self initWithSelection:selection longitude:longitude latitude:latitude distance:0 unit:SimulationDistanceUnitKM validMask:CelestiaGoToLocationFieldMaskLongitude | CelestiaGoToLocationFieldMaskLatitude];
+    return [self initWithSelection:selection longitude:longitude latitude:latitude distance:0 unit:CelestiaSimulationDistanceUnitKM validMask:CelestiaGoToLocationFieldMaskLongitude | CelestiaGoToLocationFieldMaskLatitude];
 }
 
-- (instancetype)initWithSelection:(CelestiaSelection *)selection distance:(double)distance unit:(SimulationDistanceUnit)unit {
+- (instancetype)initWithSelection:(CelestiaSelection *)selection distance:(double)distance unit:(CelestiaSimulationDistanceUnit)unit {
     return [self initWithSelection:selection longitude:0 latitude:0 distance:distance unit:unit validMask:CelestiaGoToLocationFieldMaskDistance];
 }
 
 - (instancetype)initWithSelection:(CelestiaSelection *)selection {
-    return [self initWithSelection:selection longitude:0 latitude:0 distance:0 unit:SimulationDistanceUnitKM validMask:0];
+    return [self initWithSelection:selection longitude:0 latitude:0 distance:0 unit:CelestiaSimulationDistanceUnitKM validMask:0];
 }
 
 - (void)setDuration:(double)duration {
@@ -146,7 +146,7 @@ typedef NS_OPTIONS(NSUInteger, CelestiaGoToLocationFieldMask) {
     }
     double distance, longitude, latitude;
     s->getSelectionLongLat(distance, longitude, latitude);
-    return [[CelestiaGoToLocation alloc] initWithSelection:sel longitude:longitude latitude:latitude distance:distance unit:SimulationDistanceUnitKM];
+    return [[CelestiaGoToLocation alloc] initWithSelection:sel longitude:longitude latitude:latitude distance:distance unit:CelestiaSimulationDistanceUnitKM];
 }
 
 - (CelestiaUniverse *)universe {
@@ -160,7 +160,7 @@ typedef NS_OPTIONS(NSUInteger, CelestiaGoToLocationFieldMask) {
     return [[CelestiaSelection alloc] initWithSelection:[self simulation]->findObject([path UTF8String], true)];
 }
 
-- (void)setFrame:(SimulationCoordinateSystem)coordinate target:(CelestiaSelection *)target reference:(CelestiaSelection *)reference {
+- (void)setFrame:(CelestiaSimulationCoordinateSystem)coordinate target:(CelestiaSelection *)target reference:(CelestiaSelection *)reference {
     const Selection ref([reference selection]);
     const Selection tar([target selection]);
     s->setFrame((ObserverFrame::CoordinateSystem)coordinate, ref, tar);
@@ -186,7 +186,7 @@ typedef NS_OPTIONS(NSUInteger, CelestiaGoToLocationFieldMask) {
     if (location->fieldMask & CelestiaGoToLocationFieldMaskLongitude && location->fieldMask & CelestiaGoToLocationFieldMaskLatitude) {
         s->gotoSelectionLongLat(location.duration, distance, location.longitude * (float)M_PI / 180.0f, location.latitude * (float)M_PI / 180.0f, [up vector3f]);
     } else {
-        s->gotoSelection(location.duration, distance, [up vector3f], (ObserverFrame::CoordinateSystem)[Astro coordinateSystem:@"ObserverLocal"]);
+        s->gotoSelection(location.duration, distance, [up vector3f], (ObserverFrame::CoordinateSystem)[CelestiaAstroUtils coordinateSystem:@"ObserverLocal"]);
     }
 }
 

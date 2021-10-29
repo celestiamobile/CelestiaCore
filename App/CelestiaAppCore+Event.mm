@@ -117,11 +117,11 @@ enum {
 @implementation CelestiaAppCore (AppKit)
 
 // MARK: Mouse events
-- (void)mouseButtonUp:(CGPoint)location modifiers:(NSUInteger)modifiers buttons:(MouseButton)buttons {
+- (void)mouseButtonUp:(CGPoint)location modifiers:(NSUInteger)modifiers buttons:(CelestiaMouseButton)buttons {
     [self appCoreMouseButtonUp:location modifiers:[self toCelestiaModifiers:modifiers buttons:buttons]];
 }
 
-- (void)mouseButtonDown:(CGPoint)location modifiers:(NSUInteger)modifiers buttons:(MouseButton)buttons {
+- (void)mouseButtonDown:(CGPoint)location modifiers:(NSUInteger)modifiers buttons:(CelestiaMouseButton)buttons {
     [self appCoreMouseButtonDown:location modifiers:[self toCelestiaModifiers:modifiers buttons:buttons]];
 }
 
@@ -129,7 +129,7 @@ enum {
     [self appCoreMouseDragged:location];
 }
 
-- (void)mouseMove:(CGPoint)offset modifiers:(NSUInteger)modifiers buttons:(MouseButton)buttons {
+- (void)mouseMove:(CGPoint)offset modifiers:(NSUInteger)modifiers buttons:(CelestiaMouseButton)buttons {
     [self appCoreMouseMove:offset modifiers:[self toCelestiaModifiers:modifiers buttons:buttons]];
 }
 
@@ -138,7 +138,7 @@ enum {
 }
 
 // MARK: Private
-- (int)toCelestiaModifiers:(NSUInteger)modifiers buttons:(MouseButton)buttons {
+- (int)toCelestiaModifiers:(NSUInteger)modifiers buttons:(CelestiaMouseButton)buttons {
     int cModifiers = 0;
     if (modifiers & NSCommandKeyMask)
         cModifiers |= CelestiaCore::ControlKey;

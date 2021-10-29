@@ -16,30 +16,30 @@
 @class CelestiaSelection;
 @class CelestiaDestination;
 
-typedef NS_OPTIONS(NSUInteger, MouseButton) {
-    MouseButtonLeft = 1 << 0,
-    MouseButtonMiddle = 1 << 1,
-    MouseButtonRight = 1 << 2,
+typedef NS_OPTIONS(NSUInteger, CelestiaMouseButton) {
+    CelestiaMouseButtonLeft = 1 << 0,
+    CelestiaMouseButtonMiddle = 1 << 1,
+    CelestiaMouseButtonRight = 1 << 2,
 };
 
-typedef NS_ENUM(NSUInteger, CursorShape) {
-    CursorShapeArrow            = 0,
-    CursorShapeUpArrow          = 1,
-    CursorShapeCross            = 2,
-    CursorShapeInvertedCross    = 3,
-    CursorShapeWait             = 4,
-    CursorShapeBusy             = 5,
-    CursorShapeIbeam            = 6,
-    CursorShapeSizeVer          = 7,
-    CursorShapeSizeHor          = 8,
-    CursorShapeSizeBDiag        = 9,
-    CursorShapeSizeFDiag        = 10,
-    CursorShapeSizeAll          = 11,
-    CursorShapeSplitV           = 12,
-    CursorShapeSplitH           = 13,
-    CursorShapePointingHand     = 14,
-    CursorShapeForbidden        = 15,
-    CursorShapeWhatsThis        = 16,
+typedef NS_ENUM(NSUInteger, CelestiaCursorShape) {
+    CelestiaCursorShapeArrow            = 0,
+    CelestiaCursorShapeUpArrow          = 1,
+    CelestiaCursorShapeCross            = 2,
+    CelestiaCursorShapeInvertedCross    = 3,
+    CelestiaCursorShapeWait             = 4,
+    CelestiaCursorShapeBusy             = 5,
+    CelestiaCursorShapeIbeam            = 6,
+    CelestiaCursorShapeSizeVer          = 7,
+    CelestiaCursorShapeSizeHor          = 8,
+    CelestiaCursorShapeSizeBDiag        = 9,
+    CelestiaCursorShapeSizeFDiag        = 10,
+    CelestiaCursorShapeSizeAll          = 11,
+    CelestiaCursorShapeSplitV           = 12,
+    CelestiaCursorShapeSplitH           = 13,
+    CelestiaCursorShapePointingHand     = 14,
+    CelestiaCursorShapeForbidden        = 15,
+    CelestiaCursorShapeWhatsThis        = 16,
 };
 
 typedef NS_ENUM(NSUInteger, CelestiaJoystickAxis) {
@@ -59,14 +59,14 @@ typedef NS_ENUM(NSUInteger, CelestiaJoystickButton) {
     CelestiaJoystickButton8           = 7,
 };
 
-typedef NS_ENUM(NSUInteger, ScreenshotFileType) {
-    ScreenshotFileTypeJPEG      = 1,
-    ScreenshotFileTypePNG       = 4,
+typedef NS_ENUM(NSUInteger, CelestiaScreenshotFileType) {
+    CelestiaScreenshotFileTypeJPEG      = 1,
+    CelestiaScreenshotFileTypePNG       = 4,
 };
 
-typedef NS_ENUM(NSUInteger, RendererFontStyle) {
-    RendererFontNormal          = 0,
-    RendererFontLarge           = 1,
+typedef NS_ENUM(NSUInteger, CelestiaRendererFontStyle) {
+    CelestiaRendererFontStyleNormal          = 0,
+    CelestiaRendererFontStyleLarge           = 1,
 };
 
 typedef NS_OPTIONS(NSUInteger, CelestiaWatcherFlag) {
@@ -92,7 +92,7 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol CelestiaAppCoreDelegate <NSObject>
 
 - (void)celestiaAppCoreFatalErrorHappened:(NSString *)error;
-- (void)celestiaAppCoreCursorShapeChanged:(CursorShape)shape;
+- (void)celestiaAppCoreCursorShapeChanged:(CelestiaCursorShape)shape;
 - (void)celestiaAppCoreCursorDidRequestContextMenuAtPoint:(CGPoint)location withSelection:(CelestiaSelection *)selection;
 - (void)celestiaAppCoreWatchedFlagDidChange:(CelestiaWatcherFlag)changedFlag;
 
@@ -130,7 +130,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)setSafeAreaInsetsWithLeft:(CGFloat)left top:(CGFloat)top right:(CGFloat)right bottom:(CGFloat)bottom NS_SWIFT_NAME(setSafeAreaInsets(left:top:right:bottom:));
 - (void)setFont:(NSString *)fontPath collectionIndex:(NSInteger)collectionIndex fontSize:(NSInteger)fontSize;
 - (void)setTitleFont:(NSString *)fontPath collectionIndex:(NSInteger)collectionIndex fontSize:(NSInteger)fontSize;
-- (void)setRendererFont:(NSString *)fontPath collectionIndex:(NSInteger)collectionIndex fontSize:(NSInteger)fontSize fontStyle:(RendererFontStyle)fontStyle;
+- (void)setRendererFont:(NSString *)fontPath collectionIndex:(NSInteger)collectionIndex fontSize:(NSInteger)fontSize fontStyle:(CelestiaRendererFontStyle)fontStyle;
 - (void)clearFonts;
 - (void)setPickTolerance:(CGFloat)pickTolerance;
 
@@ -147,7 +147,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)runScript:(NSString *)path NS_SWIFT_NAME(runScript(at:));
 - (void)goToURL:(NSString *)url NS_SWIFT_NAME(go(to:));
 
-- (BOOL)screenshot:(NSString *)filePath withFileSize:(ScreenshotFileType)type NS_SWIFT_NAME(screenshot(to:type:));
+- (BOOL)screenshot:(NSString *)filePath withFileSize:(CelestiaScreenshotFileType)type NS_SWIFT_NAME(screenshot(to:type:));
 
 + (void)setLocaleDirectory:(NSString *)localeDirectory;
 
