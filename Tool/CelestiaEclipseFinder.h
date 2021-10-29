@@ -16,10 +16,11 @@
 typedef NS_OPTIONS(NSUInteger, CelestiaEclipseKind) {
     CelestiaEclipseKindSolar = 1 << 0,
     CelestiaEclipseKindLunar = 1 << 1,
-};
+} NS_SWIFT_NAME(EclipseKind);
 
 NS_ASSUME_NONNULL_BEGIN
 
+NS_SWIFT_NAME(Eclipse)
 @interface CelestiaEclipse : NSObject
 
 @property (readonly) CelestiaBody *occulter;
@@ -30,6 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+NS_SWIFT_NAME(EcipseFinder)
 @interface CelestiaEclipseFinder : NSObject
 
 - (instancetype)initWithBody:(CelestiaBody *)body;

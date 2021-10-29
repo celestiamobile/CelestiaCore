@@ -15,10 +15,11 @@
 typedef NS_OPTIONS(NSUInteger, CelestiaFrameBufferAttachment) {
     CelestiaFrameBufferAttachmentColor =    1 << 0,
     CelestiaFrameBufferAttachmentDepth =    1 << 1,
-};
+} NS_SWIFT_NAME(FrameBufferAttachment);
 
 NS_ASSUME_NONNULL_BEGIN
 
+NS_SWIFT_NAME(FrameBuffer)
 @interface CelestiaFrameBuffer : NSObject
 
 - (instancetype)initWithSize:(CGSize)size attachments:(CelestiaFrameBufferAttachment)attachments;

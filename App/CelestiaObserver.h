@@ -13,6 +13,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+NS_SWIFT_NAME(Observer)
 @interface CelestiaObserver : NSObject
 
 @property (nonatomic) NSString *displayedSurface;

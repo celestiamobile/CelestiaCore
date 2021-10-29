@@ -13,6 +13,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+NS_SWIFT_NAME(Location)
 @interface CelestiaLocation : CelestiaAstroObject
 
 @property (readonly) NSString *name;

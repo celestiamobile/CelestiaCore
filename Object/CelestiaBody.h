@@ -32,10 +32,11 @@ typedef NS_ENUM(NSUInteger, CelestiaBodyType) {
     CelestiaBodyTypeMinorMoon      =  0x1000,
     CelestiaBodyTypeDiffuse        =  0x2000,
     CelestiaBodyTypeUnknown        = 0x10000,
-};
+} NS_SWIFT_NAME(BodyType);
 
 NS_ASSUME_NONNULL_BEGIN
 
+NS_SWIFT_NAME(Body)
 @interface CelestiaBody : CelestiaAstroObject
 
 @property (readonly) CelestiaBodyType type;

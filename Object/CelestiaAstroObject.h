@@ -13,6 +13,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+NS_SWIFT_NAME(AstroObject)
 @interface CelestiaAstroObject : NSObject
 
 @end

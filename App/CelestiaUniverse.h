@@ -30,10 +30,11 @@ typedef NS_ENUM(NSUInteger, CelestiaMarkerRepresentation) {
     CelestiaMarkerRepresentationCircle     = 10,
     CelestiaMarkerRepresentationDisk       = 11,
     CelestiaMarkerRepresentationCrosshair  = 12,
-};
+} NS_SWIFT_NAME(MarkerRepresentation);
 
 NS_ASSUME_NONNULL_BEGIN
 
+NS_SWIFT_NAME(Universe)
 @interface CelestiaUniverse : NSObject
 
 @property (readonly) CelestiaDSOCatalog *dsoCatalog;

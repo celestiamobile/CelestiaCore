@@ -17,10 +17,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class CelestiaBrowserItem;
 
+NS_SWIFT_NAME(BrowserItemChildrenProvider)
 @protocol CelestiaBrowserItemChildrenProvider <NSObject>
 - (nullable NSDictionary<NSString *, CelestiaBrowserItem *> *)childrenForBrowserItem:(CelestiaBrowserItem *)item;
 @end
 
+NS_SWIFT_NAME(BrowserItem)
 @interface CelestiaBrowserItem : NSObject
 
 @property (nullable, readonly) NSString *alternativeName;

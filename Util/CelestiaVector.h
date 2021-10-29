@@ -13,6 +13,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+NS_SWIFT_NAME(Vector)
 @interface CelestiaVector : NSArray
 
 @property (readonly) NSNumber *x;
@@ -25,18 +26,18 @@ NS_ASSUME_NONNULL_BEGIN
 @property (readonly) double dz;
 @property (readonly) double dw;
 
--(void)encodeWithCoder:(NSCoder*)coder;
--(id)initWithCoder:(NSCoder*)coder;
-+(CelestiaVector*)vectorWithArray:(NSArray*)v;
-+(CelestiaVector*)vectorWithx:(NSNumber*)v y:(NSNumber*)y;
-+(CelestiaVector*)vectorWithx:(NSNumber*)v y:(NSNumber*)y z:(NSNumber*)z;
-+(CelestiaVector*)vectorWithx:(NSNumber*)v y:(NSNumber*)y z:(NSNumber*)z w:(NSNumber*)w;
--(CelestiaVector*)initWithArray:(NSArray*)v;
--(CelestiaVector*)initWithx:(NSNumber*)v y:(NSNumber*)y;
--(CelestiaVector*)initWithx:(NSNumber*)v y:(NSNumber*)y z:(NSNumber*)z;
--(CelestiaVector*)initWithx:(NSNumber*)v y:(NSNumber*)y z:(NSNumber*)z w:(NSNumber*)w;
--(NSUInteger)count;
--(NSNumber*)objectAtIndex:(NSUInteger)index;
+- (void)encodeWithCoder:(NSCoder*)coder;
+- (id)initWithCoder:(NSCoder*)coder;
++ (CelestiaVector*)vectorWithArray:(NSArray*)v;
++ (CelestiaVector*)vectorWithx:(NSNumber*)v y:(NSNumber*)y;
++ (CelestiaVector*)vectorWithx:(NSNumber*)v y:(NSNumber*)y z:(NSNumber*)z;
++ (CelestiaVector*)vectorWithx:(NSNumber*)v y:(NSNumber*)y z:(NSNumber*)z w:(NSNumber*)w;
+- (CelestiaVector*)initWithArray:(NSArray*)v;
+- (CelestiaVector*)initWithx:(NSNumber*)v y:(NSNumber*)y;
+- (CelestiaVector*)initWithx:(NSNumber*)v y:(NSNumber*)y z:(NSNumber*)z;
+- (CelestiaVector*)initWithx:(NSNumber*)v y:(NSNumber*)y z:(NSNumber*)z w:(NSNumber*)w;
+- (NSUInteger)count;
+- (NSNumber*)objectAtIndex:(NSUInteger)index;
 
 @end
 

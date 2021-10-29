@@ -15,6 +15,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+NS_SWIFT_NAME(DMS)
 @interface CelestiaDMS : NSObject
 
 @property NSInteger hours;
@@ -37,6 +38,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+NS_SWIFT_NAME(AstroUtils)
 @interface CelestiaAstroUtils : NSObject
 
 + (nullable NSString *)stringWithCoordinateSystem:(int)n;

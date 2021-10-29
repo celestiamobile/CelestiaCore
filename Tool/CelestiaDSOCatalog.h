@@ -15,6 +15,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+NS_SWIFT_NAME(DSOCatalog)
 @interface CelestiaDSOCatalog : NSObject
 
 @property (readonly) NSInteger count;

@@ -16,6 +16,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+NS_SWIFT_NAME(PlanetarySystem)
 @interface CelestiaPlanetarySystem : NSObject
 
 @property (nullable, readonly) CelestiaBody *primaryObject;

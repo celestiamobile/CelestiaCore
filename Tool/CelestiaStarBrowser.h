@@ -18,10 +18,11 @@ typedef NS_ENUM(NSUInteger, CelestiaStarBrowserKind) {
     CelestiaStarBrowserKindNearest = 0,
     CelestiaStarBrowserKindBrightest = 2,
     CelestiaStarBrowserKindStarsWithPlants = 3,
-};
+} NS_SWIFT_NAME(StarBrowserKind);
 
 NS_ASSUME_NONNULL_BEGIN
 
+NS_SWIFT_NAME(StarBrowser)
 @interface CelestiaStarBrowser : NSObject
 
 - (instancetype)initWithKind:(CelestiaStarBrowserKind)kind simulation:(CelestiaSimulation *)simulation;

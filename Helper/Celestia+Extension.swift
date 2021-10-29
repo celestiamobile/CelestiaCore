@@ -13,12 +13,12 @@ import CelestiaCore
 import Foundation
 
 // MARK: singleton
-private var core: CelestiaAppCore?
+private var core: AppCore?
 
-extension CelestiaAppCore {
-    static var shared: CelestiaAppCore {
+extension AppCore {
+    static var shared: AppCore {
         if core == nil {
-            core = CelestiaAppCore()
+            core = AppCore()
         }
         return core!
     }
@@ -28,8 +28,8 @@ func isCoreInitialized() -> Bool {
     return core?.isInitialized == true
 }
 
-extension CelestiaSelection {
-    convenience init?(item: CelestiaBrowserItem) {
+extension Selection {
+    convenience init?(item: BrowserItem) {
         if let object = item.entry {
             self.init(object: object)
         } else {
@@ -39,41 +39,41 @@ extension CelestiaSelection {
 }
 
 // MARK: Browser
-var solBrowserRoot: CelestiaBrowserItem? = {
-    let universe = CelestiaAppCore.shared.simulation.universe
+var solBrowserRoot: BrowserItem? = {
+    let universe = AppCore.shared.simulation.universe
     guard let sol = universe.find("Sol").star else { return nil }
-    return CelestiaBrowserItem(name: universe.starCatalog.starName(sol),
+    return BrowserItem(name: universe.starCatalog.starName(sol),
                                alternativeName: CelestiaString("Solar System", comment: ""),
                                catEntry: sol,
                                provider: universe)
 }()
 
-var starBrowserRoot: CelestiaBrowserItem = {
-    let core = CelestiaAppCore.shared
+var starBrowserRoot: BrowserItem = {
+    let core = AppCore.shared
     let universe = core.simulation.universe
 
-    func updateAccumulation(result: inout [String : CelestiaBrowserItem], star: CelestiaStar) {
+    func updateAccumulation(result: inout [String : BrowserItem], star: Star) {
         let name = universe.starCatalog.starName(star)
-        result[name] = CelestiaBrowserItem(name: name, catEntry: star, provider: universe)
+        result[name] = BrowserItem(name: name, catEntry: star, provider: universe)
     }
 
-    let nearest = CelestiaStarBrowser(kind: .nearest, simulation: core.simulation).stars().reduce(into: [String : CelestiaBrowserItem](), updateAccumulation)
-    let brightest = CelestiaStarBrowser(kind: .brightest, simulation: core.simulation).stars().reduce(into: [String : CelestiaBrowserItem](), updateAccumulation)
-    let hasPlanets = CelestiaStarBrowser(kind: .starsWithPlants, simulation: core.simulation).stars().reduce(into: [String : CelestiaBrowserItem](), updateAccumulation)
+    let nearest = StarBrowser(kind: .nearest, simulation: core.simulation).stars().reduce(into: [String : BrowserItem](), updateAccumulation)
+    let brightest = StarBrowser(kind: .brightest, simulation: core.simulation).stars().reduce(into: [String : BrowserItem](), updateAccumulation)
+    let hasPlanets = StarBrowser(kind: .starsWithPlants, simulation: core.simulation).stars().reduce(into: [String : BrowserItem](), updateAccumulation)
 
     let nearestName = CelestiaString("Nearest Stars", comment: "")
     let brightestName = CelestiaString("Brightest Stars", comment: "")
     let hasPlanetsName = CelestiaString("Stars with Planets", comment: "")
-    let stars = CelestiaBrowserItem(name: CelestiaString("Stars", comment: ""), children: [
-        nearestName : CelestiaBrowserItem(name: nearestName, children: nearest),
-        brightestName : CelestiaBrowserItem(name: brightestName, children: brightest),
-        hasPlanetsName : CelestiaBrowserItem(name: hasPlanetsName, children: hasPlanets),
+    let stars = BrowserItem(name: CelestiaString("Stars", comment: ""), children: [
+        nearestName : BrowserItem(name: nearestName, children: nearest),
+        brightestName : BrowserItem(name: brightestName, children: brightest),
+        hasPlanetsName : BrowserItem(name: hasPlanetsName, children: hasPlanets),
     ])
     return stars
 }()
 
-var dsoBrowserRoot: CelestiaBrowserItem = {
-    let core = CelestiaAppCore.shared
+var dsoBrowserRoot: BrowserItem = {
+    let core = AppCore.shared
     let universe = core.simulation.universe
 
     let typeMap = [
@@ -87,47 +87,47 @@ var dsoBrowserRoot: CelestiaBrowserItem = {
         "Unknown" : CelestiaString("Unknown", comment: ""),
     ]
 
-    func updateAccumulation(result: inout [String : CelestiaBrowserItem], item: (key: String, value: [String : CelestiaBrowserItem])) {
+    func updateAccumulation(result: inout [String : BrowserItem], item: (key: String, value: [String : BrowserItem])) {
         let fullName = typeMap[item.key]!
-        result[fullName] = CelestiaBrowserItem(name: fullName, children: item.value)
+        result[fullName] = BrowserItem(name: fullName, children: item.value)
     }
 
     let prefixes = ["SB", "S", "E", "Irr", "Neb", "Glob", "Open cluster"]
 
-    var tempDict = prefixes.reduce(into: [String : [String : CelestiaBrowserItem]]()) { $0[$1] = [String : CelestiaBrowserItem]() }
+    var tempDict = prefixes.reduce(into: [String : [String : BrowserItem]]()) { $0[$1] = [String : BrowserItem]() }
 
     let catalog = universe.dsoCatalog
     catalog.forEach({ (dso) in
         let matchingType = prefixes.first(where: {dso.type.hasPrefix($0)}) ?? "Unknown"
         let name = catalog.dsoName(dso)
         if tempDict[matchingType] != nil {
-            tempDict[matchingType]![name] = CelestiaBrowserItem(name: name, catEntry: dso, provider: universe)
+            tempDict[matchingType]![name] = BrowserItem(name: name, catEntry: dso, provider: universe)
         }
     })
 
-    let results = tempDict.reduce(into: [String : CelestiaBrowserItem](), updateAccumulation)
-    return CelestiaBrowserItem(name: CelestiaString("Deep Sky Objects", comment: ""), alternativeName: CelestiaString("DSOs", comment: ""), children: results)
+    let results = tempDict.reduce(into: [String : BrowserItem](), updateAccumulation)
+    return BrowserItem(name: CelestiaString("Deep Sky Objects", comment: ""), alternativeName: CelestiaString("DSOs", comment: ""), children: results)
 }()
 
-extension CelestiaDSOCatalog {
-    subscript(index: Int) -> CelestiaDSO {
+extension DSOCatalog {
+    subscript(index: Int) -> DSO {
         get {
             return object(at: index)
         }
     }
 }
 
-public struct CelestiaDSOCatalogIterator: IteratorProtocol {
-    private let catalog: CelestiaDSOCatalog
+public struct DSOCatalogIterator: IteratorProtocol {
+    private let catalog: DSOCatalog
     private var index = 0
 
-    public typealias Element = CelestiaDSO
+    public typealias Element = DSO
 
-    init(catalog: CelestiaDSOCatalog) {
+    init(catalog: DSOCatalog) {
         self.catalog = catalog
     }
 
-    mutating public func next() -> CelestiaDSO? {
+    mutating public func next() -> DSO? {
         defer { index += 1 }
         if index >= catalog.count {
             return nil
@@ -136,11 +136,11 @@ public struct CelestiaDSOCatalogIterator: IteratorProtocol {
     }
 }
 
-extension CelestiaDSOCatalog: Sequence {
-    public typealias Iterator = CelestiaDSOCatalogIterator
+extension DSOCatalog: Sequence {
+    public typealias Iterator = DSOCatalogIterator
 
-    public __consuming func makeIterator() -> CelestiaDSOCatalogIterator {
-        return CelestiaDSOCatalogIterator(catalog: self)
+    public __consuming func makeIterator() -> DSOCatalogIterator {
+        return DSOCatalogIterator(catalog: self)
     }
 }
 
@@ -155,10 +155,10 @@ func CelestiaFilename(_ key: String) -> String {
 }
 
 // MARK: Scripting
-func readScripts() -> [CelestiaScript] {
-    var scripts = CelestiaScript.scripts(inDirectory: "scripts", deepScan: true)
+func readScripts() -> [Script] {
+    var scripts = Script.scripts(inDirectory: "scripts", deepScan: true)
     if let extraScriptsPath = extraScriptDirectory?.path {
-        scripts += CelestiaScript.scripts(inDirectory: extraScriptsPath, deepScan: true)
+        scripts += Script.scripts(inDirectory: extraScriptsPath, deepScan: true)
     }
     return scripts
 }
@@ -193,7 +193,7 @@ extension BookmarkNode: Codable {
     }
 }
 
-extension CelestiaAppCore {
+extension AppCore {
     var currentBookmark: BookmarkNode? {
         let selection = simulation.selection
         if selection.isEmpty {
@@ -249,8 +249,8 @@ extension String {
 }
 
 // MARK: Overview
-extension CelestiaAppCore {
-    func overviewForSelection(_ selection: CelestiaSelection) -> String {
+extension AppCore {
+    func overviewForSelection(_ selection: Selection) -> String {
         if let body = selection.body {
             return overviewForBody(body)
         } else if let star = selection.star {
@@ -262,7 +262,7 @@ extension CelestiaAppCore {
         }
     }
 
-    private func overviewForBody(_ body: CelestiaBody) -> String {
+    private func overviewForBody(_ body: Body) -> String {
         var str = ""
 
         let radius = body.radius
@@ -338,48 +338,48 @@ extension CelestiaAppCore {
         return str
     }
 
-    private func overviewForStar(_ star: CelestiaStar) -> String {
+    private func overviewForStar(_ star: Star) -> String {
         var str = ""
 
         let time = simulation.time
 
         let celPos = star.position(at: time).offet(from: .zero)
-        let eqPos = CelestiaAstroUtils.ecliptic(toEquatorial: CelestiaAstroUtils.cel(toJ2000Ecliptic: celPos))
-        let sph = CelestiaAstroUtils.rect(toSpherical: eqPos)
+        let eqPos = AstroUtils.ecliptic(toEquatorial: AstroUtils.cel(toJ2000Ecliptic: celPos))
+        let sph = AstroUtils.rect(toSpherical: eqPos)
 
-        let hms = CelestiaDMS(decimal: sph.dx)
+        let hms = DMS(decimal: sph.dx)
         str += String(format: CelestiaString("RA: %dh %dm %.2fs", comment: ""), hms.hours, abs(hms.minutes), abs(hms.seconds))
 
         str += "\n"
-        let dms = CelestiaDMS(decimal: sph.dy)
+        let dms = DMS(decimal: sph.dy)
         str += String(format: CelestiaString("DEC: %d° %d′ %.2f″", comment: ""), dms.degrees, abs(dms.minutes), abs(dms.seconds))
 
         return str
     }
 
-    private func overviewForDSO(_ dso: CelestiaDSO) -> String {
+    private func overviewForDSO(_ dso: DSO) -> String {
         var str = ""
 
         let celPos = dso.position
-        let eqPos = CelestiaAstroUtils.ecliptic(toEquatorial: CelestiaAstroUtils.cel(toJ2000Ecliptic: celPos))
-        var sph = CelestiaAstroUtils.rect(toSpherical: eqPos)
+        let eqPos = AstroUtils.ecliptic(toEquatorial: AstroUtils.cel(toJ2000Ecliptic: celPos))
+        var sph = AstroUtils.rect(toSpherical: eqPos)
 
-        let hms = CelestiaDMS(decimal: sph.dx)
+        let hms = DMS(decimal: sph.dx)
         str += String(format: CelestiaString("RA: %dh %dm %.2fs", comment: ""), hms.hours, abs(hms.minutes), abs(hms.seconds))
 
         str += "\n"
-        var dms = CelestiaDMS(decimal: sph.dy)
+        var dms = DMS(decimal: sph.dy)
         str += String(format: CelestiaString("Dec: %d° %d′ %.2f″", comment: ""), dms.degrees, abs(dms.minutes), abs(dms.seconds))
 
-        let galPos = CelestiaAstroUtils.equatorial(toGalactic: eqPos)
-        sph = CelestiaAstroUtils.rect(toSpherical: galPos)
+        let galPos = AstroUtils.equatorial(toGalactic: eqPos)
+        sph = AstroUtils.rect(toSpherical: galPos)
 
         str += "\n"
-        dms = CelestiaDMS(decimal: sph.dx)
+        dms = DMS(decimal: sph.dx)
         str += String(format: CelestiaString("L: %d° %d′ %.2f″", comment: ""), dms.degrees, abs(dms.minutes), abs(dms.seconds))
 
         str += "\n"
-        dms = CelestiaDMS(decimal: sph.dy)
+        dms = DMS(decimal: sph.dy)
         str += String(format: CelestiaString("B: %d° %d′ %.2f″", comment: ""), dms.degrees, abs(dms.minutes), abs(dms.seconds))
 
         return str

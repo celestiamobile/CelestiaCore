@@ -15,6 +15,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+NS_SWIFT_NAME(StarCatalog)
 @interface CelestiaStarCatalog : NSObject
 
 @property (readonly) NSInteger count;

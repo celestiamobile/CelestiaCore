@@ -15,6 +15,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+NS_SWIFT_NAME(DSO)
 @interface CelestiaDSO : CelestiaAstroObject
 
 @property (readonly) NSString *type;

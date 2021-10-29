@@ -20,7 +20,7 @@ typedef NS_OPTIONS(NSUInteger, CelestiaMouseButton) {
     CelestiaMouseButtonLeft = 1 << 0,
     CelestiaMouseButtonMiddle = 1 << 1,
     CelestiaMouseButtonRight = 1 << 2,
-};
+} NS_SWIFT_NAME(MouseButton);
 
 typedef NS_ENUM(NSUInteger, CelestiaCursorShape) {
     CelestiaCursorShapeArrow            = 0,
@@ -40,13 +40,13 @@ typedef NS_ENUM(NSUInteger, CelestiaCursorShape) {
     CelestiaCursorShapePointingHand     = 14,
     CelestiaCursorShapeForbidden        = 15,
     CelestiaCursorShapeWhatsThis        = 16,
-};
+} NS_SWIFT_NAME(CursorShape);
 
 typedef NS_ENUM(NSUInteger, CelestiaJoystickAxis) {
     CelestiaJoystickAxisX           = 0,
     CelestiaJoystickAxisY           = 1,
     CelestiaJoystickAxisZ           = 2,
-};
+} NS_SWIFT_NAME(JoystickAxis);
 
 typedef NS_ENUM(NSUInteger, CelestiaJoystickButton) {
     CelestiaJoystickButton1           = 0,
@@ -57,17 +57,17 @@ typedef NS_ENUM(NSUInteger, CelestiaJoystickButton) {
     CelestiaJoystickButton6           = 5,
     CelestiaJoystickButton7           = 6,
     CelestiaJoystickButton8           = 7,
-};
+} NS_SWIFT_NAME(JoystickButton);
 
 typedef NS_ENUM(NSUInteger, CelestiaScreenshotFileType) {
     CelestiaScreenshotFileTypeJPEG      = 1,
     CelestiaScreenshotFileTypePNG       = 4,
-};
+} NS_SWIFT_NAME(ScreenshotFileType);
 
 typedef NS_ENUM(NSUInteger, CelestiaRendererFontStyle) {
     CelestiaRendererFontStyleNormal          = 0,
     CelestiaRendererFontStyleLarge           = 1,
-};
+} NS_SWIFT_NAME(RendererFontStyle);
 
 typedef NS_OPTIONS(NSUInteger, CelestiaWatcherFlag) {
     CelestiaWatcherFlagLabelFlagsChanged       = 1,
@@ -79,16 +79,17 @@ typedef NS_OPTIONS(NSUInteger, CelestiaWatcherFlag) {
     CelestiaWatcherFlagHistoryChanged          = 64,
     CelestiaWatcherFlagTextEnterModeChanged    = 128,
     CelestiaWatcherFlagGalaxyLightGainChanged  = 256,
-};
+} NS_SWIFT_NAME(WatcherFlag);
 
 typedef NS_ENUM(NSUInteger, CelestiaTextEnterMode) {
     CelestiaTextEnterModeNormal         = 0,
     CelestiaTextEnterModeAutoComplete   = 1,
     CelestiaTextEnterModePassToScript   = 2,
-};
+} NS_SWIFT_NAME(TextEnterMode);
 
 NS_ASSUME_NONNULL_BEGIN
 
+NS_SWIFT_NAME(AppCoreDelegate)
 @protocol CelestiaAppCoreDelegate <NSObject>
 
 - (void)celestiaAppCoreFatalErrorHappened:(NSString *)error;
@@ -98,6 +99,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+NS_SWIFT_NAME(AppCore)
 @interface CelestiaAppCore : NSObject
 
 @property (nonatomic, readonly, getter=isInitialized) BOOL initialized;

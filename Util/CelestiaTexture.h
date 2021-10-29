@@ -13,6 +13,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+NS_SWIFT_NAME(MultiResTexture)
 @interface CelestiaMultiResTexture : NSObject
 
 - (void)setTexture:(NSString *)source path:(NSString *)path;

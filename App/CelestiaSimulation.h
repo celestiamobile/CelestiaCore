@@ -29,16 +29,17 @@ typedef NS_ENUM(NSUInteger, CelestiaSimulationCoordinateSystem) {
     CelestiaSimulationCoordinateSystemChase_Old = 101,
     CelestiaSimulationCoordinateSystemObserverLocal = 200,
     CelestiaSimulationCoordinateSystemUnknown = 1000,
-};
+} NS_SWIFT_NAME(CoordinateSystem);
 
 typedef NS_ENUM(NSUInteger, CelestiaSimulationDistanceUnit) {
     CelestiaSimulationDistanceUnitKM = 0,
     CelestiaSimulationDistanceUnitRadii = 1,
     CelestiaSimulationDistanceUnitAU = 2,
-};
+} NS_SWIFT_NAME(DistanceUnit);
 
 NS_ASSUME_NONNULL_BEGIN
 
+NS_SWIFT_NAME(GoToLocation)
 @interface CelestiaGoToLocation : NSObject
 
 @property (readonly) CelestiaSelection *selection;
@@ -54,6 +55,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+NS_SWIFT_NAME(Simulation)
 @interface CelestiaSimulation : NSObject
 
 @property CelestiaSelection *selection;

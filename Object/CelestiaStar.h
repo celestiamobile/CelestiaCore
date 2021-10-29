@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class CelestiaUniversalCoord;
 
+NS_SWIFT_NAME(Star)
 @interface CelestiaStar : CelestiaAstroObject
 
 @property float luminosity;

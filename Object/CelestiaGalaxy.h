@@ -13,6 +13,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+NS_SWIFT_NAME(Galaxy)
 @interface CelestiaGalaxy : CelestiaDSO
 
 @property (readonly) NSString *type;

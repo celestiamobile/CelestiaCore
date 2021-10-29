@@ -15,6 +15,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+NS_SWIFT_NAME(Orbit)
 @interface CelestiaOrbit : NSObject
 
 @property (readonly, getter=isPeriodic) BOOL periodic;

@@ -13,6 +13,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+NS_SWIFT_NAME(Favorite)
 @interface CelestiaFavorite : NSObject
 
 @property (nonatomic, readonly) NSString *name;
