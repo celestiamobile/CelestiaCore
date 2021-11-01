@@ -19,6 +19,6 @@
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2019 李林峰. All rights reserved.</string>
+	<string>Copyright (C) 2001-2021, the Celestia Development Team</string>
 </dict>
 </plist>
