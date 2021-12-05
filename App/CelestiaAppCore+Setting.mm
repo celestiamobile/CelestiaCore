@@ -11,8 +11,10 @@
 
 #import "CelestiaAppCore+Private.h"
 #import "CelestiaAppCore+Setting.h"
+#import "CelestiaAppCore+Locale.h"
 #import "CelestiaSelection.h"
 #import "CelestiaBody.h"
+#import "CelestiaUtil.h"
 
 @implementation CelestiaAppCore (Setting)
 
@@ -452,7 +454,37 @@ FEATUREMETHODS(Other)
 }
 
 - (NSInteger)dateFormat { return core->getDateFormat(); }
-- (void)setDateFormat:(NSInteger)value { core->setDateFormat((astro::Date::Format)value); }
+
+static NSDateFormatter *dateFormatter = nil;
+
+- (void)setDateFormat:(NSInteger)value {
+    auto format = (astro::Date::Format)value;
+    core->setDateFormat(format);
+    if (format == astro::Date::Locale)
+    {
+        if (!dateFormatter)
+        {
+            dateFormatter = [[NSDateFormatter alloc] init];
+            [dateFormatter setDateStyle:NSDateFormatterLongStyle];
+            [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
+            NSLocale *locale;
+            NSString *celestiaLang = LocalizedString(@"LANGUAGE", @"celestia");
+            if ([celestiaLang length] == 0 || [celestiaLang isEqualToString:@"LANGUAGE"])
+            {
+                celestiaLang = @"en_US";
+            }
+            locale = [NSLocale localeWithLocaleIdentifier:celestiaLang];
+            [dateFormatter setLocale:locale];
+        }
+        core->setCustomDateFormatter([](double jd){
+            return [[dateFormatter stringFromDate:[NSDate dateWithJulian:jd]] UTF8String];
+        });
+    }
+    else
+    {
+        core->setCustomDateFormatter(nullptr);
+    }
+}
 
 - (NSInteger)tagForKey:(NSInteger)key {
     if ( key > 128 ) return key;
