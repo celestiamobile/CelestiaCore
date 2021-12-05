@@ -80,7 +80,7 @@
 }
 
 + (instancetype)dateWithJulian:(double)jd {
-    astro::Date astroDate(jd);
+    astro::Date astroDate = astro::TDBtoUTC(jd);
     int year = astroDate.year;
     NSCalendar *currentCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     [currentCalendar setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
