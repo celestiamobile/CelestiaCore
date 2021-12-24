@@ -307,8 +307,8 @@ private:
     setlocale(LC_NUMERIC, "C");
     bindtextdomain("celestia", [localeDirectory UTF8String]);
     bind_textdomain_codeset("celestia", "UTF-8");
-    bindtextdomain("celestia_constellations", [localeDirectory UTF8String]);
-    bind_textdomain_codeset("celestia_constellations", "UTF-8");
+    bindtextdomain("celestia-data", [localeDirectory UTF8String]);
+    bind_textdomain_codeset("celestia-data", "UTF-8");
     bindtextdomain("celestia_ui", [localeDirectory UTF8String]);
     bind_textdomain_codeset("celestia_ui", "UTF-8");
     textdomain("celestia");
