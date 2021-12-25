@@ -16,7 +16,13 @@ NS_ASSUME_NONNULL_BEGIN
 typedef NS_ENUM(NSInteger, CelestiaMeasurementSystem) {
     CelestiaMeasurementSystemMetric      = 0,
     CelestiaMeasurementSystemImperial    = 1,
-};
+} NS_SWIFT_NAME(MeasurementSystem);
+
+typedef NS_ENUM(NSInteger, CelestiaTemperatureScale) {
+    CelestiaTemperatureScaleKelvin       = 0,
+    CelestiaTemperatureScaleCelsius      = 1,
+    CelestiaTemperatureScaleFahrenheit   = 2,
+} NS_SWIFT_NAME(TemperatureScale);
 
 @interface CelestiaAppCore (Setting)
 
@@ -166,6 +172,7 @@ typedef NS_ENUM(NSInteger, CelestiaMeasurementSystem) {
 @property NSInteger resolution;
 
 @property CelestiaMeasurementSystem measurementSystem;
+@property CelestiaTemperatureScale temperatureScale;
 
 - (void)initializeSetting;
 
