@@ -7,7 +7,7 @@ CELESTIA_ROOT=$BUILT_PRODUCTS_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/CelestiaRes
 mkdir -p $CELESTIA_ROOT
 
 CELESTIA_REPO_ROOT=$SRCROOT/../Celestia
-CELESTIA_CONTENT_REPO_ROOT=$CELESTIA_REPO_ROOT/content
+CELESTIA_CONTENT_REPO_ROOT=$SRCROOT/../CelestiaContent
 
 for directory in 'images' 'locale' 'scripts' 'shaders';do
     f=$CELESTIA_REPO_ROOT/$directory
