@@ -17,10 +17,10 @@
 #if !TARGET_OS_OSX
 #import <UIKit/UICommand.h>
 
-#define NSCommandKeyMask        UIKeyModifierCommand
-#define NSControlKeyMask        UIKeyModifierControl
-#define NSShiftKeyMask          UIKeyModifierShift
-#define NSNumericPadKeyMask     UIKeyModifierNumericPad
+#define NSEventModifierFlagCommand        UIKeyModifierCommand
+#define NSEventModifierFlagControl        UIKeyModifierControl
+#define NSEventModifierFlagShift          UIKeyModifierShift
+#define NSEventModifierFlagNumericPad     UIKeyModifierNumericPad
 
 enum {
     NSEnterCharacter                = 0x0003,
