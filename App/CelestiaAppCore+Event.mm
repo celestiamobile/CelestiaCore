@@ -140,11 +140,11 @@ enum {
 // MARK: Private
 - (int)toCelestiaModifiers:(NSUInteger)modifiers buttons:(CelestiaMouseButton)buttons {
     int cModifiers = 0;
-    if (modifiers & NSCommandKeyMask)
+    if (modifiers & NSEventModifierFlagCommand)
         cModifiers |= CelestiaCore::ControlKey;
-    if (modifiers & NSControlKeyMask)
+    if (modifiers & NSEventModifierFlagControl)
         cModifiers |= CelestiaCore::ControlKey;
-    if (modifiers & NSShiftKeyMask)
+    if (modifiers & NSEventModifierFlagShift)
         cModifiers |= CelestiaCore::ShiftKey;
     if (buttons & 1)
         cModifiers |= CelestiaCore::LeftButton;
@@ -179,7 +179,7 @@ enum {
     else if ( key == NSBackTabCharacter )
         key = 127;
 
-    if ((key < CelestiaCore::KeyCount) && ((key < '0') || (key >'9') || !(modifiers & NSNumericPadKeyMask)))
+    if ((key < CelestiaCore::KeyCount) && ((key < '0') || (key >'9') || !(modifiers & NSEventModifierFlagNumericPad)))
         [self appCoreCharEnter:(char)key modifiers:cModifiers];
 
     [self appCoreKeyDown:[self toCelestiaKey:key modifiers:modifiers] modifiers:cModifiers];
@@ -215,7 +215,7 @@ enum {
 
     int celestiaKey = 0;
 
-    if ((modifiers & NSNumericPadKeyMask) && (key >= '0') && (key <= '9'))
+    if ((modifiers & NSEventModifierFlagNumericPad) && (key >= '0') && (key <= '9'))
         switch(key)
     {
         case '0':

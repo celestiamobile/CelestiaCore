@@ -43,10 +43,6 @@
     return u.distanceFromKm([t universalCoord]);
 }
 
-- (CelestiaUniversalCoord *)difference:(CelestiaUniversalCoord *)t {
-    return [[CelestiaUniversalCoord alloc] initWithUniversalCoord:u.difference([self universalCoord])];
-}
-
 - (CelestiaVector *)offetFrom:(CelestiaUniversalCoord *)t {
     Eigen::Vector3d offset = u.offsetFromKm([t universalCoord]);
     return [CelestiaVector vectorWithVector3d:offset];

@@ -20,7 +20,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (class, readonly) CelestiaUniversalCoord *zero;
 
 - (double)distanceFrom:(CelestiaUniversalCoord *)t;
-- (CelestiaUniversalCoord *)difference:(CelestiaUniversalCoord *)t;
 - (CelestiaVector *)offetFrom:(CelestiaUniversalCoord *)t;
 
 @end
