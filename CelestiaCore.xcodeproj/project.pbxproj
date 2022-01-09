@@ -376,6 +376,8 @@
 		EA38CEB1255FD379009EE79B /* CelestiaTexture.h in Headers */ = {isa = PBXBuildFile; fileRef = EA38CEAF255FD379009EE79B /* CelestiaTexture.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA38CEB2255FD379009EE79B /* CelestiaTexture.mm in Sources */ = {isa = PBXBuildFile; fileRef = EA38CEB0255FD379009EE79B /* CelestiaTexture.mm */; };
 		EA38CEB8255FD3EF009EE79B /* CelestiaTexture+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = EA38CEB6255FD3EF009EE79B /* CelestiaTexture+Private.h */; };
+		EA398C9D278A6FF900A9AAE5 /* greek.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA398C9B278A6FF900A9AAE5 /* greek.cpp */; };
+		EA398C9E278A6FF900A9AAE5 /* greek.h in Headers */ = {isa = PBXBuildFile; fileRef = EA398C9C278A6FF900A9AAE5 /* greek.h */; };
 		EA3FC0A625F63A690019C3BD /* celestiastate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA3FC0A425F63A680019C3BD /* celestiastate.cpp */; };
 		EA3FC0A725F63A690019C3BD /* celestiastate.h in Headers */ = {isa = PBXBuildFile; fileRef = EA3FC0A525F63A680019C3BD /* celestiastate.h */; };
 		EA3FC0AC25F63A840019C3BD /* charconv.h in Headers */ = {isa = PBXBuildFile; fileRef = EA3FC0A925F63A840019C3BD /* charconv.h */; };
@@ -800,6 +802,8 @@
 		EA38CEAF255FD379009EE79B /* CelestiaTexture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CelestiaTexture.h; sourceTree = "<group>"; };
 		EA38CEB0255FD379009EE79B /* CelestiaTexture.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CelestiaTexture.mm; sourceTree = "<group>"; };
 		EA38CEB6255FD3EF009EE79B /* CelestiaTexture+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CelestiaTexture+Private.h"; sourceTree = "<group>"; };
+		EA398C9B278A6FF900A9AAE5 /* greek.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = greek.cpp; sourceTree = "<group>"; };
+		EA398C9C278A6FF900A9AAE5 /* greek.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = greek.h; sourceTree = "<group>"; };
 		EA3FC0A425F63A680019C3BD /* celestiastate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = celestiastate.cpp; sourceTree = "<group>"; };
 		EA3FC0A525F63A680019C3BD /* celestiastate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = celestiastate.h; sourceTree = "<group>"; };
 		EA3FC0A925F63A840019C3BD /* charconv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = charconv.h; sourceTree = "<group>"; };
@@ -1358,6 +1362,8 @@
 				977D834D22FDB2AB002FF1C2 /* formatnum.h */,
 				EA3FC88725F7AFBA0019C3BD /* fsutils.cpp */,
 				EA3FC88625F7AFBA0019C3BD /* fsutils.h */,
+				EA398C9B278A6FF900A9AAE5 /* greek.cpp */,
+				EA398C9C278A6FF900A9AAE5 /* greek.h */,
 				EAE5F38B27758463005A3022 /* logger.cpp */,
 				EAE5F38A27758463005A3022 /* logger.h */,
 				977D834222FDB2AA002FF1C2 /* reshandle.h */,
@@ -1640,6 +1646,7 @@
 				971A664D23019C0F009E4EA1 /* filetype.h in Headers */,
 				971A661323019BFC009E4EA1 /* modelfile.h in Headers */,
 				971A66C623019C20009E4EA1 /* nebula.h in Headers */,
+				EA398C9E278A6FF900A9AAE5 /* greek.h in Headers */,
 				971A666523019C15009E4EA1 /* orbit.h in Headers */,
 				971A666D23019C15009E4EA1 /* samporient.h in Headers */,
 				971A660023019BF0009E4EA1 /* CelestiaAstroObject+Private.h in Headers */,
@@ -1857,6 +1864,7 @@
 				971A66A823019C20009E4EA1 /* frametree.cpp in Sources */,
 				9751DC2023594A8000299997 /* celx_rotation.cpp in Sources */,
 				9751DC2823594A8000299997 /* celx_phase.cpp in Sources */,
+				EA398C9D278A6FF900A9AAE5 /* greek.cpp in Sources */,
 				EA59EA3626213CB4001E5B9D /* jpeg.cpp in Sources */,
 				971A670D23019C21009E4EA1 /* virtualtex.cpp in Sources */,
 				EA59EA3526213CB4001E5B9D /* dds.cpp in Sources */,
