@@ -16,6 +16,24 @@
 #import "CelestiaLocation.h"
 #import "CelestiaUniverse.h"
 
+@interface CelestiaBrowserItemKeyValuePair ()
+@property (nonatomic) NSString *key;
+@property (nonatomic) CelestiaBrowserItem *value;
+@end
+
+@implementation CelestiaBrowserItemKeyValuePair
+
+- (instancetype)initWithName:(NSString *)name browserItem:(CelestiaBrowserItem *)browserItem {
+    self = [super init];
+    if (self) {
+        _key = [name copy];
+        _value = browserItem;
+    }
+    return self;
+}
+
+@end
+
 @interface CelestiaBrowserItem ()
 
 @property CelestiaAstroObject *catEntry;
@@ -40,6 +58,27 @@
         _alternativeName = alternativeName;
         _catEntry = entry;
         _childrenProvider = provider;
+    }
+    return self;
+}
+
+- (instancetype)initWithName:(NSString *)name
+             alternativeName:(NSString *)alternativeName
+             orderedChildren:(NSArray<CelestiaBrowserItemKeyValuePair *> *)children {
+    self = [super init];
+    if (self) {
+        _catEntry = nil;
+        _stringValue = name;
+        _alternativeName = alternativeName;
+        _childrenProvider = nil;
+        NSMutableArray *values = [NSMutableArray array];
+        NSMutableArray *keys = [NSMutableArray array];
+        for (CelestiaBrowserItemKeyValuePair *entry : children) {
+            [keys addObject:entry.key];
+            [values addObject:entry.value];
+        }
+        _childrenKeys = keys;
+        _childrenValues = values;
     }
     return self;
 }
@@ -72,6 +111,10 @@
 - (instancetype)initWithName:(NSString *)name
                     children:(NSDictionary<NSString *, CelestiaBrowserItem *> *)children {
     return [self initWithName:name alternativeName:nil children:children];
+}
+
+- (instancetype)initWithName:(NSString *)name orderedChildren:(NSArray<CelestiaBrowserItemKeyValuePair *> *)children {
+    return [self initWithName:name alternativeName:nil orderedChildren:children];
 }
 
 - (NSString *)name {

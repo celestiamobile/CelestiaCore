@@ -22,6 +22,7 @@ enum UserDefaultsKey: String {
     #if os(iOS) || os(tvOS)
     case frameRate
     case onboardMessageDisplayed
+    case lastNewsID
     #endif
 }
 

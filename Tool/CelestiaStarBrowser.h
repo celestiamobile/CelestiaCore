@@ -16,6 +16,7 @@
 
 typedef NS_ENUM(NSUInteger, CelestiaStarBrowserKind) {
     CelestiaStarBrowserKindNearest = 0,
+    CelestiaStarBrowserKindBrighter = 1,
     CelestiaStarBrowserKindBrightest = 2,
     CelestiaStarBrowserKindStarsWithPlants = 3,
 } NS_SWIFT_NAME(StarBrowserKind);
