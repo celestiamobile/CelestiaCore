@@ -8,6 +8,7 @@ APP_RESOURCES=$BUILT_PRODUCTS_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH
 CELESTIA_ROOT=$APP_RESOURCES/CelestiaResources
 CELESTIA_REPO_ROOT=`pwd`/../Celestia
 CELESTIA_CONTENT_REPO_ROOT=`pwd`/../CelestiaContent
+CELESTIA_LOCALIZATION_REPO_ROOT=`pwd`/../CelestiaLocalization
 
 LOCALE_ROOT=$CELESTIA_ROOT/locale
 
@@ -31,7 +32,7 @@ convert_po()
 
 convert_po "$CELESTIA_REPO_ROOT/po" "celestia"
 convert_po "$CELESTIA_CONTENT_REPO_ROOT/po" "celestia-data"
-convert_po "$CELESTIA_REPO_ROOT/po3" "celestia_ui"
+convert_po "$CELESTIA_LOCALIZATION_REPO_ROOT/common" "celestia_ui"
 
 create_lproj()
 {
