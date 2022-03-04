@@ -151,6 +151,8 @@ NS_SWIFT_NAME(AppCore)
 
 - (BOOL)screenshot:(NSString *)filePath withFileSize:(CelestiaScreenshotFileType)type NS_SWIFT_NAME(screenshot(to:type:));
 
+@property (class, readonly) NSString *language;
+
 + (void)setLocaleDirectory:(NSString *)localeDirectory;
 
 // MARK: Simulation

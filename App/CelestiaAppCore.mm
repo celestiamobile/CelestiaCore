@@ -314,6 +314,13 @@ private:
     textdomain("celestia");
 }
 
++ (NSString *)language {
+    const char *lang = dgettext("celestia", "LANGUAGE");
+    if (strcmp(lang, "LANGUAGE") == 0)
+        return @"en";
+    return [NSString stringWithUTF8String:lang];
+}
+
 // MARK: Simulation
 - (CelestiaSimulation *)simulation {
     if (!_simulation) {

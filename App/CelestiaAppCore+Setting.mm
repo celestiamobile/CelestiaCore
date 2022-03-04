@@ -471,13 +471,7 @@ static NSDateFormatter *dateFormatter = nil;
             dateFormatter = [[NSDateFormatter alloc] init];
             [dateFormatter setDateStyle:NSDateFormatterLongStyle];
             [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
-            NSLocale *locale;
-            NSString *celestiaLang = LocalizedString(@"LANGUAGE", @"celestia");
-            if ([celestiaLang length] == 0 || [celestiaLang isEqualToString:@"LANGUAGE"])
-            {
-                celestiaLang = @"en_US";
-            }
-            locale = [NSLocale localeWithLocaleIdentifier:celestiaLang];
+            NSLocale *locale = [NSLocale localeWithLocaleIdentifier:[CelestiaAppCore language]];
             [dateFormatter setLocale:locale];
         }
         core->setCustomDateFormatter([](double jd){
