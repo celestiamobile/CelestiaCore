@@ -36,14 +36,13 @@ convert_po "$CELESTIA_LOCALIZATION_REPO_ROOT/common" "celestia_ui"
 
 create_lproj()
 {
-    POT=$CELESTIA_REPO_ROOT/$1/$2.pot
-    for po in $CELESTIA_REPO_ROOT/$1/*.po; do
+    for po in $1/*.po; do
         f=${po##*/};f=${f%.*}
         mkdir -p $APP_RESOURCES/$f.lproj
     done
 }
 
-create_lproj "po3"
+create_lproj "$CELESTIA_LOCALIZATION_REPO_ROOT/common"
 
 if [ $DIDBUILD -eq 1 ];then
     echo "Touch $BUILT_PRODUCTS_DIR/$PRODUCT_NAME.app"
