@@ -65,6 +65,7 @@
             switch (bodyClass)
             {
                 case Body::Invisible:
+                case Body::Diffuse:
                     continue;
                 case Body::Planet:
                     if (!planets)
@@ -168,6 +169,7 @@
             switch (bodyClass)
             {
                 case Body::Invisible:
+                case Body::Diffuse:
                     continue;
                 case Body::Moon:
                 case Body::MinorMoon:
