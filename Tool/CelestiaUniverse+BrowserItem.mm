@@ -66,6 +66,7 @@
             {
                 case Body::Invisible:
                 case Body::Diffuse:
+                case Body::Component:
                     continue;
                 case Body::Planet:
                     if (!planets)
@@ -170,6 +171,7 @@
             {
                 case Body::Invisible:
                 case Body::Diffuse:
+                case Body::Component:
                     continue;
                 case Body::Moon:
                 case Body::MinorMoon:
