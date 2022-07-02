@@ -96,6 +96,13 @@ let extraScriptDirectory: URL? = extraDirectory?.appendingPathComponent("scripts
 private func path(for key: UserDefaultsKey, defaultValue: URL) -> UniformedURL {
     if let bookmark: Data = UserDefaults.app[key] {
         if let url = try? UniformedURL(bookmark: bookmark) {
+            if url.stale {
+                do {
+                    if let newBookmark = try url.bookmark() {
+                        UserDefaults.app[key] = newBookmark
+                    }
+                } catch {}
+            }
             return url
         }
         return UniformedURL(url: defaultValue)
