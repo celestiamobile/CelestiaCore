@@ -419,6 +419,8 @@
 		EAD4FBA92743ECC8005E3369 /* tokenizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAD4FBA72743ECC8005E3369 /* tokenizer.cpp */; };
 		EAE5F38C27758463005A3022 /* logger.h in Headers */ = {isa = PBXBuildFile; fileRef = EAE5F38A27758463005A3022 /* logger.h */; };
 		EAE5F38D27758463005A3022 /* logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAE5F38B27758463005A3022 /* logger.cpp */; };
+		EAFFE03B2882F7BE007DEBC2 /* textprintposition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAFFE0392882F7BE007DEBC2 /* textprintposition.cpp */; };
+		EAFFE03C2882F7BE007DEBC2 /* textprintposition.h in Headers */ = {isa = PBXBuildFile; fileRef = EAFFE03A2882F7BE007DEBC2 /* textprintposition.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -849,6 +851,8 @@
 		EAD4FBA72743ECC8005E3369 /* tokenizer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tokenizer.cpp; sourceTree = "<group>"; };
 		EAE5F38A27758463005A3022 /* logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = logger.h; sourceTree = "<group>"; };
 		EAE5F38B27758463005A3022 /* logger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = logger.cpp; sourceTree = "<group>"; };
+		EAFFE0392882F7BE007DEBC2 /* textprintposition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = textprintposition.cpp; sourceTree = "<group>"; };
+		EAFFE03A2882F7BE007DEBC2 /* textprintposition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = textprintposition.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1405,6 +1409,8 @@
 				977D839422FDB2E9002FF1C2 /* moviecapture.h */,
 				977D837422FDB2E7002FF1C2 /* scriptmenu.cpp */,
 				977D838B22FDB2E8002FF1C2 /* scriptmenu.h */,
+				EAFFE0392882F7BE007DEBC2 /* textprintposition.cpp */,
+				EAFFE03A2882F7BE007DEBC2 /* textprintposition.h */,
 				974A6B2123532EDB007BCABD /* view.cpp */,
 				974A6B2223532EDB007BCABD /* view.h */,
 				977D837022FDB2E6002FF1C2 /* url.cpp */,
@@ -1528,6 +1534,7 @@
 				971A669A23019C20009E4EA1 /* deepskyobj.h in Headers */,
 				9751DC1C23594A8000299997 /* celx_object.h in Headers */,
 				971A66B523019C20009E4EA1 /* image.h in Headers */,
+				EAFFE03C2882F7BE007DEBC2 /* textprintposition.h in Headers */,
 				971A671023019C21009E4EA1 /* visibleregion.h in Headers */,
 				971A65F423019BF0009E4EA1 /* CelestiaSelection+Private.h in Headers */,
 				971A670423019C21009E4EA1 /* trajmanager.h in Headers */,
@@ -1941,6 +1948,7 @@
 				971A65FE23019BF0009E4EA1 /* CelestiaLocation.mm in Sources */,
 				971A669223019C20009E4EA1 /* console.cpp in Sources */,
 				974A6B1E23532EA1007BCABD /* overlayimage.cpp in Sources */,
+				EAFFE03B2882F7BE007DEBC2 /* textprintposition.cpp in Sources */,
 				EA8926552567BD0300A868F3 /* CelestiaFavorite.m in Sources */,
 				971A670B23019C21009E4EA1 /* vertexobject.cpp in Sources */,
 				971A66F923019C21009E4EA1 /* texmanager.cpp in Sources */,
