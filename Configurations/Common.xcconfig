@@ -23,12 +23,6 @@ LD_RUNPATH_SEARCH_PATHS = $(inherited) @executable_path/../Frameworks @loader_pa
 PRODUCT_BUNDLE_IDENTIFIER = space.celestia.CelestiaCore
 PRODUCT_NAME = $(TARGET_NAME:c99extidentifier)
 
-EXCLUDED_SOURCE_FILE_MACCATALYST_YES = celx_gl.cpp
-EXCLUDED_SOURCE_FILE_MACCATALYST_NO =
-
-EXCLUDED_SOURCE_FILE_NAMES[sdk=macosx*] = $(EXCLUDED_SOURCE_FILE_MACCATALYST_$(IS_MACCATALYST))
-EXCLUDED_SOURCE_FILE_NAMES[sdk=appletvos*] = celx_gl.cpp
-EXCLUDED_SOURCE_FILE_NAMES[sdk=appletvsimulator*] = celx_gl.cpp
 EXCLUDED_SOURCE_FILE_NAMES[sdk=iphoneos*] = celx_gl.cpp
 EXCLUDED_SOURCE_FILE_NAMES[sdk=iphonesimulator*] = celx_gl.cpp
 
@@ -40,27 +34,9 @@ THIRD_PARTY_LIB_PATH[sdk=macosx*] = $(THIRD_PARTY_LIB_PATH_MACCATALYST_$(IS_MACC
 THIRD_PARTY_LIB_PATH[sdk=iphoneos*] = $(PROJECT_DIR)/libs/dependency/ios
 THIRD_PARTY_LIB_PATH[sdk=iphonesimulator*] = $(PROJECT_DIR)/libs/dependency/iossim
 
-HEADER_SEARCH_PATHS_BASE = $(PROJECT_DIR) $(PROJECT_DIR)/../Celestia/src $(PROJECT_DIR)/../Celestia/thirdparty/miniaudio $(THIRD_PARTY_LIB_PATH)/include $(THIRD_PARTY_LIB_PATH)/include/eigen3 $(THIRD_PARTY_LIB_PATH)/include/lua $(THIRD_PARTY_LIB_PATH)/include/gettext $(THIRD_PARTY_LIB_PATH)/include/jpeg $(THIRD_PARTY_LIB_PATH)/include/libpng $(THIRD_PARTY_LIB_PATH)/include/cspice $(THIRD_PARTY_LIB_PATH)/include/freetype/freetype2
-HEADER_SEARCH_PATHS_MACCATALYST_YES = $(HEADER_SEARCH_PATHS_BASE) $(THIRD_PARTY_LIB_PATH)/include/angle
-HEADER_SEARCH_PATHS_MACCATALYST_NO = $(HEADER_SEARCH_PATHS_BASE) $(THIRD_PARTY_LIB_PATH)/include/libepoxy
-
-SYSTEM_HEADER_SEARCH_PATHS = $(HEADER_SEARCH_PATHS_BASE)
-SYSTEM_HEADER_SEARCH_PATHS[sdk=macosx*] = $(HEADER_SEARCH_PATHS_MACCATALYST_$(IS_MACCATALYST))
-SYSTEM_HEADER_SEARCH_PATHS[sdk=appletvos*] = $(SYSTEM_HEADER_SEARCH_PATHS) $(THIRD_PARTY_LIB_PATH)/include/libepoxy
-SYSTEM_HEADER_SEARCH_PATHS[sdk=appletvsimulator*] = $(SYSTEM_HEADER_SEARCH_PATHS) $(THIRD_PARTY_LIB_PATH)/include/libepoxy
-SYSTEM_HEADER_SEARCH_PATHS[sdk=iphoneos*] = $(SYSTEM_HEADER_SEARCH_PATHS) $(THIRD_PARTY_LIB_PATH)/include/libepoxy
-SYSTEM_HEADER_SEARCH_PATHS[sdk=iphonesimulator*] = $(SYSTEM_HEADER_SEARCH_PATHS) $(THIRD_PARTY_LIB_PATH)/include/libepoxy
+SYSTEM_HEADER_SEARCH_PATHS = $(PROJECT_DIR) $(PROJECT_DIR)/../Celestia/src $(PROJECT_DIR)/../Celestia/thirdparty/miniaudio $(THIRD_PARTY_LIB_PATH)/include $(THIRD_PARTY_LIB_PATH)/include/eigen3 $(THIRD_PARTY_LIB_PATH)/include/lua $(THIRD_PARTY_LIB_PATH)/include/gettext $(THIRD_PARTY_LIB_PATH)/include/jpeg $(THIRD_PARTY_LIB_PATH)/include/libpng $(THIRD_PARTY_LIB_PATH)/include/cspice $(THIRD_PARTY_LIB_PATH)/include/freetype/freetype2 $(THIRD_PARTY_LIB_PATH)/include/libepoxy
 
 STRIP_INSTALLED_PRODUCT = NO
 GENERATE_MASTER_OBJECT_FILE = YES
 
-PRELINK_LIBS_BASE = $(THIRD_PARTY_LIB_PATH)/libs/cspice.a $(THIRD_PARTY_LIB_PATH)/libs/liblua.a $(THIRD_PARTY_LIB_PATH)/libs/libpng16.a $(THIRD_PARTY_LIB_PATH)/libs/libintl.a $(THIRD_PARTY_LIB_PATH)/libs/libfreetype.a $(THIRD_PARTY_LIB_PATH)/libs/libjpeg.a $(THIRD_PARTY_LIB_PATH)/libs/libfmt.a
-PRELINK_LIBS_MACCATALYST_YES = $(PRELINK_LIBS_BASE)
-PRELINK_LIBS_MACCATALYST_NO = $(PRELINK_LIBS_BASE) $(THIRD_PARTY_LIB_PATH)/libs/libGL.a
-
-PRELINK_LIBS = $(PRELINK_LIBS_BASE)
-PRELINK_LIBS[sdk=macosx*] = $(PRELINK_LIBS_MACCATALYST_$(IS_MACCATALYST))
-PRELINK_LIBS[sdk=appletvos*] = $(PRELINK_LIBS) $(THIRD_PARTY_LIB_PATH)/libs/libGL.a
-PRELINK_LIBS[sdk=appletvsimulator*] = $(PRELINK_LIBS) $(THIRD_PARTY_LIB_PATH)/libs/libGL.a
-PRELINK_LIBS[sdk=iphoneos*] = $(PRELINK_LIBS) $(THIRD_PARTY_LIB_PATH)/libs/libGL.a
-PRELINK_LIBS[sdk=iphonesimulator*] = $(PRELINK_LIBS) $(THIRD_PARTY_LIB_PATH)/libs/libGL.a
+PRELINK_LIBS = $(THIRD_PARTY_LIB_PATH)/libs/cspice.a $(THIRD_PARTY_LIB_PATH)/libs/liblua.a $(THIRD_PARTY_LIB_PATH)/libs/libpng16.a $(THIRD_PARTY_LIB_PATH)/libs/libintl.a $(THIRD_PARTY_LIB_PATH)/libs/libfreetype.a $(THIRD_PARTY_LIB_PATH)/libs/libjpeg.a $(THIRD_PARTY_LIB_PATH)/libs/libfmt.a $(THIRD_PARTY_LIB_PATH)/libs/libGL.a
