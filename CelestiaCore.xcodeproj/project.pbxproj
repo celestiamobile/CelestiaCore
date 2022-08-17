@@ -421,6 +421,8 @@
 		EAD4FBA52743EBDB005E3369 /* binarywrite.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD4FBA32743EBDB005E3369 /* binarywrite.h */; };
 		EAD4FBA82743ECC8005E3369 /* tokenizer.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD4FBA62743ECC8005E3369 /* tokenizer.h */; };
 		EAD4FBA92743ECC8005E3369 /* tokenizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAD4FBA72743ECC8005E3369 /* tokenizer.cpp */; };
+		EADDA21928ACF95F004460A6 /* glcompat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EADDA21728ACF95F004460A6 /* glcompat.cpp */; };
+		EADDA21A28ACF95F004460A6 /* glcompat.h in Headers */ = {isa = PBXBuildFile; fileRef = EADDA21828ACF95F004460A6 /* glcompat.h */; };
 		EAE5F38C27758463005A3022 /* logger.h in Headers */ = {isa = PBXBuildFile; fileRef = EAE5F38A27758463005A3022 /* logger.h */; };
 		EAE5F38D27758463005A3022 /* logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAE5F38B27758463005A3022 /* logger.cpp */; };
 		EAFFE03B2882F7BE007DEBC2 /* textprintposition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAFFE0392882F7BE007DEBC2 /* textprintposition.cpp */; };
@@ -849,6 +851,8 @@
 		EAD4FBA32743EBDB005E3369 /* binarywrite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = binarywrite.h; sourceTree = "<group>"; };
 		EAD4FBA62743ECC8005E3369 /* tokenizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tokenizer.h; sourceTree = "<group>"; };
 		EAD4FBA72743ECC8005E3369 /* tokenizer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tokenizer.cpp; sourceTree = "<group>"; };
+		EADDA21728ACF95F004460A6 /* glcompat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glcompat.cpp; sourceTree = "<group>"; };
+		EADDA21828ACF95F004460A6 /* glcompat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glcompat.h; sourceTree = "<group>"; };
 		EAE5F38A27758463005A3022 /* logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = logger.h; sourceTree = "<group>"; };
 		EAE5F38B27758463005A3022 /* logger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = logger.cpp; sourceTree = "<group>"; };
 		EAFFE0392882F7BE007DEBC2 /* textprintposition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = textprintposition.cpp; sourceTree = "<group>"; };
@@ -1057,6 +1061,8 @@
 				9751DBE723594A5300299997 /* celx.h */,
 				9751DBE823594A5300299997 /* celx_vector.h */,
 				9751DBE923594A5300299997 /* celx_phase.cpp */,
+				EADDA21728ACF95F004460A6 /* glcompat.cpp */,
+				EADDA21828ACF95F004460A6 /* glcompat.h */,
 				97AD59C6235B1B8E0056CA80 /* luascript.cpp */,
 				97AD59C7235B1B8E0056CA80 /* luascript.h */,
 			);
@@ -1552,6 +1558,7 @@
 				971A668723019C20009E4EA1 /* boundaries.h in Headers */,
 				9729F1F023084D080069FD72 /* filesystem.h in Headers */,
 				971A668523019C20009E4EA1 /* body.h in Headers */,
+				EADDA21A28ACF95F004460A6 /* glcompat.h in Headers */,
 				97AD59C1235B1B760056CA80 /* script.h in Headers */,
 				971A665823019C0F009E4EA1 /* utf8.h in Headers */,
 				971A66BA23019C20009E4EA1 /* lodspheremesh.h in Headers */,
@@ -1807,6 +1814,7 @@
 				97E34AEF2431ED09009E67C3 /* glsupport.cpp in Sources */,
 				971A667623019C15009E4EA1 /* spiceorbit.cpp in Sources */,
 				971A66C723019C20009E4EA1 /* observer.cpp in Sources */,
+				EADDA21928ACF95F004460A6 /* glcompat.cpp in Sources */,
 				974D27422303C3A300FDFBC0 /* CelestiaOrbit.mm in Sources */,
 				971A663E23019C03009E4EA1 /* url.cpp in Sources */,
 				EA59EA3326213CB4001E5B9D /* dds_decompress.cpp in Sources */,

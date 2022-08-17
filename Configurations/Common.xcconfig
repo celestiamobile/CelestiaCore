@@ -23,9 +23,6 @@ LD_RUNPATH_SEARCH_PATHS = $(inherited) @executable_path/../Frameworks @loader_pa
 PRODUCT_BUNDLE_IDENTIFIER = space.celestia.CelestiaCore
 PRODUCT_NAME = $(TARGET_NAME:c99extidentifier)
 
-EXCLUDED_SOURCE_FILE_NAMES[sdk=iphoneos*] = celx_gl.cpp
-EXCLUDED_SOURCE_FILE_NAMES[sdk=iphonesimulator*] = celx_gl.cpp
-
 THIRD_PARTY_LIB_PATH_MACCATALYST_YES = $(PROJECT_DIR)/libs/dependency/catalyst
 THIRD_PARTY_LIB_PATH_MACCATALYST_NO = $(PROJECT_DIR)/libs/dependency/mac
 
