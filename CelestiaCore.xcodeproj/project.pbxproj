@@ -258,8 +258,6 @@
 		971A670723019C21009E4EA1 /* universe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 977D823322FDB23D002FF1C2 /* universe.cpp */; };
 		971A670823019C21009E4EA1 /* universe.h in Headers */ = {isa = PBXBuildFile; fileRef = 977D821322FDB23B002FF1C2 /* universe.h */; };
 		971A670923019C21009E4EA1 /* vecgl.h in Headers */ = {isa = PBXBuildFile; fileRef = 977D825622FDB23F002FF1C2 /* vecgl.h */; };
-		971A670B23019C21009E4EA1 /* vertexobject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 977D824322FDB23E002FF1C2 /* vertexobject.cpp */; };
-		971A670C23019C21009E4EA1 /* vertexobject.h in Headers */ = {isa = PBXBuildFile; fileRef = 977D824022FDB23E002FF1C2 /* vertexobject.h */; };
 		971A670D23019C21009E4EA1 /* virtualtex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 977D824222FDB23E002FF1C2 /* virtualtex.cpp */; };
 		971A670E23019C21009E4EA1 /* virtualtex.h in Headers */ = {isa = PBXBuildFile; fileRef = 977D825022FDB23F002FF1C2 /* virtualtex.h */; };
 		971A670F23019C21009E4EA1 /* visibleregion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 977D823422FDB23D002FF1C2 /* visibleregion.cpp */; };
@@ -367,6 +365,10 @@
 		97E34AEF2431ED09009E67C3 /* glsupport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97E34AED2431ED08009E67C3 /* glsupport.cpp */; };
 		97FA985823FE460300825BD3 /* CelestiaAppCore+Event.mm in Sources */ = {isa = PBXBuildFile; fileRef = 97E0B76F231273C10016C154 /* CelestiaAppCore+Event.mm */; };
 		97FA986523FE5ABB00825BD3 /* CelestiaAppCore+Event.h in Headers */ = {isa = PBXBuildFile; fileRef = 97E0B76E231273C10016C154 /* CelestiaAppCore+Event.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA0E06C728C0C160004F6DF7 /* linerenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = EA0E06C528C0C160004F6DF7 /* linerenderer.h */; };
+		EA0E06C828C0C160004F6DF7 /* linerenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0E06C628C0C160004F6DF7 /* linerenderer.cpp */; };
+		EA1D603C28D6071900571B2E /* vertexobject.h in Headers */ = {isa = PBXBuildFile; fileRef = EA1D603A28D6071800571B2E /* vertexobject.h */; };
+		EA1D603D28D6071900571B2E /* vertexobject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA1D603B28D6071900571B2E /* vertexobject.cpp */; };
 		EA1F11A1288A3A2600D8698F /* audiosession.h in Headers */ = {isa = PBXBuildFile; fileRef = EA1F119F288A3A2600D8698F /* audiosession.h */; };
 		EA1F11A4288A3ADF00D8698F /* miniaudiosession.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA1F11A2288A3ADF00D8698F /* miniaudiosession.cpp */; settings = {COMPILER_FLAGS = "-x objective-c++"; }; };
 		EA1F11A5288A3ADF00D8698F /* miniaudiosession.h in Headers */ = {isa = PBXBuildFile; fileRef = EA1F11A3288A3ADF00D8698F /* miniaudiosession.h */; };
@@ -664,10 +666,8 @@
 		977D823D22FDB23D002FF1C2 /* deepskyobj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = deepskyobj.h; sourceTree = "<group>"; };
 		977D823E22FDB23E002FF1C2 /* image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = image.h; sourceTree = "<group>"; };
 		977D823F22FDB23E002FF1C2 /* texmanager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = texmanager.h; sourceTree = "<group>"; };
-		977D824022FDB23E002FF1C2 /* vertexobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vertexobject.h; sourceTree = "<group>"; };
 		977D824122FDB23E002FF1C2 /* stellarclass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stellarclass.cpp; sourceTree = "<group>"; };
 		977D824222FDB23E002FF1C2 /* virtualtex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = virtualtex.cpp; sourceTree = "<group>"; };
-		977D824322FDB23E002FF1C2 /* vertexobject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vertexobject.cpp; sourceTree = "<group>"; };
 		977D824422FDB23E002FF1C2 /* simulation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = simulation.cpp; sourceTree = "<group>"; };
 		977D824522FDB23E002FF1C2 /* constellation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constellation.h; sourceTree = "<group>"; };
 		977D824622FDB23E002FF1C2 /* glshader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glshader.cpp; sourceTree = "<group>"; };
@@ -793,6 +793,10 @@
 		97E0B7722312763C0016C154 /* CelestiaAppCore+Private.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "CelestiaAppCore+Private.mm"; sourceTree = "<group>"; };
 		97E34AEC2431ED08009E67C3 /* glsupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glsupport.h; sourceTree = "<group>"; };
 		97E34AED2431ED08009E67C3 /* glsupport.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glsupport.cpp; sourceTree = "<group>"; };
+		EA0E06C528C0C160004F6DF7 /* linerenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = linerenderer.h; sourceTree = "<group>"; };
+		EA0E06C628C0C160004F6DF7 /* linerenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = linerenderer.cpp; sourceTree = "<group>"; };
+		EA1D603A28D6071800571B2E /* vertexobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vertexobject.h; sourceTree = "<group>"; };
+		EA1D603B28D6071900571B2E /* vertexobject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vertexobject.cpp; sourceTree = "<group>"; };
 		EA1F119F288A3A2600D8698F /* audiosession.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = audiosession.h; sourceTree = "<group>"; };
 		EA1F11A2288A3ADF00D8698F /* miniaudiosession.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = miniaudiosession.cpp; sourceTree = "<group>"; };
 		EA1F11A3288A3ADF00D8698F /* miniaudiosession.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = miniaudiosession.h; sourceTree = "<group>"; };
@@ -1107,6 +1111,7 @@
 				977D81C322FDB1FE002FF1C2 /* celephem */,
 				977D81C222FDB1F5002FF1C2 /* celengine */,
 				977D81B722FDB1C4002FF1C2 /* cel3ds */,
+				EA0E06C328C0C160004F6DF7 /* celrender */,
 				977D817222FDB18B002FF1C2 /* celmath */,
 			);
 			name = Core;
@@ -1293,8 +1298,6 @@
 				9752D7A323ED182D00FFE781 /* value.cpp */,
 				9752D7A423ED182D00FFE781 /* value.h */,
 				977D825622FDB23F002FF1C2 /* vecgl.h */,
-				977D824322FDB23E002FF1C2 /* vertexobject.cpp */,
-				977D824022FDB23E002FF1C2 /* vertexobject.h */,
 				EAC562422529FAB4008D10F0 /* viewporteffect.cpp */,
 				EAC562432529FAB4008D10F0 /* viewporteffect.h */,
 				977D824222FDB23E002FF1C2 /* virtualtex.cpp */,
@@ -1447,6 +1450,17 @@
 			path = common;
 			sourceTree = "<group>";
 		};
+		EA0E06C328C0C160004F6DF7 /* celrender */ = {
+			isa = PBXGroup;
+			children = (
+				EA0E06C528C0C160004F6DF7 /* linerenderer.h */,
+				EA0E06C628C0C160004F6DF7 /* linerenderer.cpp */,
+				EA1D603B28D6071900571B2E /* vertexobject.cpp */,
+				EA1D603A28D6071800571B2E /* vertexobject.h */,
+			);
+			path = celrender;
+			sourceTree = "<group>";
+		};
 		EA59EA2A26213C7B001E5B9D /* celimage */ = {
 			isa = PBXGroup;
 			children = (
@@ -1529,7 +1543,6 @@
 				9751DC2623594A8000299997 /* celx.h in Headers */,
 				971A65FA23019BF0009E4EA1 /* CelestiaPlanetarySystem.h in Headers */,
 				971A66C223019C20009E4EA1 /* multitexture.h in Headers */,
-				971A670C23019C21009E4EA1 /* vertexobject.h in Headers */,
 				97AD599A235B016C0056CA80 /* scriptmaps.h in Headers */,
 				974A6B2023532EC4007BCABD /* rectangle.h in Headers */,
 				971A65ED23019BF0009E4EA1 /* CelestiaVector+Private.h in Headers */,
@@ -1561,6 +1574,7 @@
 				EADDA21A28ACF95F004460A6 /* glcompat.h in Headers */,
 				97AD59C1235B1B760056CA80 /* script.h in Headers */,
 				971A665823019C0F009E4EA1 /* utf8.h in Headers */,
+				EA0E06C728C0C160004F6DF7 /* linerenderer.h in Headers */,
 				971A66BA23019C20009E4EA1 /* lodspheremesh.h in Headers */,
 				971A66EF23019C21009E4EA1 /* starcolors.h in Headers */,
 				971A66F823019C21009E4EA1 /* surface.h in Headers */,
@@ -1639,6 +1653,7 @@
 				EAB08FEA27807E2500BB82F0 /* numbers.h in Headers */,
 				971A669523019C20009E4EA1 /* constellation.h in Headers */,
 				971A660923019BF0009E4EA1 /* CelestiaStar+Private.h in Headers */,
+				EA1D603C28D6071900571B2E /* vertexobject.h in Headers */,
 				EA544E592566B3E4003F351D /* CelestiaDestination+Private.h in Headers */,
 				971A66FC23019C21009E4EA1 /* texture.h in Headers */,
 				97AD59C9235B1B8E0056CA80 /* luascript.h in Headers */,
@@ -1917,6 +1932,7 @@
 				971A666E23019C15009E4EA1 /* scriptobject.cpp in Sources */,
 				971A65E523019BF0009E4EA1 /* CelestiaStarCatalog.mm in Sources */,
 				EA59EA3726213CB4001E5B9D /* bmp.cpp in Sources */,
+				EA0E06C828C0C160004F6DF7 /* linerenderer.cpp in Sources */,
 				EAD4FBA92743ECC8005E3369 /* tokenizer.cpp in Sources */,
 				EA8D1EB724D6D0BD0071C7B5 /* strnatcmp.cpp in Sources */,
 				971A66B023019C20009E4EA1 /* globular.cpp in Sources */,
@@ -1958,7 +1974,7 @@
 				974A6B1E23532EA1007BCABD /* overlayimage.cpp in Sources */,
 				EAFFE03B2882F7BE007DEBC2 /* textprintposition.cpp in Sources */,
 				EA8926552567BD0300A868F3 /* CelestiaFavorite.m in Sources */,
-				971A670B23019C21009E4EA1 /* vertexobject.cpp in Sources */,
+				EA1D603D28D6071900571B2E /* vertexobject.cpp in Sources */,
 				971A66F923019C21009E4EA1 /* texmanager.cpp in Sources */,
 				971A66CA23019C20009E4EA1 /* opencluster.cpp in Sources */,
 				971A661223019BFC009E4EA1 /* modelfile.cpp in Sources */,
