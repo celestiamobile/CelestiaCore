@@ -9,6 +9,7 @@
 // of the License, or (at your option) any later version.
 //
 
+#include <celengine/body.h>
 #import "CelestiaUniverse.h"
 #import "CelestiaSelection+Private.h"
 #import "CelestiaUniverse+Private.h"

@@ -9,6 +9,7 @@
 // of the License, or (at your option) any later version.
 //
 
+#include <celengine/body.h>
 #include <celengine/glsupport.h>
 
 #import "CelestiaAppCore+Private.h"
