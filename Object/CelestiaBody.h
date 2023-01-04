@@ -15,6 +15,7 @@
 @class CelestiaOrbit;
 @class CelestiaRotationModel;
 @class CelestiaAtmosphere;
+@class CelestiaTimeline;
 
 typedef NS_ENUM(NSUInteger, CelestiaBodyType) {
     CelestiaBodyTypePlanet         =    0x01,
@@ -39,22 +40,22 @@ NS_ASSUME_NONNULL_BEGIN
 NS_SWIFT_NAME(Body)
 @interface CelestiaBody : CelestiaAstroObject
 
-@property (readonly) CelestiaBodyType type;
-@property (readonly) NSString *name;
-@property (readonly) float radius;
-@property (readonly, getter=isEllipsoid) BOOL ellipsoid;
-@property (readonly) BOOL hasRings;
-@property (readonly) BOOL hasAtmosphere;
-@property (nullable, readonly) NSDate *startTime;
-@property (nullable, readonly) NSDate *endTime;
-@property (nullable, readonly) CelestiaAtmosphere *atomosphere;
-@property float mass;
-@property float geomAlbedo;
-@property (readonly) NSArray<NSString *> *alternateSurfaceNames;
+@property (nonatomic, readonly) CelestiaBodyType type;
+@property (nonatomic, readonly) NSString *name;
+@property (nonatomic, readonly) float radius;
+@property (nonatomic, readonly, getter=isEllipsoid) BOOL ellipsoid;
+@property (nonatomic, readonly) BOOL hasRings;
+@property (nonatomic, readonly) BOOL hasAtmosphere;
+@property (nonatomic, nullable, readonly) CelestiaAtmosphere *atomosphere;
+@property (nonatomic) float mass;
+@property (nonatomic) float geomAlbedo;
+@property (nonatomic, readonly) NSArray<NSString *> *alternateSurfaceNames;
 
-@property (nullable, readonly) CelestiaPlanetarySystem *system;
+@property (nonatomic, nullable, readonly) CelestiaPlanetarySystem *system;
 
-@property (nullable, readonly) NSString *webInfoURL;
+@property (nonatomic, readonly) CelestiaTimeline *timeline;
+
+@property (nonatomic, nullable, readonly) NSString *webInfoURL;
 
 - (CelestiaOrbit *)orbitAtTime:(NSDate *)time NS_SWIFT_NAME(orbit(at:));
 - (CelestiaRotationModel *)rotationAtTime:(NSDate *)time NS_SWIFT_NAME(rotation(at:));

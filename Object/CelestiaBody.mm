@@ -17,6 +17,7 @@
 #import "CelestiaPlanetarySystem+Private.h"
 #import "CelestiaUtil.h"
 #import "CelestiaAtmosphere+Private.h"
+#import "CelestiaTimeline+Private.h"
 
 #import "CelestiaAppCore+Locale.h"
 
@@ -79,22 +80,6 @@
     return [self body]->getAtmosphere() ? YES : NO;
 }
 
-- (NSDate *)startTime {
-    double start, end;
-    [self body]->getLifespan(start, end);
-    if (start > -1.0e9)
-        return [NSDate dateWithJulian:start];
-    return nil;
-}
-
-- (NSDate *)endTime {
-    double start, end;
-     [self body]->getLifespan(start, end);
-     if (end < 1.0e9)
-         return [NSDate dateWithJulian:end];
-     return nil;
-}
-
 - (CelestiaAtmosphere *)atomosphere {
     Atmosphere *atmosphere = [self body]->getAtmosphere();
     if (atmosphere)
@@ -125,6 +110,10 @@
         return nil;
     }
     return [[CelestiaPlanetarySystem alloc] initWithSystem:s];
+}
+
+- (CelestiaTimeline *)timeline {
+    return [[CelestiaTimeline alloc] initWithTimeline:[self body]->getTimeline()];
 }
 
 - (NSString *)webInfoURL {

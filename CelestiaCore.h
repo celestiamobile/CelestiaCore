@@ -47,6 +47,8 @@ FOUNDATION_EXPORT const unsigned char CelestiaCoreVersionString[];
 #import <CelestiaCore/CelestiaOrbit.h>
 #import <CelestiaCore/CelestiaRotationModel.h>
 #import <CelestiaCore/CelestiaAtmosphere.h>
+#import <CelestiaCore/CelestiaTimeline.h>
+#import <CelestiaCore/CelestiaTimelinePhase.h>
 
 #import <CelestiaCore/CelestiaEclipseFinder.h>
 #import <CelestiaCore/CelestiaStarBrowser.h>
