@@ -12,22 +12,6 @@
 import CelestiaCore
 import Foundation
 
-// MARK: singleton
-private var core: AppCore?
-
-extension AppCore {
-    static var shared: AppCore {
-        if core == nil {
-            core = AppCore()
-        }
-        return core!
-    }
-}
-
-func isCoreInitialized() -> Bool {
-    return core?.isInitialized == true
-}
-
 extension Selection {
     convenience init?(item: BrowserItem) {
         if let object = item.entry {
@@ -39,100 +23,100 @@ extension Selection {
 }
 
 // MARK: Browser
-func createStaticBrowserItems() {
-    if solBrowserRoot == nil {
-        let universe = AppCore.shared.simulation.universe
-        if let sol = universe.find("Sol").star {
-            solBrowserRoot = BrowserItem(name: universe.starCatalog.starName(sol), alternativeName: CelestiaString("Solar System", comment: ""), catEntry: sol, provider: universe)
+extension AppCore {
+    func createStaticBrowserItems() {
+        if solBrowserRoot == nil {
+            let universe = simulation.universe
+            if let sol = universe.find("Sol").star {
+                solBrowserRoot = BrowserItem(name: universe.starCatalog.starName(sol), alternativeName: CelestiaString("Solar System", comment: ""), catEntry: sol, provider: universe)
+            }
+        }
+
+        if dsoBrowserRoot == nil {
+            let universe = simulation.universe
+
+            let typeMap = [
+                "SB" : CelestiaString("Galaxies (Barred Spiral)", comment: ""),
+                "S" : CelestiaString("Galaxies (Spiral)", comment: ""),
+                "E" : CelestiaString("Galaxies (Elliptical)", comment: ""),
+                "Irr" : CelestiaString("Galaxies (Irregular)", comment: ""),
+                "Neb" : CelestiaString("Nebulae", comment: ""),
+                "Glob" : CelestiaString("Globulars", comment: ""),
+                "Open cluster" : CelestiaString("Open Clusters", comment: ""),
+                "Unknown" : CelestiaString("Unknown", comment: ""),
+            ]
+
+            func updateAccumulation(result: inout [String : BrowserItem], item: (key: String, value: [String : BrowserItem])) {
+                let fullName = typeMap[item.key]!
+                result[fullName] = BrowserItem(name: fullName, children: item.value)
+            }
+
+            let prefixes = ["SB", "S", "E", "Irr", "Neb", "Glob", "Open cluster"]
+
+            var tempDict = prefixes.reduce(into: [String : [String : BrowserItem]]()) { $0[$1] = [String : BrowserItem]() }
+
+            let catalog = universe.dsoCatalog
+            catalog.forEach({ (dso) in
+                let matchingType = prefixes.first(where: {dso.type.hasPrefix($0)}) ?? "Unknown"
+                let name = catalog.dsoName(dso)
+                if tempDict[matchingType] != nil {
+                    tempDict[matchingType]![name] = BrowserItem(name: name, catEntry: dso, provider: universe)
+                }
+            })
+
+            let results = tempDict.reduce(into: [String : BrowserItem](), updateAccumulation)
+            dsoBrowserRoot = BrowserItem(name: CelestiaString("Deep Sky Objects", comment: ""), alternativeName: CelestiaString("DSOs", comment: ""), children: results)
+        }
+
+        if brightestStars == nil {
+            brightestStars = createStarBrowserRootItem(kind: .brightest, title: CelestiaString("Brightest Stars (Absolute Magnitude)", comment: ""), ordered: true)
+        }
+
+        if starsWithPlanets == nil {
+            starsWithPlanets = createStarBrowserRootItem(kind: .brightest, title: CelestiaString("Stars with Planets", comment: ""), ordered: false)
         }
     }
 
-    if dsoBrowserRoot == nil {
-        let core = AppCore.shared
-        let universe = core.simulation.universe
+    func createStarBrowserRootItem(kind: StarBrowserKind, title: String, ordered: Bool) -> BrowserItem {
+        let universe = simulation.universe
 
-        let typeMap = [
-            "SB" : CelestiaString("Galaxies (Barred Spiral)", comment: ""),
-            "S" : CelestiaString("Galaxies (Spiral)", comment: ""),
-            "E" : CelestiaString("Galaxies (Elliptical)", comment: ""),
-            "Irr" : CelestiaString("Galaxies (Irregular)", comment: ""),
-            "Neb" : CelestiaString("Nebulae", comment: ""),
-            "Glob" : CelestiaString("Globulars", comment: ""),
-            "Open cluster" : CelestiaString("Open Clusters", comment: ""),
-            "Unknown" : CelestiaString("Unknown", comment: ""),
+        func updateAccumulation(result: inout [String : BrowserItem], star: Star) {
+            let name = universe.starCatalog.starName(star)
+            result[name] = BrowserItem(name: name, catEntry: star, provider: universe)
+        }
+
+        func updateAccumulationOrdered(result: inout [BrowserItemKeyValuePair], star: Star) {
+            let name = universe.starCatalog.starName(star)
+            result.append(BrowserItemKeyValuePair(name: name, browserItem: BrowserItem(name: name, catEntry: star, provider: universe)))
+        }
+
+        if ordered {
+            let items = StarBrowser(kind: kind, simulation: simulation).stars().reduce(into: [BrowserItemKeyValuePair](), updateAccumulationOrdered)
+            return BrowserItem(name: title, orderedChildren: items)
+        } else {
+            let items = StarBrowser(kind: kind, simulation: simulation).stars().reduce(into: [String : BrowserItem](), updateAccumulation)
+            return BrowserItem(name: title, children: items)
+        }
+    }
+
+    func createDynamicBrowserItems() {
+        let nearest = createStarBrowserRootItem(kind: .nearest, title: CelestiaString("Nearest Stars", comment: ""), ordered: true)
+        let brighter = createStarBrowserRootItem(kind: .brighter, title: CelestiaString("Brightest Stars", comment: ""), ordered: true)
+
+        var children = [
+            nearest.name: nearest,
+            brighter.name: brighter,
         ]
 
-        func updateAccumulation(result: inout [String : BrowserItem], item: (key: String, value: [String : BrowserItem])) {
-            let fullName = typeMap[item.key]!
-            result[fullName] = BrowserItem(name: fullName, children: item.value)
+        if let brightest = brightestStars {
+            children[brightest.name] = brightest
         }
 
-        let prefixes = ["SB", "S", "E", "Irr", "Neb", "Glob", "Open cluster"]
-
-        var tempDict = prefixes.reduce(into: [String : [String : BrowserItem]]()) { $0[$1] = [String : BrowserItem]() }
-
-        let catalog = universe.dsoCatalog
-        catalog.forEach({ (dso) in
-            let matchingType = prefixes.first(where: {dso.type.hasPrefix($0)}) ?? "Unknown"
-            let name = catalog.dsoName(dso)
-            if tempDict[matchingType] != nil {
-                tempDict[matchingType]![name] = BrowserItem(name: name, catEntry: dso, provider: universe)
-            }
-        })
-
-        let results = tempDict.reduce(into: [String : BrowserItem](), updateAccumulation)
-        dsoBrowserRoot = BrowserItem(name: CelestiaString("Deep Sky Objects", comment: ""), alternativeName: CelestiaString("DSOs", comment: ""), children: results)
+        if let hasPlanets = starsWithPlanets {
+            children[hasPlanets.name] = hasPlanets
+        }
+        starBrowserRoot = BrowserItem(name: CelestiaString("Stars", comment: ""), children: children)
     }
-
-    if brightestStars == nil {
-        brightestStars = createStarBrowserRootItem(kind: .brightest, title: CelestiaString("Brightest Stars (Absolute Magnitude)", comment: ""), ordered: true)
-    }
-
-    if starsWithPlanets == nil {
-        starsWithPlanets = createStarBrowserRootItem(kind: .brightest, title: CelestiaString("Stars with Planets", comment: ""), ordered: false)
-    }
-}
-
-func createStarBrowserRootItem(kind: StarBrowserKind, title: String, ordered: Bool) -> BrowserItem {
-    let core = AppCore.shared
-    let universe = core.simulation.universe
-
-    func updateAccumulation(result: inout [String : BrowserItem], star: Star) {
-        let name = universe.starCatalog.starName(star)
-        result[name] = BrowserItem(name: name, catEntry: star, provider: universe)
-    }
-
-    func updateAccumulationOrdered(result: inout [BrowserItemKeyValuePair], star: Star) {
-        let name = universe.starCatalog.starName(star)
-        result.append(BrowserItemKeyValuePair(name: name, browserItem: BrowserItem(name: name, catEntry: star, provider: universe)))
-    }
-
-    if ordered {
-        let items = StarBrowser(kind: kind, simulation: core.simulation).stars().reduce(into: [BrowserItemKeyValuePair](), updateAccumulationOrdered)
-        return BrowserItem(name: title, orderedChildren: items)
-    } else {
-        let items = StarBrowser(kind: kind, simulation: core.simulation).stars().reduce(into: [String : BrowserItem](), updateAccumulation)
-        return BrowserItem(name: title, children: items)
-    }
-}
-
-func createDynamicBrowserItems() {
-    let nearest = createStarBrowserRootItem(kind: .nearest, title: CelestiaString("Nearest Stars", comment: ""), ordered: true)
-    let brighter = createStarBrowserRootItem(kind: .brighter, title: CelestiaString("Brightest Stars", comment: ""), ordered: true)
-
-    var children = [
-        nearest.name: nearest,
-        brighter.name: brighter,
-    ]
-
-    if let brightest = brightestStars {
-        children[brightest.name] = brightest
-    }
-
-    if let hasPlanets = starsWithPlanets {
-        children[hasPlanets.name] = hasPlanets
-    }
-    starBrowserRoot = BrowserItem(name: CelestiaString("Stars", comment: ""), children: children)
 }
 
 var solBrowserRoot: BrowserItem?
