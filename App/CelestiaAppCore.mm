@@ -113,7 +113,7 @@ private:
 @interface CelestiaAppCore () {
     AppCoreAlerter *alerter;
     AppCoreCursorHandler *cursorHandler;
-    AppCoreContextMenuHandler *contextMenuHandler;
+    AppCoreContextMenuHandler *internalContextMenuHandler;
     AppCoreWatcher *watcher;
 
     CelestiaSimulation *_simulation;
@@ -137,12 +137,18 @@ private:
         cursorHandler = new AppCoreCursorHandler(^(CelestiaCursorShape shape) {
             [[weakSelf delegate] celestiaAppCoreCursorShapeChanged:shape];
         });
-        contextMenuHandler = new AppCoreContextMenuHandler(^(CGPoint location, CelestiaSelection *selection) {
-            [[weakSelf delegate] celestiaAppCoreCursorDidRequestContextMenuAtPoint:location withSelection:selection];
+        internalContextMenuHandler = new AppCoreContextMenuHandler(^(CGPoint location, CelestiaSelection *selection) {
+            __strong CelestiaAppCore *core = weakSelf;
+            if (core) {
+                __strong id<CelestiaAppCoreContextMenuHandler> contextMenuHandler = core.contextMenuHandler;
+                if (contextMenuHandler) {
+                    [contextMenuHandler celestiaAppCoreCursorDidRequestContextMenuAtPoint:location withSelection:selection];
+                }
+            }
         });
         core->setAlerter(alerter);
         core->setCursorHandler(cursorHandler);
-        core->setContextMenuHandler(contextMenuHandler);
+        core->setContextMenuHandler(internalContextMenuHandler);
         watcher = new AppCoreWatcher(*core, ^(CelestiaWatcherFlag changedFlag) {
             [[weakSelf delegate] celestiaAppCoreWatchedFlagDidChange:changedFlag];
         });
@@ -349,7 +355,7 @@ private:
     delete watcher;
     delete alerter;
     delete cursorHandler;
-    delete contextMenuHandler;
+    delete internalContextMenuHandler;
     delete core;
 }
 

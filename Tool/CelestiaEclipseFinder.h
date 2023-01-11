@@ -31,7 +31,7 @@ NS_SWIFT_NAME(Eclipse)
 
 @end
 
-NS_SWIFT_NAME(EcipseFinder)
+NS_SWIFT_NAME(EclipseFinder)
 @interface CelestiaEclipseFinder : NSObject
 
 - (instancetype)initWithBody:(CelestiaBody *)body;

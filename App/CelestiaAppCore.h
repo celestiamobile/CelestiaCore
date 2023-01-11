@@ -94,9 +94,13 @@ NS_SWIFT_NAME(AppCoreDelegate)
 
 - (void)celestiaAppCoreFatalErrorHappened:(NSString *)error;
 - (void)celestiaAppCoreCursorShapeChanged:(CelestiaCursorShape)shape;
-- (void)celestiaAppCoreCursorDidRequestContextMenuAtPoint:(CGPoint)location withSelection:(CelestiaSelection *)selection;
 - (void)celestiaAppCoreWatchedFlagDidChange:(CelestiaWatcherFlag)changedFlag;
 
+@end
+
+NS_SWIFT_NAME(AppCoreContextMenuHandler)
+@protocol CelestiaAppCoreContextMenuHandler <NSObject>
+- (void)celestiaAppCoreCursorDidRequestContextMenuAtPoint:(CGPoint)location withSelection:(CelestiaSelection *)selection;
 @end
 
 NS_SWIFT_NAME(AppCore)
@@ -105,6 +109,7 @@ NS_SWIFT_NAME(AppCore)
 @property (nonatomic, readonly, getter=isInitialized) BOOL initialized;
 
 @property (nonatomic, weak, nullable) id<CelestiaAppCoreDelegate> delegate;
+@property (nonatomic, weak, nullable) id<CelestiaAppCoreContextMenuHandler> contextMenuHandler;
 
 // MARK: Initilalization
 

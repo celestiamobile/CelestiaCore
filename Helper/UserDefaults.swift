@@ -11,8 +11,6 @@
 
 import Foundation
 
-private var appDefaults: UserDefaults?
-
 enum UserDefaultsKey: String {
     case databaseVersion
     case dataDirPath
@@ -29,13 +27,11 @@ enum UserDefaultsKey: String {
 extension UserDefaults {
     private var databaseVersion: Int { return 1 }
 
-    static var app: UserDefaults {
-        if appDefaults == nil {
-            appDefaults = .standard
-            appDefaults?.initialize()
-        }
-        return appDefaults!
-    }
+    static let app: UserDefaults = {
+        let defaults = UserDefaults.standard
+        defaults.initialize()
+        return defaults
+    }()
 
     private func upgrade() {
         self[.databaseVersion] = databaseVersion
