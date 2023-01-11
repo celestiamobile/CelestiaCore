@@ -73,7 +73,7 @@ extension AppCore {
         }
 
         if starsWithPlanets == nil {
-            starsWithPlanets = createStarBrowserRootItem(kind: .brightest, title: CelestiaString("Stars with Planets", comment: ""), ordered: false)
+            starsWithPlanets = createStarBrowserRootItem(kind: .starsWithPlants, title: CelestiaString("Stars with Planets", comment: ""), ordered: false)
         }
     }
 
