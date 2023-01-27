@@ -16,8 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CelestiaRotationModel (Private)
 
-- (instancetype)initWithRotation:(const RotationModel *)rotation;
-- (const RotationModel *)rotation;
+- (instancetype)initWithRotation:(const celestia::ephem::RotationModel *)rotation;
+- (const celestia::ephem::RotationModel *)rotation;
 
 @end
 

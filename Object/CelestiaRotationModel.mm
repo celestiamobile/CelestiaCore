@@ -14,14 +14,14 @@
 #import "CelestiaUtil.h"
 
 @interface CelestiaRotationModel () {
-    const RotationModel *r;
+    const celestia::ephem::RotationModel *r;
 }
 
 @end
 
 @implementation CelestiaRotationModel (Private)
 
-- (instancetype)initWithRotation:(const RotationModel *)rotation {
+- (instancetype)initWithRotation:(const celestia::ephem::RotationModel *)rotation {
     self = [super init];
     if (self) {
         r = rotation;
@@ -29,7 +29,7 @@
     return self;
 }
 
-- (const RotationModel *)rotation {
+- (const celestia::ephem::RotationModel *)rotation {
     return r;
 }
 

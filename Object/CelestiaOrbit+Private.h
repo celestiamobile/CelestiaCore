@@ -16,8 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CelestiaOrbit (Private)
 
-- (instancetype)initWithOrbit:(const Orbit *)orbit;
-- (const Orbit *)orbit;
+- (instancetype)initWithOrbit:(const celestia::ephem::Orbit *)orbit;
+- (const celestia::ephem::Orbit *)orbit;
 
 @end
 

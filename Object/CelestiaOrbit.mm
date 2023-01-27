@@ -14,14 +14,14 @@
 #import "CelestiaUtil.h"
 
 @interface CelestiaOrbit () {
-    const Orbit *o;
+    const celestia::ephem::Orbit *o;
 }
 
 @end
 
 @implementation CelestiaOrbit (Private)
 
-- (instancetype)initWithOrbit:(const Orbit *)orbit {
+- (instancetype)initWithOrbit:(const celestia::ephem::Orbit *)orbit {
     self = [super init];
     if (self) {
         o = orbit;
@@ -29,7 +29,7 @@
     return self;
 }
 
-- (const Orbit *)orbit {
+- (const celestia::ephem::Orbit *)orbit {
     return o;
 }
 
