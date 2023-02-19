@@ -94,6 +94,7 @@ static NSString *CS_PREV_VERSIONS[CS_NUM_PREV_VERSIONS] = {
                TAGDEF(660,@"dateFormat")
                TAGDEF(670,@"measurementSystem")
                TAGDEF(680,@"temperatureScale")
+               TAGDEF(690,@"scriptSystemAccessPolicy")
                // orbits
                //        TAGDEF(999,@"minimumOrbitSize")
                TAGDEF(700,@"showPlanetOrbits")
@@ -448,6 +449,9 @@ FEATUREMETHODS(Other)
 
 - (CelestiaTemperatureScale)temperatureScale { return (CelestiaTemperatureScale)core->getTemperatureScale(); }
 - (void)setTemperatureScale:(CelestiaTemperatureScale)temperatureScale { return core->setTemperatureScale((CelestiaCore::TemperatureScale)temperatureScale); }
+
+- (CelestiaScriptSystemAccessPolicy)scriptSystemAccessPolicy { return (CelestiaScriptSystemAccessPolicy)core->getScriptSystemAccessPolicy(); }
+- (void)setScriptSystemAccessPolicy:(CelestiaScriptSystemAccessPolicy)scriptSystemAccessPolicy { return core->setScriptSystemAccessPolicy((CelestiaCore::ScriptSystemAccessPolicy)scriptSystemAccessPolicy); }
 
 // Time settings
 

@@ -24,6 +24,12 @@ typedef NS_ENUM(NSInteger, CelestiaTemperatureScale) {
     CelestiaTemperatureScaleFahrenheit   = 2,
 } NS_SWIFT_NAME(TemperatureScale);
 
+typedef NS_ENUM(NSInteger, CelestiaScriptSystemAccessPolicy) {
+    CelestiaScriptSystemAccessPolicyAsk      = 0,
+    CelestiaScriptSystemAccessPolicyAllow    = 1,
+    CelestiaScriptSystemAccessPolicyDeny     = 2,
+} NS_SWIFT_NAME(ScriptSystemAccessPolicy);
+
 @interface CelestiaAppCore (Setting)
 
 // Time Settings
@@ -173,6 +179,7 @@ typedef NS_ENUM(NSInteger, CelestiaTemperatureScale) {
 
 @property CelestiaMeasurementSystem measurementSystem;
 @property CelestiaTemperatureScale temperatureScale;
+@property CelestiaScriptSystemAccessPolicy scriptSystemAccessPolicy;
 
 - (void)initializeSetting;
 
