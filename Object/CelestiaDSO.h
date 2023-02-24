@@ -19,6 +19,7 @@ NS_SWIFT_NAME(DSO)
 @interface CelestiaDSO : CelestiaAstroObject
 
 @property (readonly) NSString *type;
+@property (readonly) NSString *dsoDescription;
 
 @property (nullable, readonly) NSString *webInfoURL;
 

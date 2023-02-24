@@ -12,6 +12,7 @@
 #import "CelestiaSelection+Private.h"
 #import "CelestiaBody+Private.h"
 #import "CelestiaDSO+Private.h"
+#import "CelestiaGalaxy+Private.h"
 #import "CelestiaStar+Private.h"
 #import "CelestiaLocation+Private.h"
 #import "CelestiaUniversalCoord+Private.h"
@@ -85,6 +86,8 @@
     case Selection::Type_Star:
         return [[CelestiaStar alloc] initWithStar:s.star()];
     case Selection::Type_DeepSky:
+        if (!strcmp(s.deepsky()->getObjTypeName(), "galaxy"))
+            return [[CelestiaGalaxy alloc] initWithGalaxy:reinterpret_cast<Galaxy *>(s.deepsky())];
         return [[CelestiaDSO alloc] initWithDSO:s.deepsky()];
     case Selection::Type_Body:
         return [[CelestiaBody alloc] initWithBody:s.body()];

@@ -33,6 +33,10 @@
     return [NSString stringWithUTF8String:[self DSO]->getType()];
 }
 
+- (NSString *)dsoDescription {
+    return [NSString stringWithUTF8String:[self DSO]->getDescription().c_str()];
+}
+
 - (NSString *)webInfoURL {
     NSString *url = [NSString stringWithUTF8String:[self DSO]->getInfoURL().c_str()];
     if ([url length] == 0)

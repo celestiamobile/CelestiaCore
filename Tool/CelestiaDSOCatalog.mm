@@ -11,6 +11,7 @@
 
 #import "CelestiaDSOCatalog+Private.h"
 #import "CelestiaDSO+Private.h"
+#import "CelestiaGalaxy+Private.h"
 
 #define BROWSER_MAX_DSO_COUNT   300
 
@@ -43,7 +44,10 @@
 }
 
 - (CelestiaDSO *)objectAtIndex:(NSInteger)index {
-    return [[CelestiaDSO alloc] initWithDSO:d->getDSO((uint32_t)index)];
+    auto dso = d->getDSO(static_cast<uint32_t>(index));
+    if (!strcmp(dso->getObjTypeName(), "galaxy"))
+        return [[CelestiaGalaxy alloc] initWithGalaxy:reinterpret_cast<Galaxy *>(dso)];
+    return [[CelestiaDSO alloc] initWithDSO:dso];
 }
 
 - (NSString *)dsoName:(CelestiaDSO *)dso {
