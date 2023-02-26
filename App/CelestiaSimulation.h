@@ -10,6 +10,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CelestiaCore/CelestiaObserver.h>
 
 @class CelestiaSelection;
 @class CelestiaUniverse;
@@ -17,19 +18,6 @@
 @class CelestiaObserver;
 @class CelestiaEclipse;
 @class CelestiaDestination;
-
-typedef NS_ENUM(NSUInteger, CelestiaSimulationCoordinateSystem) {
-    CelestiaSimulationCoordinateSystemUniversal = 0,
-    CelestiaSimulationCoordinateSystemEcliptical = 1,
-    CelestiaSimulationCoordinateSystemEquatorial = 2,
-    CelestiaSimulationCoordinateSystemBodyFixed = 3,
-    CelestiaSimulationCoordinateSystemPhaseLock = 5,
-    CelestiaSimulationCoordinateSystemChase = 6,
-    CelestiaSimulationCoordinateSystemPhaseLock_Old = 100,
-    CelestiaSimulationCoordinateSystemChase_Old = 101,
-    CelestiaSimulationCoordinateSystemObserverLocal = 200,
-    CelestiaSimulationCoordinateSystemUnknown = 1000,
-} NS_SWIFT_NAME(CoordinateSystem);
 
 typedef NS_ENUM(NSUInteger, CelestiaSimulationDistanceUnit) {
     CelestiaSimulationDistanceUnitKM = 0,
@@ -68,8 +56,6 @@ NS_SWIFT_NAME(Simulation)
 @property (readonly) CelestiaUniverse *universe;
 
 - (CelestiaSelection *)findObjectFromPath:(NSString *)path NS_SWIFT_NAME(findObject(from:));
-
-- (void)setFrame:(CelestiaSimulationCoordinateSystem)coordinate target:(CelestiaSelection *)target reference:(CelestiaSelection *)reference NS_SWIFT_NAME(setFrame(coordinate:target:reference:));
 
 - (void)reverseObserverOrientation;
 

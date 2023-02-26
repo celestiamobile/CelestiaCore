@@ -11,6 +11,7 @@
 
 #import "CelestiaObserver.h"
 #import "CelestiaObserver+Private.h"
+#import "CelestiaSelection+Private.h"
 
 @interface CelestiaObserver () {
     Observer *o;
@@ -26,6 +27,12 @@
 
 - (void)setDisplayedSurface:(NSString *)displayedSurface {
     o->setDisplayedSurface([displayedSurface UTF8String]);
+}
+
+- (void)setFrame:(CelestiaCoordinateSystem)coordinate target:(CelestiaSelection *)target reference:(CelestiaSelection *)reference {
+    const Selection ref([reference selection]);
+    const Selection tar([target selection]);
+    o->setFrame((ObserverFrame::CoordinateSystem)coordinate, ref, tar);
 }
 
 @end

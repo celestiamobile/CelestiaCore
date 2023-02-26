@@ -160,12 +160,6 @@ typedef NS_OPTIONS(NSUInteger, CelestiaGoToLocationFieldMask) {
     return [[CelestiaSelection alloc] initWithSelection:[self simulation]->findObject([path UTF8String], true)];
 }
 
-- (void)setFrame:(CelestiaSimulationCoordinateSystem)coordinate target:(CelestiaSelection *)target reference:(CelestiaSelection *)reference {
-    const Selection ref([reference selection]);
-    const Selection tar([target selection]);
-    s->setFrame((ObserverFrame::CoordinateSystem)coordinate, ref, tar);
-}
-
 - (void)reverseObserverOrientation {
     s->reverseObserverOrientation();
 }
