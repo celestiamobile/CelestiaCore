@@ -37,7 +37,8 @@ NS_SWIFT_NAME(Selection)
 - (BOOL)isEqualToSelection:(CelestiaSelection *)csel;
 - (CelestiaUniversalCoord *)position:(double)t;
 
-- (nullable instancetype)initWithObject:(CelestiaAstroObject *)object;
+- (instancetype)init;
+- (instancetype)initWithObject:(CelestiaAstroObject *)object;
 
 @end
 

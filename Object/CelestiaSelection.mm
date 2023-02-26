@@ -40,6 +40,10 @@
 
 @implementation CelestiaSelection
 
+- (instancetype)init {
+    return [self initWithSelection:Selection()];
+}
+
 - (instancetype)initWithObject:(CelestiaAstroObject *)object {
     if ([object isKindOfClass:[CelestiaStar class]]) {
         return [self initWithStar:(CelestiaStar *)object];
@@ -50,7 +54,7 @@
     } else if ([object isKindOfClass:[CelestiaLocation class]]) {
         return [self initWithLocation:(CelestiaLocation *)object];
     }
-    return nil;
+    return [self initWithSelection:Selection()];
 }
 
 - (instancetype)initWithStar:(CelestiaStar *)star {
