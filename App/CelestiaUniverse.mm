@@ -47,7 +47,7 @@
 @implementation CelestiaUniverse
 
 - (CelestiaSelection *)find:(NSString *)name {
-    return [[CelestiaSelection alloc] initWithSelection:u->find([name UTF8String])];
+    return [[CelestiaSelection alloc] initWithSelection:u->find([name UTF8String], {})];
 }
 
 - (NSString *)nameForSelection:(CelestiaSelection *)selection {
