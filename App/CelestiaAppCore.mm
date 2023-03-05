@@ -242,6 +242,11 @@ private:
     glFinish();
 }
 
+- (CGSize)size {
+    auto [width, height] = core->getWindowDimension();
+    return CGSizeMake(static_cast<CGFloat>(width), static_cast<CGFloat>(height));
+}
+
 - (void)resize:(CGSize)size {
     core->resize(size.width, size.height);
 }

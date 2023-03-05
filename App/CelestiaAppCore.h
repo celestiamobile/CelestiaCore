@@ -110,6 +110,7 @@ NS_SWIFT_NAME(AppCore)
 
 @property (nonatomic, weak, nullable) id<CelestiaAppCoreDelegate> delegate;
 @property (nonatomic, weak, nullable) id<CelestiaAppCoreContextMenuHandler> contextMenuHandler;
+@property (nonatomic, readonly) CGSize size;
 
 // MARK: Initilalization
 
