@@ -171,6 +171,10 @@ typedef NS_ENUM(NSInteger, CelestiaScriptSystemAccessPolicy) {
 
 @property NSInteger starStyle ;
 
+@property NSInteger starColors ;
+@property float tintSaturation;
+
+
 // Texture Settings
 
 @property NSInteger resolution;

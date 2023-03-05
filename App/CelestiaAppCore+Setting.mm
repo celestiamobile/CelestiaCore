@@ -94,6 +94,7 @@ static NSString *CS_PREV_VERSIONS[CS_NUM_PREV_VERSIONS] = {
                TAGDEF(670,@"measurementSystem")
                TAGDEF(680,@"temperatureScale")
                TAGDEF(690,@"scriptSystemAccessPolicy")
+               TAGDEF(691,@"starColors")
                // orbits
                //        TAGDEF(999,@"minimumOrbitSize")
                TAGDEF(700,@"showPlanetOrbits")
@@ -142,6 +143,7 @@ static NSString *CS_PREV_VERSIONS[CS_NUM_PREV_VERSIONS] = {
                //        TAGDEF(901,@"brightnessBias")
                TAGDEF(902,@"faintestVisible")
                TAGDEF(904,@"galaxyBrightness")
+               TAGDEF(905,@"tintSaturation")
                //        TAGDEF(999,@"saturationMagnitude")
 
                nil];
@@ -429,6 +431,22 @@ FEATUREMETHODS(Other)
 
 - (NSInteger)starStyle { return core->getRenderer()->getStarStyle(); }
 - (void)setStarStyle:(NSInteger)value { core->getRenderer()->setStarStyle((Renderer::StarStyle)value); }
+
+- (NSInteger)starColors {
+    return static_cast<NSInteger>(core->getRenderer()->getStarColorTable()->type());
+}
+
+- (void)setStarColors:(NSInteger)starColors {
+    core->getRenderer()->setStarColorTable(GetStarColorTable(static_cast<ColorTableType>(starColors)));
+}
+
+- (float)tintSaturation {
+    return core->getRenderer()->getTintSaturation();
+}
+
+- (void)setTintSaturation:(float)tintSaturation {
+    core->getRenderer()->setTintSaturation(tintSaturation);
+}
 
 // Texture Settings
 
