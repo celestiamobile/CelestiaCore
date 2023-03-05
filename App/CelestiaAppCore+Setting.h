@@ -111,8 +111,6 @@ typedef NS_ENUM(NSInteger, CelestiaScriptSystemAccessPolicy) {
 
 @property BOOL showEcliptic ;
 
-@property BOOL showTintedIllumination ;
-
 // Label Settings
 
 // -(BOOL) showNoLabels ;
