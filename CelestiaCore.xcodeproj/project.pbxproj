@@ -363,6 +363,8 @@
 		97E34AEF2431ED09009E67C3 /* glsupport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97E34AED2431ED08009E67C3 /* glsupport.cpp */; };
 		97FA985823FE460300825BD3 /* CelestiaAppCore+Event.mm in Sources */ = {isa = PBXBuildFile; fileRef = 97E0B76F231273C10016C154 /* CelestiaAppCore+Event.mm */; };
 		97FA986523FE5ABB00825BD3 /* CelestiaAppCore+Event.h in Headers */ = {isa = PBXBuildFile; fileRef = 97E0B76E231273C10016C154 /* CelestiaAppCore+Event.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA0D014829C0A15700B86EED /* textlayout.h in Headers */ = {isa = PBXBuildFile; fileRef = EA0D014629C0A15700B86EED /* textlayout.h */; };
+		EA0D014929C0A15700B86EED /* textlayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0D014729C0A15700B86EED /* textlayout.cpp */; };
 		EA0E06C728C0C160004F6DF7 /* linerenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = EA0E06C528C0C160004F6DF7 /* linerenderer.h */; };
 		EA0E06C828C0C160004F6DF7 /* linerenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0E06C628C0C160004F6DF7 /* linerenderer.cpp */; };
 		EA1D603C28D6071900571B2E /* vertexobject.h in Headers */ = {isa = PBXBuildFile; fileRef = EA1D603A28D6071800571B2E /* vertexobject.h */; };
@@ -806,6 +808,8 @@
 		97E0B7722312763C0016C154 /* CelestiaAppCore+Private.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "CelestiaAppCore+Private.mm"; sourceTree = "<group>"; };
 		97E34AEC2431ED08009E67C3 /* glsupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glsupport.h; sourceTree = "<group>"; };
 		97E34AED2431ED08009E67C3 /* glsupport.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glsupport.cpp; sourceTree = "<group>"; };
+		EA0D014629C0A15700B86EED /* textlayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = textlayout.h; sourceTree = "<group>"; };
+		EA0D014729C0A15700B86EED /* textlayout.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = textlayout.cpp; sourceTree = "<group>"; };
 		EA0E06C528C0C160004F6DF7 /* linerenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = linerenderer.h; sourceTree = "<group>"; };
 		EA0E06C628C0C160004F6DF7 /* linerenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = linerenderer.cpp; sourceTree = "<group>"; };
 		EA1D603A28D6071800571B2E /* vertexobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vertexobject.h; sourceTree = "<group>"; };
@@ -1187,6 +1191,8 @@
 		977D81C222FDB1F5002FF1C2 /* celengine */ = {
 			isa = PBXGroup;
 			children = (
+				EA0D014729C0A15700B86EED /* textlayout.cpp */,
+				EA0D014629C0A15700B86EED /* textlayout.h */,
 				977D823A22FDB23D002FF1C2 /* asterism.cpp */,
 				977D824822FDB23E002FF1C2 /* asterism.h */,
 				97B5E2C323968892006F35B4 /* asterismrenderer.cpp */,
@@ -1733,6 +1739,7 @@
 				9751DC2923594A8600299997 /* execution.h in Headers */,
 				971A667B23019C15009E4EA1 /* vsop87.h in Headers */,
 				971A66BE23019C20009E4EA1 /* meshmanager.h in Headers */,
+				EA0D014829C0A15700B86EED /* textlayout.h in Headers */,
 				971A671823019C2B009E4EA1 /* distance.h in Headers */,
 				971A660323019BF0009E4EA1 /* CelestiaBody+Private.h in Headers */,
 				971A665B23019C0F009E4EA1 /* watcher.h in Headers */,
@@ -1890,6 +1897,7 @@
 				974D27422303C3A300FDFBC0 /* CelestiaOrbit.mm in Sources */,
 				971A663E23019C03009E4EA1 /* url.cpp in Sources */,
 				EA59EA3326213CB4001E5B9D /* dds_decompress.cpp in Sources */,
+				EA0D014929C0A15700B86EED /* textlayout.cpp in Sources */,
 				9751DC2A23594A8600299997 /* command.cpp in Sources */,
 				97AD59C5235B1B840056CA80 /* legacyscript.cpp in Sources */,
 				971A660223019BF0009E4EA1 /* CelestiaAstroObject.mm in Sources */,
