@@ -469,6 +469,9 @@ FEATUREMETHODS(Other)
 - (CelestiaScriptSystemAccessPolicy)scriptSystemAccessPolicy { return (CelestiaScriptSystemAccessPolicy)core->getScriptSystemAccessPolicy(); }
 - (void)setScriptSystemAccessPolicy:(CelestiaScriptSystemAccessPolicy)scriptSystemAccessPolicy { return core->setScriptSystemAccessPolicy((CelestiaCore::ScriptSystemAccessPolicy)scriptSystemAccessPolicy); }
 
+- (CelestiaLayoutDirection)layoutDirection { return static_cast<CelestiaLayoutDirection>(core->getLayoutDirection()); }
+- (void)setLayoutDirection:(CelestiaLayoutDirection)layoutDirection { core->setLayoutDirection(static_cast<CelestiaCore::LayoutDirection>(layoutDirection)); }
+
 // Time settings
 
 // Timezone values are inverted to maintain backward compatibility
