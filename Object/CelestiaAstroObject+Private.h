@@ -10,14 +10,13 @@
 //
 
 #import "CelestiaAstroObject.h"
-#include <celengine/astroobj.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CelestiaAstroObject (Private)
 
-- (instancetype)initWithObject:(AstroObject *)object;
-- (AstroObject *)object;
+- (instancetype)initWithObject:(void *)object;
+- (void *)object;
 
 @end
 

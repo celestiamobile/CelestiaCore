@@ -87,15 +87,15 @@
 
 - (CelestiaAstroObject *)object {
     switch (s.getType()) {
-    case Selection::Type_Star:
+    case SelectionType::Star:
         return [[CelestiaStar alloc] initWithStar:s.star()];
-    case Selection::Type_DeepSky:
+    case SelectionType::DeepSky:
         if (!strcmp(s.deepsky()->getObjTypeName(), "galaxy"))
             return [[CelestiaGalaxy alloc] initWithGalaxy:reinterpret_cast<Galaxy *>(s.deepsky())];
         return [[CelestiaDSO alloc] initWithDSO:s.deepsky()];
-    case Selection::Type_Body:
+    case SelectionType::Body:
         return [[CelestiaBody alloc] initWithBody:s.body()];
-    case Selection::Type_Location:
+    case SelectionType::Location:
         return [[CelestiaLocation alloc] initWithLocation:s.location()];
     default:
         return nil;

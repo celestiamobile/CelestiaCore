@@ -53,13 +53,13 @@
 - (NSString *)nameForSelection:(CelestiaSelection *)selection {
     const Selection sel = [selection selection];
     switch (sel.getType()) {
-        case Selection::Type_Star:
+        case SelectionType::Star:
             return [NSString stringWithUTF8String:u->getStarCatalog()->getStarName(*sel.star(), true).c_str()];
-        case Selection::Type_Body:
+        case SelectionType::Body:
             return [NSString stringWithUTF8String:sel.body()->getName(true).c_str()];
-        case Selection::Type_DeepSky:
+        case SelectionType::DeepSky:
             return [NSString stringWithUTF8String:u->getDSOCatalog()->getDSOName(sel.deepsky(), true).c_str()];
-        case Selection::Type_Location:
+        case SelectionType::Location:
             return [NSString stringWithUTF8String:sel.location()->getName(true).c_str()];
         default:
             return @"";

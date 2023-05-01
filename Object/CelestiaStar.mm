@@ -19,7 +19,7 @@
 
 - (instancetype)initWithStar:(Star *)star
 {
-    self = [super initWithObject:reinterpret_cast<AstroObject *>(star)];
+    self = [super initWithObject:star];
     return self;
 }
 

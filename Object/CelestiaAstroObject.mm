@@ -13,13 +13,13 @@
 #import "CelestiaAstroObject+Private.h"
 
 @interface CelestiaAstroObject () {
-    AstroObject *c;
+    void *c;
 }
 @end
 
 @implementation CelestiaAstroObject (Private)
 
-- (instancetype)initWithObject:(AstroObject *)object {
+- (instancetype)initWithObject:(void *)object {
     self = [super init];
     if (self) {
         c = object;
@@ -27,7 +27,7 @@
     return self;
 }
 
-- (AstroObject *)object {
+- (void *)object {
     return c;
 }
 

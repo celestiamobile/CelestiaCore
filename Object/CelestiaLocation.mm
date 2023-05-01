@@ -15,7 +15,7 @@
 @implementation CelestiaLocation (Private)
 
 -(instancetype)initWithLocation:(Location *)aLocation {
-    self = [super initWithObject:reinterpret_cast<AstroObject *>(aLocation)];
+    self = [super initWithObject:aLocation];
     return self;
 }
 

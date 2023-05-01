@@ -17,7 +17,7 @@
 
 - (instancetype)initWithGalaxy:(Galaxy *)galaxy
 {
-    self = [super initWithObject:reinterpret_cast<AstroObject *>(galaxy)];
+    self = [super initWithObject:galaxy];
     return self;
 }
 

@@ -27,7 +27,7 @@
 @implementation CelestiaBody (Private)
 
 - (CelestiaBody*)initWithBody:(Body *)body {
-    self = [super initWithObject:reinterpret_cast<AstroObject *>(body)];
+    self = [super initWithObject:body];
     return self;
 }
 
