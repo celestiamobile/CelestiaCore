@@ -403,6 +403,17 @@
 		EA3FC0B825F63AB30019C3BD /* stringutils.h in Headers */ = {isa = PBXBuildFile; fileRef = EA3FC0B625F63AB30019C3BD /* stringutils.h */; };
 		EA3FC88825F7AFBA0019C3BD /* fsutils.h in Headers */ = {isa = PBXBuildFile; fileRef = EA3FC88625F7AFBA0019C3BD /* fsutils.h */; };
 		EA3FC88925F7AFBA0019C3BD /* fsutils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA3FC88725F7AFBA0019C3BD /* fsutils.cpp */; };
+		EA3FFB052A13743500C6158F /* galaxyform.h in Headers */ = {isa = PBXBuildFile; fileRef = EA3FFB032A13743500C6158F /* galaxyform.h */; };
+		EA3FFB062A13743500C6158F /* galaxyform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA3FFB042A13743500C6158F /* galaxyform.cpp */; };
+		EA3FFB0B2A13746000C6158F /* galaxyrenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA3FFB072A13745F00C6158F /* galaxyrenderer.cpp */; };
+		EA3FFB0C2A13746000C6158F /* globularrenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = EA3FFB082A13745F00C6158F /* globularrenderer.h */; };
+		EA3FFB0D2A13746000C6158F /* galaxyrenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = EA3FFB092A13745F00C6158F /* galaxyrenderer.h */; };
+		EA3FFB0E2A13746000C6158F /* globularrenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA3FFB0A2A13745F00C6158F /* globularrenderer.cpp */; };
+		EA3FFB142A13746F00C6158F /* openclusterrenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA3FFB0F2A13746F00C6158F /* openclusterrenderer.cpp */; };
+		EA3FFB152A13746F00C6158F /* nebularenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = EA3FFB102A13746F00C6158F /* nebularenderer.h */; };
+		EA3FFB162A13746F00C6158F /* nebularenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA3FFB112A13746F00C6158F /* nebularenderer.cpp */; };
+		EA3FFB172A13746F00C6158F /* openclusterrenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = EA3FFB122A13746F00C6158F /* openclusterrenderer.h */; };
+		EA3FFB182A13746F00C6158F /* rendererfwd.h in Headers */ = {isa = PBXBuildFile; fileRef = EA3FFB132A13746F00C6158F /* rendererfwd.h */; };
 		EA544E522566B369003F351D /* CelestiaDestination.h in Headers */ = {isa = PBXBuildFile; fileRef = EA544E502566B369003F351D /* CelestiaDestination.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA544E532566B369003F351D /* CelestiaDestination.mm in Sources */ = {isa = PBXBuildFile; fileRef = EA544E512566B369003F351D /* CelestiaDestination.mm */; };
 		EA544E592566B3E4003F351D /* CelestiaDestination+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = EA544E572566B3E4003F351D /* CelestiaDestination+Private.h */; };
@@ -857,6 +868,17 @@
 		EA3FC0B625F63AB30019C3BD /* stringutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stringutils.h; sourceTree = "<group>"; };
 		EA3FC88625F7AFBA0019C3BD /* fsutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fsutils.h; sourceTree = "<group>"; };
 		EA3FC88725F7AFBA0019C3BD /* fsutils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fsutils.cpp; sourceTree = "<group>"; };
+		EA3FFB032A13743500C6158F /* galaxyform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = galaxyform.h; sourceTree = "<group>"; };
+		EA3FFB042A13743500C6158F /* galaxyform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = galaxyform.cpp; sourceTree = "<group>"; };
+		EA3FFB072A13745F00C6158F /* galaxyrenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = galaxyrenderer.cpp; sourceTree = "<group>"; };
+		EA3FFB082A13745F00C6158F /* globularrenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = globularrenderer.h; sourceTree = "<group>"; };
+		EA3FFB092A13745F00C6158F /* galaxyrenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = galaxyrenderer.h; sourceTree = "<group>"; };
+		EA3FFB0A2A13745F00C6158F /* globularrenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = globularrenderer.cpp; sourceTree = "<group>"; };
+		EA3FFB0F2A13746F00C6158F /* openclusterrenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = openclusterrenderer.cpp; sourceTree = "<group>"; };
+		EA3FFB102A13746F00C6158F /* nebularenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nebularenderer.h; sourceTree = "<group>"; };
+		EA3FFB112A13746F00C6158F /* nebularenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = nebularenderer.cpp; sourceTree = "<group>"; };
+		EA3FFB122A13746F00C6158F /* openclusterrenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = openclusterrenderer.h; sourceTree = "<group>"; };
+		EA3FFB132A13746F00C6158F /* rendererfwd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rendererfwd.h; sourceTree = "<group>"; };
 		EA544E502566B369003F351D /* CelestiaDestination.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CelestiaDestination.h; sourceTree = "<group>"; };
 		EA544E512566B369003F351D /* CelestiaDestination.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CelestiaDestination.mm; sourceTree = "<group>"; };
 		EA544E572566B3E4003F351D /* CelestiaDestination+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CelestiaDestination+Private.h"; sourceTree = "<group>"; };
@@ -1248,6 +1270,8 @@
 				977D81CD22FDB237002FF1C2 /* frametree.h */,
 				977D821922FDB23B002FF1C2 /* galaxy.cpp */,
 				977D821222FDB23B002FF1C2 /* galaxy.h */,
+				EA3FFB042A13743500C6158F /* galaxyform.cpp */,
+				EA3FFB032A13743500C6158F /* galaxyform.h */,
 				977D822A22FDB23C002FF1C2 /* geometry.h */,
 				977D822122FDB23C002FF1C2 /* glmarker.cpp */,
 				977D825122FDB23F002FF1C2 /* globular.cpp */,
@@ -1525,10 +1549,19 @@
 				EA2166F72973C08C001477DE /* cometrenderer.h */,
 				EAF1104729829E4B003938C3 /* eclipticlinerenderer.cpp */,
 				EAF1104629829E4B003938C3 /* eclipticlinerenderer.h */,
+				EA3FFB072A13745F00C6158F /* galaxyrenderer.cpp */,
+				EA3FFB092A13745F00C6158F /* galaxyrenderer.h */,
+				EA3FFB0A2A13745F00C6158F /* globularrenderer.cpp */,
+				EA3FFB082A13745F00C6158F /* globularrenderer.h */,
 				EA2D5F2729EE82D3005990BA /* largestarrenderer.cpp */,
 				EA2D5F2829EE82D3005990BA /* largestarrenderer.h */,
 				EA0E06C528C0C160004F6DF7 /* linerenderer.h */,
 				EA0E06C628C0C160004F6DF7 /* linerenderer.cpp */,
+				EA3FFB112A13746F00C6158F /* nebularenderer.cpp */,
+				EA3FFB102A13746F00C6158F /* nebularenderer.h */,
+				EA3FFB0F2A13746F00C6158F /* openclusterrenderer.cpp */,
+				EA3FFB122A13746F00C6158F /* openclusterrenderer.h */,
+				EA3FFB132A13746F00C6158F /* rendererfwd.h */,
 			);
 			path = celrender;
 			sourceTree = "<group>";
@@ -1688,6 +1721,7 @@
 				971A65F823019BF0009E4EA1 /* CelestiaDSO+Private.h in Headers */,
 				973B9C8B2459908600BDBEDB /* dsorenderer.h in Headers */,
 				971A666F23019C15009E4EA1 /* scriptobject.h in Headers */,
+				EA3FFB172A13746F00C6158F /* openclusterrenderer.h in Headers */,
 				971A667123019C15009E4EA1 /* scriptorbit.h in Headers */,
 				9752D7A623ED182D00FFE781 /* value.h in Headers */,
 				EAF1104829829E4B003938C3 /* eclipticlinerenderer.h in Headers */,
@@ -1700,6 +1734,7 @@
 				97AD59C4235B1B840056CA80 /* legacyscript.h in Headers */,
 				EA8D1EB624D6D0BD0071C7B5 /* strnatcmp.h in Headers */,
 				EA2EBCA029DD45CA00EE0D84 /* asterismrenderer.h in Headers */,
+				EA3FFB152A13746F00C6158F /* nebularenderer.h in Headers */,
 				EA3FC88825F7AFBA0019C3BD /* fsutils.h in Headers */,
 				971A65E623019BF0009E4EA1 /* CelestiaStarCatalog+Private.h in Headers */,
 				EA59EA3426213CB4001E5B9D /* imageformats.h in Headers */,
@@ -1715,6 +1750,7 @@
 				EA9E5A9F25FE483900348AEE /* appleutils.h in Headers */,
 				EA1F11A1288A3A2600D8698F /* audiosession.h in Headers */,
 				971A663623019C03009E4EA1 /* favorites.h in Headers */,
+				EA3FFB0D2A13746000C6158F /* galaxyrenderer.h in Headers */,
 				971A667C23019C15009E4EA1 /* xyzvbinary.h in Headers */,
 				97B5E2D3239689B9006F35B4 /* pointstarrenderer.h in Headers */,
 				971A665F23019C15009E4EA1 /* customrotation.h in Headers */,
@@ -1746,6 +1782,7 @@
 				971A666323019C15009E4EA1 /* nutation.h in Headers */,
 				971A65FB23019BF0009E4EA1 /* CelestiaPlanetarySystem+Private.h in Headers */,
 				971A669323019C20009E4EA1 /* console.h in Headers */,
+				EA3FFB052A13743500C6158F /* galaxyform.h in Headers */,
 				EAB08FEA27807E2500BB82F0 /* numbers.h in Headers */,
 				971A669523019C20009E4EA1 /* constellation.h in Headers */,
 				971A660923019BF0009E4EA1 /* CelestiaStar+Private.h in Headers */,
@@ -1757,6 +1794,7 @@
 				971A66A723019C20009E4EA1 /* frame.h in Headers */,
 				EAC562452529FAB4008D10F0 /* viewporteffect.h in Headers */,
 				974D26EC230279D700FDFBC0 /* CelestiaBrowserItem+Private.h in Headers */,
+				EA3FFB182A13746F00C6158F /* rendererfwd.h in Headers */,
 				971A66AB23019C20009E4EA1 /* galaxy.h in Headers */,
 				971A66A023019C20009E4EA1 /* dsoname.h in Headers */,
 				971A671323019C26009E4EA1 /* 3dsmodel.h in Headers */,
@@ -1776,6 +1814,7 @@
 				971A667B23019C15009E4EA1 /* vsop87.h in Headers */,
 				971A66BE23019C20009E4EA1 /* meshmanager.h in Headers */,
 				EA0D014829C0A15700B86EED /* textlayout.h in Headers */,
+				EA3FFB0C2A13746000C6158F /* globularrenderer.h in Headers */,
 				971A671823019C2B009E4EA1 /* distance.h in Headers */,
 				971A660323019BF0009E4EA1 /* CelestiaBody+Private.h in Headers */,
 				971A665B23019C0F009E4EA1 /* watcher.h in Headers */,
@@ -1907,6 +1946,7 @@
 				971A66AA23019C20009E4EA1 /* galaxy.cpp in Sources */,
 				EA2EBCA129DD45CA00EE0D84 /* asterismrenderer.cpp in Sources */,
 				9751DC1223594A8000299997 /* celx_misc.cpp in Sources */,
+				EA3FFB0E2A13746000C6158F /* globularrenderer.cpp in Sources */,
 				971A66D523019C20009E4EA1 /* rendcontext.cpp in Sources */,
 				971A66C323019C20009E4EA1 /* name.cpp in Sources */,
 				EA6671DE29B4AB1A00A7846E /* r128util.cpp in Sources */,
@@ -2022,12 +2062,14 @@
 				9751DC1323594A8000299997 /* celx_observer.cpp in Sources */,
 				971A667023019C15009E4EA1 /* scriptorbit.cpp in Sources */,
 				971A66CE23019C20009E4EA1 /* parseobject.cpp in Sources */,
+				EA3FFB062A13743500C6158F /* galaxyform.cpp in Sources */,
 				EA3FC0B725F63AB30019C3BD /* stringutils.cpp in Sources */,
 				9751DC2C23594A8600299997 /* cmdparser.cpp in Sources */,
 				9752D7A523ED182D00FFE781 /* value.cpp in Sources */,
 				EA2D5F2B29EE8384005990BA /* vertexobject.cpp in Sources */,
 				971A66EE23019C21009E4EA1 /* starcolors.cpp in Sources */,
 				971A663323019C03009E4EA1 /* eclipsefinder.cpp in Sources */,
+				EA3FFB162A13746F00C6158F /* nebularenderer.cpp in Sources */,
 				971A666223019C15009E4EA1 /* nutation.cpp in Sources */,
 				971A65DD23019BF0009E4EA1 /* CelestiaAppCore+Setting.mm in Sources */,
 				971A66BD23019C20009E4EA1 /* meshmanager.cpp in Sources */,
@@ -2053,6 +2095,7 @@
 				EA73169F248E1D9B009AE037 /* truetypefont.cpp in Sources */,
 				971A66CC23019C20009E4EA1 /* overlay.cpp in Sources */,
 				97C62C2523374F4E00953522 /* CelestiaObserver.mm in Sources */,
+				EA3FFB0B2A13746000C6158F /* galaxyrenderer.cpp in Sources */,
 				971A667423019C15009E4EA1 /* spiceinterface.cpp in Sources */,
 				971A663C23019C03009E4EA1 /* scriptmenu.cpp in Sources */,
 				971A668223019C20009E4EA1 /* axisarrow.cpp in Sources */,
@@ -2082,6 +2125,7 @@
 				974A6B1E23532EA1007BCABD /* overlayimage.cpp in Sources */,
 				EAFFE03B2882F7BE007DEBC2 /* textprintposition.cpp in Sources */,
 				EA8926552567BD0300A868F3 /* CelestiaFavorite.m in Sources */,
+				EA3FFB142A13746F00C6158F /* openclusterrenderer.cpp in Sources */,
 				EAB03FF529657A6C00F6878E /* CelestiaTimeline.mm in Sources */,
 				971A66F923019C21009E4EA1 /* texmanager.cpp in Sources */,
 				971A66CA23019C20009E4EA1 /* opencluster.cpp in Sources */,

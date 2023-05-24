@@ -45,7 +45,7 @@
 
 - (CelestiaDSO *)objectAtIndex:(NSInteger)index {
     auto dso = d->getDSO(static_cast<uint32_t>(index));
-    if (!strcmp(dso->getObjTypeName(), "galaxy"))
+    if (dso->getObjType() == DeepSkyObjectType::Galaxy)
         return [[CelestiaGalaxy alloc] initWithGalaxy:reinterpret_cast<Galaxy *>(dso)];
     return [[CelestiaDSO alloc] initWithDSO:dso];
 }

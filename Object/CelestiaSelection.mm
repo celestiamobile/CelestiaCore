@@ -90,7 +90,7 @@
     case SelectionType::Star:
         return [[CelestiaStar alloc] initWithStar:s.star()];
     case SelectionType::DeepSky:
-        if (!strcmp(s.deepsky()->getObjTypeName(), "galaxy"))
+        if (s.deepsky()->getObjType() == DeepSkyObjectType::Galaxy)
             return [[CelestiaGalaxy alloc] initWithGalaxy:reinterpret_cast<Galaxy *>(s.deepsky())];
         return [[CelestiaDSO alloc] initWithDSO:s.deepsky()];
     case SelectionType::Body:
