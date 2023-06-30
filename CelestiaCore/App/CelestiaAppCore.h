@@ -180,10 +180,19 @@ NS_SWIFT_NAME(AppCore)
 // MARK: Simulation
 @property (readonly) CelestiaSimulation *simulation;
 
+- (void)setHudMessagesEnabled:(BOOL)enabled;
 - (void)enableSelectionPointer;
 - (void)disableSelectionPointer;
+- (void)setHudOverlayImageEnabled:(BOOL)enabled;
 
+- (NSString *)currentMessageText;
+
+- (void)setCustomPerspectiveProjectionLeft:(float)left right:(float)right top:(float)top bottom:(float)bottom nearZ:(float)nearZ farZ:(float)farZ;
 - (void)setCameraTransform:(simd_float4x4)cameraTransform;
+
+- (void)touchDown:(simd_float3)focus;
+- (void)touchMove:(simd_float3)focus from:(simd_double3)from to:(simd_double3)to;
+- (void)touchUp:(simd_float3)focus;
 
 @end
 
