@@ -361,6 +361,12 @@
 		EA0D014929C0A15700B86EED /* textlayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0D014729C0A15700B86EED /* textlayout.cpp */; };
 		EA0E06C728C0C160004F6DF7 /* linerenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = EA0E06C528C0C160004F6DF7 /* linerenderer.h */; };
 		EA0E06C828C0C160004F6DF7 /* linerenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0E06C628C0C160004F6DF7 /* linerenderer.cpp */; };
+		EA14B0372A51BC6300F069C0 /* fisheyeprojectionmode.h in Headers */ = {isa = PBXBuildFile; fileRef = EA14B0352A51BC6300F069C0 /* fisheyeprojectionmode.h */; };
+		EA14B0382A51BC6300F069C0 /* fisheyeprojectionmode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA14B0362A51BC6300F069C0 /* fisheyeprojectionmode.cpp */; };
+		EA14B03B2A51BC7C00F069C0 /* perspectiveprojectionmode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA14B0392A51BC7C00F069C0 /* perspectiveprojectionmode.cpp */; };
+		EA14B03C2A51BC7C00F069C0 /* perspectiveprojectionmode.h in Headers */ = {isa = PBXBuildFile; fileRef = EA14B03A2A51BC7C00F069C0 /* perspectiveprojectionmode.h */; };
+		EA14B03E2A51BC9100F069C0 /* projectionmode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA14B03D2A51BC9100F069C0 /* projectionmode.cpp */; };
+		EA14B0402A51BC9A00F069C0 /* projectionmode.h in Headers */ = {isa = PBXBuildFile; fileRef = EA14B03F2A51BC9A00F069C0 /* projectionmode.h */; };
 		EA1F11A1288A3A2600D8698F /* audiosession.h in Headers */ = {isa = PBXBuildFile; fileRef = EA1F119F288A3A2600D8698F /* audiosession.h */; };
 		EA1F11A4288A3ADF00D8698F /* miniaudiosession.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA1F11A2288A3ADF00D8698F /* miniaudiosession.cpp */; settings = {COMPILER_FLAGS = "-x objective-c++"; }; };
 		EA1F11A5288A3ADF00D8698F /* miniaudiosession.h in Headers */ = {isa = PBXBuildFile; fileRef = EA1F11A3288A3ADF00D8698F /* miniaudiosession.h */; };
@@ -825,6 +831,12 @@
 		EA0D014729C0A15700B86EED /* textlayout.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = textlayout.cpp; sourceTree = "<group>"; };
 		EA0E06C528C0C160004F6DF7 /* linerenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = linerenderer.h; sourceTree = "<group>"; };
 		EA0E06C628C0C160004F6DF7 /* linerenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = linerenderer.cpp; sourceTree = "<group>"; };
+		EA14B0352A51BC6300F069C0 /* fisheyeprojectionmode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fisheyeprojectionmode.h; sourceTree = "<group>"; };
+		EA14B0362A51BC6300F069C0 /* fisheyeprojectionmode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fisheyeprojectionmode.cpp; sourceTree = "<group>"; };
+		EA14B0392A51BC7C00F069C0 /* perspectiveprojectionmode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = perspectiveprojectionmode.cpp; sourceTree = "<group>"; };
+		EA14B03A2A51BC7C00F069C0 /* perspectiveprojectionmode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = perspectiveprojectionmode.h; sourceTree = "<group>"; };
+		EA14B03D2A51BC9100F069C0 /* projectionmode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = projectionmode.cpp; sourceTree = "<group>"; };
+		EA14B03F2A51BC9A00F069C0 /* projectionmode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = projectionmode.h; sourceTree = "<group>"; };
 		EA1F119F288A3A2600D8698F /* audiosession.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = audiosession.h; sourceTree = "<group>"; };
 		EA1F11A2288A3ADF00D8698F /* miniaudiosession.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = miniaudiosession.cpp; sourceTree = "<group>"; };
 		EA1F11A3288A3ADF00D8698F /* miniaudiosession.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = miniaudiosession.h; sourceTree = "<group>"; };
@@ -1262,6 +1274,8 @@
 				977D821622FDB23B002FF1C2 /* dsooctree.h */,
 				973B9C882459908500BDBEDB /* dsorenderer.cpp */,
 				973B9C892459908600BDBEDB /* dsorenderer.h */,
+				EA14B0362A51BC6300F069C0 /* fisheyeprojectionmode.cpp */,
+				EA14B0352A51BC6300F069C0 /* fisheyeprojectionmode.h */,
 				977D823B22FDB23D002FF1C2 /* frame.cpp */,
 				977D821A22FDB23B002FF1C2 /* frame.h */,
 				9768C445240FCC850097C4F2 /* framebuffer.cpp */,
@@ -1316,12 +1330,16 @@
 				977D825422FDB23F002FF1C2 /* parseobject.h */,
 				977D825822FDB23F002FF1C2 /* parser.cpp */,
 				977D81DB22FDB237002FF1C2 /* parser.h */,
+				EA14B0392A51BC7C00F069C0 /* perspectiveprojectionmode.cpp */,
+				EA14B03A2A51BC7C00F069C0 /* perspectiveprojectionmode.h */,
 				977D81D822FDB237002FF1C2 /* planetgrid.cpp */,
 				977D81E522FDB238002FF1C2 /* planetgrid.h */,
 				97B5E2D2239689B9006F35B4 /* pointstarrenderer.cpp */,
 				97B5E2CF239689B9006F35B4 /* pointstarrenderer.h */,
 				97B5E2D1239689B9006F35B4 /* pointstarvertexbuffer.cpp */,
 				97B5E2D0239689B9006F35B4 /* pointstarvertexbuffer.h */,
+				EA14B03D2A51BC9100F069C0 /* projectionmode.cpp */,
+				EA14B03F2A51BC9A00F069C0 /* projectionmode.h */,
 				974A6B1F23532EC4007BCABD /* rectangle.h */,
 				977D825522FDB23F002FF1C2 /* referencemark.h */,
 				977D823922FDB23D002FF1C2 /* rendcontext.cpp */,
@@ -1718,6 +1736,7 @@
 				971A66CB23019C20009E4EA1 /* opencluster.h in Headers */,
 				971A671E23019C2B009E4EA1 /* mathlib.h in Headers */,
 				971A663B23019C03009E4EA1 /* moviecapture.h in Headers */,
+				EA14B03C2A51BC7C00F069C0 /* perspectiveprojectionmode.h in Headers */,
 				971A65F823019BF0009E4EA1 /* CelestiaDSO+Private.h in Headers */,
 				973B9C8B2459908600BDBEDB /* dsorenderer.h in Headers */,
 				971A666F23019C15009E4EA1 /* scriptobject.h in Headers */,
@@ -1808,6 +1827,7 @@
 				EA398C9E278A6FF900A9AAE5 /* greek.h in Headers */,
 				971A666523019C15009E4EA1 /* orbit.h in Headers */,
 				971A666D23019C15009E4EA1 /* samporient.h in Headers */,
+				EA14B0372A51BC6300F069C0 /* fisheyeprojectionmode.h in Headers */,
 				971A660023019BF0009E4EA1 /* CelestiaAstroObject+Private.h in Headers */,
 				971A668B23019C20009E4EA1 /* category.h in Headers */,
 				9751DC2923594A8600299997 /* execution.h in Headers */,
@@ -1851,6 +1871,7 @@
 				EAF1104B29829E7C003938C3 /* customorbittype.h in Headers */,
 				EAF1104D29829EA8003938C3 /* indexlist.h in Headers */,
 				EA7316A0248E1D9B009AE037 /* truetypefont.h in Headers */,
+				EA14B0402A51BC9A00F069C0 /* projectionmode.h in Headers */,
 				9752D7A123ED181E00FFE781 /* hash.h in Headers */,
 				971A670623019C21009E4EA1 /* univcoord.h in Headers */,
 				971A66D123019C20009E4EA1 /* parser.h in Headers */,
@@ -2014,6 +2035,7 @@
 				97FA985823FE460300825BD3 /* CelestiaAppCore+Event.mm in Sources */,
 				971A669D23019C20009E4EA1 /* dsodb.cpp in Sources */,
 				97B5E2D6239689B9006F35B4 /* pointstarrenderer.cpp in Sources */,
+				EA14B03E2A51BC9100F069C0 /* projectionmode.cpp in Sources */,
 				971A65E823019BF0009E4EA1 /* CelestiaEclipseFinder.mm in Sources */,
 				974D26F1230286CA00FDFBC0 /* CelestiaUniverse+BrowserItem.mm in Sources */,
 				97C62C2923374F6700953522 /* CelestiaObserver+Private.h in Sources */,
@@ -2073,6 +2095,7 @@
 				EA3FFB162A13746F00C6158F /* nebularenderer.cpp in Sources */,
 				971A666223019C15009E4EA1 /* nutation.cpp in Sources */,
 				971A65DD23019BF0009E4EA1 /* CelestiaAppCore+Setting.mm in Sources */,
+				EA14B03B2A51BC7C00F069C0 /* perspectiveprojectionmode.cpp in Sources */,
 				971A66BD23019C20009E4EA1 /* meshmanager.cpp in Sources */,
 				9751DC1823594A8000299997 /* celx.cpp in Sources */,
 				971A66E023019C20009E4EA1 /* shadermanager.cpp in Sources */,
@@ -2140,6 +2163,7 @@
 				971A66BB23019C20009E4EA1 /* marker.cpp in Sources */,
 				9751DC1B23594A8000299997 /* celx_category.cpp in Sources */,
 				971A66A123019C20009E4EA1 /* dsooctree.cpp in Sources */,
+				EA14B0382A51BC6300F069C0 /* fisheyeprojectionmode.cpp in Sources */,
 				971A668623019C20009E4EA1 /* boundaries.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
