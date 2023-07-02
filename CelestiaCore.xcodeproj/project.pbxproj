@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -1904,7 +1904,8 @@
 		9753847B22FDA37000050A53 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1320;
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
 				ORGANIZATIONNAME = "Celestia Development Team";
 				TargetAttributes = {
 					971A65CB23019BC5009E4EA1 = {
@@ -2150,6 +2151,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EA936F2E265F8B72007EED66 /* Debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				ENABLE_MODULE_VERIFIER = YES;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "c11 c++17";
 			};
 			name = Debug;
 		};
@@ -2157,6 +2162,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EA936F2F265F8B7C007EED66 /* Release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				ENABLE_MODULE_VERIFIER = YES;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "c11 c++17";
 			};
 			name = Release;
 		};
