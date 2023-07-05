@@ -179,6 +179,9 @@ typedef NS_ENUM(NSInteger, CelestiaLayoutDirection) {
 @property NSInteger starColors ;
 @property float tintSaturation;
 
+// HUD Settings
+
+@property NSInteger hudDetail;
 
 // Texture Settings
 
