@@ -626,35 +626,35 @@ static NSDateFormatter *dateFormatter = nil;
     }
 }
 
-- (void)loadUserDefaultsWithAppDefaultsAtPath:(NSString *)path {
-    NSDictionary* defaultsDictionary = [self findUserDefaultsWithAppDefaultsAtPath:path];
+- (void)loadUserDefaults:(NSUserDefaults *)userDefaults withAppDefaultsAtPath:(nullable NSString *)path {
+    NSDictionary* defaultsDictionary = [self findUserDefaultsWithUserDefaults:userDefaults appDefaultsAtPath:path];
     [defaultsDictionary enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
         [self setValue:obj forKey:key];
     }];
 }
 
-- (NSDictionary *)findUserDefaultsWithAppDefaultsAtPath:(NSString *)path {
+- (NSDictionary *)findUserDefaultsWithUserDefaults:(NSUserDefaults *)userDefaults appDefaultsAtPath:(NSString *)path {
     NSDictionary *appDefs = nil;
     if (path) { appDefs = [[[NSDictionary alloc] initWithContentsOfFile:path] objectForKey:CS_DefaultsName]; }
-    NSDictionary *userDefs = [[NSUserDefaults standardUserDefaults] objectForKey:CS_DefaultsName];
+    NSDictionary *userDefs = [userDefaults objectForKey:CS_DefaultsName];
     if (userDefs == nil)
     {
         // Scan for older versions
         int i = 0;
         for (; i < CS_NUM_PREV_VERSIONS; ++i)
         {
-            if ((userDefs = [[NSUserDefaults standardUserDefaults] objectForKey:CS_PREV_VERSIONS[i]]))
+            if ((userDefs = [userDefaults objectForKey:CS_PREV_VERSIONS[i]]))
                 break;
         }
 
         if (userDefs)
-            [self upgradeUserDefaults:userDefs fromVersion:CS_PREV_VERSIONS[i]];
+            [self upgradeUserDefaults:userDefaults values:userDefs fromVersion:CS_PREV_VERSIONS[i]];
         else
             userDefs = appDefs;
     }
 
     if (appDefs)
-        [[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObject:appDefs forKey:CS_DefaultsName]];
+        [userDefaults registerDefaults:[NSDictionary dictionaryWithObject:appDefs forKey:CS_DefaultsName]];
     return userDefs;
 }
 
@@ -670,19 +670,17 @@ static NSDateFormatter *dateFormatter = nil;
     return theDictionary;
 }
 
-- (void)storeUserDefaults {
+- (void)storeUserDefaults:(NSUserDefaults *)userDefaults {
     //        NSLog(@"storing user defaults");
-    NSUserDefaults* defs = [NSUserDefaults standardUserDefaults];
-    [defs setObject:[self defaultsDictionary] forKey:CS_DefaultsName];
-    [defs synchronize];
+    [userDefaults setObject:[self defaultsDictionary] forKey:CS_DefaultsName];
+    [userDefaults synchronize];
     //        NSLog(@"stored user defaults");
 }
 
--(void)upgradeUserDefaults:(NSDictionary *)dict fromVersion:(NSString *)old {
-    NSUserDefaults* defs = [NSUserDefaults standardUserDefaults];
-    [defs setObject:dict forKey:CS_DefaultsName];
-    [defs removeObjectForKey:old];
-    [defs synchronize];
+-(void)upgradeUserDefaults:(NSUserDefaults *)userDefaults values:(NSDictionary *)values fromVersion:(NSString *)old {
+    [userDefaults setObject:values forKey:CS_DefaultsName];
+    [userDefaults removeObjectForKey:old];
+    [userDefaults synchronize];
 }
 
 @end

@@ -206,8 +206,8 @@ typedef NS_ENUM(NSInteger, CelestiaLayoutDirection) {
 - (void)setFloatValue:(float)value forTag:(NSInteger) tag;
 - (void)setBoolValue:(BOOL)value forTag:(NSInteger) tag;
 
-- (void)loadUserDefaultsWithAppDefaultsAtPath:(nullable NSString *)path;
-- (void)storeUserDefaults;
+- (void)loadUserDefaults:(NSUserDefaults *)userDefaults withAppDefaultsAtPath:(nullable NSString *)path;
+- (void)storeUserDefaults:(NSUserDefaults *)userDefaults;
 
 @end
 
