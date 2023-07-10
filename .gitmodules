@@ -1,3 +1,0 @@
-[submodule "libs/dependency"]
-	path = libs/dependency
-	url = https://github.com/celestiamobile/CelestiaDependency.git
