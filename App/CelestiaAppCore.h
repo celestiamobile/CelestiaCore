@@ -15,6 +15,7 @@
 @class CelestiaSimulation;
 @class CelestiaSelection;
 @class CelestiaDestination;
+@class CelestiaAppState;
 
 typedef NS_OPTIONS(NSUInteger, CelestiaMouseButton) {
     CelestiaMouseButtonLeft = 1 << 0,
@@ -111,6 +112,8 @@ NS_SWIFT_NAME(AppCore)
 @property (nonatomic, weak, nullable) id<CelestiaAppCoreDelegate> delegate;
 @property (nonatomic, weak, nullable) id<CelestiaAppCoreContextMenuHandler> contextMenuHandler;
 @property (nonatomic, readonly) CGSize size;
+
+@property (nonatomic, readonly) CelestiaAppState *state;
 
 // MARK: Initilalization
 

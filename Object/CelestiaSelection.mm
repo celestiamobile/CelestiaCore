@@ -24,7 +24,7 @@
 
 @implementation CelestiaSelection (Private)
 
-- (instancetype)initWithSelection:(Selection)selection {
+- (instancetype)initWithSelection:(const Selection&)selection {
     self = [super init];
     if (self) {
         s = selection;
@@ -83,6 +83,12 @@
 
 - (BOOL)isEqualToSelection:(CelestiaSelection *)csel {
     return s == [csel selection];
+}
+
+- (BOOL)isEqual:(id)object {
+    if (![object isKindOfClass:[CelestiaSelection class]])
+        return NO;
+    return [self isEqualToSelection:(CelestiaSelection *)object];
 }
 
 - (CelestiaAstroObject *)object {

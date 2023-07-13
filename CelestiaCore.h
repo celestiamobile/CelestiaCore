@@ -24,6 +24,7 @@ FOUNDATION_EXPORT const unsigned char CelestiaCoreVersionString[];
 #import <CelestiaCore/CelestiaAppCore+Event.h>
 #import <CelestiaCore/CelestiaAppCore+Locale.h>
 #import <CelestiaCore/CelestiaAppCore+Render.h>
+#import <CelestiaCore/CelestiaAppState.h>
 #import <CelestiaCore/CelestiaSimulation.h>
 #import <CelestiaCore/CelestiaUniverse.h>
 #import <CelestiaCore/CelestiaObserver.h>

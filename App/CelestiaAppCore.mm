@@ -14,6 +14,7 @@
 
 #import "CelestiaAppCore+Private.h"
 #import "CelestiaAppCore+Setting.h"
+#import "CelestiaAppState+Private.h"
 #import "CelestiaSimulation+Private.h"
 
 #import "CelestiaSelection+Private.h"
@@ -351,6 +352,10 @@ private:
 
 - (void)back {
     core->back();
+}
+
+- (CelestiaAppState *)state {
+    return [[CelestiaAppState alloc] initWithCore:core];
 }
 
 - (void)dealloc {

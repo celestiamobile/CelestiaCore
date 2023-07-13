@@ -1,7 +1,7 @@
 //
-// CelestiaSelection+Private.h
+// CelestiaAppState+Private.h
 //
-// Copyright © 2020 Celestia Development Team. All rights reserved.
+// Copyright © 2023 Celestia Development Team. All rights reserved.
 //
 // This program is free software; you can redistribute it and/or
 // modify it under the terms of the GNU General Public License
@@ -9,15 +9,14 @@
 // of the License, or (at your option) any later version.
 //
 
-#import "CelestiaSelection.h"
-#include <celengine/selection.h>
+#import "CelestiaAppState.h"
+#import "celestiacore.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CelestiaSelection (Private)
+@interface CelestiaAppState ()
 
-- (instancetype)initWithSelection:(const Selection&)selection;
-- (Selection)selection;
+- (instancetype)initWithCore:(CelestiaCore *)core;
 
 @end
 

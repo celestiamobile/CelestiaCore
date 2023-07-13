@@ -451,6 +451,9 @@
 		EAB08FEA27807E2500BB82F0 /* numbers.h in Headers */ = {isa = PBXBuildFile; fileRef = EAB08FE627807E2500BB82F0 /* numbers.h */; };
 		EAB08FEB27807E2500BB82F0 /* numbers_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = EAB08FE727807E2500BB82F0 /* numbers_impl.h */; };
 		EAB08FEC27807E2500BB82F0 /* charconv_impl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAB08FE827807E2500BB82F0 /* charconv_impl.cpp */; };
+		EABCB7142A601C4D001FEE7E /* CelestiaAppState.h in Headers */ = {isa = PBXBuildFile; fileRef = EABCB7122A601C4D001FEE7E /* CelestiaAppState.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EABCB7152A601C4D001FEE7E /* CelestiaAppState.mm in Sources */ = {isa = PBXBuildFile; fileRef = EABCB7132A601C4D001FEE7E /* CelestiaAppState.mm */; };
+		EABCB7182A601C9D001FEE7E /* CelestiaAppState+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = EABCB7162A601C9D001FEE7E /* CelestiaAppState+Private.h */; };
 		EAC5623F2529FAA8008D10F0 /* mapmanager.h in Headers */ = {isa = PBXBuildFile; fileRef = EAC5623D2529FAA8008D10F0 /* mapmanager.h */; };
 		EAC562402529FAA8008D10F0 /* mapmanager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAC5623E2529FAA8008D10F0 /* mapmanager.cpp */; };
 		EAC562442529FAB4008D10F0 /* viewporteffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAC562422529FAB4008D10F0 /* viewporteffect.cpp */; };
@@ -925,6 +928,9 @@
 		EAB08FE627807E2500BB82F0 /* numbers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = numbers.h; sourceTree = "<group>"; };
 		EAB08FE727807E2500BB82F0 /* numbers_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = numbers_impl.h; sourceTree = "<group>"; };
 		EAB08FE827807E2500BB82F0 /* charconv_impl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = charconv_impl.cpp; sourceTree = "<group>"; };
+		EABCB7122A601C4D001FEE7E /* CelestiaAppState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CelestiaAppState.h; sourceTree = "<group>"; };
+		EABCB7132A601C4D001FEE7E /* CelestiaAppState.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CelestiaAppState.mm; sourceTree = "<group>"; };
+		EABCB7162A601C9D001FEE7E /* CelestiaAppState+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CelestiaAppState+Private.h"; sourceTree = "<group>"; };
 		EAC5623D2529FAA8008D10F0 /* mapmanager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mapmanager.h; sourceTree = "<group>"; };
 		EAC5623E2529FAA8008D10F0 /* mapmanager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mapmanager.cpp; sourceTree = "<group>"; };
 		EAC562422529FAB4008D10F0 /* viewporteffect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = viewporteffect.cpp; sourceTree = "<group>"; };
@@ -1077,6 +1083,9 @@
 				973BBA4A240523C800E3B061 /* CelestiaAppCore+Locale.mm */,
 				973BBA6724054FEC00E3B061 /* CelestiaAppCore+Render.h */,
 				973BBA6824054FEC00E3B061 /* CelestiaAppCore+Render.mm */,
+				EABCB7122A601C4D001FEE7E /* CelestiaAppState.h */,
+				EABCB7132A601C4D001FEE7E /* CelestiaAppState.mm */,
+				EABCB7162A601C9D001FEE7E /* CelestiaAppState+Private.h */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -1668,6 +1677,7 @@
 				971A65EE23019BF0009E4EA1 /* CelestiaVector.h in Headers */,
 				971A65D823019BF0009E4EA1 /* CelestiaSimulation.h in Headers */,
 				971A65F523019BF0009E4EA1 /* CelestiaSelection.h in Headers */,
+				EABCB7182A601C9D001FEE7E /* CelestiaAppState+Private.h in Headers */,
 				EA3FC0AC25F63A840019C3BD /* charconv.h in Headers */,
 				EAE5F38C27758463005A3022 /* logger.h in Headers */,
 				971A65E423019BF0009E4EA1 /* CelestiaStarCatalog.h in Headers */,
@@ -1815,6 +1825,7 @@
 				974D26EC230279D700FDFBC0 /* CelestiaBrowserItem+Private.h in Headers */,
 				EA3FFB182A13746F00C6158F /* rendererfwd.h in Headers */,
 				971A66AB23019C20009E4EA1 /* galaxy.h in Headers */,
+				EABCB7142A601C4D001FEE7E /* CelestiaAppState.h in Headers */,
 				971A66A023019C20009E4EA1 /* dsoname.h in Headers */,
 				971A671323019C26009E4EA1 /* 3dsmodel.h in Headers */,
 				971A666923019C15009E4EA1 /* rotation.h in Headers */,
@@ -2159,6 +2170,7 @@
 				9751DC2B23594A8600299997 /* execution.cpp in Sources */,
 				9752D7A223ED181E00FFE781 /* hash.cpp in Sources */,
 				971A66EA23019C21009E4EA1 /* star.cpp in Sources */,
+				EABCB7152A601C4D001FEE7E /* CelestiaAppState.mm in Sources */,
 				971A66B923019C20009E4EA1 /* lodspheremesh.cpp in Sources */,
 				971A66BB23019C20009E4EA1 /* marker.cpp in Sources */,
 				9751DC1B23594A8000299997 /* celx_category.cpp in Sources */,
