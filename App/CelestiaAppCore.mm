@@ -197,7 +197,7 @@ private:
     core->getRenderer()->setAmbientLightLevel(DEFAULT_AMBIENT_LIGHT_LEVEL);
     core->getRenderer()->setStarStyle(DEFAULT_STAR_STYLE);
     core->getRenderer()->setResolution(DEFAULT_TEXTURE_RESOLUTION);
-    core->getRenderer()->setStarColorTable(GetStarColorTable(DEFAULT_STARS_COLOR));
+    core->getRenderer()->setStarColorTable(DEFAULT_STARS_COLOR);
 
     core->getSimulation()->setFaintestVisible(DEFAULT_VISUAL_MAGNITUDE);
 

@@ -433,11 +433,11 @@ FEATUREMETHODS(Other)
 - (void)setStarStyle:(NSInteger)value { core->getRenderer()->setStarStyle((Renderer::StarStyle)value); }
 
 - (NSInteger)starColors {
-    return static_cast<NSInteger>(core->getRenderer()->getStarColorTable()->type());
+    return static_cast<NSInteger>(core->getRenderer()->getStarColorTable());
 }
 
 - (void)setStarColors:(NSInteger)starColors {
-    core->getRenderer()->setStarColorTable(GetStarColorTable(static_cast<ColorTableType>(starColors)));
+    core->getRenderer()->setStarColorTable(static_cast<ColorTableType>(starColors));
 }
 
 - (float)tintSaturation {
