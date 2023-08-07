@@ -18,32 +18,65 @@
 @implementation CelestiaDMS
 
 - (instancetype)initWithDecimal:(double)decimal {
-    int degrees, minutes;
-    double seconds;
-    astro::decimalToDegMinSec(decimal, degrees, minutes, seconds);
-    return [self initWithDegrees:degrees minutes:minutes seconds:seconds];
+    self = [super init];
+    if (self)
+        _decimal = decimal;
+    return self;
 }
 
 - (instancetype)initWithDegrees:(NSInteger)degrees minutes:(NSInteger)minutes seconds:(double)seconds {
     self = [super init];
-    if (self) {
-        _degrees = degrees;
-        _minutes = minutes;
-        _seconds = seconds;
-    }
+    if (self)
+        _decimal = astro::degMinSecToDecimal(static_cast<int>(degrees), static_cast<int>(minutes), static_cast<double>(seconds));
     return self;
 }
 
-- (double)decimal {
-    return astro::degMinSecToDecimal((int)_degrees, (int)_minutes, _seconds);
+- (NSInteger)degrees {
+    int degrees;
+    int minutes;
+    double seconds;
+    astro::decimalToDegMinSec(_decimal, degrees, minutes, seconds);
+    return static_cast<NSInteger>(degrees);
 }
 
-- (NSInteger)hours {
-    return _degrees;
+- (NSInteger)minutes {
+    int degrees;
+    int minutes;
+    double seconds;
+    astro::decimalToDegMinSec(_decimal, degrees, minutes, seconds);
+    return static_cast<NSInteger>(minutes);
 }
 
-- (void)setHours:(NSInteger)hours {
-    _degrees = hours;
+- (double)seconds {
+    int degrees;
+    int minutes;
+    double seconds;
+    astro::decimalToDegMinSec(_decimal, degrees, minutes, seconds);
+    return seconds;
+}
+
+- (NSInteger)hmsHours {
+    int hours;
+    int minutes;
+    double seconds;
+    astro::decimalToHourMinSec(_decimal, hours, minutes, seconds);
+    return static_cast<NSInteger>(hours);
+}
+
+- (NSInteger)hmsMinutes {
+    int hours;
+    int minutes;
+    double seconds;
+    astro::decimalToHourMinSec(_decimal, hours, minutes, seconds);
+    return static_cast<NSInteger>(minutes);
+}
+
+- (double)hmsSeconds {
+    int hours;
+    int minutes;
+    double seconds;
+    astro::decimalToHourMinSec(_decimal, hours, minutes, seconds);
+    return seconds;
 }
 
 @end

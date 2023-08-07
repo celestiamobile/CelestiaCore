@@ -18,10 +18,13 @@ NS_ASSUME_NONNULL_BEGIN
 NS_SWIFT_NAME(DMS)
 @interface CelestiaDMS : NSObject
 
-@property NSInteger hours;
-@property NSInteger degrees;
-@property NSInteger minutes;
-@property double seconds;
+@property (readonly) NSInteger hmsHours;
+@property (readonly) NSInteger hmsMinutes;
+@property (readonly) double hmsSeconds;
+
+@property (readonly) NSInteger degrees;
+@property (readonly) NSInteger minutes;
+@property (readonly) double seconds;
 
 @property (readonly) double decimal;
 
