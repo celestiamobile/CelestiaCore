@@ -130,6 +130,8 @@ NS_SWIFT_NAME(AppCore)
 - (void)start;
 - (void)start:(NSDate *)date NS_SWIFT_NAME(start(at:));
 
+- (void)runDemo;
+
 // MARK: Drawing
 
 @property (readonly) NSUInteger aaSamples;

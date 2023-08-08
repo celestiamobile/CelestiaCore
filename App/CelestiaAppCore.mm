@@ -334,6 +334,14 @@ private:
     return [NSString stringWithUTF8String:lang];
 }
 
+- (void)runDemo {
+    const auto& demoScriptFile = core->getConfig()->demoScriptFile;
+    if (!demoScriptFile.empty()) {
+        core->cancelScript();
+        core->runScript(demoScriptFile);
+    }
+}
+
 // MARK: Simulation
 - (CelestiaSimulation *)simulation {
     if (!_simulation) {
