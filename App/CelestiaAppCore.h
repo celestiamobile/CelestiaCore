@@ -134,8 +134,6 @@ NS_SWIFT_NAME(AppCore)
 
 // MARK: Drawing
 
-@property (readonly) NSUInteger aaSamples;
-
 - (void)draw;
 - (void)tick;
 + (void)finish;
