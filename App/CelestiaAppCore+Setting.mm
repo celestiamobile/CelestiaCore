@@ -483,29 +483,8 @@ FEATUREMETHODS(Other)
 
 - (NSInteger)dateFormat { return core->getDateFormat(); }
 
-static NSDateFormatter *dateFormatter = nil;
-
 - (void)setDateFormat:(NSInteger)value {
-    auto format = (astro::Date::Format)value;
-    core->setDateFormat(format);
-    if (format == astro::Date::Locale)
-    {
-        if (!dateFormatter)
-        {
-            dateFormatter = [[NSDateFormatter alloc] init];
-            [dateFormatter setDateStyle:NSDateFormatterLongStyle];
-            [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
-            NSLocale *locale = [NSLocale localeWithLocaleIdentifier:[CelestiaAppCore language]];
-            [dateFormatter setLocale:locale];
-        }
-        core->setCustomDateFormatter([](double jd){
-            return [[dateFormatter stringFromDate:[NSDate dateWithJulian:jd]] UTF8String];
-        });
-    }
-    else
-    {
-        core->setCustomDateFormatter(nullptr);
-    }
+    core->setDateFormat(static_cast<astro::Date::Format>(value));
 }
 
 - (NSInteger)tagForKey:(NSInteger)key {
