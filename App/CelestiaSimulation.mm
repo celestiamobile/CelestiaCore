@@ -157,7 +157,7 @@ typedef NS_OPTIONS(NSUInteger, CelestiaGoToLocationFieldMask) {
 }
 
 - (CelestiaSelection *)findObjectFromPath:(NSString *)path {
-    return [[CelestiaSelection alloc] initWithSelection:[self simulation]->findObject([path UTF8String], true)];
+    return [[CelestiaSelection alloc] initWithSelection:[self simulation]->findObjectFromPath([path UTF8String], true)];
 }
 
 - (void)reverseObserverOrientation {
