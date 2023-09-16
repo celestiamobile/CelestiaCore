@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 53;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -471,7 +471,6 @@
 		EAE5F38D27758463005A3022 /* logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAE5F38B27758463005A3022 /* logger.cpp */; };
 		EAF1104829829E4B003938C3 /* eclipticlinerenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = EAF1104629829E4B003938C3 /* eclipticlinerenderer.h */; };
 		EAF1104929829E4B003938C3 /* eclipticlinerenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAF1104729829E4B003938C3 /* eclipticlinerenderer.cpp */; };
-		EAF1104B29829E7C003938C3 /* customorbittype.h in Headers */ = {isa = PBXBuildFile; fileRef = EAF1104A29829E7C003938C3 /* customorbittype.h */; };
 		EAF1104D29829EA8003938C3 /* indexlist.h in Headers */ = {isa = PBXBuildFile; fileRef = EAF1104C29829EA8003938C3 /* indexlist.h */; };
 		EAFA6DBB2A973D940021EC73 /* dateformatter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAFA6DB92A973D940021EC73 /* dateformatter.cpp */; };
 		EAFA6DBC2A973D940021EC73 /* dateformatter.h in Headers */ = {isa = PBXBuildFile; fileRef = EAFA6DBA2A973D940021EC73 /* dateformatter.h */; };
@@ -951,7 +950,6 @@
 		EAE5F38B27758463005A3022 /* logger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = logger.cpp; sourceTree = "<group>"; };
 		EAF1104629829E4B003938C3 /* eclipticlinerenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eclipticlinerenderer.h; sourceTree = "<group>"; };
 		EAF1104729829E4B003938C3 /* eclipticlinerenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eclipticlinerenderer.cpp; sourceTree = "<group>"; };
-		EAF1104A29829E7C003938C3 /* customorbittype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = customorbittype.h; sourceTree = "<group>"; };
 		EAF1104C29829EA8003938C3 /* indexlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = indexlist.h; sourceTree = "<group>"; };
 		EAFA6DB92A973D940021EC73 /* dateformatter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = dateformatter.cpp; sourceTree = "<group>"; };
 		EAFA6DBA2A973D940021EC73 /* dateformatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dateformatter.h; sourceTree = "<group>"; };
@@ -1423,7 +1421,6 @@
 			children = (
 				977D82FA22FDB272002FF1C2 /* customorbit.cpp */,
 				977D830D22FDB273002FF1C2 /* customorbit.h */,
-				EAF1104A29829E7C003938C3 /* customorbittype.h */,
 				977D82FF22FDB273002FF1C2 /* customrotation.cpp */,
 				977D830522FDB273002FF1C2 /* customrotation.h */,
 				977D82F522FDB272002FF1C2 /* jpleph.cpp */,
@@ -1889,7 +1886,6 @@
 				971A663223019C03009E4EA1 /* destination.h in Headers */,
 				971A66A923019C20009E4EA1 /* frametree.h in Headers */,
 				EAB08FE927807E2500BB82F0 /* charconv_impl.h in Headers */,
-				EAF1104B29829E7C003938C3 /* customorbittype.h in Headers */,
 				EAF1104D29829EA8003938C3 /* indexlist.h in Headers */,
 				EA7316A0248E1D9B009AE037 /* truetypefont.h in Headers */,
 				EA14B0402A51BC9A00F069C0 /* projectionmode.h in Headers */,

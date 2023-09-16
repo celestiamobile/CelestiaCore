@@ -327,10 +327,9 @@ private:
 }
 
 + (NSString *)language {
-    const char *lang = dgettext("celestia", "LANGUAGE");
-    if (strcmp(lang, "LANGUAGE") == 0)
-        return @"en";
-    return [NSString stringWithUTF8String:lang];
+    const char *orig = N_("LANGUAGE");
+    const char *lang = _(orig);
+    return lang == orig ? @"en" : [NSString stringWithUTF8String:lang];
 }
 
 - (void)runDemo {
