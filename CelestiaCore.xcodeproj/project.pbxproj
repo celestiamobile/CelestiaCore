@@ -421,6 +421,7 @@
 		EA3FFB162A13746F00C6158F /* nebularenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA3FFB112A13746F00C6158F /* nebularenderer.cpp */; };
 		EA3FFB172A13746F00C6158F /* openclusterrenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = EA3FFB122A13746F00C6158F /* openclusterrenderer.h */; };
 		EA3FFB182A13746F00C6158F /* rendererfwd.h in Headers */ = {isa = PBXBuildFile; fileRef = EA3FFB132A13746F00C6158F /* rendererfwd.h */; };
+		EA405FF72AC3B977000E1F7A /* tangents.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA405FF62AC3B977000E1F7A /* tangents.cpp */; };
 		EA544E522566B369003F351D /* CelestiaDestination.h in Headers */ = {isa = PBXBuildFile; fileRef = EA544E502566B369003F351D /* CelestiaDestination.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA544E532566B369003F351D /* CelestiaDestination.mm in Sources */ = {isa = PBXBuildFile; fileRef = EA544E512566B369003F351D /* CelestiaDestination.mm */; };
 		EA544E592566B3E4003F351D /* CelestiaDestination+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = EA544E572566B3E4003F351D /* CelestiaDestination+Private.h */; };
@@ -897,6 +898,7 @@
 		EA3FFB112A13746F00C6158F /* nebularenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = nebularenderer.cpp; sourceTree = "<group>"; };
 		EA3FFB122A13746F00C6158F /* openclusterrenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = openclusterrenderer.h; sourceTree = "<group>"; };
 		EA3FFB132A13746F00C6158F /* rendererfwd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rendererfwd.h; sourceTree = "<group>"; };
+		EA405FF62AC3B977000E1F7A /* tangents.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tangents.cpp; sourceTree = "<group>"; };
 		EA544E502566B369003F351D /* CelestiaDestination.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CelestiaDestination.h; sourceTree = "<group>"; };
 		EA544E512566B369003F351D /* CelestiaDestination.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CelestiaDestination.mm; sourceTree = "<group>"; };
 		EA544E572566B3E4003F351D /* CelestiaDestination+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CelestiaDestination+Private.h"; sourceTree = "<group>"; };
@@ -1550,6 +1552,7 @@
 				977D83CA22FDB309002FF1C2 /* model.h */,
 				977D83C822FDB309002FF1C2 /* modelfile.cpp */,
 				977D83CC22FDB309002FF1C2 /* modelfile.h */,
+				EA405FF62AC3B977000E1F7A /* tangents.cpp */,
 			);
 			path = celmodel;
 			sourceTree = "<group>";
@@ -2081,6 +2084,7 @@
 				971A66A823019C20009E4EA1 /* frametree.cpp in Sources */,
 				EA2EBCB029DD669500EE0D84 /* unicode.cpp in Sources */,
 				9751DC2023594A8000299997 /* celx_rotation.cpp in Sources */,
+				EA405FF72AC3B977000E1F7A /* tangents.cpp in Sources */,
 				9751DC2823594A8000299997 /* celx_phase.cpp in Sources */,
 				EA2EBCA429DD45D500EE0D84 /* boundariesrenderer.cpp in Sources */,
 				EA398C9D278A6FF900A9AAE5 /* greek.cpp in Sources */,
