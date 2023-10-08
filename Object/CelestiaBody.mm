@@ -89,17 +89,13 @@
 
 - (NSArray<NSString *> *)alternateSurfaceNames {
     NSMutableArray *result = [NSMutableArray array];
-    std::vector<std::string> *altSurfaces = [self body]->getAlternateSurfaceNames();
-    if (altSurfaces)
+    auto altSurfaces = [self body]->getAlternateSurfaceNames();
+    if (altSurfaces.has_value() && !altSurfaces->empty())
     {
-        if (altSurfaces->size() > 0)
+        for (const auto &surface : *altSurfaces)
         {
-            for (unsigned int i = 0; i < altSurfaces->size(); ++i)
-            {
-                [result addObject:[NSString stringWithUTF8String:(*altSurfaces)[i].c_str()]];
-            }
+            [result addObject:[NSString stringWithUTF8String:surface.c_str()]];
         }
-        delete altSurfaces;
     }
     return result;
 }
