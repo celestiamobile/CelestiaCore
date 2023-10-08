@@ -217,18 +217,17 @@
         }
     }
 
-    std::vector<Location*>* locations = [aBody body]->getLocations();
-    if (locations != NULL)
+    auto locations = [aBody body]->getLocations();
+    if (locations.has_value() && !locations->empty())
     {
         NSMutableDictionary *locationDictionary = [NSMutableDictionary dictionary];
-        for (std::vector<Location*>::const_iterator iter = locations->begin();
-             iter != locations->end(); iter++)
+        for (const auto loc : *locations)
         {
-            NSString *name = [NSString stringWithUTF8String:(*iter)->getName(true).c_str()];
-            if (!name)
+            NSString *name = [NSString stringWithUTF8String:loc->getName(true).c_str()];
+            if (name == nil)
                 continue;
-            CelestiaLocation *location = [[CelestiaLocation alloc] initWithLocation:*iter];
-            [locationDictionary setObject:[[CelestiaBrowserItem alloc] initWithName:name catEntry:location provider:nil] forKey:[location name]];
+            CelestiaLocation *location = [[CelestiaLocation alloc] initWithLocation:loc];
+            [locationDictionary setObject:[[CelestiaBrowserItem alloc] initWithName:name catEntry:location provider:nil] forKey:name];
         }
         if ([locationDictionary count] > 0) {
             NSString *name = [NSString stringWithUTF8String:_("Locations")];
