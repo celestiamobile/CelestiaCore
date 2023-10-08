@@ -394,6 +394,7 @@
 		EA2EBCAD29DD462E00EE0D84 /* intrusiveptr.h in Headers */ = {isa = PBXBuildFile; fileRef = EA2EBCAC29DD462E00EE0D84 /* intrusiveptr.h */; };
 		EA2EBCB029DD669500EE0D84 /* unicode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA2EBCAE29DD669500EE0D84 /* unicode.cpp */; };
 		EA2EBCB129DD669500EE0D84 /* unicode.h in Headers */ = {isa = PBXBuildFile; fileRef = EA2EBCAF29DD669500EE0D84 /* unicode.h */; };
+		EA30660E2AD2794A006A3EE2 /* ranges.h in Headers */ = {isa = PBXBuildFile; fileRef = EA30660D2AD2794A006A3EE2 /* ranges.h */; };
 		EA34E2E3275CA76300507F22 /* tzutil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA34E2E1275CA76300507F22 /* tzutil.cpp */; };
 		EA34E2E4275CA76300507F22 /* tzutil.h in Headers */ = {isa = PBXBuildFile; fileRef = EA34E2E2275CA76300507F22 /* tzutil.h */; };
 		EA38CEA8255FD1AB009EE79B /* CelestiaAtmosphere.h in Headers */ = {isa = PBXBuildFile; fileRef = EA38CEA6255FD1AB009EE79B /* CelestiaAtmosphere.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -870,6 +871,7 @@
 		EA2EBCAC29DD462E00EE0D84 /* intrusiveptr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = intrusiveptr.h; sourceTree = "<group>"; };
 		EA2EBCAE29DD669500EE0D84 /* unicode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = unicode.cpp; sourceTree = "<group>"; };
 		EA2EBCAF29DD669500EE0D84 /* unicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unicode.h; sourceTree = "<group>"; };
+		EA30660D2AD2794A006A3EE2 /* ranges.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ranges.h; sourceTree = "<group>"; };
 		EA34E2E1275CA76300507F22 /* tzutil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tzutil.cpp; sourceTree = "<group>"; };
 		EA34E2E2275CA76300507F22 /* tzutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tzutil.h; sourceTree = "<group>"; };
 		EA38CEA6255FD1AB009EE79B /* CelestiaAtmosphere.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CelestiaAtmosphere.h; sourceTree = "<group>"; };
@@ -1486,6 +1488,7 @@
 				EA6671DA29B4AB1A00A7846E /* r128.h */,
 				EA6671DB29B4AB1A00A7846E /* r128util.cpp */,
 				EA6671DC29B4AB1A00A7846E /* r128util.h */,
+				EA30660D2AD2794A006A3EE2 /* ranges.h */,
 				977D834222FDB2AA002FF1C2 /* reshandle.h */,
 				977D833522FDB2AA002FF1C2 /* resmanager.h */,
 				EA3FC0B525F63AB30019C3BD /* stringutils.cpp */,
@@ -1779,6 +1782,7 @@
 				971A670823019C21009E4EA1 /* universe.h in Headers */,
 				97B5E2D4239689B9006F35B4 /* pointstarvertexbuffer.h in Headers */,
 				971A664523019C0F009E4EA1 /* bytes.h in Headers */,
+				EA30660E2AD2794A006A3EE2 /* ranges.h in Headers */,
 				971A671523019C26009E4EA1 /* 3dsread.h in Headers */,
 				971A672423019C2B009E4EA1 /* solve.h in Headers */,
 				EA2EBCA929DD461300EE0D84 /* arrayvector.h in Headers */,
