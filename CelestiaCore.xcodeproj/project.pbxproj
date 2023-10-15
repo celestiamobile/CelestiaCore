@@ -438,6 +438,8 @@
 		EA6671DF29B4AB1A00A7846E /* r128util.h in Headers */ = {isa = PBXBuildFile; fileRef = EA6671DC29B4AB1A00A7846E /* r128util.h */; };
 		EA73169F248E1D9B009AE037 /* truetypefont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA73169D248E1D9A009AE037 /* truetypefont.cpp */; };
 		EA7316A0248E1D9B009AE037 /* truetypefont.h in Headers */ = {isa = PBXBuildFile; fileRef = EA73169E248E1D9A009AE037 /* truetypefont.h */; };
+		EA741A712ADA930600C7F1DC /* CelestiaFont.h in Headers */ = {isa = PBXBuildFile; fileRef = EA741A6F2ADA930600C7F1DC /* CelestiaFont.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA741A722ADA930600C7F1DC /* CelestiaFont.m in Sources */ = {isa = PBXBuildFile; fileRef = EA741A702ADA930600C7F1DC /* CelestiaFont.m */; };
 		EA8926552567BD0300A868F3 /* CelestiaFavorite.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8926532567BD0300A868F3 /* CelestiaFavorite.m */; };
 		EA8926562567BD0300A868F3 /* CelestiaFavorite.h in Headers */ = {isa = PBXBuildFile; fileRef = EA8926542567BD0300A868F3 /* CelestiaFavorite.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA8D1EB624D6D0BD0071C7B5 /* strnatcmp.h in Headers */ = {isa = PBXBuildFile; fileRef = EA8D1EB424D6D0BD0071C7B5 /* strnatcmp.h */; };
@@ -916,6 +918,8 @@
 		EA6671DC29B4AB1A00A7846E /* r128util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = r128util.h; sourceTree = "<group>"; };
 		EA73169D248E1D9A009AE037 /* truetypefont.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = truetypefont.cpp; sourceTree = "<group>"; };
 		EA73169E248E1D9A009AE037 /* truetypefont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = truetypefont.h; sourceTree = "<group>"; };
+		EA741A6F2ADA930600C7F1DC /* CelestiaFont.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CelestiaFont.h; sourceTree = "<group>"; };
+		EA741A702ADA930600C7F1DC /* CelestiaFont.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CelestiaFont.m; sourceTree = "<group>"; };
 		EA8926532567BD0300A868F3 /* CelestiaFavorite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CelestiaFavorite.m; sourceTree = "<group>"; };
 		EA8926542567BD0300A868F3 /* CelestiaFavorite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CelestiaFavorite.h; sourceTree = "<group>"; };
 		EA8D1EB424D6D0BD0071C7B5 /* strnatcmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strnatcmp.h; sourceTree = "<group>"; };
@@ -995,6 +999,8 @@
 				EA544E502566B369003F351D /* CelestiaDestination.h */,
 				EA544E512566B369003F351D /* CelestiaDestination.mm */,
 				EA544E572566B3E4003F351D /* CelestiaDestination+Private.h */,
+				EA741A6F2ADA930600C7F1DC /* CelestiaFont.h */,
+				EA741A702ADA930600C7F1DC /* CelestiaFont.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -1791,6 +1797,7 @@
 				EA9E5A9F25FE483900348AEE /* appleutils.h in Headers */,
 				EA1F11A1288A3A2600D8698F /* audiosession.h in Headers */,
 				971A663623019C03009E4EA1 /* favorites.h in Headers */,
+				EA741A712ADA930600C7F1DC /* CelestiaFont.h in Headers */,
 				EA3FFB0D2A13746000C6158F /* galaxyrenderer.h in Headers */,
 				971A667C23019C15009E4EA1 /* xyzvbinary.h in Headers */,
 				97B5E2D3239689B9006F35B4 /* pointstarrenderer.h in Headers */,
@@ -2154,6 +2161,7 @@
 				971A660523019BF0009E4EA1 /* CelestiaBody.mm in Sources */,
 				971A65F923019BF0009E4EA1 /* CelestiaDSO.mm in Sources */,
 				9751DC2223594A8000299997 /* celx_vector.cpp in Sources */,
+				EA741A722ADA930600C7F1DC /* CelestiaFont.m in Sources */,
 				EA34E2E3275CA76300507F22 /* tzutil.cpp in Sources */,
 				973BBA6A24054FEC00E3B061 /* CelestiaAppCore+Render.mm in Sources */,
 				971A66FB23019C21009E4EA1 /* texture.cpp in Sources */,
