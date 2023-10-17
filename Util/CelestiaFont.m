@@ -38,8 +38,18 @@
         if (FT_New_Face(ftlib, [path UTF8String], i, &face) != 0)
             return nil;
 
-        NSString *name = [NSString stringWithFormat:@"%@ (%@)", [NSString stringWithUTF8String:face->family_name], [NSString stringWithUTF8String:face->style_name]];
-        [fontNames addObject:name];
+        NSString *familyName = face->family_name == NULL ? nil : [NSString stringWithUTF8String:face->family_name];
+        NSString *styleName = face->style_name == NULL ? nil : [NSString stringWithUTF8String:face->style_name];
+
+        if (familyName != nil)
+        {
+            NSString *name = familyName;
+            if (styleName != nil)
+            {
+                name = [NSString stringWithFormat:@"%@ (%@)", familyName, styleName];
+            }
+            [fontNames addObject:name];
+        }
         FT_Done_Face(face);
     }
     return [fontNames copy];
