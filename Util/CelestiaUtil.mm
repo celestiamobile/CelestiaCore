@@ -27,7 +27,7 @@
 - (instancetype)initWithDegrees:(NSInteger)degrees minutes:(NSInteger)minutes seconds:(double)seconds {
     self = [super init];
     if (self)
-        _decimal = astro::degMinSecToDecimal(static_cast<int>(degrees), static_cast<int>(minutes), static_cast<double>(seconds));
+        _decimal = celestia::astro::degMinSecToDecimal(static_cast<int>(degrees), static_cast<int>(minutes), static_cast<double>(seconds));
     return self;
 }
 
@@ -35,7 +35,7 @@
     int degrees;
     int minutes;
     double seconds;
-    astro::decimalToDegMinSec(_decimal, degrees, minutes, seconds);
+    celestia::astro::decimalToDegMinSec(_decimal, degrees, minutes, seconds);
     return static_cast<NSInteger>(degrees);
 }
 
@@ -43,7 +43,7 @@
     int degrees;
     int minutes;
     double seconds;
-    astro::decimalToDegMinSec(_decimal, degrees, minutes, seconds);
+    celestia::astro::decimalToDegMinSec(_decimal, degrees, minutes, seconds);
     return static_cast<NSInteger>(minutes);
 }
 
@@ -51,7 +51,7 @@
     int degrees;
     int minutes;
     double seconds;
-    astro::decimalToDegMinSec(_decimal, degrees, minutes, seconds);
+    celestia::astro::decimalToDegMinSec(_decimal, degrees, minutes, seconds);
     return seconds;
 }
 
@@ -59,7 +59,7 @@
     int hours;
     int minutes;
     double seconds;
-    astro::decimalToHourMinSec(_decimal, hours, minutes, seconds);
+    celestia::astro::decimalToHourMinSec(_decimal, hours, minutes, seconds);
     return static_cast<NSInteger>(hours);
 }
 
@@ -67,7 +67,7 @@
     int hours;
     int minutes;
     double seconds;
-    astro::decimalToHourMinSec(_decimal, hours, minutes, seconds);
+    celestia::astro::decimalToHourMinSec(_decimal, hours, minutes, seconds);
     return static_cast<NSInteger>(minutes);
 }
 
@@ -75,7 +75,7 @@
     int hours;
     int minutes;
     double seconds;
-    astro::decimalToHourMinSec(_decimal, hours, minutes, seconds);
+    celestia::astro::decimalToHourMinSec(_decimal, hours, minutes, seconds);
     return seconds;
 }
 
@@ -97,7 +97,7 @@
     int era  = (int)[comps era];
     int year = (int)[comps year];
     if (era < 1) year = 1 - year;
-    astro::Date astroDate(year, (int)[comps month], (int)[comps day]);
+    celestia::astro::Date astroDate(year, (int)[comps month], (int)[comps day]);
     astroDate.hour    = (int)[comps hour];
     astroDate.minute  = (int)[comps minute];
     astroDate.seconds = (int)[comps second];
@@ -108,12 +108,12 @@
     NSTimeInterval extraSeconds = [self timeIntervalSinceDate: roundedDate];
     astroDate.seconds += extraSeconds;
 
-    double jd = astro::UTCtoTDB(astroDate);
+    double jd = celestia::astro::UTCtoTDB(astroDate);
     return jd;
 }
 
 + (instancetype)dateWithJulian:(double)jd {
-    astro::Date astroDate = astro::TDBtoUTC(jd);
+    celestia::astro::Date astroDate = celestia::astro::TDBtoUTC(jd);
     int year = astroDate.year;
     NSCalendar *currentCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     [currentCalendar setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
@@ -169,107 +169,107 @@ NSDictionary* coordinateDict;
 }
 
 + (double)speedOfLight {
-    return astro::speedOfLight;
+    return celestia::astro::speedOfLight;
 }
 
 + (double)J2000 {
-    return astro::J2000;
+    return celestia::astro::J2000;
 }
 
 + (double)G {
-    return astro::G;
+    return celestia::astro::G;
 }
 
 + (double)solarMass {
-    return astro::SolarMass;
+    return celestia::astro::SolarMass;
 }
 
 + (double)earthMass {
-    return astro::EarthMass;
+    return celestia::astro::EarthMass;
 }
 
 + (float)lumToAbsMag:(float)lum {
-    return astro::lumToAbsMag(lum);
+    return celestia::astro::lumToAbsMag(lum);
 }
 
 + (float)lumToAppMag:(float)lum lightYears:(float)lyrs {
-    return astro::lumToAppMag(lum, lyrs);
+    return celestia::astro::lumToAppMag(lum, lyrs);
 }
 
 + (float)absMagToLum:(float)mag {
-    return astro::absMagToLum(mag);
+    return celestia::astro::absMagToLum(mag);
 }
 
 + (float)absToAppMag:(float)mag lightYears:(float)lyrs {
-    return astro::absToAppMag(mag, lyrs);
+    return celestia::astro::absToAppMag(mag, lyrs);
 }
 + (float)appToAbsMag:(float)mag lightYears:(float)lyrs {
-    return astro::appToAbsMag(mag, lyrs);
+    return celestia::astro::appToAbsMag(mag, lyrs);
 }
 
 + (float)lightYearsToParsecs:(float)ly {
-    return astro::lightYearsToParsecs(ly);
+    return celestia::astro::lightYearsToParsecs(ly);
 }
 + (float)parsecsToLightYears:(float)pc {
-    return astro::parsecsToLightYears(pc);
+    return celestia::astro::parsecsToLightYears(pc);
 }
 
 + (double)lightYearsToKilometers:(double)ly {
-    return astro::lightYearsToKilometers(ly);
+    return celestia::astro::lightYearsToKilometers(ly);
 }
 
 + (double)kilometersToLightYears:(double)km {
-    return astro::kilometersToLightYears(km);
+    return celestia::astro::kilometersToLightYears(km);
 }
 
 + (double)lightYearsToAU:(double)ly {
-    return astro::lightYearsToAU(ly);
+    return celestia::astro::lightYearsToAU(ly);
 }
 
 + (double)AUtoLightYears:(double)au {
-    return astro::AUtoLightYears(au);
+    return celestia::astro::AUtoLightYears(au);
 }
 
 + (double)kilometersToAU:(double)km {
-    return astro::kilometersToAU(km);
+    return celestia::astro::kilometersToAU(km);
 }
 
 + (double)AUtoKilometers:(double)au {
-    return astro::AUtoKilometers(au);
+    return celestia::astro::AUtoKilometers(au);
 }
 
 + (double)microLightYearsToKilometers:(double)mly {
-    return astro::microLightYearsToKilometers(mly);
+    return celestia::astro::microLightYearsToKilometers(mly);
 }
 
 + (double)kilometersToMicroLightYears:(double)km {
-    return astro::kilometersToMicroLightYears(km);
+    return celestia::astro::kilometersToMicroLightYears(km);
 }
 
 + (double)microLightYearsToAU:(double)mly {
-    return astro::microLightYearsToAU(mly);
+    return celestia::astro::microLightYearsToAU(mly);
 }
 
 + (double)AUtoMicroLightYears:(double)au {
-    return astro::AUtoMicroLightYears(au);
+    return celestia::astro::AUtoMicroLightYears(au);
 }
 
 + (double)secondsToJulianDate:(double)sec {
-    return astro::secondsToJulianDate(sec);
+    return celestia::astro::secondsToJulianDate(sec);
 }
 
 + (double)julianDateToSeconds:(double)jd {
-    return astro::julianDateToSeconds(jd);
+    return celestia::astro::julianDateToSeconds(jd);
 }
 
 + (NSArray<NSNumber *> *)anomaly:(double)meanAnamaly eccentricity:(double)eccentricity {
     double trueAnomaly,eccentricAnomaly;
-    astro::anomaly(meanAnamaly, eccentricity, trueAnomaly, eccentricAnomaly);
+    celestia::astro::anomaly(meanAnamaly, eccentricity, trueAnomaly, eccentricAnomaly);
     return [NSArray arrayWithObjects:[NSNumber numberWithDouble:trueAnomaly], [NSNumber numberWithDouble:eccentricAnomaly], nil];
 }
 
 + (double)meanEclipticObliquity:(double)jd {
-    return astro::meanEclipticObliquity(jd);
+    return celestia::astro::meanEclipticObliquity(jd);
 }
 
 + (CelestiaVector *)celToJ2000Ecliptic:(CelestiaVector *)cel {
@@ -278,11 +278,11 @@ NSDictionary* coordinateDict;
 }
 
 + (CelestiaVector *)eclipticToEquatorial:(CelestiaVector *)ecliptic {
-    return [CelestiaVector vectorWithVector3d:astro::eclipticToEquatorial([ecliptic vector3d])];
+    return [CelestiaVector vectorWithVector3d:celestia::astro::eclipticToEquatorial([ecliptic vector3d])];
 }
 
 + (CelestiaVector *)equatorialToGalactic:(CelestiaVector *)equatorial {
-    return [CelestiaVector vectorWithVector3d:astro::equatorialToGalactic([equatorial vector3d])];
+    return [CelestiaVector vectorWithVector3d:celestia::astro::equatorialToGalactic([equatorial vector3d])];
 }
 
 + (CelestiaVector *)rectToSpherical:(CelestiaVector *)rect {

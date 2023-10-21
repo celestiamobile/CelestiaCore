@@ -484,7 +484,7 @@ FEATUREMETHODS(Other)
 - (NSInteger)dateFormat { return core->getDateFormat(); }
 
 - (void)setDateFormat:(NSInteger)value {
-    core->setDateFormat(static_cast<astro::Date::Format>(value));
+    core->setDateFormat(static_cast<celestia::astro::Date::Format>(value));
 }
 
 - (NSInteger)tagForKey:(NSInteger)key {
