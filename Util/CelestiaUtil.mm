@@ -9,7 +9,7 @@
 // of the License, or (at your option) any later version.
 //
 
-#include <celengine/astro.h>
+#include <celastro/date.h>
 #include <celengine/observer.h>
 
 #import "CelestiaUtil.h"

@@ -461,16 +461,16 @@ FEATUREMETHODS(Other)
 // Measurement Settings
 
 - (CelestiaMeasurementSystem)measurementSystem { return (CelestiaMeasurementSystem)core->getMeasurementSystem(); }
-- (void)setMeasurementSystem:(CelestiaMeasurementSystem)measurementSystem { return core->setMeasurementSystem((CelestiaCore::MeasurementSystem)measurementSystem); }
+- (void)setMeasurementSystem:(CelestiaMeasurementSystem)measurementSystem { return core->setMeasurementSystem((celestia::MeasurementSystem)measurementSystem); }
 
 - (CelestiaTemperatureScale)temperatureScale { return (CelestiaTemperatureScale)core->getTemperatureScale(); }
-- (void)setTemperatureScale:(CelestiaTemperatureScale)temperatureScale { return core->setTemperatureScale((CelestiaCore::TemperatureScale)temperatureScale); }
+- (void)setTemperatureScale:(CelestiaTemperatureScale)temperatureScale { return core->setTemperatureScale((celestia::TemperatureScale)temperatureScale); }
 
 - (CelestiaScriptSystemAccessPolicy)scriptSystemAccessPolicy { return (CelestiaScriptSystemAccessPolicy)core->getScriptSystemAccessPolicy(); }
 - (void)setScriptSystemAccessPolicy:(CelestiaScriptSystemAccessPolicy)scriptSystemAccessPolicy { return core->setScriptSystemAccessPolicy((CelestiaCore::ScriptSystemAccessPolicy)scriptSystemAccessPolicy); }
 
 - (CelestiaLayoutDirection)layoutDirection { return static_cast<CelestiaLayoutDirection>(core->getLayoutDirection()); }
-- (void)setLayoutDirection:(CelestiaLayoutDirection)layoutDirection { core->setLayoutDirection(static_cast<CelestiaCore::LayoutDirection>(layoutDirection)); }
+- (void)setLayoutDirection:(CelestiaLayoutDirection)layoutDirection { core->setLayoutDirection(static_cast<celestia::LayoutDirection>(layoutDirection)); }
 
 // Time settings
 

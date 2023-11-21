@@ -25,7 +25,7 @@
 
 #include "celmath/geomutil.h"
 
-using namespace celmath;
+using namespace celestia::math;
 
 typedef NS_OPTIONS(NSUInteger, CelestiaGoToLocationFieldMask) {
     CelestiaGoToLocationFieldMaskLongitude = 1 << 0,

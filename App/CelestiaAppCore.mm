@@ -255,20 +255,16 @@ private:
     core->setSafeAreaInsets(left, top, right, bottom);
 }
 
-- (void)setFont:(NSString *)fontPath collectionIndex:(NSInteger)collectionIndex fontSize:(NSInteger)fontSize {
-    core->setFont([fontPath UTF8String], collectionIndex, fontSize);
+- (void)setHudFont:(NSString *)fontPath collectionIndex:(NSInteger)collectionIndex fontSize:(NSInteger)fontSize {
+    core->setHudFont([fontPath UTF8String], collectionIndex, fontSize);
 }
 
-- (void)setTitleFont:(NSString *)fontPath collectionIndex:(NSInteger)collectionIndex fontSize:(NSInteger)fontSize {
-    core->setTitleFont([fontPath UTF8String], collectionIndex, fontSize);
+- (void)setHudTitleFont:(NSString *)fontPath collectionIndex:(NSInteger)collectionIndex fontSize:(NSInteger)fontSize {
+    core->setHudTitleFont([fontPath UTF8String], collectionIndex, fontSize);
 }
 
 - (void)setRendererFont:(NSString *)fontPath collectionIndex:(NSInteger)collectionIndex fontSize:(NSInteger)fontSize fontStyle:(CelestiaRendererFontStyle)fontStyle {
     core->setRendererFont([fontPath UTF8String], collectionIndex, fontSize, (Renderer::FontStyle)fontStyle);
-}
-
-- (void)clearFonts {
-    core->clearFonts();
 }
 
 - (void)setPickTolerance:(CGFloat)pickTolerance {
@@ -298,7 +294,7 @@ private:
 }
 
 - (void)setTextEnterMode:(CelestiaTextEnterMode)textEnterMode {
-    core->setTextEnterMode((int)textEnterMode);
+    core->setTextEnterMode(static_cast<celestia::Hud::TextEnterMode>(textEnterMode));
 }
 
 - (void)runScript:(NSString *)path {
