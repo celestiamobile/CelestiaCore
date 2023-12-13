@@ -12,7 +12,7 @@
 #import <Foundation/Foundation.h>
 
 @class CelestiaStar;
-@class CelestiaSimulation;
+@class CelestiaUniverse;
 
 typedef NS_ENUM(NSUInteger, CelestiaStarBrowserKind) {
     CelestiaStarBrowserKindNearest = 0,
@@ -26,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 NS_SWIFT_NAME(StarBrowser)
 @interface CelestiaStarBrowser : NSObject
 
-- (instancetype)initWithKind:(CelestiaStarBrowserKind)kind simulation:(CelestiaSimulation *)simulation;
+- (instancetype)initWithKind:(CelestiaStarBrowserKind)kind universe:(CelestiaUniverse *)universe;
 
 - (NSArray<CelestiaStar *> *)stars;
 

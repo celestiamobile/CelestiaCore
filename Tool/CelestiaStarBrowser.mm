@@ -11,44 +11,61 @@
 
 #import "CelestiaStarBrowser.h"
 #import "CelestiaStar+Private.h"
-#import "CelestiaSimulation+Private.h"
+#import "CelestiaUniverse+Private.h"
 #include "celengine/starbrowser.h"
 
 #define BROWSER_MAX_STAR_COUNT          100
 
 @interface CelestiaStarBrowser () {
-    StarBrowser *b;
-    Simulation *s;
+    celestia::engine::StarBrowser *b;
 }
 
 @end
 
 @implementation CelestiaStarBrowser
 
-- (instancetype)initWithKind:(CelestiaStarBrowserKind)kind simulation:(CelestiaSimulation *)simulation {
+- (instancetype)initWithKind:(CelestiaStarBrowserKind)kind universe:(CelestiaUniverse *)universe {
     self = [super init];
     if (self) {
-        s = [simulation simulation];
-        b = new StarBrowser(s, (int)kind);
+        b = new celestia::engine::StarBrowser([universe universe]);
+        switch (kind)
+        {
+        case CelestiaStarBrowserKindNearest:
+            b->setComparison(celestia::engine::StarBrowser::Comparison::Nearest);
+            b->setFilter(celestia::engine::StarBrowser::Filter::Visible);
+            break;
+        case CelestiaStarBrowserKindBrighter:
+            b->setComparison(celestia::engine::StarBrowser::Comparison::ApparentMagnitude);
+            b->setFilter(celestia::engine::StarBrowser::Filter::Visible);
+            break;
+        case CelestiaStarBrowserKindBrightest:
+            b->setComparison(celestia::engine::StarBrowser::Comparison::AbsoluteMagnitude);
+            b->setFilter(celestia::engine::StarBrowser::Filter::Visible);
+            break;
+        case CelestiaStarBrowserKindStarsWithPlants:
+            b->setComparison(celestia::engine::StarBrowser::Comparison::Nearest);
+            b->setFilter(celestia::engine::StarBrowser::Filter::WithPlanets);
+            break;
+        default:
+            break;
+        }
     }
     return self;
 }
 
 - (NSArray<CelestiaStar *> *)stars {
-    std::vector<const Star*>* nearStars = b->listStars( BROWSER_MAX_STAR_COUNT );
+    std::vector<celestia::engine::StarBrowserRecord> records;
+    b->populate(records);
 
-    if (nearStars == nil ) return [NSArray array];
+    if (records.empty()) return [NSArray array];
 
-    unsigned long starCount = nearStars->size();
     NSMutableArray* starArray = [NSMutableArray array];
-    for (int i = 0; i < starCount; i++)
+    for (const auto &record : records)
     {
-        Star *aStar = (Star *)(*nearStars)[i];
-        CelestiaStar *star = [[CelestiaStar alloc] initWithStar:aStar];
+        CelestiaStar *star = [[CelestiaStar alloc] initWithStar:const_cast<Star *>(record.star)];
         [starArray addObject:star];
     }
 
-    delete nearStars;
     return starArray;
 }
 
