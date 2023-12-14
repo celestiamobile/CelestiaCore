@@ -24,6 +24,7 @@
 
 #include <celutil/gettext.h>
 #include <celestia/url.h>
+#include <unicode/uloc.h>
 
 class AppCoreProgressWatcher: public ProgressNotifier
 {
@@ -320,6 +321,9 @@ private:
     bindtextdomain("celestia_ui", [localeDirectory UTF8String]);
     bind_textdomain_codeset("celestia_ui", "UTF-8");
     textdomain("celestia");
+
+    UErrorCode status = U_ZERO_ERROR;
+    uloc_setDefault([[self language] UTF8String], &status);
 }
 
 + (NSString *)language {
