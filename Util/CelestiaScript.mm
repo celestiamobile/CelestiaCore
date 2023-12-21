@@ -24,14 +24,12 @@
 }
 
 + (NSArray *)scriptsInDirectory:(NSString *)directory deepScan:(BOOL)deep {
-    std::vector<ScriptMenuItem>* result = ScanScriptsDirectory([directory UTF8String], deep ? true : false);
-    NSMutableArray *array = [NSMutableArray arrayWithCapacity:result->size()];
+    auto results = ScanScriptsDirectory([directory UTF8String], deep ? true : false);
+    NSMutableArray *array = [NSMutableArray arrayWithCapacity:results.size()];
 
-    for (NSInteger i = 0; i < result->size(); i++) {
-        [array addObject:[[CelestiaScript alloc] initWithItem:(*result)[i]]];
-    }
+    for (const auto & result : results)
+        [array addObject:[[CelestiaScript alloc] initWithItem:result]];
 
-    delete result;
     return array;
 }
 
