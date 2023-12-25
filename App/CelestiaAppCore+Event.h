@@ -13,6 +13,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_OPTIONS(NSUInteger, CelestiaEventModifier) {
+    CelestiaEventModifierTouch = 0x40,
+} NS_SWIFT_NAME(EventModifier);
+
 @interface CelestiaAppCore (Event)
 
 // MARK: Mouse events

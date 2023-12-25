@@ -146,12 +146,14 @@ enum {
         cModifiers |= CelestiaCore::ControlKey;
     if (modifiers & NSEventModifierFlagShift)
         cModifiers |= CelestiaCore::ShiftKey;
-    if (buttons & 1)
+    if (buttons & CelestiaMouseButtonLeft)
         cModifiers |= CelestiaCore::LeftButton;
-    if (buttons & 2)
+    if (buttons & CelestiaMouseButtonMiddle)
         cModifiers |= CelestiaCore::MiddleButton;
-    if (buttons & 4)
+    if (buttons & CelestiaMouseButtonRight)
         cModifiers |= CelestiaCore::RightButton;
+    if (modifiers & CelestiaEventModifierTouch)
+        cModifiers |= CelestiaCore::Touch;
     return cModifiers;
 }
 
