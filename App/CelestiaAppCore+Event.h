@@ -34,6 +34,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)joystickButtonDown:(CelestiaJoystickButton)button;
 - (void)joystickAxis:(CelestiaJoystickAxis)axis amount:(float)amount;
 
+- (void)pinchUpdate:(CGPoint)focus scale:(CGFloat)scale;
+
 @end
 
 NS_ASSUME_NONNULL_END
