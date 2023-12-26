@@ -328,8 +328,8 @@ enum {
     return celestiaKey;
 }
 
-- (void)pinchUpdate:(CGPoint)focus scale:(CGFloat)scale {
-    core->pinchUpdate(static_cast<float>(focus.x), static_cast<float>(focus.y), static_cast<float>(scale));
+- (void)pinchUpdate:(CGPoint)focus scale:(CGFloat)scale zoomFOV:(BOOL)zoomFOV {
+    core->pinchUpdate(static_cast<float>(focus.x), static_cast<float>(focus.y), static_cast<float>(scale), static_cast<bool>(zoomFOV));
 }
 
 @end

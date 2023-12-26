@@ -23,6 +23,8 @@
 #import "CelestiaUtil.h"
 
 #include <celutil/gettext.h>
+#include <celestia/configfile.h>
+#include <celestia/progressnotifier.h>
 #include <celestia/url.h>
 #include <unicode/uloc.h>
 

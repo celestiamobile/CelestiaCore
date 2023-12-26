@@ -488,6 +488,14 @@
 		EADDA21A28ACF95F004460A6 /* glcompat.h in Headers */ = {isa = PBXBuildFile; fileRef = EADDA21828ACF95F004460A6 /* glcompat.h */; };
 		EAE5F38C27758463005A3022 /* logger.h in Headers */ = {isa = PBXBuildFile; fileRef = EAE5F38A27758463005A3022 /* logger.h */; };
 		EAE5F38D27758463005A3022 /* logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAE5F38B27758463005A3022 /* logger.cpp */; };
+		EAE846512B3AE659008A146D /* loadstars.h in Headers */ = {isa = PBXBuildFile; fileRef = EAE846492B3AE659008A146D /* loadstars.h */; };
+		EAE846522B3AE659008A146D /* loaddso.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAE8464A2B3AE659008A146D /* loaddso.cpp */; };
+		EAE846532B3AE659008A146D /* loadsso.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAE8464B2B3AE659008A146D /* loadsso.cpp */; };
+		EAE846542B3AE659008A146D /* catalogloader.h in Headers */ = {isa = PBXBuildFile; fileRef = EAE8464C2B3AE659008A146D /* catalogloader.h */; };
+		EAE846552B3AE659008A146D /* loadstars.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAE8464D2B3AE659008A146D /* loadstars.cpp */; };
+		EAE846562B3AE659008A146D /* progressnotifier.h in Headers */ = {isa = PBXBuildFile; fileRef = EAE8464E2B3AE659008A146D /* progressnotifier.h */; };
+		EAE846572B3AE659008A146D /* loadsso.h in Headers */ = {isa = PBXBuildFile; fileRef = EAE8464F2B3AE659008A146D /* loadsso.h */; };
+		EAE846582B3AE659008A146D /* loaddso.h in Headers */ = {isa = PBXBuildFile; fileRef = EAE846502B3AE659008A146D /* loaddso.h */; };
 		EAF1104829829E4B003938C3 /* eclipticlinerenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = EAF1104629829E4B003938C3 /* eclipticlinerenderer.h */; };
 		EAF1104929829E4B003938C3 /* eclipticlinerenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAF1104729829E4B003938C3 /* eclipticlinerenderer.cpp */; };
 		EAF1104D29829EA8003938C3 /* indexlist.h in Headers */ = {isa = PBXBuildFile; fileRef = EAF1104C29829EA8003938C3 /* indexlist.h */; };
@@ -986,6 +994,14 @@
 		EADDA21828ACF95F004460A6 /* glcompat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glcompat.h; sourceTree = "<group>"; };
 		EAE5F38A27758463005A3022 /* logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = logger.h; sourceTree = "<group>"; };
 		EAE5F38B27758463005A3022 /* logger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = logger.cpp; sourceTree = "<group>"; };
+		EAE846492B3AE659008A146D /* loadstars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loadstars.h; sourceTree = "<group>"; };
+		EAE8464A2B3AE659008A146D /* loaddso.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = loaddso.cpp; sourceTree = "<group>"; };
+		EAE8464B2B3AE659008A146D /* loadsso.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = loadsso.cpp; sourceTree = "<group>"; };
+		EAE8464C2B3AE659008A146D /* catalogloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = catalogloader.h; sourceTree = "<group>"; };
+		EAE8464D2B3AE659008A146D /* loadstars.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = loadstars.cpp; sourceTree = "<group>"; };
+		EAE8464E2B3AE659008A146D /* progressnotifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = progressnotifier.h; sourceTree = "<group>"; };
+		EAE8464F2B3AE659008A146D /* loadsso.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loadsso.h; sourceTree = "<group>"; };
+		EAE846502B3AE659008A146D /* loaddso.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loaddso.h; sourceTree = "<group>"; };
 		EAF1104629829E4B003938C3 /* eclipticlinerenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eclipticlinerenderer.h; sourceTree = "<group>"; };
 		EAF1104729829E4B003938C3 /* eclipticlinerenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eclipticlinerenderer.cpp; sourceTree = "<group>"; };
 		EAF1104C29829EA8003938C3 /* indexlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = indexlist.h; sourceTree = "<group>"; };
@@ -1550,15 +1566,9 @@
 		977D833422FDB287002FF1C2 /* celestia */ = {
 			isa = PBXGroup;
 			children = (
-				EA9166AB2B0C37FD00AF48B1 /* hud.cpp */,
-				EA9166AD2B0C37FD00AF48B1 /* hud.h */,
-				EA9166AC2B0C37FD00AF48B1 /* textinput.cpp */,
-				EA9166AF2B0C37FE00AF48B1 /* textinput.h */,
-				EA9166AA2B0C37FD00AF48B1 /* timeinfo.h */,
-				EA9166A82B0C37FD00AF48B1 /* viewmanager.cpp */,
-				EA9166B02B0C37FE00AF48B1 /* viewmanager.h */,
-				EA9166AE2B0C37FE00AF48B1 /* windowmetrics.cpp */,
-				EA9166A92B0C37FD00AF48B1 /* windowmetrics.h */,
+				EA1F11B1288B241100D8698F /* audiosession.cpp */,
+				EA1F119F288A3A2600D8698F /* audiosession.h */,
+				EAE8464C2B3AE659008A146D /* catalogloader.h */,
 				977D838922FDB2E8002FF1C2 /* celestiacore.cpp */,
 				977D838522FDB2E7002FF1C2 /* celestiacore.h */,
 				EA3FC0A425F63A680019C3BD /* celestiastate.cpp */,
@@ -1573,19 +1583,33 @@
 				977D838222FDB2E7002FF1C2 /* favorites.h */,
 				977D838322FDB2E7002FF1C2 /* helper.cpp */,
 				977D838822FDB2E8002FF1C2 /* helper.h */,
-				977D839422FDB2E9002FF1C2 /* moviecapture.h */,
-				977D837422FDB2E7002FF1C2 /* scriptmenu.cpp */,
-				977D838B22FDB2E8002FF1C2 /* scriptmenu.h */,
-				EAFFE0392882F7BE007DEBC2 /* textprintposition.cpp */,
-				EAFFE03A2882F7BE007DEBC2 /* textprintposition.h */,
-				974A6B2123532EDB007BCABD /* view.cpp */,
-				974A6B2223532EDB007BCABD /* view.h */,
-				977D837022FDB2E6002FF1C2 /* url.cpp */,
-				977D839022FDB2E8002FF1C2 /* url.h */,
-				EA1F11B1288B241100D8698F /* audiosession.cpp */,
-				EA1F119F288A3A2600D8698F /* audiosession.h */,
+				EA9166AB2B0C37FD00AF48B1 /* hud.cpp */,
+				EA9166AD2B0C37FD00AF48B1 /* hud.h */,
+				EAE8464A2B3AE659008A146D /* loaddso.cpp */,
+				EAE846502B3AE659008A146D /* loaddso.h */,
+				EAE8464B2B3AE659008A146D /* loadsso.cpp */,
+				EAE8464F2B3AE659008A146D /* loadsso.h */,
+				EAE8464D2B3AE659008A146D /* loadstars.cpp */,
+				EAE846492B3AE659008A146D /* loadstars.h */,
 				EA1F11A2288A3ADF00D8698F /* miniaudiosession.cpp */,
 				EA1F11A3288A3ADF00D8698F /* miniaudiosession.h */,
+				977D839422FDB2E9002FF1C2 /* moviecapture.h */,
+				EAE8464E2B3AE659008A146D /* progressnotifier.h */,
+				977D837422FDB2E7002FF1C2 /* scriptmenu.cpp */,
+				977D838B22FDB2E8002FF1C2 /* scriptmenu.h */,
+				EA9166AC2B0C37FD00AF48B1 /* textinput.cpp */,
+				EA9166AF2B0C37FE00AF48B1 /* textinput.h */,
+				EAFFE0392882F7BE007DEBC2 /* textprintposition.cpp */,
+				EAFFE03A2882F7BE007DEBC2 /* textprintposition.h */,
+				EA9166AA2B0C37FD00AF48B1 /* timeinfo.h */,
+				977D837022FDB2E6002FF1C2 /* url.cpp */,
+				977D839022FDB2E8002FF1C2 /* url.h */,
+				974A6B2123532EDB007BCABD /* view.cpp */,
+				974A6B2223532EDB007BCABD /* view.h */,
+				EA9166A82B0C37FD00AF48B1 /* viewmanager.cpp */,
+				EA9166B02B0C37FE00AF48B1 /* viewmanager.h */,
+				EA9166AE2B0C37FE00AF48B1 /* windowmetrics.cpp */,
+				EA9166A92B0C37FD00AF48B1 /* windowmetrics.h */,
 			);
 			path = celestia;
 			sourceTree = "<group>";
@@ -1719,6 +1743,7 @@
 				EA2D5F2A29EE82D3005990BA /* largestarrenderer.h in Headers */,
 				EAB03FFC29657C0800F6878E /* CelestiaTimelinePhase.h in Headers */,
 				EA8926562567BD0300A868F3 /* CelestiaFavorite.h in Headers */,
+				EAE846512B3AE659008A146D /* loadstars.h in Headers */,
 				EA544E522566B369003F351D /* CelestiaDestination.h in Headers */,
 				EA2166FB2973C08D001477DE /* cometrenderer.h in Headers */,
 				EA26DB49255CF94800D26D7B /* CelestiaFrameBuffer.h in Headers */,
@@ -1818,6 +1843,7 @@
 				EAB03FF829657B0C00F6878E /* CelestiaTimeline+Private.h in Headers */,
 				971A66CB23019C20009E4EA1 /* opencluster.h in Headers */,
 				971A671E23019C2B009E4EA1 /* mathlib.h in Headers */,
+				EAE846562B3AE659008A146D /* progressnotifier.h in Headers */,
 				971A663B23019C03009E4EA1 /* moviecapture.h in Headers */,
 				EA14B03C2A51BC7C00F069C0 /* perspectiveprojectionmode.h in Headers */,
 				971A65F823019BF0009E4EA1 /* CelestiaDSO+Private.h in Headers */,
@@ -1870,6 +1896,7 @@
 				97DBD67324134AD30045AE0C /* astroobj.h in Headers */,
 				971A66D623019C20009E4EA1 /* rendcontext.h in Headers */,
 				EAB08FEB27807E2500BB82F0 /* numbers_impl.h in Headers */,
+				EAE846582B3AE659008A146D /* loaddso.h in Headers */,
 				971A672523019C2B009E4EA1 /* sphere.h in Headers */,
 				971A66AC23019C20009E4EA1 /* geometry.h in Headers */,
 				EA2EBCA529DD45D500EE0D84 /* boundariesrenderer.h in Headers */,
@@ -1925,6 +1952,7 @@
 				EA0D014829C0A15700B86EED /* textlayout.h in Headers */,
 				EA3FFB0C2A13746000C6158F /* globularrenderer.h in Headers */,
 				971A671823019C2B009E4EA1 /* distance.h in Headers */,
+				EAE846572B3AE659008A146D /* loadsso.h in Headers */,
 				971A660323019BF0009E4EA1 /* CelestiaBody+Private.h in Headers */,
 				971A665B23019C0F009E4EA1 /* watcher.h in Headers */,
 				971A665223019C0F009E4EA1 /* reshandle.h in Headers */,
@@ -1969,6 +1997,7 @@
 				971A66F723019C21009E4EA1 /* stellarclass.h in Headers */,
 				971A65EB23019BF0009E4EA1 /* CelestiaUniversalCoord+Private.h in Headers */,
 				971A671D23019C2B009E4EA1 /* intersect.h in Headers */,
+				EAE846542B3AE659008A146D /* catalogloader.h in Headers */,
 				EA9166B22B0C37FE00AF48B1 /* windowmetrics.h in Headers */,
 				971A66FE23019C21009E4EA1 /* timeline.h in Headers */,
 				9768C446240FCC850097C4F2 /* framebuffer.h in Headers */,
@@ -2136,6 +2165,7 @@
 				974A6B2323532EDB007BCABD /* view.cpp in Sources */,
 				971A66D723019C20009E4EA1 /* render.cpp in Sources */,
 				971A667823019C15009E4EA1 /* spicerotation.cpp in Sources */,
+				EAE846522B3AE659008A146D /* loaddso.cpp in Sources */,
 				EA2D5F2929EE82D3005990BA /* largestarrenderer.cpp in Sources */,
 				EA544E532566B369003F351D /* CelestiaDestination.mm in Sources */,
 				971A671A23019C2B009E4EA1 /* frustum.cpp in Sources */,
@@ -2157,6 +2187,7 @@
 				EA2166FC2973C08D001477DE /* atmosphererenderer.cpp in Sources */,
 				971A66A823019C20009E4EA1 /* frametree.cpp in Sources */,
 				EA2EBCB029DD669500EE0D84 /* unicode.cpp in Sources */,
+				EAE846552B3AE659008A146D /* loadstars.cpp in Sources */,
 				9751DC2023594A8000299997 /* celx_rotation.cpp in Sources */,
 				EA405FF72AC3B977000E1F7A /* tangents.cpp in Sources */,
 				9751DC2823594A8000299997 /* celx_phase.cpp in Sources */,
@@ -2215,6 +2246,7 @@
 				971A66AF23019C20009E4EA1 /* glmarker.cpp in Sources */,
 				9751DC1123594A8000299997 /* celx_object.cpp in Sources */,
 				971A66E623019C20009E4EA1 /* solarsys.cpp in Sources */,
+				EAE846532B3AE659008A146D /* loadsso.cpp in Sources */,
 				EA73169F248E1D9B009AE037 /* truetypefont.cpp in Sources */,
 				971A66CC23019C20009E4EA1 /* overlay.cpp in Sources */,
 				97C62C2523374F4E00953522 /* CelestiaObserver.mm in Sources */,
