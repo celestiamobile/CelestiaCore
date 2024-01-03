@@ -139,6 +139,9 @@ static NSString *CS_PREV_VERSIONS[CS_NUM_PREV_VERSIONS] = {
                TAGDEF(828,@"showFarrumLabels")
                TAGDEF(829,@"showEruptiveCenterLabels")
                TAGDEF(831,@"showOtherLabels")
+               TAGDEF(832,@"enableReverseWheel")
+               TAGDEF(833,@"enableRayBasedDragging")
+               TAGDEF(834,@"enableFocusZooming")
                // stars
                //        TAGDEF(999,@"distanceLimit")
                TAGDEF(900,@"ambientLightLevel")
@@ -634,14 +637,20 @@ INTERACTIONMETHODS(FocusZooming);
                 break;
         }
 
-        if (userDefs)
+        if (userDefs != nil)
             [self upgradeUserDefaults:userDefaults values:userDefs fromVersion:CS_PREV_VERSIONS[i]];
         else
-            userDefs = appDefs;
+            userDefs = [NSDictionary dictionary];
     }
 
-    if (appDefs)
-        [userDefaults registerDefaults:[NSDictionary dictionaryWithObject:appDefs forKey:CS_DefaultsName]];
+    if (appDefs != nil) {
+        NSMutableDictionary *tempDictionary = [userDefs mutableCopy];
+        [appDefs enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+            if ([tempDictionary objectForKey:key] == nil)
+                [tempDictionary setObject:obj forKey:key];
+        }];
+        userDefs = [tempDictionary copy];
+    }
     return userDefs;
 }
 
