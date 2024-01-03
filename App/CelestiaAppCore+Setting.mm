@@ -10,6 +10,8 @@
 //
 
 #include <celengine/body.h>
+#include <celutil/flag.h>
+
 #import "CelestiaAppCore+Private.h"
 #import "CelestiaAppCore+Setting.h"
 #import "CelestiaAppCore+Locale.h"
@@ -471,6 +473,12 @@ FEATUREMETHODS(Other)
 
 - (CelestiaLayoutDirection)layoutDirection { return static_cast<CelestiaLayoutDirection>(core->getLayoutDirection()); }
 - (void)setLayoutDirection:(CelestiaLayoutDirection)layoutDirection { core->setLayoutDirection(static_cast<celestia::LayoutDirection>(layoutDirection)); }
+
+#define INTERACTIONMETHODS(flag)  -(BOOL) enable##flag { return static_cast<BOOL>(celestia::util::is_set(core->getInteractionFlags(), CelestiaCore::InteractionFlags::flag)); } -(void) setEnable##flag: (BOOL) value  { auto flags = core->getInteractionFlags();celestia::util::set_or_unset(flags, CelestiaCore::InteractionFlags::flag, static_cast<bool>(value));core->setInteractionFlags(flags); }
+
+INTERACTIONMETHODS(ReverseWheel);
+INTERACTIONMETHODS(RayBasedDragging);
+INTERACTIONMETHODS(FocusZooming);
 
 // Time settings
 

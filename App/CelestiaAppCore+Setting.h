@@ -192,6 +192,10 @@ typedef NS_ENUM(NSInteger, CelestiaLayoutDirection) {
 @property CelestiaScriptSystemAccessPolicy scriptSystemAccessPolicy;
 @property CelestiaLayoutDirection layoutDirection;
 
+@property BOOL enableReverseWheel;
+@property BOOL enableRayBasedDragging;
+@property BOOL enableFocusZooming;
+
 - (void)initializeSetting;
 
 - (NSNumber *)valueForTag:(NSInteger)tag;
