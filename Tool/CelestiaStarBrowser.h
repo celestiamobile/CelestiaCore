@@ -11,6 +11,7 @@
 
 #import <Foundation/Foundation.h>
 
+@class CelestiaObserver;
 @class CelestiaStar;
 @class CelestiaUniverse;
 
@@ -26,7 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 NS_SWIFT_NAME(StarBrowser)
 @interface CelestiaStarBrowser : NSObject
 
-- (instancetype)initWithKind:(CelestiaStarBrowserKind)kind universe:(CelestiaUniverse *)universe;
+- (instancetype)initWithKind:(CelestiaStarBrowserKind)kind observer:(CelestiaObserver *)observer universe:(CelestiaUniverse *)universe;
 
 - (NSArray<CelestiaStar *> *)stars;
 

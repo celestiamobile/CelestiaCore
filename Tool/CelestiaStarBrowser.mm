@@ -10,6 +10,7 @@
 //
 
 #import "CelestiaStarBrowser.h"
+#import "CelestiaObserver+Private.h"
 #import "CelestiaStar+Private.h"
 #import "CelestiaUniverse+Private.h"
 #include "celengine/starbrowser.h"
@@ -24,7 +25,7 @@
 
 @implementation CelestiaStarBrowser
 
-- (instancetype)initWithKind:(CelestiaStarBrowserKind)kind universe:(CelestiaUniverse *)universe {
+- (instancetype)initWithKind:(CelestiaStarBrowserKind)kind observer:(CelestiaObserver *)observer universe:(CelestiaUniverse *)universe {
     self = [super init];
     if (self) {
         b = new celestia::engine::StarBrowser([universe universe]);
@@ -49,6 +50,9 @@
         default:
             break;
         }
+        auto o = [observer observer];
+        b->setPosition(o->getPosition());
+        b->setTime(o->getTime());
     }
     return self;
 }
