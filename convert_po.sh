@@ -1,7 +1,6 @@
 #!/bin/sh
 
-HOMEBREW_PATH=$(brew --prefix)
-export PATH="$HOMEBREW_PATH/bin:$PATH"
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:$PATH"
 
 DIDBUILD=0
 
