@@ -102,16 +102,16 @@ private:
 class AppCoreWatcher: public CelestiaWatcher
 {
 public:
-    AppCoreWatcher(CelestiaCore& watched, void (^block)(CelestiaWatcherFlag)) : CelestiaWatcher(watched), block(block) {}
+    AppCoreWatcher(CelestiaCore& watched, void (^block)(CelestiaWatcherFlags)) : CelestiaWatcher(watched), block(block) {}
 
     void notifyChange(CelestiaCore *, int change)
     {
         @autoreleasepool {
-            block((CelestiaWatcherFlag)change);
+            block((CelestiaWatcherFlags)change);
         }
     }
 private:
-    void (^block)(CelestiaWatcherFlag);
+    void (^block)(CelestiaWatcherFlags);
 };
 
 @interface CelestiaAppCore () {
@@ -153,8 +153,8 @@ private:
         core->setAlerter(alerter);
         core->setCursorHandler(cursorHandler);
         core->setContextMenuHandler(internalContextMenuHandler);
-        watcher = new AppCoreWatcher(*core, ^(CelestiaWatcherFlag changedFlag) {
-            [[weakSelf delegate] celestiaAppCoreWatchedFlagDidChange:changedFlag];
+        watcher = new AppCoreWatcher(*core, ^(CelestiaWatcherFlags changedFlags) {
+            [[weakSelf delegate] celestiaAppCoreWatchedFlagsDidChange:changedFlags];
         });
         [self initializeSetting];
     }

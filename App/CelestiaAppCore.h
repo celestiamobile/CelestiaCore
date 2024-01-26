@@ -70,23 +70,30 @@ typedef NS_ENUM(NSUInteger, CelestiaRendererFontStyle) {
     CelestiaRendererFontStyleLarge           = 1,
 } NS_SWIFT_NAME(RendererFontStyle);
 
-typedef NS_OPTIONS(NSUInteger, CelestiaWatcherFlag) {
-    CelestiaWatcherFlagLabelFlagsChanged       = 1,
-    CelestiaWatcherFlagRenderFlagsChanged      = 2,
-    CelestiaWatcherFlagVerbosityLevelChanged   = 4,
-    CelestiaWatcherFlagTimeZoneChanged         = 8,
-    CelestiaWatcherFlagAmbientLightChanged     = 16,
-    CelestiaWatcherFlagFaintestChanged         = 32,
-    CelestiaWatcherFlagHistoryChanged          = 64,
-    CelestiaWatcherFlagTextEnterModeChanged    = 128,
-    CelestiaWatcherFlagGalaxyLightGainChanged  = 256,
-} NS_SWIFT_NAME(WatcherFlag);
+typedef NS_OPTIONS(NSUInteger, CelestiaWatcherFlags) {
+    CelestiaWatcherFlagsLabelFlagsChanged       = 1,
+    CelestiaWatcherFlagsRenderFlagsChanged      = 2,
+    CelestiaWatcherFlagsVerbosityLevelChanged   = 4,
+    CelestiaWatcherFlagsTimeZoneChanged         = 8,
+    CelestiaWatcherFlagsAmbientLightChanged     = 16,
+    CelestiaWatcherFlagsFaintestChanged         = 32,
+    CelestiaWatcherFlagsHistoryChanged          = 64,
+    CelestiaWatcherFlagsTextEnterModeChanged    = 128,
+    CelestiaWatcherFlagsGalaxyLightGainChanged  = 256,
+} NS_SWIFT_NAME(WatcherFlags);
 
 typedef NS_ENUM(NSUInteger, CelestiaTextEnterMode) {
     CelestiaTextEnterModeNormal         = 0,
     CelestiaTextEnterModeAutoComplete   = 1,
     CelestiaTextEnterModePassToScript   = 2,
 } NS_SWIFT_NAME(TextEnterMode);
+
+typedef NS_OPTIONS(NSUInteger, CelestiaOverlayElements) {
+    CelestiaOverlayElementTime      = 1 << 0,
+    CelestiaOverlayElementVelocity  = 1 << 1,
+    CelestiaOverlayElementSelection = 1 << 2,
+    CelestiaOverlayElementFrame     = 1 << 2,
+} NS_SWIFT_NAME(OverlayElements);
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -95,7 +102,7 @@ NS_SWIFT_NAME(AppCoreDelegate)
 
 - (void)celestiaAppCoreFatalErrorHappened:(NSString *)error;
 - (void)celestiaAppCoreCursorShapeChanged:(CelestiaCursorShape)shape;
-- (void)celestiaAppCoreWatchedFlagDidChange:(CelestiaWatcherFlag)changedFlag;
+- (void)celestiaAppCoreWatchedFlagsDidChange:(CelestiaWatcherFlags)changedFlags;
 
 @end
 

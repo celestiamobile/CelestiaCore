@@ -196,6 +196,8 @@ typedef NS_ENUM(NSInteger, CelestiaLayoutDirection) {
 @property BOOL enableRayBasedDragging;
 @property BOOL enableFocusZooming;
 
+@property CelestiaOverlayElements overlayElements;
+
 - (void)initializeSetting;
 
 - (NSNumber *)valueForTag:(NSInteger)tag;

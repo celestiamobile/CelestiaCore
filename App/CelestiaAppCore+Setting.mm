@@ -483,6 +483,14 @@ INTERACTIONMETHODS(ReverseWheel);
 INTERACTIONMETHODS(RayBasedDragging);
 INTERACTIONMETHODS(FocusZooming);
 
+- (CelestiaOverlayElements)overlayElements {
+    return static_cast<CelestiaOverlayElements>(core->getOverlayElements());
+}
+
+- (void)setOverlayElements:(CelestiaOverlayElements)overlayElements {
+    core->setOverlayElements(static_cast<celestia::HudElements>(overlayElements));
+}
+
 // Time settings
 
 // Timezone values are inverted to maintain backward compatibility
