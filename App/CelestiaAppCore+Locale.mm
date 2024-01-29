@@ -13,6 +13,7 @@
 
 #include <celutil/fsutils.h>
 #include <celutil/gettext.h>
+#include <fmt/format.h>
 
 NSString *LocalizedFilename(NSString *originalName)
 {
@@ -22,5 +23,21 @@ NSString *LocalizedFilename(NSString *originalName)
 
 NSString *LocalizedString(NSString *originalString, NSString *domain)
 {
+    if ([originalString length] == 0)
+        return originalString;
     return [NSString stringWithUTF8String:dgettext([domain UTF8String], [originalString UTF8String])];
+}
+
+NSString *LocalizedStringContext(NSString *originalString, NSString *context, NSString *domain)
+{
+    if ([originalString length] == 0)
+        return originalString;
+
+    std::string auxStr = fmt::format("{}\004{}", [context UTF8String], [originalString UTF8String]);
+    const char *aux = auxStr.c_str();
+    const char *translation = dgettext([domain UTF8String], aux);
+    if (translation == aux)
+        return originalString;
+    else
+        return [NSString stringWithUTF8String:translation];
 }

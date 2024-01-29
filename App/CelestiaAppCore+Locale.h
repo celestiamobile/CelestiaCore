@@ -18,6 +18,7 @@ extern "C" {
 #endif
 NSString *LocalizedFilename(NSString *originalName);
 NSString *LocalizedString(NSString *originalString, NSString *domain);
+NSString *LocalizedStringContext(NSString *originalString, NSString *context, NSString *domain);
 #ifdef __cplusplus
 }
 #endif
