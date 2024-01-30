@@ -207,10 +207,11 @@ NSDictionary* coordinateDict;
     return celestia::astro::appToAbsMag(mag, lyrs);
 }
 
-+ (float)lightYearsToParsecs:(float)ly {
++ (double)lightYearsToParsecs:(double)ly {
     return celestia::astro::lightYearsToParsecs(ly);
 }
-+ (float)parsecsToLightYears:(float)pc {
+
++ (double)parsecsToLightYears:(double)pc {
     return celestia::astro::parsecsToLightYears(pc);
 }
 

@@ -56,8 +56,8 @@ NS_SWIFT_NAME(AstroUtils)
 + (float)absMagToLum:(float)mag;
 + (float)absToAppMag:(float)mag lightYears:(float)lyrs;
 + (float)appToAbsMag:(float)mag lightYears:(float)lyrs;
-+ (float)lightYearsToParsecs:(float)ly;
-+ (float)parsecsToLightYears:(float)pc;
++ (double)lightYearsToParsecs:(double)ly;
++ (double)parsecsToLightYears:(double)pc;
 + (double)lightYearsToKilometers:(double)ly;
 + (double)kilometersToLightYears:(double)km;
 + (double)lightYearsToAU:(double)ly;
