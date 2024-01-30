@@ -325,7 +325,24 @@ private:
     textdomain("celestia");
 
     UErrorCode status = U_ZERO_ERROR;
-    uloc_setDefault([[self language] UTF8String], &status);
+    NSString *language = [self language];
+    if (![language containsString:@"_"]) {
+        NSLocale *locale = [NSLocale currentLocale];
+        NSString *countryCode;
+        if (@available(iOS 17, macOS 14, visionOS 1, *)) {
+            countryCode = [locale regionCode];
+        } else {
+            countryCode = [locale countryCode];
+        }
+        if (countryCode != nil) {
+            NSString *fullLocale = [NSString stringWithFormat:@"%@_%@", language, countryCode];
+            uloc_setDefault([fullLocale UTF8String], &status);
+        } else {
+            uloc_setDefault([language UTF8String], &status);
+        }
+    } else {
+        uloc_setDefault([language UTF8String], &status);
+    }
 }
 
 + (NSString *)language {
