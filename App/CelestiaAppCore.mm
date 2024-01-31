@@ -326,7 +326,18 @@ private:
 
     UErrorCode status = U_ZERO_ERROR;
     NSString *language = [self language];
-    if (![language containsString:@"_"]) {
+    NSString *uloc = [language copy];
+    BOOL shouldAppendCountryCode = NO;
+    if ([uloc isEqualToString:@"zh_CN"]) {
+        uloc = @"zh_Hans";
+        shouldAppendCountryCode = YES;
+    } else if ([uloc isEqualToString:@"zh_TW"]) {
+        uloc = @"zh_Hant";
+        shouldAppendCountryCode = YES;
+    } else {
+        shouldAppendCountryCode = ![uloc containsString:@"_"];
+    }
+    if (shouldAppendCountryCode) {
         NSLocale *locale = [NSLocale currentLocale];
         NSString *countryCode;
         if (@available(iOS 17, macOS 14, visionOS 1, *)) {
@@ -335,7 +346,7 @@ private:
             countryCode = [locale countryCode];
         }
         if (countryCode != nil) {
-            NSString *fullLocale = [NSString stringWithFormat:@"%@_%@", language, countryCode];
+            NSString *fullLocale = [NSString stringWithFormat:@"%@_%@", uloc, countryCode];
             uloc_setDefault([fullLocale UTF8String], &status);
         } else {
             uloc_setDefault([language UTF8String], &status);
