@@ -156,7 +156,6 @@ private:
         watcher = new AppCoreWatcher(*core, ^(CelestiaWatcherFlags changedFlags) {
             [[weakSelf delegate] celestiaAppCoreWatchedFlagsDidChange:changedFlags];
         });
-        [self initializeSetting];
     }
     return self;
 }

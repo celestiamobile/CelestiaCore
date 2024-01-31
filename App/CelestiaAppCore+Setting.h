@@ -198,22 +198,7 @@ typedef NS_ENUM(NSInteger, CelestiaLayoutDirection) {
 
 @property CelestiaOverlayElements overlayElements;
 
-- (void)initializeSetting;
-
-- (NSNumber *)valueForTag:(NSInteger)tag;
-
-- (NSInteger)tagForKey:(NSInteger)key;
-
-- (NSInteger)integerValueForTag:(NSInteger)tag;
-- (BOOL)boolValueForTag:(NSInteger)tag;
-- (float)floatValueForTag:(NSInteger)tag;
-
-- (void)setIntegerValue:(NSInteger)value forTag:(NSInteger) tag;
-- (void)setFloatValue:(float)value forTag:(NSInteger) tag;
-- (void)setBoolValue:(BOOL)value forTag:(NSInteger) tag;
-
 - (void)loadUserDefaults:(NSUserDefaults *)userDefaults withAppDefaultsAtPath:(nullable NSString *)path;
-- (void)storeUserDefaults:(NSUserDefaults *)userDefaults;
 
 @end
 
