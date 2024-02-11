@@ -440,6 +440,9 @@
 		EA7316A0248E1D9B009AE037 /* truetypefont.h in Headers */ = {isa = PBXBuildFile; fileRef = EA73169E248E1D9A009AE037 /* truetypefont.h */; };
 		EA741A712ADA930600C7F1DC /* CelestiaFont.h in Headers */ = {isa = PBXBuildFile; fileRef = EA741A6F2ADA930600C7F1DC /* CelestiaFont.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA741A722ADA930600C7F1DC /* CelestiaFont.m in Sources */ = {isa = PBXBuildFile; fileRef = EA741A702ADA930600C7F1DC /* CelestiaFont.m */; };
+		EA86F7B72B790E4800419451 /* ZipUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = EA86F7B62B790E4800419451 /* ZipUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA86F7BE2B79119900419451 /* CEZZipUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = EA86F7BC2B79119900419451 /* CEZZipUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA86F7BF2B79119900419451 /* CEZZipUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = EA86F7BD2B79119900419451 /* CEZZipUtils.mm */; };
 		EA8926552567BD0300A868F3 /* CelestiaFavorite.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8926532567BD0300A868F3 /* CelestiaFavorite.m */; };
 		EA8926562567BD0300A868F3 /* CelestiaFavorite.h in Headers */ = {isa = PBXBuildFile; fileRef = EA8926542567BD0300A868F3 /* CelestiaFavorite.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA8D1EB624D6D0BD0071C7B5 /* strnatcmp.h in Headers */ = {isa = PBXBuildFile; fileRef = EA8D1EB424D6D0BD0071C7B5 /* strnatcmp.h */; };
@@ -952,6 +955,11 @@
 		EA73169E248E1D9A009AE037 /* truetypefont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = truetypefont.h; sourceTree = "<group>"; };
 		EA741A6F2ADA930600C7F1DC /* CelestiaFont.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CelestiaFont.h; sourceTree = "<group>"; };
 		EA741A702ADA930600C7F1DC /* CelestiaFont.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CelestiaFont.m; sourceTree = "<group>"; };
+		EA86F7B42B790E4800419451 /* ZipUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZipUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA86F7B62B790E4800419451 /* ZipUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZipUtils.h; sourceTree = "<group>"; };
+		EA86F7BB2B790EAB00419451 /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		EA86F7BC2B79119900419451 /* CEZZipUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CEZZipUtils.h; sourceTree = "<group>"; };
+		EA86F7BD2B79119900419451 /* CEZZipUtils.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CEZZipUtils.mm; sourceTree = "<group>"; };
 		EA8926532567BD0300A868F3 /* CelestiaFavorite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CelestiaFavorite.m; sourceTree = "<group>"; };
 		EA8926542567BD0300A868F3 /* CelestiaFavorite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CelestiaFavorite.h; sourceTree = "<group>"; };
 		EA8D1EB424D6D0BD0071C7B5 /* strnatcmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strnatcmp.h; sourceTree = "<group>"; };
@@ -1031,6 +1039,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		971A65C923019BC5009E4EA1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA86F7B12B790E4800419451 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1262,6 +1277,7 @@
 				971A646723019787009E4EA1 /* Object */,
 				977D83D722FDB324002FF1C2 /* config.h */,
 				977D817122FDB174002FF1C2 /* Core */,
+				EA86F7B52B790E4800419451 /* ZipUtils */,
 				9753848422FDA37000050A53 /* Products */,
 				971A672923019D1B009E4EA1 /* Frameworks */,
 			);
@@ -1271,6 +1287,7 @@
 			isa = PBXGroup;
 			children = (
 				971A65CC23019BC5009E4EA1 /* CelestiaCore.framework */,
+				EA86F7B42B790E4800419451 /* ZipUtils.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1736,6 +1753,17 @@
 			path = celttf;
 			sourceTree = "<group>";
 		};
+		EA86F7B52B790E4800419451 /* ZipUtils */ = {
+			isa = PBXGroup;
+			children = (
+				EA86F7BB2B790EAB00419451 /* Common.xcconfig */,
+				EA86F7B62B790E4800419451 /* ZipUtils.h */,
+				EA86F7BC2B79119900419451 /* CEZZipUtils.h */,
+				EA86F7BD2B79119900419451 /* CEZZipUtils.mm */,
+			);
+			path = ZipUtils;
+			sourceTree = "<group>";
+		};
 		EA91669B2B0C37A700AF48B1 /* celastro */ = {
 			isa = PBXGroup;
 			children = (
@@ -2056,6 +2084,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EA86F7AF2B790E4800419451 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA86F7B72B790E4800419451 /* ZipUtils.h in Headers */,
+				EA86F7BE2B79119900419451 /* CEZZipUtils.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -2076,6 +2113,24 @@
 			productReference = 971A65CC23019BC5009E4EA1 /* CelestiaCore.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		EA86F7B32B790E4800419451 /* ZipUtils */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA86F7BA2B790E4800419451 /* Build configuration list for PBXNativeTarget "ZipUtils" */;
+			buildPhases = (
+				EA86F7AF2B790E4800419451 /* Headers */,
+				EA86F7B02B790E4800419451 /* Sources */,
+				EA86F7B12B790E4800419451 /* Frameworks */,
+				EA86F7B22B790E4800419451 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZipUtils;
+			productName = ZipUtils;
+			productReference = EA86F7B42B790E4800419451 /* ZipUtils.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -2088,6 +2143,9 @@
 				TargetAttributes = {
 					971A65CB23019BC5009E4EA1 = {
 						CreatedOnToolsVersion = 10.3;
+					};
+					EA86F7B32B790E4800419451 = {
+						CreatedOnToolsVersion = 15.2;
 					};
 				};
 			};
@@ -2110,9 +2168,20 @@
 			projectRoot = "";
 			targets = (
 				971A65CB23019BC5009E4EA1 /* CelestiaCore */,
+				EA86F7B32B790E4800419451 /* ZipUtils */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA86F7B22B790E4800419451 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		971A65C823019BC5009E4EA1 /* Sources */ = {
@@ -2340,6 +2409,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EA86F7B02B790E4800419451 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA86F7BF2B79119900419451 /* CEZZipUtils.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
@@ -2498,6 +2575,32 @@
 			};
 			name = Release;
 		};
+		EA86F7B82B790E4800419451 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA86F7BB2B790EAB00419451 /* Common.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				ENABLE_MODULE_VERIFIER = YES;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "c11 c++17";
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+			};
+			name = Debug;
+		};
+		EA86F7B92B790E4800419451 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA86F7BB2B790EAB00419451 /* Common.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				ENABLE_MODULE_VERIFIER = YES;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "c11 c++17";
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2515,6 +2618,15 @@
 			buildConfigurations = (
 				9753848522FDA37000050A53 /* Debug */,
 				9753848622FDA37000050A53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA86F7BA2B790E4800419451 /* Build configuration list for PBXNativeTarget "ZipUtils" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA86F7B82B790E4800419451 /* Debug */,
+				EA86F7B92B790E4800419451 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
