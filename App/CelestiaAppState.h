@@ -21,6 +21,11 @@ NS_SWIFT_NAME(AppState)
 @property (readonly) float timeScale;
 @property (readonly) NSDate *time;
 
+@property (readonly) BOOL showDistanceToSelection;
+@property (readonly) BOOL showDistanceToSelectionCenter;
+@property (readonly) double distanceToSelectionSurface;
+@property (readonly) double distanceToSelectionCenter;
+
 @property (readonly) CelestiaCoordinateSystem coordinateSystem;
 @property (readonly) CelestiaSelection *referenceObject;
 @property (readonly) CelestiaSelection *targetObject;

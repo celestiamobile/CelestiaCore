@@ -13,6 +13,8 @@
 #import "CelestiaSelection+Private.h"
 #import "CelestiaUtil.h"
 
+#include <celengine/body.h>
+
 @implementation CelestiaAppState
 
 - (instancetype)initWithCore:(CelestiaCore *)core {
@@ -20,6 +22,50 @@
     if (self) {
         auto *sim = core->getSimulation();
         auto frame = sim->getFrame();
+        double time = sim->getTime();
+
+        auto sel = sim->getSelection();
+        _selectedObject = [[CelestiaSelection alloc] initWithSelection:sel];
+
+        double selectionRadius = 0;
+        if (sel.empty())
+        {
+            _showDistanceToSelectionCenter = NO;
+            _showDistanceToSelection = NO;
+        }
+        else
+        {
+            switch (sel.getType()) {
+            case SelectionType::Star:
+                _showDistanceToSelectionCenter = NO;
+                _showDistanceToSelection = YES;
+                break;
+            case SelectionType::DeepSky:
+                _showDistanceToSelectionCenter = YES;
+                _showDistanceToSelection = YES;
+                selectionRadius = [CelestiaAstroUtils lightYearsToKilometers:static_cast<double>(sel.deepsky()->getRadius())];
+                break;
+            case SelectionType::Body:
+                _showDistanceToSelectionCenter = NO;
+                _showDistanceToSelection = YES;
+                selectionRadius = static_cast<double>(sel.body()->getRadius());
+                break;
+            case SelectionType::Location:
+                _showDistanceToSelectionCenter = NO;
+                _showDistanceToSelection = YES;
+                break;
+            default:
+                _showDistanceToSelectionCenter = NO;
+                _showDistanceToSelection = NO;
+                break;
+            }
+        }
+
+        if (_showDistanceToSelection)
+        {
+            _distanceToSelectionCenter = sel.getPosition(time).offsetFromKm(sim->getObserver().getPosition()).norm();
+            _distanceToSelectionSurface = _distanceToSelectionCenter - selectionRadius;
+        }
 
         _coordinateSystem = static_cast<CelestiaCoordinateSystem>(frame->getCoordinateSystem());
         if (_coordinateSystem != CelestiaCoordinateSystemUniversal) {
@@ -35,10 +81,10 @@
 
         _speed = sim->getTargetSpeed();
 
-        _time = [NSDate dateWithJulian:sim->getTime()];
+        _time = [NSDate dateWithJulian:time];
 
         _trackedObject = [[CelestiaSelection alloc] initWithSelection:sim->getTrackedObject()];
-        _selectedObject = [[CelestiaSelection alloc] initWithSelection:sim->getSelection()];
+        _selectedObject = [[CelestiaSelection alloc] initWithSelection:sel];
 
         _timeScale = static_cast<float>(sim->getTimeScale());
         _paused = static_cast<BOOL>(sim->getPauseState());

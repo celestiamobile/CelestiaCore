@@ -11,6 +11,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CGGeometry.h>
+#include <simd/types.h>
 
 @class CelestiaSimulation;
 @class CelestiaSelection;
@@ -143,6 +144,7 @@ NS_SWIFT_NAME(AppCore)
 
 - (void)draw;
 - (void)tick;
+- (void)tick:(NSTimeInterval)elapsedTime;
 + (void)finish;
 - (void)resize:(CGSize)size NS_SWIFT_NAME(resize(to:));
 - (void)setSafeAreaInsetsWithLeft:(CGFloat)left top:(CGFloat)top right:(CGFloat)right bottom:(CGFloat)bottom NS_SWIFT_NAME(setSafeAreaInsets(left:top:right:bottom:));
@@ -172,6 +174,11 @@ NS_SWIFT_NAME(AppCore)
 
 // MARK: Simulation
 @property (readonly) CelestiaSimulation *simulation;
+
+- (void)enableSelectionPointer;
+- (void)disableSelectionPointer;
+
+- (void)setCameraTransform:(simd_float4x4)cameraTransform;
 
 @end
 

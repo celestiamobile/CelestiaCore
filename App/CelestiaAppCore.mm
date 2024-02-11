@@ -240,6 +240,10 @@ private:
     core->tick();
 }
 
+- (void)tick:(NSTimeInterval)elapsedTime {
+    core->tick(elapsedTime);
+}
+
 + (void)finish {
     glFinish();
 }
@@ -402,6 +406,23 @@ private:
     delete cursorHandler;
     delete internalContextMenuHandler;
     delete core;
+}
+
+- (void)enableSelectionPointer {
+    core->getRenderer()->enableSelectionPointer();
+}
+
+- (void)disableSelectionPointer {
+    core->getRenderer()->disableSelectionPointer();
+}
+
+- (void)setCameraTransform:(simd_float4x4)cameraTransform {
+    Eigen::Matrix3d m;
+    auto cols = cameraTransform.columns;
+    m << cols[0][0], cols[1][0], cols[2][0],
+         cols[0][1], cols[1][1], cols[2][1],
+         cols[0][2], cols[1][2], cols[2][2];
+    core->getRenderer()->setCameraTransform(m);
 }
 
 @end
