@@ -12,13 +12,23 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+extern NSString * const CEZZipErrorDomain;
+extern NSErrorUserInfoKey const CEZZipErrorContextPathKey;
+
+typedef NS_ERROR_ENUM(CEZZipErrorDomain, CEZZipErrorCode) {
+    CEZZipErrorCodeZip              = 1,
+    CEZZipErrorCodeCreateDirectory  = 2,
+    CEZZipErrorCodeOpenFile         = 3,
+    CEZZipErrorCodeWriteFile        = 4,
+};
+
 NS_SWIFT_NAME(ZipUtils)
 @interface CEZZipUtils : NSObject
 
 - (instancetype)init NS_UNAVAILABLE;
 + (instancetype)new NS_UNAVAILABLE;
 
-+ (BOOL)unzip:(NSString *)sourcePath destinationPath:(NSString *)destinationPath NS_SWIFT_NAME(unzip(_:to:));
++ (BOOL)unzip:(NSString *)sourcePath destinationPath:(NSString *)destinationPath error:(NSError **)error NS_SWIFT_NAME(unzip(_:to:));
 
 @end
 

@@ -17,15 +17,25 @@
 #include <string>
 #include <vector>
 
+NSString *const CEZZipErrorDomain = @"Zip";
+NSErrorUserInfoKey const CEZZipErrorContextPathKey = @"ContextPath";
+
 @implementation CEZZipUtils
 
-+ (BOOL)unzip:(NSString *)sourcePath destinationPath:(NSString *)destinationPath {
++ (BOOL)unzip:(NSString *)sourcePath destinationPath:(NSString *)destinationPath error:(NSError *__autoreleasing  _Nullable * _Nullable)error {
+    if (error != nullptr)
+        *error = nil;
+
     std::string source = [sourcePath UTF8String];
     std::string destinationFolder = [destinationPath UTF8String];
 
     auto archive = zip_open(source.c_str(), 0, nullptr);
     if (!archive)
+    {
+        if (error != nullptr)
+            *error = [NSError errorWithDomain:CEZZipErrorDomain code:CEZZipErrorCodeZip userInfo:nil];
         return NO;
+    }
 
     zip_file_t *currentEntry = nullptr;
     bool hasZipError = false;
@@ -38,6 +48,8 @@
         if (zip_stat_index(archive, i, 0, &st) != 0)
         {
             hasZipError = true;
+            if (error != nullptr)
+                *error = [NSError errorWithDomain:CEZZipErrorDomain code:CEZZipErrorCodeZip userInfo:nil];
             break;
         }
 
@@ -66,6 +78,8 @@
                 if (ec)
                 {
                     hasSystemError = true;
+                    if (error != nullptr)
+                        *error = [NSError errorWithDomain:CEZZipErrorDomain code:CEZZipErrorCodeCreateDirectory userInfo:@{CEZZipErrorContextPathKey: [NSString stringWithUTF8String:currentDirectory.string().c_str()]}];
                     break;
                 }
 
@@ -75,6 +89,8 @@
                     if (!success || ec)
                     {
                         hasSystemError = true;
+                        if (error != nullptr)
+                            *error = [NSError errorWithDomain:CEZZipErrorDomain code:CEZZipErrorCodeCreateDirectory userInfo:@{CEZZipErrorContextPathKey: [NSString stringWithUTF8String:currentDirectory.string().c_str()]}];
                         break;
                     }
                 }
@@ -91,13 +107,18 @@
         if (!currentEntry)
         {
             hasZipError = true;
+            if (error != nullptr)
+                *error = [NSError errorWithDomain:CEZZipErrorDomain code:CEZZipErrorCodeZip userInfo:nil];
             break;
         }
 
-        std::ofstream file(currentDirectory / name.filename());
+        std::filesystem::path filePath = currentDirectory / name.filename();
+        std::ofstream file(filePath);
         if (!file.good())
         {
             hasSystemError = true;
+            if (error != nullptr)
+                *error = [NSError errorWithDomain:CEZZipErrorDomain code:CEZZipErrorCodeOpenFile userInfo:@{CEZZipErrorContextPathKey: [NSString stringWithUTF8String:filePath.string().c_str()]}];
             break;
         }
 
@@ -111,12 +132,16 @@
             if (bytesRead < 0)
             {
                 hasZipError = true;
+                if (error != nullptr)
+                    *error = [NSError errorWithDomain:CEZZipErrorDomain code:CEZZipErrorCodeZip userInfo:nil];
                 break;
             }
 
             if (!file.write(buffer, bytesRead).good())
             {
                 hasSystemError = true;
+                if (error != nullptr)
+                    *error = [NSError errorWithDomain:CEZZipErrorDomain code:CEZZipErrorCodeWriteFile userInfo:@{CEZZipErrorContextPathKey: [NSString stringWithUTF8String:filePath.string().c_str()]}];
                 break;
             }
 
