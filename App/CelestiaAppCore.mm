@@ -315,10 +315,12 @@ private:
     return (BOOL)core->saveScreenShot([filePath UTF8String], (ContentType)type);
 }
 
-+ (void)setLocaleDirectory:(NSString *)localeDirectory {
-    // Gettext integration
++ (void)setUpLocale {
     setlocale(LC_ALL, "");
     setlocale(LC_NUMERIC, "C");
+}
+
++ (void)setLocaleDirectory:(NSString *)localeDirectory {
     bindtextdomain("celestia", [localeDirectory UTF8String]);
     bind_textdomain_codeset("celestia", "UTF-8");
     bindtextdomain("celestia-data", [localeDirectory UTF8String]);

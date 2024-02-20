@@ -170,6 +170,7 @@ NS_SWIFT_NAME(AppCore)
 
 @property (class, readonly) NSString *language;
 
++ (void)setUpLocale;
 + (void)setLocaleDirectory:(NSString *)localeDirectory;
 
 // MARK: Simulation
