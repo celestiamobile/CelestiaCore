@@ -138,7 +138,7 @@ LABELMETHODS(MinorMoon)
 
 // Orbit Settings
 
-#define ORBITMETHODS(flag)  -(BOOL) show##flag##Orbits { return (core->getRenderer()->getOrbitMask()&Body::flag) != 0; } -(void) setShow##flag##Orbits: (BOOL) value  { core->getRenderer()->setOrbitMask((int)[self setValue: value forBit: Body::flag inSet: core->getRenderer()->getOrbitMask()]); }
+#define ORBITMETHODS(flag)  -(BOOL) show##flag##Orbits { return static_cast<BOOL>(celestia::util::is_set(core->getRenderer()->getOrbitMask(), BodyClassification::flag)); } -(void) setShow##flag##Orbits: (BOOL) value  { auto flags = core->getRenderer()->getOrbitMask(); celestia::util::set_or_unset(flags, BodyClassification::flag, static_cast<bool>(value)); core->getRenderer()->setOrbitMask(flags); }
 
 ORBITMETHODS(Planet)
 ORBITMETHODS(Moon)

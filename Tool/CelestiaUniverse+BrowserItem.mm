@@ -61,26 +61,26 @@
             if (!name)
                 continue;
             CelestiaBrowserItem *item = [[CelestiaBrowserItem alloc] initWithName:name catEntry:[[CelestiaBody alloc] initWithBody:body] provider:self];
-            int bodyClass  = body->getClassification();
+            auto bodyClass  = body->getClassification();
             switch (bodyClass)
             {
-                case Body::Invisible:
-                case Body::Diffuse:
-                case Body::Component:
+                case BodyClassification::Invisible:
+                case BodyClassification::Diffuse:
+                case BodyClassification::Component:
                     continue;
-                case Body::Planet:
+                case BodyClassification::Planet:
                     if (!planets)
                         planets = [NSMutableDictionary dictionary];
                     subItem = planets;
                     break;
-                case Body::DwarfPlanet:
+                case BodyClassification::DwarfPlanet:
                     if (!dwarfPlanets)
                         dwarfPlanets = [NSMutableDictionary dictionary];
                     subItem = dwarfPlanets;
                     break;
-                case Body::Moon:
-                case Body::MinorMoon:
-                    if (body->getRadius() < 100.0f || Body::MinorMoon == bodyClass)
+                case BodyClassification::Moon:
+                case BodyClassification::MinorMoon:
+                    if (body->getRadius() < 100.0f || BodyClassification::MinorMoon == bodyClass)
                     {
                         if (!minorMoons)
                             minorMoons = [NSMutableDictionary dictionary];
@@ -91,17 +91,17 @@
                         subItem = resultDictionary;
                     }
                     break;
-                case Body::Asteroid:
+                case BodyClassification::Asteroid:
                     if (!asteroids)
                         asteroids = [NSMutableDictionary dictionary];
                     subItem = asteroids;
                     break;
-                case Body::Comet:
+                case BodyClassification::Comet:
                     if (!comets)
                         comets = [NSMutableDictionary dictionary];
                     subItem = comets;
                     break;
-                case Body::Spacecraft:
+                case BodyClassification::Spacecraft:
                     if (!spacecrafts)
                         spacecrafts = [NSMutableDictionary dictionary];
                     subItem = spacecrafts;
@@ -163,19 +163,19 @@
             if (!name)
                 continue;
             CelestiaBrowserItem *item = [[CelestiaBrowserItem alloc] initWithName:name catEntry:[[CelestiaBody alloc] initWithBody:body] provider:self];
-            int bodyClass  = body->getClassification();
+            auto bodyClass  = body->getClassification();
 
-            if (bodyClass==Body::Asteroid) bodyClass = Body::Moon;
+            if (bodyClass == BodyClassification::Asteroid) bodyClass = BodyClassification::Moon;
 
             switch (bodyClass)
             {
-                case Body::Invisible:
-                case Body::Diffuse:
-                case Body::Component:
+                case BodyClassification::Invisible:
+                case BodyClassification::Diffuse:
+                case BodyClassification::Component:
                     continue;
-                case Body::Moon:
-                case Body::MinorMoon:
-                    if (body->getRadius() < 100.0f || Body::MinorMoon == bodyClass)
+                case BodyClassification::Moon:
+                case BodyClassification::MinorMoon:
+                    if (body->getRadius() < 100.0f || BodyClassification::MinorMoon == bodyClass)
                     {
                         if (!minorMoons)
                             minorMoons = [NSMutableDictionary dictionary];
@@ -186,12 +186,12 @@
                         subItem = resultDictionary;
                     }
                     break;
-                case Body::Comet:
+                case BodyClassification::Comet:
                     if (!comets)
                         comets = [NSMutableDictionary dictionary];
                     subItem = comets;
                     break;
-                case Body::Spacecraft:
+                case BodyClassification::Spacecraft:
                     if (!spacecrafts)
                         spacecrafts = [NSMutableDictionary dictionary];
                     subItem = spacecrafts;

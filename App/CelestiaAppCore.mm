@@ -185,7 +185,7 @@ private:
     BOOL success = core->initRenderer() ? YES : NO;
 
     // start with default values
-    constexpr int DEFAULT_ORBIT_MASK = Body::Planet | Body::Moon | Body::Stellar;
+    constexpr auto DEFAULT_ORBIT_MASK = BodyClassification::Planet | BodyClassification::Moon | BodyClassification::Stellar;
     constexpr int DEFAULT_LABEL_MODE = 2176;
     constexpr float DEFAULT_AMBIENT_LIGHT_LEVEL = 0.1f;
     constexpr float DEFAULT_VISUAL_MAGNITUDE = 8.0f;
