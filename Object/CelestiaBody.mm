@@ -40,7 +40,7 @@
 @implementation CelestiaBody
 
 - (CelestiaBodyType)type {
-    return (CelestiaBodyType)[self body]->getClassification();
+    return static_cast<CelestiaBodyType>([self body]->getClassification());
 }
 
 -(NSString *)name {
