@@ -73,15 +73,15 @@
 }
 
 - (BOOL)hasRings {
-    return [self body]->getRings() ? YES : NO;
+    return GetBodyFeaturesManager()->getRings([self body]) ? YES : NO;
 }
 
 - (BOOL)hasAtmosphere {
-    return [self body]->getAtmosphere() ? YES : NO;
+    return GetBodyFeaturesManager()->getAtmosphere([self body]) ? YES : NO;
 }
 
 - (CelestiaAtmosphere *)atomosphere {
-    Atmosphere *atmosphere = [self body]->getAtmosphere();
+    Atmosphere *atmosphere = GetBodyFeaturesManager()->getAtmosphere([self body]);
     if (atmosphere)
         return [[CelestiaAtmosphere alloc] initWithAtmosphere:atmosphere];
     return nil;
@@ -89,7 +89,7 @@
 
 - (NSArray<NSString *> *)alternateSurfaceNames {
     NSMutableArray *result = [NSMutableArray array];
-    auto altSurfaces = [self body]->getAlternateSurfaceNames();
+    auto altSurfaces = GetBodyFeaturesManager()->getAlternateSurfaceNames([self body]);
     if (altSurfaces.has_value() && !altSurfaces->empty())
     {
         for (const auto &surface : *altSurfaces)

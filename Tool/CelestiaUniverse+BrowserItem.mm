@@ -217,7 +217,7 @@
         }
     }
 
-    auto locations = [aBody body]->getLocations();
+    auto locations = GetBodyFeaturesManager()->getLocations([aBody body]);
     if (locations.has_value() && !locations->empty())
     {
         NSMutableDictionary *locationDictionary = [NSMutableDictionary dictionary];

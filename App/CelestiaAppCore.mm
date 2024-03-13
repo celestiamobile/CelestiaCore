@@ -23,6 +23,7 @@
 #import "CelestiaUtil.h"
 
 #include <celutil/gettext.h>
+#include <celutil/localeutil.h>
 #include <celestia/configfile.h>
 #include <celestia/progressnotifier.h>
 #include <celestia/url.h>
@@ -316,8 +317,7 @@ private:
 }
 
 + (void)setUpLocale {
-    setlocale(LC_ALL, "");
-    setlocale(LC_NUMERIC, "C");
+    celestia::util::InitLocale();
 }
 
 + (void)setLocaleDirectory:(NSString *)localeDirectory {
