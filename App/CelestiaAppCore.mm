@@ -317,7 +317,7 @@ private:
 }
 
 + (void)setUpLocale {
-    celestia::util::InitLocale();
+    CelestiaCore::initLocale();
 }
 
 + (void)setLocaleDirectory:(NSString *)localeDirectory {

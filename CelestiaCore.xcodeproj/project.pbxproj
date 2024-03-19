@@ -448,7 +448,6 @@
 		EA8D1EB624D6D0BD0071C7B5 /* strnatcmp.h in Headers */ = {isa = PBXBuildFile; fileRef = EA8D1EB424D6D0BD0071C7B5 /* strnatcmp.h */; };
 		EA8D1EB724D6D0BD0071C7B5 /* strnatcmp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA8D1EB524D6D0BD0071C7B5 /* strnatcmp.cpp */; };
 		EA90396F2BA071D600C982BC /* localeutil.h in Headers */ = {isa = PBXBuildFile; fileRef = EA90396D2BA071D600C982BC /* localeutil.h */; };
-		EA9039702BA071D600C982BC /* localeutil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA90396E2BA071D600C982BC /* localeutil.cpp */; };
 		EA9166A22B0C37D200AF48B1 /* date.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA91669C2B0C37D200AF48B1 /* date.cpp */; };
 		EA9166A32B0C37D200AF48B1 /* astro.h in Headers */ = {isa = PBXBuildFile; fileRef = EA91669D2B0C37D200AF48B1 /* astro.h */; };
 		EA9166A42B0C37D200AF48B1 /* units.h in Headers */ = {isa = PBXBuildFile; fileRef = EA91669E2B0C37D200AF48B1 /* units.h */; };
@@ -967,7 +966,6 @@
 		EA8D1EB424D6D0BD0071C7B5 /* strnatcmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strnatcmp.h; sourceTree = "<group>"; };
 		EA8D1EB524D6D0BD0071C7B5 /* strnatcmp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = strnatcmp.cpp; sourceTree = "<group>"; };
 		EA90396D2BA071D600C982BC /* localeutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = localeutil.h; sourceTree = "<group>"; };
-		EA90396E2BA071D600C982BC /* localeutil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = localeutil.cpp; sourceTree = "<group>"; };
 		EA91669C2B0C37D200AF48B1 /* date.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = date.cpp; sourceTree = "<group>"; };
 		EA91669D2B0C37D200AF48B1 /* astro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = astro.h; sourceTree = "<group>"; };
 		EA91669E2B0C37D200AF48B1 /* units.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = units.h; sourceTree = "<group>"; };
@@ -1580,7 +1578,6 @@
 				EA398C9C278A6FF900A9AAE5 /* greek.h */,
 				EAF1104C29829EA8003938C3 /* indexlist.h */,
 				EA2EBCAC29DD462E00EE0D84 /* intrusiveptr.h */,
-				EA90396E2BA071D600C982BC /* localeutil.cpp */,
 				EA90396D2BA071D600C982BC /* localeutil.h */,
 				EAE5F38B27758463005A3022 /* logger.cpp */,
 				EAE5F38A27758463005A3022 /* logger.h */,
@@ -2358,7 +2355,6 @@
 				9751DC1123594A8000299997 /* celx_object.cpp in Sources */,
 				971A66E623019C20009E4EA1 /* solarsys.cpp in Sources */,
 				EAE846532B3AE659008A146D /* loadsso.cpp in Sources */,
-				EA9039702BA071D600C982BC /* localeutil.cpp in Sources */,
 				EA73169F248E1D9B009AE037 /* truetypefont.cpp in Sources */,
 				971A66CC23019C20009E4EA1 /* overlay.cpp in Sources */,
 				97C62C2523374F4E00953522 /* CelestiaObserver.mm in Sources */,
