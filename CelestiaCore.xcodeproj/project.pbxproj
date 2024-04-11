@@ -215,7 +215,6 @@
 		971A66E123019C20009E4EA1 /* shadermanager.h in Headers */ = {isa = PBXBuildFile; fileRef = 977D820022FDB239002FF1C2 /* shadermanager.h */; };
 		971A66E223019C20009E4EA1 /* simulation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 977D824422FDB23E002FF1C2 /* simulation.cpp */; };
 		971A66E323019C20009E4EA1 /* simulation.h in Headers */ = {isa = PBXBuildFile; fileRef = 977D81FC22FDB239002FF1C2 /* simulation.h */; };
-		971A66E423019C20009E4EA1 /* skygrid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 977D81C722FDB237002FF1C2 /* skygrid.cpp */; };
 		971A66E523019C20009E4EA1 /* skygrid.h in Headers */ = {isa = PBXBuildFile; fileRef = 977D81D522FDB237002FF1C2 /* skygrid.h */; };
 		971A66E623019C20009E4EA1 /* solarsys.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 977D821022FDB23B002FF1C2 /* solarsys.cpp */; };
 		971A66E723019C20009E4EA1 /* solarsys.h in Headers */ = {isa = PBXBuildFile; fileRef = 977D824E22FDB23F002FF1C2 /* solarsys.h */; };
@@ -385,9 +384,7 @@
 		EA2EBCA429DD45D500EE0D84 /* boundariesrenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA2EBCA229DD45D500EE0D84 /* boundariesrenderer.cpp */; };
 		EA2EBCA529DD45D500EE0D84 /* boundariesrenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = EA2EBCA329DD45D500EE0D84 /* boundariesrenderer.h */; };
 		EA2EBCA729DD45F300EE0D84 /* vecgl.h in Headers */ = {isa = PBXBuildFile; fileRef = EA2EBCA629DD45F300EE0D84 /* vecgl.h */; };
-		EA2EBCA929DD461300EE0D84 /* arrayvector.h in Headers */ = {isa = PBXBuildFile; fileRef = EA2EBCA829DD461300EE0D84 /* arrayvector.h */; };
 		EA2EBCAB29DD461D00EE0D84 /* flag.h in Headers */ = {isa = PBXBuildFile; fileRef = EA2EBCAA29DD461D00EE0D84 /* flag.h */; };
-		EA2EBCAD29DD462E00EE0D84 /* intrusiveptr.h in Headers */ = {isa = PBXBuildFile; fileRef = EA2EBCAC29DD462E00EE0D84 /* intrusiveptr.h */; };
 		EA2EBCB029DD669500EE0D84 /* unicode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA2EBCAE29DD669500EE0D84 /* unicode.cpp */; };
 		EA2EBCB129DD669500EE0D84 /* unicode.h in Headers */ = {isa = PBXBuildFile; fileRef = EA2EBCAF29DD669500EE0D84 /* unicode.h */; };
 		EA30660E2AD2794A006A3EE2 /* ranges.h in Headers */ = {isa = PBXBuildFile; fileRef = EA30660D2AD2794A006A3EE2 /* ranges.h */; };
@@ -490,6 +487,8 @@
 		EAD4FBA52743EBDB005E3369 /* binarywrite.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD4FBA32743EBDB005E3369 /* binarywrite.h */; };
 		EAD4FBA82743ECC8005E3369 /* tokenizer.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD4FBA62743ECC8005E3369 /* tokenizer.h */; };
 		EAD4FBA92743ECC8005E3369 /* tokenizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAD4FBA72743ECC8005E3369 /* tokenizer.cpp */; };
+		EAD7D8EB2BC7A90700CB5AA7 /* skygridrenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD7D8E92BC7A90700CB5AA7 /* skygridrenderer.h */; };
+		EAD7D8EC2BC7A90700CB5AA7 /* skygridrenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAD7D8EA2BC7A90700CB5AA7 /* skygridrenderer.cpp */; };
 		EADDA21928ACF95F004460A6 /* glcompat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EADDA21728ACF95F004460A6 /* glcompat.cpp */; };
 		EADDA21A28ACF95F004460A6 /* glcompat.h in Headers */ = {isa = PBXBuildFile; fileRef = EADDA21828ACF95F004460A6 /* glcompat.h */; };
 		EAE5F38C27758463005A3022 /* logger.h in Headers */ = {isa = PBXBuildFile; fileRef = EAE5F38A27758463005A3022 /* logger.h */; };
@@ -652,7 +651,6 @@
 		977D81BC22FDB1E2002FF1C2 /* 3dsread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 3dsread.cpp; sourceTree = "<group>"; };
 		977D81C522FDB236002FF1C2 /* marker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = marker.h; sourceTree = "<group>"; };
 		977D81C622FDB236002FF1C2 /* deepskyobj.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = deepskyobj.cpp; sourceTree = "<group>"; };
-		977D81C722FDB237002FF1C2 /* skygrid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = skygrid.cpp; sourceTree = "<group>"; };
 		977D81C922FDB237002FF1C2 /* opencluster.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = opencluster.cpp; sourceTree = "<group>"; };
 		977D81CA22FDB237002FF1C2 /* axisarrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = axisarrow.h; sourceTree = "<group>"; };
 		977D81CB22FDB237002FF1C2 /* nebula.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nebula.h; sourceTree = "<group>"; };
@@ -900,9 +898,7 @@
 		EA2EBCA229DD45D500EE0D84 /* boundariesrenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = boundariesrenderer.cpp; sourceTree = "<group>"; };
 		EA2EBCA329DD45D500EE0D84 /* boundariesrenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = boundariesrenderer.h; sourceTree = "<group>"; };
 		EA2EBCA629DD45F300EE0D84 /* vecgl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vecgl.h; sourceTree = "<group>"; };
-		EA2EBCA829DD461300EE0D84 /* arrayvector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = arrayvector.h; sourceTree = "<group>"; };
 		EA2EBCAA29DD461D00EE0D84 /* flag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flag.h; sourceTree = "<group>"; };
-		EA2EBCAC29DD462E00EE0D84 /* intrusiveptr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = intrusiveptr.h; sourceTree = "<group>"; };
 		EA2EBCAE29DD669500EE0D84 /* unicode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = unicode.cpp; sourceTree = "<group>"; };
 		EA2EBCAF29DD669500EE0D84 /* unicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unicode.h; sourceTree = "<group>"; };
 		EA30660D2AD2794A006A3EE2 /* ranges.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ranges.h; sourceTree = "<group>"; };
@@ -1011,6 +1007,8 @@
 		EAD4FBA32743EBDB005E3369 /* binarywrite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = binarywrite.h; sourceTree = "<group>"; };
 		EAD4FBA62743ECC8005E3369 /* tokenizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tokenizer.h; sourceTree = "<group>"; };
 		EAD4FBA72743ECC8005E3369 /* tokenizer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tokenizer.cpp; sourceTree = "<group>"; };
+		EAD7D8E92BC7A90700CB5AA7 /* skygridrenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = skygridrenderer.h; sourceTree = "<group>"; };
+		EAD7D8EA2BC7A90700CB5AA7 /* skygridrenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = skygridrenderer.cpp; sourceTree = "<group>"; };
 		EADDA21728ACF95F004460A6 /* glcompat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glcompat.cpp; sourceTree = "<group>"; };
 		EADDA21828ACF95F004460A6 /* glcompat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glcompat.h; sourceTree = "<group>"; };
 		EAE5F38A27758463005A3022 /* logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = logger.h; sourceTree = "<group>"; };
@@ -1458,7 +1456,6 @@
 				977D820022FDB239002FF1C2 /* shadermanager.h */,
 				977D824422FDB23E002FF1C2 /* simulation.cpp */,
 				977D81FC22FDB239002FF1C2 /* simulation.h */,
-				977D81C722FDB237002FF1C2 /* skygrid.cpp */,
 				977D81D522FDB237002FF1C2 /* skygrid.h */,
 				977D821022FDB23B002FF1C2 /* solarsys.cpp */,
 				977D824E22FDB23F002FF1C2 /* solarsys.h */,
@@ -1561,7 +1558,6 @@
 				977D833722FDB2AA002FF1C2 /* align.h */,
 				EA9E5A9D25FE483900348AEE /* appleutils.h */,
 				EA9E5A9C25FE483800348AEE /* appleutils.mm */,
-				EA2EBCA829DD461300EE0D84 /* arrayvector.h */,
 				EAD4FBA22743EBDB005E3369 /* binaryread.h */,
 				EAD4FBA32743EBDB005E3369 /* binarywrite.h */,
 				977D833F22FDB2AA002FF1C2 /* bytes.h */,
@@ -1577,7 +1573,6 @@
 				EA398C9B278A6FF900A9AAE5 /* greek.cpp */,
 				EA398C9C278A6FF900A9AAE5 /* greek.h */,
 				EAF1104C29829EA8003938C3 /* indexlist.h */,
-				EA2EBCAC29DD462E00EE0D84 /* intrusiveptr.h */,
 				EA90396D2BA071D600C982BC /* localeutil.h */,
 				EAE5F38B27758463005A3022 /* logger.cpp */,
 				EAE5F38A27758463005A3022 /* logger.h */,
@@ -1687,6 +1682,8 @@
 		EA0E06C328C0C160004F6DF7 /* celrender */ = {
 			isa = PBXGroup;
 			children = (
+				EAD7D8EA2BC7A90700CB5AA7 /* skygridrenderer.cpp */,
+				EAD7D8E92BC7A90700CB5AA7 /* skygridrenderer.h */,
 				EA2EBC9F29DD45CA00EE0D84 /* asterismrenderer.cpp */,
 				EA2EBC9E29DD45CA00EE0D84 /* asterismrenderer.h */,
 				EA2166F82973C08C001477DE /* atmosphererenderer.cpp */,
@@ -1804,6 +1801,7 @@
 				EAE846512B3AE659008A146D /* loadstars.h in Headers */,
 				EA544E522566B369003F351D /* CelestiaDestination.h in Headers */,
 				EA2166FB2973C08D001477DE /* cometrenderer.h in Headers */,
+				EAD7D8EB2BC7A90700CB5AA7 /* skygridrenderer.h in Headers */,
 				EA26DB49255CF94800D26D7B /* CelestiaFrameBuffer.h in Headers */,
 				973BBA6924054FEC00E3B061 /* CelestiaAppCore+Render.h in Headers */,
 				973BBA4B240523C800E3B061 /* CelestiaAppCore+Locale.h in Headers */,
@@ -1915,7 +1913,6 @@
 				971A667123019C15009E4EA1 /* scriptorbit.h in Headers */,
 				9752D7A623ED182D00FFE781 /* value.h in Headers */,
 				EAF1104829829E4B003938C3 /* eclipticlinerenderer.h in Headers */,
-				EA2EBCAD29DD462E00EE0D84 /* intrusiveptr.h in Headers */,
 				971A671B23019C2B009E4EA1 /* frustum.h in Headers */,
 				9751DC2423594A8000299997 /* celx_category.h in Headers */,
 				971A65E223019BF0009E4EA1 /* CelestiaDSOCatalog+Private.h in Headers */,
@@ -1935,7 +1932,6 @@
 				EA30660E2AD2794A006A3EE2 /* ranges.h in Headers */,
 				971A671523019C26009E4EA1 /* 3dsread.h in Headers */,
 				971A672423019C2B009E4EA1 /* solve.h in Headers */,
-				EA2EBCA929DD461300EE0D84 /* arrayvector.h in Headers */,
 				EA59EA3826213CB4001E5B9D /* dds_decompress.h in Headers */,
 				EA4BB3352B46481000B36E44 /* binder.h in Headers */,
 				971A66DF23019C20009E4EA1 /* selection.h in Headers */,
@@ -2338,7 +2334,6 @@
 				EA171F292AA81C9A00583564 /* image.cpp in Sources */,
 				971A665423019C0F009E4EA1 /* timer.cpp in Sources */,
 				EA9166B12B0C37FE00AF48B1 /* viewmanager.cpp in Sources */,
-				971A66E423019C20009E4EA1 /* skygrid.cpp in Sources */,
 				971A665C23019C15009E4EA1 /* customorbit.cpp in Sources */,
 				EA38CEB2255FD379009EE79B /* CelestiaTexture.mm in Sources */,
 				971A666823019C15009E4EA1 /* rotation.cpp in Sources */,
@@ -2381,6 +2376,7 @@
 				EAB08FEC27807E2500BB82F0 /* charconv_impl.cpp in Sources */,
 				971A670323019C21009E4EA1 /* trajmanager.cpp in Sources */,
 				971A670F23019C21009E4EA1 /* visibleregion.cpp in Sources */,
+				EAD7D8EC2BC7A90700CB5AA7 /* skygridrenderer.cpp in Sources */,
 				971A66E823019C21009E4EA1 /* spheremesh.cpp in Sources */,
 				EA26DB4A255CF94800D26D7B /* CelestiaFrameBuffer.mm in Sources */,
 				EA9166A62B0C37D200AF48B1 /* units.cpp in Sources */,
