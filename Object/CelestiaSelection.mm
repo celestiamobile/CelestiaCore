@@ -140,10 +140,6 @@
     return nil;
 }
 
-- (NSString *)name {
-    return [NSString stringWithUTF8String:s.getName(true).c_str()];
-}
-
 - (NSString *)webInfoURL {
     CelestiaAstroObject *object = [self object];
     if ([object isKindOfClass:[CelestiaStar class]]) {
