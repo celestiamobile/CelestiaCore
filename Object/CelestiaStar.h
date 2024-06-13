@@ -18,8 +18,6 @@ NS_ASSUME_NONNULL_BEGIN
 NS_SWIFT_NAME(Star)
 @interface CelestiaStar : CelestiaAstroObject
 
-@property float luminosity;
-
 @property (readonly) float radius;
 @property (readonly) float temperature;
 

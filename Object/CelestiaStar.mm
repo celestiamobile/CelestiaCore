@@ -62,10 +62,6 @@
     return [self star]->getTemperature();
 }
 
-- (void)setLuminosity:(float)luminosity {
-    [self star]->setLuminosity(luminosity);
-}
-
 - (NSString *)webInfoURL {
     NSString *url = [NSString stringWithUTF8String:[self star]->getInfoURL().c_str()];
     if ([url length] == 0)

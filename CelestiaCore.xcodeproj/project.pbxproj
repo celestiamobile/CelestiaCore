@@ -428,6 +428,13 @@
 		EA59EA3626213CB4001E5B9D /* jpeg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA59EA2F26213CB4001E5B9D /* jpeg.cpp */; };
 		EA59EA3726213CB4001E5B9D /* bmp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA59EA3026213CB4001E5B9D /* bmp.cpp */; };
 		EA59EA3826213CB4001E5B9D /* dds_decompress.h in Headers */ = {isa = PBXBuildFile; fileRef = EA59EA3126213CB4001E5B9D /* dds_decompress.h */; };
+		EA63E9792C1AA8B600ED8EE9 /* shared.h in Headers */ = {isa = PBXBuildFile; fileRef = EA63E9722C1AA8B500ED8EE9 /* shared.h */; };
+		EA63E97A2C1AA8B600ED8EE9 /* objectrenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = EA63E9732C1AA8B500ED8EE9 /* objectrenderer.h */; };
+		EA63E97B2C1AA8B600ED8EE9 /* renderlistentry.h in Headers */ = {isa = PBXBuildFile; fileRef = EA63E9742C1AA8B500ED8EE9 /* renderlistentry.h */; };
+		EA63E97C2C1AA8B600ED8EE9 /* stardbbuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = EA63E9752C1AA8B500ED8EE9 /* stardbbuilder.h */; };
+		EA63E97D2C1AA8B600ED8EE9 /* orbitsampler.h in Headers */ = {isa = PBXBuildFile; fileRef = EA63E9762C1AA8B500ED8EE9 /* orbitsampler.h */; };
+		EA63E97E2C1AA8B600ED8EE9 /* stardbbuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA63E9772C1AA8B500ED8EE9 /* stardbbuilder.cpp */; };
+		EA63E97F2C1AA8B600ED8EE9 /* shadowmap.h in Headers */ = {isa = PBXBuildFile; fileRef = EA63E9782C1AA8B600ED8EE9 /* shadowmap.h */; };
 		EA6671DD29B4AB1A00A7846E /* r128.h in Headers */ = {isa = PBXBuildFile; fileRef = EA6671DA29B4AB1A00A7846E /* r128.h */; };
 		EA6671DE29B4AB1A00A7846E /* r128util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA6671DB29B4AB1A00A7846E /* r128util.cpp */; };
 		EA6671DF29B4AB1A00A7846E /* r128util.h in Headers */ = {isa = PBXBuildFile; fileRef = EA6671DC29B4AB1A00A7846E /* r128util.h */; };
@@ -943,6 +950,13 @@
 		EA59EA2F26213CB4001E5B9D /* jpeg.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = jpeg.cpp; sourceTree = "<group>"; };
 		EA59EA3026213CB4001E5B9D /* bmp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bmp.cpp; sourceTree = "<group>"; };
 		EA59EA3126213CB4001E5B9D /* dds_decompress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dds_decompress.h; sourceTree = "<group>"; };
+		EA63E9722C1AA8B500ED8EE9 /* shared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shared.h; sourceTree = "<group>"; };
+		EA63E9732C1AA8B500ED8EE9 /* objectrenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = objectrenderer.h; sourceTree = "<group>"; };
+		EA63E9742C1AA8B500ED8EE9 /* renderlistentry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = renderlistentry.h; sourceTree = "<group>"; };
+		EA63E9752C1AA8B500ED8EE9 /* stardbbuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stardbbuilder.h; sourceTree = "<group>"; };
+		EA63E9762C1AA8B500ED8EE9 /* orbitsampler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orbitsampler.h; sourceTree = "<group>"; };
+		EA63E9772C1AA8B500ED8EE9 /* stardbbuilder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stardbbuilder.cpp; sourceTree = "<group>"; };
+		EA63E9782C1AA8B600ED8EE9 /* shadowmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shadowmap.h; sourceTree = "<group>"; };
 		EA6671DA29B4AB1A00A7846E /* r128.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = r128.h; sourceTree = "<group>"; };
 		EA6671DB29B4AB1A00A7846E /* r128util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = r128util.cpp; sourceTree = "<group>"; };
 		EA6671DC29B4AB1A00A7846E /* r128util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = r128util.h; sourceTree = "<group>"; };
@@ -1347,6 +1361,13 @@
 		977D81C222FDB1F5002FF1C2 /* celengine */ = {
 			isa = PBXGroup;
 			children = (
+				EA63E9732C1AA8B500ED8EE9 /* objectrenderer.h */,
+				EA63E9762C1AA8B500ED8EE9 /* orbitsampler.h */,
+				EA63E9742C1AA8B500ED8EE9 /* renderlistentry.h */,
+				EA63E9782C1AA8B600ED8EE9 /* shadowmap.h */,
+				EA63E9722C1AA8B500ED8EE9 /* shared.h */,
+				EA63E9772C1AA8B500ED8EE9 /* stardbbuilder.cpp */,
+				EA63E9752C1AA8B500ED8EE9 /* stardbbuilder.h */,
 				EA0D014729C0A15700B86EED /* textlayout.cpp */,
 				EA0D014629C0A15700B86EED /* textlayout.h */,
 				977D823A22FDB23D002FF1C2 /* asterism.cpp */,
@@ -1849,6 +1870,7 @@
 				971A65FA23019BF0009E4EA1 /* CelestiaPlanetarySystem.h in Headers */,
 				971A66C223019C20009E4EA1 /* multitexture.h in Headers */,
 				97AD599A235B016C0056CA80 /* scriptmaps.h in Headers */,
+				EA63E97B2C1AA8B600ED8EE9 /* renderlistentry.h in Headers */,
 				974A6B2023532EC4007BCABD /* rectangle.h in Headers */,
 				971A65ED23019BF0009E4EA1 /* CelestiaVector+Private.h in Headers */,
 				971A669A23019C20009E4EA1 /* deepskyobj.h in Headers */,
@@ -1893,6 +1915,7 @@
 				974D27452303C3BE00FDFBC0 /* CelestiaOrbit+Private.h in Headers */,
 				971A66EB23019C21009E4EA1 /* star.h in Headers */,
 				971A66F323019C21009E4EA1 /* starname.h in Headers */,
+				EA63E97D2C1AA8B600ED8EE9 /* orbitsampler.h in Headers */,
 				EAD4FBA52743EBDB005E3369 /* binarywrite.h in Headers */,
 				971A664723019C0F009E4EA1 /* color.h in Headers */,
 				971A667923019C15009E4EA1 /* spicerotation.h in Headers */,
@@ -2043,6 +2066,7 @@
 				971A671923019C2B009E4EA1 /* ellipsoid.h in Headers */,
 				971A66B123019C20009E4EA1 /* globular.h in Headers */,
 				971A669723019C20009E4EA1 /* curveplot.h in Headers */,
+				EA63E97F2C1AA8B600ED8EE9 /* shadowmap.h in Headers */,
 				EAE8466B2B443F60008A146D /* gettext.h in Headers */,
 				EA9166A32B0C37D200AF48B1 /* astro.h in Headers */,
 				971A667723019C15009E4EA1 /* spiceorbit.h in Headers */,
@@ -2069,11 +2093,14 @@
 				974D274D2303C86B00FDFBC0 /* CelestiaRotationModel+Private.h in Headers */,
 				974A6B2423532EDB007BCABD /* view.h in Headers */,
 				971A666B23019C15009E4EA1 /* samporbit.h in Headers */,
+				EA63E97A2C1AA8B600ED8EE9 /* objectrenderer.h in Headers */,
 				9751DC1523594A8000299997 /* celx_frame.h in Headers */,
 				971A661523019C03009E4EA1 /* celestiacore.h in Headers */,
+				EA63E9792C1AA8B600ED8EE9 /* shared.h in Headers */,
 				9751DC2D23594A8600299997 /* command.h in Headers */,
 				971A65D523019BF0009E4EA1 /* CelestiaUniverse+Private.h in Headers */,
 				EAE8466E2B443F60008A146D /* nocreate.h in Headers */,
+				EA63E97C2C1AA8B600ED8EE9 /* stardbbuilder.h in Headers */,
 				EA34E2E4275CA76300507F22 /* tzutil.h in Headers */,
 				971A669E23019C20009E4EA1 /* dsodb.h in Headers */,
 				971A65D923019BF0009E4EA1 /* CelestiaSimulation+Private.h in Headers */,
@@ -2138,7 +2165,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1540;
 				ORGANIZATIONNAME = "Celestia Development Team";
 				TargetAttributes = {
 					971A65CB23019BC5009E4EA1 = {
@@ -2206,6 +2233,7 @@
 				971A65F323019BF0009E4EA1 /* CelestiaUtil.mm in Sources */,
 				971A65DA23019BF0009E4EA1 /* CelestiaSimulation.mm in Sources */,
 				971A65E323019BF0009E4EA1 /* CelestiaDSOCatalog.mm in Sources */,
+				EA63E97E2C1AA8B600ED8EE9 /* stardbbuilder.cpp in Sources */,
 				971A66D923019C20009E4EA1 /* renderglsl.cpp in Sources */,
 				971A666623019C15009E4EA1 /* precession.cpp in Sources */,
 				EAE5F38D27758463005A3022 /* logger.cpp in Sources */,
