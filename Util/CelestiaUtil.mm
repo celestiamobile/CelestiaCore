@@ -84,55 +84,14 @@
 @implementation NSDate (Astro)
 
 - (double)julianDay {
-    NSDate *roundedDate = nil;
-
-    NSCalendar *currentCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
-    // UTCtoTDB() expects GMT
-    [currentCalendar setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
-    NSDateComponents *comps = [currentCalendar components:
-                               NSCalendarUnitEra  |
-                               NSCalendarUnitYear | NSCalendarUnitMonth  | NSCalendarUnitDay |
-                               NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond
-                                                 fromDate: self];
-    int era  = (int)[comps era];
-    int year = (int)[comps year];
-    if (era < 1) year = 1 - year;
-    celestia::astro::Date astroDate(year, (int)[comps month], (int)[comps day]);
-    astroDate.hour    = (int)[comps hour];
-    astroDate.minute  = (int)[comps minute];
-    astroDate.seconds = (int)[comps second];
-    // -[NSDateComponents second] is rounded to an integer,
-    // so have to calculate and add decimal part
-    roundedDate = [currentCalendar dateFromComponents: comps];
-
-    NSTimeInterval extraSeconds = [self timeIntervalSinceDate: roundedDate];
-    astroDate.seconds += extraSeconds;
-
-    double jd = celestia::astro::UTCtoTDB(astroDate);
-    return jd;
+    static auto epoch = celestia::astro::Date(1970, 1, 1);
+    return celestia::astro::UTCtoTDB(epoch + [self timeIntervalSince1970] / 86400.0);
 }
 
 + (instancetype)dateWithJulian:(double)jd {
-    celestia::astro::Date astroDate = celestia::astro::TDBtoUTC(jd);
-    int year = astroDate.year;
-    NSCalendar *currentCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
-    [currentCalendar setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
-
-    NSDateComponents *comps = [[NSDateComponents alloc] init];
-    int era = 1;
-    if (year < 1)
-    {
-        era  = 0;
-        year = 1 - year;
-    }
-    [comps setEra:    era];
-    [comps setYear:   year];
-    [comps setMonth:  astroDate.month];
-    [comps setDay:    astroDate.day];
-    [comps setHour:   astroDate.hour];
-    [comps setMinute: astroDate.minute];
-    [comps setSecond: (int)astroDate.seconds];
-    return [currentCalendar dateFromComponents: comps];
+    static auto epoch = celestia::astro::Date(1970, 1, 1);
+    auto date = (celestia::astro::TDBtoUTC(jd) - epoch) * 86400.0;
+    return [[NSDate alloc] initWithTimeIntervalSince1970:date];
 }
 
 @end
