@@ -18,6 +18,7 @@
 @class CelestiaDestination;
 @class CelestiaAppState;
 
+NS_SWIFT_SENDABLE
 typedef NS_OPTIONS(NSUInteger, CelestiaMouseButton) {
     CelestiaMouseButtonLeft = 1 << 0,
     CelestiaMouseButtonMiddle = 1 << 1,
