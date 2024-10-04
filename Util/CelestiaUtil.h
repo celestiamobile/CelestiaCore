@@ -76,6 +76,7 @@ NS_SWIFT_NAME(AstroUtils)
 + (CelestiaVector *)eclipticToEquatorial:(CelestiaVector *)ecliptic;
 + (CelestiaVector *)equatorialToGalactic:(CelestiaVector *)equatorial;
 + (CelestiaVector *)rectToSpherical:(CelestiaVector *)rect;
++ (double)degFromRad:(double)rad;
 
 @end
 

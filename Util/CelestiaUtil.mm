@@ -256,4 +256,8 @@ NSDictionary* coordinateDict;
     return [CelestiaVector vectorWithVector3d:Eigen::Vector3d(theta, phi, r)];
 }
 
++ (double)degFromRad:(double)rad {
+    return celestia::math::radToDeg(rad);
+}
+
 @end
