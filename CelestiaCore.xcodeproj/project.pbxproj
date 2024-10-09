@@ -482,6 +482,11 @@
 		EAB08FEA27807E2500BB82F0 /* numbers.h in Headers */ = {isa = PBXBuildFile; fileRef = EAB08FE627807E2500BB82F0 /* numbers.h */; };
 		EAB08FEB27807E2500BB82F0 /* numbers_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = EAB08FE727807E2500BB82F0 /* numbers_impl.h */; };
 		EAB08FEC27807E2500BB82F0 /* charconv_impl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAB08FE827807E2500BB82F0 /* charconv_impl.cpp */; };
+		EAB18D372CB5CAA900696A11 /* completion.h in Headers */ = {isa = PBXBuildFile; fileRef = EAB18D362CB5CAA900696A11 /* completion.h */; };
+		EAB18D392CB5D81400696A11 /* completion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAB18D382CB5D81400696A11 /* completion.cpp */; };
+		EAB18D762CB73A1900696A11 /* CelestiaCompletion.h in Headers */ = {isa = PBXBuildFile; fileRef = EAB18D742CB73A1900696A11 /* CelestiaCompletion.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EAB18D772CB73A1900696A11 /* CelestiaCompletion.mm in Sources */ = {isa = PBXBuildFile; fileRef = EAB18D752CB73A1900696A11 /* CelestiaCompletion.mm */; };
+		EAB18D7C2CB73A5C00696A11 /* CelestiaCompletion+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = EAB18D7A2CB73A5C00696A11 /* CelestiaCompletion+Private.h */; };
 		EAB18D992AF14AC400C2B010 /* sampfile.h in Headers */ = {isa = PBXBuildFile; fileRef = EAB18D972AF14AC400C2B010 /* sampfile.h */; };
 		EAB18D9A2AF14AC400C2B010 /* sampfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAB18D982AF14AC400C2B010 /* sampfile.cpp */; };
 		EABCB7142A601C4D001FEE7E /* CelestiaAppState.h in Headers */ = {isa = PBXBuildFile; fileRef = EABCB7122A601C4D001FEE7E /* CelestiaAppState.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -1012,6 +1017,11 @@
 		EAB08FE627807E2500BB82F0 /* numbers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = numbers.h; sourceTree = "<group>"; };
 		EAB08FE727807E2500BB82F0 /* numbers_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = numbers_impl.h; sourceTree = "<group>"; };
 		EAB08FE827807E2500BB82F0 /* charconv_impl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = charconv_impl.cpp; sourceTree = "<group>"; };
+		EAB18D362CB5CAA900696A11 /* completion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = completion.h; sourceTree = "<group>"; };
+		EAB18D382CB5D81400696A11 /* completion.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = completion.cpp; sourceTree = "<group>"; };
+		EAB18D742CB73A1900696A11 /* CelestiaCompletion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CelestiaCompletion.h; sourceTree = "<group>"; };
+		EAB18D752CB73A1900696A11 /* CelestiaCompletion.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CelestiaCompletion.mm; sourceTree = "<group>"; };
+		EAB18D7A2CB73A5C00696A11 /* CelestiaCompletion+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CelestiaCompletion+Private.h"; sourceTree = "<group>"; };
 		EAB18D972AF14AC400C2B010 /* sampfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sampfile.h; sourceTree = "<group>"; };
 		EAB18D982AF14AC400C2B010 /* sampfile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sampfile.cpp; sourceTree = "<group>"; };
 		EABCB7122A601C4D001FEE7E /* CelestiaAppState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CelestiaAppState.h; sourceTree = "<group>"; };
@@ -1100,6 +1110,9 @@
 				EA544E572566B3E4003F351D /* CelestiaDestination+Private.h */,
 				EA741A6F2ADA930600C7F1DC /* CelestiaFont.h */,
 				EA741A702ADA930600C7F1DC /* CelestiaFont.m */,
+				EAB18D742CB73A1900696A11 /* CelestiaCompletion.h */,
+				EAB18D752CB73A1900696A11 /* CelestiaCompletion.mm */,
+				EAB18D7A2CB73A5C00696A11 /* CelestiaCompletion+Private.h */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -1367,6 +1380,8 @@
 		977D81C222FDB1F5002FF1C2 /* celengine */ = {
 			isa = PBXGroup;
 			children = (
+				EAB18D362CB5CAA900696A11 /* completion.h */,
+				EAB18D382CB5D81400696A11 /* completion.cpp */,
 				EA035C652C4F4A2500536FD5 /* dsodbbuilder.cpp */,
 				EA035C662C4F4A2500536FD5 /* dsodbbuilder.h */,
 				EA035C672C4F4A2500536FD5 /* octreebuilder.h */,
@@ -2038,6 +2053,7 @@
 				EAE8466D2B443F60008A146D /* infourl.h in Headers */,
 				EA9166B92B0C37FE00AF48B1 /* viewmanager.h in Headers */,
 				EA9166B82B0C37FE00AF48B1 /* textinput.h in Headers */,
+				EAB18D7C2CB73A5C00696A11 /* CelestiaCompletion+Private.h in Headers */,
 				9751DC2923594A8600299997 /* execution.h in Headers */,
 				EA035C692C4F4A2500536FD5 /* dsodbbuilder.h in Headers */,
 				971A667B23019C15009E4EA1 /* vsop87.h in Headers */,
@@ -2070,6 +2086,7 @@
 				971A66DD23019C20009E4EA1 /* rotationmanager.h in Headers */,
 				EA2D5F2D29EE838F005990BA /* vertexobject.h in Headers */,
 				971A66C023019C20009E4EA1 /* modelgeometry.h in Headers */,
+				EAB18D762CB73A1900696A11 /* CelestiaCompletion.h in Headers */,
 				971A668123019C20009E4EA1 /* atmosphere.h in Headers */,
 				971A66F523019C21009E4EA1 /* staroctree.h in Headers */,
 				971A66F123019C21009E4EA1 /* stardb.h in Headers */,
@@ -2108,6 +2125,7 @@
 				971A661523019C03009E4EA1 /* celestiacore.h in Headers */,
 				EA035C6A2C4F4A2500536FD5 /* octreebuilder.h in Headers */,
 				EA63E9792C1AA8B600ED8EE9 /* shared.h in Headers */,
+				EAB18D372CB5CAA900696A11 /* completion.h in Headers */,
 				9751DC2D23594A8600299997 /* command.h in Headers */,
 				971A65D523019BF0009E4EA1 /* CelestiaUniverse+Private.h in Headers */,
 				EAE8466E2B443F60008A146D /* nocreate.h in Headers */,
@@ -2375,7 +2393,9 @@
 				EA9166B12B0C37FE00AF48B1 /* viewmanager.cpp in Sources */,
 				971A665C23019C15009E4EA1 /* customorbit.cpp in Sources */,
 				EA38CEB2255FD379009EE79B /* CelestiaTexture.mm in Sources */,
+				EAB18D392CB5D81400696A11 /* completion.cpp in Sources */,
 				971A666823019C15009E4EA1 /* rotation.cpp in Sources */,
+				EAB18D772CB73A1900696A11 /* CelestiaCompletion.mm in Sources */,
 				971A666E23019C15009E4EA1 /* scriptobject.cpp in Sources */,
 				971A65E523019BF0009E4EA1 /* CelestiaStarCatalog.mm in Sources */,
 				EA59EA3726213CB4001E5B9D /* bmp.cpp in Sources */,

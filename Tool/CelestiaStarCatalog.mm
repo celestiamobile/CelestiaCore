@@ -49,14 +49,4 @@
     return [NSString stringWithUTF8String:d->getStarName(*s, true).c_str()];
 }
 
-- (NSArray<NSString *> *)completionForName:(NSString *)name NS_SWIFT_NAME(completion(for:)) {
-    std::vector<std::string> names;
-    d->getCompletion(names, [name UTF8String]);
-    NSMutableArray *array = [NSMutableArray arrayWithCapacity:names.size()];
-    for (int i = 0; i < names.size(); i++) {
-        [array addObject:[NSString stringWithUTF8String:names[i].c_str()]];
-    }
-    return array;
-}
-
 @end

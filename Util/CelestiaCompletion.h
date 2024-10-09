@@ -1,7 +1,7 @@
 //
-// CelestiaStarCatalog.h
+// CelestiaCompletion.h
 //
-// Copyright © 2020 Celestia Development Team. All rights reserved.
+// Copyright © 2024 Celestia Development Team. All rights reserved.
 //
 // This program is free software; you can redistribute it and/or
 // modify it under the terms of the GNU General Public License
@@ -11,18 +11,16 @@
 
 #import <Foundation/Foundation.h>
 
-@class CelestiaStar;
+@class CelestiaSelection;
 
 NS_ASSUME_NONNULL_BEGIN
 
-NS_SWIFT_NAME(StarCatalog)
-@interface CelestiaStarCatalog : NSObject
+NS_SWIFT_SENDABLE
+NS_SWIFT_NAME(Completion)
+@interface CelestiaCompletion : NSObject
 
-@property (readonly) NSInteger count;
-
-- (CelestiaStar *)objectAtIndex:(NSInteger)index;
-
-- (NSString *)starName:(CelestiaStar *)star;
+@property (readonly, nonatomic) NSString *name;
+@property (readonly, nonatomic) CelestiaSelection *selection;
 
 @end
 

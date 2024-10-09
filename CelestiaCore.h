@@ -39,6 +39,7 @@ FOUNDATION_EXPORT const unsigned char CelestiaCoreVersionString[];
 #import <CelestiaCore/CelestiaTexture.h>
 
 #import <CelestiaCore/CelestiaSelection.h>
+#import <CelestiaCore/CelestiaCompletion.h>
 #import <CelestiaCore/CelestiaPlanetarySystem.h>
 #import <CelestiaCore/CelestiaBody.h>
 #import <CelestiaCore/CelestiaLocation.h>

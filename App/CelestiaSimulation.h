@@ -13,6 +13,7 @@
 #import <CelestiaCore/CelestiaObserver.h>
 #include <simd/types.h>
 
+@class CelestiaCompletion;
 @class CelestiaSelection;
 @class CelestiaUniverse;
 @class CelestiaUniversalCoord;
@@ -66,7 +67,7 @@ NS_SWIFT_NAME(Simulation)
 
 - (void)goToDestination:(CelestiaDestination *)destination NS_SWIFT_NAME(goToDestination(_:));
 
-- (NSArray<NSString *> *)completionForName:(NSString *)name NS_SWIFT_NAME(completion(for:));
+- (NSArray<CelestiaCompletion *> *)completionForName:(NSString *)name NS_SWIFT_NAME(completion(for:));
 - (void)setObserverTransform:(simd_float3x3)observerTransform;
 
 @end

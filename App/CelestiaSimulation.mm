@@ -9,8 +9,8 @@
 // of the License, or (at your option) any later version.
 //
 
-#import "CelestiaSimulation.h"
 #import "CelestiaSimulation+Private.h"
+#import "CelestiaCompletion+Private.h"
 #import "CelestiaSelection+Private.h"
 #import "CelestiaUniverse+Private.h"
 #import "CelestiaObserver+Private.h"
@@ -227,14 +227,13 @@ typedef NS_OPTIONS(NSUInteger, CelestiaGoToLocationFieldMask) {
     }
 }
 
-- (NSArray<NSString *> *)completionForName:(NSString *)name {
-    std::vector<std::string> names;
-    s->getObjectCompletion(names, [name UTF8String], true);
-    NSMutableArray *array = [NSMutableArray arrayWithCapacity:names.size()];
-    for (int i = 0; i < names.size(); i++) {
-        NSString *completion = [NSString stringWithUTF8String:names[i].c_str()];
-        if (completion)
-            [array addObject:completion];
+- (NSArray<CelestiaCompletion *> *)completionForName:(NSString *)name {
+    std::vector<celestia::engine::Completion> completions;
+    s->getObjectCompletion(completions, [name UTF8String], true);
+    NSMutableArray *array = [NSMutableArray arrayWithCapacity:completions.size()];
+    for (auto const& completion : completions) {
+        CelestiaCompletion *result = [[CelestiaCompletion alloc] initWithCompletion:completion];
+        [array addObject:result];
     }
     return array;
 }
