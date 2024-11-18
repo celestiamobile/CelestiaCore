@@ -2484,7 +2484,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EA936F2E265F8B72007EED66 /* Debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
 				ENABLE_MODULE_VERIFIER = YES;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "c11 c++17";
@@ -2497,7 +2496,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EA936F2F265F8B7C007EED66 /* Release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
 				ENABLE_MODULE_VERIFIER = YES;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "c11 c++17";
@@ -2541,7 +2539,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_ALLOWED = No;
 				CODE_SIGNING_REQUIRED = No;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -2607,7 +2605,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_ALLOWED = No;
 				CODE_SIGNING_REQUIRED = No;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -2639,7 +2637,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EA86F7BB2B790EAB00419451 /* Common.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
 				ENABLE_MODULE_VERIFIER = YES;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "c11 c++17";
@@ -2652,7 +2649,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EA86F7BB2B790EAB00419451 /* Common.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
 				ENABLE_MODULE_VERIFIER = YES;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "c11 c++17";
