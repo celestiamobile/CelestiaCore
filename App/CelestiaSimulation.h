@@ -29,6 +29,7 @@ typedef NS_ENUM(NSUInteger, CelestiaSimulationDistanceUnit) {
 
 NS_ASSUME_NONNULL_BEGIN
 
+NS_SWIFT_SENDABLE
 NS_SWIFT_NAME(GoToLocation)
 @interface CelestiaGoToLocation : NSObject
 
