@@ -96,36 +96,7 @@
 
 @end
 
-NSDictionary* coordinateDict;
-
 @implementation CelestiaAstroUtils
-
-+ (NSString *)stringWithCoordinateSystem:(int)n {
-    NSArray* keys = [coordinateDict allKeys];
-    unsigned int i;
-    for (i = 0; i < [keys count]; i++) {
-        if ([[coordinateDict objectForKey:[keys objectAtIndex:i]] integerValue] == n)
-            return [keys objectAtIndex:i];
-    }
-    return nil;
-}
-
-+ (void)initialize {
-    // compiler macro would be prettier I guess
-    coordinateDict = [[NSDictionary alloc] initWithObjectsAndKeys:
-                       [NSNumber numberWithInt:ObserverFrame::Universal],  @"Universal",
-                       [NSNumber numberWithInt:ObserverFrame::Ecliptical], @"Ecliptical",
-                       [NSNumber numberWithInt:ObserverFrame::Equatorial], @"Equatorial",
-                       [NSNumber numberWithInt:ObserverFrame::BodyFixed],  @"Geographic",
-                       [NSNumber numberWithInt:ObserverFrame::ObserverLocal], @"ObserverLocal",
-                       [NSNumber numberWithInt:ObserverFrame::PhaseLock],  @"PhaseLock",
-                       [NSNumber numberWithInt:ObserverFrame::Chase],      @"Chase",
-                       nil];
-}
-
-+ (int)coordinateSystem:(NSString *)coord {
-    return [[coordinateDict objectForKey:coord] intValue];
-}
 
 + (double)speedOfLight {
     return celestia::astro::speedOfLight;

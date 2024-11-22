@@ -180,7 +180,7 @@ typedef NS_OPTIONS(NSUInteger, CelestiaGoToLocationFieldMask) {
     if (location->fieldMask & CelestiaGoToLocationFieldMaskLongitude && location->fieldMask & CelestiaGoToLocationFieldMaskLatitude) {
         s->gotoSelectionLongLat(location.duration, distance, location.longitude * (float)M_PI / 180.0f, location.latitude * (float)M_PI / 180.0f, [up vector3f]);
     } else {
-        s->gotoSelection(location.duration, distance, [up vector3f], (ObserverFrame::CoordinateSystem)[CelestiaAstroUtils coordinateSystem:@"ObserverLocal"]);
+        s->gotoSelection(location.duration, distance, [up vector3f], ObserverFrame::CoordinateSystem::ObserverLocal);
     }
 }
 
@@ -196,7 +196,7 @@ typedef NS_OPTIONS(NSUInteger, CelestiaGoToLocationFieldMask) {
         return;
 
     s->setTime(eclipse.startTime.julianDay);
-    s->setFrame(ObserverFrame::PhaseLock, [target selection], [ref selection]);
+    s->setFrame(ObserverFrame::CoordinateSystem::PhaseLock, [target selection], [ref selection]);
     s->update(0);
     double distance = [target radius] * 4.0;
     s->gotoLocation(UniversalCoord::Zero().offsetKm(Eigen::Vector3d::UnitX() * distance),
@@ -215,14 +215,14 @@ typedef NS_OPTIONS(NSUInteger, CelestiaGoToLocationFieldMask) {
             // Use the default distance
             s->gotoSelection(5.0,
                              Eigen::Vector3f::UnitY(),
-                             ObserverFrame::ObserverLocal);
+                             ObserverFrame::CoordinateSystem::ObserverLocal);
         }
         else
         {
             s->gotoSelection(5.0,
                              [destination distance],
                              Eigen::Vector3f::UnitY(),
-                             ObserverFrame::ObserverLocal);
+                             ObserverFrame::CoordinateSystem::ObserverLocal);
         }
     }
 }

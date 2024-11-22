@@ -44,8 +44,6 @@ NS_SWIFT_NAME(DMS)
 NS_SWIFT_NAME(AstroUtils)
 @interface CelestiaAstroUtils : NSObject
 
-+ (nullable NSString *)stringWithCoordinateSystem:(int)n;
-+ (int)coordinateSystem:(NSString *)coord;
 + (double)speedOfLight;
 + (double)J2000;
 + (double)G;
