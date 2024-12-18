@@ -40,8 +40,6 @@ NS_SWIFT_NAME(Universe)
 @property (readonly) CelestiaDSOCatalog *dsoCatalog;
 @property (readonly) CelestiaStarCatalog *starCatalog;
 
-- (CelestiaSelection *)find:(NSString *)name;
-
 - (NSString *)nameForSelection:(CelestiaSelection *)selection;
 
 - (BOOL)isSelectionMarked:(CelestiaSelection *)selection NS_SWIFT_NAME(isMarked(_:));
