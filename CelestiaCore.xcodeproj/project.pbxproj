@@ -450,8 +450,6 @@
 		EA86F7B72B790E4800419451 /* ZipUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = EA86F7B62B790E4800419451 /* ZipUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA86F7BE2B79119900419451 /* CEZZipUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = EA86F7BC2B79119900419451 /* CEZZipUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA86F7BF2B79119900419451 /* CEZZipUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = EA86F7BD2B79119900419451 /* CEZZipUtils.mm */; };
-		EA8926552567BD0300A868F3 /* CelestiaFavorite.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8926532567BD0300A868F3 /* CelestiaFavorite.m */; };
-		EA8926562567BD0300A868F3 /* CelestiaFavorite.h in Headers */ = {isa = PBXBuildFile; fileRef = EA8926542567BD0300A868F3 /* CelestiaFavorite.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA8D1EB624D6D0BD0071C7B5 /* strnatcmp.h in Headers */ = {isa = PBXBuildFile; fileRef = EA8D1EB424D6D0BD0071C7B5 /* strnatcmp.h */; };
 		EA8D1EB724D6D0BD0071C7B5 /* strnatcmp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA8D1EB524D6D0BD0071C7B5 /* strnatcmp.cpp */; };
 		EA90396F2BA071D600C982BC /* localeutil.h in Headers */ = {isa = PBXBuildFile; fileRef = EA90396D2BA071D600C982BC /* localeutil.h */; };
@@ -982,8 +980,6 @@
 		EA86F7BB2B790EAB00419451 /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
 		EA86F7BC2B79119900419451 /* CEZZipUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CEZZipUtils.h; sourceTree = "<group>"; };
 		EA86F7BD2B79119900419451 /* CEZZipUtils.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CEZZipUtils.mm; sourceTree = "<group>"; };
-		EA8926532567BD0300A868F3 /* CelestiaFavorite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CelestiaFavorite.m; sourceTree = "<group>"; };
-		EA8926542567BD0300A868F3 /* CelestiaFavorite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CelestiaFavorite.h; sourceTree = "<group>"; };
 		EA8D1EB424D6D0BD0071C7B5 /* strnatcmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strnatcmp.h; sourceTree = "<group>"; };
 		EA8D1EB524D6D0BD0071C7B5 /* strnatcmp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = strnatcmp.cpp; sourceTree = "<group>"; };
 		EA90396D2BA071D600C982BC /* localeutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = localeutil.h; sourceTree = "<group>"; };
@@ -1088,8 +1084,6 @@
 		971A64652301976A009E4EA1 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				EA8926542567BD0300A868F3 /* CelestiaFavorite.h */,
-				EA8926532567BD0300A868F3 /* CelestiaFavorite.m */,
 				970DCE3422FE695D0044F590 /* CelestiaUniversalCoord+Private.h */,
 				970DCE3222FE695D0044F590 /* CelestiaUniversalCoord.h */,
 				970DCE3322FE695D0044F590 /* CelestiaUniversalCoord.mm */,
@@ -1842,7 +1836,6 @@
 				EAB03FF429657A6C00F6878E /* CelestiaTimeline.h in Headers */,
 				EA2D5F2A29EE82D3005990BA /* largestarrenderer.h in Headers */,
 				EAB03FFC29657C0800F6878E /* CelestiaTimelinePhase.h in Headers */,
-				EA8926562567BD0300A868F3 /* CelestiaFavorite.h in Headers */,
 				EAE846512B3AE659008A146D /* loadstars.h in Headers */,
 				EA544E522566B369003F351D /* CelestiaDestination.h in Headers */,
 				EA2166FB2973C08D001477DE /* cometrenderer.h in Headers */,
@@ -2445,7 +2438,6 @@
 				971A669223019C20009E4EA1 /* console.cpp in Sources */,
 				974A6B1E23532EA1007BCABD /* overlayimage.cpp in Sources */,
 				EAFFE03B2882F7BE007DEBC2 /* textprintposition.cpp in Sources */,
-				EA8926552567BD0300A868F3 /* CelestiaFavorite.m in Sources */,
 				EAB18D9A2AF14AC400C2B010 /* sampfile.cpp in Sources */,
 				EA4BB3362B46481000B36E44 /* binder.cpp in Sources */,
 				EA3FFB142A13746F00C6158F /* openclusterrenderer.cpp in Sources */,
