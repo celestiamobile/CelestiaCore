@@ -357,6 +357,7 @@
 		EA0D014929C0A15700B86EED /* textlayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0D014729C0A15700B86EED /* textlayout.cpp */; };
 		EA0E06C728C0C160004F6DF7 /* linerenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = EA0E06C528C0C160004F6DF7 /* linerenderer.h */; };
 		EA0E06C828C0C160004F6DF7 /* linerenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0E06C628C0C160004F6DF7 /* linerenderer.cpp */; };
+		EA11E4592D76E17800DABEF0 /* infourl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA11E4582D76E17800DABEF0 /* infourl.cpp */; };
 		EA14B0372A51BC6300F069C0 /* fisheyeprojectionmode.h in Headers */ = {isa = PBXBuildFile; fileRef = EA14B0352A51BC6300F069C0 /* fisheyeprojectionmode.h */; };
 		EA14B0382A51BC6300F069C0 /* fisheyeprojectionmode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA14B0362A51BC6300F069C0 /* fisheyeprojectionmode.cpp */; };
 		EA14B03B2A51BC7C00F069C0 /* perspectiveprojectionmode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA14B0392A51BC7C00F069C0 /* perspectiveprojectionmode.cpp */; };
@@ -884,6 +885,7 @@
 		EA0D014729C0A15700B86EED /* textlayout.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = textlayout.cpp; sourceTree = "<group>"; };
 		EA0E06C528C0C160004F6DF7 /* linerenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = linerenderer.h; sourceTree = "<group>"; };
 		EA0E06C628C0C160004F6DF7 /* linerenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = linerenderer.cpp; sourceTree = "<group>"; };
+		EA11E4582D76E17800DABEF0 /* infourl.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = infourl.cpp; sourceTree = "<group>"; };
 		EA14B0352A51BC6300F069C0 /* fisheyeprojectionmode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fisheyeprojectionmode.h; sourceTree = "<group>"; };
 		EA14B0362A51BC6300F069C0 /* fisheyeprojectionmode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fisheyeprojectionmode.cpp; sourceTree = "<group>"; };
 		EA14B0392A51BC7C00F069C0 /* perspectiveprojectionmode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = perspectiveprojectionmode.cpp; sourceTree = "<group>"; };
@@ -1585,6 +1587,7 @@
 		977D833222FDB279002FF1C2 /* celutil */ = {
 			isa = PBXGroup;
 			children = (
+				EA11E4582D76E17800DABEF0 /* infourl.cpp */,
 				EAE846612B443F60008A146D /* array_view.h */,
 				EAE846692B443F60008A146D /* blockarray.h */,
 				EAE846682B443F60008A146D /* dateformatter.cpp */,
@@ -2442,6 +2445,7 @@
 				EA4BB3362B46481000B36E44 /* binder.cpp in Sources */,
 				EA3FFB142A13746F00C6158F /* openclusterrenderer.cpp in Sources */,
 				EAB03FF529657A6C00F6878E /* CelestiaTimeline.mm in Sources */,
+				EA11E4592D76E17800DABEF0 /* infourl.cpp in Sources */,
 				971A66F923019C21009E4EA1 /* texmanager.cpp in Sources */,
 				EA9166B42B0C37FE00AF48B1 /* hud.cpp in Sources */,
 				971A66CA23019C20009E4EA1 /* opencluster.cpp in Sources */,
