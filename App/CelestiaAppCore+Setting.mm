@@ -74,7 +74,7 @@
 
 // Visibility Settings
 
-#define RENDERMETHODS(flag)  -(BOOL) show##flag { return (core->getRenderer()->getRenderFlags()&Renderer::Show##flag) != 0; } -(void) setShow##flag: (BOOL) value  { core->getRenderer()->setRenderFlags( [self setValue: value forBit: Renderer::Show##flag inSet: core->getRenderer()->getRenderFlags() ] ); }
+#define RENDERMETHODS(flag)  -(BOOL) show##flag { return static_cast<BOOL>(celestia::util::is_set(core->getRenderer()->getRenderFlags(), RenderFlags::Show##flag)); } -(void) setShow##flag: (BOOL) value  { auto flags = core->getRenderer()->getRenderFlags(); celestia::util::set_or_unset(flags, RenderFlags::Show##flag, static_cast<bool>(value)); core->getRenderer()->setRenderFlags(flags); }
 
 RENDERMETHODS(Stars)
 RENDERMETHODS(Planets)
@@ -112,7 +112,7 @@ RENDERMETHODS(GalacticGrid)
 
 // Label Settings
 
-#define LABELMETHODS(flag)  -(BOOL) show##flag##Labels { return (core->getRenderer()->getLabelMode()&Renderer::flag##Labels) != 0; } -(void) setShow##flag##Labels : (BOOL) value  { core->getRenderer()->setLabelMode( (int)[self setValue: value forBit: Renderer::flag##Labels inSet: core->getRenderer()->getLabelMode()] ); }
+#define LABELMETHODS(flag)  -(BOOL) show##flag##Labels { return static_cast<BOOL>(celestia::util::is_set(core->getRenderer()->getLabelMode(), RenderLabels::flag##Labels)); } -(void) setShow##flag##Labels : (BOOL) value  { auto flags = core->getRenderer()->getLabelMode(); celestia::util::set_or_unset(flags, RenderLabels::flag##Labels, static_cast<bool>(value)); core->getRenderer()->setLabelMode(flags); }
 
 LABELMETHODS(Star)
 LABELMETHODS(Planet)
@@ -129,11 +129,13 @@ LABELMETHODS(Comet)
 LABELMETHODS(DwarfPlanet)
 LABELMETHODS(MinorMoon)
 
+LABELMETHODS(I18nConstellation)
+
 - (BOOL)showLatinConstellationLabels {
-    return (core->getRenderer()->getLabelMode() & Renderer::I18nConstellationLabels) == 0;
+    return ![self showI18nConstellationLabels];
 }
 - (void)setShowLatinConstellationLabels:(BOOL)value {
-    core->getRenderer()->setLabelMode( (int)[self setValue: (!value) forBit:  Renderer::I18nConstellationLabels inSet: core->getRenderer()->getLabelMode()] );
+    [self setShowI18nConstellationLabels:!value];
 }
 
 // Orbit Settings
@@ -155,7 +157,7 @@ ORBITMETHODS(MinorMoon)
 
 // Feature Settings
 
-#define FEATUREMETHODS(flag)  -(BOOL) show##flag##Labels { return (core->getSimulation()->getObserver().getLocationFilter()&Location::flag) != 0; } -(void) setShow##flag##Labels: (BOOL) value  { core->getSimulation()->getObserver().setLocationFilter([self setValue: value forBit: Location::flag inSet: (int)core->getSimulation()->getObserver().getLocationFilter()]); }
+#define FEATUREMETHODS(flag)  -(BOOL) show##flag##Labels { return (core->getSimulation()->getObserver().getLocationFilter()&Location::flag) != 0; } -(void) setShow##flag##Labels: (BOOL) value  { core->getSimulation()->getObserver().setLocationFilter([self setValue: value forBit: Location::flag inSet: core->getSimulation()->getObserver().getLocationFilter()]); }
 
 FEATUREMETHODS(City)
 FEATUREMETHODS(Observatory)
@@ -257,7 +259,7 @@ FEATUREMETHODS(Other)
 
 - (float)faintestVisible {
     //    return core->getSimulation()->getFaintestVisible();
-    if ((core->getRenderer()->getRenderFlags() & Renderer::ShowAutoMag) == 0)
+    if (!celestia::util::is_set(core->getRenderer()->getRenderFlags(), RenderFlags::ShowAutoMag))
     {
         return core->getSimulation()->getFaintestVisible();
     }
@@ -268,7 +270,7 @@ FEATUREMETHODS(Other)
 }
 
 - (void)setFaintestVisible:(float)value {
-    if ((core->getRenderer()->getRenderFlags() & Renderer::ShowAutoMag) == 0)
+    if (!celestia::util::is_set(core->getRenderer()->getRenderFlags(), RenderFlags::ShowAutoMag))
     {
         core->setFaintest(value);
     }
@@ -279,8 +281,8 @@ FEATUREMETHODS(Other)
     }
 }
 
-- (NSInteger)starStyle { return core->getRenderer()->getStarStyle(); }
-- (void)setStarStyle:(NSInteger)value { core->getRenderer()->setStarStyle((Renderer::StarStyle)value); }
+- (NSInteger)starStyle { return static_cast<NSInteger>(core->getRenderer()->getStarStyle()); }
+- (void)setStarStyle:(NSInteger)value { core->getRenderer()->setStarStyle(static_cast<StarStyle>(value)); }
 
 - (NSInteger)starColors {
     return static_cast<NSInteger>(core->getRenderer()->getStarColorTable());
@@ -300,8 +302,8 @@ FEATUREMETHODS(Other)
 
 // Texture Settings
 
-- (NSInteger)resolution { return core->getRenderer()->getResolution(); }
-- (void)setResolution:(NSInteger)value { core->getRenderer()->setResolution((int)value); }
+- (NSInteger)resolution { return static_cast<NSInteger>(core->getRenderer()->getResolution()); }
+- (void)setResolution:(NSInteger)value { core->getRenderer()->setResolution(static_cast<TextureResolution>(value)); }
 
 // Overlay Settings
 

@@ -422,6 +422,7 @@
 		EA405FF72AC3B977000E1F7A /* tangents.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA405FF62AC3B977000E1F7A /* tangents.cpp */; };
 		EA4BB3352B46481000B36E44 /* binder.h in Headers */ = {isa = PBXBuildFile; fileRef = EA4BB3332B46481000B36E44 /* binder.h */; };
 		EA4BB3362B46481000B36E44 /* binder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA4BB3342B46481000B36E44 /* binder.cpp */; };
+		EA51CC8F2D7A2786009434AA /* renderflags.h in Headers */ = {isa = PBXBuildFile; fileRef = EA51CC8E2D7A2786009434AA /* renderflags.h */; };
 		EA544E522566B369003F351D /* CelestiaDestination.h in Headers */ = {isa = PBXBuildFile; fileRef = EA544E502566B369003F351D /* CelestiaDestination.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA544E532566B369003F351D /* CelestiaDestination.mm in Sources */ = {isa = PBXBuildFile; fileRef = EA544E512566B369003F351D /* CelestiaDestination.mm */; };
 		EA544E592566B3E4003F351D /* CelestiaDestination+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = EA544E572566B3E4003F351D /* CelestiaDestination+Private.h */; };
@@ -951,6 +952,7 @@
 		EA405FF62AC3B977000E1F7A /* tangents.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tangents.cpp; sourceTree = "<group>"; };
 		EA4BB3332B46481000B36E44 /* binder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = binder.h; sourceTree = "<group>"; };
 		EA4BB3342B46481000B36E44 /* binder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = binder.cpp; sourceTree = "<group>"; };
+		EA51CC8E2D7A2786009434AA /* renderflags.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = renderflags.h; sourceTree = "<group>"; };
 		EA544E502566B369003F351D /* CelestiaDestination.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CelestiaDestination.h; sourceTree = "<group>"; };
 		EA544E512566B369003F351D /* CelestiaDestination.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CelestiaDestination.mm; sourceTree = "<group>"; };
 		EA544E572566B3E4003F351D /* CelestiaDestination+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CelestiaDestination+Private.h"; sourceTree = "<group>"; };
@@ -1376,6 +1378,7 @@
 		977D81C222FDB1F5002FF1C2 /* celengine */ = {
 			isa = PBXGroup;
 			children = (
+				EA51CC8E2D7A2786009434AA /* renderflags.h */,
 				EAB18D362CB5CAA900696A11 /* completion.h */,
 				EAB18D382CB5D81400696A11 /* completion.cpp */,
 				EA035C652C4F4A2500536FD5 /* dsodbbuilder.cpp */,
@@ -1914,6 +1917,7 @@
 				971A66CF23019C20009E4EA1 /* parseobject.h in Headers */,
 				971A667E23019C20009E4EA1 /* asterism.h in Headers */,
 				971A66E523019C20009E4EA1 /* skygrid.h in Headers */,
+				EA51CC8F2D7A2786009434AA /* renderflags.h in Headers */,
 				9751DC1423594A8000299997 /* celx_celestia.h in Headers */,
 				971A65DF23019BF0009E4EA1 /* CelestiaAppCore+Private.h in Headers */,
 				971A66DB23019C20009E4EA1 /* renderinfo.h in Headers */,
@@ -2190,7 +2194,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1620;
 				ORGANIZATIONNAME = "Celestia Development Team";
 				TargetAttributes = {
 					971A65CB23019BC5009E4EA1 = {

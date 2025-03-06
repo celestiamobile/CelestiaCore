@@ -187,15 +187,15 @@ private:
 
     // start with default values
     constexpr auto DEFAULT_ORBIT_MASK = BodyClassification::Planet | BodyClassification::Moon | BodyClassification::Stellar;
-    constexpr int DEFAULT_LABEL_MODE = 2176;
+    constexpr auto DEFAULT_LABEL_MODE = RenderLabels::I18nConstellationLabels | RenderLabels::LocationLabels;
     constexpr float DEFAULT_AMBIENT_LIGHT_LEVEL = 0.1f;
     constexpr float DEFAULT_VISUAL_MAGNITUDE = 8.0f;
-    constexpr Renderer::StarStyle DEFAULT_STAR_STYLE = Renderer::FuzzyPointStars;
+    constexpr StarStyle DEFAULT_STAR_STYLE = StarStyle::FuzzyPointStars;
     constexpr ColorTableType DEFAULT_STARS_COLOR = ColorTableType::Blackbody_D65;
-    constexpr unsigned int DEFAULT_TEXTURE_RESOLUTION = medres;
+    constexpr auto DEFAULT_TEXTURE_RESOLUTION = TextureResolution::medres;
     constexpr float DEFAULT_TINT_SATURATION = 0.5f;
 
-    core->getRenderer()->setRenderFlags(Renderer::DefaultRenderFlags);
+    core->getRenderer()->setRenderFlags(RenderFlags::DefaultRenderFlags);
     core->getRenderer()->setOrbitMask(DEFAULT_ORBIT_MASK);
     core->getRenderer()->setLabelMode(DEFAULT_LABEL_MODE);
     core->getRenderer()->setAmbientLightLevel(DEFAULT_AMBIENT_LIGHT_LEVEL);
