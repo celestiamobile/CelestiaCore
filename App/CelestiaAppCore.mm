@@ -34,7 +34,7 @@ class AppCoreProgressWatcher: public ProgressNotifier
 public:
     AppCoreProgressWatcher(void (^block)(NSString *)) : ProgressNotifier(), block(block) {};
 
-    void update(const std::string& status) {
+    void update(const std::string& status) override {
         @autoreleasepool {
             block([NSString stringWithUTF8String:status.c_str()]);
         }
@@ -89,7 +89,7 @@ class AppCoreContextMenuHandler: public CelestiaCore::ContextMenuHandler
 public:
     AppCoreContextMenuHandler(void (^block)(CGPoint, CelestiaSelection *)) : CelestiaCore::ContextMenuHandler(), block(block) {};
 
-    void requestContextMenu(float x, float y, Selection sel)
+    void requestContextMenu(float x, float y, Selection sel) override
     {
         @autoreleasepool {
             CelestiaSelection *selection = [[CelestiaSelection alloc] initWithSelection:sel];
@@ -172,7 +172,7 @@ private:
     std::string configFile = configFileName == nil ? "" : [configFileName UTF8String];
     __block std::vector<fs::path> extras;
     [extraDirectories enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        extras.push_back([obj UTF8String]);
+        extras.emplace_back([obj UTF8String]);
     }];
 
     bool success = core->initSimulation(configFile, extras, &watcher);
