@@ -401,6 +401,20 @@
 		EA38CEB8255FD3EF009EE79B /* CelestiaTexture+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = EA38CEB6255FD3EF009EE79B /* CelestiaTexture+Private.h */; };
 		EA398C9D278A6FF900A9AAE5 /* greek.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA398C9B278A6FF900A9AAE5 /* greek.cpp */; };
 		EA398C9E278A6FF900A9AAE5 /* greek.h in Headers */ = {isa = PBXBuildFile; fileRef = EA398C9C278A6FF900A9AAE5 /* greek.h */; };
+		EA3A88CE2D80B0100029ACA4 /* boost.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3A88C22D80B00F0029ACA4 /* boost.xcframework */; };
+		EA3A88D02D80B0100029ACA4 /* jpeg.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3A88C32D80B0100029ACA4 /* jpeg.xcframework */; };
+		EA3A88D22D80B0100029ACA4 /* fmt.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3A88C42D80B0100029ACA4 /* fmt.xcframework */; };
+		EA3A88D42D80B0100029ACA4 /* libepoxy.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3A88C52D80B0100029ACA4 /* libepoxy.xcframework */; };
+		EA3A88D62D80B0100029ACA4 /* libintl.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3A88C62D80B0100029ACA4 /* libintl.xcframework */; };
+		EA3A88D82D80B0100029ACA4 /* cspice.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3A88C72D80B0100029ACA4 /* cspice.xcframework */; };
+		EA3A88DA2D80B0100029ACA4 /* libpng.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3A88C82D80B0100029ACA4 /* libpng.xcframework */; };
+		EA3A88DE2D80B0100029ACA4 /* luajit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3A88CA2D80B0100029ACA4 /* luajit.xcframework */; };
+		EA3A88E02D80B0100029ACA4 /* meshoptimizer.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3A88CB2D80B0100029ACA4 /* meshoptimizer.xcframework */; };
+		EA3A88E22D80B0100029ACA4 /* eigen3.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3A88CC2D80B0100029ACA4 /* eigen3.xcframework */; };
+		EA3A88E42D80B0100029ACA4 /* freetype.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3A88CD2D80B0100029ACA4 /* freetype.xcframework */; };
+		EA3A88E82D80B0760029ACA4 /* miniaudio.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3A88E72D80B0760029ACA4 /* miniaudio.xcframework */; };
+		EA3A88EC2D80B0910029ACA4 /* icu.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3A88EB2D80B0910029ACA4 /* icu.xcframework */; };
+		EA3A88F32D80B3440029ACA4 /* libzip.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3A88C92D80B0100029ACA4 /* libzip.xcframework */; };
 		EA3FC0A625F63A690019C3BD /* celestiastate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA3FC0A425F63A680019C3BD /* celestiastate.cpp */; };
 		EA3FC0A725F63A690019C3BD /* celestiastate.h in Headers */ = {isa = PBXBuildFile; fileRef = EA3FC0A525F63A680019C3BD /* celestiastate.h */; };
 		EA3FC0AC25F63A840019C3BD /* charconv.h in Headers */ = {isa = PBXBuildFile; fileRef = EA3FC0A925F63A840019C3BD /* charconv.h */; };
@@ -931,6 +945,20 @@
 		EA38CEB6255FD3EF009EE79B /* CelestiaTexture+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CelestiaTexture+Private.h"; sourceTree = "<group>"; };
 		EA398C9B278A6FF900A9AAE5 /* greek.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = greek.cpp; sourceTree = "<group>"; };
 		EA398C9C278A6FF900A9AAE5 /* greek.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = greek.h; sourceTree = "<group>"; };
+		EA3A88C22D80B00F0029ACA4 /* boost.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = boost.xcframework; path = libs/dependency/boost.xcframework; sourceTree = "<group>"; };
+		EA3A88C32D80B0100029ACA4 /* jpeg.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = jpeg.xcframework; path = libs/dependency/jpeg.xcframework; sourceTree = "<group>"; };
+		EA3A88C42D80B0100029ACA4 /* fmt.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = fmt.xcframework; path = libs/dependency/fmt.xcframework; sourceTree = "<group>"; };
+		EA3A88C52D80B0100029ACA4 /* libepoxy.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = libepoxy.xcframework; path = libs/dependency/libepoxy.xcframework; sourceTree = "<group>"; };
+		EA3A88C62D80B0100029ACA4 /* libintl.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = libintl.xcframework; path = libs/dependency/libintl.xcframework; sourceTree = "<group>"; };
+		EA3A88C72D80B0100029ACA4 /* cspice.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = cspice.xcframework; path = libs/dependency/cspice.xcframework; sourceTree = "<group>"; };
+		EA3A88C82D80B0100029ACA4 /* libpng.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = libpng.xcframework; path = libs/dependency/libpng.xcframework; sourceTree = "<group>"; };
+		EA3A88C92D80B0100029ACA4 /* libzip.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = libzip.xcframework; path = libs/dependency/libzip.xcframework; sourceTree = "<group>"; };
+		EA3A88CA2D80B0100029ACA4 /* luajit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = luajit.xcframework; path = libs/dependency/luajit.xcframework; sourceTree = "<group>"; };
+		EA3A88CB2D80B0100029ACA4 /* meshoptimizer.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = meshoptimizer.xcframework; path = libs/dependency/meshoptimizer.xcframework; sourceTree = "<group>"; };
+		EA3A88CC2D80B0100029ACA4 /* eigen3.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = eigen3.xcframework; path = libs/dependency/eigen3.xcframework; sourceTree = "<group>"; };
+		EA3A88CD2D80B0100029ACA4 /* freetype.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = freetype.xcframework; path = libs/dependency/freetype.xcframework; sourceTree = "<group>"; };
+		EA3A88E72D80B0760029ACA4 /* miniaudio.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = miniaudio.xcframework; path = libs/dependency/miniaudio.xcframework; sourceTree = "<group>"; };
+		EA3A88EB2D80B0910029ACA4 /* icu.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = icu.xcframework; path = libs/dependency/icu.xcframework; sourceTree = "<group>"; };
 		EA3FC0A425F63A680019C3BD /* celestiastate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = celestiastate.cpp; sourceTree = "<group>"; };
 		EA3FC0A525F63A680019C3BD /* celestiastate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = celestiastate.h; sourceTree = "<group>"; };
 		EA3FC0A925F63A840019C3BD /* charconv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = charconv.h; sourceTree = "<group>"; };
@@ -1072,6 +1100,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA3A88D82D80B0100029ACA4 /* cspice.xcframework in Frameworks */,
+				EA3A88D22D80B0100029ACA4 /* fmt.xcframework in Frameworks */,
+				EA3A88CE2D80B0100029ACA4 /* boost.xcframework in Frameworks */,
+				EA3A88E22D80B0100029ACA4 /* eigen3.xcframework in Frameworks */,
+				EA3A88DA2D80B0100029ACA4 /* libpng.xcframework in Frameworks */,
+				EA3A88E82D80B0760029ACA4 /* miniaudio.xcframework in Frameworks */,
+				EA3A88DE2D80B0100029ACA4 /* luajit.xcframework in Frameworks */,
+				EA3A88E02D80B0100029ACA4 /* meshoptimizer.xcframework in Frameworks */,
+				EA3A88D62D80B0100029ACA4 /* libintl.xcframework in Frameworks */,
+				EA3A88D02D80B0100029ACA4 /* jpeg.xcframework in Frameworks */,
+				EA3A88D42D80B0100029ACA4 /* libepoxy.xcframework in Frameworks */,
+				EA3A88E42D80B0100029ACA4 /* freetype.xcframework in Frameworks */,
+				EA3A88EC2D80B0910029ACA4 /* icu.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1079,6 +1120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA3A88F32D80B3440029ACA4 /* libzip.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1217,6 +1259,20 @@
 		971A672923019D1B009E4EA1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EA3A88EB2D80B0910029ACA4 /* icu.xcframework */,
+				EA3A88E72D80B0760029ACA4 /* miniaudio.xcframework */,
+				EA3A88C22D80B00F0029ACA4 /* boost.xcframework */,
+				EA3A88C72D80B0100029ACA4 /* cspice.xcframework */,
+				EA3A88CC2D80B0100029ACA4 /* eigen3.xcframework */,
+				EA3A88C42D80B0100029ACA4 /* fmt.xcframework */,
+				EA3A88CD2D80B0100029ACA4 /* freetype.xcframework */,
+				EA3A88C32D80B0100029ACA4 /* jpeg.xcframework */,
+				EA3A88C52D80B0100029ACA4 /* libepoxy.xcframework */,
+				EA3A88C62D80B0100029ACA4 /* libintl.xcframework */,
+				EA3A88C82D80B0100029ACA4 /* libpng.xcframework */,
+				EA3A88C92D80B0100029ACA4 /* libzip.xcframework */,
+				EA3A88CA2D80B0100029ACA4 /* luajit.xcframework */,
+				EA3A88CB2D80B0100029ACA4 /* meshoptimizer.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

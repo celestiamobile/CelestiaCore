@@ -22,16 +22,4 @@ LD_RUNPATH_SEARCH_PATHS = $(inherited) @executable_path/../Frameworks @loader_pa
 PRODUCT_BUNDLE_IDENTIFIER = space.celestia.CelestiaCore
 PRODUCT_NAME = $(TARGET_NAME:c99extidentifier)
 
-THIRD_PARTY_LIB_PATH_MACCATALYST_YES = $(PROJECT_DIR)/libs/dependency/catalyst
-THIRD_PARTY_LIB_PATH_MACCATALYST_NO = $(PROJECT_DIR)/libs/dependency/mac
-
-THIRD_PARTY_LIB_PATH =
-THIRD_PARTY_LIB_PATH[sdk=macosx*] = $(THIRD_PARTY_LIB_PATH_MACCATALYST_$(IS_MACCATALYST))
-THIRD_PARTY_LIB_PATH[sdk=iphoneos*] = $(PROJECT_DIR)/libs/dependency/ios
-THIRD_PARTY_LIB_PATH[sdk=iphonesimulator*] = $(PROJECT_DIR)/libs/dependency/iossim
-THIRD_PARTY_LIB_PATH[sdk=xros*] = $(PROJECT_DIR)/libs/dependency/visionos
-THIRD_PARTY_LIB_PATH[sdk=xrsimulator*] = $(PROJECT_DIR)/libs/dependency/visionossim
-
-SYSTEM_HEADER_SEARCH_PATHS = $(PROJECT_DIR) $(THIRD_PARTY_LIB_PATH)/include/libzip
-
 STRIP_INSTALLED_PRODUCT = NO
