@@ -318,7 +318,7 @@
 		EA3A88CE2D80B0100029ACA4 /* boost.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3A88C22D80B00F0029ACA4 /* boost.xcframework */; };
 		EA3A88D02D80B0100029ACA4 /* jpeg.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3A88C32D80B0100029ACA4 /* jpeg.xcframework */; };
 		EA3A88D22D80B0100029ACA4 /* fmt.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3A88C42D80B0100029ACA4 /* fmt.xcframework */; };
-		EA3A88D42D80B0100029ACA4 /* libepoxy.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3A88C52D80B0100029ACA4 /* libepoxy.xcframework */; };
+		EA3A88D42D80B0100029ACA4 /* angle.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3A88C52D80B0100029ACA4 /* angle.xcframework */; };
 		EA3A88D62D80B0100029ACA4 /* libintl.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3A88C62D80B0100029ACA4 /* libintl.xcframework */; };
 		EA3A88D82D80B0100029ACA4 /* cspice.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3A88C72D80B0100029ACA4 /* cspice.xcframework */; };
 		EA3A88DA2D80B0100029ACA4 /* libpng.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3A88C82D80B0100029ACA4 /* libpng.xcframework */; };
@@ -753,7 +753,7 @@
 		EA3A88C22D80B00F0029ACA4 /* boost.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = boost.xcframework; path = libs/dependency/boost.xcframework; sourceTree = "<group>"; };
 		EA3A88C32D80B0100029ACA4 /* jpeg.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = jpeg.xcframework; path = libs/dependency/jpeg.xcframework; sourceTree = "<group>"; };
 		EA3A88C42D80B0100029ACA4 /* fmt.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = fmt.xcframework; path = libs/dependency/fmt.xcframework; sourceTree = "<group>"; };
-		EA3A88C52D80B0100029ACA4 /* libepoxy.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = libepoxy.xcframework; path = libs/dependency/libepoxy.xcframework; sourceTree = "<group>"; };
+		EA3A88C52D80B0100029ACA4 /* angle.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = angle.xcframework; path = libs/dependency/angle.xcframework; sourceTree = "<group>"; };
 		EA3A88C62D80B0100029ACA4 /* libintl.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = libintl.xcframework; path = libs/dependency/libintl.xcframework; sourceTree = "<group>"; };
 		EA3A88C72D80B0100029ACA4 /* cspice.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = cspice.xcframework; path = libs/dependency/cspice.xcframework; sourceTree = "<group>"; };
 		EA3A88C82D80B0100029ACA4 /* libpng.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = libpng.xcframework; path = libs/dependency/libpng.xcframework; sourceTree = "<group>"; };
@@ -969,7 +969,7 @@
 				EA3A88E02D80B0100029ACA4 /* meshoptimizer.xcframework in Frameworks */,
 				EA3A88D62D80B0100029ACA4 /* libintl.xcframework in Frameworks */,
 				EA3A88D02D80B0100029ACA4 /* jpeg.xcframework in Frameworks */,
-				EA3A88D42D80B0100029ACA4 /* libepoxy.xcframework in Frameworks */,
+				EA3A88D42D80B0100029ACA4 /* angle.xcframework in Frameworks */,
 				EA3A88E42D80B0100029ACA4 /* freetype.xcframework in Frameworks */,
 				EA3A88EC2D80B0910029ACA4 /* icu.xcframework in Frameworks */,
 			);
@@ -997,7 +997,7 @@
 				EA3A88C42D80B0100029ACA4 /* fmt.xcframework */,
 				EA3A88CD2D80B0100029ACA4 /* freetype.xcframework */,
 				EA3A88C32D80B0100029ACA4 /* jpeg.xcframework */,
-				EA3A88C52D80B0100029ACA4 /* libepoxy.xcframework */,
+				EA3A88C52D80B0100029ACA4 /* angle.xcframework */,
 				EA3A88C62D80B0100029ACA4 /* libintl.xcframework */,
 				EA3A88C82D80B0100029ACA4 /* libpng.xcframework */,
 				EA3A88C92D80B0100029ACA4 /* libzip.xcframework */,
