@@ -2540,6 +2540,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EA936F2E265F8B72007EED66 /* Debug.xcconfig */;
 			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				ENABLE_MODULE_VERIFIER = YES;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "c11 c++17";
@@ -2552,6 +2553,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EA936F2F265F8B7C007EED66 /* Release.xcconfig */;
 			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				ENABLE_MODULE_VERIFIER = YES;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "c11 c++17";
