@@ -572,7 +572,6 @@
 		970DCE3F22FE8E240044F590 /* CelestiaUtil.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CelestiaUtil.mm; sourceTree = "<group>"; };
 		971A646B230198B2009E4EA1 /* CelestiaCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CelestiaCore.h; sourceTree = "<group>"; };
 		971A65CC23019BC5009E4EA1 /* CelestiaCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CelestiaCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		971A674323019E38009E4EA1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		971A674B2301A5AE009E4EA1 /* CelestiaScript.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CelestiaScript.h; sourceTree = "<group>"; };
 		971A674C2301A5AE009E4EA1 /* CelestiaScript.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CelestiaScript.mm; sourceTree = "<group>"; };
 		9729F1ED23084D080069FD72 /* filesystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = filesystem.h; sourceTree = "<group>"; };
@@ -1355,14 +1354,7 @@
 		9753847A22FDA37000050A53 = {
 			isa = PBXGroup;
 			children = (
-				EA936F2C265F8B54007EED66 /* Configurations */,
-				971A674323019E38009E4EA1 /* Info.plist */,
-				971A646B230198B2009E4EA1 /* CelestiaCore.h */,
-				971A646A23019864009E4EA1 /* App */,
-				971A6469230197DB009E4EA1 /* Tool */,
-				971A64652301976A009E4EA1 /* Util */,
-				971A646723019787009E4EA1 /* Object */,
-				977D83D722FDB324002FF1C2 /* config.h */,
+				EA3A89322D80FA870029ACA4 /* CelestiaCore */,
 				977D817122FDB174002FF1C2 /* Core */,
 				EA86F7B52B790E4800419451 /* ZipUtils */,
 				9753848422FDA37000050A53 /* Products */,
@@ -1826,6 +1818,20 @@
 				EA2D5F2529EE7E72005990BA /* vertexobject.h */,
 			);
 			path = gl;
+			sourceTree = "<group>";
+		};
+		EA3A89322D80FA870029ACA4 /* CelestiaCore */ = {
+			isa = PBXGroup;
+			children = (
+				971A646A23019864009E4EA1 /* App */,
+				971A6469230197DB009E4EA1 /* Tool */,
+				971A64652301976A009E4EA1 /* Util */,
+				971A646723019787009E4EA1 /* Object */,
+				EA936F2C265F8B54007EED66 /* Configurations */,
+				971A646B230198B2009E4EA1 /* CelestiaCore.h */,
+				977D83D722FDB324002FF1C2 /* config.h */,
+			);
+			path = CelestiaCore;
 			sourceTree = "<group>";
 		};
 		EA59EA2A26213C7B001E5B9D /* celimage */ = {
