@@ -35,6 +35,16 @@
     o->setFrame((ObserverFrame::CoordinateSystem)coordinate, ref, tar);
 }
 
+#if TARGET_OS_IOS && !TARGET_OS_MACCATALYST
+- (void)rotate:(CMQuaternion)from to:(CMQuaternion)to {
+    Eigen::Quaternionf f(-from.w, from.x, from.y, from.z);
+    Eigen::Quaternionf t(-to.w, to.x, to.y, to.z);
+    f.normalize();
+    t.normalize();
+    o->rotate(t * f.conjugate());
+}
+#endif
+
 @end
 
 @implementation CelestiaObserver (Private)
