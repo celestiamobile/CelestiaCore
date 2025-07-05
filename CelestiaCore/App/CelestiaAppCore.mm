@@ -144,7 +144,7 @@ private:
         });
         internalContextMenuHandler = new AppCoreContextMenuHandler(^(CGPoint location, CelestiaSelection *selection) {
             __strong CelestiaAppCore *core = weakSelf;
-            if (core) {
+            if (core != nil) {
                 __strong id<CelestiaAppCoreContextMenuHandler> contextMenuHandler = core.contextMenuHandler;
                 if (contextMenuHandler) {
                     [contextMenuHandler celestiaAppCoreCursorDidRequestContextMenuAtPoint:location withSelection:selection];
@@ -154,6 +154,20 @@ private:
         core->setAlerter(alerter);
         core->setCursorHandler(cursorHandler);
         core->setContextMenuHandler(internalContextMenuHandler);
+
+        CelestiaCore::ScriptSystemAccessPolicy (^scriptSystemAccessHandler)(void) = ^{
+            __strong CelestiaAppCore *core = weakSelf;
+            if (core == nil) { return CelestiaCore::ScriptSystemAccessPolicy::Ask; }
+            __strong id<CelestiaAppCoreDelegate> delegate = [core delegate];
+            if (delegate == nil) { return CelestiaCore::ScriptSystemAccessPolicy::Ask; }
+
+            return [delegate celestiaAppCoreRequestSystemAccess] ? CelestiaCore::ScriptSystemAccessPolicy::Allow : CelestiaCore::ScriptSystemAccessPolicy::Deny;
+        };
+        core->setScriptSystemAccessHandler([scriptSystemAccessHandler]{
+            @autoreleasepool {
+                return scriptSystemAccessHandler();
+            }
+        });
         watcher = new AppCoreWatcher(*core, ^(CelestiaWatcherFlags changedFlags) {
             [[weakSelf delegate] celestiaAppCoreWatchedFlagsDidChange:changedFlags];
         });
@@ -403,6 +417,7 @@ private:
     core->setAlerter(nullptr);
     core->setCursorHandler(nullptr);
     core->setContextMenuHandler(nullptr);
+    core->setScriptSystemAccessHandler(std::nullopt);
     delete watcher;
     delete alerter;
     delete cursorHandler;

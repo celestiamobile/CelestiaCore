@@ -105,6 +105,7 @@ NS_SWIFT_NAME(AppCoreDelegate)
 - (void)celestiaAppCoreFatalErrorHappened:(NSString *)error;
 - (void)celestiaAppCoreCursorShapeChanged:(CelestiaCursorShape)shape;
 - (void)celestiaAppCoreWatchedFlagsDidChange:(CelestiaWatcherFlags)changedFlags;
+- (BOOL)celestiaAppCoreRequestSystemAccess;
 
 @end
 
