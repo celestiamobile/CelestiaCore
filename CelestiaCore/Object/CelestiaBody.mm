@@ -128,4 +128,8 @@
     return [[CelestiaRotationModel alloc] initWithRotation:[self body]->getRotationModel([time julianDay])];
 }
 
+- (BOOL)canBeUsedAsCockpit {
+    return GetBodyFeaturesManager()->canBeUsedAsCockpit([self body]);
+}
+
 @end

@@ -29,6 +29,14 @@
     o->setDisplayedSurface([displayedSurface UTF8String]);
 }
 
+- (CelestiaSelection *)cockpit {
+    return [[CelestiaSelection alloc] initWithSelection:o->getCockpit()];
+}
+
+- (void)setCockpit:(CelestiaSelection *)cockpit {
+    o->setCockpit([cockpit selection]);
+}
+
 - (void)setFrame:(CelestiaCoordinateSystem)coordinate target:(CelestiaSelection *)target reference:(CelestiaSelection *)reference {
     const Selection ref([reference selection]);
     const Selection tar([target selection]);

@@ -35,6 +35,7 @@ NS_SWIFT_NAME(Observer)
 @interface CelestiaObserver : NSObject
 
 @property (nonatomic) NSString *displayedSurface;
+@property (nonatomic) CelestiaSelection *cockpit;
 
 - (void)setFrame:(CelestiaCoordinateSystem)coordinate target:(CelestiaSelection *)target reference:(CelestiaSelection *)reference NS_SWIFT_NAME(setFrame(coordinate:target:reference:));
 #if TARGET_OS_IOS && !TARGET_OS_MACCATALYST
