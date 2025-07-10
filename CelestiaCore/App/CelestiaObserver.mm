@@ -36,9 +36,9 @@
 }
 
 #if TARGET_OS_IOS && !TARGET_OS_MACCATALYST
-- (void)rotate:(CMQuaternion)from to:(CMQuaternion)to {
-    Eigen::Quaternionf f(-from.w, from.x, from.y, from.z);
-    Eigen::Quaternionf t(-to.w, to.x, to.y, to.z);
+- (void)rotate:(simd_quatf)from to:(simd_quatf)to {
+    Eigen::Quaternionf f(to.vector[3], from.vector[0], from.vector[1], from.vector[2]);
+    Eigen::Quaternionf t(to.vector[3], to.vector[0], to.vector[1], to.vector[2]);
     f.normalize();
     t.normalize();
     o->rotate(t * f.conjugate());

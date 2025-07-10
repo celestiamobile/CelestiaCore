@@ -11,7 +11,7 @@
 
 #import <Foundation/Foundation.h>
 #if TARGET_OS_IOS && !TARGET_OS_MACCATALYST
-#import <CoreMotion/CoreMotion.h>
+#import <simd/simd.h>
 #endif
 
 @class CelestiaSelection;
@@ -38,7 +38,7 @@ NS_SWIFT_NAME(Observer)
 
 - (void)setFrame:(CelestiaCoordinateSystem)coordinate target:(CelestiaSelection *)target reference:(CelestiaSelection *)reference NS_SWIFT_NAME(setFrame(coordinate:target:reference:));
 #if TARGET_OS_IOS && !TARGET_OS_MACCATALYST
-- (void)rotate:(CMQuaternion)from to:(CMQuaternion)to NS_SWIFT_NAME(rotate(from:to:));
+- (void)rotate:(simd_quatf)from to:(simd_quatf)to NS_SWIFT_NAME(rotate(from:to:));
 #endif
 
 @end
