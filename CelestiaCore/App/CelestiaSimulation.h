@@ -11,7 +11,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CelestiaCore/CelestiaObserver.h>
-#include <simd/types.h>
+#include <simd/simd.h>
 
 @class CelestiaCompletion;
 @class CelestiaSelection;
@@ -57,6 +57,8 @@ NS_SWIFT_NAME(Simulation)
 @property (nullable, readonly) CelestiaGoToLocation *currentLocation;
 
 @property (readonly) CelestiaUniverse *universe;
+
+@property (nonatomic) simd_quatf observerQuaternion;
 
 - (CelestiaSelection *)findObjectFromPath:(NSString *)path NS_SWIFT_NAME(findObject(from:));
 

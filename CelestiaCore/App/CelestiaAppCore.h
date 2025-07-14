@@ -49,6 +49,9 @@ typedef NS_ENUM(NSUInteger, CelestiaJoystickAxis) {
     CelestiaJoystickAxisX           = 0,
     CelestiaJoystickAxisY           = 1,
     CelestiaJoystickAxisZ           = 2,
+    CelestiaJoystickAxisRightX      = 3,
+    CelestiaJoystickAxisRightY      = 4,
+    CelestiaJoystickAxisRightZ      = 5,
 } NS_SWIFT_NAME(JoystickAxis);
 
 typedef NS_ENUM(NSUInteger, CelestiaJoystickButton) {
