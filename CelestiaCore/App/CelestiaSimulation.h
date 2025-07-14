@@ -71,7 +71,6 @@ NS_SWIFT_NAME(Simulation)
 - (void)goToDestination:(CelestiaDestination *)destination NS_SWIFT_NAME(goToDestination(_:));
 
 - (NSArray<CelestiaCompletion *> *)completionForName:(NSString *)name NS_SWIFT_NAME(completion(for:));
-- (void)setObserverTransform:(simd_float3x3)observerTransform;
 
 @end
 

@@ -238,15 +238,6 @@ typedef NS_OPTIONS(NSUInteger, CelestiaGoToLocationFieldMask) {
     return array;
 }
 
-- (void)setObserverTransform:(simd_float3x3)cameraTransform {
-    Eigen::Matrix3d m;
-    auto cols = cameraTransform.columns;
-    m << cols[0][0], cols[1][0], cols[2][0],
-         cols[0][1], cols[1][1], cols[2][1],
-         cols[0][2], cols[1][2], cols[2][2];
-    s->getActiveObserver()->setOrientationTransform(Eigen::Quaterniond(m));
-}
-
 - (simd_quatf)observerQuaternion {
     Eigen::Quaternionf q = s->getActiveObserver()->getOrientationTransform().cast<float>();
     return simd_quaternion(q.x(), q.y(), q.z(), q.w());
