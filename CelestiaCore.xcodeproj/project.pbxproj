@@ -392,6 +392,8 @@
 		EA9166B92B0C37FE00AF48B1 /* viewmanager.h in Headers */ = {isa = PBXBuildFile; fileRef = EA9166B02B0C37FE00AF48B1 /* viewmanager.h */; };
 		EA9E5A9E25FE483900348AEE /* appleutils.mm in Sources */ = {isa = PBXBuildFile; fileRef = EA9E5A9C25FE483800348AEE /* appleutils.mm */; };
 		EA9E5A9F25FE483900348AEE /* appleutils.h in Headers */ = {isa = PBXBuildFile; fileRef = EA9E5A9D25FE483900348AEE /* appleutils.h */; };
+		EAAD79172E280DA800CA2195 /* referencemarkrenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAAD79162E280DA800CA2195 /* referencemarkrenderer.cpp */; };
+		EAAD79182E280DA800CA2195 /* referencemarkrenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = EAAD79152E280DA800CA2195 /* referencemarkrenderer.h */; };
 		EAB08FE927807E2500BB82F0 /* charconv_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = EAB08FE527807E2500BB82F0 /* charconv_impl.h */; };
 		EAB08FEA27807E2500BB82F0 /* numbers.h in Headers */ = {isa = PBXBuildFile; fileRef = EAB08FE627807E2500BB82F0 /* numbers.h */; };
 		EAB08FEB27807E2500BB82F0 /* numbers_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = EAB08FE727807E2500BB82F0 /* numbers_impl.h */; };
@@ -828,6 +830,8 @@
 		EA9166B02B0C37FE00AF48B1 /* viewmanager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = viewmanager.h; sourceTree = "<group>"; };
 		EA9E5A9C25FE483800348AEE /* appleutils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = appleutils.mm; sourceTree = "<group>"; };
 		EA9E5A9D25FE483900348AEE /* appleutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = appleutils.h; sourceTree = "<group>"; };
+		EAAD79152E280DA800CA2195 /* referencemarkrenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = referencemarkrenderer.h; sourceTree = "<group>"; };
+		EAAD79162E280DA800CA2195 /* referencemarkrenderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = referencemarkrenderer.cpp; sourceTree = "<group>"; };
 		EAB08FE527807E2500BB82F0 /* charconv_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = charconv_impl.h; sourceTree = "<group>"; };
 		EAB08FE627807E2500BB82F0 /* numbers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = numbers.h; sourceTree = "<group>"; };
 		EAB08FE727807E2500BB82F0 /* numbers_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = numbers_impl.h; sourceTree = "<group>"; };
@@ -1504,6 +1508,8 @@
 		EA0E06C328C0C160004F6DF7 /* celrender */ = {
 			isa = PBXGroup;
 			children = (
+				EAAD79152E280DA800CA2195 /* referencemarkrenderer.h */,
+				EAAD79162E280DA800CA2195 /* referencemarkrenderer.cpp */,
 				EAD7D8EA2BC7A90700CB5AA7 /* skygridrenderer.cpp */,
 				EAD7D8E92BC7A90700CB5AA7 /* skygridrenderer.h */,
 				EA2EBC9F29DD45CA00EE0D84 /* asterismrenderer.cpp */,
@@ -1613,6 +1619,7 @@
 				EAE8466F2B443F60008A146D /* tee.h in Headers */,
 				9751DC2623594A8000299997 /* celx.h in Headers */,
 				971A66C223019C20009E4EA1 /* multitexture.h in Headers */,
+				EAAD79182E280DA800CA2195 /* referencemarkrenderer.h in Headers */,
 				97AD599A235B016C0056CA80 /* scriptmaps.h in Headers */,
 				EA63E97B2C1AA8B600ED8EE9 /* renderlistentry.h in Headers */,
 				974A6B2023532EC4007BCABD /* rectangle.h in Headers */,
@@ -2052,6 +2059,7 @@
 				971A66EE23019C21009E4EA1 /* starcolors.cpp in Sources */,
 				971A663323019C03009E4EA1 /* eclipsefinder.cpp in Sources */,
 				EA3FFB162A13746F00C6158F /* nebularenderer.cpp in Sources */,
+				EAAD79172E280DA800CA2195 /* referencemarkrenderer.cpp in Sources */,
 				971A666223019C15009E4EA1 /* nutation.cpp in Sources */,
 				EA14B03B2A51BC7C00F069C0 /* perspectiveprojectionmode.cpp in Sources */,
 				971A66BD23019C20009E4EA1 /* meshmanager.cpp in Sources */,

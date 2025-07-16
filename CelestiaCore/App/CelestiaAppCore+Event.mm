@@ -209,7 +209,7 @@ enum {
 }
 
 - (void)joystickAxis:(CelestiaJoystickAxis)axis amount:(float)amount {
-    [self appCoreJoystickAxis:(int)axis amount:amount];
+    [self appCoreJoystickAxis:axis amount:amount];
 }
 
 // MARK: Private

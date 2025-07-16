@@ -35,6 +35,6 @@
 // MARK: Joystick events
 - (void)appCoreJoystickButtonUp:(int)button;
 - (void)appCoreJoystickButtonDown:(int)button;
-- (void)appCoreJoystickAxis:(int)axis amount:(float)amount;
+- (void)appCoreJoystickAxis:(CelestiaJoystickAxis)axis amount:(float)amount;
 
 @end

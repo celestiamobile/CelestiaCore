@@ -56,7 +56,7 @@
     core->joystickButton(button, true);
 }
 
-- (void)appCoreJoystickAxis:(int)axis amount:(float)amount {
-    core->joystickAxis(axis, amount);
+- (void)appCoreJoystickAxis:(CelestiaJoystickAxis)axis amount:(float)amount {
+    core->joystickAxis(static_cast<CelestiaCore::JoyAxis>(axis), amount);
 }
 @end
