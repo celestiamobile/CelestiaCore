@@ -195,6 +195,7 @@ typedef NS_ENUM(NSInteger, CelestiaLayoutDirection) {
 @property BOOL enableReverseWheel;
 @property BOOL enableRayBasedDragging;
 @property BOOL enableFocusZooming;
+@property BOOL enableAlignCameraToSurfaceOnLand;
 
 @property CelestiaOverlayElements overlayElements;
 

@@ -330,6 +330,10 @@ INTERACTIONMETHODS(ReverseWheel);
 INTERACTIONMETHODS(RayBasedDragging);
 INTERACTIONMETHODS(FocusZooming);
 
+#define OBSERVERMETHODS(flag)  -(BOOL) enable##flag { return static_cast<BOOL>(celestia::util::is_set(core->getObserverFlags(), celestia::engine::ObserverFlags::flag)); } -(void) setEnable##flag: (BOOL) value  { auto flags = core->getObserverFlags();celestia::util::set_or_unset(flags, celestia::engine::ObserverFlags::flag, static_cast<bool>(value));core->setObserverFlags(flags); }
+
+OBSERVERMETHODS(AlignCameraToSurfaceOnLand);
+
 - (CelestiaOverlayElements)overlayElements {
     return static_cast<CelestiaOverlayElements>(core->getOverlayElements());
 }
