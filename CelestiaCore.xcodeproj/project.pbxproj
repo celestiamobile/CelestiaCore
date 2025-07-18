@@ -402,8 +402,6 @@
 		EAB18D392CB5D81400696A11 /* completion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAB18D382CB5D81400696A11 /* completion.cpp */; };
 		EAB18D992AF14AC400C2B010 /* sampfile.h in Headers */ = {isa = PBXBuildFile; fileRef = EAB18D972AF14AC400C2B010 /* sampfile.h */; };
 		EAB18D9A2AF14AC400C2B010 /* sampfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAB18D982AF14AC400C2B010 /* sampfile.cpp */; };
-		EAC5623F2529FAA8008D10F0 /* mapmanager.h in Headers */ = {isa = PBXBuildFile; fileRef = EAC5623D2529FAA8008D10F0 /* mapmanager.h */; };
-		EAC562402529FAA8008D10F0 /* mapmanager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAC5623E2529FAA8008D10F0 /* mapmanager.cpp */; };
 		EAC562442529FAB4008D10F0 /* viewporteffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAC562422529FAB4008D10F0 /* viewporteffect.cpp */; };
 		EAC562452529FAB4008D10F0 /* viewporteffect.h in Headers */ = {isa = PBXBuildFile; fileRef = EAC562432529FAB4008D10F0 /* viewporteffect.h */; };
 		EAD4FBA02743EBC0005E3369 /* randutils.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD4FB9E2743EBC0005E3369 /* randutils.h */; };
@@ -414,6 +412,8 @@
 		EAD4FBA92743ECC8005E3369 /* tokenizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAD4FBA72743ECC8005E3369 /* tokenizer.cpp */; };
 		EAD7D8EB2BC7A90700CB5AA7 /* skygridrenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD7D8E92BC7A90700CB5AA7 /* skygridrenderer.h */; };
 		EAD7D8EC2BC7A90700CB5AA7 /* skygridrenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAD7D8EA2BC7A90700CB5AA7 /* skygridrenderer.cpp */; };
+		EADB36C92E296A440045A458 /* warpmesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EADB36C82E296A440045A458 /* warpmesh.cpp */; };
+		EADB36CA2E296A440045A458 /* warpmesh.h in Headers */ = {isa = PBXBuildFile; fileRef = EADB36C72E296A440045A458 /* warpmesh.h */; };
 		EADDA21928ACF95F004460A6 /* glcompat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EADDA21728ACF95F004460A6 /* glcompat.cpp */; };
 		EADDA21A28ACF95F004460A6 /* glcompat.h in Headers */ = {isa = PBXBuildFile; fileRef = EADDA21828ACF95F004460A6 /* glcompat.h */; };
 		EAE5F38C27758463005A3022 /* logger.h in Headers */ = {isa = PBXBuildFile; fileRef = EAE5F38A27758463005A3022 /* logger.h */; };
@@ -840,8 +840,6 @@
 		EAB18D382CB5D81400696A11 /* completion.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = completion.cpp; sourceTree = "<group>"; };
 		EAB18D972AF14AC400C2B010 /* sampfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sampfile.h; sourceTree = "<group>"; };
 		EAB18D982AF14AC400C2B010 /* sampfile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sampfile.cpp; sourceTree = "<group>"; };
-		EAC5623D2529FAA8008D10F0 /* mapmanager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mapmanager.h; sourceTree = "<group>"; };
-		EAC5623E2529FAA8008D10F0 /* mapmanager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mapmanager.cpp; sourceTree = "<group>"; };
 		EAC562422529FAB4008D10F0 /* viewporteffect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = viewporteffect.cpp; sourceTree = "<group>"; };
 		EAC562432529FAB4008D10F0 /* viewporteffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = viewporteffect.h; sourceTree = "<group>"; };
 		EAD4FB9E2743EBC0005E3369 /* randutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = randutils.h; sourceTree = "<group>"; };
@@ -852,6 +850,8 @@
 		EAD4FBA72743ECC8005E3369 /* tokenizer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tokenizer.cpp; sourceTree = "<group>"; };
 		EAD7D8E92BC7A90700CB5AA7 /* skygridrenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = skygridrenderer.h; sourceTree = "<group>"; };
 		EAD7D8EA2BC7A90700CB5AA7 /* skygridrenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = skygridrenderer.cpp; sourceTree = "<group>"; };
+		EADB36C72E296A440045A458 /* warpmesh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = warpmesh.h; sourceTree = "<group>"; };
+		EADB36C82E296A440045A458 /* warpmesh.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = warpmesh.cpp; sourceTree = "<group>"; };
 		EADDA21728ACF95F004460A6 /* glcompat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glcompat.cpp; sourceTree = "<group>"; };
 		EADDA21828ACF95F004460A6 /* glcompat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glcompat.h; sourceTree = "<group>"; };
 		EAE5F38A27758463005A3022 /* logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = logger.h; sourceTree = "<group>"; };
@@ -1161,6 +1161,8 @@
 		977D81C222FDB1F5002FF1C2 /* celengine */ = {
 			isa = PBXGroup;
 			children = (
+				EADB36C72E296A440045A458 /* warpmesh.h */,
+				EADB36C82E296A440045A458 /* warpmesh.cpp */,
 				EA51CC8E2D7A2786009434AA /* renderflags.h */,
 				EAB18D362CB5CAA900696A11 /* completion.h */,
 				EAB18D382CB5D81400696A11 /* completion.cpp */,
@@ -1227,8 +1229,6 @@
 				977D823722FDB23D002FF1C2 /* location.h */,
 				977D81D622FDB237002FF1C2 /* lodspheremesh.cpp */,
 				977D81F222FDB239002FF1C2 /* lodspheremesh.h */,
-				EAC5623E2529FAA8008D10F0 /* mapmanager.cpp */,
-				EAC5623D2529FAA8008D10F0 /* mapmanager.h */,
 				977D820522FDB23A002FF1C2 /* marker.cpp */,
 				977D81C522FDB236002FF1C2 /* marker.h */,
 				977D81EA22FDB238002FF1C2 /* meshmanager.cpp */,
@@ -1708,6 +1708,7 @@
 				971A665F23019C15009E4EA1 /* customrotation.h in Headers */,
 				971A66C423019C20009E4EA1 /* name.h in Headers */,
 				971A664F23019C0F009E4EA1 /* formatnum.h in Headers */,
+				EADB36CA2E296A440045A458 /* warpmesh.h in Headers */,
 				971A66E923019C21009E4EA1 /* spheremesh.h in Headers */,
 				EA1F11A5288A3ADF00D8698F /* miniaudiosession.h in Headers */,
 				9751DC1F23594A8000299997 /* celx_position.h in Headers */,
@@ -1728,7 +1729,6 @@
 				EA6671DD29B4AB1A00A7846E /* r128.h in Headers */,
 				974A6B1D23532EA1007BCABD /* overlayimage.h in Headers */,
 				9751DC2E23594A8600299997 /* execenv.h in Headers */,
-				EAC5623F2529FAA8008D10F0 /* mapmanager.h in Headers */,
 				971A66DA23019C20009E4EA1 /* renderglsl.h in Headers */,
 				971A66C923019C20009E4EA1 /* octree.h in Headers */,
 				971A666323019C15009E4EA1 /* nutation.h in Headers */,
@@ -2038,7 +2038,6 @@
 				EA59EA3626213CB4001E5B9D /* jpeg.cpp in Sources */,
 				971A670D23019C21009E4EA1 /* virtualtex.cpp in Sources */,
 				EA59EA3526213CB4001E5B9D /* dds.cpp in Sources */,
-				EAC562402529FAA8008D10F0 /* mapmanager.cpp in Sources */,
 				971A667223019C15009E4EA1 /* scriptrotation.cpp in Sources */,
 				971A66C523019C20009E4EA1 /* nebula.cpp in Sources */,
 				971A669423019C20009E4EA1 /* constellation.cpp in Sources */,
@@ -2112,6 +2111,7 @@
 				EA9166A62B0C37D200AF48B1 /* units.cpp in Sources */,
 				971A669223019C20009E4EA1 /* console.cpp in Sources */,
 				974A6B1E23532EA1007BCABD /* overlayimage.cpp in Sources */,
+				EADB36C92E296A440045A458 /* warpmesh.cpp in Sources */,
 				EAFFE03B2882F7BE007DEBC2 /* textprintposition.cpp in Sources */,
 				EAB18D9A2AF14AC400C2B010 /* sampfile.cpp in Sources */,
 				EA4BB3362B46481000B36E44 /* binder.cpp in Sources */,
