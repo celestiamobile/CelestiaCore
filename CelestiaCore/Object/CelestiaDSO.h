@@ -13,12 +13,20 @@
 
 @class CelestiaVector;
 
+typedef NS_ENUM(NSUInteger, CelestiaDSOType) {
+    CelestiaDSOTypeGalaxy,
+    CelestiaDSOTypeGlobular,
+    CelestiaDSOTypeNebula,
+    CelestiaDSOTypeOpenCluster,
+} NS_SWIFT_NAME(DSOType);
+
 NS_ASSUME_NONNULL_BEGIN
 
 NS_SWIFT_NAME(DSO)
 @interface CelestiaDSO : CelestiaAstroObject
 
 @property (readonly) NSString *type;
+@property (readonly) CelestiaDSOType objectType;
 @property (readonly) NSString *dsoDescription;
 
 @property (nullable, readonly) NSString *webInfoURL;

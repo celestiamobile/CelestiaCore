@@ -33,6 +33,10 @@
     return [NSString stringWithUTF8String:[self DSO]->getType()];
 }
 
+- (CelestiaDSOType)objectType {
+    return static_cast<CelestiaDSOType>([self DSO]->getObjType());
+}
+
 - (NSString *)dsoDescription {
     return [NSString stringWithUTF8String:[self DSO]->getDescription().c_str()];
 }
