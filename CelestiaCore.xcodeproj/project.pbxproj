@@ -227,7 +227,7 @@
 		9751DC1623594A8000299997 /* celx_internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 9751DBD723594A5300299997 /* celx_internal.h */; };
 		9751DC1723594A8000299997 /* celx_observer.h in Headers */ = {isa = PBXBuildFile; fileRef = 9751DBD823594A5300299997 /* celx_observer.h */; };
 		9751DC1823594A8000299997 /* celx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9751DBD923594A5300299997 /* celx.cpp */; };
-		9751DC1923594A8000299997 /* celx_celestia.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9751DBDA23594A5300299997 /* celx_celestia.cpp */; settings = {COMPILER_FLAGS = "-x objective-c++"; }; };
+		9751DC1923594A8000299997 /* celx_celestia.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9751DBDA23594A5300299997 /* celx_celestia.cpp */; };
 		9751DC1A23594A8000299997 /* celx_gl.h in Headers */ = {isa = PBXBuildFile; fileRef = 9751DBDB23594A5300299997 /* celx_gl.h */; };
 		9751DC1B23594A8000299997 /* celx_category.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9751DBDC23594A5300299997 /* celx_category.cpp */; };
 		9751DC1C23594A8000299997 /* celx_object.h in Headers */ = {isa = PBXBuildFile; fileRef = 9751DBDD23594A5300299997 /* celx_object.h */; };
@@ -274,6 +274,7 @@
 		EA0D014929C0A15700B86EED /* textlayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0D014729C0A15700B86EED /* textlayout.cpp */; };
 		EA0E06C728C0C160004F6DF7 /* linerenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = EA0E06C528C0C160004F6DF7 /* linerenderer.h */; };
 		EA0E06C828C0C160004F6DF7 /* linerenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0E06C628C0C160004F6DF7 /* linerenderer.cpp */; };
+		EA0F49212E36148E0052C5B2 /* miniaudiosession.mm in Sources */ = {isa = PBXBuildFile; fileRef = EA0F49202E36148E0052C5B2 /* miniaudiosession.mm */; };
 		EA10A2632D84094500A27213 /* associativearray.h in Headers */ = {isa = PBXBuildFile; fileRef = EA10A25F2D84094500A27213 /* associativearray.h */; };
 		EA10A2642D84094500A27213 /* parser.h in Headers */ = {isa = PBXBuildFile; fileRef = EA10A2612D84094500A27213 /* parser.h */; };
 		EA10A2652D84094500A27213 /* parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA10A2622D84094500A27213 /* parser.cpp */; };
@@ -289,7 +290,6 @@
 		EA171F2A2AA81C9A00583564 /* image.h in Headers */ = {isa = PBXBuildFile; fileRef = EA171F282AA81C9A00583564 /* image.h */; };
 		EA171F2C2AA81CA100583564 /* pixelformat.h in Headers */ = {isa = PBXBuildFile; fileRef = EA171F2B2AA81CA100583564 /* pixelformat.h */; };
 		EA1F11A1288A3A2600D8698F /* audiosession.h in Headers */ = {isa = PBXBuildFile; fileRef = EA1F119F288A3A2600D8698F /* audiosession.h */; };
-		EA1F11A4288A3ADF00D8698F /* miniaudiosession.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA1F11A2288A3ADF00D8698F /* miniaudiosession.cpp */; settings = {COMPILER_FLAGS = "-x objective-c++"; }; };
 		EA1F11A5288A3ADF00D8698F /* miniaudiosession.h in Headers */ = {isa = PBXBuildFile; fileRef = EA1F11A3288A3ADF00D8698F /* miniaudiosession.h */; };
 		EA1F11B2288B241100D8698F /* audiosession.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA1F11B1288B241100D8698F /* audiosession.cpp */; };
 		EA2166FA2973C08D001477DE /* cometrenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA2166F62973C08C001477DE /* cometrenderer.cpp */; };
@@ -711,6 +711,7 @@
 		EA0D014729C0A15700B86EED /* textlayout.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = textlayout.cpp; sourceTree = "<group>"; };
 		EA0E06C528C0C160004F6DF7 /* linerenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = linerenderer.h; sourceTree = "<group>"; };
 		EA0E06C628C0C160004F6DF7 /* linerenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = linerenderer.cpp; sourceTree = "<group>"; };
+		EA0F49202E36148E0052C5B2 /* miniaudiosession.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = miniaudiosession.mm; sourceTree = "<group>"; };
 		EA10A25F2D84094500A27213 /* associativearray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = associativearray.h; sourceTree = "<group>"; };
 		EA10A2602D84094500A27213 /* associativearray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = associativearray.cpp; sourceTree = "<group>"; };
 		EA10A2612D84094500A27213 /* parser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = parser.h; sourceTree = "<group>"; };
@@ -1430,6 +1431,7 @@
 		977D833422FDB287002FF1C2 /* celestia */ = {
 			isa = PBXGroup;
 			children = (
+				EA0F49202E36148E0052C5B2 /* miniaudiosession.mm */,
 				EA1F11B1288B241100D8698F /* audiosession.cpp */,
 				EA1F119F288A3A2600D8698F /* audiosession.h */,
 				EAE8464C2B3AE659008A146D /* catalogloader.h */,
@@ -1991,7 +1993,6 @@
 				EAD4FBA12743EBC0005E3369 /* randutils.cpp in Sources */,
 				973B9C8A2459908600BDBEDB /* dsorenderer.cpp in Sources */,
 				971A671423019C26009E4EA1 /* 3dsread.cpp in Sources */,
-				EA1F11A4288A3ADF00D8698F /* miniaudiosession.cpp in Sources */,
 				971A664C23019C0F009E4EA1 /* filetype.cpp in Sources */,
 				971A665E23019C15009E4EA1 /* customrotation.cpp in Sources */,
 				971A664623019C0F009E4EA1 /* color.cpp in Sources */,
@@ -2069,6 +2070,7 @@
 				EA171F292AA81C9A00583564 /* image.cpp in Sources */,
 				971A665423019C0F009E4EA1 /* timer.cpp in Sources */,
 				EA9166B12B0C37FE00AF48B1 /* viewmanager.cpp in Sources */,
+				EA0F49212E36148E0052C5B2 /* miniaudiosession.mm in Sources */,
 				971A665C23019C15009E4EA1 /* customorbit.cpp in Sources */,
 				EAB18D392CB5D81400696A11 /* completion.cpp in Sources */,
 				971A666823019C15009E4EA1 /* rotation.cpp in Sources */,
