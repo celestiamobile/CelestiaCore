@@ -49,6 +49,9 @@ NS_SWIFT_NAME(BrowserItem)
                     children:(NSDictionary<NSString *, CelestiaBrowserItem *> *)children;
 - (instancetype)initWithName:(NSString *)name
              orderedChildren:(NSArray<CelestiaBrowserItemKeyValuePair *> *)children;
+- (instancetype)initWithName:(NSString *)name
+             alternativeName:(nullable NSString *)alternativeName
+             orderedChildren:(NSArray<CelestiaBrowserItemKeyValuePair *> *)children;
 
 - (void)setChildren:(NSDictionary<NSString *, CelestiaBrowserItem *> *)children;
 
