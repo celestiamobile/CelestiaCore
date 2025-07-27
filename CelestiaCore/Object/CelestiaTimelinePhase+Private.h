@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CelestiaTimelinePhase (Private)
 
-- (instancetype)initWithTimelinePhase:(const TimelinePhase::SharedConstPtr&)timelinePhase;
+- (instancetype)initWithTimelinePhase:(const TimelinePhase&)timelinePhase;
 
 @end
 

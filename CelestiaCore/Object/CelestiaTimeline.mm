@@ -25,7 +25,7 @@
 }
 
 - (CelestiaTimelinePhase *)phaseAtIndex:(NSInteger)index {
-    return [[CelestiaTimelinePhase alloc] initWithTimelinePhase:t->getPhase((unsigned int)index)];
+    return [[CelestiaTimelinePhase alloc] initWithTimelinePhase:t->getPhase(static_cast<unsigned int>(index))];
 }
 
 @end

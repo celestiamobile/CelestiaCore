@@ -14,34 +14,34 @@
 #import "CelestiaTimelinePhase+Private.h"
 
 @interface CelestiaTimelinePhase () {
-    TimelinePhase::SharedConstPtr p;
+    double phaseStartTime;
+    double phaseEndTime;
 }
 @end
 
 @implementation CelestiaTimelinePhase
 
 - (NSDate *)startTime {
-    double startTime = p->startTime();
-    if (std::isinf(startTime))
+    if (std::isinf(phaseStartTime))
         return nil;
-    return [NSDate dateWithJulian:startTime];
+    return [NSDate dateWithJulian:phaseStartTime];
 }
 
 - (NSDate *)endTime {
-    double endTime = p->endTime();
-    if (std::isinf(endTime))
+    if (std::isinf(phaseEndTime))
         return nil;
-    return [NSDate dateWithJulian:endTime];
+    return [NSDate dateWithJulian:phaseEndTime];
 }
 
 @end
 
 @implementation CelestiaTimelinePhase (Private)
 
-- (instancetype)initWithTimelinePhase:(const TimelinePhase::SharedConstPtr&)timelinePhase {
+- (instancetype)initWithTimelinePhase:(const TimelinePhase&)timelinePhase {
     self = [super init];
     if (self) {
-        p = timelinePhase;
+        phaseStartTime = timelinePhase.startTime();
+        phaseEndTime = timelinePhase.endTime();
     }
     return self;
 }
