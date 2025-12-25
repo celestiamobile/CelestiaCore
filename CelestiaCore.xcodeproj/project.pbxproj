@@ -416,6 +416,9 @@
 		EADB36CA2E296A440045A458 /* warpmesh.h in Headers */ = {isa = PBXBuildFile; fileRef = EADB36C72E296A440045A458 /* warpmesh.h */; };
 		EADDA21928ACF95F004460A6 /* glcompat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EADDA21728ACF95F004460A6 /* glcompat.cpp */; };
 		EADDA21A28ACF95F004460A6 /* glcompat.h in Headers */ = {isa = PBXBuildFile; fileRef = EADDA21828ACF95F004460A6 /* glcompat.h */; };
+		EAE2E5D62EFCF6B2006D6FB6 /* atmosphere.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAE2E5D52EFCF6B2006D6FB6 /* atmosphere.cpp */; };
+		EAE2E5D92EFCF6E7006D6FB6 /* buffile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAE2E5D82EFCF6E7006D6FB6 /* buffile.cpp */; };
+		EAE2E5DA2EFCF6E7006D6FB6 /* buffile.h in Headers */ = {isa = PBXBuildFile; fileRef = EAE2E5D72EFCF6E7006D6FB6 /* buffile.h */; };
 		EAE5F38C27758463005A3022 /* logger.h in Headers */ = {isa = PBXBuildFile; fileRef = EAE5F38A27758463005A3022 /* logger.h */; };
 		EAE5F38D27758463005A3022 /* logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAE5F38B27758463005A3022 /* logger.cpp */; };
 		EAE846512B3AE659008A146D /* loadstars.h in Headers */ = {isa = PBXBuildFile; fileRef = EAE846492B3AE659008A146D /* loadstars.h */; };
@@ -855,6 +858,9 @@
 		EADB36C82E296A440045A458 /* warpmesh.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = warpmesh.cpp; sourceTree = "<group>"; };
 		EADDA21728ACF95F004460A6 /* glcompat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glcompat.cpp; sourceTree = "<group>"; };
 		EADDA21828ACF95F004460A6 /* glcompat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glcompat.h; sourceTree = "<group>"; };
+		EAE2E5D52EFCF6B2006D6FB6 /* atmosphere.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = atmosphere.cpp; sourceTree = "<group>"; };
+		EAE2E5D72EFCF6E7006D6FB6 /* buffile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = buffile.h; sourceTree = "<group>"; };
+		EAE2E5D82EFCF6E7006D6FB6 /* buffile.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = buffile.cpp; sourceTree = "<group>"; };
 		EAE5F38A27758463005A3022 /* logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = logger.h; sourceTree = "<group>"; };
 		EAE5F38B27758463005A3022 /* logger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = logger.cpp; sourceTree = "<group>"; };
 		EAE846492B3AE659008A146D /* loadstars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loadstars.h; sourceTree = "<group>"; };
@@ -1162,6 +1168,7 @@
 		977D81C222FDB1F5002FF1C2 /* celengine */ = {
 			isa = PBXGroup;
 			children = (
+				EAE2E5D52EFCF6B2006D6FB6 /* atmosphere.cpp */,
 				EADB36C72E296A440045A458 /* warpmesh.h */,
 				EADB36C82E296A440045A458 /* warpmesh.cpp */,
 				EA51CC8E2D7A2786009434AA /* renderflags.h */,
@@ -1368,6 +1375,8 @@
 		977D833222FDB279002FF1C2 /* celutil */ = {
 			isa = PBXGroup;
 			children = (
+				EAE2E5D72EFCF6E7006D6FB6 /* buffile.h */,
+				EAE2E5D82EFCF6E7006D6FB6 /* buffile.cpp */,
 				EA10A25F2D84094500A27213 /* associativearray.h */,
 				EA10A2602D84094500A27213 /* associativearray.cpp */,
 				EA10A2612D84094500A27213 /* parser.h */,
@@ -1782,6 +1791,7 @@
 				971A672323019C2B009E4EA1 /* ray.h in Headers */,
 				971A665D23019C15009E4EA1 /* customorbit.h in Headers */,
 				EA2EBCB129DD669500EE0D84 /* unicode.h in Headers */,
+				EAE2E5DA2EFCF6E7006D6FB6 /* buffile.h in Headers */,
 				971A66D823019C20009E4EA1 /* render.h in Headers */,
 				EA171F2C2AA81CA100583564 /* pixelformat.h in Headers */,
 				EA6A00592B95E4730049A5AA /* ringrenderer.h in Headers */,
@@ -2001,6 +2011,7 @@
 				971A66EC23019C21009E4EA1 /* starbrowser.cpp in Sources */,
 				971A66DE23019C20009E4EA1 /* selection.cpp in Sources */,
 				971A671223019C26009E4EA1 /* 3dsmodel.cpp in Sources */,
+				EAE2E5D92EFCF6E7006D6FB6 /* buffile.cpp in Sources */,
 				971A66F623019C21009E4EA1 /* stellarclass.cpp in Sources */,
 				97AD59C0235B1B760056CA80 /* script.cpp in Sources */,
 				971A661423019C03009E4EA1 /* celestiacore.cpp in Sources */,
@@ -2022,6 +2033,7 @@
 				EA9166B52B0C37FE00AF48B1 /* textinput.cpp in Sources */,
 				EA9166A22B0C37D200AF48B1 /* date.cpp in Sources */,
 				9751DC2323594A8000299997 /* celx_gl.cpp in Sources */,
+				EAE2E5D62EFCF6B2006D6FB6 /* atmosphere.cpp in Sources */,
 				971A670723019C21009E4EA1 /* universe.cpp in Sources */,
 				97B5E2D5239689B9006F35B4 /* pointstarvertexbuffer.cpp in Sources */,
 				971A662F23019C03009E4EA1 /* configfile.cpp in Sources */,
