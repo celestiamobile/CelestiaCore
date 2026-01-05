@@ -99,26 +99,10 @@ private:
     void (^block)(CGPoint, CelestiaSelection *);
 };
 
-class AppCoreWatcher: public CelestiaWatcher
-{
-public:
-    AppCoreWatcher(CelestiaCore& watched, void (^block)(CelestiaWatcherFlags)) : CelestiaWatcher(watched), block(block) {}
-
-    void notifyChange(CelestiaCore *, int change)
-    {
-        @autoreleasepool {
-            block((CelestiaWatcherFlags)change);
-        }
-    }
-private:
-    void (^block)(CelestiaWatcherFlags);
-};
-
 @interface CelestiaAppCore () {
     AppCoreAlerter *alerter;
     AppCoreCursorHandler *cursorHandler;
     AppCoreContextMenuHandler *internalContextMenuHandler;
-    AppCoreWatcher *watcher;
 
     CelestiaSimulation *_simulation;
 }
@@ -166,9 +150,6 @@ private:
             @autoreleasepool {
                 return scriptSystemAccessHandler();
             }
-        });
-        watcher = new AppCoreWatcher(*core, ^(CelestiaWatcherFlags changedFlags) {
-            [[weakSelf delegate] celestiaAppCoreWatchedFlagsDidChange:changedFlags];
         });
     }
     return self;
@@ -417,7 +398,6 @@ private:
     core->setCursorHandler(nullptr);
     core->setContextMenuHandler(nullptr);
     core->setScriptSystemAccessHandler(std::nullopt);
-    delete watcher;
     delete alerter;
     delete cursorHandler;
     delete internalContextMenuHandler;
