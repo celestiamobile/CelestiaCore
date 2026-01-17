@@ -303,7 +303,7 @@ FEATUREMETHODS(Other)
 // Texture Settings
 
 - (NSInteger)resolution { return static_cast<NSInteger>(core->getRenderer()->getResolution()); }
-- (void)setResolution:(NSInteger)value { core->getRenderer()->setResolution(static_cast<TextureResolution>(value)); }
+- (void)setResolution:(NSInteger)value { core->getRenderer()->setResolution(static_cast<celestia::engine::TextureResolution>(value)); }
 
 // Overlay Settings
 

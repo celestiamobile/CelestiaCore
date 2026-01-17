@@ -177,7 +177,7 @@ private:
 }
 
 - (BOOL)startRenderer {
-    BOOL success = core->initRenderer() ? YES : NO;
+    BOOL success = core->initRenderer(celestia::engine::TextureResolution::medres) ? YES : NO;
 
     // start with default values
     constexpr auto DEFAULT_ORBIT_MASK = BodyClassification::Planet | BodyClassification::Moon | BodyClassification::Stellar;
@@ -186,7 +186,6 @@ private:
     constexpr float DEFAULT_VISUAL_MAGNITUDE = 8.0f;
     constexpr StarStyle DEFAULT_STAR_STYLE = StarStyle::FuzzyPointStars;
     constexpr ColorTableType DEFAULT_STARS_COLOR = ColorTableType::SunWhite;
-    constexpr auto DEFAULT_TEXTURE_RESOLUTION = TextureResolution::medres;
     constexpr float DEFAULT_TINT_SATURATION = 0.5f;
 
     core->getRenderer()->setRenderFlags(RenderFlags::DefaultRenderFlags);
@@ -195,7 +194,6 @@ private:
     core->getRenderer()->setAmbientLightLevel(DEFAULT_AMBIENT_LIGHT_LEVEL);
     core->getRenderer()->setTintSaturation(DEFAULT_TINT_SATURATION);
     core->getRenderer()->setStarStyle(DEFAULT_STAR_STYLE);
-    core->getRenderer()->setResolution(DEFAULT_TEXTURE_RESOLUTION);
     core->getRenderer()->setStarColorTable(DEFAULT_STARS_COLOR);
 
     core->getSimulation()->setFaintestVisible(DEFAULT_VISUAL_MAGNITUDE);

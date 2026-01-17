@@ -34,7 +34,6 @@ FOUNDATION_EXPORT const unsigned char CelestiaCoreVersionString[];
 #import <CelestiaCore/CelestiaFrameBuffer.h>
 #import <CelestiaCore/CelestiaUniversalCoord.h>
 #import <CelestiaCore/CelestiaUniverse+BrowserItem.h>
-#import <CelestiaCore/CelestiaTexture.h>
 
 #import <CelestiaCore/CelestiaSelection.h>
 #import <CelestiaCore/CelestiaCompletion.h>
@@ -46,7 +45,6 @@ FOUNDATION_EXPORT const unsigned char CelestiaCoreVersionString[];
 #import <CelestiaCore/CelestiaDSO.h>
 #import <CelestiaCore/CelestiaOrbit.h>
 #import <CelestiaCore/CelestiaRotationModel.h>
-#import <CelestiaCore/CelestiaAtmosphere.h>
 #import <CelestiaCore/CelestiaTimeline.h>
 #import <CelestiaCore/CelestiaTimelinePhase.h>
 

@@ -13,7 +13,6 @@
 @class CelestiaPlanetarySystem;
 @class CelestiaOrbit;
 @class CelestiaRotationModel;
-@class CelestiaAtmosphere;
 @class CelestiaTimeline;
 
 typedef NS_ENUM(NSUInteger, CelestiaBodyType) {
@@ -45,7 +44,6 @@ NS_SWIFT_NAME(Body)
 @property (nonatomic, readonly, getter=isEllipsoid) BOOL ellipsoid;
 @property (nonatomic, readonly) BOOL hasRings;
 @property (nonatomic, readonly) BOOL hasAtmosphere;
-@property (nonatomic, nullable, readonly) CelestiaAtmosphere *atomosphere;
 @property (nonatomic) float mass;
 @property (nonatomic) float geomAlbedo;
 @property (nonatomic, readonly) NSArray<NSString *> *alternateSurfaceNames;

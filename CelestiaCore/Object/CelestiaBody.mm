@@ -15,7 +15,6 @@
 #import "CelestiaRotationModel+Private.h"
 #import "CelestiaPlanetarySystem+Private.h"
 #import "CelestiaUtil.h"
-#import "CelestiaAtmosphere+Private.h"
 #import "CelestiaTimeline+Private.h"
 
 #import "CelestiaAppCore+Locale.h"
@@ -77,13 +76,6 @@
 
 - (BOOL)hasAtmosphere {
     return GetBodyFeaturesManager()->getAtmosphere([self body]) ? YES : NO;
-}
-
-- (CelestiaAtmosphere *)atomosphere {
-    Atmosphere *atmosphere = GetBodyFeaturesManager()->getAtmosphere([self body]);
-    if (atmosphere)
-        return [[CelestiaAtmosphere alloc] initWithAtmosphere:atmosphere];
-    return nil;
 }
 
 - (NSArray<NSString *> *)alternateSurfaceNames {
