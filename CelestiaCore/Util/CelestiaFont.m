@@ -28,7 +28,7 @@
 
     FT_Long faceNum = face->num_faces;
     FT_Done_Face(face);
-    if (face->num_faces <= 0)
+    if (faceNum <= 0)
         return nil;
 
     NSMutableArray *fontNames = [NSMutableArray array];
