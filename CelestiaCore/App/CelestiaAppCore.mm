@@ -300,6 +300,10 @@ private:
     core->runScript([path UTF8String], false);
 }
 
+- (void)cancelScript {
+    core->cancelScript();
+}
+
 - (void)goToURL:(NSString *)url {
     core->goToUrl([url UTF8String]);
 }

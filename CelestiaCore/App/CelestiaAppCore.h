@@ -168,6 +168,7 @@ NS_SWIFT_NAME(AppCore)
 @property (readonly) NSArray<CelestiaDestination *> *destinations;
 
 - (void)runScript:(NSString *)path NS_SWIFT_NAME(runScript(at:));
+- (void)cancelScript;
 - (void)goToURL:(NSString *)url NS_SWIFT_NAME(go(to:));
 
 - (BOOL)screenshot:(NSString *)filePath withFileSize:(CelestiaScreenshotFileType)type NS_SWIFT_NAME(screenshot(to:type:));
