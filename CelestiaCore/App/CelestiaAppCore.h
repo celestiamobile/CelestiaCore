@@ -124,6 +124,8 @@ NS_SWIFT_NAME(AppCore)
 @property (nonatomic, weak, nullable) id<CelestiaAppCoreDelegate> delegate;
 @property (nonatomic, weak, nullable) id<CelestiaAppCoreContextMenuHandler> contextMenuHandler;
 @property (nonatomic, readonly) CGSize size;
+@property (nonatomic) NSInteger screenDPI;
+@property (nonatomic) CGFloat textScaleFactor;
 
 @property (nonatomic, readonly) CelestiaAppState *state;
 
@@ -136,7 +138,6 @@ NS_SWIFT_NAME(AppCore)
 - (BOOL)startSimulationWithConfigFileName:(nullable NSString *)configFileName extraDirectories:(nullable NSArray<NSString *> *)extraDirectories progressReporter:(void (NS_NOESCAPE ^)(NSString *))reporter NS_SWIFT_NAME(startSimulation(configFileName:extraDirectories:progress:));
 
 - (BOOL)startRenderer;
-- (void)setDPI:(NSInteger)dpi;
 
 - (void)setStartURL:(nullable NSString *)startURL;
 - (void)start;

@@ -204,8 +204,20 @@ private:
     return success;
 }
 
-- (void)setDPI:(NSInteger)dpi {
-    core->setScreenDpi((int)dpi);
+- (NSInteger)screenDPI {
+    return static_cast<NSInteger>(core->getScreenDpi());
+}
+
+- (void)setScreenDPI:(NSInteger)screenDPI {
+    core->setScreenDpi(static_cast<int>(screenDPI));
+}
+
+- (CGFloat)textScaleFactor {
+    return static_cast<CGFloat>(core->getTextScaleFactor());
+}
+
+- (void)setTextScaleFactor:(CGFloat)textScaleFactor {
+    core->setTextScaleFactor(static_cast<float>(textScaleFactor));
 }
 
 - (void)setStartURL:(NSString *)startURL {
