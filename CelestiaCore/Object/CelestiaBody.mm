@@ -14,6 +14,7 @@
 #import "CelestiaOrbit+Private.h"
 #import "CelestiaRotationModel+Private.h"
 #import "CelestiaPlanetarySystem+Private.h"
+#import "CelestiaStarCatalog+Private.h"
 #import "CelestiaUtil.h"
 #import "CelestiaTimeline+Private.h"
 
@@ -117,6 +118,10 @@
 
 - (CelestiaRotationModel *)rotationAtTime:(NSDate *)time {
     return [[CelestiaRotationModel alloc] initWithRotation:[self body]->getRotationModel([time julianDay])];
+}
+
+- (NSString *)pathWithCatalog:(CelestiaStarCatalog *)starCatalog {
+    return [NSString stringWithUTF8String:[self body]->getPath([starCatalog database]).c_str()];
 }
 
 - (BOOL)canBeUsedAsCockpit {

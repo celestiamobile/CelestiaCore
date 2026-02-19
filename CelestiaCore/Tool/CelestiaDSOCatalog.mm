@@ -49,8 +49,8 @@
     return [[CelestiaDSO alloc] initWithDSO:dso];
 }
 
-- (NSString *)dsoName:(CelestiaDSO *)dso {
-    return [NSString stringWithUTF8String:d->getDSOName([dso DSO], true).c_str()];
+- (NSString *)dsoName:(CelestiaDSO *)dso localized:(BOOL)localized {
+    return [NSString stringWithUTF8String:d->getDSOName([dso DSO], static_cast<bool>(localized)).c_str()];
 }
 
 @end

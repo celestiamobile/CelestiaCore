@@ -43,9 +43,9 @@
     return [[CelestiaStar alloc] initWithStar:d->getStar((uint32_t)index)];
 }
 
-- (NSString *)starName:(CelestiaStar *)star {
+- (NSString *)starName:(CelestiaStar *)star localized:(BOOL)localized {
     Star *s = [star star];
-    return [NSString stringWithUTF8String:d->getStarName(*s, true).c_str()];
+    return [NSString stringWithUTF8String:d->getStarName(*s, static_cast<bool>(localized)).c_str()];
 }
 
 @end

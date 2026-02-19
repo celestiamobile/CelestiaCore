@@ -21,7 +21,7 @@ NS_SWIFT_NAME(StarCatalog)
 
 - (CelestiaStar *)objectAtIndex:(NSInteger)index;
 
-- (NSString *)starName:(CelestiaStar *)star;
+- (NSString *)starName:(CelestiaStar *)star localized:(BOOL)localized;
 
 @end
 

@@ -10,9 +10,10 @@
 
 #import <CelestiaCore/CelestiaAstroObject.h>
 
-@class CelestiaPlanetarySystem;
 @class CelestiaOrbit;
+@class CelestiaPlanetarySystem;
 @class CelestiaRotationModel;
+@class CelestiaStarCatalog;
 @class CelestiaTimeline;
 
 typedef NS_ENUM(NSUInteger, CelestiaBodyType) {
@@ -58,6 +59,7 @@ NS_SWIFT_NAME(Body)
 
 - (CelestiaOrbit *)orbitAtTime:(NSDate *)time NS_SWIFT_NAME(orbit(at:));
 - (CelestiaRotationModel *)rotationAtTime:(NSDate *)time NS_SWIFT_NAME(rotation(at:));
+- (NSString *)pathWithCatalog:(CelestiaStarCatalog *)starCatalog NS_SWIFT_NAME(path(with:));
 
 @end
 

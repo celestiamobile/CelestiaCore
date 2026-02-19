@@ -21,7 +21,7 @@ NS_SWIFT_NAME(DSOCatalog)
 
 - (CelestiaDSO *)objectAtIndex:(NSInteger)index;
 
-- (NSString *)dsoName:(CelestiaDSO *)dso;
+- (NSString *)dsoName:(CelestiaDSO *)dso localized:(BOOL)localized;
 
 @end
 
