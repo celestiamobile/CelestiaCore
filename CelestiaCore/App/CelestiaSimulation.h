@@ -48,8 +48,9 @@ NS_SWIFT_NAME(GoToLocation)
 NS_SWIFT_NAME(Simulation)
 @interface CelestiaSimulation : NSObject
 
-@property CelestiaSelection *selection;
-@property NSDate *time;
+@property (nonatomic) CelestiaSelection *selection;
+@property (nonatomic) NSDate *time;
+@property (nonatomic) double julianDay;
 
 @property (readonly) CelestiaObserver *activeObserver;
 

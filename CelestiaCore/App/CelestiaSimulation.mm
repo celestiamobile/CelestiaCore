@@ -134,6 +134,14 @@ typedef NS_OPTIONS(NSUInteger, CelestiaGoToLocationFieldMask) {
     s->setTime([time julianDay]);
 }
 
+- (double)julianDay {
+    return s->getTime();
+}
+
+- (void)setJulianDay:(double)julianDay {
+    s->setTime(julianDay);
+}
+
 - (CelestiaObserver *)activeObserver {
     return [[CelestiaObserver alloc] initWithObserver:s->getActiveObserver()];
 }
