@@ -204,7 +204,6 @@
 		971A672323019C2B009E4EA1 /* ray.h in Headers */ = {isa = PBXBuildFile; fileRef = 977D81A022FDB1BE002FF1C2 /* ray.h */; };
 		971A672423019C2B009E4EA1 /* solve.h in Headers */ = {isa = PBXBuildFile; fileRef = 977D81A122FDB1BE002FF1C2 /* solve.h */; };
 		971A672523019C2B009E4EA1 /* sphere.h in Headers */ = {isa = PBXBuildFile; fileRef = 977D81A222FDB1BE002FF1C2 /* sphere.h */; };
-		9729F1F023084D080069FD72 /* filesystem.h in Headers */ = {isa = PBXBuildFile; fileRef = 9729F1ED23084D080069FD72 /* filesystem.h */; };
 		973B9C8A2459908600BDBEDB /* dsorenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 973B9C882459908500BDBEDB /* dsorenderer.cpp */; };
 		973B9C8B2459908600BDBEDB /* dsorenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 973B9C892459908600BDBEDB /* dsorenderer.h */; };
 		974A6B1D23532EA1007BCABD /* overlayimage.h in Headers */ = {isa = PBXBuildFile; fileRef = 974A6B1B23532EA1007BCABD /* overlayimage.h */; };
@@ -445,7 +444,6 @@
 
 /* Begin PBXFileReference section */
 		971A65CC23019BC5009E4EA1 /* CelestiaCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CelestiaCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9729F1ED23084D080069FD72 /* filesystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = filesystem.h; sourceTree = "<group>"; };
 		973B9C882459908500BDBEDB /* dsorenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dsorenderer.cpp; sourceTree = "<group>"; };
 		973B9C892459908600BDBEDB /* dsorenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dsorenderer.h; sourceTree = "<group>"; };
 		974A6B1B23532EA1007BCABD /* overlayimage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = overlayimage.h; sourceTree = "<group>"; };
@@ -1019,7 +1017,6 @@
 				EA3FC0A925F63A840019C3BD /* charconv.h */,
 				EAB08FE727807E2500BB82F0 /* numbers_impl.h */,
 				EAB08FE627807E2500BB82F0 /* numbers.h */,
-				9729F1ED23084D080069FD72 /* filesystem.h */,
 			);
 			path = celcompat;
 			sourceTree = "<group>";
@@ -1648,7 +1645,6 @@
 				9751DC1423594A8000299997 /* celx_celestia.h in Headers */,
 				971A66DB23019C20009E4EA1 /* renderinfo.h in Headers */,
 				971A668723019C20009E4EA1 /* boundaries.h in Headers */,
-				9729F1F023084D080069FD72 /* filesystem.h in Headers */,
 				971A668523019C20009E4EA1 /* body.h in Headers */,
 				EADDA21A28ACF95F004460A6 /* glcompat.h in Headers */,
 				97AD59C1235B1B760056CA80 /* script.h in Headers */,
