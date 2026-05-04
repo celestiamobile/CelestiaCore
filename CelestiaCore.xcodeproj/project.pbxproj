@@ -430,7 +430,6 @@
 		EAE8466B2B443F60008A146D /* gettext.h in Headers */ = {isa = PBXBuildFile; fileRef = EAE846622B443F60008A146D /* gettext.h */; };
 		EAE8466C2B443F60008A146D /* dateformatter.h in Headers */ = {isa = PBXBuildFile; fileRef = EAE846632B443F60008A146D /* dateformatter.h */; };
 		EAE8466D2B443F60008A146D /* infourl.h in Headers */ = {isa = PBXBuildFile; fileRef = EAE846642B443F60008A146D /* infourl.h */; };
-		EAE8466E2B443F60008A146D /* nocreate.h in Headers */ = {isa = PBXBuildFile; fileRef = EAE846652B443F60008A146D /* nocreate.h */; };
 		EAE8466F2B443F60008A146D /* tee.h in Headers */ = {isa = PBXBuildFile; fileRef = EAE846662B443F60008A146D /* tee.h */; };
 		EAE846702B443F60008A146D /* uniquedel.h in Headers */ = {isa = PBXBuildFile; fileRef = EAE846672B443F60008A146D /* uniquedel.h */; };
 		EAE846712B443F60008A146D /* dateformatter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAE846682B443F60008A146D /* dateformatter.cpp */; };
@@ -869,7 +868,6 @@
 		EAE846622B443F60008A146D /* gettext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gettext.h; sourceTree = "<group>"; };
 		EAE846632B443F60008A146D /* dateformatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dateformatter.h; sourceTree = "<group>"; };
 		EAE846642B443F60008A146D /* infourl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = infourl.h; sourceTree = "<group>"; };
-		EAE846652B443F60008A146D /* nocreate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nocreate.h; sourceTree = "<group>"; };
 		EAE846662B443F60008A146D /* tee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tee.h; sourceTree = "<group>"; };
 		EAE846672B443F60008A146D /* uniquedel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uniquedel.h; sourceTree = "<group>"; };
 		EAE846682B443F60008A146D /* dateformatter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dateformatter.cpp; sourceTree = "<group>"; };
@@ -1381,7 +1379,6 @@
 				EAE846632B443F60008A146D /* dateformatter.h */,
 				EAE846622B443F60008A146D /* gettext.h */,
 				EAE846642B443F60008A146D /* infourl.h */,
-				EAE846652B443F60008A146D /* nocreate.h */,
 				EAE846662B443F60008A146D /* tee.h */,
 				EAE846672B443F60008A146D /* uniquedel.h */,
 				977D833722FDB2AA002FF1C2 /* align.h */,
@@ -1827,7 +1824,6 @@
 				EA63E9792C1AA8B600ED8EE9 /* shared.h in Headers */,
 				EAB18D372CB5CAA900696A11 /* completion.h in Headers */,
 				9751DC2D23594A8600299997 /* command.h in Headers */,
-				EAE8466E2B443F60008A146D /* nocreate.h in Headers */,
 				EA63E97C2C1AA8B600ED8EE9 /* stardbbuilder.h in Headers */,
 				EA34E2E4275CA76300507F22 /* tzutil.h in Headers */,
 				971A669E23019C20009E4EA1 /* dsodb.h in Headers */,
