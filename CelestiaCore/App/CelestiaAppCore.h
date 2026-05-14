@@ -137,7 +137,7 @@ NS_SWIFT_NAME(AppCore)
 
 - (BOOL)startSimulationWithConfigFileName:(nullable NSString *)configFileName extraDirectories:(nullable NSArray<NSString *> *)extraDirectories progressReporter:(void (NS_NOESCAPE ^)(NSString *))reporter NS_SWIFT_NAME(startSimulation(configFileName:extraDirectories:progress:));
 
-- (BOOL)startRenderer;
+- (BOOL)startRendererWithSRGBRendering:(BOOL)srgbRendering NS_SWIFT_NAME(startRenderer(srgbRendering:));
 
 - (void)setStartURL:(nullable NSString *)startURL;
 - (void)start;

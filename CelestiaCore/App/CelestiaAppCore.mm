@@ -176,8 +176,8 @@ private:
     return _initialized;
 }
 
-- (BOOL)startRenderer {
-    BOOL success = core->initRenderer(celestia::engine::TextureResolution::medres) ? YES : NO;
+- (BOOL)startRendererWithSRGBRendering:(BOOL)srgbRendering {
+    BOOL success = core->initRenderer(celestia::engine::TextureResolution::medres, static_cast<bool>(srgbRendering)) ? YES : NO;
 
     // start with default values
     constexpr auto DEFAULT_ORBIT_MASK = BodyClassification::Planet | BodyClassification::Moon | BodyClassification::Stellar;
