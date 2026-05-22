@@ -346,6 +346,12 @@
 		EA5164322FBF9ABA00EC5909 /* imageoverlay.h in Headers */ = {isa = PBXBuildFile; fileRef = EA51642F2FBF9ABA00EC5909 /* imageoverlay.h */; };
 		EA5164352FBF9AC700EC5909 /* overlaymanager.h in Headers */ = {isa = PBXBuildFile; fileRef = EA5164332FBF9AC700EC5909 /* overlaymanager.h */; };
 		EA5164362FBF9AC700EC5909 /* overlaymanager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA5164342FBF9AC700EC5909 /* overlaymanager.cpp */; };
+		EA5167502FBFA10F00EC5909 /* videooverlay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA51674F2FBFA10F00EC5909 /* videooverlay.cpp */; };
+		EA5167512FBFA10F00EC5909 /* videooverlay.h in Headers */ = {isa = PBXBuildFile; fileRef = EA51674E2FBFA10F00EC5909 /* videooverlay.h */; };
+		EA5167542FBFA11C00EC5909 /* ffmpegcapture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA5167532FBFA11C00EC5909 /* ffmpegcapture.cpp */; };
+		EA5167552FBFA11C00EC5909 /* ffmpegcapture.h in Headers */ = {isa = PBXBuildFile; fileRef = EA5167522FBFA11C00EC5909 /* ffmpegcapture.h */; };
+		EA5167572FBFA13200EC5909 /* ffmpeg.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA5167562FBFA13200EC5909 /* ffmpeg.xcframework */; };
+		EA51675B2FBFA13400EC5909 /* x264.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA51675A2FBFA13400EC5909 /* x264.xcframework */; };
 		EA51CC8F2D7A2786009434AA /* renderflags.h in Headers */ = {isa = PBXBuildFile; fileRef = EA51CC8E2D7A2786009434AA /* renderflags.h */; };
 		EA59EA3226213CB4001E5B9D /* png.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA59EA2B26213CB4001E5B9D /* png.cpp */; };
 		EA59EA3326213CB4001E5B9D /* dds_decompress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA59EA2C26213CB4001E5B9D /* dds_decompress.cpp */; };
@@ -785,6 +791,12 @@
 		EA5164302FBF9ABA00EC5909 /* imageoverlay.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = imageoverlay.cpp; sourceTree = "<group>"; };
 		EA5164332FBF9AC700EC5909 /* overlaymanager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = overlaymanager.h; sourceTree = "<group>"; };
 		EA5164342FBF9AC700EC5909 /* overlaymanager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = overlaymanager.cpp; sourceTree = "<group>"; };
+		EA51674E2FBFA10F00EC5909 /* videooverlay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = videooverlay.h; sourceTree = "<group>"; };
+		EA51674F2FBFA10F00EC5909 /* videooverlay.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = videooverlay.cpp; sourceTree = "<group>"; };
+		EA5167522FBFA11C00EC5909 /* ffmpegcapture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ffmpegcapture.h; sourceTree = "<group>"; };
+		EA5167532FBFA11C00EC5909 /* ffmpegcapture.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ffmpegcapture.cpp; sourceTree = "<group>"; };
+		EA5167562FBFA13200EC5909 /* ffmpeg.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ffmpeg.xcframework; path = libs/dependency/ffmpeg.xcframework; sourceTree = "<group>"; };
+		EA51675A2FBFA13400EC5909 /* x264.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = x264.xcframework; path = libs/dependency/x264.xcframework; sourceTree = "<group>"; };
 		EA51CC8E2D7A2786009434AA /* renderflags.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = renderflags.h; sourceTree = "<group>"; };
 		EA59EA2B26213CB4001E5B9D /* png.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = png.cpp; sourceTree = "<group>"; };
 		EA59EA2C26213CB4001E5B9D /* dds_decompress.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dds_decompress.cpp; sourceTree = "<group>"; };
@@ -963,6 +975,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA5167572FBFA13200EC5909 /* ffmpeg.xcframework in Frameworks */,
 				EA1B49692F0C6AF300800440 /* fast_float.xcframework in Frameworks */,
 				EA3A88D82D80B0100029ACA4 /* cspice.xcframework in Frameworks */,
 				EA3A88D22D80B0100029ACA4 /* fmt.xcframework in Frameworks */,
@@ -973,6 +986,7 @@
 				EA3A88DE2D80B0100029ACA4 /* luajit.xcframework in Frameworks */,
 				EA3A88E02D80B0100029ACA4 /* meshoptimizer.xcframework in Frameworks */,
 				EA3A88D62D80B0100029ACA4 /* libintl.xcframework in Frameworks */,
+				EA51675B2FBFA13400EC5909 /* x264.xcframework in Frameworks */,
 				EA3A88D02D80B0100029ACA4 /* jpeg.xcframework in Frameworks */,
 				EA3A88D42D80B0100029ACA4 /* libepoxy.xcframework in Frameworks */,
 				EA3A88E42D80B0100029ACA4 /* freetype.xcframework in Frameworks */,
@@ -994,6 +1008,8 @@
 		971A672923019D1B009E4EA1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EA51675A2FBFA13400EC5909 /* x264.xcframework */,
+				EA5167562FBFA13200EC5909 /* ffmpeg.xcframework */,
 				EA1B49682F0C6AF300800440 /* fast_float.xcframework */,
 				EA3A88EB2D80B0910029ACA4 /* icu.xcframework */,
 				EA3A88E72D80B0760029ACA4 /* miniaudio.xcframework */,
@@ -1160,6 +1176,8 @@
 		977D81C222FDB1F5002FF1C2 /* celengine */ = {
 			isa = PBXGroup;
 			children = (
+				EA51674E2FBFA10F00EC5909 /* videooverlay.h */,
+				EA51674F2FBFA10F00EC5909 /* videooverlay.cpp */,
 				EA51642F2FBF9ABA00EC5909 /* imageoverlay.h */,
 				EA5164302FBF9ABA00EC5909 /* imageoverlay.cpp */,
 				EA7D7FC12F8EBE5100125C12 /* rendercolors.h */,
@@ -1431,6 +1449,8 @@
 		977D833422FDB287002FF1C2 /* celestia */ = {
 			isa = PBXGroup;
 			children = (
+				EA5167522FBFA11C00EC5909 /* ffmpegcapture.h */,
+				EA5167532FBFA11C00EC5909 /* ffmpegcapture.cpp */,
 				EA5164332FBF9AC700EC5909 /* overlaymanager.h */,
 				EA5164342FBF9AC700EC5909 /* overlaymanager.cpp */,
 				EA0F49202E36148E0052C5B2 /* miniaudiosession.mm */,
@@ -1754,6 +1774,7 @@
 				EAD4FBA02743EBC0005E3369 /* randutils.h in Headers */,
 				971A664D23019C0F009E4EA1 /* filetype.h in Headers */,
 				971A661323019BFC009E4EA1 /* modelfile.h in Headers */,
+				EA5167512FBFA10F00EC5909 /* videooverlay.h in Headers */,
 				EA7D7FC42F8EBE5100125C12 /* rendercolors.h in Headers */,
 				971A66C623019C20009E4EA1 /* nebula.h in Headers */,
 				EA398C9E278A6FF900A9AAE5 /* greek.h in Headers */,
@@ -1822,6 +1843,7 @@
 				EAB18D992AF14AC400C2B010 /* sampfile.h in Headers */,
 				971A668323019C20009E4EA1 /* axisarrow.h in Headers */,
 				974A6B2423532EDB007BCABD /* view.h in Headers */,
+				EA5167552FBFA11C00EC5909 /* ffmpegcapture.h in Headers */,
 				971A666B23019C15009E4EA1 /* samporbit.h in Headers */,
 				EA63E97A2C1AA8B600ED8EE9 /* objectrenderer.h in Headers */,
 				9751DC1523594A8000299997 /* celx_frame.h in Headers */,
@@ -2112,8 +2134,10 @@
 				971A66E823019C21009E4EA1 /* spheremesh.cpp in Sources */,
 				EA035C682C4F4A2500536FD5 /* dsodbbuilder.cpp in Sources */,
 				EA9166A62B0C37D200AF48B1 /* units.cpp in Sources */,
+				EA5167502FBFA10F00EC5909 /* videooverlay.cpp in Sources */,
 				971A669223019C20009E4EA1 /* console.cpp in Sources */,
 				EADB36C92E296A440045A458 /* warpmesh.cpp in Sources */,
+				EA5167542FBFA11C00EC5909 /* ffmpegcapture.cpp in Sources */,
 				EAFFE03B2882F7BE007DEBC2 /* textprintposition.cpp in Sources */,
 				EAB18D9A2AF14AC400C2B010 /* sampfile.cpp in Sources */,
 				EA4BB3362B46481000B36E44 /* binder.cpp in Sources */,
