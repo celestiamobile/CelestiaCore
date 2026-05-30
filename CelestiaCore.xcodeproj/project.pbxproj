@@ -303,6 +303,7 @@
 		EA2EBCB029DD669500EE0D84 /* unicode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA2EBCAE29DD669500EE0D84 /* unicode.cpp */; };
 		EA2EBCB129DD669500EE0D84 /* unicode.h in Headers */ = {isa = PBXBuildFile; fileRef = EA2EBCAF29DD669500EE0D84 /* unicode.h */; };
 		EA30660E2AD2794A006A3EE2 /* ranges.h in Headers */ = {isa = PBXBuildFile; fileRef = EA30660D2AD2794A006A3EE2 /* ranges.h */; };
+		EA319B832FCAC06900566C73 /* catalogloader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA319B822FCAC06900566C73 /* catalogloader.cpp */; };
 		EA34E2E3275CA76300507F22 /* tzutil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA34E2E1275CA76300507F22 /* tzutil.cpp */; };
 		EA34E2E4275CA76300507F22 /* tzutil.h in Headers */ = {isa = PBXBuildFile; fileRef = EA34E2E2275CA76300507F22 /* tzutil.h */; };
 		EA398C9D278A6FF900A9AAE5 /* greek.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA398C9B278A6FF900A9AAE5 /* greek.cpp */; };
@@ -748,6 +749,7 @@
 		EA2EBCAE29DD669500EE0D84 /* unicode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = unicode.cpp; sourceTree = "<group>"; };
 		EA2EBCAF29DD669500EE0D84 /* unicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unicode.h; sourceTree = "<group>"; };
 		EA30660D2AD2794A006A3EE2 /* ranges.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ranges.h; sourceTree = "<group>"; };
+		EA319B822FCAC06900566C73 /* catalogloader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = catalogloader.cpp; sourceTree = "<group>"; };
 		EA34E2E1275CA76300507F22 /* tzutil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tzutil.cpp; sourceTree = "<group>"; };
 		EA34E2E2275CA76300507F22 /* tzutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tzutil.h; sourceTree = "<group>"; };
 		EA398C9B278A6FF900A9AAE5 /* greek.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = greek.cpp; sourceTree = "<group>"; };
@@ -1449,6 +1451,7 @@
 		977D833422FDB287002FF1C2 /* celestia */ = {
 			isa = PBXGroup;
 			children = (
+				EA319B822FCAC06900566C73 /* catalogloader.cpp */,
 				EA5167522FBFA11C00EC5909 /* ffmpegcapture.h */,
 				EA5167532FBFA11C00EC5909 /* ffmpegcapture.cpp */,
 				EA5164332FBF9AC700EC5909 /* overlaymanager.h */,
@@ -2037,6 +2040,7 @@
 				971A66D723019C20009E4EA1 /* render.cpp in Sources */,
 				971A667823019C15009E4EA1 /* spicerotation.cpp in Sources */,
 				EAE846522B3AE659008A146D /* loaddso.cpp in Sources */,
+				EA319B832FCAC06900566C73 /* catalogloader.cpp in Sources */,
 				EA2D5F2929EE82D3005990BA /* largestarrenderer.cpp in Sources */,
 				971A671A23019C2B009E4EA1 /* frustum.cpp in Sources */,
 				971A66E223019C20009E4EA1 /* simulation.cpp in Sources */,
