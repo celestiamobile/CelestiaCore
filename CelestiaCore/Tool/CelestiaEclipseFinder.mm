@@ -32,10 +32,7 @@ public:
     virtual Status eclipseFinderProgressUpdate(double t)
     {
         CelestiaEclipseFinder *searcher = (__bridge CelestiaEclipseFinder *)delegate;
-        if (searcher->aborted) {
-            return AbortOperation;
-        }
-        return ContinueOperation;
+        return searcher->aborted ? Status::AbortOperation : Status::ContinueOperation;
     };
 private:
     void *delegate;
@@ -71,7 +68,7 @@ private:
 - (NSArray<CelestiaEclipse *> *)search:(CelestiaEclipseKind)kind fromStart:(NSDate *)startTime toEnd:(NSDate *)endTime {
     aborted = NO;
     std::vector<Eclipse> results;
-    s->findEclipses([startTime julianDay], [endTime julianDay], (int)kind, results);
+    s->findEclipses([startTime julianDay], [endTime julianDay], static_cast<Eclipse::Type>(kind), results);
 
     NSMutableArray *array = [NSMutableArray arrayWithCapacity:results.size()];
     for (Eclipse &result: results) {
