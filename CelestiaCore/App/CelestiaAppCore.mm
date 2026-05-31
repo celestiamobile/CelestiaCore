@@ -156,7 +156,10 @@ private:
 }
 
 + (BOOL)initGL {
-    return (BOOL)celestia::gl::init();
+    BOOL success = static_cast<BOOL>(celestia::gl::init());
+    if (success)
+        celestia::gl::disableGeomShaders();
+    return success;
 }
 
 - (BOOL)startSimulationWithConfigFileName:(NSString *)configFileName extraDirectories:(NSArray<NSString *> *)extraDirectories progressReporter:(void (NS_NOESCAPE ^)(NSString *))reporter {
