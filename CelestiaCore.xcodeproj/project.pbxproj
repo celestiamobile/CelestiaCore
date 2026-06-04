@@ -361,6 +361,10 @@
 		EA59EA3626213CB4001E5B9D /* jpeg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA59EA2F26213CB4001E5B9D /* jpeg.cpp */; };
 		EA59EA3726213CB4001E5B9D /* bmp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA59EA3026213CB4001E5B9D /* bmp.cpp */; };
 		EA59EA3826213CB4001E5B9D /* dds_decompress.h in Headers */ = {isa = PBXBuildFile; fileRef = EA59EA3126213CB4001E5B9D /* dds_decompress.h */; };
+		EA5B78BD2FD1F01B0007F1C0 /* psfglowlargerenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA5B78BC2FD1F01B0007F1C0 /* psfglowlargerenderer.cpp */; };
+		EA5B78BE2FD1F01B0007F1C0 /* psfglowlargerenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = EA5B78BB2FD1F01B0007F1C0 /* psfglowlargerenderer.h */; };
+		EA5B78C12FD1F02C0007F1C0 /* psfstarvertexbuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA5B78C02FD1F02C0007F1C0 /* psfstarvertexbuffer.cpp */; };
+		EA5B78C22FD1F02C0007F1C0 /* psfstarvertexbuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = EA5B78BF2FD1F02C0007F1C0 /* psfstarvertexbuffer.h */; };
 		EA63E9792C1AA8B600ED8EE9 /* shared.h in Headers */ = {isa = PBXBuildFile; fileRef = EA63E9722C1AA8B500ED8EE9 /* shared.h */; };
 		EA63E97A2C1AA8B600ED8EE9 /* objectrenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = EA63E9732C1AA8B500ED8EE9 /* objectrenderer.h */; };
 		EA63E97B2C1AA8B600ED8EE9 /* renderlistentry.h in Headers */ = {isa = PBXBuildFile; fileRef = EA63E9742C1AA8B500ED8EE9 /* renderlistentry.h */; };
@@ -807,6 +811,10 @@
 		EA59EA2F26213CB4001E5B9D /* jpeg.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = jpeg.cpp; sourceTree = "<group>"; };
 		EA59EA3026213CB4001E5B9D /* bmp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bmp.cpp; sourceTree = "<group>"; };
 		EA59EA3126213CB4001E5B9D /* dds_decompress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dds_decompress.h; sourceTree = "<group>"; };
+		EA5B78BB2FD1F01B0007F1C0 /* psfglowlargerenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = psfglowlargerenderer.h; sourceTree = "<group>"; };
+		EA5B78BC2FD1F01B0007F1C0 /* psfglowlargerenderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = psfglowlargerenderer.cpp; sourceTree = "<group>"; };
+		EA5B78BF2FD1F02C0007F1C0 /* psfstarvertexbuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = psfstarvertexbuffer.h; sourceTree = "<group>"; };
+		EA5B78C02FD1F02C0007F1C0 /* psfstarvertexbuffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = psfstarvertexbuffer.cpp; sourceTree = "<group>"; };
 		EA63E9722C1AA8B500ED8EE9 /* shared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shared.h; sourceTree = "<group>"; };
 		EA63E9732C1AA8B500ED8EE9 /* objectrenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = objectrenderer.h; sourceTree = "<group>"; };
 		EA63E9742C1AA8B500ED8EE9 /* renderlistentry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = renderlistentry.h; sourceTree = "<group>"; };
@@ -1178,6 +1186,8 @@
 		977D81C222FDB1F5002FF1C2 /* celengine */ = {
 			isa = PBXGroup;
 			children = (
+				EA5B78BF2FD1F02C0007F1C0 /* psfstarvertexbuffer.h */,
+				EA5B78C02FD1F02C0007F1C0 /* psfstarvertexbuffer.cpp */,
 				EA51674E2FBFA10F00EC5909 /* videooverlay.h */,
 				EA51674F2FBFA10F00EC5909 /* videooverlay.cpp */,
 				EA51642F2FBF9ABA00EC5909 /* imageoverlay.h */,
@@ -1534,6 +1544,8 @@
 		EA0E06C328C0C160004F6DF7 /* celrender */ = {
 			isa = PBXGroup;
 			children = (
+				EA5B78BB2FD1F01B0007F1C0 /* psfglowlargerenderer.h */,
+				EA5B78BC2FD1F01B0007F1C0 /* psfglowlargerenderer.cpp */,
 				EAAD79152E280DA800CA2195 /* referencemarkrenderer.h */,
 				EAAD79162E280DA800CA2195 /* referencemarkrenderer.cpp */,
 				EAD7D8EA2BC7A90700CB5AA7 /* skygridrenderer.cpp */,
@@ -1638,6 +1650,7 @@
 				9751DC1723594A8000299997 /* celx_observer.h in Headers */,
 				9751DC1D23594A8000299997 /* celx_phase.h in Headers */,
 				EAE8466A2B443F60008A146D /* array_view.h in Headers */,
+				EA5B78C22FD1F02C0007F1C0 /* psfstarvertexbuffer.h in Headers */,
 				EA3FC0B825F63AB30019C3BD /* stringutils.h in Headers */,
 				97E34AEE2431ED09009E67C3 /* glsupport.h in Headers */,
 				EA3FC0AC25F63A840019C3BD /* charconv.h in Headers */,
@@ -1691,6 +1704,7 @@
 				971A664723019C0F009E4EA1 /* color.h in Headers */,
 				971A667923019C15009E4EA1 /* spicerotation.h in Headers */,
 				971A664223019C0F009E4EA1 /* align.h in Headers */,
+				EA5B78BE2FD1F01B0007F1C0 /* psfglowlargerenderer.h in Headers */,
 				9751DC2723594A8000299997 /* celx_vector.h in Headers */,
 				EA5164322FBF9ABA00EC5909 /* imageoverlay.h in Headers */,
 				EA2EBCAB29DD461D00EE0D84 /* flag.h in Headers */,
@@ -1995,6 +2009,7 @@
 				EA9E5A9E25FE483900348AEE /* appleutils.mm in Sources */,
 				971A666023019C15009E4EA1 /* jpleph.cpp in Sources */,
 				971A66BF23019C20009E4EA1 /* modelgeometry.cpp in Sources */,
+				EA5B78BD2FD1F01B0007F1C0 /* psfglowlargerenderer.cpp in Sources */,
 				EAF1104929829E4B003938C3 /* eclipticlinerenderer.cpp in Sources */,
 				971A669623019C20009E4EA1 /* curveplot.cpp in Sources */,
 				9751DC1E23594A8000299997 /* celx_position.cpp in Sources */,
@@ -2050,6 +2065,7 @@
 				EA9166A22B0C37D200AF48B1 /* date.cpp in Sources */,
 				9751DC2323594A8000299997 /* celx_gl.cpp in Sources */,
 				EAE2E5D62EFCF6B2006D6FB6 /* atmosphere.cpp in Sources */,
+				EA5B78C12FD1F02C0007F1C0 /* psfstarvertexbuffer.cpp in Sources */,
 				971A670723019C21009E4EA1 /* universe.cpp in Sources */,
 				97B5E2D5239689B9006F35B4 /* pointstarvertexbuffer.cpp in Sources */,
 				971A662F23019C03009E4EA1 /* configfile.cpp in Sources */,

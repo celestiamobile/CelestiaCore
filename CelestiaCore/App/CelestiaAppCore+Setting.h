@@ -175,6 +175,11 @@ typedef NS_ENUM(NSInteger, CelestiaLayoutDirection) {
 
 @property NSInteger starStyle ;
 
+@property float starPointRadius;
+@property float starOptimization;
+@property float starMaxIrradiance;
+@property float starExposure;
+
 @property NSInteger starColors ;
 @property float tintSaturation;
 

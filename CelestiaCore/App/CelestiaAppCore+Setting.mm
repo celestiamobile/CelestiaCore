@@ -316,6 +316,18 @@ FEATUREMETHODS(Other)
 - (NSInteger)starStyle { return static_cast<NSInteger>(core->getRenderer()->getStarStyle()); }
 - (void)setStarStyle:(NSInteger)value { core->getRenderer()->setStarStyle(static_cast<StarStyle>(value)); }
 
+- (float)starPointRadius { return core->getRenderer()->getStarPointRadius(); }
+- (void)setStarPointRadius:(float)value { core->getRenderer()->setStarPointRadius(value); }
+
+- (float)starOptimization { return core->getRenderer()->getStarOptimization(); }
+- (void)setStarOptimization:(float)value { core->getRenderer()->setStarOptimization(value); }
+
+- (float)starMaxIrradiance { return core->getRenderer()->getStarMaxIrradiance(); }
+- (void)setStarMaxIrradiance:(float)value { core->getRenderer()->setStarMaxIrradiance(value); }
+
+- (float)starExposure { return core->getRenderer()->getStarExposure(); }
+- (void)setStarExposure:(float)value { core->getRenderer()->setStarExposure(value); }
+
 - (NSInteger)starColors {
     return static_cast<NSInteger>(core->getRenderer()->getStarColorTable());
 }
