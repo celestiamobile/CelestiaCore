@@ -365,6 +365,8 @@
 		EA5B78BE2FD1F01B0007F1C0 /* psfglowlargerenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = EA5B78BB2FD1F01B0007F1C0 /* psfglowlargerenderer.h */; };
 		EA5B78C12FD1F02C0007F1C0 /* psfstarvertexbuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA5B78C02FD1F02C0007F1C0 /* psfstarvertexbuffer.cpp */; };
 		EA5B78C22FD1F02C0007F1C0 /* psfstarvertexbuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = EA5B78BF2FD1F02C0007F1C0 /* psfstarvertexbuffer.h */; };
+		EA5B7D472FD293610007F1C0 /* legacylargestarrenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA5B7D462FD293610007F1C0 /* legacylargestarrenderer.cpp */; };
+		EA5B7D482FD293610007F1C0 /* legacylargestarrenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = EA5B7D452FD293610007F1C0 /* legacylargestarrenderer.h */; };
 		EA63E9792C1AA8B600ED8EE9 /* shared.h in Headers */ = {isa = PBXBuildFile; fileRef = EA63E9722C1AA8B500ED8EE9 /* shared.h */; };
 		EA63E97A2C1AA8B600ED8EE9 /* objectrenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = EA63E9732C1AA8B500ED8EE9 /* objectrenderer.h */; };
 		EA63E97B2C1AA8B600ED8EE9 /* renderlistentry.h in Headers */ = {isa = PBXBuildFile; fileRef = EA63E9742C1AA8B500ED8EE9 /* renderlistentry.h */; };
@@ -815,6 +817,8 @@
 		EA5B78BC2FD1F01B0007F1C0 /* psfglowlargerenderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = psfglowlargerenderer.cpp; sourceTree = "<group>"; };
 		EA5B78BF2FD1F02C0007F1C0 /* psfstarvertexbuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = psfstarvertexbuffer.h; sourceTree = "<group>"; };
 		EA5B78C02FD1F02C0007F1C0 /* psfstarvertexbuffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = psfstarvertexbuffer.cpp; sourceTree = "<group>"; };
+		EA5B7D452FD293610007F1C0 /* legacylargestarrenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = legacylargestarrenderer.h; sourceTree = "<group>"; };
+		EA5B7D462FD293610007F1C0 /* legacylargestarrenderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = legacylargestarrenderer.cpp; sourceTree = "<group>"; };
 		EA63E9722C1AA8B500ED8EE9 /* shared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shared.h; sourceTree = "<group>"; };
 		EA63E9732C1AA8B500ED8EE9 /* objectrenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = objectrenderer.h; sourceTree = "<group>"; };
 		EA63E9742C1AA8B500ED8EE9 /* renderlistentry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = renderlistentry.h; sourceTree = "<group>"; };
@@ -1544,6 +1548,8 @@
 		EA0E06C328C0C160004F6DF7 /* celrender */ = {
 			isa = PBXGroup;
 			children = (
+				EA5B7D452FD293610007F1C0 /* legacylargestarrenderer.h */,
+				EA5B7D462FD293610007F1C0 /* legacylargestarrenderer.cpp */,
 				EA5B78BB2FD1F01B0007F1C0 /* psfglowlargerenderer.h */,
 				EA5B78BC2FD1F01B0007F1C0 /* psfglowlargerenderer.cpp */,
 				EAAD79152E280DA800CA2195 /* referencemarkrenderer.h */,
@@ -1784,6 +1790,7 @@
 				EAC562452529FAB4008D10F0 /* viewporteffect.h in Headers */,
 				EA3FFB182A13746F00C6158F /* rendererfwd.h in Headers */,
 				971A66AB23019C20009E4EA1 /* galaxy.h in Headers */,
+				EA5B7D482FD293610007F1C0 /* legacylargestarrenderer.h in Headers */,
 				EAE846702B443F60008A146D /* uniquedel.h in Headers */,
 				971A671323019C26009E4EA1 /* 3dsmodel.h in Headers */,
 				971A666923019C15009E4EA1 /* rotation.h in Headers */,
@@ -2091,6 +2098,7 @@
 				971A664E23019C0F009E4EA1 /* formatnum.cpp in Sources */,
 				971A666C23019C15009E4EA1 /* samporient.cpp in Sources */,
 				971A663523019C03009E4EA1 /* favorites.cpp in Sources */,
+				EA5B7D472FD293610007F1C0 /* legacylargestarrenderer.cpp in Sources */,
 				9751DC1323594A8000299997 /* celx_observer.cpp in Sources */,
 				971A667023019C15009E4EA1 /* scriptorbit.cpp in Sources */,
 				971A66CE23019C20009E4EA1 /* parseobject.cpp in Sources */,
