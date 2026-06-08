@@ -373,7 +373,6 @@
 		EA63E97C2C1AA8B600ED8EE9 /* stardbbuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = EA63E9752C1AA8B500ED8EE9 /* stardbbuilder.h */; };
 		EA63E97D2C1AA8B600ED8EE9 /* orbitsampler.h in Headers */ = {isa = PBXBuildFile; fileRef = EA63E9762C1AA8B500ED8EE9 /* orbitsampler.h */; };
 		EA63E97E2C1AA8B600ED8EE9 /* stardbbuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA63E9772C1AA8B500ED8EE9 /* stardbbuilder.cpp */; };
-		EA63E97F2C1AA8B600ED8EE9 /* shadowmap.h in Headers */ = {isa = PBXBuildFile; fileRef = EA63E9782C1AA8B600ED8EE9 /* shadowmap.h */; };
 		EA6671DD29B4AB1A00A7846E /* r128.h in Headers */ = {isa = PBXBuildFile; fileRef = EA6671DA29B4AB1A00A7846E /* r128.h */; };
 		EA6671DE29B4AB1A00A7846E /* r128util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA6671DB29B4AB1A00A7846E /* r128util.cpp */; };
 		EA6671DF29B4AB1A00A7846E /* r128util.h in Headers */ = {isa = PBXBuildFile; fileRef = EA6671DC29B4AB1A00A7846E /* r128util.h */; };
@@ -825,7 +824,6 @@
 		EA63E9752C1AA8B500ED8EE9 /* stardbbuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stardbbuilder.h; sourceTree = "<group>"; };
 		EA63E9762C1AA8B500ED8EE9 /* orbitsampler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orbitsampler.h; sourceTree = "<group>"; };
 		EA63E9772C1AA8B500ED8EE9 /* stardbbuilder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stardbbuilder.cpp; sourceTree = "<group>"; };
-		EA63E9782C1AA8B600ED8EE9 /* shadowmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shadowmap.h; sourceTree = "<group>"; };
 		EA6671DA29B4AB1A00A7846E /* r128.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = r128.h; sourceTree = "<group>"; };
 		EA6671DB29B4AB1A00A7846E /* r128util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = r128util.cpp; sourceTree = "<group>"; };
 		EA6671DC29B4AB1A00A7846E /* r128util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = r128util.h; sourceTree = "<group>"; };
@@ -1211,7 +1209,6 @@
 				EA63E9732C1AA8B500ED8EE9 /* objectrenderer.h */,
 				EA63E9762C1AA8B500ED8EE9 /* orbitsampler.h */,
 				EA63E9742C1AA8B500ED8EE9 /* renderlistentry.h */,
-				EA63E9782C1AA8B600ED8EE9 /* shadowmap.h */,
 				EA63E9722C1AA8B500ED8EE9 /* shared.h */,
 				EA63E9772C1AA8B500ED8EE9 /* stardbbuilder.cpp */,
 				EA63E9752C1AA8B500ED8EE9 /* stardbbuilder.h */,
@@ -1844,7 +1841,6 @@
 				971A671923019C2B009E4EA1 /* ellipsoid.h in Headers */,
 				971A66B123019C20009E4EA1 /* globular.h in Headers */,
 				971A669723019C20009E4EA1 /* curveplot.h in Headers */,
-				EA63E97F2C1AA8B600ED8EE9 /* shadowmap.h in Headers */,
 				EAE8466B2B443F60008A146D /* gettext.h in Headers */,
 				EA9166A32B0C37D200AF48B1 /* astro.h in Headers */,
 				971A667723019C15009E4EA1 /* spiceorbit.h in Headers */,
