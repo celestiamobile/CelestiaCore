@@ -325,6 +325,9 @@ FEATUREMETHODS(Other)
 - (float)starMaxIrradiance { return core->getRenderer()->getStarMaxIrradiance(); }
 - (void)setStarMaxIrradiance:(float)value { core->getRenderer()->setStarMaxIrradiance(value); }
 
+- (float)starDimClipFactor { return core->getRenderer()->getStarDimClipFactor(); }
+- (void)setStarDimClipFactor:(float)value { core->getRenderer()->setStarDimClipFactor(value); }
+
 - (float)starExposure { return core->getRenderer()->getStarExposure(); }
 - (void)setStarExposure:(float)value { core->getRenderer()->setStarExposure(value); }
 
