@@ -957,7 +957,6 @@
 				Util/CelestiaCompletion.h,
 				Util/CelestiaDestination.h,
 				Util/CelestiaFont.h,
-				Util/CelestiaFrameBuffer.h,
 				Util/CelestiaScript.h,
 				Util/CelestiaUniversalCoord.h,
 				Util/CelestiaUtil.h,
