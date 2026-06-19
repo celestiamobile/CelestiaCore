@@ -368,6 +368,10 @@ private:
     core->resize(size.width, size.height);
 }
 
+- (void)setPhysicalSize:(CGSize)size {
+    core->setPhysicalSize(static_cast<int>(size.width), static_cast<int>(size.height));
+}
+
 - (void)setSafeAreaInsetsWithLeft:(CGFloat)left top:(CGFloat)top right:(CGFloat)right bottom:(CGFloat)bottom {
     core->setSafeAreaInsets(left, top, right, bottom);
 }
