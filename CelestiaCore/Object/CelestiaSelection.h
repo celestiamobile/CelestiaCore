@@ -32,8 +32,6 @@ NS_SWIFT_NAME(Selection)
 @property (nullable, readonly) CelestiaBody *body;
 @property (nullable, readonly) CelestiaLocation *location;
 
-@property (nullable, readonly) NSString *webInfoURL;
-
 - (BOOL)isEqualToSelection:(CelestiaSelection *)csel;
 - (CelestiaUniversalCoord *)position:(double)t;
 

@@ -53,8 +53,6 @@ NS_SWIFT_NAME(Body)
 
 @property (nonatomic, readonly) CelestiaTimeline *timeline;
 
-@property (nonatomic, nullable, readonly) NSString *webInfoURL;
-
 @property (nonatomic, readonly) BOOL canBeUsedAsCockpit;
 
 - (CelestiaOrbit *)orbitAtTime:(NSDate *)time NS_SWIFT_NAME(orbit(at:));

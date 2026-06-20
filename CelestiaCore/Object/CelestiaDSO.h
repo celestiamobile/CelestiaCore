@@ -28,8 +28,6 @@ NS_SWIFT_NAME(DSO)
 @property (readonly) CelestiaDSOType objectType;
 @property (readonly) NSString *dsoDescription;
 
-@property (nullable, readonly) NSString *webInfoURL;
-
 @property (readonly) CelestiaVector *position;
 
 @end

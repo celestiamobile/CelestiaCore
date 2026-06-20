@@ -46,6 +46,8 @@ NS_SWIFT_NAME(Universe)
 - (void)unmarkSelection:(CelestiaSelection *)selection NS_SWIFT_NAME(unmark(_:));
 - (void)unmarkAll;
 
+- (nullable NSString *)webInfoURLForSelection:(CelestiaSelection *)selection NS_SWIFT_NAME(webInfoURL(for:));
+
 @end
 
 NS_ASSUME_NONNULL_END

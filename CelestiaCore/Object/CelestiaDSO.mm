@@ -40,14 +40,6 @@
     return [NSString stringWithUTF8String:[self DSO]->getDescription().c_str()];
 }
 
-- (NSString *)webInfoURL {
-    NSString *url = [NSString stringWithUTF8String:[self DSO]->getInfoURL().c_str()];
-    if ([url length] == 0)
-        return nil;
-
-    return url;
-}
-
 - (CelestiaVector *)position {
     return [CelestiaVector vectorWithVector3d:[self DSO]->getPosition()];
 }

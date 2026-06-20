@@ -139,18 +139,6 @@
     return nil;
 }
 
-- (NSString *)webInfoURL {
-    CelestiaAstroObject *object = [self object];
-    if ([object isKindOfClass:[CelestiaStar class]]) {
-        return [(CelestiaStar *)object webInfoURL];
-    } else if ([object isKindOfClass:[CelestiaBody class]]) {
-        return [(CelestiaBody *)object webInfoURL];
-    } else if ([object isKindOfClass:[CelestiaDSO class]]) {
-        return [(CelestiaDSO *)object webInfoURL];
-    }
-    return nil;
-}
-
 - (CelestiaUniversalCoord *)position:(double)t {
     return [[CelestiaUniversalCoord alloc] initWithUniversalCoord:s.getPosition(t)];
 }

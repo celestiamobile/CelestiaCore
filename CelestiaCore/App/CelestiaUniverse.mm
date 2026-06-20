@@ -91,4 +91,9 @@
     u->unmarkAll();
 }
 
+- (NSString *)webInfoURLForSelection:(CelestiaSelection *)selection {
+    auto infoURL = u->getInfoURL([selection selection]);
+    return infoURL.empty() ? nil : [NSString stringWithUTF8String:infoURL.data()];
+}
+
 @end

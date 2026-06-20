@@ -61,14 +61,6 @@
     return [self star]->getTemperature();
 }
 
-- (NSString *)webInfoURL {
-    NSString *url = [NSString stringWithUTF8String:[self star]->getInfoURL().c_str()];
-    if ([url length] == 0)
-        return nil;
-
-    return url;
-}
-
 - (CelestiaUniversalCoord *)positionAtTime:(NSDate *)time {
     return [[CelestiaUniversalCoord alloc] initWithUniversalCoord:[self star]->getPosition([time julianDay])];
 }

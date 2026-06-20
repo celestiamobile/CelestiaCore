@@ -20,7 +20,6 @@ NS_SWIFT_NAME(Star)
 @property (readonly) float radius;
 @property (readonly) float temperature;
 
-@property (nullable, readonly) NSString *webInfoURL;
 @property (readonly) NSString *spectralType;
 @property (readonly) float absoluteMagnitude;
 

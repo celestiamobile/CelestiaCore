@@ -378,6 +378,8 @@
 		EA6671DF29B4AB1A00A7846E /* r128util.h in Headers */ = {isa = PBXBuildFile; fileRef = EA6671DC29B4AB1A00A7846E /* r128util.h */; };
 		EA6A00592B95E4730049A5AA /* ringrenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = EA6A00572B95E4730049A5AA /* ringrenderer.h */; };
 		EA6A005A2B95E4730049A5AA /* ringrenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA6A00582B95E4730049A5AA /* ringrenderer.cpp */; };
+		EA6A34132FE61A2100D6D90C /* urlmanager.h in Headers */ = {isa = PBXBuildFile; fileRef = EA6A34112FE61A2100D6D90C /* urlmanager.h */; };
+		EA6A34142FE61A2100D6D90C /* urlmanager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA6A34122FE61A2100D6D90C /* urlmanager.cpp */; };
 		EA73169F248E1D9B009AE037 /* truetypefont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA73169D248E1D9A009AE037 /* truetypefont.cpp */; };
 		EA7316A0248E1D9B009AE037 /* truetypefont.h in Headers */ = {isa = PBXBuildFile; fileRef = EA73169E248E1D9A009AE037 /* truetypefont.h */; };
 		EA7D7FC32F8EBE5100125C12 /* rendercolors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA7D7FC22F8EBE5100125C12 /* rendercolors.cpp */; };
@@ -829,6 +831,8 @@
 		EA6671DC29B4AB1A00A7846E /* r128util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = r128util.h; sourceTree = "<group>"; };
 		EA6A00572B95E4730049A5AA /* ringrenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ringrenderer.h; sourceTree = "<group>"; };
 		EA6A00582B95E4730049A5AA /* ringrenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ringrenderer.cpp; sourceTree = "<group>"; };
+		EA6A34112FE61A2100D6D90C /* urlmanager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = urlmanager.h; sourceTree = "<group>"; };
+		EA6A34122FE61A2100D6D90C /* urlmanager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = urlmanager.cpp; sourceTree = "<group>"; };
 		EA73169D248E1D9A009AE037 /* truetypefont.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = truetypefont.cpp; sourceTree = "<group>"; };
 		EA73169E248E1D9A009AE037 /* truetypefont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = truetypefont.h; sourceTree = "<group>"; };
 		EA7D7FC12F8EBE5100125C12 /* rendercolors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rendercolors.h; sourceTree = "<group>"; };
@@ -1187,6 +1191,8 @@
 		977D81C222FDB1F5002FF1C2 /* celengine */ = {
 			isa = PBXGroup;
 			children = (
+				EA6A34112FE61A2100D6D90C /* urlmanager.h */,
+				EA6A34122FE61A2100D6D90C /* urlmanager.cpp */,
 				EA5B78BF2FD1F02C0007F1C0 /* psfstarvertexbuffer.h */,
 				EA5B78C02FD1F02C0007F1C0 /* psfstarvertexbuffer.cpp */,
 				EA51674E2FBFA10F00EC5909 /* videooverlay.h */,
@@ -1766,6 +1772,7 @@
 				EA2EBCA529DD45D500EE0D84 /* boundariesrenderer.h in Headers */,
 				971A66B323019C20009E4EA1 /* glshader.h in Headers */,
 				EADB25782F1B5A9600CCD7E1 /* classops.h in Headers */,
+				EA6A34132FE61A2100D6D90C /* urlmanager.h in Headers */,
 				EADB25792F1B5A9600CCD7E1 /* texhandle.h in Headers */,
 				971A66A223019C20009E4EA1 /* dsooctree.h in Headers */,
 				EA3FC0A725F63A690019C3BD /* celestiastate.h in Headers */,
@@ -2103,6 +2110,7 @@
 				9751DC2C23594A8600299997 /* cmdparser.cpp in Sources */,
 				EA2D5F2B29EE8384005990BA /* vertexobject.cpp in Sources */,
 				971A66EE23019C21009E4EA1 /* starcolors.cpp in Sources */,
+				EA6A34142FE61A2100D6D90C /* urlmanager.cpp in Sources */,
 				971A663323019C03009E4EA1 /* eclipsefinder.cpp in Sources */,
 				EA3FFB162A13746F00C6158F /* nebularenderer.cpp in Sources */,
 				EA5164312FBF9ABA00EC5909 /* imageoverlay.cpp in Sources */,
