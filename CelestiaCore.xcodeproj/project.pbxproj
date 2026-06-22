@@ -175,6 +175,12 @@
 		971A66F823019C21009E4EA1 /* surface.h in Headers */ = {isa = PBXBuildFile; fileRef = 977D81D422FDB237002FF1C2 /* surface.h */; };
 		971A66F923019C21009E4EA1 /* texmanager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 977D823222FDB23D002FF1C2 /* texmanager.cpp */; };
 		971A66FA23019C21009E4EA1 /* texmanager.h in Headers */ = {isa = PBXBuildFile; fileRef = 977D823F22FDB23E002FF1C2 /* texmanager.h */; };
+		CE57A0000000000000000001 /* asyncresourcecache.h in Headers */ = {isa = PBXBuildFile; fileRef = CE57A0000000000000000002 /* asyncresourcecache.h */; };
+		CE57A0000000000000000003 /* geometrytraits.h in Headers */ = {isa = PBXBuildFile; fileRef = CE57A0000000000000000004 /* geometrytraits.h */; };
+		CE57A0000000000000000005 /* resourcesystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE57A0000000000000000006 /* resourcesystem.cpp */; };
+		CE57A0000000000000000007 /* resourcesystem.h in Headers */ = {isa = PBXBuildFile; fileRef = CE57A0000000000000000008 /* resourcesystem.h */; };
+		CE57A0000000000000000009 /* texturetraits.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE57A000000000000000000A /* texturetraits.cpp */; };
+		CE57A000000000000000000B /* texturetraits.h in Headers */ = {isa = PBXBuildFile; fileRef = CE57A000000000000000000C /* texturetraits.h */; };
 		971A66FB23019C21009E4EA1 /* texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 977D81D322FDB237002FF1C2 /* texture.cpp */; };
 		971A66FC23019C21009E4EA1 /* texture.h in Headers */ = {isa = PBXBuildFile; fileRef = 977D825922FDB23F002FF1C2 /* texture.h */; };
 		971A66FD23019C21009E4EA1 /* timeline.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 977D822622FDB23C002FF1C2 /* timeline.cpp */; };
@@ -605,6 +611,12 @@
 		977D823C22FDB23D002FF1C2 /* spheremesh.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = spheremesh.cpp; sourceTree = "<group>"; };
 		977D823D22FDB23D002FF1C2 /* deepskyobj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = deepskyobj.h; sourceTree = "<group>"; };
 		977D823F22FDB23E002FF1C2 /* texmanager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = texmanager.h; sourceTree = "<group>"; };
+		CE57A0000000000000000002 /* asyncresourcecache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asyncresourcecache.h; sourceTree = "<group>"; };
+		CE57A0000000000000000004 /* geometrytraits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geometrytraits.h; sourceTree = "<group>"; };
+		CE57A0000000000000000006 /* resourcesystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = resourcesystem.cpp; sourceTree = "<group>"; };
+		CE57A0000000000000000008 /* resourcesystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = resourcesystem.h; sourceTree = "<group>"; };
+		CE57A000000000000000000A /* texturetraits.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = texturetraits.cpp; sourceTree = "<group>"; };
+		CE57A000000000000000000C /* texturetraits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = texturetraits.h; sourceTree = "<group>"; };
 		977D824122FDB23E002FF1C2 /* stellarclass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stellarclass.cpp; sourceTree = "<group>"; };
 		977D824222FDB23E002FF1C2 /* virtualtex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = virtualtex.cpp; sourceTree = "<group>"; };
 		977D824422FDB23E002FF1C2 /* simulation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = simulation.cpp; sourceTree = "<group>"; };
@@ -1338,6 +1350,12 @@
 				977D81D422FDB237002FF1C2 /* surface.h */,
 				977D823222FDB23D002FF1C2 /* texmanager.cpp */,
 				977D823F22FDB23E002FF1C2 /* texmanager.h */,
+				CE57A0000000000000000002 /* asyncresourcecache.h */,
+				CE57A0000000000000000004 /* geometrytraits.h */,
+				CE57A0000000000000000006 /* resourcesystem.cpp */,
+				CE57A0000000000000000008 /* resourcesystem.h */,
+				CE57A000000000000000000A /* texturetraits.cpp */,
+				CE57A000000000000000000C /* texturetraits.h */,
 				977D81D322FDB237002FF1C2 /* texture.cpp */,
 				977D825922FDB23F002FF1C2 /* texture.h */,
 				977D822622FDB23C002FF1C2 /* timeline.cpp */,
@@ -1679,6 +1697,10 @@
 				EA9166B32B0C37FE00AF48B1 /* timeinfo.h in Headers */,
 				971A66E123019C20009E4EA1 /* shadermanager.h in Headers */,
 				971A66FA23019C21009E4EA1 /* texmanager.h in Headers */,
+				CE57A0000000000000000001 /* asyncresourcecache.h in Headers */,
+				CE57A0000000000000000003 /* geometrytraits.h in Headers */,
+				CE57A0000000000000000007 /* resourcesystem.h in Headers */,
+				CE57A000000000000000000B /* texturetraits.h in Headers */,
 				971A66E323019C20009E4EA1 /* simulation.h in Headers */,
 				971A66ED23019C21009E4EA1 /* starbrowser.h in Headers */,
 				971A66D323019C20009E4EA1 /* planetgrid.h in Headers */,
@@ -2175,6 +2197,8 @@
 				EA3FFB142A13746F00C6158F /* openclusterrenderer.cpp in Sources */,
 				EA11E4592D76E17800DABEF0 /* infourl.cpp in Sources */,
 				971A66F923019C21009E4EA1 /* texmanager.cpp in Sources */,
+				CE57A0000000000000000005 /* resourcesystem.cpp in Sources */,
+				CE57A0000000000000000009 /* texturetraits.cpp in Sources */,
 				EA9166B42B0C37FE00AF48B1 /* hud.cpp in Sources */,
 				971A66CA23019C20009E4EA1 /* opencluster.cpp in Sources */,
 				971A661223019BFC009E4EA1 /* modelfile.cpp in Sources */,
