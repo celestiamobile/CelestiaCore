@@ -179,7 +179,7 @@ private:
     return _initialized;
 }
 
-- (BOOL)startRendererWithSRGBRendering:(BOOL)srgbRendering {
+- (BOOL)startRendererWithSRGBRendering:(BOOL)srgbRendering shadowMapSize:(NSInteger)shadowMapSize {
     BOOL success = core->initRenderer(celestia::engine::TextureResolution::medres, static_cast<bool>(srgbRendering)) ? YES : NO;
 
     // start with default values
@@ -202,7 +202,7 @@ private:
     core->getSimulation()->setFaintestVisible(DEFAULT_VISUAL_MAGNITUDE);
 
     core->getRenderer()->setSolarSystemMaxDistance((core->getConfig()->renderDetails.SolarSystemMaxDistance));
-    core->getRenderer()->setShadowMapSize(core->getConfig()->renderDetails.ShadowMapSize);
+    core->getRenderer()->setShadowMapSize(static_cast<unsigned>(shadowMapSize));
 
     return success;
 }
