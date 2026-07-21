@@ -281,6 +281,12 @@ FEATUREMETHODS(Other)
 - (float)ambientLightLevel { return core->getRenderer()->getAmbientLightLevel(); }
 - (void)setAmbientLightLevel:(float)value { core->getRenderer()->setAmbientLightLevel(value); }
 
+- (BOOL)toneMapping { return core->getRenderer()->getToneMapping(); }
+- (void)setToneMapping:(BOOL)value { core->getRenderer()->setToneMapping(value); }
+
+- (float)exposure { return core->getRenderer()->getExposure(); }
+- (void)setExposure:(float)value { core->getRenderer()->setExposure(value); }
+
 - (float)galaxyBrightness { return Galaxy::getLightGain(); }
 - (void)setGalaxyBrightness:(float)value { Galaxy::setLightGain(value); }
 

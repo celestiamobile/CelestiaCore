@@ -167,6 +167,11 @@ typedef NS_ENUM(NSInteger, CelestiaLayoutDirection) {
 
 @property float ambientLightLevel ;
 
+// Output Rendering Settings
+
+@property BOOL toneMapping;
+@property float exposure;
+
 // Star Settings
 
 @property float distanceLimit ;
