@@ -169,7 +169,7 @@ typedef NS_ENUM(NSInteger, CelestiaLayoutDirection) {
 
 // Output Rendering Settings
 
-@property BOOL toneMapping;
+@property NSInteger toneMapping;
 @property float exposure;
 
 // Star Settings
