@@ -420,6 +420,8 @@
 		EAB18D9A2AF14AC400C2B010 /* sampfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAB18D982AF14AC400C2B010 /* sampfile.cpp */; };
 		EAC562442529FAB4008D10F0 /* viewporteffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAC562422529FAB4008D10F0 /* viewporteffect.cpp */; };
 		EAC562452529FAB4008D10F0 /* viewporteffect.h in Headers */ = {isa = PBXBuildFile; fileRef = EAC562432529FAB4008D10F0 /* viewporteffect.h */; };
+		EACB001830214A1400F54FCB /* tass17.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EACB001730214A1400F54FCB /* tass17.cpp */; };
+		EACB001930214A1400F54FCB /* tass17.h in Headers */ = {isa = PBXBuildFile; fileRef = EACB001630214A1400F54FCB /* tass17.h */; };
 		EAD4FBA02743EBC0005E3369 /* randutils.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD4FB9E2743EBC0005E3369 /* randutils.h */; };
 		EAD4FBA12743EBC0005E3369 /* randutils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAD4FB9F2743EBC0005E3369 /* randutils.cpp */; };
 		EAD4FBA42743EBDB005E3369 /* binaryread.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD4FBA22743EBDB005E3369 /* binaryread.h */; };
@@ -879,6 +881,8 @@
 		EAB18D982AF14AC400C2B010 /* sampfile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sampfile.cpp; sourceTree = "<group>"; };
 		EAC562422529FAB4008D10F0 /* viewporteffect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = viewporteffect.cpp; sourceTree = "<group>"; };
 		EAC562432529FAB4008D10F0 /* viewporteffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = viewporteffect.h; sourceTree = "<group>"; };
+		EACB001630214A1400F54FCB /* tass17.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tass17.h; sourceTree = "<group>"; };
+		EACB001730214A1400F54FCB /* tass17.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tass17.cpp; sourceTree = "<group>"; };
 		EAD4FB9E2743EBC0005E3369 /* randutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = randutils.h; sourceTree = "<group>"; };
 		EAD4FB9F2743EBC0005E3369 /* randutils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = randutils.cpp; sourceTree = "<group>"; };
 		EAD4FBA22743EBDB005E3369 /* binaryread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = binaryread.h; sourceTree = "<group>"; };
@@ -1377,6 +1381,8 @@
 		977D81C322FDB1FE002FF1C2 /* celephem */ = {
 			isa = PBXGroup;
 			children = (
+				EACB001630214A1400F54FCB /* tass17.h */,
+				EACB001730214A1400F54FCB /* tass17.cpp */,
 				977D82FA22FDB272002FF1C2 /* customorbit.cpp */,
 				977D830D22FDB273002FF1C2 /* customorbit.h */,
 				977D82FF22FDB273002FF1C2 /* customrotation.cpp */,
@@ -1757,6 +1763,7 @@
 				EA3FC88825F7AFBA0019C3BD /* fsutils.h in Headers */,
 				EA59EA3426213CB4001E5B9D /* imageformats.h in Headers */,
 				971A670823019C21009E4EA1 /* universe.h in Headers */,
+				EACB001930214A1400F54FCB /* tass17.h in Headers */,
 				97B5E2D4239689B9006F35B4 /* pointstarvertexbuffer.h in Headers */,
 				971A664523019C0F009E4EA1 /* bytes.h in Headers */,
 				EA30660E2AD2794A006A3EE2 /* ranges.h in Headers */,
@@ -2095,6 +2102,7 @@
 				EA5B78C12FD1F02C0007F1C0 /* psfstarvertexbuffer.cpp in Sources */,
 				971A670723019C21009E4EA1 /* universe.cpp in Sources */,
 				97B5E2D5239689B9006F35B4 /* pointstarvertexbuffer.cpp in Sources */,
+				EACB001830214A1400F54FCB /* tass17.cpp in Sources */,
 				971A662F23019C03009E4EA1 /* configfile.cpp in Sources */,
 				EA59EA3226213CB4001E5B9D /* png.cpp in Sources */,
 				EA2166FC2973C08D001477DE /* atmosphererenderer.cpp in Sources */,
