@@ -26,6 +26,14 @@ typedef NS_ENUM(NSUInteger, CelestiaSimulationDistanceUnit) {
     CelestiaSimulationDistanceUnitAU = 2,
 } NS_SWIFT_NAME(DistanceUnit);
 
+typedef NS_ENUM(NSUInteger, CelestiaEclipseAction) {
+    CelestiaEclipseActionSetTime = 0,
+    CelestiaEclipseActionNearEclipsedBody = 1,
+    CelestiaEclipseActionFromEclipsedBodySurface = 2,
+    CelestiaEclipseActionFromOcculterSurface = 3,
+    CelestiaEclipseActionBehindOcculter = 4,
+} NS_SWIFT_NAME(EclipseAction);
+
 NS_ASSUME_NONNULL_BEGIN
 
 NS_SWIFT_SENDABLE
@@ -66,7 +74,7 @@ NS_SWIFT_NAME(Simulation)
 
 - (void)goToLocation:(CelestiaGoToLocation *)location NS_SWIFT_NAME(go(to:));
 
-- (void)goToEclipse:(CelestiaEclipse *)eclipse NS_SWIFT_NAME(goToEclipse(_:));
+- (void)performEclipseAction:(CelestiaEclipseAction)action eclipse:(CelestiaEclipse *)eclipse NS_SWIFT_NAME(performEclipseAction(_:eclipse:));
 
 - (void)goToDestination:(CelestiaDestination *)destination NS_SWIFT_NAME(goToDestination(_:));
 
