@@ -197,6 +197,12 @@ typedef NS_ENUM(NSInteger, CelestiaLayoutDirection) {
 
 @property NSInteger resolution;
 
+// Atmosphere Quality Settings
+
+@property NSInteger atmosphereSegmentCount;
+@property NSInteger cloudSegmentCount;
+@property BOOL separateRayleighMieScaleHeights;
+
 @property CelestiaMeasurementSystem measurementSystem;
 @property CelestiaTemperatureScale temperatureScale;
 @property CelestiaScriptSystemAccessPolicy scriptSystemAccessPolicy;

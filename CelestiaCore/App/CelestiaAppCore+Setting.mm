@@ -358,6 +358,17 @@ FEATUREMETHODS(Other)
 - (NSInteger)resolution { return static_cast<NSInteger>(core->getRenderer()->getResolution()); }
 - (void)setResolution:(NSInteger)value { core->getRenderer()->setResolution(static_cast<celestia::engine::TextureResolution>(value)); }
 
+// Atmosphere Quality Settings
+
+- (NSInteger)atmosphereSegmentCount { return static_cast<NSInteger>(core->getRenderer()->getAtmosphereSegmentCount()); }
+- (void)setAtmosphereSegmentCount:(NSInteger)value { core->getRenderer()->setAtmosphereSegmentCount(static_cast<unsigned int>(value)); }
+
+- (NSInteger)cloudSegmentCount { return static_cast<NSInteger>(core->getRenderer()->getCloudSegmentCount()); }
+- (void)setCloudSegmentCount:(NSInteger)value { core->getRenderer()->setCloudSegmentCount(static_cast<unsigned int>(value)); }
+
+- (BOOL)separateRayleighMieScaleHeights { return static_cast<BOOL>(core->getRenderer()->getSeparateRayleighMieScaleHeights()); }
+- (void)setSeparateRayleighMieScaleHeights:(BOOL)value { core->getRenderer()->setSeparateRayleighMieScaleHeights(static_cast<bool>(value)); }
+
 // Overlay Settings
 
 - (NSInteger)hudDetail { return core->getHudDetail(); }

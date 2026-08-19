@@ -349,6 +349,7 @@
 		EA405FF72AC3B977000E1F7A /* tangents.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA405FF62AC3B977000E1F7A /* tangents.cpp */; };
 		EA4BB3352B46481000B36E44 /* binder.h in Headers */ = {isa = PBXBuildFile; fileRef = EA4BB3332B46481000B36E44 /* binder.h */; };
 		EA4BB3362B46481000B36E44 /* binder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA4BB3342B46481000B36E44 /* binder.cpp */; };
+		EA4F576630366C2B00016570 /* atmosphere.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA4F576530366C2B00016570 /* atmosphere.cpp */; };
 		EA5164312FBF9ABA00EC5909 /* imageoverlay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA5164302FBF9ABA00EC5909 /* imageoverlay.cpp */; };
 		EA5164322FBF9ABA00EC5909 /* imageoverlay.h in Headers */ = {isa = PBXBuildFile; fileRef = EA51642F2FBF9ABA00EC5909 /* imageoverlay.h */; };
 		EA5164352FBF9AC700EC5909 /* overlaymanager.h in Headers */ = {isa = PBXBuildFile; fileRef = EA5164332FBF9AC700EC5909 /* overlaymanager.h */; };
@@ -809,6 +810,7 @@
 		EA405FF62AC3B977000E1F7A /* tangents.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tangents.cpp; sourceTree = "<group>"; };
 		EA4BB3332B46481000B36E44 /* binder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = binder.h; sourceTree = "<group>"; };
 		EA4BB3342B46481000B36E44 /* binder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = binder.cpp; sourceTree = "<group>"; };
+		EA4F576530366C2B00016570 /* atmosphere.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = atmosphere.cpp; sourceTree = "<group>"; };
 		EA51642F2FBF9ABA00EC5909 /* imageoverlay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = imageoverlay.h; sourceTree = "<group>"; };
 		EA5164302FBF9ABA00EC5909 /* imageoverlay.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = imageoverlay.cpp; sourceTree = "<group>"; };
 		EA5164332FBF9AC700EC5909 /* overlaymanager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = overlaymanager.h; sourceTree = "<group>"; };
@@ -1205,6 +1207,7 @@
 		977D81C222FDB1F5002FF1C2 /* celengine */ = {
 			isa = PBXGroup;
 			children = (
+				EA4F576530366C2B00016570 /* atmosphere.cpp */,
 				EA6A34112FE61A2100D6D90C /* urlmanager.h */,
 				EA6A34122FE61A2100D6D90C /* urlmanager.cpp */,
 				EA5B78BF2FD1F02C0007F1C0 /* psfstarvertexbuffer.h */,
@@ -2202,6 +2205,7 @@
 				EA11E4592D76E17800DABEF0 /* infourl.cpp in Sources */,
 				971A66F923019C21009E4EA1 /* texmanager.cpp in Sources */,
 				CE57A0000000000000000005 /* resourcesystem.cpp in Sources */,
+				EA4F576630366C2B00016570 /* atmosphere.cpp in Sources */,
 				CE57A0000000000000000009 /* texturetraits.cpp in Sources */,
 				EA9166B42B0C37FE00AF48B1 /* hud.cpp in Sources */,
 				971A66CA23019C20009E4EA1 /* opencluster.cpp in Sources */,
