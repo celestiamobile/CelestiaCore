@@ -14,7 +14,7 @@
 #import "CelestiaAppCore+Private.h"
 #import "CelestiaAppCore+Setting.h"
 #import "CelestiaAppCore+Locale.h"
-#import "CelestiaSelection.h"
+#import "CelestiaSelection+Private.h"
 #import "CelestiaBody.h"
 #import "CelestiaUtil.h"
 
@@ -273,6 +273,14 @@ FEATUREMETHODS(Other)
 
 - (void)setShowTerminator:(BOOL)value {
     core->toggleReferenceMark("terminator");
+}
+
+- (BOOL)referenceMarkEnabled:(NSString *)referenceMark forSelection:(CelestiaSelection *)selection {
+    return core->referenceMarkEnabled(referenceMark.UTF8String, selection.selection);
+}
+
+- (void)toggleReferenceMark:(NSString *)referenceMark forSelection:(CelestiaSelection *)selection {
+    core->toggleReferenceMark(referenceMark.UTF8String, selection.selection);
 }
 
 

@@ -163,6 +163,11 @@ typedef NS_ENUM(NSInteger, CelestiaLayoutDirection) {
 
 @property float minimumFeatureSize ;
 
+// Reference Vectors
+
+- (BOOL)referenceMarkEnabled:(NSString *)referenceMark forSelection:(CelestiaSelection *)selection NS_SWIFT_NAME(isReferenceMarkEnabled(_:for:));
+- (void)toggleReferenceMark:(NSString *)referenceMark forSelection:(CelestiaSelection *)selection NS_SWIFT_NAME(toggleReferenceMark(_:for:));
+
 // Lighting Settings
 
 @property float ambientLightLevel ;
