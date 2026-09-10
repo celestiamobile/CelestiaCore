@@ -290,6 +290,8 @@
 		EA1F11A1288A3A2600D8698F /* audiosession.h in Headers */ = {isa = PBXBuildFile; fileRef = EA1F119F288A3A2600D8698F /* audiosession.h */; };
 		EA1F11A5288A3ADF00D8698F /* miniaudiosession.h in Headers */ = {isa = PBXBuildFile; fileRef = EA1F11A3288A3ADF00D8698F /* miniaudiosession.h */; };
 		EA1F11B2288B241100D8698F /* audiosession.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA1F11B1288B241100D8698F /* audiosession.cpp */; };
+		EA1FA27B30527E2A003CA195 /* psfpointlargerenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA1FA27A30527E2A003CA195 /* psfpointlargerenderer.cpp */; };
+		EA1FA27C30527E2A003CA195 /* psfpointlargerenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = EA1FA27930527E2A003CA195 /* psfpointlargerenderer.h */; };
 		EA2166FA2973C08D001477DE /* cometrenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA2166F62973C08C001477DE /* cometrenderer.cpp */; };
 		EA2166FB2973C08D001477DE /* cometrenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = EA2166F72973C08C001477DE /* cometrenderer.h */; };
 		EA2166FC2973C08D001477DE /* atmosphererenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA2166F82973C08C001477DE /* atmosphererenderer.cpp */; };
@@ -751,6 +753,8 @@
 		EA1F11A2288A3ADF00D8698F /* miniaudiosession.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = miniaudiosession.cpp; sourceTree = "<group>"; };
 		EA1F11A3288A3ADF00D8698F /* miniaudiosession.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = miniaudiosession.h; sourceTree = "<group>"; };
 		EA1F11B1288B241100D8698F /* audiosession.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = audiosession.cpp; sourceTree = "<group>"; };
+		EA1FA27930527E2A003CA195 /* psfpointlargerenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = psfpointlargerenderer.h; sourceTree = "<group>"; };
+		EA1FA27A30527E2A003CA195 /* psfpointlargerenderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = psfpointlargerenderer.cpp; sourceTree = "<group>"; };
 		EA2166F62973C08C001477DE /* cometrenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cometrenderer.cpp; sourceTree = "<group>"; };
 		EA2166F72973C08C001477DE /* cometrenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cometrenderer.h; sourceTree = "<group>"; };
 		EA2166F82973C08C001477DE /* atmosphererenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atmosphererenderer.cpp; sourceTree = "<group>"; };
@@ -1574,6 +1578,8 @@
 		EA0E06C328C0C160004F6DF7 /* celrender */ = {
 			isa = PBXGroup;
 			children = (
+				EA1FA27930527E2A003CA195 /* psfpointlargerenderer.h */,
+				EA1FA27A30527E2A003CA195 /* psfpointlargerenderer.cpp */,
 				EA5B7D452FD293610007F1C0 /* legacylargestarrenderer.h */,
 				EA5B7D462FD293610007F1C0 /* legacylargestarrenderer.cpp */,
 				EA5B78BB2FD1F01B0007F1C0 /* psfglowlargerenderer.h */,
@@ -1718,6 +1724,7 @@
 				971A66E523019C20009E4EA1 /* skygrid.h in Headers */,
 				EA51CC8F2D7A2786009434AA /* renderflags.h in Headers */,
 				9751DC1423594A8000299997 /* celx_celestia.h in Headers */,
+				EA1FA27C30527E2A003CA195 /* psfpointlargerenderer.h in Headers */,
 				971A66DB23019C20009E4EA1 /* renderinfo.h in Headers */,
 				971A668723019C20009E4EA1 /* boundaries.h in Headers */,
 				971A668523019C20009E4EA1 /* body.h in Headers */,
@@ -2040,6 +2047,7 @@
 				971A665723019C0F009E4EA1 /* utf8.cpp in Sources */,
 				971A66F223019C21009E4EA1 /* starname.cpp in Sources */,
 				EAC562442529FAB4008D10F0 /* viewporteffect.cpp in Sources */,
+				EA1FA27B30527E2A003CA195 /* psfpointlargerenderer.cpp in Sources */,
 				EA63E97E2C1AA8B600ED8EE9 /* stardbbuilder.cpp in Sources */,
 				971A66D923019C20009E4EA1 /* renderglsl.cpp in Sources */,
 				971A666623019C15009E4EA1 /* precession.cpp in Sources */,
