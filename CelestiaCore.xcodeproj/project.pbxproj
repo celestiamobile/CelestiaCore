@@ -1983,7 +1983,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 2600;
+				LastUpgradeCheck = 2700;
 				ORGANIZATIONNAME = "Celestia Development Team";
 				TargetAttributes = {
 					971A65CB23019BC5009E4EA1 = {
