@@ -13,11 +13,13 @@
 #import "CelestiaBody+Private.h"
 #include "celestia/eclipsefinder.h"
 
+#include <memory>
+
 class EclipseSeacherWatcher;
 
 @interface CelestiaEclipseFinder () {
-    EclipseFinder *s;
-    EclipseSeacherWatcher *d;
+    std::unique_ptr<EclipseSeacherWatcher> d;
+    std::unique_ptr<EclipseFinder> s;
 @public
     BOOL aborted;
 }
@@ -58,8 +60,8 @@ private:
 - (instancetype)initWithBody:(CelestiaBody *)body {
     self = [super init];
     if (self) {
-        d = new EclipseSeacherWatcher((__bridge void *)self);
-        s = new EclipseFinder([body body], d);
+        d = std::make_unique<EclipseSeacherWatcher>((__bridge void *)self);
+        s = std::make_unique<EclipseFinder>([body body], d.get());
         aborted = YES;
     }
     return self;
@@ -80,11 +82,6 @@ private:
 
 - (void)abort {
     aborted = YES;
-}
-
-- (void)dealloc {
-    delete s;
-    delete d;
 }
 
 @end

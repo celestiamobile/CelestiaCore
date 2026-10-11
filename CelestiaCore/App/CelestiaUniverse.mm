@@ -76,7 +76,7 @@
 }
 
 - (BOOL)isSelectionMarked:(CelestiaSelection *)selection {
-    return (BOOL)u->isMarked([selection selection], 1);
+    return static_cast<BOOL>(u->isMarked([selection selection], 1));
 }
 
 - (void)markSelection:(CelestiaSelection *)selection withMarker:(CelestiaMarkerRepresentation)marker {

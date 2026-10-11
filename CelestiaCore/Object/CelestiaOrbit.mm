@@ -41,7 +41,7 @@
 }
 
 - (BOOL)isPeriodic {
-    return (BOOL)o->isPeriodic();
+    return static_cast<BOOL>(o->isPeriodic());
 }
 
 - (NSTimeInterval)period {

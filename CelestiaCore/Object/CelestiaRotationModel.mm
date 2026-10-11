@@ -37,7 +37,7 @@
 @implementation CelestiaRotationModel
 
 - (BOOL)isPeriodic {
-    return (BOOL)r->isPeriodic();
+    return static_cast<BOOL>(r->isPeriodic());
 }
 
 - (NSTimeInterval)period {

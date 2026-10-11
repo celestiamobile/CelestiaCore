@@ -8,6 +8,8 @@
 // of the License, or (at your option) any later version.
 
 
+#include <numbers>
+
 #import "CelestiaSimulation+Private.h"
 #import "CelestiaCompletion+Private.h"
 #import "CelestiaSelection+Private.h"
@@ -210,7 +212,7 @@ typedef NS_OPTIONS(NSUInteger, CelestiaGoToLocationFieldMask) {
 
     CelestiaVector *up = [CelestiaVector vectorWithx:[NSNumber numberWithFloat:0.0f] y:[NSNumber numberWithFloat:1.0f] z:[NSNumber numberWithFloat:0.0f]];
     if (location->fieldMask & CelestiaGoToLocationFieldMaskLongitude && location->fieldMask & CelestiaGoToLocationFieldMaskLatitude) {
-        s->gotoSelectionLongLat(location.duration, distance, location.longitude * (float)M_PI / 180.0f, location.latitude * (float)M_PI / 180.0f, [up vector3f]);
+        s->gotoSelectionLongLat(location.duration, distance, location.longitude * std::numbers::pi_v<float> / 180.0f, location.latitude * std::numbers::pi_v<float> / 180.0f, [up vector3f]);
     } else {
         s->gotoSelection(location.duration, distance, [up vector3f], ObserverFrame::CoordinateSystem::ObserverLocal);
     }

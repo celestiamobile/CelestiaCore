@@ -40,7 +40,7 @@
 }
 
 - (CelestiaStar *)objectAtIndex:(NSInteger)index {
-    return [[CelestiaStar alloc] initWithStar:d->getStar((uint32_t)index)];
+    return [[CelestiaStar alloc] initWithStar:d->getStar(static_cast<uint32_t>(index))];
 }
 
 - (NSString *)starName:(CelestiaStar *)star localized:(BOOL)localized {

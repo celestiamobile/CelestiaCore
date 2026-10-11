@@ -39,7 +39,7 @@
 - (void)setFrame:(CelestiaCoordinateSystem)coordinate target:(CelestiaSelection *)target reference:(CelestiaSelection *)reference {
     const Selection ref([reference selection]);
     const Selection tar([target selection]);
-    o->setFrame((ObserverFrame::CoordinateSystem)coordinate, ref, tar);
+    o->setFrame(static_cast<ObserverFrame::CoordinateSystem>(coordinate), ref, tar);
 }
 
 #if TARGET_OS_IOS && !TARGET_OS_MACCATALYST

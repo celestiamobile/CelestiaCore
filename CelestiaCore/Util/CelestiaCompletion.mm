@@ -11,8 +11,10 @@
 #import "CelestiaCompletion+Private.h"
 #import "CelestiaSelection+Private.h"
 
+#include <memory>
+
 @interface CelestiaCompletion () {
-    celestia::engine::Completion *c;
+    std::unique_ptr<celestia::engine::Completion> c;
 }
 @end
 
@@ -21,7 +23,7 @@
 - (instancetype)initWithCompletion:(const celestia::engine::Completion&)completion {
     self = [super init];
     if (self) {
-        c = new celestia::engine::Completion(completion);
+        c = std::make_unique<celestia::engine::Completion>(completion);
     }
     return self;
 }
@@ -36,10 +38,6 @@
 
 - (CelestiaSelection *)selection {
     return [[CelestiaSelection alloc] initWithSelection:c->getSelection()];
-}
-
-- (void)dealloc {
-    delete c;
 }
 
 @end

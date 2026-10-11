@@ -180,17 +180,17 @@ enum {
         key = 127;
 
     if ((key < CelestiaCore::KeyCount) && ((key < '0') || (key >'9') || !(modifiers & NSEventModifierFlagNumericPad)))
-        [self appCoreCharEnter:(char)key modifiers:cModifiers];
+        [self appCoreCharEnter:static_cast<char>(key) modifiers:cModifiers];
 
     [self appCoreKeyDown:[self toCelestiaKey:key modifiers:modifiers] modifiers:cModifiers];
 }
 
 - (void)keyUp:(NSInteger)input {
-    [self appCoreKeyUp:(int)input modifiers:0];
+    [self appCoreKeyUp:static_cast<int>(input) modifiers:0];
 }
 
 - (void)keyDown:(NSInteger)input {
-    [self appCoreKeyDown:(int)input modifiers:0];
+    [self appCoreKeyDown:static_cast<int>(input) modifiers:0];
 }
 
 - (void)charEnter:(char)input {
@@ -199,11 +199,11 @@ enum {
 
 // MARK: Joystick events
 - (void)joystickButtonUp:(CelestiaJoystickButton)button {
-    [self appCoreJoystickButtonUp:(int)button];
+    [self appCoreJoystickButtonUp:static_cast<int>(button)];
 }
 
 - (void)joystickButtonDown:(CelestiaJoystickButton)button {
-    [self appCoreJoystickButtonDown:(int)button];
+    [self appCoreJoystickButtonDown:static_cast<int>(button)];
 }
 
 - (void)joystickAxis:(CelestiaJoystickAxis)axis amount:(float)amount {
@@ -318,7 +318,7 @@ enum {
         default:
             if ((key < 128) && (key > 33))
             {
-                celestiaKey = (int) (key & 0x00FF);
+                celestiaKey = static_cast<int>(key & 0x00FF);
             }
             break;
     }

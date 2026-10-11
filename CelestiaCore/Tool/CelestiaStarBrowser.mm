@@ -14,10 +14,10 @@
 #import "CelestiaUniverse+Private.h"
 #include "celengine/starbrowser.h"
 
-#define BROWSER_MAX_STAR_COUNT          100
+#include <memory>
 
 @interface CelestiaStarBrowser () {
-    celestia::engine::StarBrowser *b;
+    std::unique_ptr<celestia::engine::StarBrowser> b;
 }
 
 @end
@@ -27,7 +27,7 @@
 - (instancetype)initWithKind:(CelestiaStarBrowserKind)kind observer:(CelestiaObserver *)observer universe:(CelestiaUniverse *)universe {
     self = [super init];
     if (self) {
-        b = new celestia::engine::StarBrowser([universe universe]);
+        b = std::make_unique<celestia::engine::StarBrowser>([universe universe]);
         switch (kind)
         {
         case CelestiaStarBrowserKindNearest:
@@ -70,10 +70,6 @@
     }
 
     return starArray;
-}
-
-- (void)dealloc {
-    delete b;
 }
 
 @end

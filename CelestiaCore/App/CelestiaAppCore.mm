@@ -28,6 +28,8 @@
 #include <celestia/url.h>
 #include <unicode/uloc.h>
 
+#include <memory>
+
 class AppCoreProgressWatcher: public ProgressNotifier
 {
 public:
@@ -69,7 +71,7 @@ public:
         {
             this->shape = shape;
             @autoreleasepool {
-                block((CelestiaCursorShape)shape);
+                block(static_cast<CelestiaCursorShape>(shape));
             }
         }
     }
@@ -100,9 +102,9 @@ private:
 };
 
 @interface CelestiaAppCore () {
-    AppCoreAlerter *alerter;
-    AppCoreCursorHandler *cursorHandler;
-    AppCoreContextMenuHandler *internalContextMenuHandler;
+    std::unique_ptr<AppCoreAlerter> alerter;
+    std::unique_ptr<AppCoreCursorHandler> cursorHandler;
+    std::unique_ptr<AppCoreContextMenuHandler> internalContextMenuHandler;
 
     CelestiaSimulation *_simulation;
 }
@@ -119,13 +121,13 @@ private:
         _simulation = nil;
         core = new CelestiaCore;
         __weak CelestiaAppCore *weakSelf = self;
-        alerter = new AppCoreAlerter(^(NSString *error) {
+        alerter = std::make_unique<AppCoreAlerter>(^(NSString *error) {
             [[weakSelf delegate] celestiaAppCoreFatalErrorHappened:error];
         });
-        cursorHandler = new AppCoreCursorHandler(^(CelestiaCursorShape shape) {
+        cursorHandler = std::make_unique<AppCoreCursorHandler>(^(CelestiaCursorShape shape) {
             [[weakSelf delegate] celestiaAppCoreCursorShapeChanged:shape];
         });
-        internalContextMenuHandler = new AppCoreContextMenuHandler(^(CGPoint location, CelestiaSelection *selection) {
+        internalContextMenuHandler = std::make_unique<AppCoreContextMenuHandler>(^(CGPoint location, CelestiaSelection *selection) {
             __strong CelestiaAppCore *core = weakSelf;
             if (core != nil) {
                 __strong id<CelestiaAppCoreContextMenuHandler> contextMenuHandler = core.contextMenuHandler;
@@ -134,9 +136,9 @@ private:
                 }
             }
         });
-        core->setAlerter(alerter);
-        core->setCursorHandler(cursorHandler);
-        core->setContextMenuHandler(internalContextMenuHandler);
+        core->setAlerter(alerter.get());
+        core->setCursorHandler(cursorHandler.get());
+        core->setContextMenuHandler(internalContextMenuHandler.get());
 
         CelestiaCore::ScriptSystemAccessPolicy (^scriptSystemAccessHandler)(void) = ^{
             __strong CelestiaAppCore *core = weakSelf;
@@ -275,7 +277,7 @@ private:
 }
 
 - (void)setRendererFont:(NSString *)fontPath collectionIndex:(NSInteger)collectionIndex fontSize:(NSInteger)fontSize fontStyle:(CelestiaRendererFontStyle)fontStyle {
-    core->setRendererFont([fontPath UTF8String], collectionIndex, fontSize, (Renderer::FontStyle)fontStyle);
+    core->setRendererFont([fontPath UTF8String], collectionIndex, fontSize, static_cast<Renderer::FontStyle>(fontStyle));
 }
 
 - (void)setPickTolerance:(CGFloat)pickTolerance {
@@ -301,7 +303,7 @@ private:
 }
 
 - (CelestiaTextEnterMode)textEnterMode {
-    return (CelestiaTextEnterMode)core->getTextEnterMode();
+    return static_cast<CelestiaTextEnterMode>(core->getTextEnterMode());
 }
 
 - (void)setTextEnterMode:(CelestiaTextEnterMode)textEnterMode {
@@ -321,7 +323,7 @@ private:
 }
 
 - (BOOL)screenshot:(NSString *)filePath withFileSize:(CelestiaScreenshotFileType)type {
-    return (BOOL)core->saveScreenShot([filePath UTF8String], (ContentType)type);
+    return static_cast<BOOL>(core->saveScreenShot([filePath UTF8String], static_cast<ContentType>(type)));
 }
 
 + (void)setUpLocale {
@@ -412,9 +414,6 @@ private:
     core->setCursorHandler(nullptr);
     core->setContextMenuHandler(nullptr);
     core->setScriptSystemAccessHandler(std::nullopt);
-    delete alerter;
-    delete cursorHandler;
-    delete internalContextMenuHandler;
     delete core;
 }
 

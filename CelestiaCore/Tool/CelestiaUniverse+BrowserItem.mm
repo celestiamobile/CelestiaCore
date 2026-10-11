@@ -35,7 +35,7 @@
 
 - (NSDictionary *)childrenForStar:(CelestiaStar *)aStar {
     SolarSystem *ss = [self universe]->getSolarSystem([aStar star]);
-    PlanetarySystem* sys = NULL;
+    PlanetarySystem* sys = nullptr;
     if (ss) sys = ss->getPlanets();
 
     NSMutableDictionary *resultDictionary = [NSMutableDictionary dictionary];

@@ -38,7 +38,7 @@
 
 - (CelestiaBody *)primaryObject {
     Body *b = s->getPrimaryBody();
-    if (b == NULL) {
+    if (b == nullptr) {
         return nil;
     }
     return [[CelestiaBody alloc] initWithBody:b];
@@ -46,7 +46,7 @@
 
 - (CelestiaStar *)star {
     Star *b = s->getStar();
-    if (b == NULL) {
+    if (b == nullptr) {
         return nil;
     }
     return [[CelestiaStar alloc] initWithStar:b];

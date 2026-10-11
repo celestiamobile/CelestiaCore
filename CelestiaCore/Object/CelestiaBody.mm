@@ -94,7 +94,7 @@
 
 - (CelestiaPlanetarySystem *)system {
     PlanetarySystem *s = [self body]->getSystem();
-    if (s == NULL) {
+    if (s == nullptr) {
         return nil;
     }
     return [[CelestiaPlanetarySystem alloc] initWithSystem:s];

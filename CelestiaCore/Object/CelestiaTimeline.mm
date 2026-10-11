@@ -20,7 +20,7 @@
 @implementation CelestiaTimeline
 
 - (NSInteger)phaseCount {
-    return (NSInteger)t->phaseCount();
+    return static_cast<NSInteger>(t->phaseCount());
 }
 
 - (CelestiaTimelinePhase *)phaseAtIndex:(NSInteger)index {
