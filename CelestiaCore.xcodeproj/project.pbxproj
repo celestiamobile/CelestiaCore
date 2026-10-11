@@ -415,8 +415,7 @@
 		EA9E5A9F25FE483900348AEE /* appleutils.h in Headers */ = {isa = PBXBuildFile; fileRef = EA9E5A9D25FE483900348AEE /* appleutils.h */; };
 		EAAD79172E280DA800CA2195 /* referencemarkrenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAAD79162E280DA800CA2195 /* referencemarkrenderer.cpp */; };
 		EAAD79182E280DA800CA2195 /* referencemarkrenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = EAAD79152E280DA800CA2195 /* referencemarkrenderer.h */; };
-		EAB08FEA27807E2500BB82F0 /* numbers.h in Headers */ = {isa = PBXBuildFile; fileRef = EAB08FE627807E2500BB82F0 /* numbers.h */; };
-		EAB08FEB27807E2500BB82F0 /* numbers_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = EAB08FE727807E2500BB82F0 /* numbers_impl.h */; };
+		EAB08FEA27807E2500BB82F0 /* byteswap.h in Headers */ = {isa = PBXBuildFile; fileRef = EAB08FE627807E2500BB82F0 /* byteswap.h */; };
 		EAB18D372CB5CAA900696A11 /* completion.h in Headers */ = {isa = PBXBuildFile; fileRef = EAB18D362CB5CAA900696A11 /* completion.h */; };
 		EAB18D392CB5D81400696A11 /* completion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAB18D382CB5D81400696A11 /* completion.cpp */; };
 		EAB18D992AF14AC400C2B010 /* sampfile.h in Headers */ = {isa = PBXBuildFile; fileRef = EAB18D972AF14AC400C2B010 /* sampfile.h */; };
@@ -879,8 +878,7 @@
 		EA9E5A9D25FE483900348AEE /* appleutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = appleutils.h; sourceTree = "<group>"; };
 		EAAD79152E280DA800CA2195 /* referencemarkrenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = referencemarkrenderer.h; sourceTree = "<group>"; };
 		EAAD79162E280DA800CA2195 /* referencemarkrenderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = referencemarkrenderer.cpp; sourceTree = "<group>"; };
-		EAB08FE627807E2500BB82F0 /* numbers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = numbers.h; sourceTree = "<group>"; };
-		EAB08FE727807E2500BB82F0 /* numbers_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = numbers_impl.h; sourceTree = "<group>"; };
+		EAB08FE627807E2500BB82F0 /* byteswap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = byteswap.h; sourceTree = "<group>"; };
 		EAB18D362CB5CAA900696A11 /* completion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = completion.h; sourceTree = "<group>"; };
 		EAB18D382CB5D81400696A11 /* completion.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = completion.cpp; sourceTree = "<group>"; };
 		EAB18D972AF14AC400C2B010 /* sampfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sampfile.h; sourceTree = "<group>"; };
@@ -1068,8 +1066,7 @@
 			isa = PBXGroup;
 			children = (
 				EA3FC0A925F63A840019C3BD /* charconv.h */,
-				EAB08FE727807E2500BB82F0 /* numbers_impl.h */,
-				EAB08FE627807E2500BB82F0 /* numbers.h */,
+				EAB08FE627807E2500BB82F0 /* byteswap.h */,
 			);
 			path = celcompat;
 			sourceTree = "<group>";
@@ -1801,7 +1798,6 @@
 				971A660D23019BFC009E4EA1 /* material.h in Headers */,
 				97DBD67324134AD30045AE0C /* astroobj.h in Headers */,
 				971A66D623019C20009E4EA1 /* rendcontext.h in Headers */,
-				EAB08FEB27807E2500BB82F0 /* numbers_impl.h in Headers */,
 				EAE846582B3AE659008A146D /* loaddso.h in Headers */,
 				971A672523019C2B009E4EA1 /* sphere.h in Headers */,
 				971A66AC23019C20009E4EA1 /* geometry.h in Headers */,
@@ -1819,7 +1815,7 @@
 				971A666323019C15009E4EA1 /* nutation.h in Headers */,
 				971A669323019C20009E4EA1 /* console.h in Headers */,
 				EA3FFB052A13743500C6158F /* galaxyform.h in Headers */,
-				EAB08FEA27807E2500BB82F0 /* numbers.h in Headers */,
+				EAB08FEA27807E2500BB82F0 /* byteswap.h in Headers */,
 				971A669523019C20009E4EA1 /* constellation.h in Headers */,
 				971A66FC23019C21009E4EA1 /* texture.h in Headers */,
 				97AD59C9235B1B8E0056CA80 /* luascript.h in Headers */,
@@ -2278,7 +2274,7 @@
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -2346,7 +2342,7 @@
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
