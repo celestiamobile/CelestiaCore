@@ -8,6 +8,8 @@
 // of the License, or (at your option) any later version.
 
 
+#include <numbers>
+
 #include <celastro/date.h>
 #include <celengine/observer.h>
 
@@ -220,7 +222,7 @@
     double r = v.norm();
     double theta = atan2(v.y(), v.x());
     if (theta < 0)
-        theta = theta + 2 * celestia::numbers::pi;
+        theta = theta + 2 * std::numbers::pi;
     double phi = asin(v.z() / r);
 
     return [CelestiaVector vectorWithVector3d:Eigen::Vector3d(theta, phi, r)];
